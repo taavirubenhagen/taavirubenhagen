@@ -1,4 +1,4 @@
-## Hi, I'm @taavirubenhagen.
+## Hi, I'm Taavi Rübenhagen.
 I love writing blazingly fast next-gen-software with a holistic approach and bleeding-edge technologies to deliver highly interactive experiences everywhere in the world.
 
 I developed the
