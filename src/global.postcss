@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* ROOT STYLES */
+
+  :root {
+    @apply m-0 md:max-w-none overflow-x-hidden p-0 bg-background text-onBackground;
+    font-family: "Manrope";
+  }
+  :root::-webkit-scrollbar { @apply w-2 bg-background; }
+  :root::-webkit-scrollbar-thumb { @apply rounded-full bg-black; }
+
+
+
+
+/* TEXT-RELATED STYLES */
+
+  .text::selection { @apply bg-onBackground text-background; }
+
+  h1 { @apply text text-9xl font-bold; }
+  h2 { @apply text text-7xl font-bold tracking-widest; }
+  h3 { @apply text text-5xl font-bold leading-normal tracking-widest; }
+  h4 { @apply text text-2xl font-bold tracking-widest; }
+  s1 { @apply text; }
+  s2 { @apply text; }
+  p1 { @apply text; }
+  p2 { @apply text; }
+  b1 { @apply text; }
+  b2 { @apply text text-lg font-bold tracking-widest; }
+    
+    
+  
+
+/* GENERAL CUSTOM CLASSES */
+
+
+  .background { @apply bg-background text-onBackground; }
+  .background::selection { @apply bg-onBackground text-background; }
+  .primary { @apply bg-primary text-onPrimary; }
+  .primary::selection { @apply bg-onPrimary text-primary; }
+
+
+  .base_cursor {
+    @apply rounded-full border-2 border-primary w-8 h-8 bg-opacity-50 bg-background p-4 transition-all;
+    transition-duration: 400ms;
+    transition-timing-function: cubic-bezier(.2, 0, .4, 1);
+  }
+  .hover_cursor {
+    @apply w-16 h-16 bg-opacity-100;
+  }
+
+
+  .flex_col_center {
+    @apply flex flex-col justify-center items-center;
+  }
+  .flex_row_center {
+    @apply flex flex-row justify-center items-center;
+  }
+
+    
+  @media (min-width: 640px) {
+    .size_screen {
+      width: calc(100vw - 2 * 4rem);
+      min-height: calc(100vh - 2 * 4rem);
+      margin: 4rem;
+      margin-right: calc(4rem + 4rem);
+    }
+  }
+  @media (max-width: 640px) {
+    .size_screen {
+      width: calc(100vw - 2 * 2rem);
+      min-height: calc(100vh - 2 * 2rem);
+      margin: 2rem;
+      margin-right: calc(2rem + 4rem);
+    }
+  }
+  .inner_size_screen {
+    @apply size_screen m-0;
+    margin: 0;
+  }
