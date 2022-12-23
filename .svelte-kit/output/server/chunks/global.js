@@ -1,4 +1,4 @@
-import { c as create_ssr_component, b as subscribe } from "./index.js";
+import { c as create_ssr_component, f as subscribe } from "./index.js";
 import { w as writable } from "./index2.js";
 const cursorState = writable(null);
 const Cursor_svelte_svelte_type_style_lang = "";

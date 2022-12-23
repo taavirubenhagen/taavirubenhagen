@@ -1,4 +1,4 @@
-import { c as create_ssr_component, e as escape, v as validate_component } from "../../chunks/index.js";
+import { c as create_ssr_component, d as escape, v as validate_component } from "../../chunks/index.js";
 import { I as Interactive } from "../../chunks/global.js";
 const Icon = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { isWhite = false } = $$props;

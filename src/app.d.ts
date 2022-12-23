@@ -11,6 +11,8 @@ declare namespace App {
 
 
 
+
+declare module "svelte-device-detector"
 declare module "svelte-scrollto"
 
 declare module "svelte-material-icons/Close.svelte"
