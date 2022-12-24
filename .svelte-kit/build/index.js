@@ -13,7 +13,7 @@ const error_template = ({ status, message }) => "<!DOCTYPE html>\n<html lang=\"e
 let read = null;
 
 set_paths({"base":"","assets":""});
-set_version("1671891162646");
+set_version("1671891255645");
 
 let default_protocol = 'https';
 
@@ -50,7 +50,7 @@ export class Server {
 			app_template,
 			app_template_contains_nonce: false,
 			error_template,
-			version: "1671891162646"
+			version: "1671891255645"
 		};
 	}
 
