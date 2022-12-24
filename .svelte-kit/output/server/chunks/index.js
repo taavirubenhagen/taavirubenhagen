@@ -19,6 +19,11 @@ function subscribe(store, ...callbacks) {
   const unsub = store.subscribe(...callbacks);
   return unsub.unsubscribe ? () => unsub.unsubscribe() : unsub;
 }
+function get_store_value(store) {
+  let value;
+  subscribe(store, (_) => value = _)();
+  return value;
+}
 let current_component;
 function set_current_component(component) {
   current_component = component;
@@ -119,6 +124,7 @@ export {
   each as e,
   subscribe as f,
   getContext as g,
+  get_store_value as h,
   missing_component as m,
   noop as n,
   setContext as s,

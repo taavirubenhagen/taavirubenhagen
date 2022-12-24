@@ -24,7 +24,10 @@
 
 
 <Interactive state={sectionCursorState}>
-  <section class="{sectionClass} w-screen h-screen {primary ? "primary" : "background"} p-8 flex_col_center relative text-center">
+  <section
+    class="{sectionClass} w-screen {primary ? "primary" : "background"} p-8 flex_col_center relative text-center"
+    style="height: {get(g.wih)}"
+  >
     <slot/>
     {#if scrollButton}
       <div class="absolute left-0 bottom-0">

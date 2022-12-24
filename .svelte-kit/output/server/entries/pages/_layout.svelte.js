@@ -63,7 +63,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       })}`;
     }
   })}</header>
-  <div class="${escape("blur-0", true) + " max-h-screen"}" style="${"transition: all 400ms cubic-bezier(0, 0, 1, 1);"}">${slots.default ? slots.default({}) : ``}</div></main>`;
+  <div class="${escape("blur-0", true) + " max-h-screen"}" style="${"transition: all 400ms cubic-bezier(0, 0, 1, 1); max-height: 100vh;"}">${slots.default ? slots.default({}) : ``}</div></main>`;
 });
 export {
   Layout as default

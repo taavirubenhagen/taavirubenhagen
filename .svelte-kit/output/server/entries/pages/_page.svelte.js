@@ -1,5 +1,6 @@
-import { c as create_ssr_component, b as escape, v as validate_component } from "../../chunks/index.js";
+import { c as create_ssr_component, b as escape, v as validate_component, h as get_store_value } from "../../chunks/index.js";
 import { I as Interactive } from "../../chunks/global.js";
+import { w as writable } from "../../chunks/index2.js";
 const Icon = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { isWhite = false } = $$props;
   let { size = "0" } = $$props;
@@ -33,6 +34,7 @@ const Text_button = create_ssr_component(($$result, $$props, $$bindings, slots) 
     true
   )}" style="${"transition-duration: 100ms; transition-timing-function: cubic-bezier(.2, 0, .4, 1)"}"><b2>${slots.default ? slots.default({}) : ``}</b2></div>`;
 });
+const wih = writable(0);
 const Title_section = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { index } = $$props;
   let { primary = false } = $$props;
@@ -51,7 +53,7 @@ const Title_section = create_ssr_component(($$result, $$props, $$bindings, slots
     $$bindings.sectionClass(sectionClass);
   return `${validate_component(Interactive, "Interactive").$$render($$result, { state: sectionCursorState }, {}, {
     default: () => {
-      return `<section class="${escape(sectionClass, true) + " w-screen h-screen " + escape(primary ? "primary" : "background", true) + " p-8 flex_col_center relative text-center"}">${slots.default ? slots.default({}) : ``}
+      return `<section class="${escape(sectionClass, true) + " w-screen " + escape(primary ? "primary" : "background", true) + " p-8 flex_col_center relative text-center"}" style="${"height: " + escape(get_store_value(wih), true)}">${slots.default ? slots.default({}) : ``}
     ${scrollButton ? `<div class="${"absolute left-0 bottom-0"}">${validate_component(Interactive, "Interactive").$$render($$result, { state: "hover" }, {}, {
         default: () => {
           return `<button class="${"w-screen flex_row_center"}"><div class="${"w-24 h-24 p-8 hover:p-7"}" style="${"transition-duration: 200ms; transition-timing-function: cubic-bezier(.2, 0, .2, 1);"}">${validate_component(Icon, "Icon").$$render(

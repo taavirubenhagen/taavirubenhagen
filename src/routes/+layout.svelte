@@ -96,7 +96,9 @@
   </header>
   <div
     class="{isMenuOpen ? "blur md:blur-0" : "blur-0"} max-h-screen"
-    style="transition: all 400ms cubic-bezier(0, 0, 1, 1);"
+    style="
+      transition: all 400ms cubic-bezier(0, 0, 1, 1);
+      max-height: 100vh;"
   >
     <slot></slot>
   </div>
