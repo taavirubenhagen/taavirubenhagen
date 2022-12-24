@@ -33,7 +33,7 @@
       {/if}
     </div>
   </Cursor>-->
-  <header class="fixed z-20 w-full h-24 flex flex-col md:flex-row justify-start md:justify-center items-center">
+  <header class="fixed z-20 w-full h-24 flex flex-col md:flex-row justify-start md:justify-center items-end md:items-center">
     <DeviceDetector showInDevice="desktop">
       {#each getMenu().slice(0, 2) as data, i}
         <Interactive state="hover">
@@ -62,7 +62,7 @@
             on:click={() => isMenuOpen = false}
             in:fly="{{ y: -1.5 * ( i + 2 ), duration: 400 }}"
             out:fly="{{ y: -1.5 * ( i + 2 ), duration: 400 }}"
-            class="h-8"
+            class="h-16"
           >
             <a href={data[1] ?? "404"}>
               <b1 class="text-right">{data[0]}</b1>
