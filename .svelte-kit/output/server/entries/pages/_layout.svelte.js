@@ -62,7 +62,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       })}`;
     }
   })}</header>
-  ${slots.default ? slots.default({}) : ``}</main>`;
+  <div${add_attribute("class", "blur-0", 0)} style="${"transition: all 400ms;"}">${slots.default ? slots.default({}) : ``}</div></main>`;
 });
 export {
   Layout as default

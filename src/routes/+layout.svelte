@@ -88,5 +88,10 @@
       {/each}
     </DeviceDetector>
   </header>
-  <slot></slot>
+  <div
+    class="{isMenuOpen ? "blur md:blur-0" : "blur-0"}"
+    style="transition: all 400ms;"
+  >
+    <slot></slot>
+  </div>
 </main>
