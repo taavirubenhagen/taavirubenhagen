@@ -1,9 +1,12 @@
 <script lang="ts">
+  import { get, writable } from "svelte/store"
+  import { onMount } from "svelte"
   import { fade, fly } from "svelte/transition"
 
   import DeviceDetector from "svelte-device-detector"
   import { Cursor, Interactive } from 'svelte-cursor'
 
+  import * as g from "$store"
   import "../global.postcss"
   
   import Icon from "../components/icon.svelte"
@@ -15,6 +18,10 @@
     let menu = [["Home", "home"], ["Mission", "mission"], ["Team", "team"], ["Contact", "contact"]]
     return isMenuOpen ? menu : []
   }
+  
+  onMount(() => {
+    g.wih.update(_ => window.innerHeight)
+  })
 </script>
 
 

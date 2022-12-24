@@ -14,10 +14,6 @@
   export let scrollButton = true
   export let sectionCursorState = ""
   export let sectionClass: string = ""
-
-  onMount(() => {
-    g.wih.update(_ => window.innerHeight)
-  })
 </script>
 
 
@@ -25,8 +21,7 @@
 
 <Interactive state={sectionCursorState}>
   <section
-    class="{sectionClass} w-screen {primary ? "primary" : "background"} p-8 flex_col_center relative text-center"
-    style="height: {get(g.wih)}"
+    class="{sectionClass} w-screen h-screen {primary ? "primary" : "background"} p-8 flex_col_center relative text-center"
   >
     <slot/>
     {#if scrollButton}

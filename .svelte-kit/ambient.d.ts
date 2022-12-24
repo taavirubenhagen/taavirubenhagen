@@ -79,11 +79,6 @@ declare module '$env/static/private' {
 	export const TERM_PROGRAM_VERSION: string;
 	export const LANG: string;
 	export const COLORTERM: string;
-	export const GIT_ASKPASS: string;
-	export const VSCODE_GIT_ASKPASS_NODE: string;
-	export const VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
-	export const VSCODE_GIT_ASKPASS_MAIN: string;
-	export const VSCODE_GIT_IPC_HANDLE: string;
 	export const VSCODE_INJECTION: string;
 }
 
@@ -167,11 +162,6 @@ declare module '$env/dynamic/private' {
 		TERM_PROGRAM_VERSION: string;
 		LANG: string;
 		COLORTERM: string;
-		GIT_ASKPASS: string;
-		VSCODE_GIT_ASKPASS_NODE: string;
-		VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
-		VSCODE_GIT_ASKPASS_MAIN: string;
-		VSCODE_GIT_IPC_HANDLE: string;
 		VSCODE_INJECTION: string;
 		[key: `PUBLIC_${string}`]: undefined;
 		[key: string]: string | undefined;

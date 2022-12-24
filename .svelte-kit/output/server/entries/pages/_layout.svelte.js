@@ -1,6 +1,6 @@
 import { c as create_ssr_component, v as validate_component, e as each, b as escape, d as add_attribute } from "../../chunks/index.js";
 import "ua-parser-js";
-import { I as Interactive } from "../../chunks/global.js";
+/* empty css                   */import { I as Interactive } from "../../chunks/Interactive.js";
 const DeviceDetector = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { showInDevice = void 0 } = $$props;
   let { showInBrowser = void 0 } = $$props;

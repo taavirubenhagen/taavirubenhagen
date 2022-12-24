@@ -1,7 +1,38 @@
 {
 	"compilerOptions": {
 		"baseUrl": "..",
-		"paths": {},
+		"paths": {
+			"$src": [
+				"src"
+			],
+			"$src/*": [
+				"src/*"
+			],
+			"$components": [
+				"src/components"
+			],
+			"$components/*": [
+				"src/components/*"
+			],
+			"$buttons": [
+				"src/components/buttons"
+			],
+			"$buttons/*": [
+				"src/components/buttons/*"
+			],
+			"$frames": [
+				"src/components/frames"
+			],
+			"$frames/*": [
+				"src/components/frames/*"
+			],
+			"$style": [
+				"src/global.postcss"
+			],
+			"$store": [
+				"src/stores.ts"
+			]
+		},
 		"rootDirs": [
 			"..",
 			"./types"
