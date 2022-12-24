@@ -15,7 +15,7 @@
     m-0 hover:m-0 rounded-full border-2 hover:border-2 {onPrimary ? "border-onPrimary" : "border-onBackground"}
     {
       primary
-      ? ( onPrimary ? "bg-onPrimary hover:bg-transparent" : "bg-primary hover:bg-transparent" )
+      ? ( onPrimary ? "bg-onPrimary hover:bg-transparent" : "bg-primary hover:bg-transparent text-onPrimary hover:text-onBackground" )
       : ( onPrimary ? "bg-transparent hover:bg-onPrimary" : "bg-transparent hover:bg-primary" )
     }
     px-5 py-3

@@ -26,7 +26,7 @@ const Text_button = create_ssr_component(($$result, $$props, $$bindings, slots) 
   if ($$props.primary === void 0 && $$bindings.primary && primary !== void 0)
     $$bindings.primary(primary);
   return `<div class="${escape(buttonClass, true) + " transition-all m-0 hover:m-0 rounded-full border-2 hover:border-2 " + escape(onPrimary ? "border-onPrimary" : "border-onBackground", true) + " " + escape(
-    primary ? onPrimary ? "bg-onPrimary hover:bg-transparent" : "bg-primary hover:bg-transparent" : onPrimary ? "bg-transparent hover:bg-onPrimary" : "bg-transparent hover:bg-primary",
+    primary ? onPrimary ? "bg-onPrimary hover:bg-transparent" : "bg-primary hover:bg-transparent text-onPrimary hover:text-onBackground" : onPrimary ? "bg-transparent hover:bg-onPrimary" : "bg-transparent hover:bg-primary",
     true
   ) + " px-5 py-3 " + escape(
     onPrimary ? "text-onPrimary hover:text-onBackground" : "text-onBackground hover:text-onPrimary",

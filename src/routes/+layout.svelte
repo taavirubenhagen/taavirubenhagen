@@ -33,7 +33,7 @@
       {/if}
     </div>
   </Cursor>-->
-  <header class="fixed z-20 w-full h-24 flex flex-col md:flex-row justify-start md:justify-center items-center">
+  <header class="fixed z-20 w-full h-0 flex flex-col md:flex-row justify-start md:justify-center items-center">
     <DeviceDetector showInDevice="desktop">
       {#each getMenu().slice(0, 2) as data, i}
         <Interactive state="hover">
