@@ -24,7 +24,7 @@
 
 
 <Interactive state={sectionCursorState}>
-  <section class="{sectionClass} w-screen h-screen {primary ? "primary" : "background"} p-8 flex_col_center relative text-center">
+  <section class="{sectionClass} w-screen h-screen {primary ? "primary" : "background"} p-64 flex_col_center relative text-center">
     <slot/>
     {#if scrollButton}
       <Interactive state="hover">
