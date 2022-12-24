@@ -38,7 +38,16 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   })}
     ${validate_component(DeviceDetector, "DeviceDetector").$$render($$result, { showInDevice: "mobile" }, {}, {
     default: () => {
-      return `${``}`;
+      return `${``}
+      ${each(getMenu(), (data, i) => {
+        return `${validate_component(Interactive, "Interactive").$$render($$result, { state: "hover" }, {}, {
+          default: () => {
+            return `<button class="${"h-16"}"><a${add_attribute("href", data[1] ?? "404", 0)}><b1 class="${"text-right"}">${escape(data[0])}</b1>
+            </a></button>
+        `;
+          }
+        })}`;
+      })}`;
     }
   })}
     ${validate_component(DeviceDetector, "DeviceDetector").$$render($$result, { showInDevice: "desktop" }, {}, {

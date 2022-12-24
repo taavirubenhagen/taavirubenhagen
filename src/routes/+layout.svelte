@@ -58,25 +58,24 @@
     <DeviceDetector showInDevice="mobile">
       {#if isMenuOpen}
         <button
-          on:click={() => isMenuOpen = false}
-          class="w-full h-full"
-        >
-          {#each getMenu() as data, i}
-            <Interactive state="hover">
-              <button
-                on:click={() => isMenuOpen = false}
-                in:fly="{{ y: -1.5 * ( i + 2 ), duration: 400 }}"
-                out:fly="{{ y: -1.5 * ( i + 2 ), duration: 400 }}"
-                class="h-16"
-              >
-                <a href={data[1] ?? "404"}>
-                  <b1 class="text-right">{data[0]}</b1>
-                </a>
-              </button>
-            </Interactive>
-          {/each}
-        </button>
+        on:click={() => isMenuOpen = false}
+          class="absolute w-screen h-screen"
+        ></button>
       {/if}
+      {#each getMenu() as data, i}
+        <Interactive state="hover">
+          <button
+            on:click={() => isMenuOpen = false}
+            in:fly="{{ y: -1.5 * ( i + 2 ), duration: 400 }}"
+            out:fly="{{ y: -1.5 * ( i + 2 ), duration: 400 }}"
+            class="h-16"
+          >
+            <a href={data[1] ?? "404"}>
+              <b1 class="text-right">{data[0]}</b1>
+            </a>
+          </button>
+        </Interactive>
+      {/each}
     </DeviceDetector>
     <DeviceDetector showInDevice="desktop">
       {#each getMenu().slice(-2) as data, i}
