@@ -90,7 +90,7 @@
   </header>
   <div
     class="{isMenuOpen ? "blur md:blur-0" : "blur-0"}"
-    style="transition: all 400ms;"
+    style="transition: all 400ms cubic-bezier(0, .2, 1, .4);"
   >
     <slot></slot>
   </div>
