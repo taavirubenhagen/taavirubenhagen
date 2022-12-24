@@ -38,15 +38,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   })}
     ${validate_component(DeviceDetector, "DeviceDetector").$$render($$result, { showInDevice: "mobile" }, {}, {
     default: () => {
-      return `${each(getMenu(), (data, i) => {
-        return `${validate_component(Interactive, "Interactive").$$render($$result, { state: "hover" }, {}, {
-          default: () => {
-            return `<button class="${"h-16"}"><a${add_attribute("href", data[1] ?? "404", 0)}><b1 class="${"text-right"}">${escape(data[0])}</b1>
-            </a></button>
-        `;
-          }
-        })}`;
-      })}`;
+      return `${``}`;
     }
   })}
     ${validate_component(DeviceDetector, "DeviceDetector").$$render($$result, { showInDevice: "desktop" }, {}, {
@@ -62,7 +54,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       })}`;
     }
   })}</header>
-  <div class="${escape("blur-0", true) + " max-h-screen"}" style="${"transition: all 400ms cubic-bezier(.2, 0, .4, 1);"}">${slots.default ? slots.default({}) : ``}</div></main>`;
+  <div class="${escape("blur-0", true) + " max-h-screen"}" style="${"transition: all 400ms cubic-bezier(0, 0, 1, 1);"}">${slots.default ? slots.default({}) : ``}</div></main>`;
 });
 export {
   Layout as default
