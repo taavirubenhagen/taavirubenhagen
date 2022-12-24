@@ -1,16 +1,5 @@
-import { c as create_ssr_component, b as subscribe, e as escape, v as validate_component } from "../../chunks/index.js";
-/* empty css                   */import { w as writable } from "../../chunks/index2.js";
-const cursorState = writable(null);
-const Interactive = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let $$unsubscribe_cursorState;
-  $$unsubscribe_cursorState = subscribe(cursorState, (value) => value);
-  let { state = "hover" } = $$props;
-  let hovering = false;
-  if ($$props.state === void 0 && $$bindings.state && state !== void 0)
-    $$bindings.state(state);
-  $$unsubscribe_cursorState();
-  return `<span>${slots.default ? slots.default({ hovering }) : ``}</span>`;
-});
+import { c as create_ssr_component, b as escape, v as validate_component } from "../../chunks/index.js";
+import { I as Interactive } from "../../chunks/global.js";
 const Icon = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { isWhite = false } = $$props;
   let { size = "0" } = $$props;
