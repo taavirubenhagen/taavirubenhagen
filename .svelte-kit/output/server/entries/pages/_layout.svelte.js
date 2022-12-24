@@ -18,7 +18,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     return [];
   }
   return `<main class="${"w-screen min-h-screen bg-background text-onBackground"}">
-  <header class="${"fixed z-20 w-full h-24 flex flex-col md:flex-row justify-start md:justify-center items-end md:items-center"}">${validate_component(DeviceDetector, "DeviceDetector").$$render($$result, { showInDevice: "desktop" }, {}, {
+  <header class="${"fixed z-20 w-full h-24 flex flex-col md:flex-row justify-start md:justify-center items-center"}">${validate_component(DeviceDetector, "DeviceDetector").$$render($$result, { showInDevice: "desktop" }, {}, {
     default: () => {
       return `${each(getMenu().slice(0, 2), (data, i) => {
         return `${validate_component(Interactive, "Interactive").$$render($$result, { state: "hover" }, {}, {
