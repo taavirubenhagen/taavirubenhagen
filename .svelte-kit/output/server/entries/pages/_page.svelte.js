@@ -51,7 +51,7 @@ const Title_section = create_ssr_component(($$result, $$props, $$bindings, slots
     $$bindings.sectionClass(sectionClass);
   return `${validate_component(Interactive, "Interactive").$$render($$result, { state: sectionCursorState }, {}, {
     default: () => {
-      return `<section class="${escape(sectionClass, true) + " w-screen h-full " + escape(primary ? "primary" : "background", true) + " p-16 flex_col_center relative text-center"}">${slots.default ? slots.default({}) : ``}
+      return `<section class="${escape(sectionClass, true) + " w-screen h-screen " + escape(primary ? "primary" : "background", true) + " p-16 flex_col_center relative text-center"}">${slots.default ? slots.default({}) : ``}
     ${scrollButton ? `${validate_component(Interactive, "Interactive").$$render($$result, { state: "hover" }, {}, {
         default: () => {
           return `<button class="${"absolute left-0 bottom-0 w-screen flex_row_center"}"><div class="${"w-24 h-24 p-8 hover:p-7"}" style="${"transition-duration: 200ms; transition-timing-function: cubic-bezier(.2, 0, .2, 1);"}">${validate_component(Icon, "Icon").$$render(
