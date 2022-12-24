@@ -89,7 +89,7 @@
     </DeviceDetector>
   </header>
   <div
-    class="{isMenuOpen ? "blur md:blur-0" : "blur-0"}"
+    class="{isMenuOpen ? "blur md:blur-0" : "blur-0"} h-screen"
     style="transition: all 400ms cubic-bezier(0, .2, 1, .4);"
   >
     <slot></slot>

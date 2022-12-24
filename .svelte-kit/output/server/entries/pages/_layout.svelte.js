@@ -1,4 +1,4 @@
-import { c as create_ssr_component, v as validate_component, e as each, b as add_attribute, d as escape } from "../../chunks/index.js";
+import { c as create_ssr_component, v as validate_component, e as each, b as escape, d as add_attribute } from "../../chunks/index.js";
 import "ua-parser-js";
 import { I as Interactive } from "../../chunks/global.js";
 const DeviceDetector = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -62,7 +62,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       })}`;
     }
   })}</header>
-  <div${add_attribute("class", "blur-0", 0)} style="${"transition: all 400ms cubic-bezier(0, .2, 1, .4);"}">${slots.default ? slots.default({}) : ``}</div></main>`;
+  <div class="${escape("blur-0", true) + " h-screen"}" style="${"transition: all 400ms cubic-bezier(0, .2, 1, .4);"}">${slots.default ? slots.default({}) : ``}</div></main>`;
 });
 export {
   Layout as default

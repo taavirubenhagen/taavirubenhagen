@@ -19,7 +19,7 @@
     <h3>Contact me for any collaboration.</h3>
     <div class="h-16"></div>
     <div class="flex_row_center">
-      <TextButton>E-Mail me</TextButton>
+      <TextButton primary>E-Mail me</TextButton>
     </div>
   </TitleSection>
 </main>

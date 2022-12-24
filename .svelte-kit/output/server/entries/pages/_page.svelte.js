@@ -1,4 +1,4 @@
-import { c as create_ssr_component, d as escape, v as validate_component } from "../../chunks/index.js";
+import { c as create_ssr_component, b as escape, v as validate_component } from "../../chunks/index.js";
 import { I as Interactive } from "../../chunks/global.js";
 const Icon = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { isWhite = false } = $$props;
@@ -92,7 +92,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     default: () => {
       return `<h3>Contact me for any collaboration.</h3>
     <div class="${"h-16"}"></div>
-    <div class="${"flex_row_center"}">${validate_component(Text_button, "TextButton").$$render($$result, {}, {}, {
+    <div class="${"flex_row_center"}">${validate_component(Text_button, "TextButton").$$render($$result, { primary: true }, {}, {
         default: () => {
           return `E-Mail me`;
         }
