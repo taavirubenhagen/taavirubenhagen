@@ -1,6 +1,7 @@
 import { c as create_ssr_component, s as setContext, v as validate_component, m as missing_component } from "./chunks/index.js";
+import { H as HttpError, R as Redirect, e as error, A as ActionFailure, j as json } from "./chunks/index2.js";
 import * as devalue from "devalue";
-import { w as writable, r as readable } from "./chunks/index2.js";
+import { w as writable, r as readable } from "./chunks/index3.js";
 import { parse, serialize } from "cookie";
 import * as set_cookie_parser from "set-cookie-parser";
 function afterUpdate() {
@@ -93,33 +94,6 @@ function is_content_type(request, ...types) {
 }
 function is_form_content_type(request) {
   return is_content_type(request, "application/x-www-form-urlencoded", "multipart/form-data");
-}
-class HttpError {
-  constructor(status, body) {
-    this.status = status;
-    if (typeof body === "string") {
-      this.body = { message: body };
-    } else if (body) {
-      this.body = body;
-    } else {
-      this.body = { message: `Error: ${status}` };
-    }
-  }
-  toString() {
-    return JSON.stringify(this.body);
-  }
-}
-class Redirect {
-  constructor(status, location) {
-    this.status = status;
-    this.location = location;
-  }
-}
-class ActionFailure {
-  constructor(status, data) {
-    this.status = status;
-    this.data = data;
-  }
 }
 function coalesce_to_error(err) {
   return err instanceof Error || err && err.name && err.message ? err : new Error(JSON.stringify(err));
@@ -344,22 +318,6 @@ function is_endpoint_request(event) {
 }
 function compact(arr) {
   return arr.filter((val) => val != null);
-}
-function error(status, message) {
-  if (isNaN(status) || status < 400 || status > 599) {
-    throw new Error(`HTTP error status codes must be between 400 and 599 — ${status} is invalid`);
-  }
-  return new HttpError(status, message);
-}
-function json(data, init2) {
-  const headers = new Headers(init2?.headers);
-  if (!headers.has("content-type")) {
-    headers.set("content-type", "application/json");
-  }
-  return new Response(JSON.stringify(data), {
-    ...init2,
-    headers
-  });
 }
 function is_action_json_request(event) {
   const accept = negotiate(event.request.headers.get("accept") ?? "*/*", [
@@ -2339,7 +2297,7 @@ function set_paths(paths) {
   base = paths.base;
   assets = paths.assets || base;
 }
-const app_template = ({ head, body, assets: assets2, nonce }) => '\r\n<!DOCTYPE html>\r\n<html lang="en">\r\n	<head>\r\n		<meta charset="utf-8" />\r\n		<link rel="icon" href="' + assets2 + '/favicon.png" />\r\n		<title>Taavi Rübenhagen</title>\r\n		<meta name="viewport" content="width=device-width" />\r\n\r\n		<link rel="preconnect" href="https://fonts.googleapis.com"/>\r\n		<link rel="preconnect" href="https://fonts.gstatic.com"/>\r\n		<link href="https://fonts.googleapis.com/css2?family=Manrope&family=Rubik&family=Flow+Circular&family=Raleway&family=Inter&family=IBM+Plex+Mono&display=swap" rel="stylesheet"/>\r\n		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>\r\n\r\n		<script>\r\n			import "./global.postcss"\r\n		<\/script>\r\n		\r\n		' + head + "\r\n	</head>\r\n	<body>\r\n		<div>" + body + "</div>\r\n	</body>\r\n</html>\r\n";
+const app_template = ({ head, body, assets: assets2, nonce }) => '\r\n<!DOCTYPE html>\r\n<html lang="en">\r\n	<head>\r\n		<meta charset="utf-8" />\r\n		<link rel="icon" href="' + assets2 + '/logo_icon.svg" />\r\n		<title>Taavi Rübenhagen.</title>\r\n		<meta name="viewport" content="width=device-width" />\r\n		<meta name="theme-color" content="#000">\r\n\r\n		<link rel="preconnect" href="https://fonts.googleapis.com"/>\r\n		<link rel="preconnect" href="https://fonts.gstatic.com"/>\r\n		<link href="https://fonts.googleapis.com/css2?family=Manrope&family=Rubik&family=Flow+Circular&family=Raleway&family=Inter&family=IBM+Plex+Mono&display=swap" rel="stylesheet"/>\r\n		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>\r\n\r\n		<script>\r\n			import "./global.postcss"\r\n		<\/script>\r\n		\r\n		' + head + "\r\n	</head>\r\n	<body>\r\n		<div>" + body + "</div>\r\n	</body>\r\n</html>\r\n";
 const error_template = ({ status, message }) => '<!DOCTYPE html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<title>' + message + `</title>
 
 		<style>
@@ -2419,7 +2377,7 @@ class Server {
       app_template,
       app_template_contains_nonce: false,
       error_template,
-      version: "1671916672137"
+      version: "1674492850298"
     };
   }
   async init({ env }) {

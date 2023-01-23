@@ -8,6 +8,12 @@
 			"$src/*": [
 				"src/*"
 			],
+			"$static": [
+				"src/static"
+			],
+			"$static/*": [
+				"src/static/*"
+			],
 			"$components": [
 				"src/components"
 			],

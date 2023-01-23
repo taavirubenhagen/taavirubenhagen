@@ -1,4 +1,11 @@
 {
-	"/": [],
-	"/services": []
+	"/": [
+		"src/routes/+page.server.ts"
+	],
+	"/contact": [],
+	"/fenni/blog/admin/post": [],
+	"/home": [],
+	"/presenter/web/[id]": [],
+	"/three": [],
+	"/work": []
 }

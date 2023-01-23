@@ -1,34 +1,40 @@
 <script lang="ts">
-  import { get, writable } from "svelte/store"
-  import { onMount } from "svelte"
-
   import * as scroller from "svelte-scrollto"
   import { Interactive } from 'svelte-cursor'
 
   import "../.././global.postcss"
   import Icon from "../../components/icon.svelte"
-	import * as g from "../../stores"
 
   export let index: number
   export let primary = false
   export let scrollButton = true
   export let sectionCursorState = ""
   export let sectionClass: string = ""
+
+
+
+
+  let windowHeight: number
 </script>
+
+
+
+
+<svelte:window bind:innerHeight={windowHeight}/>
 
 
 
 
 <Interactive state={sectionCursorState}>
   <section
-    class="{sectionClass} w-screen h-screen {primary ? "primary" : "background"} p-8 flex_col_center relative text-center"
+    class="{sectionClass} w-screen h-screen {primary ? "primary" : "background"} p-8 md:p-16 flex_col_center relative text-center"
   >
     <slot/>
     {#if scrollButton}
       <div class="absolute left-0 bottom-0">
         <Interactive state="hover">
           <button
-            on:click={() => scroller.scrollTo({y: get(g.wih) * ( index + 1 )})}
+            on:click={() => scroller.scrollTo({y: windowHeight * ( index + 1 )})}
             class="w-screen flex_row_center"
           >
             <div

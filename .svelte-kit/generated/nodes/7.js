@@ -1,0 +1,1 @@
+export { default as component } from "../../../src/routes/fenni/blog/admin/post/+page.svelte";

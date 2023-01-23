@@ -7,7 +7,7 @@
 
   :root {
     @apply m-0 md:max-w-none overflow-x-hidden p-0 bg-background text-onBackground;
-    font-family: "Manrope";
+    font-family: "Manrope", "Arial";
   }
   :root::-webkit-scrollbar { @apply w-2 bg-background; }
   :root::-webkit-scrollbar-thumb { @apply rounded-full bg-black; }
@@ -21,9 +21,9 @@
 
   h1 { @apply text text-7xl md:text-9xl font-bold; }
   h2 { @apply text text-5xl md:text-7xl font-bold tracking-widest; }
-  h3 { @apply text text-3xl md:text-5xl font-bold leading-normal tracking-widest; }
-  h4 { @apply text text-2xl font-bold tracking-widest; }
-  s1 { @apply text; }
+  h3 { @apply text text-3xl md:text-5xl font-bold tracking-widest; }
+  h4 { @apply text text-2xl md:text-3xl font-bold tracking-widest; }
+  s1 { @apply text opacity-60 text-lg tracking-wider; }
   s2 { @apply text; }
   p1 { @apply text; }
   p2 { @apply text; }
@@ -36,6 +36,23 @@
 /* GENERAL CUSTOM CLASSES */
 
 
+  .default_animation_short {
+    @apply transition-all;
+    transition-duration: 100ms;
+    transition-timing-function: cubic-bezier(.2, 0, .4, 1);
+  }
+  .default_animation_base {
+    @apply transition-all;
+    transition-duration: 200ms;
+    transition-timing-function: cubic-bezier(.2, 0, .4, 1);
+  }
+  .default_animation_long {
+    @apply transition-all;
+    transition-duration: 400ms;
+    transition-timing-function: cubic-bezier(.2, 0, .4, 1);
+  }
+
+
   .background { @apply bg-background text-onBackground; }
   .background::selection { @apply bg-onBackground text-background; }
   .primary { @apply bg-primary text-onPrimary; }
@@ -43,9 +60,7 @@
 
 
   .base_cursor {
-    @apply rounded-full border-2 border-primary w-8 h-8 bg-opacity-50 bg-background p-4 transition-all;
-    transition-duration: 400ms;
-    transition-timing-function: cubic-bezier(.2, 0, .4, 1);
+    @apply rounded-full border-2 border-primary w-8 h-8 bg-opacity-50 bg-background p-4 default_animation_long;
   }
   .hover_cursor {
     @apply w-16 h-16 bg-opacity-100;

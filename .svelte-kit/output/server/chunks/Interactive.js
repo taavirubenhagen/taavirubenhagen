@@ -1,5 +1,5 @@
 import { c as create_ssr_component, f as subscribe } from "./index.js";
-import { w as writable } from "./index2.js";
+import { w as writable } from "./index3.js";
 const cursorState = writable(null);
 const Interactive = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $$unsubscribe_cursorState;

@@ -15,5 +15,4 @@ declare namespace App {
 declare module "svelte-device-detector"
 declare module "svelte-scrollto"
 
-declare module "svelte-material-icons/Close.svelte"
-declare module "svelte-material-icons/DotsHorizontal.svelte"
+declare module "$src/routes/local_menu_button.svelte"

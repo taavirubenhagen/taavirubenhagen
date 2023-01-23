@@ -36,8 +36,6 @@ declare module '$env/static/private' {
 	export const COMPUTERNAME: string;
 	export const ComSpec: string;
 	export const DriverData: string;
-	export const FPS_BROWSER_APP_PROFILE_STRING: string;
-	export const FPS_BROWSER_USER_PROFILE_STRING: string;
 	export const GOPATH: string;
 	export const HOMEDRIVE: string;
 	export const HOMEPATH: string;
@@ -46,7 +44,6 @@ declare module '$env/static/private' {
 	export const LOGONSERVER: string;
 	export const NODE_ENV: string;
 	export const NUMBER_OF_PROCESSORS: string;
-	export const NVTOOLSEXT_PATH: string;
 	export const OneDrive: string;
 	export const OneDriveConsumer: string;
 	export const ORIGINAL_XDG_CURRENT_DESKTOP: string;
@@ -79,6 +76,11 @@ declare module '$env/static/private' {
 	export const TERM_PROGRAM_VERSION: string;
 	export const LANG: string;
 	export const COLORTERM: string;
+	export const GIT_ASKPASS: string;
+	export const VSCODE_GIT_ASKPASS_NODE: string;
+	export const VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
+	export const VSCODE_GIT_ASKPASS_MAIN: string;
+	export const VSCODE_GIT_IPC_HANDLE: string;
 	export const VSCODE_INJECTION: string;
 }
 
@@ -119,8 +121,6 @@ declare module '$env/dynamic/private' {
 		COMPUTERNAME: string;
 		ComSpec: string;
 		DriverData: string;
-		FPS_BROWSER_APP_PROFILE_STRING: string;
-		FPS_BROWSER_USER_PROFILE_STRING: string;
 		GOPATH: string;
 		HOMEDRIVE: string;
 		HOMEPATH: string;
@@ -129,7 +129,6 @@ declare module '$env/dynamic/private' {
 		LOGONSERVER: string;
 		NODE_ENV: string;
 		NUMBER_OF_PROCESSORS: string;
-		NVTOOLSEXT_PATH: string;
 		OneDrive: string;
 		OneDriveConsumer: string;
 		ORIGINAL_XDG_CURRENT_DESKTOP: string;
@@ -162,6 +161,11 @@ declare module '$env/dynamic/private' {
 		TERM_PROGRAM_VERSION: string;
 		LANG: string;
 		COLORTERM: string;
+		GIT_ASKPASS: string;
+		VSCODE_GIT_ASKPASS_NODE: string;
+		VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
+		VSCODE_GIT_ASKPASS_MAIN: string;
+		VSCODE_GIT_IPC_HANDLE: string;
 		VSCODE_INJECTION: string;
 		[key: `PUBLIC_${string}`]: undefined;
 		[key: string]: string | undefined;

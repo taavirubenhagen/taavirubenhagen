@@ -1,31 +1,21 @@
 <script lang="ts">
-  import { get, writable } from "svelte/store"
-  import { onMount } from "svelte"
-  import { fade, fly } from "svelte/transition"
+  import { onMount } from "svelte";
 
-  import DeviceDetector from "svelte-device-detector"
-  import { Cursor, Interactive } from 'svelte-cursor'
+  import DeviceDetector from "svelte-device-detector";
+  import { Cursor, Interactive } from "svelte-cursor";
 
-  import * as g from "$store"
-  import "../global.postcss"
-  
-  import Icon from "../components/icon.svelte"
+  import * as g from "$store";
+  import "$style";
 
+  import MenuButton from "$src/routes/local_menu_button.svelte";
 
-  let isMenuOpen = false
+  let isMenuOpen = false;
 
-  function getMenu(): string[][] {
-    let menu = [["Home", "home"], ["Mission", "mission"], ["Team", "team"], ["Contact", "contact"]]
-    return isMenuOpen ? menu : []
+  function getMenu(): string[] {
+    let menu = ["Home", "Work", "Services", "Contact"];
+    return isMenuOpen ? menu : [];
   }
-  
-  onMount(() => {
-    g.wih.update(_ => window.innerHeight)
-  })
 </script>
-
-
-
 
 <main class="w-screen min-h-screen bg-background text-onBackground">
   <!--<Cursor let:state>
@@ -40,73 +30,68 @@
       {/if}
     </div>
   </Cursor>-->
-  <header class="fixed z-20 w-full h-24 flex flex-col md:flex-row justify-start md:justify-center items-center">
+  <header
+    class="fixed z-20 w-full h-24 flex flex-col md:flex-row justify-start md:justify-center items-center"
+  >
     <DeviceDetector showInDevice="desktop">
-      {#each getMenu().slice(0, 2) as data, i}
-        <Interactive state="hover">
-          <button
-            on:click={() => isMenuOpen = false}
-            in:fly="{{ x: 10 * ( 2 - i ), duration: 400 }}"
-            out:fly="{{ x: 10 * ( 2 - i ), duration: 400 }}"
-            class="w-32"
-          >
-            <a href={data[1] ?? "404"}>
-              <b1 class="text-right">{data[0]}</b1>
-            </a>
-          </button>
-        </Interactive>
+      {#each getMenu().slice(0, getMenu().length / 2) as data, i}
+        <MenuButton
+          context="left"
+          {data}
+          {i}
+          onClick={() => (isMenuOpen = false)}
+        />
       {/each}
     </DeviceDetector>
     <Interactive state="hover">
-      <button on:click={() => isMenuOpen = !isMenuOpen} class="z-40 mx-4">
-        <img src="full_logo.svg" alt="Logo" class="m-8 h-8">
+      <button on:click={() => (isMenuOpen = !isMenuOpen)} class="z-40">
+        <img
+          src="/full_logo.svg"
+          alt="Logo"
+          class="
+            shadow-0 hover:shadow-0
+            m-4 mx-2 rounded h-16 p-4
+            bg-background"
+          style="
+            transition: all 400ms cubic-bezier(.2, 0, .4, 1);"
+        />
       </button>
     </Interactive>
     <DeviceDetector showInDevice="mobile">
       {#if isMenuOpen}
         <button
-        on:click={() => isMenuOpen = false}
+          on:click={() => (isMenuOpen = false)}
           class="absolute w-screen h-screen"
-        ></button>
+        />
       {/if}
       {#each getMenu() as data, i}
-        <Interactive state="hover">
-          <button
-            on:click={() => isMenuOpen = false}
-            in:fly="{{ y: -1.5 * ( i + 2 ), duration: 400 }}"
-            out:fly="{{ y: -1.5 * ( i + 2 ), duration: 400 }}"
-            class="h-16"
-          >
-            <a href={data[1] ?? "404"}>
-              <b1 class="text-right">{data[0]}</b1>
-            </a>
-          </button>
-        </Interactive>
+        <MenuButton
+          context="mobile"
+          {data}
+          {i}
+          onClick={() => (isMenuOpen = false)}
+        />
       {/each}
     </DeviceDetector>
     <DeviceDetector showInDevice="desktop">
-      {#each getMenu().slice(-2) as data, i}
-        <Interactive state="hover">
-          <button
-            on:click={() => isMenuOpen = false}
-            in:fly="{{ x: 10 * ( -1 - i ), duration: 400 }}"
-            out:fly="{{ x: 10 * ( -1 - i ), duration: 400 }}"
-            class="w-32"
-          >
-            <a href={data[1] ?? "404"}>
-              <b1 class="text-right">{data[0]}</b1>
-            </a>
-          </button>
-        </Interactive>
+      {#each getMenu().slice(-(getMenu().length / 2)) as data, i}
+        <MenuButton
+          context="right"
+          {data}
+          {i}
+          onClick={() => (isMenuOpen = false)}
+        />
       {/each}
     </DeviceDetector>
   </header>
   <div
-    class="{isMenuOpen ? "blur md:blur-0" : "blur-0"} max-h-screen"
+    class="{isMenuOpen ? 'blur md:blur-0' : 'blur-0'} max-h-screen"
     style="
       transition: all 400ms cubic-bezier(0, 0, 1, 1);
       max-height: 100vh;"
   >
-    <slot></slot>
+    <slot>
+      <s1>This page is still under development.</s1>
+    </slot>
   </div>
 </main>
