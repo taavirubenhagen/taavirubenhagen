@@ -9,7 +9,7 @@
 
 
 
-<div
+<button
   class="{buttonClass}
     transition-all
     m-0 hover:m-0 rounded-full border-2 hover:border-2 {onPrimary ? "border-onPrimary" : "border-onBackground"}
@@ -33,4 +33,4 @@
     transition-timing-function: cubic-bezier(.2, 0, .4, 1)"
   >
   <b2><slot/></b2>
-</div>
+</button>

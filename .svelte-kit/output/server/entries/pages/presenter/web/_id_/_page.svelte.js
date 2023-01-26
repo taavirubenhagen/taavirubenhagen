@@ -1,4 +1,4 @@
-import { g as getContext, c as create_ssr_component, f as subscribe, v as validate_component, e as escape } from "../../../../../chunks/index.js";
+import { g as getContext, c as create_ssr_component, b as subscribe, v as validate_component, e as escape } from "../../../../../chunks/index.js";
 import "ua-parser-js";
 import { C as Content_section } from "../../../../../chunks/content_section.js";
 const getStores = () => {

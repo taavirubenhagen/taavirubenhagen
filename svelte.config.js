@@ -12,7 +12,7 @@ const config = {
 		adapter: adapter(),
 		alias: {
 			$src: path.resolve('./src'),
-			$static: path.resolve('./src/static/'),
+			$static: path.resolve('./static/'),
 			$components: path.resolve("./src/components/"),
 			$buttons: path.resolve("./src/components/buttons/"),
 			$frames: path.resolve("./src/components/frames/"),

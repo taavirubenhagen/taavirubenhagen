@@ -1,19 +1,16 @@
-import { c as create_ssr_component, e as escape, v as validate_component } from "./index.js";
-/* empty css                                      */import { I as Interactive } from "./Interactive.js";
-/* empty css        */const Icon = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let { isWhite = false } = $$props;
-  let { size = "0" } = $$props;
-  let { iconClass = "" } = $$props;
-  let { name } = $$props;
-  if ($$props.isWhite === void 0 && $$bindings.isWhite && isWhite !== void 0)
-    $$bindings.isWhite(isWhite);
-  if ($$props.size === void 0 && $$bindings.size && size !== void 0)
-    $$bindings.size(size);
-  if ($$props.iconClass === void 0 && $$bindings.iconClass && iconClass !== void 0)
-    $$bindings.iconClass(iconClass);
-  if ($$props.name === void 0 && $$bindings.name && name !== void 0)
-    $$bindings.name(name);
-  return `<div class="${"w-" + escape(size, true) + " h-" + escape(size, true)}"><img src="${"icons/" + escape(name, true) + ".svg"}" alt="${"Icon"}" class="${escape(iconClass, true) + " " + escape(isWhite ? "invert" : "", true)}"></div>`;
+import { c as create_ssr_component, b as subscribe, v as validate_component, e as escape } from "./index.js";
+/* empty css                                      */import { w as writable } from "./index3.js";
+/* empty css        */import { I as Icon } from "./icon.js";
+const cursorState = writable(null);
+const Interactive = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let $$unsubscribe_cursorState;
+  $$unsubscribe_cursorState = subscribe(cursorState, (value) => value);
+  let { state = "hover" } = $$props;
+  let hovering = false;
+  if ($$props.state === void 0 && $$bindings.state && state !== void 0)
+    $$bindings.state(state);
+  $$unsubscribe_cursorState();
+  return `<span>${slots.default ? slots.default({ hovering }) : ``}</span>`;
 });
 const Title_section = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { index } = $$props;
@@ -56,5 +53,6 @@ ${validate_component(Interactive, "Interactive").$$render($$result, { state: sec
   })}`;
 });
 export {
+  Interactive as I,
   Title_section as T
 };

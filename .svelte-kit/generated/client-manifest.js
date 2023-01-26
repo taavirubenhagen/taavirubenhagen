@@ -11,18 +11,19 @@ export const nodes = [() => import('./nodes/0'),
 	() => import('./nodes/8'),
 	() => import('./nodes/9'),
 	() => import('./nodes/10'),
-	() => import('./nodes/11')];
+	() => import('./nodes/11'),
+	() => import('./nodes/12')];
 
 export const server_loads = [];
 
 export const dictionary = {
-	"/": [~5],
-	"/contact": [6,[2]],
-	"/fenni/blog/admin/post": [7],
-	"/home": [8,[3]],
-	"/presenter/web/[id]": [9],
-	"/three": [10],
-	"/work": [11,[4]]
+	"/": [~6],
+	"/contact": [7,[2]],
+	"/fenni/blog/admin/post": [8],
+	"/me/home": [9,[3,4]],
+	"/presenter/web/[id]": [10],
+	"/three": [11],
+	"/work": [12,[5]]
 };
 
 export const hooks = {

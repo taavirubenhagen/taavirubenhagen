@@ -1,4 +1,4 @@
-import { c as create_ssr_component, e as escape, b as add_attribute } from "./index.js";
+import { c as create_ssr_component, e as escape, d as add_attribute } from "./index.js";
 /* empty css                                      *//* empty css        */const Content_section = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { primary = false } = $$props;
   let { scrollButton = true } = $$props;

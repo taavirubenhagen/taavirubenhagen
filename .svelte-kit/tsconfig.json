@@ -9,10 +9,10 @@
 				"src/*"
 			],
 			"$static": [
-				"src/static"
+				"static"
 			],
 			"$static/*": [
-				"src/static/*"
+				"static/*"
 			],
 			"$components": [
 				"src/components"

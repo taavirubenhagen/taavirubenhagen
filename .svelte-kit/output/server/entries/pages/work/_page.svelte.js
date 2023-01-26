@@ -1,8 +1,7 @@
-import { c as create_ssr_component, v as validate_component, d as each, b as add_attribute, e as escape } from "../../../chunks/index.js";
-/* empty css                                                    */import { I as Interactive } from "../../../chunks/Interactive.js";
+import { c as create_ssr_component, v as validate_component, f as each, d as add_attribute, e as escape } from "../../../chunks/index.js";
+/* empty css                                                    */import { T as Title_section, I as Interactive } from "../../../chunks/title_section.js";
 /* empty css                      */import { T as Text_button } from "../../../chunks/text_button.js";
 import { C as Content_section } from "../../../chunks/content_section.js";
-import { T as Title_section } from "../../../chunks/title_section.js";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<main>${validate_component(Title_section, "TitleSection").$$render($$result, { index: 0 }, {}, {
     default: () => {
