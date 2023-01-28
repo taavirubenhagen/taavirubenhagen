@@ -31,6 +31,8 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@rive-app/canvas": "^1.0.98",
+		"rive-js": "^0.7.33",
 		"svelte-cubed": "^0.2.1",
 		"three": "^0.148.0"
 	}

@@ -1,10 +1,10 @@
 export const manifest = {
 	appDir: "_app",
 	appPath: "_app",
-	assets: new Set(["favicon.png","full_logo.png","full_logo.svg","icons/icons_1_down_8.svg","icons/icons_1_up_8.svg","icons/outfyx_add.svg","icons/outfyx_bookmark.svg","icons/outfyx_camera.svg","icons/outfyx_close.svg","icons/outfyx_clothes_rack.svg","icons/outfyx_favorite.svg","icons/outfyx_flat_arrow_down.svg","icons/outfyx_forward.svg","icons/outfyx_home.svg","icons/outfyx_info.svg","icons/outfyx_menu.svg","icons/outfyx_person.svg","icons/outfyx_search.svg","icons/outfyx_settings.svg","icons/tavy_instagram.svg","logo_icon.svg"]),
-	mimeTypes: {".png":"image/png",".svg":"image/svg+xml"},
+	assets: new Set(["favicon.png","full_logo.png","full_logo.svg","icons/0.1/icons_1_down_8.svg","icons/0.1/icons_1_up_8.svg","icons/0.2/phone.svg","icons/0.2/README.md","icons/deprecated/others/tavy_instagram.svg","icons/deprecated/outfyx/outfyx_add.svg","icons/deprecated/outfyx/outfyx_bookmark.svg","icons/deprecated/outfyx/outfyx_camera.svg","icons/deprecated/outfyx/outfyx_close.svg","icons/deprecated/outfyx/outfyx_clothes_rack.svg","icons/deprecated/outfyx/outfyx_favorite.svg","icons/deprecated/outfyx/outfyx_flat_arrow_down.svg","icons/deprecated/outfyx/outfyx_forward.svg","icons/deprecated/outfyx/outfyx_home.svg","icons/deprecated/outfyx/outfyx_info.svg","icons/deprecated/outfyx/outfyx_menu.svg","icons/deprecated/outfyx/outfyx_person.svg","icons/deprecated/outfyx/outfyx_search.svg","icons/deprecated/outfyx/outfyx_settings.svg","icon_animations.riv","logo_icon.svg"]),
+	mimeTypes: {".png":"image/png",".svg":"image/svg+xml",".md":"text/markdown"},
 	_: {
-		entry: {"file":"_app/immutable/start-ecc644e4.js","imports":["_app/immutable/start-ecc644e4.js","_app/immutable/chunks/index-3bbe8e8c.js","_app/immutable/chunks/singletons-0c879f0f.js","_app/immutable/chunks/index-8391e297.js"],"stylesheets":[],"fonts":[]},
+		entry: {"file":"_app/immutable/start-9e0c65d0.js","imports":["_app/immutable/start-9e0c65d0.js","_app/immutable/chunks/index-5a593291.js","_app/immutable/chunks/singletons-9fe8fbc2.js","_app/immutable/chunks/index-2d3453a6.js"],"stylesheets":[],"fonts":[]},
 		nodes: [
 			() => import('./nodes/0.js'),
 			() => import('./nodes/1.js'),

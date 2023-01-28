@@ -2304,7 +2304,7 @@ function set_paths(paths) {
   base = paths.base;
   assets = paths.assets || base;
 }
-const app_template = ({ head, body, assets: assets2, nonce }) => '\r\n<!DOCTYPE html>\r\n<html lang="en">\r\n	<head>\r\n		<meta charset="utf-8" />\r\n		<link rel="icon" href="' + assets2 + '/logo_icon.svg" />\r\n		<title>Taavi Rübenhagen.</title>\r\n		<meta name="viewport" content="width=device-width" />\r\n		<meta name="theme-color" content="#000">\r\n\r\n		<link rel="preconnect" href="https://fonts.googleapis.com"/>\r\n		<link rel="preconnect" href="https://fonts.gstatic.com"/>\r\n		<link href="https://fonts.googleapis.com/css2?family=Manrope&family=Quicksand&family=Varela+Round&family=Flow+Circular&family=Raleway&family=Inter&family=IBM+Plex+Mono&display=swap" rel="stylesheet"/>\r\n		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>\r\n\r\n		<script>\r\n			import "./global.postcss"\r\n		<\/script>\r\n		\r\n		' + head + "\r\n	</head>\r\n	<body>\r\n		<div>" + body + "</div>\r\n	</body>\r\n</html>\r\n";
+const app_template = ({ head, body, assets: assets2, nonce }) => '\r\n<!DOCTYPE html>\r\n<html lang="en">\r\n	<head>\r\n		<meta charset="utf-8" />\r\n		<link rel="icon" href="' + assets2 + '/logo_icon.svg" />\r\n		<title>Taavi Rübenhagen.</title>\r\n		<meta name="viewport" content="width=device-width" />\r\n		<meta name="theme-color" content="#000">\r\n\r\n		<link rel="preconnect" href="https://fonts.googleapis.com"/>\r\n		<link rel="preconnect" href="https://fonts.gstatic.com"/>\r\n		<link href="https://fonts.googleapis.com/css2?family=Manrope&family=Quicksand&family=Varela+Round&family=Flow+Circular&family=Raleway&family=Inter&family=IBM+Plex+Mono&display=swap" rel="stylesheet"/>\r\n		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>\r\n\r\n		<script>\r\n			import "./global.postcss"\r\n		<\/script>\r\n		<script src="https://unpkg.com/@rive-app/canvas@1.0.98"><\/script>\r\n		\r\n		' + head + "\r\n	</head>\r\n	<body>\r\n		<div>" + body + "</div>\r\n	</body>\r\n</html>\r\n";
 const error_template = ({ status, message }) => '<!DOCTYPE html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<title>' + message + `</title>
 
 		<style>
@@ -2384,7 +2384,7 @@ class Server {
       app_template,
       app_template_contains_nonce: false,
       error_template,
-      version: "1674758051910"
+      version: "1674947993606"
     };
   }
   async init({ env }) {

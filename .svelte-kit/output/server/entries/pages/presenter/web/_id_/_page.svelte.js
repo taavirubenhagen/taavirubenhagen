@@ -1,24 +1,7 @@
-import { g as getContext, c as create_ssr_component, b as subscribe, v as validate_component, e as escape } from "../../../../../chunks/index.js";
+import { c as create_ssr_component, b as subscribe, v as validate_component, e as escape } from "../../../../../chunks/index.js";
 import "ua-parser-js";
+import { p as page } from "../../../../../chunks/stores.js";
 import { C as Content_section } from "../../../../../chunks/content_section.js";
-const getStores = () => {
-  const stores = getContext("__svelte__");
-  return {
-    page: {
-      subscribe: stores.page.subscribe
-    },
-    navigating: {
-      subscribe: stores.navigating.subscribe
-    },
-    updated: stores.updated
-  };
-};
-const page = {
-  subscribe(fn) {
-    const store = getStores().page;
-    return store.subscribe(fn);
-  }
-};
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $page, $$unsubscribe_page;
   $$unsubscribe_page = subscribe(page, (value) => $page = value);

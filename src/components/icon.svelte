@@ -8,7 +8,7 @@
 
 <div>
   <img
-    src="/icons/{name}.svg"
+    src="/icons/0.2/{name}.svg"
     alt="Icon"
     class="{iconClass}
     {isWhite ? 'invert' : ''}" />

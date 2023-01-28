@@ -1,0 +1,7 @@
+- 6x6 over 24x24 grid, larger grid mainly for orientation
+  - 576 px total
+    - 50% - 80% actual icon area
+- 2 stroke thickness
+- Rounded stroke ends; 4 preferred corner radius (rectangular)
+- Black first color
+- Designed with Figma; Not animated

@@ -1,5 +1,6 @@
 import { c as create_ssr_component, f as each, v as validate_component, e as escape } from "../../../../chunks/index.js";
-/* empty css                         */import { T as Text_button } from "../../../../chunks/text_button.js";
+/* empty css                         */import { I as Icon } from "../../../../chunks/icon.js";
+import { T as Text_button } from "../../../../chunks/text_button.js";
 /* empty css                                                       */const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `
 
@@ -15,7 +16,16 @@ import { c as create_ssr_component, f as each, v as validate_component, e as esc
   <section class="${"w-screen h-screen background p-8 md:p-16 flex_col_center relative text-center"}"><h3>Every aspect of any app on any platform.</h3>
     <div class="${"h-16"}"></div>
     <div class="${"flex_row_center"}">${each(["Mobile", "Web", "Server", "Graphics", "Deploy", "Market"], (data) => {
-    return `<div class="${"m-6 flex flex-col"}"><div class="${"mb-6 shadow-xl rounded-2xl shadow-neutral-300 w-24 h-24"}"></div>
+    return `<div class="${"m-6 flex flex-col"}"><div class="${"mb-6 shadow-xl rounded-2xl shadow-neutral-300 w-24 h-24 flex_row_center"}">
+            ${validate_component(Icon, "Icon").$$render(
+      $$result,
+      {
+        name: "phone",
+        iconClass: "w-12 h-12 opacity-50"
+      },
+      {},
+      {}
+    )}</div>
           <h6>${escape(data)}</h6>
         </div>`;
   })}</div></section>

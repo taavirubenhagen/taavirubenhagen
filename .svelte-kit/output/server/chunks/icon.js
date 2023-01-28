@@ -9,7 +9,7 @@ import { c as create_ssr_component, e as escape } from "./index.js";
     $$bindings.iconClass(iconClass);
   if ($$props.name === void 0 && $$bindings.name && name !== void 0)
     $$bindings.name(name);
-  return `<div><img src="${"/icons/" + escape(name, true) + ".svg"}" alt="${"Icon"}" class="${escape(iconClass, true) + " " + escape(isWhite ? "invert" : "", true)}"></div>`;
+  return `<div><img src="${"/icons/0.2/" + escape(name, true) + ".svg"}" alt="${"Icon"}" class="${escape(iconClass, true) + " " + escape(isWhite ? "invert" : "", true)}"></div>`;
 });
 export {
   Icon as I

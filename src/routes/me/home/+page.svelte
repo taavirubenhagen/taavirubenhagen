@@ -38,7 +38,10 @@
     <div class="flex_row_center">
       {#each ['Mobile', 'Web', 'Server', 'Graphics', 'Deploy', 'Market'] as data}
         <div class="m-6 flex flex-col">
-          <div class="mb-6 shadow-xl rounded-2xl shadow-neutral-300 w-24 h-24"/>
+          <div class="mb-6 shadow-xl rounded-2xl shadow-neutral-300 w-24 h-24 flex_row_center">
+            <!--TODO: Make icon stroke 1-->
+            <Icon name="phone" iconClass="w-12 h-12 opacity-50"/>
+          </div>
           <h6>{data}</h6>
         </div>
       {/each}
