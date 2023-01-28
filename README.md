@@ -7,7 +7,7 @@ I developed the
 
 [//]: "([for iOS click here](https://apps.apple.com/us/app/presentation-master-remote/id1623364174)))"
 
-[//]: # "([for iOS click here](https://apps.apple.com/us/app/presentation-master-remote/id1623364174)))"
+<!--([for iOS click here](https://apps.apple.com/us/app/presentation-master-remote/id1623364174)))"-->
 
 and Simplest Counter (coming soon) apps, along with some standardized Flutter Components to simplify the development of both.
 More is going to follow. Visit my [website](https://taavirubenhagen.netlify.app) for more details.
