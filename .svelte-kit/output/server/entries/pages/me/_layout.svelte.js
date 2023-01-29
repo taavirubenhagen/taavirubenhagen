@@ -24,15 +24,15 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 
 
 
-<main class="${"w-screen min-h-screen bg-background text-onBackground"}">
+<main class="${"w-screen min-h-screen background"}">
   
   <div class="${"fixed z-50 w-screen h-8 bg-primary flex_row_center primary"}"><h5>This page is still under development.</h5></div>
   <button class="${"fixed z-40 right-28 bottom-8 shadow-xl rounded-full bg-background"}"><h5 class="${escape("opacity-100", true) + " rounded-full border-2 border-primary w-32 h-16 pb-1 flex_row_center default_animation_long"}">Scroll
     </h5>
     ${validate_component(DeviceDetector, "DeviceDetector").$$render($$result, { deviceType: "desktop" }, {}, {
     default: () => {
-      return `<div class="${escape("opacity-0", true) + " absolute left-0 top-0 rounded-full w-32 h-16 flex default_animation_long"}"><button class="${"rounded-l-full border-2 border-r-0 border-primary hover:border-onPrimary w-16 h-16 hover:invert pl-5 pr-3 bg-onPrimary flex_row_center default_animation_short"}">${validate_component(Icon, "Icon").$$render($$result, { name: "icons_1_down_8" }, {}, {})}</button>
-        <button class="${"rounded-r-full border-2 border-l-0 border-primary hover:border-onPrimary w-16 h-16 hover:invert pl-3 pr-5 bg-onPrimary flex_row_center default_animation_short"}">${validate_component(Icon, "Icon").$$render($$result, { name: "icons_1_up_8" }, {}, {})}</button></div>`;
+      return `<div class="${escape("opacity-0", true) + " absolute left-0 top-0 rounded-full w-32 h-16 flex default_animation_long"}"><button class="${"rounded-l-full border-2 border-r-0 border-primary hover:border-onPrimary w-16 h-16 hover:invert pl-5 pr-3 bg-onPrimary flex_row_center default_animation_short"}">${validate_component(Icon, "Icon").$$render($$result, { version: "0.1", name: "icons_1_down_8" }, {}, {})}</button>
+        <button class="${"rounded-r-full border-2 border-l-0 border-primary hover:border-onPrimary w-16 h-16 hover:invert pl-3 pr-5 bg-onPrimary flex_row_center default_animation_short"}">${validate_component(Icon, "Icon").$$render($$result, { version: "0.1", name: "icons_1_up_8" }, {}, {})}</button></div>`;
     }
   })}</button>
   

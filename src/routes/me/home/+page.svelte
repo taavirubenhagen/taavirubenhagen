@@ -17,9 +17,7 @@
     class="w-screen h-screen background p-8 md:p-16 flex_col_center relative
     text-center">
     <h2>
-      Hi, I'm Taavi
-      <br />
-      Rübenhagen.
+      Hi, I'm Taavi<br />Rübenhagen.
     </h2>
     <div class="h-8" />
     <h4 class="text-neutral-500">
@@ -37,13 +35,13 @@
     <div class="h-16" />
     <div class="flex_row_center">
       {#each ['Mobile', 'Web', 'Server', 'Graphics', 'Deploy', 'Market'] as data}
-        <div class="m-6 flex flex-col">
-          <div class="mb-6 shadow-xl rounded-2xl shadow-neutral-300 w-24 h-24 flex_row_center">
+        <a href="/me/design/tavy/icons">
+          <div class="m-6 mb-12 shadow-xl rounded-2xl shadow-neutral-300 w-24 h-24 flex_row_center">
             <!--TODO: Make icon stroke 1-->
-            <Icon name="phone" iconClass="w-12 h-12 opacity-50"/>
+            <Icon name="phone_thin" iconClass="w-12 h-12 opacity-100"/>
           </div>
           <h6>{data}</h6>
-        </div>
+        </a>
       {/each}
     </div>
   </section>

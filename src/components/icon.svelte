@@ -1,14 +1,15 @@
 <script lang="ts">
   import '.././global.postcss'
 
-  export let isWhite: boolean = false
-  export let iconClass: string = ''
+  export let isWhite = false
+  export let iconClass = ""
+  export let version = "0.2"
   export let name: string
 </script>
 
 <div>
   <img
-    src="/icons/0.2/{name}.svg"
+    src="/icons/{version}/{name}.svg"
     alt="Icon"
     class="{iconClass}
     {isWhite ? 'invert' : ''}" />

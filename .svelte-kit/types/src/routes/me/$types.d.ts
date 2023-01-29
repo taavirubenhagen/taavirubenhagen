@@ -8,7 +8,7 @@ export type RequiredKeys<T> = { [K in keyof T]-?: {} extends { [P in K]: T[K] } 
 type OutputDataShape<T> = MaybeWithVoid<Omit<App.PageData, RequiredKeys<T>> & Partial<Pick<App.PageData, keyof T & keyof App.PageData>> & Record<string, any>>
 type EnsureDefined<T> = T extends null | undefined ? {} : T;
 type OptionalUnion<U extends Record<string, any>, A extends keyof U = U extends U ? keyof U : never> = U extends unknown ? { [P in Exclude<A, keyof U>]?: never } & U : never;
-type LayoutRouteId = RouteId | "/me/home"
+type LayoutRouteId = RouteId | "/me/design/tavy/icons" | "/me/design/tavy/icons/explore" | "/me/home"
 type LayoutParams = RouteParams & {  }
 type LayoutParentData = EnsureDefined<import('../$types.js').LayoutData>;
 

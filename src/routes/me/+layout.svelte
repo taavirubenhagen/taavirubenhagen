@@ -41,7 +41,7 @@
 
 
 
-<main class="w-screen min-h-screen bg-background text-onBackground">
+<main class="w-screen min-h-screen background">
   <!--<Cursor let:state>
     <div
       class="base_cursor"
@@ -100,7 +100,7 @@
             flex_row_center
             default_animation_short"
         >
-          <Icon name="icons_1_down_8"/>
+          <Icon version="0.1" name="icons_1_down_8"/>
         </button>
         <button
           on:click={() => scroller.scrollTo({ y: 0 })}
@@ -113,7 +113,7 @@
             flex_row_center
             default_animation_short"
         >
-          <Icon name="icons_1_up_8"/>
+          <Icon version="0.1" name="icons_1_up_8"/>
         </button>
       </div>
     </DeviceDetector>
@@ -141,25 +141,27 @@
   {#if isMenuOpen}
     <div class="fixed z-50 pointer-events-none w-screen h-screen flex_col_center">
         {#each menuData as data, i}
-          <a href="/me/home">
-            <h4
-              in:fly={{duration: 800, delay: ( i + 3 ) * 100, y: 32}}
-              out:fly={{easing: easings.sineInOut, duration: 200, x: windowWidth / 2 * 0.5, y: windowHeight / 2 * 0.5}}
-              class=
-                "pointer-events-auto
-                {(() => {
-                  let firstNestedRouteName = "/me"    // Change this only this line if overall routing structure changes
-                  let currentUrl = firstNestedRouteName + "/" + data.toLowerCase()
-                  let linkedRouteUrl = $page.url.pathname
-                  return currentUrl === linkedRouteUrl ? "opacity-50" : "opacity-100"
-                })()} hover:opacity-50
-                m-1 p-1
-                text-onPrimary
-                default_animation_short"
-            >
-              {data}
-            </h4>
-          </a>
+          <button on:click={() => isMenuOpen = false}>
+            <a href="/me/home">
+              <h4
+                in:fly={{duration: 800, delay: ( i + 3 ) * 100, y: 32}}
+                out:fly={{easing: easings.sineInOut, duration: 200, x: windowWidth / 2 * 0.5, y: windowHeight / 2 * 0.5}}
+                class=
+                  "pointer-events-auto
+                  {(() => {
+                    let firstNestedRouteName = "/me"    // Change this only this line if overall routing structure changes
+                    let currentUrl = firstNestedRouteName + "/" + data.toLowerCase()
+                    let linkedRouteUrl = $page.url.pathname
+                    return currentUrl === linkedRouteUrl ? "opacity-50" : "opacity-100"
+                  })()} hover:opacity-50
+                  m-1 p-1
+                  text-onPrimary
+                  default_animation_short"
+              >
+                {data}
+              </h4>
+            </a>
+          </button>
         {/each}
     </div>
   {/if}
