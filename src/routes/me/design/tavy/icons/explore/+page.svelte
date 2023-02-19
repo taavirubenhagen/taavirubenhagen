@@ -5,6 +5,24 @@
     import TextButton from '$buttons/text_button.svelte'
   
     let windowHeight: number
+
+
+    let areIconsThin = false
+
+    const iconData = [
+        [
+            ["Hardware"],
+            [
+                "Phone",
+            ],
+        ],
+        [
+            ["Navigation"],
+            [
+                "Down"
+            ],
+        ],
+    ]
 </script>
   
 <svelte:window bind:innerHeight={windowHeight} />
@@ -12,7 +30,7 @@
 <main>
     <section
         class="
-            w-screen p-8 md:p-16 flex flex-col items-start
+            w-screen p-8 md:p-12 md:pt-16 pb-0 flex flex-col items-start
             text-center"
     >
       <div class="w-full flex justify-between items-end">
@@ -32,14 +50,28 @@
         </div>
       </div>
     </section>
-    <section
-      class="
-        w-screen h-screen p-8 md:p-16
-        flex text-center"
-    >
-      {#each [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0] as data, i}
-        <div class="m-1 w-32 h-8 bg-red-600">{i}</div>
-      {/each}
+    <section class="p-4 md:p-8 pt-0">
+        {#each iconData as data, i}
+            <h4 class="ml-4 mt-8 md:mt-16 mb-4 md:mb-8 w-full text-left">{data[0]}</h4>
+            <div
+                class="
+                    w-screen
+                    flex flex-wrap items-start text-center"
+            >
+                {#each data[1] as d, i}
+                    <div
+                        class=
+                            "m-4 hover:shadow-xl shadow-neutral-300 border border-primary rounded-2xl w-40 h-40
+                            flex_col_center
+                            default_animation_base"
+                    >
+                        <Icon size={16} isThin={areIconsThin} name={d.toLowerCase()}/>
+                        <div class="h-4"></div>
+                        <h6>{d}</h6>
+                    </div>
+                {/each}
+            </div>
+        {/each}
     </section>
     <section
       class=

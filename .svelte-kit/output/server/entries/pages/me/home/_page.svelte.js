@@ -18,7 +18,8 @@ import { T as Text_button } from "../../../../chunks/text_button.js";
             ${validate_component(Icon, "Icon").$$render(
       $$result,
       {
-        name: "phone_thin",
+        isThin: true,
+        name: "phone",
         iconClass: "w-12 h-12 opacity-100"
       },
       {},

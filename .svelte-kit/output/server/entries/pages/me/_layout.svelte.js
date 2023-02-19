@@ -1,19 +1,7 @@
 import { c as create_ssr_component, b as subscribe, e as escape, v as validate_component, d as add_attribute } from "../../../chunks/index.js";
 import { p as page } from "../../../chunks/stores.js";
-import "ua-parser-js";
+import { D as DeviceDetector } from "../../../chunks/DeviceDetector.js";
 /* empty css                      */import { I as Icon } from "../../../chunks/icon.js";
-const DeviceDetector = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let { showInDevice = void 0 } = $$props;
-  let { showInBrowser = void 0 } = $$props;
-  let { showInOs = void 0 } = $$props;
-  if ($$props.showInDevice === void 0 && $$bindings.showInDevice && showInDevice !== void 0)
-    $$bindings.showInDevice(showInDevice);
-  if ($$props.showInBrowser === void 0 && $$bindings.showInBrowser && showInBrowser !== void 0)
-    $$bindings.showInBrowser(showInBrowser);
-  if ($$props.showInOs === void 0 && $$bindings.showInOs && showInOs !== void 0)
-    $$bindings.showInOs(showInOs);
-  return `${``}`;
-});
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $$unsubscribe_page;
   $$unsubscribe_page = subscribe(page, (value) => value);

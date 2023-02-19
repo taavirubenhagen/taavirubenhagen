@@ -2,6 +2,8 @@
 	"/": [
 		"src/routes/+page.server.ts"
 	],
+	"/beta/fenni": [],
+	"/beta/three": [],
 	"/contact": [],
 	"/fenni/blog/admin/post": [],
 	"/me": [],
@@ -9,6 +11,5 @@
 	"/me/design/tavy/icons/explore": [],
 	"/me/home": [],
 	"/presenter/web/[id]": [],
-	"/three": [],
 	"/work": []
 }

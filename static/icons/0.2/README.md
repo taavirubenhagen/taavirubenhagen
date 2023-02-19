@@ -8,3 +8,5 @@
 - Designed with Figma; Not animated
 - SVG only
 - Naming: "{name}{"\_thin" if 1 stroke thickness}.svg"
+
+- The "up" and "down" icons are 16x7

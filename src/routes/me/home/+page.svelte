@@ -38,7 +38,7 @@
         <a href="/me/design/tavy/icons">
           <div class="m-6 mb-12 shadow-xl rounded-2xl shadow-neutral-300 w-24 h-24 flex_row_center">
             <!--TODO: Make icon stroke 1-->
-            <Icon name="phone_thin" iconClass="w-12 h-12 opacity-100"/>
+            <Icon isThin name="phone" iconClass="w-12 h-12 opacity-100"/>
           </div>
           <h6>{data}</h6>
         </a>

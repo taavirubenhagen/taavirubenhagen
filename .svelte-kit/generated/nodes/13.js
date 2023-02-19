@@ -1,1 +1,1 @@
-export { default as component } from "../../../src/routes/three/+page.svelte";
+export { default as component } from "../../../src/routes/me/design/tavy/icons/explore/+page.svelte";

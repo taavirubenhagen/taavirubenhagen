@@ -1,1 +1,1 @@
-export { default as component } from "../../../src/routes/presenter/web/[id]/+page.svelte";
+export { default as component } from "../../../src/routes/me/design/tavy/icons/+page.svelte";

@@ -14,20 +14,23 @@ export const nodes = [() => import('./nodes/0'),
 	() => import('./nodes/11'),
 	() => import('./nodes/12'),
 	() => import('./nodes/13'),
-	() => import('./nodes/14')];
+	() => import('./nodes/14'),
+	() => import('./nodes/15'),
+	() => import('./nodes/16')];
 
 export const server_loads = [];
 
 export const dictionary = {
-	"/": [~6],
-	"/contact": [7,[2]],
-	"/fenni/blog/admin/post": [8],
-	"/me/design/tavy/icons": [9,[3]],
-	"/me/design/tavy/icons/explore": [10,[3]],
-	"/me/home": [11,[3,4]],
-	"/presenter/web/[id]": [12],
-	"/three": [13],
-	"/work": [14,[5]]
+	"/": [~7],
+	"/beta/fenni": [8,[2]],
+	"/beta/three": [9],
+	"/contact": [10,[3]],
+	"/fenni/blog/admin/post": [11],
+	"/me/design/tavy/icons": [12,[4]],
+	"/me/design/tavy/icons/explore": [13,[4]],
+	"/me/home": [14,[4,5]],
+	"/presenter/web/[id]": [15],
+	"/work": [16,[6]]
 };
 
 export const hooks = {
