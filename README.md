@@ -29,20 +29,22 @@ Here, i store the code for my website as well as other important project data, l
 
 #### Website *(β)*
 
-Just [check it out](https://taavirubenhagen.netlify.app)
+Just [check it out](https://taavirubenhagen.netlify.app).
 
 
 #### Icons & Graphics
 
 ##### Tavy Icons *(α, β)*
 
-Different pre-release versions under static/icons, ready-to-use beta-stage icons on my [website](https://taavirubenhagen.netlify.app/me/design/tavy/icons)
+Different pre-release versions under *static/icons*, ready-to-use beta-stage icons on my [website](https://taavirubenhagen.netlify.app/me/design/tavy/icons).
 
 ##### Logos *(α, β, ✓)*
 
-You guessed it -  static/logos
+You guessed it - *static/logos*.
 
 
 
 
-## *Contact: taavi.ruebenhagen@gmail.com*
+#
+
+###### *Contact: taavi.ruebenhagen@gmail.com*
