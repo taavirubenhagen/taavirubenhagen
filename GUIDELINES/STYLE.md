@@ -1,6 +1,7 @@
 # Code & documentation style guidelines
 
-Code blocks representing bad practices are marked with ❌ (read: "Don't:"), those representing good practices with ✔️ (read: "Do:")
+- Code blocks representing bad practices are marked with ❌ (read: "Don't:"), those representing good practices with ✔️ (read: "Do:").
+- This guideline uses a two pseudo-languages, one object-oriented, one functional. The syntax is mostly inspired by Go, Dart and Haskell, but the guideline tries to be language- and paradigm-agnostic.
 
 
 
@@ -11,7 +12,7 @@ Code blocks representing bad practices are marked with ❌ (read: "Don't:"), tho
 
 ### Program design
 
-##### *Conciseness is the most important aspect of readability.*
+#### *Conciseness is the most important aspect of readability.*
 
 Only extract functions, classes or whatever when you use them multiple times.
 
