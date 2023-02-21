@@ -26,7 +26,9 @@ Only extract functions, classes or whatever when you use them multiple times.
         doOtherThings()
     }
 
-    /// This may increase readablity in the exampleFunction, but is drastically more verbose and readers have to switch between functions many times.
+    /// This may increase readablity in the exampleFunction,
+    /// but is drastically more verbose and readers have to switch
+    /// between functions many times.
     doEverything() {
         doThings()
         doMoreThings()
@@ -65,7 +67,11 @@ Keep statements on one line when possible, or at least chain them together witho
     const wordGenerator = WordGenerator(options: wordGeneratorOptions)
     // Generates child and makes it speak three words, then kills it.
     ParentType1().haveSex(ParentType2())
-        .say(wordGenerator.getFirstWord() ++ wordGenerator.getSecondWord() ++ wordGenerator.getThirdWord())
+        .say(
+            wordGenerator.getFirstWord() ++
+            wordGenerator.getSecondWord() ++
+            wordGenerator.getThirdWord()
+        )
         .kill()
 
 
