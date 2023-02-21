@@ -63,7 +63,7 @@
                         class=
                             "m-4 hover:shadow-xl shadow-neutral-300 border border-primary rounded-2xl w-40 h-40
                             flex_col_center
-                            default_animation_base"
+                            duration-400"
                     >
                         <Icon size={16} isThin={areIconsThin} name={d.toLowerCase()}/>
                         <div class="h-4"></div>

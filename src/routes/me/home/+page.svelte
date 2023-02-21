@@ -56,4 +56,13 @@
       <TextButton primary>E-Mail me</TextButton>
     </a>
   </section>
+  <section
+    class=
+      "w-screen h-screen background flex_col_center"
+  >
+    <img
+        src="/logos/logo.svg" alt="Logo"
+        class="w-1/2"
+    />
+  </section>
 </main>

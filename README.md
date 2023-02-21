@@ -2,6 +2,8 @@
 
 I love writing blazingly fast next-gen-software with a holistic approach and bleeding-edge technologies to deliver highly interactive experiences everywhere in the world.
 
+I'm 17 btw
+
 
 
 
@@ -13,14 +15,18 @@ I developed the
 and Simplest Counter (coming soon) apps, along with some standardized Flutter Components to simplify the development of both.
 More is going to follow. Visit my [website](https://taavirubenhagen.netlify.app) for more details.
 
-I'm 17 btw
-
 
 
 
 ## This repository
 
-Here, i store the code for my website as well as other important project data, like my ultra-minimalist set of UI icons. Everything is still under active deveploment and far from being ready for production/monetazation (how tf is this spelled lol).
+Here, i store the code for my website as well as other important project data, like my ultra-minimalist set of UI icons. Everything is still under active deveploment and far from being ready for production/monetazation (how tf is this spelled lol). Therefore, every piece of documentation, including this file, is even farer from being finished and should not be trusted.
+
+
+
+### Important files
+
+Many files in the code for this website are very important for me, mostly because I plan to reuse them for future projects since they are the best implementation of the Tavy Design System. A list is in the *important_files.md* file in this directory.
 
 
 
@@ -34,13 +40,18 @@ Just [check it out](https://taavirubenhagen.netlify.app).
 
 #### Icons & Graphics
 
+The design you see everywhere in my projects is mostly based on my ultra-minimalist Tavy Design System, which is optimized for designer/developer experience and created to make it as simple as possible for a single person to use a clean, content-oriented, beautiful and, most of all, consistent design system. More information is in the *design.md* file in this directory.
+
+
+#### Icons & Graphics
+
 ##### Tavy Icons *(α, β)*
 
-Different pre-release versions under *static/icons*, ready-to-use beta-stage icons on my [website](https://taavirubenhagen.netlify.app/me/design/tavy/icons).
+Different pre-release versions are in the *static/icons* directory, ready-to-use beta-stage icons on my [website](https://taavirubenhagen.netlify.app/me/design/tavy/icons).
 
 ##### Logos *(α, β, ✓)*
 
-You guessed it - *static/logos*.
+Logos designed or used by me are in the *static/logos* directory.
 
 
 

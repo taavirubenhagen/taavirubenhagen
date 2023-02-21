@@ -55,7 +55,7 @@
             <button class="w-full h-full">
               <div
                 class="
-                  default_animation_long
+                  duration-800
                   hover:invert
                   rounded-2xl border border-onPrimary
                   w-full h-full bg-primary p-8

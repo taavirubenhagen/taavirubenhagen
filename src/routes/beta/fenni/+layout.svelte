@@ -82,12 +82,12 @@
     <h5
       class=
         "{isScrollButtonHovered ? "opacity-0" : "opacity-100"} rounded-full border-2 border-primary w-32 h-16 pb-1
-        flex_row_center default_animation_long"
+        flex_row_center duration-800"
     >
       Scroll
     </h5>
     <DeviceDetector deviceType="desktop">
-      <div class="{isScrollButtonHovered ? "opacity-100" : "opacity-0"} absolute left-0 top-0 rounded-full w-32 h-16 flex default_animation_long">
+      <div class="{isScrollButtonHovered ? "opacity-100" : "opacity-0"} absolute left-0 top-0 rounded-full w-32 h-16 flex duration-800">
         <button
           on:click={() => scroller.scrollTo({ y: windowHeight })}
           class="
@@ -97,7 +97,7 @@
             pl-5 pr-3
             bg-onPrimary
             flex_row_center
-            default_animation_short"
+            duration-200"
         >
           <Icon version="0.1" name="icons_1_down_8"/>
         </button>
@@ -110,7 +110,7 @@
             pl-3 pr-5
             bg-onPrimary
             flex_row_center
-            default_animation_short"
+            duration-200"
         >
           <Icon version="0.1" name="icons_1_up_8"/>
         </button>
@@ -128,7 +128,7 @@
       invert hover:invert shadow-xl rounded-full border-2 border-primary {isMenuOpen ? "" : "w-16 h-16"}
       bg-onPrimary
       flex_row_center
-      default_animation_long"
+      duration-800"
     style={
       isMenuOpen
       ? "width: 500vh; height: 500vh; right: calc(-250vh + 1.5rem + 2rem); bottom: calc(-250vh + 2rem + 2rem);"
@@ -155,7 +155,7 @@
                   })()} hover:opacity-50
                   m-1 p-1
                   text-onPrimary
-                  default_animation_short"
+                  duration-200"
               >
                 {data}
               </h4>
