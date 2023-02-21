@@ -18,6 +18,7 @@ Only extract functions, classes or whatever when you use them multiple times.
 *TODO: Add example for multiple uses (then extracting is highly encouraged)*
 
 ❌
+
     exampleFunction() {
         if condition {
             doEveryThing()
@@ -37,6 +38,7 @@ Only extract functions, classes or whatever when you use them multiple times.
 
 
 ✔️
+
     exampleFunction() {
         if condition {
             doThings()
@@ -51,6 +53,7 @@ Only extract functions, classes or whatever when you use them multiple times.
 Keep statements on one line when possible, or at least chain them together without duplication. Declare a variable when you want to use the value multiple times.
 
 ❌
+
     const firstParent = ParentType1()
     const secondParent = ParentType2()
     const child = firstParent.haveSex(secondParent)
@@ -64,6 +67,7 @@ Keep statements on one line when possible, or at least chain them together witho
 
 
 ✔️
+
     const wordGenerator = WordGenerator(options: wordGeneratorOptions)
     // Generates child and makes it speak three words, then kills it.
     ParentType1().haveSex(ParentType2())
