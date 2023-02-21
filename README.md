@@ -20,7 +20,7 @@ More is going to follow. Visit my [website](https://taavirubenhagen.netlify.app)
 
 ## This repository
 
-Here, i store the code for my website as well as other important project data, like my ultra-minimalist set of UI icons. Everything is still under active deveploment and far from being ready for production/monetazation (how tf is this spelled lol). Therefore, every piece of documentation, including this file, is even farer from being finished and should not be trusted.
+Here, i store the code for my website as well as other important project data, like my ultra-minimalist set of UI icons and design guidelines. Everything is still under active deveploment and far from being ready for production/monetazation (how tf is this spelled lol). Therefore, every piece of documentation, including this file, is even farer from being finished and should not be trusted.
 
 
 
@@ -38,12 +38,12 @@ Many files in the code for this website are very important for me, mostly becaus
 Just [check it out](https://taavirubenhagen.netlify.app).
 
 
-#### Icons & Graphics
+#### Tavy Design System
 
-The design you see everywhere in my projects is mostly based on my ultra-minimalist Tavy Design System, which is optimized for designer/developer experience and created to make it as simple as possible for a single person to use a clean, content-oriented, beautiful and, most of all, consistent design system. More information is in the *design.md* file in this directory.
+The design you see everywhere in my projects is mostly based on my ultra-minimalist Tavy Design System, which is optimized for designer/developer experience and created to make it as simple as possible for a single person to use a clean, content-oriented, beautiful and, most of all, consistent design system. More information is in the *DESIGN* directory.
 
 
-#### Icons & Graphics
+#### *Icons & Graphics*
 
 ##### Tavy Icons *(α, β)*
 

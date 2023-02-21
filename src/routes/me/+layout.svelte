@@ -8,7 +8,6 @@
   import * as scroller from 'svelte-scrollto'
   //import { Cursor, Interactive } from 'svelte-cursor'
 
-  import * as g from '$store'
   import '$style'
 
   import Icon from '$components/icon.svelte'

@@ -1,8 +1,11 @@
 <script lang="ts">
-  import "$style"
-  import "./tts.postcss"
+    import "$style"
+    import "./tts.postcss"
   
-  import TextButton from "$buttons/text_button.svelte"
+    import TextButton from "$buttons/text_button.svelte"
+    import { onMount } from "svelte";
+
+    onMount(() => {})
 </script>
 
 
