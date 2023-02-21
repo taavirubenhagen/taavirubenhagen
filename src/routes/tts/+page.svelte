@@ -5,7 +5,9 @@
     import TextButton from "$buttons/text_button.svelte"
     import { onMount } from "svelte";
 
-    onMount(() => {})
+    onMount(() => {
+        
+    })
 </script>
 
 
