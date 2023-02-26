@@ -44,7 +44,6 @@ declare module '$env/static/private' {
 	export const KEY_PATH: string;
 	export const LOCALAPPDATA: string;
 	export const LOGONSERVER: string;
-	export const NODE_ENV: string;
 	export const NUMBER_OF_PROCESSORS: string;
 	export const OneDrive: string;
 	export const OneDriveConsumer: string;
@@ -131,7 +130,6 @@ declare module '$env/dynamic/private' {
 		KEY_PATH: string;
 		LOCALAPPDATA: string;
 		LOGONSERVER: string;
-		NODE_ENV: string;
 		NUMBER_OF_PROCESSORS: string;
 		OneDrive: string;
 		OneDriveConsumer: string;
