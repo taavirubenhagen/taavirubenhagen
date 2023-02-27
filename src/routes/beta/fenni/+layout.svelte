@@ -23,7 +23,7 @@
   let windowHeight: number
   let windowWidth: number
   
-  onMount(() => {
+  /*onMount(() => {
     const r = new rive.Rive({
       src: "/icon_animations.riv",
       canvas: menuButtonCanvas,
@@ -32,7 +32,7 @@
       //artboard: "icons_1_menu",
       autoplay: true
     });
-  });
+  });*/
 </script>
 
 <svelte:window bind:innerHeight={windowHeight} bind:innerWidth={windowWidth}/>

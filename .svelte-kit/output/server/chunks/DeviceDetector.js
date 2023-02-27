@@ -1,4 +1,4 @@
-import { c as create_ssr_component } from "./index.js";
+import { c as create_ssr_component } from "./index2.js";
 import "ua-parser-js";
 const DeviceDetector = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { showInDevice = void 0 } = $$props;

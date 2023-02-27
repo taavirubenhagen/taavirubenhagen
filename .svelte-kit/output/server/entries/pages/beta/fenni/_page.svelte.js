@@ -1,4 +1,4 @@
-import { c as create_ssr_component, f as each, v as validate_component, e as escape } from "../../../../chunks/index.js";
+import { c as create_ssr_component, f as each, v as validate_component, e as escape } from "../../../../chunks/index2.js";
 import { I as Icon } from "../../../../chunks/icon.js";
 import { T as Text_button } from "../../../../chunks/text_button.js";
 /* empty css                                                       *//* empty css                         */const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -6,8 +6,8 @@ import { T as Text_button } from "../../../../chunks/text_button.js";
 
 <main><section class="${"w-screen h-screen"}"><img src="${"https://www.1517.org/hubfs/two%20natures%20of%20Christ.jpeg"}" alt="${""}" class="${"absolute z-5"}">
         <div class="${"absolute w-screen h-screen bg-black bg-opacity-25 p-8 md:p-16 flex_col_center text-center"}"><h4 class="${"relative z-10 text-white italic"}">Je kleiner die Dinge,<br><br>
-                in denen ich Schönheit entdecke,<br><br>
-                desto größer das Lächeln,<br><br>
+                in denen ich Sch\xF6nheit entdecke,<br><br>
+                desto gr\xF6\xDFer das L\xE4cheln,<br><br>
                 dass sie in mein Gesicht zaubern.
             </h4></div></section>
   <section class="${"w-screen h-screen background p-8 md:p-16 flex_col_center relative text-center"}"><h3>Every aspect of any app on any platform.</h3>

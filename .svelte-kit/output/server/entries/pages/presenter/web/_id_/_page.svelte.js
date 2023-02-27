@@ -1,4 +1,4 @@
-import { c as create_ssr_component, b as subscribe, v as validate_component, e as escape } from "../../../../../chunks/index.js";
+import { c as create_ssr_component, b as subscribe, v as validate_component, e as escape } from "../../../../../chunks/index2.js";
 import "ua-parser-js";
 import { p as page } from "../../../../../chunks/stores.js";
 import { C as Content_section } from "../../../../../chunks/content_section.js";

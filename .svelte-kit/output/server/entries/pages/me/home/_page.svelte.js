@@ -1,10 +1,10 @@
-import { c as create_ssr_component, f as each, v as validate_component, e as escape } from "../../../../chunks/index.js";
+import { c as create_ssr_component, f as each, v as validate_component, e as escape } from "../../../../chunks/index2.js";
 /* empty css                         */import { I as Icon } from "../../../../chunks/icon.js";
 import { T as Text_button } from "../../../../chunks/text_button.js";
 /* empty css                                                       */const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `
 
-<main><section class="${"w-screen h-screen background p-8 md:p-16 flex_col_center relative text-center"}"><h2>Hi, I&#39;m Taavi<br>Rübenhagen.
+<main><section class="${"w-screen h-screen background p-8 md:p-16 flex_col_center relative text-center"}"><h2>Hi, I&#39;m Taavi<br>R\xFCbenhagen.
     </h2>
     <div class="${"h-8"}"></div>
     <h4 class="${"text-neutral-500"}">I&#39;m a self-taught UI/UX Designer

@@ -1,5 +1,5 @@
-import { c as create_ssr_component, b as subscribe, v as validate_component, e as escape } from "./index.js";
-/* empty css                                      */import { w as writable } from "./index3.js";
+import { c as create_ssr_component, b as subscribe, v as validate_component, e as escape } from "./index2.js";
+/* empty css                                      */import { w as writable } from "./index.js";
 /* empty css        */import { I as Icon } from "./icon.js";
 const cursorState = writable(null);
 const Interactive = create_ssr_component(($$result, $$props, $$bindings, slots) => {

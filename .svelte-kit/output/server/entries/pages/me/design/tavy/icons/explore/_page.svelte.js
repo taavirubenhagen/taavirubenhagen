@@ -1,4 +1,4 @@
-import { c as create_ssr_component, v as validate_component, f as each, e as escape } from "../../../../../../../chunks/index.js";
+import { c as create_ssr_component, v as validate_component, f as each, e as escape } from "../../../../../../../chunks/index2.js";
 /* empty css                                  */import { I as Icon } from "../../../../../../../chunks/icon.js";
 import { T as Text_button } from "../../../../../../../chunks/text_button.js";
 let areIconsThin = false;

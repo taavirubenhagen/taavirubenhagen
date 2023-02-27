@@ -1,4 +1,4 @@
-import { c as create_ssr_component, b as subscribe, e as escape, v as validate_component, d as add_attribute } from "../../../chunks/index.js";
+import { c as create_ssr_component, b as subscribe, e as escape, v as validate_component, d as add_attribute } from "../../../chunks/index2.js";
 import { p as page } from "../../../chunks/stores.js";
 import { D as DeviceDetector } from "../../../chunks/DeviceDetector.js";
 /* empty css                      */import { I as Icon } from "../../../chunks/icon.js";

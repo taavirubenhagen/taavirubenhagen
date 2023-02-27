@@ -1,4 +1,4 @@
-import { c as create_ssr_component, e as escape } from "./index.js";
+import { c as create_ssr_component, e as escape } from "./index2.js";
 /* empty css        */const Icon = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { version = "0.2" } = $$props;
   let { isThin = false } = $$props;

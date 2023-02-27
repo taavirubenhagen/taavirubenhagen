@@ -1,4 +1,4 @@
-import { c as create_ssr_component, v as validate_component } from "../../../../../../chunks/index.js";
+import { c as create_ssr_component, v as validate_component } from "../../../../../../chunks/index2.js";
 import { C as Content_section } from "../../../../../../chunks/content_section.js";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `${validate_component(Content_section, "ContentSection").$$render($$result, { title: "Post a post." }, {}, {

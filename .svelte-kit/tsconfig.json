@@ -1,42 +1,41 @@
 {
 	"compilerOptions": {
-		"baseUrl": "..",
 		"paths": {
 			"$src": [
-				"src"
+				"../src"
 			],
 			"$src/*": [
-				"src/*"
+				"../src/*"
 			],
 			"$static": [
-				"static"
+				"../static"
 			],
 			"$static/*": [
-				"static/*"
+				"../static/*"
 			],
 			"$components": [
-				"src/components"
+				"../src/components"
 			],
 			"$components/*": [
-				"src/components/*"
+				"../src/components/*"
 			],
 			"$buttons": [
-				"src/components/buttons"
+				"../src/components/buttons"
 			],
 			"$buttons/*": [
-				"src/components/buttons/*"
+				"../src/components/buttons/*"
 			],
 			"$frames": [
-				"src/components/frames"
+				"../src/components/frames"
 			],
 			"$frames/*": [
-				"src/components/frames/*"
+				"../src/components/frames/*"
 			],
 			"$style": [
-				"src/global.postcss"
+				"../src/global.postcss"
 			],
 			"$store": [
-				"src/stores.ts"
+				"../src/stores.ts"
 			]
 		},
 		"rootDirs": [
@@ -62,15 +61,15 @@
 		"../src/**/*.js",
 		"../src/**/*.ts",
 		"../src/**/*.svelte",
-		"../src/**/*.js",
-		"../src/**/*.ts",
-		"../src/**/*.svelte",
 		"../tests/**/*.js",
 		"../tests/**/*.ts",
 		"../tests/**/*.svelte"
 	],
 	"exclude": [
 		"../node_modules/**",
-		"./[!ambient.d.ts]**"
+		"./[!ambient.d.ts]**",
+		"../src/service-worker.js",
+		"../src/service-worker.ts",
+		"../src/service-worker.d.ts"
 	]
 }

@@ -1,4 +1,4 @@
-import { c as create_ssr_component, v as validate_component } from "../../chunks/index.js";
+import { c as create_ssr_component, v as validate_component } from "../../chunks/index2.js";
 /* empty css                   */import { T as Title_section } from "../../chunks/title_section.js";
 const Error = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<main>${validate_component(Title_section, "Frame").$$render($$result, { index: 0 }, {}, {

@@ -1,11 +1,11 @@
-import { c as create_ssr_component, v as validate_component, f as each, d as add_attribute, e as escape } from "../../../chunks/index.js";
+import { c as create_ssr_component, v as validate_component, f as each, d as add_attribute, e as escape } from "../../../chunks/index2.js";
 /* empty css                                                    */import { T as Title_section, I as Interactive } from "../../../chunks/title_section.js";
 /* empty css                      */import { T as Text_button } from "../../../chunks/text_button.js";
 import { C as Content_section } from "../../../chunks/content_section.js";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<main>${validate_component(Title_section, "TitleSection").$$render($$result, { index: 0 }, {}, {
     default: () => {
-      return `<h3>I design, build and deploy digital products like websites, icons or apps from 10€.</h3>
+      return `<h3>I design, build and deploy digital products like websites, icons or apps from 10\u20AC.</h3>
     <div class="${"h-16"}"></div>
     <div class="${"flex_row_center"}">${validate_component(Text_button, "TextButton").$$render($$result, {}, {}, {
         default: () => {
