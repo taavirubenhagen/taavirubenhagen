@@ -8,7 +8,7 @@
   import * as scroller from 'svelte-scrollto'
   //import { Cursor, Interactive } from 'svelte-cursor'
 
-  import './fenni.postcss'
+  //import './fenni.postcss'
 
   import Icon from '$components/icon.svelte'
     import { CubicBezierCurve } from 'three';

@@ -1,7 +1,7 @@
 <script lang="ts">
   import * as scroller from 'svelte-scrollto'
 
-  import './fenni.postcss'
+  //import './fenni.postcss'
   import Icon from '$components/icon.svelte'
 
   import TextButton from '$buttons/text_button.svelte'
