@@ -7,9 +7,13 @@
 	"/contact": [],
 	"/fenni/blog/admin/post": [],
 	"/me": [],
+	"/me/contact": [
+		"src/routes/me/contact/+page.server.ts"
+	],
 	"/me/design/tavy/icons": [],
 	"/me/design/tavy/icons/explore": [],
 	"/me/home": [],
+	"/me/landing/social": [],
 	"/presenter/web/[id]": [],
 	"/tts": [],
 	"/work": []

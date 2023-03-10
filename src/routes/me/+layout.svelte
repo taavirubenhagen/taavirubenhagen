@@ -141,7 +141,7 @@
     <div class="fixed z-50 pointer-events-none w-screen h-screen flex_col_center">
         {#each menuData as data, i}
           <button on:click={() => isMenuOpen = false}>
-            <a href="/me/home">
+            <a href="/me/{data.toLowerCase()}">
               <h4
                 in:fly={{duration: 800, delay: ( i + 3 ) * 100, y: 32}}
                 out:fly={{easing: easings.sineInOut, duration: 200, x: windowWidth / 2 * 0.5, y: windowHeight / 2 * 0.5}}
