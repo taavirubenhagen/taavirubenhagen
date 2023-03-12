@@ -39,8 +39,8 @@ export const dictionary = {
 	"/me/landing/social": [17,[4,6]],
 	"/presenter/web/[id]": [18],
 	"/tts": [21],
-	"/t/1": [~19],
-	"/t/2": [~20],
+	"/t/0": [~19],
+	"/t/1": [~20],
 	"/work": [22,[7]]
 };
 

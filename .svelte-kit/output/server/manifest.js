@@ -4,7 +4,7 @@ export const manifest = {
 	assets: new Set(["favicon.png","icons/0.1/icons_1_down_8.svg","icons/0.1/icons_1_up_8.svg","icons/0.2/down.svg","icons/0.2/phone.svg","icons/0.2/phone_thin.svg","icons/0.2/README.md","icons/deprecated/others/tavy_instagram.svg","icons/deprecated/outfyx/outfyx_add.svg","icons/deprecated/outfyx/outfyx_bookmark.svg","icons/deprecated/outfyx/outfyx_camera.svg","icons/deprecated/outfyx/outfyx_close.svg","icons/deprecated/outfyx/outfyx_clothes_rack.svg","icons/deprecated/outfyx/outfyx_favorite.svg","icons/deprecated/outfyx/outfyx_flat_arrow_down.svg","icons/deprecated/outfyx/outfyx_forward.svg","icons/deprecated/outfyx/outfyx_home.svg","icons/deprecated/outfyx/outfyx_info.svg","icons/deprecated/outfyx/outfyx_menu.svg","icons/deprecated/outfyx/outfyx_person.svg","icons/deprecated/outfyx/outfyx_search.svg","icons/deprecated/outfyx/outfyx_settings.svg","icons/ICONS.md","icon_animations.riv","logos/full_logo.png","logos/full_logo.svg","logos/icon_compatible/README.md","logos/logo.svg","logos/logo_icon.svg"]),
 	mimeTypes: {".png":"image/png",".svg":"image/svg+xml",".md":"text/markdown"},
 	_: {
-		client: {"start":{"file":"_app/immutable/entry/start.5ec09d5c.js","imports":["_app/immutable/entry/start.5ec09d5c.js","_app/immutable/chunks/index.3f5f83d0.js","_app/immutable/chunks/singletons.e1f76300.js","_app/immutable/chunks/index.6895e06d.js"],"stylesheets":[],"fonts":[]},"app":{"file":"_app/immutable/entry/app.2bd5f516.js","imports":["_app/immutable/entry/app.2bd5f516.js","_app/immutable/chunks/index.3f5f83d0.js"],"stylesheets":[],"fonts":[]}},
+		client: {"start":{"file":"_app/immutable/entry/start.ce63a88f.js","imports":["_app/immutable/entry/start.ce63a88f.js","_app/immutable/chunks/index.3f5f83d0.js","_app/immutable/chunks/singletons.84e3d965.js","_app/immutable/chunks/index.6895e06d.js"],"stylesheets":[],"fonts":[]},"app":{"file":"_app/immutable/entry/app.f2efaaad.js","imports":["_app/immutable/entry/app.f2efaaad.js","_app/immutable/chunks/index.3f5f83d0.js"],"stylesheets":[],"fonts":[]}},
 		nodes: [
 			() => import('./nodes/0.js'),
 			() => import('./nodes/1.js'),
@@ -116,15 +116,15 @@ export const manifest = {
 				endpoint: null
 			},
 			{
-				id: "/t/1",
-				pattern: /^\/t\/1\/?$/,
+				id: "/t/0",
+				pattern: /^\/t\/0\/?$/,
 				params: [],
 				page: { layouts: [0], errors: [1], leaf: 19 },
 				endpoint: null
 			},
 			{
-				id: "/t/2",
-				pattern: /^\/t\/2\/?$/,
+				id: "/t/1",
+				pattern: /^\/t\/1\/?$/,
 				params: [],
 				page: { layouts: [0], errors: [1], leaf: 20 },
 				endpoint: null

@@ -16,11 +16,11 @@
 	"/me/landing/social": [],
 	"/presenter/web/[id]": [],
 	"/tts": [],
+	"/t/0": [
+		"src/routes/t/0/+page.server.ts"
+	],
 	"/t/1": [
 		"src/routes/t/1/+page.server.ts"
-	],
-	"/t/2": [
-		"src/routes/t/2/+page.server.ts"
 	],
 	"/work": []
 }
