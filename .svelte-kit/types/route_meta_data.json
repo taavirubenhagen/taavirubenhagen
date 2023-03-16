@@ -5,6 +5,11 @@
 	"/beta/fenni": [],
 	"/beta/three": [],
 	"/contact": [],
+	"/dropshipz": [
+		"src/routes/dropshipz/+page.server.ts"
+	],
+	"/dropshipz/home": [],
+	"/dropshipz/shop": [],
 	"/fenni/blog/admin/post": [],
 	"/me": [],
 	"/me/contact": [
