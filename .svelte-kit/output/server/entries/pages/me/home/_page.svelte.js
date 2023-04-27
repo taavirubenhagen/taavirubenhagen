@@ -20,10 +20,10 @@ const Large_subtitle = create_ssr_component(($$result, $$props, $$bindings, slot
   return `<p class="${"headline text-2xl md:text-3xl text-neutral-500 font-bold tracking-widest"}">${slots.default ? slots.default({}) : ``}</p>`;
 });
 const Section_headline = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<h class="${"text-4xl sm:text-5xl md:text-6xl font-bold"}">${slots.default ? slots.default({}) : ``}</h>`;
+  return `<h class="${"text-5xl md:text-6xl font-bold"}">${slots.default ? slots.default({}) : ``}</h>`;
 });
 const Main_headline = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<h class="${"text-5xl sm:text-6xl md:text-7xl font-bold tracking-wider"}">${slots.default ? slots.default({}) : ``}</h>`;
+  return `<h class="${"text-6xl md:text-7xl font-bold tracking-wider"}">${slots.default ? slots.default({}) : ``}</h>`;
 });
 const Large_paragraph = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<p class="${"paragraph text-2xl md:text-2xl"}">${slots.default ? slots.default({}) : ``}</p>`;
@@ -52,7 +52,7 @@ function genTableIconArray(name) {
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `
 
-<main><section class="${"w-screen h-screen p-8 md:p-16 flex_col_center text-center"}">${validate_component(Main_headline, "MainHeadline").$$render($$result, {}, {}, {
+<main><section class="${"w-screen h-screen p-4 md:p-16 flex_col_center text-center"}">${validate_component(Main_headline, "MainHeadline").$$render($$result, {}, {}, {
     default: () => {
       return `Hi, I&#39;m Taavi<br>R\xFCbenhagen.`;
     }

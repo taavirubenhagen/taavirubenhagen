@@ -42,7 +42,7 @@
 <svelte:window bind:innerHeight={windowHeight} />
 
 <main>
-    <section class="w-screen h-screen p-8 md:p-16 flex_col_center text-center">
+    <section class="w-screen h-screen p-4 md:p-16 flex_col_center text-center">
         <MainHeadline>Hi, I'm Taavi<br />Rübenhagen.</MainHeadline>
         <div class="h-8"/>
         <LargeSubtitle>
