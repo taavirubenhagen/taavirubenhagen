@@ -45,11 +45,11 @@ function genTableIcon(name, isOnPrimary = false) {
     case "remote":
       return '<i class="text-2xl ' + isOnPrimary ? "text-onPrimary" : 'text-onBackground iconoir-check"></i>';
     case "notes":
-      return '<i class="text-2xl ' + isOnPrimary ? "text-onPrimary" : 'text-onBackground iconoir-copy"></i>';
+      return '<i class="text-2xl ' + isOnPrimary ? "text-onPrimary" : 'text-onBackground iconoir-notes"></i>';
     case "timer":
-      return '<i class="text-2xl ' + isOnPrimary ? "text-onPrimary" : 'text-onBackground iconoir-timer"></i>';
+      return '<i class="text-2xl ' + isOnPrimary ? "text-onPrimary" : 'text-onBackground iconoir-alarm"></i>';
     case "abp":
-      return '<i class="text-2xl ' + isOnPrimary ? "text-onPrimary" : 'text-onBackground iconoir-timer"></i>';
+      return '<i class="text-2xl ' + isOnPrimary ? "text-onPrimary" : 'text-onBackground iconoir-alarm"></i>';
     default:
       return "";
   }
