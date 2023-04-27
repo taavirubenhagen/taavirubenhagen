@@ -34,7 +34,7 @@ const Inline_paragraph_button = create_ssr_component(($$result, $$props, $$bindi
     $$bindings.content(content);
   return `<button class="${"transition-all duration-200 inline -mr-1 opacity-50 hover:opacity-75"}">${escape(content)}<i class="${"relative left-1 top-2 iconoir-nav-arrow-down"}"></i></button>`;
 });
-function genTableIcon(name) {
+function genTableIcon(name, isOnPrimary = false) {
   switch (name) {
     case "none":
       return '<i class="text-2xl text-red-600 iconoir-cancel"></i>';
@@ -42,6 +42,12 @@ function genTableIcon(name) {
       return '<i class="text-xl text-red-600 iconoir-apple-mac"></i>';
     case "free":
       return '<i class="text-2xl text-green-600 iconoir-check"></i>';
+    case "remote":
+      return '<i class="text-2xl ' + isOnPrimary ? "text-onPrimary" : 'text-onBackground iconoir-check"></i>';
+    case "notes":
+      return '<i class="text-2xl ' + isOnPrimary ? "text-onPrimary" : 'text-onBackground iconoir-copy"></i>';
+    case "timer":
+      return '<i class="text-2xl ' + isOnPrimary ? "text-onPrimary" : 'text-onBackground iconoir-timer"></i>';
     default:
       return "";
   }
@@ -120,7 +126,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         `;
     }
   })}
-        <div class="${"h-16"}"></div>
+        <div class="${"h-12 md:h-16"}"></div>
         ${validate_component(Small_label, "SmallLabel").$$render($$result, {}, {}, {
     default: () => {
       return `<div class="${"w-full flex flex-col"}"><div class="${"h-8 flex items-center"}"><!-- HTML_TAG_START -->${genTableIcon("none")}<!-- HTML_TAG_END --><div class="${"inline w-2"}"></div>Not included</div>
@@ -131,7 +137,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         <div class="${"h-8"}"></div>
         <div class="${"rounded-lg border border-onBackground grid grid-cols-5 grid-rows-4"}">${each(
     [
-      ["Feature", genTableIcon("paid")],
+      ["Feature", ""],
       ["Physical presenter", genTableIcon("paid")],
       ["Note cards", genTableIcon("paid")],
       ["Physical timer", genTableIcon("paid")],

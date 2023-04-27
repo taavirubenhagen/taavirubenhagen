@@ -20,7 +20,7 @@
     let windowHeight: number;
     let currentlyHoveredElementName = "";
 
-    function genTableIcon(name: string): string {
+    function genTableIcon(name: string, isOnPrimary = false): string {
         switch (name) {
             case "none":
                 return '<i class="text-2xl text-red-600 iconoir-cancel"></i>';
@@ -28,6 +28,12 @@
                 return '<i class="text-xl text-red-600 iconoir-apple-mac"></i>';
             case "free":
                 return '<i class="text-2xl text-green-600 iconoir-check"></i>';
+            case "remote":
+                return '<i class="text-2xl ' + isOnPrimary ? 'text-onPrimary' : 'text-onBackground' + ' iconoir-check"></i>';
+            case "notes":
+                return '<i class="text-2xl ' + isOnPrimary ? 'text-onPrimary' : 'text-onBackground' + ' iconoir-copy"></i>';
+            case "timer":
+                return '<i class="text-2xl ' + isOnPrimary ? 'text-onPrimary' : 'text-onBackground' + ' iconoir-timer"></i>';
             default:
                 return '';
         }
@@ -102,7 +108,7 @@
         <SectionHeadline>
             A Better Presenter vs physical presenter vs note cards vs timer
         </SectionHeadline>
-        <div class="h-16"/>
+        <div class="h-12 md:h-16"/>
         <SmallLabel>
             <div class="w-full flex flex-col">
                 <div class="h-8 flex items-center">{@html genTableIcon("none")}<div class="inline w-2"></div>Not included</div>
@@ -113,7 +119,7 @@
         <div class="h-8"/>
         <div class="rounded-lg border border-onBackground grid grid-cols-5 grid-rows-4">
             {#each [
-                ["Feature", genTableIcon("paid")], ["Physical presenter", genTableIcon("paid")], ["Note cards", genTableIcon("paid")], ["Physical timer", genTableIcon("paid")], ["A Better Presenter", genTableIcon("paid")],
+                ["Feature", ""], ["Physical presenter", genTableIcon("paid")], ["Note cards", genTableIcon("paid")], ["Physical timer", genTableIcon("paid")], ["A Better Presenter", genTableIcon("paid")],
                 ["Remote control", genTableIcon("paid")], genTableIconArray("paid"), genTableIconArray("none"), genTableIconArray("none"), genTableIconArray("free"),
                 ["Speaker notes", genTableIcon("paid")], genTableIconArray("none"), genTableIconArray("paid"), genTableIconArray("none"), genTableIconArray("free"),
                 ["Time management", genTableIcon("paid")], genTableIconArray("none"), genTableIconArray("none"), genTableIconArray("paid"), genTableIconArray("paid"),
