@@ -21,21 +21,22 @@
     let currentlyHoveredElementName = "";
 
     function genTableIcon(name: string, isOnPrimary = false): string {
+        const startString = '<i class="relative top-1 text-2xl ';
         switch (name) {
             case "none":
-                return '<i class="text-2xl text-red-600 iconoir-cancel"></i>';
+                return startString + 'text-red-600 iconoir-cancel"></i>';
             case "paid":
-                return '<i class="text-xl text-red-600 iconoir-apple-mac"></i>';
+                return startString + 'text-red-600 iconoir-apple-mac"></i>';
             case "free":
-                return '<i class="text-2xl text-green-600 iconoir-check"></i>';
+                return startString + 'text-green-600 iconoir-check"></i>';
             case "remote":
-                return '<i class="text-2xl ' + isOnPrimary ? 'text-onPrimary' : 'text-onBackground' + ' iconoir-check"></i>';
+                return startString + 'iconoir-check"></i>';
             case "notes":
-                return '<i class="text-2xl ' + isOnPrimary ? 'text-onPrimary' : 'text-onBackground' + ' iconoir-notes"></i>';
+                return startString + 'iconoir-notes"></i>';
             case "timer":
-                return '<i class="text-2xl ' + isOnPrimary ? 'text-onPrimary' : 'text-onBackground' + ' iconoir-timer"></i>';
+                return startString + 'iconoir-timer"></i>';
             case "abp":
-                return '<i class="text-2xl ' + isOnPrimary ? 'text-onPrimary' : 'text-onBackground' + ' iconoir-dev-mode-phone"></i>';
+                return startString + 'iconoir-dev-mode-phone"></i>';
             default:
                 return '';
         }
@@ -128,7 +129,8 @@
             ] as e, i}
                 <div
                     class=
-                        "{i === 0 ? "rounded-tl-md" : ""} {i === 4 ? "rounded-tr-md" : ""} {i === 15 ? "rounded-bl-md" : ""} {i === 19 ? "rounded-br-md" : ""}
+                        "relative
+                        {i === 0 ? "rounded-tl-md" : ""} {i === 4 ? "rounded-tr-md" : ""} {i === 15 ? "rounded-bl-md" : ""} {i === 19 ? "rounded-br-md" : ""}
                         border border-onBackground min-w-32 h-16
                         {( i + 1 ) % 5 === 0 ? "primary" : ( i % 5 === 0 || i < 5 ? "bg-primary bg-opacity-5" : "background" )}
                         flex_row_center truncate"

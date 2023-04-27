@@ -35,21 +35,22 @@ const Inline_paragraph_button = create_ssr_component(($$result, $$props, $$bindi
   return `<button class="${"transition-all duration-200 inline -mr-1 opacity-50 hover:opacity-75"}">${escape(content)}<i class="${"relative left-1 top-2 iconoir-nav-arrow-down"}"></i></button>`;
 });
 function genTableIcon(name, isOnPrimary = false) {
+  const startString = '<i class="relative top-1 text-2xl ';
   switch (name) {
     case "none":
-      return '<i class="text-2xl text-red-600 iconoir-cancel"></i>';
+      return startString + 'text-red-600 iconoir-cancel"></i>';
     case "paid":
-      return '<i class="text-xl text-red-600 iconoir-apple-mac"></i>';
+      return startString + 'text-red-600 iconoir-apple-mac"></i>';
     case "free":
-      return '<i class="text-2xl text-green-600 iconoir-check"></i>';
+      return startString + 'text-green-600 iconoir-check"></i>';
     case "remote":
-      return '<i class="text-2xl ' + isOnPrimary ? "text-onPrimary" : 'text-onBackground iconoir-check"></i>';
+      return startString + 'iconoir-check"></i>';
     case "notes":
-      return '<i class="text-2xl ' + isOnPrimary ? "text-onPrimary" : 'text-onBackground iconoir-notes"></i>';
+      return startString + 'iconoir-notes"></i>';
     case "timer":
-      return '<i class="text-2xl ' + isOnPrimary ? "text-onPrimary" : 'text-onBackground iconoir-timer"></i>';
+      return startString + 'iconoir-timer"></i>';
     case "abp":
-      return '<i class="text-2xl ' + isOnPrimary ? "text-onPrimary" : 'text-onBackground iconoir-dev-mode-phone"></i>';
+      return startString + 'iconoir-dev-mode-phone"></i>';
     default:
       return "";
   }
@@ -161,7 +162,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       genTableIconArray("paid")
     ],
     (e, i) => {
-      return `<div class="${escape(i === 0 ? "rounded-tl-md" : "", true) + " " + escape(i === 4 ? "rounded-tr-md" : "", true) + " " + escape(i === 15 ? "rounded-bl-md" : "", true) + " " + escape(i === 19 ? "rounded-br-md" : "", true) + " border border-onBackground min-w-32 h-16 " + escape(
+      return `<div class="${"relative " + escape(i === 0 ? "rounded-tl-md" : "", true) + " " + escape(i === 4 ? "rounded-tr-md" : "", true) + " " + escape(i === 15 ? "rounded-bl-md" : "", true) + " " + escape(i === 19 ? "rounded-br-md" : "", true) + " border border-onBackground min-w-32 h-16 " + escape(
         (i + 1) % 5 === 0 ? "primary" : i % 5 === 0 || i < 5 ? "bg-primary bg-opacity-5" : "background",
         true
       ) + " flex_row_center truncate"}">${validate_component(Small_label, "SmallLabel").$$render($$result, {}, {}, {
