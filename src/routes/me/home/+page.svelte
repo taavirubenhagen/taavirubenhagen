@@ -1,16 +1,21 @@
 <script lang="ts">
+    import { onMount } from 'svelte';
+
     import DeviceDetector from 'svelte-device-detector'
     import * as scroller from 'svelte-scrollto';
 
     import '$style';
 
-    import {LargeSubtitle} from '$tavy';
+    import {
+        PrimaryButtonLabel, SecondaryButtonLabel, TertiaryButtonLabel,
+        SmallLabel,
+        SectionHeadline,
+        MainHeadline,
+        LargeSubtitle,
+        LargeParagraph,
+        InlineParagraphButton,
+    } from '$tavy';
     import {TextButton} from '$util';
-    import LargeParagraph from '$src/lib/tavy/text/button_text/large_paragraph.svelte';
-    import SmallLabel from '$src/lib/tavy/text/button_text/small_label.svelte';
-    import { onMount } from 'svelte';
-    import InlineParagraphButton from '$src/lib/tavy/miscellaneous/inline_paragraph_button.svelte';
-    import SectionHeader from '$src/lib/tavy/text/button_text/section_header.svelte';
 
     let windowHeight: number;
     let currentlyHoveredElementName = "";
@@ -37,8 +42,8 @@
 <svelte:window bind:innerHeight={windowHeight} />
 
 <main>
-    <section class="w-screen h-screen background flex_col_center text-center">
-        <h2>Hi, I'm Taavi<br />Rübenhagen.</h2>
+    <section class="w-screen h-screen p-8 md:p-16 flex_col_center text-center">
+        <MainHeadline>Hi, I'm Taavi<br />Rübenhagen.</MainHeadline>
         <div class="h-8"/>
         <LargeSubtitle>
             I'm a self-taught UI/UX Designer
@@ -47,16 +52,15 @@
         </LargeSubtitle>
         <div class="h-4"/>
     </section>
-    <section class="w-screen min-h-screen background pb-16 md:pb-0 flex flex-col-reverse md:flex-row md:items-center">
-        <div class="w-full md:w-1/2 p-8 md:p-16 flex flex-col justify-center items-start text-justify md:text-left">
+    <section class="w-screen min-h-screen flex flex-col-reverse md:flex-row md:items-center">
+        <div class="w-full md:w-1/2 min-h-screen md:min-h-0 p-8 md:p-16 flex flex-col md:justify-center items-start text-justify md:text-left">
             <LargeSubtitle>My largest project: </LargeSubtitle>
-            <h2
-                class="text-left"
+            <MainHeadline
                 on:mouseenter={() => currentlyHoveredElementName = "presenter_headline"}
                 on:mouseleave={() => currentlyHoveredElementName = ""}
             >
                 A better presenter
-            </h2>
+            </MainHeadline>
             <div class="h-8"/>
             <LargeParagraph>
                 What if you had all your presentation tools combined - remote control, note cards, timer and more?
@@ -77,25 +81,26 @@
                 </div>
             </div>-->
         </div>
-        <div class="relative md:left-8 w-full md:w-1/2 md:h-screen px-4 py-8 md:py-32 flex">
-            <div class="rounded-lg border border-onBackground w-full md:w-auto md:h-full aspect-[9/16] bg-background flex_col_center">
+        <div class="relative md:left-16 w-full md:w-1/2 md:h-screen px-4 py-8 md:py-32 flex">
+            <!--TODO: Encapsulate in "[Image]" component-->
+            <div class="transition-all duration-400 relative bottom-0 md:hover:bottom-1 rounded-lg border border-onBackground w-full md:w-auto md:h-full aspect-[9/16] bg-background flex_col_center">
                 <SmallLabel>[Image]</SmallLabel>
             </div>
             <div class="w-8"></div>
-            <div class="relative md:right-32 rounded-lg border border-onBackground w-full md:w-auto md:h-full aspect-[9/16] bg-background flex_col_center">
+            <div class="transition-all duration-400 relative md:right-32 bottom-0 md:hover:bottom-1 rounded-lg border border-onBackground w-full md:w-auto md:h-full aspect-[9/16] bg-background flex_col_center">
                 <SmallLabel>[Image]</SmallLabel>
             </div>
             <div class="w-8"></div>
-            <div class="relative md:right-64 rounded-lg border border-onBackground w-full md:w-auto md:h-full aspect-[9/16] bg-background flex_col_center">
+            <div class="transition-all duration-400 relative md:right-64 bottom-0 md:hover:bottom-1 rounded-lg border border-onBackground w-full md:w-auto md:h-full aspect-[9/16] bg-background flex_col_center">
                 <SmallLabel>[Image]</SmallLabel>
             </div>
         </div>
     </section>
-    <section class="w-screen min-h-screen background p-8 md:p-16 flex flex-col text-justify md:text-left">
-        <SectionHeader>
-            A better presenter vs physical presenter vs note cards vs timer
-        </SectionHeader>
-        <div class="h-8"/>
+    <section class="w-screen min-h-screen p-8 md:p-16 flex flex-col text-justify md:text-left">
+        <SectionHeadline>
+            A Better Presenter vs physical presenter vs note cards vs timer
+        </SectionHeadline>
+        <div class="h-16"/>
         <SmallLabel>
             <div class="w-full flex flex-col">
                 <div class="h-8 flex items-center">{@html genTableIcon("none")}<div class="inline w-2"></div>Not included</div>
@@ -114,13 +119,18 @@
                 <div
                     class=
                         "{i === 0 ? "rounded-tl-md" : ""} {i === 4 ? "rounded-tr-md" : ""} {i === 15 ? "rounded-bl-md" : ""} {i === 19 ? "rounded-br-md" : ""}
-                        border border-onBackground min-w-32 h-8 bg-background flex_row_center">
-                    <DeviceDetector showInDevice="dessktop">
-                        {@html e[0]}
-                    </DeviceDetector>
-                    <DeviceDetector showInDevice="desktop">
-                        {@html e[1]}
-                    </DeviceDetector>
+                        border border-onBackground min-w-32 h-16
+                        {( i + 1 ) % 5 === 0 ? "primary" : ( i % 5 === 0 || i < 5 ? "bg-primary bg-opacity-5" : "background" )}
+                        flex_row_center truncate"
+                    >
+                    <SmallLabel>
+                        <DeviceDetector showInDevice="desktop">
+                            {@html e[0]}
+                        </DeviceDetector>
+                        <DeviceDetector showInDevice="mobile">
+                            {@html e[1]}
+                        </DeviceDetector>
+                    </SmallLabel>
                 </div>
             {/each}
         </div>
@@ -134,8 +144,8 @@
             </div>
         </div>-->
     </section>
-    <section class="w-screen h-screen background p-8 md:p-16 flex_col_center relative text-center">
-        <!--<h3>Every aspect of any app on any platform.</h3>
+    <!--<section class="w-screen h-screen p-8 md:p-16 flex_col_center relative text-center">
+        <!-.-<h3>Every aspect of any app on any platform.</h3>
         <div class="h-16" />
         <div class="flex_row_center">
         {#each ['Mobile', 'Web', 'Server', 'Graphics', 'Deploy', 'Market'] as data}
@@ -147,29 +157,29 @@
             <h6>{data}</h6>
             </a>
         {/each}
-        </div>-->
-        <h2>Full Stack. Always.</h2>
+        </div>--.>
+        <MainHeadline>Full Stack. Always.</MainHeadline>
         <div class="h-8"/>
         <LargeSubtitle>
             I design, develop and distribute my work. If I don't find a tool, I make one.
         </LargeSubtitle>
         <div class="h-4"/>
+    </section>-->
+    <section
+        class=
+            "w-screen h-1/2 md:h-screen background p-8 md:p-16 flex_col_center relative
+            text-center"
+    >
+        <h3>Contact me for any collaboration.</h3>
+        <div class="h-16" />
+        <a href="mailto:taavi.ruebenhagen@gmail.com" class="flex_row_center">
+            <TextButton primary>E-Mail me</TextButton>
+        </a>
     </section>
-  <section
-    class=
-      "w-screen h-screen background p-8 md:p-16 flex_col_center relative
-      text-center"
-  >
-    <h3>Contact me for any collaboration.</h3>
-    <div class="h-16" />
-    <a href="mailto:taavi.ruebenhagen@gmail.com" class="flex_row_center">
-      <TextButton primary>E-Mail me</TextButton>
-    </a>
-  </section>
-  <section
-    class=
-      "w-screen h-screen background flex_col_center"
-  >
-    <h class="mt-8 text-9xl text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-red-700">lol xD.</h>
-  </section>
+    <section
+        class=
+            "w-screen h-screen background flex_col_center"
+    >
+        <h class="mt-8 text-9xl text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-red-700">lol xD.</h>
+    </section>
 </main>

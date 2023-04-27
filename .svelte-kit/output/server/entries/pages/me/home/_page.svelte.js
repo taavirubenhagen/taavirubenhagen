@@ -19,8 +19,11 @@ const Small_label = create_ssr_component(($$result, $$props, $$bindings, slots) 
 const Large_subtitle = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<p class="${"headline text-2xl md:text-3xl text-neutral-500 font-bold tracking-widest"}">${slots.default ? slots.default({}) : ``}</p>`;
 });
-const Section_header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<p class="${"headline text-4xl sm:text-5xl md:text-6xl font-bold"}">${slots.default ? slots.default({}) : ``}</p>`;
+const Section_headline = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  return `<h class="${"text-4xl sm:text-5xl md:text-6xl font-bold"}">${slots.default ? slots.default({}) : ``}</h>`;
+});
+const Main_headline = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  return `<h class="${"text-5xl sm:text-6xl md:text-7xl font-bold tracking-wider"}">${slots.default ? slots.default({}) : ``}</h>`;
 });
 const Large_paragraph = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<p class="${"paragraph text-2xl md:text-2xl"}">${slots.default ? slots.default({}) : ``}</p>`;
@@ -49,7 +52,11 @@ function genTableIconArray(name) {
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `
 
-<main><section class="${"w-screen h-screen background flex_col_center text-center"}"><h2>Hi, I&#39;m Taavi<br>R\xFCbenhagen.</h2>
+<main><section class="${"w-screen h-screen p-8 md:p-16 flex_col_center text-center"}">${validate_component(Main_headline, "MainHeadline").$$render($$result, {}, {}, {
+    default: () => {
+      return `Hi, I&#39;m Taavi<br>R\xFCbenhagen.`;
+    }
+  })}
         <div class="${"h-8"}"></div>
         ${validate_component(Large_subtitle, "LargeSubtitle").$$render($$result, {}, {}, {
     default: () => {
@@ -60,13 +67,17 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     }
   })}
         <div class="${"h-4"}"></div></section>
-    <section class="${"w-screen min-h-screen background pb-16 md:pb-0 flex flex-col-reverse md:flex-row md:items-center"}"><div class="${"w-full md:w-1/2 p-8 md:p-16 flex flex-col justify-center items-start text-justify md:text-left"}">${validate_component(Large_subtitle, "LargeSubtitle").$$render($$result, {}, {}, {
+    <section class="${"w-screen min-h-screen flex flex-col-reverse md:flex-row md:items-center"}"><div class="${"w-full md:w-1/2 min-h-screen md:min-h-0 p-8 md:p-16 flex flex-col md:justify-center items-start text-justify md:text-left"}">${validate_component(Large_subtitle, "LargeSubtitle").$$render($$result, {}, {}, {
     default: () => {
       return `My largest project: `;
     }
   })}
-            <h2 class="${"text-left"}">A better presenter
-            </h2>
+            ${validate_component(Main_headline, "MainHeadline").$$render($$result, {}, {}, {
+    default: () => {
+      return `A better presenter
+            `;
+    }
+  })}
             <div class="${"h-8"}"></div>
             ${validate_component(Large_paragraph, "LargeParagraph").$$render($$result, {}, {}, {
     default: () => {
@@ -85,30 +96,31 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     }
   })}
             </div>
-        <div class="${"relative md:left-8 w-full md:w-1/2 md:h-screen px-4 py-8 md:py-32 flex"}"><div class="${"rounded-lg border border-onBackground w-full md:w-auto md:h-full aspect-[9/16] bg-background flex_col_center"}">${validate_component(Small_label, "SmallLabel").$$render($$result, {}, {}, {
+        <div class="${"relative md:left-16 w-full md:w-1/2 md:h-screen px-4 py-8 md:py-32 flex"}">
+            <div class="${"transition-all duration-400 relative bottom-0 md:hover:bottom-1 rounded-lg border border-onBackground w-full md:w-auto md:h-full aspect-[9/16] bg-background flex_col_center"}">${validate_component(Small_label, "SmallLabel").$$render($$result, {}, {}, {
     default: () => {
       return `[Image]`;
     }
   })}</div>
             <div class="${"w-8"}"></div>
-            <div class="${"relative md:right-32 rounded-lg border border-onBackground w-full md:w-auto md:h-full aspect-[9/16] bg-background flex_col_center"}">${validate_component(Small_label, "SmallLabel").$$render($$result, {}, {}, {
+            <div class="${"transition-all duration-400 relative md:right-32 bottom-0 md:hover:bottom-1 rounded-lg border border-onBackground w-full md:w-auto md:h-full aspect-[9/16] bg-background flex_col_center"}">${validate_component(Small_label, "SmallLabel").$$render($$result, {}, {}, {
     default: () => {
       return `[Image]`;
     }
   })}</div>
             <div class="${"w-8"}"></div>
-            <div class="${"relative md:right-64 rounded-lg border border-onBackground w-full md:w-auto md:h-full aspect-[9/16] bg-background flex_col_center"}">${validate_component(Small_label, "SmallLabel").$$render($$result, {}, {}, {
+            <div class="${"transition-all duration-400 relative md:right-64 bottom-0 md:hover:bottom-1 rounded-lg border border-onBackground w-full md:w-auto md:h-full aspect-[9/16] bg-background flex_col_center"}">${validate_component(Small_label, "SmallLabel").$$render($$result, {}, {}, {
     default: () => {
       return `[Image]`;
     }
   })}</div></div></section>
-    <section class="${"w-screen min-h-screen background p-8 md:p-16 flex flex-col text-justify md:text-left"}">${validate_component(Section_header, "SectionHeader").$$render($$result, {}, {}, {
+    <section class="${"w-screen min-h-screen p-8 md:p-16 flex flex-col text-justify md:text-left"}">${validate_component(Section_headline, "SectionHeadline").$$render($$result, {}, {}, {
     default: () => {
-      return `A better presenter vs physical presenter vs note cards vs timer
+      return `A Better Presenter vs physical presenter vs note cards vs timer
         `;
     }
   })}
-        <div class="${"h-8"}"></div>
+        <div class="${"h-16"}"></div>
         ${validate_component(Small_label, "SmallLabel").$$render($$result, {}, {}, {
     default: () => {
       return `<div class="${"w-full flex flex-col"}"><div class="${"h-8 flex items-center"}"><!-- HTML_TAG_START -->${genTableIcon("none")}<!-- HTML_TAG_END --><div class="${"inline w-2"}"></div>Not included</div>
@@ -141,15 +153,23 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       genTableIconArray("paid")
     ],
     (e, i) => {
-      return `<div class="${escape(i === 0 ? "rounded-tl-md" : "", true) + " " + escape(i === 4 ? "rounded-tr-md" : "", true) + " " + escape(i === 15 ? "rounded-bl-md" : "", true) + " " + escape(i === 19 ? "rounded-br-md" : "", true) + " border border-onBackground min-w-32 h-8 bg-background flex_row_center"}">${validate_component(DeviceDetector, "DeviceDetector").$$render($$result, { showInDevice: "dessktop" }, {}, {
+      return `<div class="${escape(i === 0 ? "rounded-tl-md" : "", true) + " " + escape(i === 4 ? "rounded-tr-md" : "", true) + " " + escape(i === 15 ? "rounded-bl-md" : "", true) + " " + escape(i === 19 ? "rounded-br-md" : "", true) + " border border-onBackground min-w-32 h-16 " + escape(
+        (i + 1) % 5 === 0 ? "primary" : i % 5 === 0 || i < 5 ? "bg-primary bg-opacity-5" : "background",
+        true
+      ) + " flex_row_center truncate"}">${validate_component(Small_label, "SmallLabel").$$render($$result, {}, {}, {
         default: () => {
-          return `<!-- HTML_TAG_START -->${e[0]}<!-- HTML_TAG_END -->
-                    `;
-        }
-      })}
-                    ${validate_component(DeviceDetector, "DeviceDetector").$$render($$result, { showInDevice: "desktop" }, {}, {
-        default: () => {
-          return `<!-- HTML_TAG_START -->${e[1]}<!-- HTML_TAG_END -->
+          return `${validate_component(DeviceDetector, "DeviceDetector").$$render($$result, { showInDevice: "desktop" }, {}, {
+            default: () => {
+              return `<!-- HTML_TAG_START -->${e[0]}<!-- HTML_TAG_END -->
+                        `;
+            }
+          })}
+                        ${validate_component(DeviceDetector, "DeviceDetector").$$render($$result, { showInDevice: "mobile" }, {}, {
+            default: () => {
+              return `<!-- HTML_TAG_START -->${e[1]}<!-- HTML_TAG_END -->
+                        `;
+            }
+          })}
                     `;
         }
       })}
@@ -157,24 +177,15 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     }
   )}</div>
         </section>
-    <section class="${"w-screen h-screen background p-8 md:p-16 flex_col_center relative text-center"}">
-        <h2>Full Stack. Always.</h2>
-        <div class="${"h-8"}"></div>
-        ${validate_component(Large_subtitle, "LargeSubtitle").$$render($$result, {}, {}, {
-    default: () => {
-      return `I design, develop and distribute my work. If I don&#39;t find a tool, I make one.
-        `;
-    }
-  })}
-        <div class="${"h-4"}"></div></section>
-  <section class="${"w-screen h-screen background p-8 md:p-16 flex_col_center relative text-center"}"><h3>Contact me for any collaboration.</h3>
-    <div class="${"h-16"}"></div>
-    <a href="${"mailto:taavi.ruebenhagen@gmail.com"}" class="${"flex_row_center"}">${validate_component(Text_button, "TextButton").$$render($$result, { primary: true }, {}, {
+    
+    <section class="${"w-screen h-1/2 md:h-screen background p-8 md:p-16 flex_col_center relative text-center"}"><h3>Contact me for any collaboration.</h3>
+        <div class="${"h-16"}"></div>
+        <a href="${"mailto:taavi.ruebenhagen@gmail.com"}" class="${"flex_row_center"}">${validate_component(Text_button, "TextButton").$$render($$result, { primary: true }, {}, {
     default: () => {
       return `E-Mail me`;
     }
   })}</a></section>
-  <section class="${"w-screen h-screen background flex_col_center"}"><h class="${"mt-8 text-9xl text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-red-700"}">lol xD.</h></section></main>`;
+    <section class="${"w-screen h-screen background flex_col_center"}"><h class="${"mt-8 text-9xl text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-red-700"}">lol xD.</h></section></main>`;
 });
 export {
   Page as default

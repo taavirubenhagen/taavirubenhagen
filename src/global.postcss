@@ -21,21 +21,18 @@
 
 /* TEXT-RELATED STYLES */
 
-.text::selection {
-    @apply bg-onBackground text-background;
-}
 p {
-    @apply text font-body;
+    @apply selection:bg-onBackground selection:text-background font-body;
 }
 h {
-    @apply text font-display;
+    @apply selection:bg-onBackground selection:text-background font-display;
 }
 /* TODO: R */
 .paragraph {
-    @apply text font-display;
+    @apply font-display;
 }
 .headline {
-    @apply text font-body;
+    @apply font-body;
 }
 
 h1 {

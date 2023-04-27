@@ -3,7 +3,7 @@ import { p as page } from "../../../chunks/stores.js";
 import "ua-parser-js";
 /* empty css                      */import { S as Secondary_button_label } from "../../../chunks/secondary_button_label.js";
 const Tertiary_button_label = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<p class="${"text-base md:text-lg font-bold"}">${slots.default ? slots.default({}) : ``}</p>`;
+  return `<p class="${"text-lg md:text-lg font-bold"}">${slots.default ? slots.default({}) : ``}</p>`;
 });
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $$unsubscribe_page;
@@ -14,7 +14,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 
 
 
-<main class="${"absolute w-screen min-h-screen background"}">
+<main class="${"max-w-screen min-h-screen background"}">
   
   <div class="${"fixed z-50 w-screen h-8 primary flex_row_center"}">${validate_component(Secondary_button_label, "SecondaryButtonLabel").$$render($$result, {}, {}, {
     default: () => {

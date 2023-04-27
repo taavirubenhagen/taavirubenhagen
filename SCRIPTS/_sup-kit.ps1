@@ -176,16 +176,16 @@ declare module "svelte-material-icons/DotsHorizontal.svelte"'
     color: theme("colors.background");
   }
 
-  h1 { @apply text; }
-  h2 { @apply text; }
-  h3 { @apply text; }
-  h4 { @apply text; }
-  s1 { @apply text; }
-  s2 { @apply text; }
-  p1 { @apply text; }
-  p2 { @apply text; }
-  b1 { @apply text; }
-  b2 { @apply text; }
+  h1 { @apply; }
+  h2 { @apply; }
+  h3 { @apply; }
+  h4 { @apply; }
+  s1 { @apply; }
+  s2 { @apply; }
+  p1 { @apply; }
+  p2 { @apply; }
+  b1 { @apply; }
+  b2 { @apply; }
     
     
   
