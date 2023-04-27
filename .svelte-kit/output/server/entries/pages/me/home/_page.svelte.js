@@ -47,10 +47,14 @@ function genTableIcon(name, isOnPrimary = false) {
       return startString + 'iconoir-pen-connect-wifi"></i>';
     case "control":
       return startString + 'iconoir-bluetooth"></i>';
+    case "cards":
+      return startString + 'iconoir-credit-cards"></i>';
     case "notes":
       return startString + 'iconoir-notes"></i>';
     case "timer":
       return startString + 'iconoir-timer"></i>';
+    case "timer":
+      return startString + 'iconoir-clock"></i>';
     case "abp":
       return startString + 'iconoir-dev-mode-phone"></i>';
     default:
