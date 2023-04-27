@@ -30,7 +30,9 @@
             case "free":
                 return startString + 'text-green-600 iconoir-check"></i>';
             case "remote":
-                return startString + 'iconoir-check"></i>';
+                return startString + 'iconoir-pen-connect-wifi"></i>';
+            case "control":
+                return startString + 'iconoir-bluetooth"></i>';
             case "notes":
                 return startString + 'iconoir-notes"></i>';
             case "timer":
