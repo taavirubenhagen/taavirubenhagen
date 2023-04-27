@@ -34,6 +34,8 @@
                 return '<i class="text-2xl ' + isOnPrimary ? 'text-onPrimary' : 'text-onBackground' + ' iconoir-copy"></i>';
             case "timer":
                 return '<i class="text-2xl ' + isOnPrimary ? 'text-onPrimary' : 'text-onBackground' + ' iconoir-timer"></i>';
+            case "abp":
+                return '<i class="text-2xl ' + isOnPrimary ? 'text-onPrimary' : 'text-onBackground' + ' iconoir-timer"></i>';
             default:
                 return '';
         }
@@ -119,10 +121,10 @@
         <div class="h-8"/>
         <div class="rounded-lg border border-onBackground grid grid-cols-5 grid-rows-4">
             {#each [
-                ["Feature", ""], ["Physical presenter", genTableIcon("paid")], ["Note cards", genTableIcon("paid")], ["Physical timer", genTableIcon("paid")], ["A Better Presenter", genTableIcon("paid")],
-                ["Remote control", genTableIcon("paid")], genTableIconArray("paid"), genTableIconArray("none"), genTableIconArray("none"), genTableIconArray("free"),
-                ["Speaker notes", genTableIcon("paid")], genTableIconArray("none"), genTableIconArray("paid"), genTableIconArray("none"), genTableIconArray("free"),
-                ["Time management", genTableIcon("paid")], genTableIconArray("none"), genTableIconArray("none"), genTableIconArray("paid"), genTableIconArray("paid"),
+                ["Feature", ""], ["Physical presenter", genTableIcon("remote")], ["Note cards", genTableIcon("notes")], ["Physical timer", genTableIcon("timer")], ["A Better Presenter", genTableIcon("abp")],
+                ["Remote control", genTableIcon("remote")], genTableIconArray("paid"), genTableIconArray("none"), genTableIconArray("none"), genTableIconArray("free"),
+                ["Speaker notes", genTableIcon("notes")], genTableIconArray("none"), genTableIconArray("paid"), genTableIconArray("none"), genTableIconArray("free"),
+                ["Time management", genTableIcon("timer")], genTableIconArray("none"), genTableIconArray("none"), genTableIconArray("paid"), genTableIconArray("paid"),
             ] as e, i}
                 <div
                     class=
