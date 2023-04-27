@@ -41,7 +41,7 @@
 
 
 
-<main class="absolute w-screen min-h-screen background">
+<main class="max-w-screen min-h-screen background">
   <!--<Cursor let:state>
     <div
       class="base_cursor"
