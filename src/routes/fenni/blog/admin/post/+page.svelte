@@ -1,6 +1,4 @@
 <script>
-    import ContentSection from "$components/frames/content_section.svelte";
-
     let foo = "baz";
     let bar = "qux";
     let result = null;
@@ -19,7 +17,8 @@
     }
 </script>
 
-<ContentSection title="Post a post.">
+<div>
+    Post a post.
     <button
         type="button"
         on:click={doPost}
@@ -27,4 +26,4 @@
     >
         Upload
     </button>
-</ContentSection>
+</div>

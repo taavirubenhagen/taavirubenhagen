@@ -13,11 +13,12 @@ const config = {
 		alias: {
 			$src: path.resolve('./src'),
 			$static: path.resolve('./static/'),
-			$components: path.resolve("./src/components/"),
-			$buttons: path.resolve("./src/components/buttons/"),
-			$frames: path.resolve("./src/components/frames/"),
+			$util: path.resolve("./src/lib/util/"),
+			$tavy: path.resolve("./src/lib/tavy/"),
 			$style: path.resolve("./src/global.postcss"),
 			$store: path.resolve("./src/stores.ts"),
+
+			$buttons: path.resolve("./src/lib/util/buttons"),
 		}
 	}
 };

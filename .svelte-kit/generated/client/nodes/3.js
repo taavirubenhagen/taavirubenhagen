@@ -1,1 +1,1 @@
-export { default as component } from "../../../../src/routes/contact/+layout.svelte";
+export { default as component } from "../../../../src/routes/dropshipz/+layout.svelte";

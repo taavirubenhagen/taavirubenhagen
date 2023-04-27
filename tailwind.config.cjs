@@ -16,11 +16,14 @@ module.exports = {
     content: ["./src/**/*.{html,js,svelte,ts}"],
     theme: {
         fontFamily: {
-          sans: ['Manrope', 'Arial'],
-          mono: ['IBM Plex Mono', 'Consolas'],
+            body: ['Caveat', 'Arial'],
+            display: ['Caveat', 'Arial'],
+            sans: ['Lexend', 'Arial'],
+            mono: ['IBM Plex Mono', 'Consolas'],
         },
         transitionTimingFunction: {
-          DEFAULT: 'cubic-bezier(0.2, 0, 0.4, 1)',
+          //DEFAULT: 'cubic-bezier(0.2, 0, 0.4, 1)',
+          DEFAULT: 'cubic-bezier(.4, 0, .2, 1)',
           default_tailwind: 'cubic-bezier(0.4, 0, 0.2, 1)',
         },
         extend: {
@@ -35,8 +38,10 @@ module.exports = {
                 onPrimary: "#FFF",
             },
             fontFamily: {
-              logo: ['IBM Plex Mono'],
+              logo: ['Caveat'],
               rounded: ['Quicksand'],
+              slab: ['Aleo'],           // TODO: F
+              handwriting: ['Caveat'],
             },
             transitionDelay: {
                 0: '0s',

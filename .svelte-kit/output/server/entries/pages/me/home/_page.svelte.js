@@ -1,0 +1,181 @@
+import { c as create_ssr_component, e as escape, v as validate_component, h as each } from "../../../../chunks/index2.js";
+import "ua-parser-js";
+/* empty css                         */import { T as Text_button } from "../../../../chunks/text_button.js";
+const DeviceDetector = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let { showInDevice = void 0 } = $$props;
+  let { showInBrowser = void 0 } = $$props;
+  let { showInOs = void 0 } = $$props;
+  if ($$props.showInDevice === void 0 && $$bindings.showInDevice && showInDevice !== void 0)
+    $$bindings.showInDevice(showInDevice);
+  if ($$props.showInBrowser === void 0 && $$bindings.showInBrowser && showInBrowser !== void 0)
+    $$bindings.showInBrowser(showInBrowser);
+  if ($$props.showInOs === void 0 && $$bindings.showInOs && showInOs !== void 0)
+    $$bindings.showInOs(showInOs);
+  return `${``}`;
+});
+const Small_label = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  return `<p class="${"paragraph text-xl md:text-2xl"}">${slots.default ? slots.default({}) : ``}</p>`;
+});
+const Large_subtitle = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  return `<p class="${"headline text-2xl md:text-3xl text-neutral-500 font-bold tracking-widest"}">${slots.default ? slots.default({}) : ``}</p>`;
+});
+const Section_header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  return `<p class="${"headline text-4xl sm:text-5xl md:text-6xl font-bold"}">${slots.default ? slots.default({}) : ``}</p>`;
+});
+const Large_paragraph = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  return `<p class="${"paragraph text-2xl md:text-2xl"}">${slots.default ? slots.default({}) : ``}</p>`;
+});
+const Inline_paragraph_button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let { content = "" } = $$props;
+  if ($$props.content === void 0 && $$bindings.content && content !== void 0)
+    $$bindings.content(content);
+  return `<button class="${"transition-all duration-200 inline -mr-1 opacity-50 hover:opacity-75"}">${escape(content)}<i class="${"relative left-1 top-2 iconoir-nav-arrow-down"}"></i></button>`;
+});
+function genTableIcon(name) {
+  switch (name) {
+    case "none":
+      return '<i class="text-2xl text-red-600 iconoir-cancel"></i>';
+    case "paid":
+      return '<i class="text-xl text-red-600 iconoir-apple-mac"></i>';
+    case "free":
+      return '<i class="text-2xl text-green-600 iconoir-check"></i>';
+    default:
+      return "";
+  }
+}
+function genTableIconArray(name) {
+  return new Array(10).fill(genTableIcon(name));
+}
+const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  return `
+
+<main><section class="${"w-screen h-screen background flex_col_center text-center"}"><h2>Hi, I&#39;m Taavi<br>R\xFCbenhagen.</h2>
+        <div class="${"h-8"}"></div>
+        ${validate_component(Large_subtitle, "LargeSubtitle").$$render($$result, {}, {}, {
+    default: () => {
+      return `I&#39;m a self-taught UI/UX Designer
+            <br>
+            and Front-End Engineer.
+        `;
+    }
+  })}
+        <div class="${"h-4"}"></div></section>
+    <section class="${"w-screen min-h-screen background pb-16 md:pb-0 flex flex-col-reverse md:flex-row md:items-center"}"><div class="${"w-full md:w-1/2 p-8 md:p-16 flex flex-col justify-center items-start text-justify md:text-left"}">${validate_component(Large_subtitle, "LargeSubtitle").$$render($$result, {}, {}, {
+    default: () => {
+      return `My largest project: `;
+    }
+  })}
+            <h2 class="${"text-left"}">A better presenter
+            </h2>
+            <div class="${"h-8"}"></div>
+            ${validate_component(Large_paragraph, "LargeParagraph").$$render($$result, {}, {}, {
+    default: () => {
+      return `What if you had all your presentation tools combined - remote control, note cards, timer and more?
+                And what if it came for free, on a device you carry around everyday? Well, you don&#39;t have to imagine - just try it.
+                A Better Presenter fixes the issues of it&#39;s predecessor,
+                ${validate_component(Inline_paragraph_button, "InlineParagraphButton").$$render($$result, { content: "The Presentation Master" }, {}, {})}
+                , and lets you focus entirely on your presentation.
+            `;
+    }
+  })}
+            <div class="${"h-8"}"></div>
+            ${validate_component(Text_button, "TextButton").$$render($$result, {}, {}, {
+    default: () => {
+      return `Join waitlist`;
+    }
+  })}
+            </div>
+        <div class="${"relative md:left-8 w-full md:w-1/2 md:h-screen px-4 py-8 md:py-32 flex"}"><div class="${"rounded-lg border border-onBackground w-full md:w-auto md:h-full aspect-[9/16] bg-background flex_col_center"}">${validate_component(Small_label, "SmallLabel").$$render($$result, {}, {}, {
+    default: () => {
+      return `[Image]`;
+    }
+  })}</div>
+            <div class="${"w-8"}"></div>
+            <div class="${"relative md:right-32 rounded-lg border border-onBackground w-full md:w-auto md:h-full aspect-[9/16] bg-background flex_col_center"}">${validate_component(Small_label, "SmallLabel").$$render($$result, {}, {}, {
+    default: () => {
+      return `[Image]`;
+    }
+  })}</div>
+            <div class="${"w-8"}"></div>
+            <div class="${"relative md:right-64 rounded-lg border border-onBackground w-full md:w-auto md:h-full aspect-[9/16] bg-background flex_col_center"}">${validate_component(Small_label, "SmallLabel").$$render($$result, {}, {}, {
+    default: () => {
+      return `[Image]`;
+    }
+  })}</div></div></section>
+    <section class="${"w-screen min-h-screen background p-8 md:p-16 flex flex-col text-justify md:text-left"}">${validate_component(Section_header, "SectionHeader").$$render($$result, {}, {}, {
+    default: () => {
+      return `A better presenter vs physical presenter vs note cards vs timer
+        `;
+    }
+  })}
+        <div class="${"h-8"}"></div>
+        ${validate_component(Small_label, "SmallLabel").$$render($$result, {}, {}, {
+    default: () => {
+      return `<div class="${"w-full flex flex-col"}"><div class="${"h-8 flex items-center"}"><!-- HTML_TAG_START -->${genTableIcon("none")}<!-- HTML_TAG_END --><div class="${"inline w-2"}"></div>Not included</div>
+                <div class="${"h-8 flex items-center"}"><!-- HTML_TAG_START -->${genTableIcon("paid")}<!-- HTML_TAG_END --><div class="${"inline w-2.5"}"></div>Included, but not free</div>
+                <div class="${"h-8 flex items-center"}"><!-- HTML_TAG_START -->${genTableIcon("free")}<!-- HTML_TAG_END --><div class="${"inline w-2"}"></div>Free &amp; Ready to use</div></div>`;
+    }
+  })}
+        <div class="${"h-8"}"></div>
+        <div class="${"rounded-lg border border-onBackground grid grid-cols-5 grid-rows-4"}">${each(
+    [
+      ["Feature", genTableIcon("paid")],
+      ["Physical presenter", genTableIcon("paid")],
+      ["Note cards", genTableIcon("paid")],
+      ["Physical timer", genTableIcon("paid")],
+      ["A Better Presenter", genTableIcon("paid")],
+      ["Remote control", genTableIcon("paid")],
+      genTableIconArray("paid"),
+      genTableIconArray("none"),
+      genTableIconArray("none"),
+      genTableIconArray("free"),
+      ["Speaker notes", genTableIcon("paid")],
+      genTableIconArray("none"),
+      genTableIconArray("paid"),
+      genTableIconArray("none"),
+      genTableIconArray("free"),
+      ["Time management", genTableIcon("paid")],
+      genTableIconArray("none"),
+      genTableIconArray("none"),
+      genTableIconArray("paid"),
+      genTableIconArray("paid")
+    ],
+    (e, i) => {
+      return `<div class="${escape(i === 0 ? "rounded-tl-md" : "", true) + " " + escape(i === 4 ? "rounded-tr-md" : "", true) + " " + escape(i === 15 ? "rounded-bl-md" : "", true) + " " + escape(i === 19 ? "rounded-br-md" : "", true) + " border border-onBackground min-w-32 h-8 bg-background flex_row_center"}">${validate_component(DeviceDetector, "DeviceDetector").$$render($$result, { showInDevice: "dessktop" }, {}, {
+        default: () => {
+          return `<!-- HTML_TAG_START -->${e[0]}<!-- HTML_TAG_END -->
+                    `;
+        }
+      })}
+                    ${validate_component(DeviceDetector, "DeviceDetector").$$render($$result, { showInDevice: "desktop" }, {}, {
+        default: () => {
+          return `<!-- HTML_TAG_START -->${e[1]}<!-- HTML_TAG_END -->
+                    `;
+        }
+      })}
+                </div>`;
+    }
+  )}</div>
+        </section>
+    <section class="${"w-screen h-screen background p-8 md:p-16 flex_col_center relative text-center"}">
+        <h2>Full Stack. Always.</h2>
+        <div class="${"h-8"}"></div>
+        ${validate_component(Large_subtitle, "LargeSubtitle").$$render($$result, {}, {}, {
+    default: () => {
+      return `I design, develop and distribute my work. If I don&#39;t find a tool, I make one.
+        `;
+    }
+  })}
+        <div class="${"h-4"}"></div></section>
+  <section class="${"w-screen h-screen background p-8 md:p-16 flex_col_center relative text-center"}"><h3>Contact me for any collaboration.</h3>
+    <div class="${"h-16"}"></div>
+    <a href="${"mailto:taavi.ruebenhagen@gmail.com"}" class="${"flex_row_center"}">${validate_component(Text_button, "TextButton").$$render($$result, { primary: true }, {}, {
+    default: () => {
+      return `E-Mail me`;
+    }
+  })}</a></section>
+  <section class="${"w-screen h-screen background flex_col_center"}"><h class="${"mt-8 text-9xl text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-red-700"}">lol xD.</h></section></main>`;
+});
+export {
+  Page as default
+};

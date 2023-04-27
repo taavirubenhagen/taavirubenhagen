@@ -1,38 +1,39 @@
 <script lang="ts">
-  import { onMount } from 'svelte'
-  import { fly } from "svelte/transition"
-  import * as easings from 'svelte/easing';
-  import { page } from '$app/stores';
+    import { onMount } from 'svelte'
+    import { fly } from "svelte/transition"
+    import * as easings from 'svelte/easing'
+    import { page } from '$app/stores'
 
-  import DeviceDetector from 'svelte-device-detector'
-  import * as scroller from 'svelte-scrollto'
-  //import { Cursor, Interactive } from 'svelte-cursor'
+    import DeviceDetector from 'svelte-device-detector'
+    import * as scroller from 'svelte-scrollto'
+    //import { Cursor, Interactive } from 'svelte-cursor'
 
-  import '$style'
+    import '$style'
+    import {
+        PrimaryButtonLabel,
+        SecondaryButtonLabel,
+        TertiaryButtonLabel,
+    } from '$tavy';
 
-  import Icon from '$components/icon.svelte'
-    import { CubicBezierCurve } from 'three';
 
-  let menuData = ['Home', 'Work', 'Services', 'Contact']
-  let isMenuOpen = false
+    let menuData = ['Home', 'Work', 'Services', 'Contact']
+    let isMenuOpen = false
 
-  let menuButtonCanvas: HTMLCanvasElement;
+    let menuButtonCanvas: HTMLCanvasElement;
 
-  let isScrollButtonHovered = false
-
-  let windowHeight: number
-  let windowWidth: number
-  
-  onMount(() => {
-    const r = new rive.Rive({
-      src: "/icon_animations.riv",
-      canvas: menuButtonCanvas,
-      artboard: "icons_1_menu",
-      animations: [],
-      //artboard: "icons_1_menu",
-      autoplay: true
+    let windowHeight: number
+    let windowWidth: number
+    
+    onMount(() => {
+        const r = new rive.Rive({
+        src: "/icon_animations.riv",
+        canvas: menuButtonCanvas,
+        artboard: "icons_1_menu",
+        animations: [],
+        //artboard: "icons_1_menu",
+        autoplay: true
+        });
     });
-  });
 </script>
 
 <svelte:window bind:innerHeight={windowHeight} bind:innerWidth={windowWidth}/>
@@ -40,7 +41,7 @@
 
 
 
-<main class="w-screen min-h-screen background">
+<main class="absolute w-screen min-h-screen background">
   <!--<Cursor let:state>
     <div
       class="base_cursor"
@@ -67,65 +68,19 @@
       </button>
     {/each}
   -->
-  <div class="fixed z-50 w-screen h-8 bg-primary flex_row_center primary">
-    <h5>This page is still under development.</h5>
+  <div class="fixed z-50 w-screen h-8 primary flex_row_center">
+    <SecondaryButtonLabel>Still under development</SecondaryButtonLabel>
   </div>
-  <button
-    on:mouseenter={() => setTimeout(() => isScrollButtonHovered = true)}
-    on:mouseleave={() => setTimeout(() => isScrollButtonHovered = false)}
-    on:click={() => windowWidth < 768 ? scroller.scrollTo({ y: windowHeight }) : {}}
-    class="
-      fixed z-40 right-28 bottom-8
-      shadow-xl rounded-full
-      bg-background"
-  >
-    <h5
-      class=
-        "{isScrollButtonHovered ? "opacity-0" : "opacity-100"} rounded-full border-2 border-primary w-32 h-16 pb-1
-        flex_row_center duration-800"
-    >
-      Scroll
-    </h5>
-    <DeviceDetector deviceType="desktop">
-      <div class="{isScrollButtonHovered ? "opacity-100" : "opacity-0"} absolute left-0 top-0 rounded-full w-32 h-16 flex duration-800">
-        <button
-          on:click={() => scroller.scrollTo({ y: windowHeight })}
-          class="
-            rounded-l-full border-2 border-r-0 border-primary hover:border-onPrimary
-            w-16 h-16
-            hover:invert
-            pl-5 pr-3
-            bg-onPrimary
-            flex_row_center
-            duration-200"
-        >
-          <Icon version="0.1" name="icons_1_down_8"/>
-        </button>
-        <button
-          on:click={() => scroller.scrollTo({ y: 0 })}
-          class="
-            rounded-r-full border-2 border-l-0 border-primary hover:border-onPrimary
-            w-16 h-16
-            hover:invert
-            pl-3 pr-5
-            bg-onPrimary
-            flex_row_center
-            duration-200"
-        >
-          <Icon version="0.1" name="icons_1_up_8"/>
-        </button>
-      </div>
-    </DeviceDetector>
-  </button>
+  <div class="fixed z-30 bottom-8 w-screen flex_row_center">     <!--TODO: Make only appear when at bottom-->
+    <button on:click={() => scroller.scrollTo({ y: 0 })} class="transition-all duration-200 opacity-100 hover:opacity-75 shadow-md rounded-lg bg-background px-4 py-2">
+      <TertiaryButtonLabel>Back to top</TertiaryButtonLabel>
+    </button>
+  </div>
   <!--<button
-    class="fixed z-30 rounded-full bg-primary"
-    style="width: 100vw; height: 100vw;"
-  ></button>-->
-  <button
     on:click={() => isMenuOpen = !isMenuOpen}
     class="
       fixed z-40 right-6 bottom-8
-      invert hover:invert shadow-xl rounded-full border-2 border-primary {isMenuOpen ? "" : "w-16 h-16"}
+      invert hover:invert shadow-xl rounded-full {isMenuOpen ? "" : "w-16 h-16"}
       bg-onPrimary
       flex_row_center
       duration-800"
@@ -136,7 +91,7 @@
     }
   >
     <canvas bind:this={menuButtonCanvas} width={32} height={32}/>
-  </button>
+  </button>-->
   {#if isMenuOpen}
     <div class="fixed z-50 pointer-events-none w-screen h-screen flex_col_center">
         {#each menuData as data, i}

@@ -1,6 +1,6 @@
 <script lang="ts">
     import '$style'
-    import Icon from '$components/icon.svelte'
+    import Icon from '$util/icon.svelte'
   
     import TextButton from '$buttons/text_button.svelte'
   

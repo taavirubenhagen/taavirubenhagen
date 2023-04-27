@@ -11,8 +11,8 @@ type OptionalUnion<U extends Record<string, any>, A extends keyof U = U extends 
 export type Snapshot<T = any> = Kit.Snapshot<T>;
 type PageServerParentData = EnsureDefined<LayoutServerData>;
 type PageParentData = EnsureDefined<LayoutData>;
-type LayoutRouteId = RouteId | "/" | "/beta/fenni" | "/beta/three" | "/contact" | "/dropshipz" | "/dropshipz/home" | "/dropshipz/shop" | "/fenni/blog/admin/post" | "/me/contact" | "/me/design/tavy/icons" | "/me/design/tavy/icons/explore" | "/me/home" | "/me/landing/social" | "/presenter/web/[id]" | "/t/0" | "/t/1" | "/tts" | "/work" | null
-type LayoutParams = RouteParams & { id?: string }
+type LayoutRouteId = RouteId | "/" | "/beta/three" | "/contact" | "/dropshipz" | "/dropshipz/home" | "/dropshipz/shop" | "/fenni/blog/admin/post" | "/me/contact" | "/me/design/tavy/icons" | "/me/design/tavy/icons/explore" | "/me/home" | "/me/landing/social" | "/t/0" | "/t/1" | "/tts" | "/work" | null
+type LayoutParams = RouteParams & {  }
 type LayoutParentData = EnsureDefined<{}>;
 
 export type PageServerLoad<OutputData extends OutputDataShape<PageServerParentData> = OutputDataShape<PageServerParentData>> = Kit.ServerLoad<RouteParams, PageServerParentData, OutputData, RouteId>;

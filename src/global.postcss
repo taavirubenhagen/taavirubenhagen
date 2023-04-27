@@ -11,53 +11,53 @@
         text-onBackground font-rounded;
 }
 :root::-webkit-scrollbar {
-    @apply w-1 bg-background;
+    /*@apply w-1 bg-background;*/
+    @apply hidden;
 }
 :root::-webkit-scrollbar-thumb {
-    @apply rounded-full bg-black;
+    /*@apply rounded-full bg-black;*/
+    @apply hidden;
 }
 
 /* TEXT-RELATED STYLES */
 
 .text::selection {
-  @apply bg-onBackground text-background;
+    @apply bg-onBackground text-background;
+}
+p {
+    @apply text font-body;
+}
+h {
+    @apply text font-display;
+}
+/* TODO: R */
+.paragraph {
+    @apply text font-display;
+}
+.headline {
+    @apply text font-body;
 }
 
 h1 {
-  @apply text text-7xl md:text-9xl font-bold;
+  @apply headline text-7xl md:text-9xl font-bold;
 }
 h2 {
-  @apply text text-6xl md:text-7xl font-bold tracking-wider;
+  @apply headline text-5xl sm:text-6xl md:text-7xl font-bold tracking-wider;
 }
 h3 {
-  @apply text text-4xl md:text-5xl font-bold tracking-widest;
-}
-h4 {
-  @apply text text-2xl md:text-3xl font-bold tracking-widest;
-}
-h5 {
-  @apply text text-base md:text-lg tracking-widest font-bold;
-}
-h6 {
-  @apply text text-lg md:text-xl text-neutral-500 tracking-widest;
+  @apply headline text-4xl md:text-5xl font-bold tracking-widest;
 }
 s1 {
-  @apply text opacity-50 text-lg tracking-wider;
+  @apply headline opacity-50 text-lg tracking-wider;
 }
 s2 {
-  @apply text;
+  @apply headline;
 }
 p1 {
-  @apply text;
+  @apply paragraph;
 }
 p2 {
-  @apply text;
-}
-b1 {
-  @apply text text-3xl md:text-lg tracking-widest;
-}
-b2 {
-  @apply text text-xl md:text-lg font-bold tracking-widest;
+  @apply paragraph;
 }
 
 

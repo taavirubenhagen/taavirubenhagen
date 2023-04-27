@@ -2,7 +2,6 @@
 	"/": [
 		"src/routes/+page.server.ts"
 	],
-	"/beta/fenni": [],
 	"/beta/three": [],
 	"/contact": [],
 	"/dropshipz": [
@@ -19,7 +18,6 @@
 	"/me/design/tavy/icons/explore": [],
 	"/me/home": [],
 	"/me/landing/social": [],
-	"/presenter/web/[id]": [],
 	"/tts": [],
 	"/t/0": [
 		"src/routes/t/0/+page.server.ts"

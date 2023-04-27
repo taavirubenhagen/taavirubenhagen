@@ -22,26 +22,29 @@ export const nodes = [() => import('./nodes/0'),
 	() => import('./nodes/19'),
 	() => import('./nodes/20'),
 	() => import('./nodes/21'),
-	() => import('./nodes/22')];
+	() => import('./nodes/22'),
+	() => import('./nodes/23'),
+	() => import('./nodes/24')];
 
 export const server_loads = [];
 
 export const dictionary = {
-	"/": [~8],
-	"/beta/fenni": [9,[2]],
+	"/": [~9],
 	"/beta/three": [10],
-	"/contact": [11,[3]],
-	"/fenni/blog/admin/post": [12],
-	"/me/contact": [~13,[4]],
-	"/me/design/tavy/icons": [14,[4]],
-	"/me/design/tavy/icons/explore": [15,[4]],
-	"/me/home": [16,[4,5]],
-	"/me/landing/social": [17,[4,6]],
-	"/presenter/web/[id]": [18],
-	"/tts": [21],
-	"/t/0": [~19],
-	"/t/1": [~20],
-	"/work": [22,[7]]
+	"/contact": [11,[2]],
+	"/dropshipz": [~12,[3],[4]],
+	"/dropshipz/home": [13,[3],[4]],
+	"/dropshipz/shop": [14,[3],[4]],
+	"/fenni/blog/admin/post": [15],
+	"/me/contact": [~16,[5]],
+	"/me/design/tavy/icons": [17,[5]],
+	"/me/design/tavy/icons/explore": [18,[5]],
+	"/me/home": [19,[5,6]],
+	"/me/landing/social": [20,[5,7]],
+	"/tts": [23],
+	"/t/0": [~21],
+	"/t/1": [~22],
+	"/work": [24,[8]]
 };
 
 export const hooks = {

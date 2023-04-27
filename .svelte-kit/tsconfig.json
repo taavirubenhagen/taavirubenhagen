@@ -13,29 +13,35 @@
 			"$static/*": [
 				"../static/*"
 			],
-			"$components": [
-				"../src/components"
+			"$util": [
+				"../src/lib/util"
 			],
-			"$components/*": [
-				"../src/components/*"
+			"$util/*": [
+				"../src/lib/util/*"
 			],
-			"$buttons": [
-				"../src/components/buttons"
+			"$tavy": [
+				"../src/lib/tavy"
 			],
-			"$buttons/*": [
-				"../src/components/buttons/*"
-			],
-			"$frames": [
-				"../src/components/frames"
-			],
-			"$frames/*": [
-				"../src/components/frames/*"
+			"$tavy/*": [
+				"../src/lib/tavy/*"
 			],
 			"$style": [
 				"../src/global.postcss"
 			],
 			"$store": [
 				"../src/stores.ts"
+			],
+			"$buttons": [
+				"../src/lib/util/buttons"
+			],
+			"$buttons/*": [
+				"../src/lib/util/buttons/*"
+			],
+			"$lib": [
+				"../src/lib"
+			],
+			"$lib/*": [
+				"../src/lib/*"
 			]
 		},
 		"rootDirs": [
