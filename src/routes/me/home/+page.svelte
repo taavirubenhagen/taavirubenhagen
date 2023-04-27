@@ -42,7 +42,7 @@
             
             case "timer":
                 return startString + 'iconoir-timer"></i>';
-            case "timer":
+            case "clock":
                 return startString + 'iconoir-clock"></i>';
             
             case "abp":
@@ -133,10 +133,10 @@
         <div class="h-8"/>
         <div class="rounded-lg border border-onBackground grid grid-cols-5 grid-rows-4">
             {#each [
-                ["Feature", ""], ["Physical presenter", genTableIcon("remote")], ["Note cards", genTableIcon("notes")], ["Physical timer", genTableIcon("timer")], ["A Better Presenter", genTableIcon("abp")],
-                ["Remote control", genTableIcon("remote")], genTableIconArray("paid"), genTableIconArray("none"), genTableIconArray("none"), genTableIconArray("free"),
+                ["Feature", ""], ["Physical presenter", genTableIcon("remote")], ["Note cards", genTableIcon("cards")], ["Physical timer", genTableIcon("timer")], ["A Better Presenter", genTableIcon("abp")],
+                ["Remote control", genTableIcon("control")], genTableIconArray("paid"), genTableIconArray("none"), genTableIconArray("none"), genTableIconArray("free"),
                 ["Speaker notes", genTableIcon("notes")], genTableIconArray("none"), genTableIconArray("paid"), genTableIconArray("none"), genTableIconArray("free"),
-                ["Time management", genTableIcon("timer")], genTableIconArray("none"), genTableIconArray("none"), genTableIconArray("paid"), genTableIconArray("paid"),
+                ["Time management", genTableIcon("clock")], genTableIconArray("none"), genTableIconArray("none"), genTableIconArray("paid"), genTableIconArray("paid"),
             ] as e, i}
                 <div
                     class=

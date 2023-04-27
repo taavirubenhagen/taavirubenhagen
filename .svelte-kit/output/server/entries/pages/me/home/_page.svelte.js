@@ -53,7 +53,7 @@ function genTableIcon(name, isOnPrimary = false) {
       return startString + 'iconoir-notes"></i>';
     case "timer":
       return startString + 'iconoir-timer"></i>';
-    case "timer":
+    case "clock":
       return startString + 'iconoir-clock"></i>';
     case "abp":
       return startString + 'iconoir-dev-mode-phone"></i>';
@@ -148,10 +148,10 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     [
       ["Feature", ""],
       ["Physical presenter", genTableIcon("remote")],
-      ["Note cards", genTableIcon("notes")],
+      ["Note cards", genTableIcon("cards")],
       ["Physical timer", genTableIcon("timer")],
       ["A Better Presenter", genTableIcon("abp")],
-      ["Remote control", genTableIcon("remote")],
+      ["Remote control", genTableIcon("control")],
       genTableIconArray("paid"),
       genTableIconArray("none"),
       genTableIconArray("none"),
@@ -161,7 +161,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       genTableIconArray("paid"),
       genTableIconArray("none"),
       genTableIconArray("free"),
-      ["Time management", genTableIcon("timer")],
+      ["Time management", genTableIcon("clock")],
       genTableIconArray("none"),
       genTableIconArray("none"),
       genTableIconArray("paid"),
