@@ -54,13 +54,15 @@
     </section>
     <section class="w-screen min-h-screen flex flex-col-reverse md:flex-row md:items-center">
         <div class="w-full md:w-1/2 min-h-screen md:min-h-0 p-8 md:p-16 flex flex-col md:justify-center items-start text-justify md:text-left">
-            <LargeSubtitle>My largest project: </LargeSubtitle>
-            <MainHeadline
-                on:mouseenter={() => currentlyHoveredElementName = "presenter_headline"}
-                on:mouseleave={() => currentlyHoveredElementName = ""}
-            >
-                A better presenter
-            </MainHeadline>
+            <div class="text-left">
+                <LargeSubtitle>My largest project: </LargeSubtitle>
+                <MainHeadline
+                    on:mouseenter={() => currentlyHoveredElementName = "presenter_headline"}
+                    on:mouseleave={() => currentlyHoveredElementName = ""}
+                >
+                    A better presenter
+                </MainHeadline>
+            </div>
             <div class="h-8"/>
             <LargeParagraph>
                 What if you had all your presentation tools combined - remote control, note cards, timer and more?

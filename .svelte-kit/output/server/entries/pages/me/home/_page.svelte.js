@@ -20,7 +20,7 @@ const Large_subtitle = create_ssr_component(($$result, $$props, $$bindings, slot
   return `<p class="${"headline text-2xl md:text-3xl text-neutral-500 font-bold tracking-widest"}">${slots.default ? slots.default({}) : ``}</p>`;
 });
 const Section_headline = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<h class="${"text-5xl md:text-6xl font-bold"}">${slots.default ? slots.default({}) : ``}</h>`;
+  return `<h class="${"text-4xl md:text-6xl font-bold"}">${slots.default ? slots.default({}) : ``}</h>`;
 });
 const Main_headline = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<h class="${"text-6xl md:text-7xl font-bold tracking-wider"}">${slots.default ? slots.default({}) : ``}</h>`;
@@ -67,17 +67,17 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     }
   })}
         <div class="${"h-4"}"></div></section>
-    <section class="${"w-screen min-h-screen flex flex-col-reverse md:flex-row md:items-center"}"><div class="${"w-full md:w-1/2 min-h-screen md:min-h-0 p-8 md:p-16 flex flex-col md:justify-center items-start text-justify md:text-left"}">${validate_component(Large_subtitle, "LargeSubtitle").$$render($$result, {}, {}, {
+    <section class="${"w-screen min-h-screen flex flex-col-reverse md:flex-row md:items-center"}"><div class="${"w-full md:w-1/2 min-h-screen md:min-h-0 p-8 md:p-16 flex flex-col md:justify-center items-start text-justify md:text-left"}"><div class="${"text-left"}">${validate_component(Large_subtitle, "LargeSubtitle").$$render($$result, {}, {}, {
     default: () => {
       return `My largest project: `;
     }
   })}
-            ${validate_component(Main_headline, "MainHeadline").$$render($$result, {}, {}, {
+                ${validate_component(Main_headline, "MainHeadline").$$render($$result, {}, {}, {
     default: () => {
       return `A better presenter
-            `;
+                `;
     }
-  })}
+  })}</div>
             <div class="${"h-8"}"></div>
             ${validate_component(Large_paragraph, "LargeParagraph").$$render($$result, {}, {}, {
     default: () => {
