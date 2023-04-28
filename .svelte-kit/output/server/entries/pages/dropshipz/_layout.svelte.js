@@ -1,7 +1,24 @@
-import { c as create_ssr_component, b as subscribe, e as escape, d as add_attribute } from "../../../chunks/index2.js";
-import { p as page } from "../../../chunks/stores.js";
+import { g as getContext, c as create_ssr_component, b as subscribe, e as escape, d as add_attribute } from "../../../chunks/index2.js";
 import "ua-parser-js";
-/* empty css                      */const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+/* empty css                      */const getStores = () => {
+  const stores = getContext("__svelte__");
+  return {
+    page: {
+      subscribe: stores.page.subscribe
+    },
+    navigating: {
+      subscribe: stores.navigating.subscribe
+    },
+    updated: stores.updated
+  };
+};
+const page = {
+  subscribe(fn) {
+    const store = getStores().page;
+    return store.subscribe(fn);
+  }
+};
+const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $$unsubscribe_page;
   $$unsubscribe_page = subscribe(page, (value) => value);
   let menuButtonCanvas;

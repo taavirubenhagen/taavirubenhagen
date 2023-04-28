@@ -1,7 +1,7 @@
 <script lang="ts">
     import { onMount } from 'svelte';
 
-    import DeviceDetector from 'svelte-device-detector'
+    import DeviceDetector from 'svelte-device-detector';
     import * as scroller from 'svelte-scrollto';
 
     import '$style';
@@ -9,10 +9,13 @@
     import {
         PrimaryButtonLabel, SecondaryButtonLabel, TertiaryButtonLabel,
         SmallLabel,
+        MediumLabel,
         SectionHeadline,
         MainHeadline,
         LargeSubtitle,
         LargeParagraph,
+
+        Icon,
         InlineParagraphButton,
     } from '$tavy';
     import {TextButton} from '$util';
@@ -33,7 +36,7 @@
             case "remote":
                 return startString + 'iconoir-pen-connect-wifi"></i>';
             case "control":
-                return startString + 'iconoir-bluetooth"></i>';
+                return startString + 'iconoir-arrow-seperate"></i>';
 
             case "cards":
                 return startString + 'iconoir-credit-cards"></i>';
@@ -62,18 +65,39 @@
 <svelte:window bind:innerHeight={windowHeight} />
 
 <main>
-    <section class="w-screen h-screen p-4 md:p-16 flex_col_center text-center">
-        <MainHeadline>Hi, I'm Taavi<br />Rübenhagen.</MainHeadline>
-        <div class="h-8"/>
-        <LargeSubtitle>
-            I'm a self-taught UI/UX Designer
-            <br />
-            and Front-End Engineer.
-        </LargeSubtitle>
-        <div class="h-4"/>
+    <section class="relative w-screen h-screen">
+        <SmallLabel>
+            <div class="transition-all duration-400 absolute top-16 w-screen px-8 flex justify-center md:justify-start">
+                <div
+                    class=
+                        "transition-all duration-400
+                        pointer-events-none
+                        rounded-lg shadow-none hover:shadow focus-within:shadow
+                        w-32 focus-within:w-full px-4 py-2
+                        flex items-center text-neutral-500"
+                >
+                    <Icon name="search" textClass="pointer-events-auto text-2xl"/>
+                    <input
+                        type="text"
+                        size=8
+                        placeholder="Search"
+                        class="pointer-events-auto outline-none bg-transparent pl-2 text-onBackground placeholder:text-neutral-500"
+                    />
+                </div>
+            </div>
+        </SmallLabel>
+        <div class="w-screen h-screen p-4 md:p-16 flex_col_center text-center">
+            <MainHeadline>Hi, I'm Taavi<br />Rübenhagen.</MainHeadline>
+            <div class="h-8"/>
+            <LargeSubtitle>
+                I'm a self-taught UI/UX Designer
+                <br />
+                and Front-End Engineer.
+            </LargeSubtitle>
+        </div>
     </section>
     <section class="w-screen min-h-screen flex flex-col-reverse md:flex-row md:items-center">
-        <div class="w-full md:w-1/2 min-h-screen md:min-h-0 p-8 md:p-16 flex flex-col md:justify-center items-start text-justify md:text-left">
+        <div class="w-full md:w-1/2 min-h-screen md:min-h-0 p-8 md:p-16 flex flex-col text-justify md:text-left">
             <div class="text-left">
                 <LargeSubtitle>My largest project: </LargeSubtitle>
                 <MainHeadline
@@ -92,7 +116,7 @@
                 , and lets you focus entirely on your presentation.
             </LargeParagraph>
             <div class="h-8"/>
-            <TextButton>Join waitlist</TextButton>
+            <TextButton primary>Join waitlist</TextButton>
             <!--<div class="flex text-[32px]">
                 <div class="transition-all duration-200 opacity-100 hover:opacity-60 rounded-full border-2 border-onBackground w-12 h-12 flex_row_center">
                     <i class="iconoir-download"></i>
@@ -103,19 +127,15 @@
                 </div>
             </div>-->
         </div>
-        <div class="relative md:left-16 w-full md:w-1/2 md:h-screen px-4 py-8 md:py-32 flex">
-            <!--TODO: Encapsulate in "[Image]" component-->
-            <div class="transition-all duration-400 relative bottom-0 md:hover:bottom-1 rounded-lg border border-onBackground w-full md:w-auto md:h-full aspect-[9/16] bg-background flex_col_center">
-                <SmallLabel>[Image]</SmallLabel>
-            </div>
-            <div class="w-8"></div>
-            <div class="transition-all duration-400 relative md:right-32 bottom-0 md:hover:bottom-1 rounded-lg border border-onBackground w-full md:w-auto md:h-full aspect-[9/16] bg-background flex_col_center">
-                <SmallLabel>[Image]</SmallLabel>
-            </div>
-            <div class="w-8"></div>
-            <div class="transition-all duration-400 relative md:right-64 bottom-0 md:hover:bottom-1 rounded-lg border border-onBackground w-full md:w-auto md:h-full aspect-[9/16] bg-background flex_col_center">
-                <SmallLabel>[Image]</SmallLabel>
-            </div>
+        <div class="relative md:left-24 w-full md:w-1/2 md:h-screen px-4 py-8 md:py-32 flex">
+            {#each ["md:right-0 md:hover:scale-[100.5%]", "md:right-32 md:z-20 md:scale-110 md:hover:scale-[110.5%]", "md:right-64 md:hover:scale-[100.5%]"] as e, i}
+                <div class="{e} transition-all duration-400 relative md:grayscale md:hover:grayscale-0 rounded-3xl border border-onBackground w-full md:w-auto md:h-full aspect-[17/32] bg-background flex_col_center">
+                    <MediumLabel>[Image]</MediumLabel>
+                </div>
+                {#if i > 0}
+                    <div class="w-8"></div>
+                {/if}
+            {/each}
         </div>
     </section>
     <section class="w-screen min-h-screen p-8 md:p-16 flex flex-col text-justify md:text-left">
@@ -123,13 +143,13 @@
             A Better Presenter vs physical presenter vs note cards vs timer
         </SectionHeadline>
         <div class="h-12 md:h-16"/>
-        <SmallLabel>
+        <MediumLabel>
             <div class="w-full flex flex-col">
                 <div class="h-8 flex items-center">{@html genTableIcon("none")}<div class="inline w-2"></div>Not included</div>
                 <div class="h-8 flex items-center">{@html genTableIcon("paid")}<div class="inline w-2.5"></div>Included, but not free</div>
                 <div class="h-8 flex items-center">{@html genTableIcon("free")}<div class="inline w-2"></div>Free & Ready to use</div>
             </div>
-        </SmallLabel>
+        </MediumLabel>
         <div class="h-8"/>
         <div class="rounded-lg border border-onBackground grid grid-cols-5 grid-rows-4">
             {#each [
@@ -146,14 +166,14 @@
                         {( i + 1 ) % 5 === 0 ? "primary" : ( i % 5 === 0 || i < 5 ? "bg-primary bg-opacity-5" : "background" )}
                         flex_row_center truncate"
                     >
-                    <SmallLabel>
+                    <MediumLabel>
                         <DeviceDetector showInDevice="desktop">
                             {@html e[0]}
                         </DeviceDetector>
                         <DeviceDetector showInDevice="mobile">
                             {@html e[1]}
                         </DeviceDetector>
-                    </SmallLabel>
+                    </MediumLabel>
                 </div>
             {/each}
         </div>
@@ -188,21 +208,14 @@
         </LargeSubtitle>
         <div class="h-4"/>
     </section>-->
-    <section
-        class=
-            "w-screen h-1/2 md:h-screen background p-8 md:p-16 flex_col_center relative
-            text-center"
-    >
+    <section class="w-screen h-1/2 md:h-screen background p-8 md:p-16 flex_col_center relative text-center">
         <h3>Contact me for any collaboration.</h3>
         <div class="h-16" />
         <a href="mailto:taavi.ruebenhagen@gmail.com" class="flex_row_center">
             <TextButton primary>E-Mail me</TextButton>
         </a>
     </section>
-    <section
-        class=
-            "w-screen h-screen background flex_col_center"
-    >
+    <section class="w-screen h-screen background flex_col_center">
         <h class="mt-8 text-9xl text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-red-700">lol xD.</h>
     </section>
 </main>

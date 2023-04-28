@@ -1,9 +1,11 @@
 <script lang="ts">
-    import "$style"
+    import "$style";
 
-    export let content = ""
+    import {Icon} from "$tavy";
+
+    export let content = "";
 </script>
 
 <button class="transition-all duration-200 inline -mr-1 opacity-50 hover:opacity-75">
-    {content}<i class="relative left-1 top-2 iconoir-nav-arrow-down"></i>
+    {content}<Icon name="nav-arrow-down" textClass="relative left-1 top-2"/>
 </button>

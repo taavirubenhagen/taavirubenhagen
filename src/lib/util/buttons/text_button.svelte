@@ -14,8 +14,8 @@
 <button
     on:click={onClicked}
     class="{buttonClass}
-        transition-all duration-400 relative
-        opacity-100 hover:opacity-75 rounded-lg border-2 {onPrimary ? "border-onPrimary" : "border-onBackground"}
+        transition-all duration-200 relative
+        hover:scale-[101%] rounded-lg border-2 {onPrimary ? "border-onPrimary" : "border-onBackground"}
         h-12
         {
         primary

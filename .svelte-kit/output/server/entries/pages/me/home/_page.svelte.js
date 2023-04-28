@@ -14,6 +14,9 @@ const DeviceDetector = create_ssr_component(($$result, $$props, $$bindings, slot
   return `${``}`;
 });
 const Small_label = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  return `<p class="${"paragraph text-xl md:text-xl"}">${slots.default ? slots.default({}) : ``}</p>`;
+});
+const Medium_label = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<p class="${"paragraph text-xl md:text-2xl"}">${slots.default ? slots.default({}) : ``}</p>`;
 });
 const Large_subtitle = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -28,11 +31,28 @@ const Main_headline = create_ssr_component(($$result, $$props, $$bindings, slots
 const Large_paragraph = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<p class="${"paragraph text-2xl md:text-2xl"}">${slots.default ? slots.default({}) : ``}</p>`;
 });
+const Icon = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let { name } = $$props;
+  let { textClass = "" } = $$props;
+  if ($$props.name === void 0 && $$bindings.name && name !== void 0)
+    $$bindings.name(name);
+  if ($$props.textClass === void 0 && $$bindings.textClass && textClass !== void 0)
+    $$bindings.textClass(textClass);
+  return `<i class="${"relative " + escape(textClass, true) + " iconoir-" + escape(name, true)}"></i>`;
+});
 const Inline_paragraph_button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { content = "" } = $$props;
   if ($$props.content === void 0 && $$bindings.content && content !== void 0)
     $$bindings.content(content);
-  return `<button class="${"transition-all duration-200 inline -mr-1 opacity-50 hover:opacity-75"}">${escape(content)}<i class="${"relative left-1 top-2 iconoir-nav-arrow-down"}"></i></button>`;
+  return `<button class="${"transition-all duration-200 inline -mr-1 opacity-50 hover:opacity-75"}">${escape(content)}${validate_component(Icon, "Icon").$$render(
+    $$result,
+    {
+      name: "nav-arrow-down",
+      textClass: "relative left-1 top-2"
+    },
+    {},
+    {}
+  )}</button>`;
 });
 function genTableIcon(name, isOnPrimary = false) {
   const startString = '<i class="relative top-1 text-2xl ';
@@ -46,7 +66,7 @@ function genTableIcon(name, isOnPrimary = false) {
     case "remote":
       return startString + 'iconoir-pen-connect-wifi"></i>';
     case "control":
-      return startString + 'iconoir-bluetooth"></i>';
+      return startString + 'iconoir-arrow-seperate"></i>';
     case "cards":
       return startString + 'iconoir-credit-cards"></i>';
     case "notes":
@@ -67,22 +87,35 @@ function genTableIconArray(name) {
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `
 
-<main><section class="${"w-screen h-screen p-4 md:p-16 flex_col_center text-center"}">${validate_component(Main_headline, "MainHeadline").$$render($$result, {}, {}, {
+<main><section class="${"relative w-screen h-screen"}">${validate_component(Small_label, "SmallLabel").$$render($$result, {}, {}, {
+    default: () => {
+      return `<div class="${"transition-all duration-400 absolute top-16 w-screen px-8 flex justify-center md:justify-start"}"><div class="${"transition-all duration-400 pointer-events-none rounded-lg shadow-none hover:shadow focus-within:shadow w-32 focus-within:w-full px-4 py-2 flex items-center text-neutral-500"}">${validate_component(Icon, "Icon").$$render(
+        $$result,
+        {
+          name: "search",
+          textClass: "pointer-events-auto text-2xl"
+        },
+        {},
+        {}
+      )}
+                    <input type="${"text"}" size="${"8"}" placeholder="${"Search"}" class="${"pointer-events-auto outline-none bg-transparent pl-2 text-onBackground placeholder:text-neutral-500"}"></div></div>`;
+    }
+  })}
+        <div class="${"w-screen h-screen p-4 md:p-16 flex_col_center text-center"}">${validate_component(Main_headline, "MainHeadline").$$render($$result, {}, {}, {
     default: () => {
       return `Hi, I&#39;m Taavi<br>R\xFCbenhagen.`;
     }
   })}
-        <div class="${"h-8"}"></div>
-        ${validate_component(Large_subtitle, "LargeSubtitle").$$render($$result, {}, {}, {
+            <div class="${"h-8"}"></div>
+            ${validate_component(Large_subtitle, "LargeSubtitle").$$render($$result, {}, {}, {
     default: () => {
       return `I&#39;m a self-taught UI/UX Designer
-            <br>
-            and Front-End Engineer.
-        `;
+                <br>
+                and Front-End Engineer.
+            `;
     }
-  })}
-        <div class="${"h-4"}"></div></section>
-    <section class="${"w-screen min-h-screen flex flex-col-reverse md:flex-row md:items-center"}"><div class="${"w-full md:w-1/2 min-h-screen md:min-h-0 p-8 md:p-16 flex flex-col md:justify-center items-start text-justify md:text-left"}"><div class="${"text-left"}">${validate_component(Large_subtitle, "LargeSubtitle").$$render($$result, {}, {}, {
+  })}</div></section>
+    <section class="${"w-screen min-h-screen flex flex-col-reverse md:flex-row md:items-center"}"><div class="${"w-full md:w-1/2 min-h-screen md:min-h-0 p-8 md:p-16 flex flex-col text-justify md:text-left"}"><div class="${"text-left"}">${validate_component(Large_subtitle, "LargeSubtitle").$$render($$result, {}, {}, {
     default: () => {
       return `My largest project: `;
     }
@@ -105,30 +138,27 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     }
   })}
             <div class="${"h-8"}"></div>
-            ${validate_component(Text_button, "TextButton").$$render($$result, {}, {}, {
+            ${validate_component(Text_button, "TextButton").$$render($$result, { primary: true }, {}, {
     default: () => {
       return `Join waitlist`;
     }
   })}
             </div>
-        <div class="${"relative md:left-16 w-full md:w-1/2 md:h-screen px-4 py-8 md:py-32 flex"}">
-            <div class="${"transition-all duration-400 relative bottom-0 md:hover:bottom-1 rounded-lg border border-onBackground w-full md:w-auto md:h-full aspect-[9/16] bg-background flex_col_center"}">${validate_component(Small_label, "SmallLabel").$$render($$result, {}, {}, {
-    default: () => {
-      return `[Image]`;
+        <div class="${"relative md:left-24 w-full md:w-1/2 md:h-screen px-4 py-8 md:py-32 flex"}">${each(
+    [
+      "md:right-0 md:hover:scale-[100.5%]",
+      "md:right-32 md:z-20 md:scale-110 md:hover:scale-[110.5%]",
+      "md:right-64 md:hover:scale-[100.5%]"
+    ],
+    (e, i) => {
+      return `<div class="${escape(e, true) + " transition-all duration-400 relative md:grayscale md:hover:grayscale-0 rounded-3xl border border-onBackground w-full md:w-auto md:h-full aspect-[17/32] bg-background flex_col_center"}">${validate_component(Medium_label, "MediumLabel").$$render($$result, {}, {}, {
+        default: () => {
+          return `[Image]`;
+        }
+      })}</div>
+                ${i > 0 ? `<div class="${"w-8"}"></div>` : ``}`;
     }
-  })}</div>
-            <div class="${"w-8"}"></div>
-            <div class="${"transition-all duration-400 relative md:right-32 bottom-0 md:hover:bottom-1 rounded-lg border border-onBackground w-full md:w-auto md:h-full aspect-[9/16] bg-background flex_col_center"}">${validate_component(Small_label, "SmallLabel").$$render($$result, {}, {}, {
-    default: () => {
-      return `[Image]`;
-    }
-  })}</div>
-            <div class="${"w-8"}"></div>
-            <div class="${"transition-all duration-400 relative md:right-64 bottom-0 md:hover:bottom-1 rounded-lg border border-onBackground w-full md:w-auto md:h-full aspect-[9/16] bg-background flex_col_center"}">${validate_component(Small_label, "SmallLabel").$$render($$result, {}, {}, {
-    default: () => {
-      return `[Image]`;
-    }
-  })}</div></div></section>
+  )}</div></section>
     <section class="${"w-screen min-h-screen p-8 md:p-16 flex flex-col text-justify md:text-left"}">${validate_component(Section_headline, "SectionHeadline").$$render($$result, {}, {}, {
     default: () => {
       return `A Better Presenter vs physical presenter vs note cards vs timer
@@ -136,7 +166,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     }
   })}
         <div class="${"h-12 md:h-16"}"></div>
-        ${validate_component(Small_label, "SmallLabel").$$render($$result, {}, {}, {
+        ${validate_component(Medium_label, "MediumLabel").$$render($$result, {}, {}, {
     default: () => {
       return `<div class="${"w-full flex flex-col"}"><div class="${"h-8 flex items-center"}"><!-- HTML_TAG_START -->${genTableIcon("none")}<!-- HTML_TAG_END --><div class="${"inline w-2"}"></div>Not included</div>
                 <div class="${"h-8 flex items-center"}"><!-- HTML_TAG_START -->${genTableIcon("paid")}<!-- HTML_TAG_END --><div class="${"inline w-2.5"}"></div>Included, but not free</div>
@@ -171,7 +201,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return `<div class="${"relative " + escape(i === 0 ? "rounded-tl-md" : "", true) + " " + escape(i === 4 ? "rounded-tr-md" : "", true) + " " + escape(i === 15 ? "rounded-bl-md" : "", true) + " " + escape(i === 19 ? "rounded-br-md" : "", true) + " border border-onBackground min-w-32 h-16 " + escape(
         (i + 1) % 5 === 0 ? "primary" : i % 5 === 0 || i < 5 ? "bg-primary bg-opacity-5" : "background",
         true
-      ) + " flex_row_center truncate"}">${validate_component(Small_label, "SmallLabel").$$render($$result, {}, {}, {
+      ) + " flex_row_center truncate"}">${validate_component(Medium_label, "MediumLabel").$$render($$result, {}, {}, {
         default: () => {
           return `${validate_component(DeviceDetector, "DeviceDetector").$$render($$result, { showInDevice: "desktop" }, {}, {
             default: () => {
