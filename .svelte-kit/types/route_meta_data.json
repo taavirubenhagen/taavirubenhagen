@@ -2,14 +2,12 @@
 	"/": [
 		"src/routes/+page.server.ts"
 	],
-	"/beta/three": [],
 	"/contact": [],
 	"/dropshipz": [
 		"src/routes/dropshipz/+page.server.ts"
 	],
 	"/dropshipz/home": [],
 	"/dropshipz/shop": [],
-	"/fenni/blog/admin/post": [],
 	"/me": [],
 	"/me/contact": [
 		"src/routes/me/contact/+page.server.ts"
@@ -18,12 +16,5 @@
 	"/me/design/tavy/icons/explore": [],
 	"/me/home": [],
 	"/me/landing/social": [],
-	"/tts": [],
-	"/t/0": [
-		"src/routes/t/0/+page.server.ts"
-	],
-	"/t/1": [
-		"src/routes/t/1/+page.server.ts"
-	],
-	"/work": []
+	"/tts": []
 }

@@ -1,3 +1,6 @@
+# Tavy Icons
+
+
 ## Icon Versioning
 
 The Tavy Icons are divided in different versions. The icons designed for every version are stored in the corresponding subdirectory of the *icons* directory.

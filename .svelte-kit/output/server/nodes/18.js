@@ -1,8 +1,8 @@
 
 
 export const index = 18;
-export const component = async () => (await import('../entries/pages/me/design/tavy/icons/explore/_page.svelte.js')).default;
-export const file = '_app/immutable/entry/me-design-tavy-icons-explore-page.svelte.a444488a.js';
-export const imports = ["_app/immutable/entry/me-design-tavy-icons-explore-page.svelte.a444488a.js","_app/immutable/chunks/index.47feb8cc.js","_app/immutable/chunks/icon.88ca1741.js","_app/immutable/chunks/text_button.255d19f4.js"];
-export const stylesheets = ["_app/immutable/assets/global.16ea37c2.css"];
+export const component = async () => (await import('../entries/pages/tts/_page.svelte.js')).default;
+export const file = '_app/immutable/entry/tts-page.svelte.9e106ae5.js';
+export const imports = ["_app/immutable/entry/tts-page.svelte.9e106ae5.js","_app/immutable/chunks/index.da91af06.js","_app/immutable/chunks/index.21f3759c.js","_app/immutable/chunks/index.7d3595ca.js","_app/immutable/chunks/text_button.0b694bee.js"];
+export const stylesheets = ["_app/immutable/assets/global.22b83170.css"];
 export const fonts = [];

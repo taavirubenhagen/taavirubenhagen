@@ -1,6 +1,8 @@
-import { redirect } from '@sveltejs/kit'
+// TODO: R
+
+//import { redirect } from '@sveltejs/kit'
  
 /** @type {import('./$types').LayoutServerLoad} */
-export function load() {
+/*export function load() {
   throw redirect(307, '/me/home')
-}
+}*/

@@ -1,4 +1,4 @@
-import { c as create_ssr_component, s as setContext, v as validate_component, m as missing_component } from "./index2.js";
+import { c as create_ssr_component, a as setContext, v as validate_component, m as missing_component } from "./index.js";
 const base = "";
 let assets = base;
 function set_assets(path) {
@@ -203,7 +203,7 @@ const options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "1ygomer"
+  version_hash: "1plms7n"
 };
 function get_hooks() {
   return {};

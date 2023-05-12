@@ -1,4 +1,4 @@
-import { c as create_ssr_component, e as escape, v as validate_component, h as each } from "../../../../chunks/index2.js";
+import { c as create_ssr_component, e as escape, v as validate_component, f as each } from "../../../../chunks/index.js";
 import "ua-parser-js";
 /* empty css                         */import { T as Text_button } from "../../../../chunks/text_button.js";
 const DeviceDetector = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -12,9 +12,6 @@ const DeviceDetector = create_ssr_component(($$result, $$props, $$bindings, slot
   if ($$props.showInOs === void 0 && $$bindings.showInOs && showInOs !== void 0)
     $$bindings.showInOs(showInOs);
   return `${``}`;
-});
-const Small_label = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<p class="${"paragraph text-xl md:text-xl"}">${slots.default ? slots.default({}) : ``}</p>`;
 });
 const Medium_label = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<p class="${"paragraph text-xl md:text-2xl"}">${slots.default ? slots.default({}) : ``}</p>`;
@@ -87,20 +84,7 @@ function genTableIconArray(name) {
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `
 
-<main><section class="${"relative w-screen h-screen"}">${validate_component(Small_label, "SmallLabel").$$render($$result, {}, {}, {
-    default: () => {
-      return `<div class="${"transition-all duration-400 absolute top-16 w-screen px-8 flex justify-center md:justify-start"}"><div class="${"transition-all duration-400 pointer-events-none rounded-lg shadow-none hover:shadow focus-within:shadow w-32 focus-within:w-full px-4 py-2 flex items-center text-neutral-500"}">${validate_component(Icon, "Icon").$$render(
-        $$result,
-        {
-          name: "search",
-          textClass: "pointer-events-auto text-2xl"
-        },
-        {},
-        {}
-      )}
-                    <input type="${"text"}" size="${"8"}" placeholder="${"Search"}" class="${"pointer-events-auto outline-none bg-transparent pl-2 text-onBackground placeholder:text-neutral-500"}"></div></div>`;
-    }
-  })}
+<main><section class="${"relative w-screen h-screen"}">
         <div class="${"w-screen h-screen p-4 md:p-16 flex_col_center text-center"}">${validate_component(Main_headline, "MainHeadline").$$render($$result, {}, {}, {
     default: () => {
       return `Hi, I&#39;m Taavi<br>R\xFCbenhagen.`;

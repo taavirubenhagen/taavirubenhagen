@@ -2,7 +2,7 @@
 
 export const index = 3;
 export const component = async () => (await import('../entries/pages/dropshipz/_layout.svelte.js')).default;
-export const file = '_app/immutable/entry/dropshipz-layout.svelte.9605aa38.js';
-export const imports = ["_app/immutable/entry/dropshipz-layout.svelte.9605aa38.js","_app/immutable/chunks/index.47feb8cc.js","_app/immutable/chunks/index.b7de630d.js","_app/immutable/chunks/index.adacbdb8.js","_app/immutable/chunks/singletons.8fed9ff4.js","_app/immutable/chunks/index.5d0da911.js","_app/immutable/chunks/paths.fd8b6396.js","_app/immutable/chunks/ua-parser.bf0b9048.js"];
-export const stylesheets = ["_app/immutable/assets/global.16ea37c2.css"];
+export const file = '_app/immutable/entry/dropshipz-layout.svelte.81cd2bc8.js';
+export const imports = ["_app/immutable/entry/dropshipz-layout.svelte.81cd2bc8.js","_app/immutable/chunks/index.da91af06.js","_app/immutable/chunks/index.21f3759c.js","_app/immutable/chunks/index.7d3595ca.js","_app/immutable/chunks/singletons.8bfbd610.js","_app/immutable/chunks/paths.d789a35d.js","_app/immutable/chunks/ua-parser.bf0b9048.js"];
+export const stylesheets = ["_app/immutable/assets/global.22b83170.css"];
 export const fonts = [];

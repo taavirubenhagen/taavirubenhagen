@@ -66,26 +66,28 @@
 
 <main>
     <section class="relative w-screen h-screen">
-        <SmallLabel>
-            <div class="transition-all duration-400 absolute top-16 w-screen px-8 flex justify-center md:justify-start">
-                <div
-                    class=
-                        "transition-all duration-400
-                        pointer-events-none
-                        rounded-lg shadow-none hover:shadow focus-within:shadow
-                        w-32 focus-within:w-full px-4 py-2
-                        flex items-center text-neutral-500"
-                >
-                    <Icon name="search" textClass="pointer-events-auto text-2xl"/>
-                    <input
-                        type="text"
-                        size=8
-                        placeholder="Search"
-                        class="pointer-events-auto outline-none bg-transparent pl-2 text-onBackground placeholder:text-neutral-500"
-                    />
+        <!--<div class="absolute top-16 w-screen px-8 flex justify-between">
+            <SmallLabel>
+                <div class="transition-all duration-400 flex">
+                    <div
+                        class=
+                            "transition-all duration-400
+                            pointer-events-none
+                            rounded-lg shadow-none hover:shadow focus-within:shadow
+                            w-32 focus-within:w-full px-4 py-2
+                            flex items-center text-neutral-500"
+                    >
+                        <Icon name="search" textClass="pointer-events-auto text-2xl"/>
+                        <input
+                            type="text"
+                            size=8
+                            placeholder="Search"
+                            class="pointer-events-auto outline-none bg-transparent pl-2 text-onBackground placeholder:text-neutral-500"
+                        />
+                    </div>
                 </div>
-            </div>
-        </SmallLabel>
+            </SmallLabel>
+        </div>-->
         <div class="w-screen h-screen p-4 md:p-16 flex_col_center text-center">
             <MainHeadline>Hi, I'm Taavi<br />Rübenhagen.</MainHeadline>
             <div class="h-8"/>

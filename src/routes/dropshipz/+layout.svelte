@@ -10,7 +10,7 @@
   
     import '$style'
   
-    import Icon from '$util/icon.svelte'
+    import Icon from '$src/lib/util/deprecated/icon.svelte'
   
     let menuData = ['Home', 'Work', 'Services', 'Contact']
     let isMenuOpen = false

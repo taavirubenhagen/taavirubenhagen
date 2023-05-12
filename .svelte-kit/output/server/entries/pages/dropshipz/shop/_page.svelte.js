@@ -1,4 +1,4 @@
-import { c as create_ssr_component, h as each, e as escape } from "../../../../chunks/index2.js";
+import { c as create_ssr_component, f as each, e as escape } from "../../../../chunks/index.js";
 /* empty css                         */const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `
 

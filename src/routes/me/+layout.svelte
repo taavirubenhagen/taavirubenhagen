@@ -62,7 +62,27 @@
             <TextButton primary onPrimary>Visit anyway</TextButton>
         </div>
     </button>
-    <div class="transition-all duration-400 fixed z-30 {scrollToTopButtonPositionClass} w-screen flex_row_center">
+    <div class="fixed top-16 z-30 pointer-events-none w-screen px-8 flex justify-between md:justify-center">
+        {#each [
+            ["home", "/me/home"],
+            ["chat-bubble-empty", "/contact"],
+            ["arrow-separate text-blue-700", "/presenter"],
+            ["voice text-blue-700", "/tts"],
+            ["color-filter text-blue-700", "/design"],
+            ["github text-orange-700", "/me/home"],
+            ["instagram text-orange-700", "/me/home"],
+        ] as e}
+            <a class="pointer-events-auto" href={e[1]}>
+                <i
+                    class=
+                        "transition-all duration-200 md:mx-4 backdrop-blur-sm shadow hover:scale-100 rounded hover:rounded-xl
+                        w-12 h-12 bg-background bg-opacity-50
+                        flex_row_center text-2xl iconoir-{e[0]}"
+                ></i>
+            </a>
+        {/each}
+    </div>
+    <div class="transition-all duration-400 fixed z-40 {scrollToTopButtonPositionClass} w-screen flex_row_center">
         <button
             on:click={() => scroller.scrollTo({ y: 0 })}
             class="transition-all duration-200 hover:scale-[102%] shadow-md rounded-lg h-10 bg-background px-4"
