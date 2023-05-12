@@ -9,6 +9,17 @@ IDE: Visual Studio Code
     Product Icon Theme: *Carbon Icons*
 
 
+## Languages
+
+Web: TypeScript
+Mobile: Dart
+Backend:
+    Preferred: Rust
+    Simple: Go
+    Educational: Haskell
+Machine Learning, Quantum Computing: Python
+
+
 ## Frameworks
 
 Web: SvelteKit + Tailwind
@@ -18,7 +29,6 @@ Desktop: Tauri + Svelte + Tailwind
 
 ## Additional tools (use whenever possible)
 
-Web programming: TypeScript
 Styling: [Tailwind](https://tailwindcss.com)
 
 
