@@ -11,6 +11,8 @@ IDE: Visual Studio Code
 
 ## Languages
 
+### Programmming Languages
+
 Web: TypeScript
 Mobile: Dart
 Backend:
@@ -18,6 +20,14 @@ Backend:
     Simple: Go
     Educational: Haskell
 Machine Learning, Quantum Computing: Python
+Distributed systems: Elixir
+
+
+### Other Languages
+
+Web: HTML
+Documentation, Simple texts: Markdown
+JSON-Replacement: YAML
 
 
 ## Frameworks
@@ -35,3 +45,4 @@ Styling: [Tailwind](https://tailwindcss.com)
 ## To try out:
 
 - degit
+- Julia
