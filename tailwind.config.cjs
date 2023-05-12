@@ -6,6 +6,7 @@ const colors = require("tailwindcss/colors")
 
 
 
+const production = !process.env.ROLLUP_WATCH;
 let bright = false
 
 
@@ -14,6 +15,13 @@ let bright = false
 module.exports = {
     mode: 'jit',
     content: ["./src/**/*.{html,js,svelte,ts}"],
+    purge: {
+        content: [
+            "./src/**/*.svelte",
+        ],
+        enabled: production,
+    },
+    plugins: [],
     theme: {
         fontFamily: {
             body: ['Caveat', 'Arial'],
@@ -64,6 +72,4 @@ module.exports = {
             },
         },
     },
-    plugins: [],
-    // !!
 }

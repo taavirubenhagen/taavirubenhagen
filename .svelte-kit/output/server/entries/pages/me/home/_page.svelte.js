@@ -151,12 +151,12 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       "md:right-64 md:hover:scale-[100.5%]"
     ],
     (e, i) => {
-      return `<div class="${escape(e, true) + " transition-all duration-400 relative md:grayscale md:hover:grayscale-0 rounded-3xl border border-onBackground w-full md:w-auto md:h-full aspect-[17/32] bg-background flex_col_center"}">${validate_component(Medium_label, "MediumLabel").$$render($$result, {}, {}, {
+      return `${`<div class="${escape(e, true) + " transition-all duration-400 relative md:grayscale md:hover:grayscale-0 rounded-3xl border border-onBackground w-full md:w-auto md:h-full aspect-[17/32] bg-background flex_col_center"}">${validate_component(Medium_label, "MediumLabel").$$render($$result, {}, {}, {
         default: () => {
           return `[Image]`;
         }
       })}</div>
-                ${i > 0 ? `<div class="${"w-8"}"></div>` : ``}`;
+                    ${i > 0 ? `<div class="${"w-8"}"></div>` : ``}`}`;
     }
   )}</div></section>
     <section class="${"w-screen min-h-screen p-8 md:p-16 flex flex-col text-justify md:text-left"}">${validate_component(Section_headline, "SectionHeadline").$$render($$result, {}, {}, {

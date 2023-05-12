@@ -129,11 +129,15 @@
         </div>
         <div class="relative md:left-24 w-full md:w-1/2 md:h-screen px-4 py-8 md:py-32 flex">
             {#each ["md:right-0 md:hover:scale-[100.5%]", "md:right-32 md:z-20 md:scale-110 md:hover:scale-[110.5%]", "md:right-64 md:hover:scale-[100.5%]"] as e, i}
-                <div class="{e} transition-all duration-400 relative md:grayscale md:hover:grayscale-0 rounded-3xl border border-onBackground w-full md:w-auto md:h-full aspect-[17/32] bg-background flex_col_center">
-                    <MediumLabel>[Image]</MediumLabel>
-                </div>
-                {#if i > 0}
-                    <div class="w-8"></div>
+                {#if true}
+                    <div class="{e} transition-all duration-400 relative md:grayscale md:hover:grayscale-0 rounded-3xl border border-onBackground w-full md:w-auto md:h-full aspect-[17/32] bg-background flex_col_center">
+                        <MediumLabel>[Image]</MediumLabel>
+                    </div>
+                    {#if i > 0}
+                        <div class="w-8"></div>
+                    {/if}
+                {:else}
+                    <img class="-ml-16" src={"/abp_drawing.png"} alt="">
                 {/if}
             {/each}
         </div>
