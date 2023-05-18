@@ -21,17 +21,6 @@
   
     let windowHeight: number
     let windowWidth: number
-    
-    onMount(() => {
-      const r = new rive.Rive({
-        src: "/icon_animations.riv",
-        canvas: menuButtonCanvas,
-        artboard: "icons_1_menu",
-        animations: [],
-        //artboard: "icons_1_menu",
-        autoplay: true
-      })
-    })
   </script>
 
 
