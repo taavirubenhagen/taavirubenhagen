@@ -41,6 +41,7 @@ declare module '$env/static/private' {
 	export const ComSpec: string;
 	export const DriverData: string;
 	export const EFC_8876: string;
+	export const FILE_PWD: string;
 	export const GHCUP_INSTALL_BASE_PREFIX: string;
 	export const GIT_ASKPASS: string;
 	export const GOPATH: string;
@@ -67,6 +68,7 @@ declare module '$env/static/private' {
 	export const ProgramData: string;
 	export const ProgramFiles: string;
 	export const ProgramW6432: string;
+	export const PROMPT: string;
 	export const PSModulePath: string;
 	export const PUBLIC: string;
 	export const PWD: string;
@@ -90,6 +92,7 @@ declare module '$env/static/private' {
 	export const windir: string;
 	export const _MSYS2_BASH: string;
 	export const _MSYS2_PREFIX: string;
+	export const __COMPAT_LAYER: string;
 }
 
 /**
@@ -134,6 +137,7 @@ declare module '$env/dynamic/private' {
 		ComSpec: string;
 		DriverData: string;
 		EFC_8876: string;
+		FILE_PWD: string;
 		GHCUP_INSTALL_BASE_PREFIX: string;
 		GIT_ASKPASS: string;
 		GOPATH: string;
@@ -160,6 +164,7 @@ declare module '$env/dynamic/private' {
 		ProgramData: string;
 		ProgramFiles: string;
 		ProgramW6432: string;
+		PROMPT: string;
 		PSModulePath: string;
 		PUBLIC: string;
 		PWD: string;
@@ -183,6 +188,7 @@ declare module '$env/dynamic/private' {
 		windir: string;
 		_MSYS2_BASH: string;
 		_MSYS2_PREFIX: string;
+		__COMPAT_LAYER: string;
 		[key: `PUBLIC_${string}`]: undefined;
 		[key: string]: string | undefined;
 	}
