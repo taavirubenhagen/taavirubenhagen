@@ -23,16 +23,15 @@ export const nodes = [() => import('./nodes/0'),
 export const server_loads = [];
 
 export const dictionary = {
-	"/": [8],
-	"/contact": [9,[2]],
-	"/dropshipz": [~10,[3],[4]],
-	"/dropshipz/home": [11,[3],[4]],
-	"/dropshipz/shop": [12,[3],[4]],
-	"/me/contact": [~13,[5]],
-	"/me/design/tavy/icons": [14,[5]],
-	"/me/design/tavy/icons/explore": [15,[5]],
-	"/me/home": [16,[5,6]],
-	"/me/landing/social": [17,[5,7]],
+	"/": [9],
+	"/contact": [10,[2]],
+	"/dropshipz": [~11,[3],[4]],
+	"/dropshipz/home": [12,[3],[4]],
+	"/dropshipz/shop": [13,[3],[4]],
+	"/me/blog": [14,[5,6]],
+	"/me/contact": [~15,[5]],
+	"/me/home": [16,[5,7]],
+	"/me/landing/social": [17,[5,8]],
 	"/tts": [18]
 };
 

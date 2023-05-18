@@ -9,11 +9,10 @@
 	"/dropshipz/home": [],
 	"/dropshipz/shop": [],
 	"/me": [],
+	"/me/blog": [],
 	"/me/contact": [
 		"src/routes/me/contact/+page.server.ts"
 	],
-	"/me/design/tavy/icons": [],
-	"/me/design/tavy/icons/explore": [],
 	"/me/home": [],
 	"/me/landing/social": [],
 	"/tts": []
