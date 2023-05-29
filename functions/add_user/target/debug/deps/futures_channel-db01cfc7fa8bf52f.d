@@ -1,0 +1,10 @@
+C:\Users\User\CODE\taavirubenhagen\functions\add_user\target\debug\deps\futures_channel-db01cfc7fa8bf52f.rmeta: C:\Users\User\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-channel-0.3.15\src\lib.rs C:\Users\User\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-channel-0.3.15\src\lock.rs C:\Users\User\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-channel-0.3.15\src\mpsc\mod.rs C:\Users\User\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-channel-0.3.15\src\mpsc\queue.rs C:\Users\User\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-channel-0.3.15\src\mpsc\sink_impl.rs C:\Users\User\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-channel-0.3.15\src\oneshot.rs
+
+C:\Users\User\CODE\taavirubenhagen\functions\add_user\target\debug\deps\futures_channel-db01cfc7fa8bf52f.d: C:\Users\User\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-channel-0.3.15\src\lib.rs C:\Users\User\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-channel-0.3.15\src\lock.rs C:\Users\User\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-channel-0.3.15\src\mpsc\mod.rs C:\Users\User\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-channel-0.3.15\src\mpsc\queue.rs C:\Users\User\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-channel-0.3.15\src\mpsc\sink_impl.rs C:\Users\User\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-channel-0.3.15\src\oneshot.rs
+
+C:\Users\User\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-channel-0.3.15\src\lib.rs:
+C:\Users\User\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-channel-0.3.15\src\lock.rs:
+C:\Users\User\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-channel-0.3.15\src\mpsc\mod.rs:
+C:\Users\User\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-channel-0.3.15\src\mpsc\queue.rs:
+C:\Users\User\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-channel-0.3.15\src\mpsc\sink_impl.rs:
+C:\Users\User\.cargo\registry\src\github.com-1ecc6299db9ec823\futures-channel-0.3.15\src\oneshot.rs:
