@@ -27,7 +27,7 @@ pub(crate) async fn my_handler(
         status_code: 200,
         headers: HeaderMap::new(),
         multi_value_headers: HeaderMap::new(),
-        body: Some(Body::Text(format!("Hello from '}, path"))),
+        body: Some(Body::Text("Hello from xxx, path")),
         is_base64_encoded: Some(false),
     };
 
