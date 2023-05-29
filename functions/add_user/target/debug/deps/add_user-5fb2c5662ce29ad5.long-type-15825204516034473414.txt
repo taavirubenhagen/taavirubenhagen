@@ -1,0 +1,1 @@
+ServiceFn<fn(ApiGatewayProxyRequest, lambda_runtime::Context) -> impl Future<Output = Result<ApiGatewayProxyResponse, Box<(dyn StdError + Send + Sync + 'static)>>> {my_handler}>

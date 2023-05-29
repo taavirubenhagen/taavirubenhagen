@@ -156,7 +156,7 @@ ${constructors[1] ? `${validate_component(constructors[0] || missing_component, 
       {}
     )}`}
 
-${mounted ? `<div id="${"svelte-announcer"}" aria-live="${"assertive"}" aria-atomic="${"true"}" style="${"position: absolute; left: 0; top: 0; clip: rect(0 0 0 0); clip-path: inset(50%); overflow: hidden; white-space: nowrap; width: 1px; height: 1px"}">${navigated ? `${escape(title)}` : ``}</div>` : ``}`;
+${mounted ? `<div id="svelte-announcer" aria-live="assertive" aria-atomic="true" style="position: absolute; left: 0; top: 0; clip: rect(0 0 0 0); clip-path: inset(50%); overflow: hidden; white-space: nowrap; width: 1px; height: 1px">${navigated ? `${escape(title)}` : ``}</div>` : ``}`;
   } while (!$$settled);
   return $$rendered;
 });
@@ -233,7 +233,7 @@ const options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "1y04q72"
+  version_hash: "1wh7wu1"
 };
 function get_hooks() {
   return {};

@@ -21,14 +21,14 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     supabase = createClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY);
     signInOrUp();
   });
-  return `<main class="${"max-w-screen min-h-screen p-8 flex flex-col justify-center items-start md:items-center font-sans"}">${validate_component(Main_headline, "MainHeadline").$$render($$result, {}, {}, {
+  return `<main class="max-w-screen min-h-screen p-8 flex flex-col justify-center items-start md:items-center font-sans">${validate_component(Main_headline, "MainHeadline").$$render($$result, {}, {}, {
     default: () => {
       return `Join Waitlist`;
     }
   })}
-    <div class="${"h-16"}"></div>
-    <input type="${"text"}" placeholder="${"Enter E-Mail"}" class="${"outline-none rounded-full border-2 border-primary w-full md:w-1/2 h-16 text-center text-xl"}">
-    <div class="${"h-16"}"></div>
+    <div class="h-16"></div>
+    <input type="text" placeholder="Enter E-Mail" class="outline-none rounded-full border-2 border-primary w-full md:w-1/2 h-16 text-center text-xl">
+    <div class="h-16"></div>
     
     ${validate_component(Text_button, "TextButton").$$render($$result, { large: true, primary: true }, {}, {
     default: () => {

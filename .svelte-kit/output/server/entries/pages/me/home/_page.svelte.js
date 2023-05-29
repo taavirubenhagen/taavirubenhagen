@@ -47,22 +47,22 @@ const DeviceDetector = create_ssr_component(($$result, $$props, $$bindings, slot
   return `${showSlot ? `${slots.default ? slots.default({}) : ``}` : ``}`;
 });
 const Medium_label = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<t class="${"text-xl md:text-2xl"}">${slots.default ? slots.default({}) : ``}</t>`;
+  return `<t class="text-xl md:text-2xl">${slots.default ? slots.default({}) : ``}</t>`;
 });
 const Large_subtitle = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<t class="${"block text-2xl md:text-3xl text-neutral-500 font-bold tracking-widest"}">${slots.default ? slots.default({}) : ``}</t>`;
+  return `<t class="block text-2xl md:text-3xl text-neutral-500 font-bold tracking-widest">${slots.default ? slots.default({}) : ``}</t>`;
 });
 const Section_headline = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<t class="${"text-4xl md:text-6xl font-bold"}">${slots.default ? slots.default({}) : ``}</t>`;
+  return `<t class="text-4xl md:text-6xl font-bold">${slots.default ? slots.default({}) : ``}</t>`;
 });
 const Large_paragraph = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<t class="${"text-2xl md:text-2xl"}">${slots.default ? slots.default({}) : ``}</t>`;
+  return `<t class="text-2xl md:text-2xl">${slots.default ? slots.default({}) : ``}</t>`;
 });
 const Inline_paragraph_button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { content = "" } = $$props;
   if ($$props.content === void 0 && $$bindings.content && content !== void 0)
     $$bindings.content(content);
-  return `<button class="${"transition-all duration-200 inline -mr-1 opacity-50 hover:scale-[101%]"}">${escape(content)}${validate_component(Icon, "Icon").$$render(
+  return `<button class="transition-all duration-200 inline -mr-1 opacity-50 hover:scale-[101%]">${escape(content)}${validate_component(Icon, "Icon").$$render(
     $$result,
     {
       name: "nav-arrow-down",
@@ -105,13 +105,13 @@ function genTableIconArray(name) {
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `
 
-<main><section class="${"relative w-screen h-screen"}">
-        <div class="${"w-screen h-screen p-4 md:p-16 flex_col_center text-center"}">${validate_component(Main_headline, "MainHeadline").$$render($$result, {}, {}, {
+<main><section class="relative w-screen h-screen">
+        <div class="w-screen h-screen p-4 md:p-16 flex_col_center text-center">${validate_component(Main_headline, "MainHeadline").$$render($$result, {}, {}, {
     default: () => {
       return `Hi, I&#39;m Taavi<br>R\xFCbenhagen.`;
     }
   })}
-            <div class="${"h-8"}"></div>
+            <div class="h-8"></div>
             ${validate_component(Large_subtitle, "LargeSubtitle").$$render($$result, {}, {}, {
     default: () => {
       return `I&#39;m a self-taught UI/UX Designer
@@ -120,7 +120,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
             `;
     }
   })}</div></section>
-    <section class="${"w-screen min-h-screen flex flex-col-reverse md:flex-row md:items-center"}"><div class="${"w-full md:w-1/2 min-h-screen md:min-h-0 p-8 md:p-16 flex flex-col text-justify md:text-left"}"><div class="${"text-left"}">${validate_component(Large_subtitle, "LargeSubtitle").$$render($$result, {}, {}, {
+    <section class="w-screen min-h-screen flex flex-col-reverse md:flex-row md:items-center"><div class="w-full md:w-1/2 min-h-screen md:min-h-0 p-8 md:p-16 flex flex-col text-justify md:text-left"><div class="text-left">${validate_component(Large_subtitle, "LargeSubtitle").$$render($$result, {}, {}, {
     default: () => {
       return `My largest project: `;
     }
@@ -131,7 +131,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
                 `;
     }
   })}</div>
-            <div class="${"h-8"}"></div>
+            <div class="h-8"></div>
             ${validate_component(Large_paragraph, "LargeParagraph").$$render($$result, {}, {}, {
     default: () => {
       return `What if you had all your presentation tools combined - remote control, note cards, timer and more?
@@ -142,15 +142,15 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
             `;
     }
   })}
-            <div class="${"h-8"}"></div>
-            <a href="${"/presenter/waitlist"}">
+            <div class="h-8"></div>
+            <a href="/presenter/waitlist">
                 ${validate_component(Text_button, "TextButton").$$render($$result, { primary: true, buttonClass: "w-full" }, {}, {
     default: () => {
       return `Join waitlist`;
     }
   })}</a>
             </div>
-        <div class="${"relative md:left-24 w-full md:w-1/2 md:h-screen px-4 py-8 md:py-32 flex"}">${each(
+        <div class="relative md:left-24 w-full md:w-1/2 md:h-screen px-4 py-8 md:py-32 flex">${each(
     [
       "md:right-0 md:hover:scale-[100.5%]",
       "md:right-32 md:z-20 md:scale-110 md:hover:scale-[110.5%]",
@@ -162,25 +162,25 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
           return `[Image]`;
         }
       })}</div>
-                    ${i > 0 ? `<div class="${"w-8"}"></div>` : ``}`}`;
+                    ${i > 0 ? `<div class="w-8"></div>` : ``}`}`;
     }
   )}</div></section>
-    <section class="${"w-screen min-h-screen p-8 md:p-16 flex flex-col text-justify md:text-left"}">${validate_component(Section_headline, "SectionHeadline").$$render($$result, {}, {}, {
+    <section class="w-screen min-h-screen p-8 md:p-16 flex flex-col text-justify md:text-left">${validate_component(Section_headline, "SectionHeadline").$$render($$result, {}, {}, {
     default: () => {
       return `A Better Presenter vs physical presenter vs note cards vs timer
         `;
     }
   })}
-        <div class="${"h-12 md:h-16"}"></div>
+        <div class="h-12 md:h-16"></div>
         ${validate_component(Medium_label, "MediumLabel").$$render($$result, {}, {}, {
     default: () => {
-      return `<div class="${"w-full flex flex-col"}"><div class="${"h-8 flex items-center"}"><!-- HTML_TAG_START -->${genTableIcon("none")}<!-- HTML_TAG_END --><div class="${"inline w-2"}"></div>Not included</div>
-                <div class="${"h-8 flex items-center"}"><!-- HTML_TAG_START -->${genTableIcon("paid")}<!-- HTML_TAG_END --><div class="${"inline w-2.5"}"></div>Included, but not free</div>
-                <div class="${"h-8 flex items-center"}"><!-- HTML_TAG_START -->${genTableIcon("free")}<!-- HTML_TAG_END --><div class="${"inline w-2"}"></div>Free &amp; Ready to use</div></div>`;
+      return `<div class="w-full flex flex-col"><div class="h-8 flex items-center"><!-- HTML_TAG_START -->${genTableIcon("none")}<!-- HTML_TAG_END --><div class="inline w-2"></div>Not included</div>
+                <div class="h-8 flex items-center"><!-- HTML_TAG_START -->${genTableIcon("paid")}<!-- HTML_TAG_END --><div class="inline w-2.5"></div>Included, but not free</div>
+                <div class="h-8 flex items-center"><!-- HTML_TAG_START -->${genTableIcon("free")}<!-- HTML_TAG_END --><div class="inline w-2"></div>Free &amp; Ready to use</div></div>`;
     }
   })}
-        <div class="${"h-8"}"></div>
-        <div class="${"rounded-lg border border-onBackground grid grid-cols-5 grid-rows-4"}">${each(
+        <div class="h-8"></div>
+        <div class="rounded-lg border border-onBackground grid grid-cols-5 grid-rows-4">${each(
     [
       ["Feature", ""],
       ["Physical presenter", genTableIcon("remote")],
@@ -229,14 +229,14 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   )}</div>
         </section>
     
-    <section class="${"w-screen h-1/2 md:h-screen background p-8 md:p-16 flex_col_center relative text-center"}"><t3>Contact me for any collaboration.</t3>
-        <div class="${"h-16"}"></div>
-        <a href="${"mailto:taavi.ruebenhagen@gmail.com"}" class="${"flex_row_center"}">${validate_component(Text_button, "TextButton").$$render($$result, { primary: true }, {}, {
+    <section class="w-screen h-1/2 md:h-screen background p-8 md:p-16 flex_col_center relative text-center"><t3>Contact me for any collaboration.</t3>
+        <div class="h-16"></div>
+        <a href="mailto:taavi.ruebenhagen@gmail.com" class="flex_row_center">${validate_component(Text_button, "TextButton").$$render($$result, { primary: true }, {}, {
     default: () => {
       return `E-Mail me`;
     }
   })}</a></section>
-    <section class="${"w-screen h-screen background flex_col_center"}"><t class="${"mt-8 text-9xl text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-red-700"}">lol xD.</t></section></main>`;
+    <section class="w-screen h-screen background flex_col_center"><t class="mt-8 text-9xl text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-red-700">lol xD.</t></section></main>`;
 });
 export {
   Page as default
