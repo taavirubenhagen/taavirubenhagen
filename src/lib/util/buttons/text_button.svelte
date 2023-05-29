@@ -5,6 +5,7 @@
     export let buttonClass: string = ""
     export let onPrimary = false
     export let primary = false
+    export let large = false
     export let onClicked = () => {}
 </script>
 
@@ -15,8 +16,8 @@
     on:click={onClicked}
     class="{buttonClass}
         transition-all duration-200 relative
-        hover:scale-[101%] rounded-lg border-2 {onPrimary ? "border-onPrimary" : "border-onBackground"}
-        h-12
+        hover:scale-[101%] rounded-full {primary ? "" : 'border-2 ${( onPrimary ? "border-onPrimary" : "border-onBackground" )}'}
+        { large ? "h-16" : "h-12"}
         {
         primary
         ? (
@@ -30,7 +31,7 @@
             : "text-onBackground"
             )
         }
-        px-4"
+        { large ? "px-16" : "px-8"}"
     >
     <SecondaryButtonLabel><slot/></SecondaryButtonLabel>
 </button>

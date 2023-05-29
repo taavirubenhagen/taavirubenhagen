@@ -1,4 +1,4 @@
-import { c as create_ssr_component, e as escape, f as each, v as validate_component } from "../../../../chunks/index.js";
+import { c as create_ssr_component, e as escape, h as each, v as validate_component } from "../../../../chunks/index2.js";
 /* empty css                         */import { T as Text_button } from "../../../../chunks/text_button.js";
 const Icon = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { version = "0.2" } = $$props;
@@ -24,14 +24,14 @@ const Icon = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `
 
-<main class="${"font-sans"}"><section class="${"w-screen h-screen background p-8 md:p-16 relative"}"><h2>Dropshipz
-        </h2>
+<main class="${"font-sans"}"><section class="${"w-screen h-screen background p-8 md:p-16 relative"}"><t2>Dropshipz
+        </t2>
         <div class="${"h-8"}"></div>
-        <h4 class="${"text-neutral-500"}">Men don&#39;t grow older,
+        <t4 class="${"text-neutral-500"}">Men don&#39;t grow older,
         <br>
         their toys just get better.
-        </h4></section>
-    <section class="${"w-screen h-screen background p-8 md:p-16 flex_col_center relative text-center"}"><h3>Every aspect of any app on any platform.</h3>
+        </t4></section>
+    <section class="${"w-screen h-screen background p-8 md:p-16 flex_col_center relative text-center"}"><t3>Every aspect of any app on any platform.</t3>
         <div class="${"h-16"}"></div>
         <div class="${"flex_row_center"}">${each(["Mobile", "Web", "Server", "Graphics", "Deploy", "Market"], (data) => {
     return `<a href="${"/me/design/tavy/icons"}"><div class="${"m-6 mb-12 shadow-xl rounded-2xl shadow-neutral-300 w-24 h-24 flex_row_center"}">
@@ -45,10 +45,10 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       {},
       {}
     )}</div>
-            <h6>${escape(data)}</h6>
+            <t6>${escape(data)}</t6>
             </a>`;
   })}</div></section>
-    <section class="${"w-screen h-screen background p-8 md:p-16 flex_col_center relative text-center"}"><h3>Contact me for any collaboration.</h3>
+    <section class="${"w-screen h-screen background p-8 md:p-16 flex_col_center relative text-center"}"><t3>Contact me for any collaboration.</t3>
         <div class="${"h-16"}"></div>
         <a href="${"mailto:taavi.ruebenhagen@gmail.com"}" class="${"flex_row_center"}">${validate_component(Text_button, "TextButton").$$render($$result, { primary: true }, {}, {
     default: () => {

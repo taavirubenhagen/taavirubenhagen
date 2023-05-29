@@ -1,4 +1,4 @@
-import { g as getContext, c as create_ssr_component, b as subscribe, e as escape, d as add_attribute } from "../../../chunks/index.js";
+import { g as getContext, c as create_ssr_component, d as subscribe, e as escape, f as add_attribute } from "../../../chunks/index2.js";
 import "ua-parser-js";
 /* empty css                      */const getStores = () => {
   const stores = getContext("__svelte__");
@@ -23,8 +23,8 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$unsubscribe_page = subscribe(page, (value) => value);
   let menuButtonCanvas;
   $$unsubscribe_page();
-  return `<main class="${"relative w-screen min-h-screen background"}"><header class="${"absolute z-10 w-screen h-32 bg-primary"}"></header>
-    <header class="${"w-screen h-32 bg-primary"}"></header>
+  return `<main class="${"relative w-screen min-h-screen background"}"><teader class="${"absolute z-10 w-screen h-32 bg-primary"}"></teader>
+    <teader class="${"w-screen h-32 bg-primary"}"></teader>
     <button class="${"fixed z-40 right-6 bottom-8 invert hover:invert shadow-xl rounded-full " + escape("w-16 h-16", true) + " bg-onPrimary flex_row_center duration-800"}"${add_attribute(
     "style",
     "",

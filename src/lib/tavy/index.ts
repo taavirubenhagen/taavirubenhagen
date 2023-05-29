@@ -11,6 +11,7 @@ import LargeParagraph from '$tavy/text/button_text/large_paragraph.svelte';
 import Icon from '$tavy/icons/icon.svelte';
 
 import InlineParagraphButton from '$tavy/miscellaneous/inline_paragraph_button.svelte';
+import Dropdown from '$tavy/dropdown.svelte';
 
 export {
     PrimaryButtonLabel, SecondaryButtonLabel, TertiaryButtonLabel,
@@ -23,4 +24,5 @@ export {
     
     Icon,
     InlineParagraphButton,
+    Dropdown,
 };

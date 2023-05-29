@@ -15,6 +15,7 @@
         TertiaryButtonLabel,
     } from '$tavy';
     import TextButton from '$src/lib/util/buttons/text_button.svelte';
+  import Icon from '$src/lib/tavy/icons/icon.svelte';
 
 
     let windowHeight: number;
@@ -36,8 +37,6 @@
     let lastScrollY = 0;
     $: scrollToTopButtonPositionClass = updateScrollToTopButtonPositionClass(scrollY);
 
-    let isInDevelopmentBannerExpanded = false;      // TODO: R
-
     const menuData = ['Home', 'Work', 'Services', 'Contact'];
     let isMenuOpen = false;
 
@@ -50,35 +49,25 @@
 
 
 <main class="max-w-screen min-h-screen background">
-    <button  on:click={() => isInDevelopmentBannerExpanded = !isInDevelopmentBannerExpanded} class="transition-all duration-400 fixed z-50 w-screen {isInDevelopmentBannerExpanded ? "h-screen" : "h-8"} primary flex_row_center">
-        <div class="w-screen h-8 flex_row_center">
-            <SecondaryButtonLabel>
-                <div class="transition-all duration-400 {isInDevelopmentBannerExpanded ? "text-5xl" : "text-xl"} font-display">
-                    Still under development
-                </div>
-            </SecondaryButtonLabel>
-        </div>
-        <div class="transition-all duration-400 absolute bottom-16 w-screen {isInDevelopmentBannerExpanded ? "opacity-100" : "opacity-0"} flex_row_center">
-            <TextButton primary onPrimary>Visit anyway</TextButton>
-        </div>
-    </button>
-    <div class="fixed top-16 z-30 pointer-events-none w-screen px-8 flex justify-between md:justify-center">
+    <!--<div class="fixed z-50 w-screen h-8 flex_row_center">
+        <SecondaryButtonLabel>
+            <div class="transition-all duration-400 text-xl font-display">
+                Still under development
+            </div>
+        </SecondaryButtonLabel>
+    </div>-->
+    <div class="fixed top-0 z-30 pointer-events-none shadow bg-secondary w-screen h-16 md:px-[25%] pt-2 flex justify-around items-center">
         {#each [
             ["home", "/me/home"],
             ["chat-bubble-empty", "/contact"],
-            ["arrow-separate text-blue-700", "/presenter"],
-            ["voice text-blue-700", "/tts"],
-            ["color-filter text-blue-700", "/design"],
-            ["github text-orange-700", "/me/home"],
-            ["instagram text-orange-700", "/me/home"],
+            ["arrow-separate", "/presenter"],
+            ["voice", "/tts"],
+            ["color-filter", "/design"],
+            ["github", "/me/home"],
+            ["instagram", "/me/home"],
         ] as e}
-            <a class="pointer-events-auto" href={e[1]}>
-                <i
-                    class=
-                        "transition-all duration-200 md:mx-4 backdrop-blur-sm shadow hover:scale-100 rounded hover:rounded-xl
-                        w-12 h-12 bg-background bg-opacity-50
-                        flex_row_center text-2xl iconoir-{e[0]}"
-                ></i>
+            <a class="transition-all duration-200 pointer-events-auto opacity-100 hover:opacity-75" href={e[1]}>
+                <Icon textClass="text-2xl" name={e[0]}/>
             </a>
         {/each}
     </div>
@@ -140,7 +129,7 @@
         {#each menuData as data, i}
           <button on:click={() => isMenuOpen = false}>
             <a href="/me/{data.toLowerCase()}">
-              <h4
+              <t4
                 in:fly={{duration: 800, delay: ( i + 3 ) * 100, y: 32}}
                 out:fly={{easing: easings.sineInOut, duration: 200, x: windowWidth / 2 * 0.5, y: windowHeight / 2 * 0.5}}
                 class=
@@ -156,7 +145,7 @@
                   duration-200"
               >
                 {data}
-              </h4>
+              </t4>
             </a>
           </button>
         {/each}

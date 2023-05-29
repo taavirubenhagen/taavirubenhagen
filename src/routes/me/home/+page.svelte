@@ -118,7 +118,10 @@
                 , and lets you focus entirely on your presentation.
             </LargeParagraph>
             <div class="h-8"/>
-            <TextButton primary>Join waitlist</TextButton>
+            <a href="/presenter/waitlist">
+                <!--TODO: Add open-in-new icon-->
+                <TextButton primary buttonClass="w-full">Join waitlist</TextButton>
+            </a>
             <!--<div class="flex text-[32px]">
                 <div class="transition-all duration-200 opacity-100 hover:opacity-60 rounded-full border-2 border-onBackground w-12 h-12 flex_row_center">
                     <i class="iconoir-download"></i>
@@ -194,7 +197,7 @@
         </div>-->
     </section>
     <!--<section class="w-screen h-screen p-8 md:p-16 flex_col_center relative text-center">
-        <!-.-<h3>Every aspect of any app on any platform.</h3>
+        <!-.-<t3>Every aspect of any app on any platform.</t3>
         <div class="h-16" />
         <div class="flex_row_center">
         {#each ['Mobile', 'Web', 'Server', 'Graphics', 'Deploy', 'Market'] as data}
@@ -203,7 +206,7 @@
                 <!-.-TODO: Make icon stroke 1--.>
                 <Icon isThin name="phone" iconClass="w-12 h-12 opacity-100"/>
             </div>
-            <h6>{data}</h6>
+            <t6>{data}</t6>
             </a>
         {/each}
         </div>--.>
@@ -215,13 +218,13 @@
         <div class="h-4"/>
     </section>-->
     <section class="w-screen h-1/2 md:h-screen background p-8 md:p-16 flex_col_center relative text-center">
-        <h3>Contact me for any collaboration.</h3>
+        <t3>Contact me for any collaboration.</t3>
         <div class="h-16" />
         <a href="mailto:taavi.ruebenhagen@gmail.com" class="flex_row_center">
             <TextButton primary>E-Mail me</TextButton>
         </a>
     </section>
     <section class="w-screen h-screen background flex_col_center">
-        <h class="mt-8 text-9xl text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-red-700">lol xD.</h>
+        <t class="mt-8 text-9xl text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-red-700">lol xD.</t>
     </section>
 </main>

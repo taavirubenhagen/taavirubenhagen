@@ -1,5 +1,5 @@
 <script lang="ts">
-  import "$style"
+  import "$style";
 </script>
 
 

@@ -2,4 +2,4 @@
     import '$style'
 </script>
 
-<p class="headline text-2xl md:text-3xl text-neutral-500 font-bold tracking-widest"><slot/></p>
+<t class="block text-2xl md:text-3xl text-neutral-500 font-bold tracking-widest"><slot/></t>

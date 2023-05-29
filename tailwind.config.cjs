@@ -35,15 +35,17 @@ module.exports = {
           default_tailwind: 'cubic-bezier(0.4, 0, 0.2, 1)',
         },
         extend: {
-            flex: {
-                center_col: "flex flex-col justify-center items-center",
-                center_row: "flex flex-row justify-center items-center",
-            },
             colors: {
                 background: "#FFF",
                 onBackground: "#000",
                 primary: "#000",
                 onPrimary: "#FFF",
+                secondary: colors.neutral["100"],
+                onSecondary: "#000",
+            },
+            flex: {
+                center_col: "flex flex-col justify-center items-center",
+                center_row: "flex flex-row justify-center items-center",
             },
             fontFamily: {
               logo: ['Caveat'],

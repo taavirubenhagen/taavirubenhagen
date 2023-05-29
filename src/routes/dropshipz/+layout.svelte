@@ -27,8 +27,8 @@
 
 
 <main class="relative w-screen min-h-screen background">
-    <header class="absolute z-10 w-screen h-32 bg-primary"></header>
-    <header class="w-screen h-32 bg-primary"></header>
+    <teader class="absolute z-10 w-screen h-32 bg-primary"></teader>
+    <teader class="w-screen h-32 bg-primary"></teader>
     <button
         on:click={() => isMenuOpen = !isMenuOpen}
         class="
@@ -50,7 +50,7 @@
             {#each menuData as data, i}
             <button on:click={() => isMenuOpen = false}>
                 <a href="/dropshipz/{data.toLowerCase()}">
-                <h4
+                <t4
                     in:fly={{duration: 800, delay: ( i + 3 ) * 100, y: 32}}
                     out:fly={{easing: easings.sineInOut, duration: 200, x: windowWidth / 2 * 0.5, y: windowHeight / 2 * 0.5}}
                     class=
@@ -66,7 +66,7 @@
                     duration-200"
                 >
                     {data}
-                </h4>
+                </t4>
                 </a>
             </button>
             {/each}

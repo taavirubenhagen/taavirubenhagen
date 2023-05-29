@@ -1,8 +1,8 @@
-import { c as create_ssr_component, e as escape, v as validate_component, f as each, d as add_attribute } from "../../../chunks/index.js";
+import { c as create_ssr_component, h as each, e as escape, v as validate_component, f as add_attribute } from "../../../chunks/index2.js";
 import "ua-parser-js";
-/* empty css                      */import { S as Secondary_button_label, T as Text_button } from "../../../chunks/text_button.js";
+/* empty css                      */import { I as Icon } from "../../../chunks/icon.js";
 const Tertiary_button_label = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<p class="${"text-lg md:text-lg font-bold"}">${slots.default ? slots.default({}) : ``}</p>`;
+  return `<t class="${"text-lg md:text-lg font-bold"}">${slots.default ? slots.default({}) : ``}</t>`;
 });
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let scrollToTopButtonPositionClass;
@@ -26,32 +26,19 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 
 
 
-<main class="${"max-w-screen min-h-screen background"}"><button class="${"transition-all duration-400 fixed z-50 w-screen " + escape("h-8", true) + " primary flex_row_center"}"><div class="${"w-screen h-8 flex_row_center"}">${validate_component(Secondary_button_label, "SecondaryButtonLabel").$$render($$result, {}, {}, {
-    default: () => {
-      return `<div class="${"transition-all duration-400 " + escape("text-xl", true) + " font-display"}">Still under development
-                </div>`;
-    }
-  })}</div>
-        <div class="${"transition-all duration-400 absolute bottom-16 w-screen " + escape(
-    "opacity-0",
-    true
-  ) + " flex_row_center"}">${validate_component(Text_button, "TextButton").$$render($$result, { primary: true, onPrimary: true }, {}, {
-    default: () => {
-      return `Visit anyway`;
-    }
-  })}</div></button>
-    <div class="${"fixed top-16 z-30 pointer-events-none w-screen px-8 flex justify-between md:justify-center"}">${each(
+<main class="${"max-w-screen min-h-screen background"}">
+    <div class="${"fixed top-0 z-30 pointer-events-none shadow bg-secondary w-screen h-16 md:px-[25%] pt-2 flex justify-around items-center"}">${each(
     [
       ["home", "/me/home"],
       ["chat-bubble-empty", "/contact"],
-      ["arrow-separate text-blue-700", "/presenter"],
-      ["voice text-blue-700", "/tts"],
-      ["color-filter text-blue-700", "/design"],
-      ["github text-orange-700", "/me/home"],
-      ["instagram text-orange-700", "/me/home"]
+      ["arrow-separate", "/presenter"],
+      ["voice", "/tts"],
+      ["color-filter", "/design"],
+      ["github", "/me/home"],
+      ["instagram", "/me/home"]
     ],
     (e) => {
-      return `<a class="${"pointer-events-auto"}"${add_attribute("href", e[1], 0)}><i class="${"transition-all duration-200 md:mx-4 backdrop-blur-sm shadow hover:scale-100 rounded hover:rounded-xl w-12 h-12 bg-background bg-opacity-50 flex_row_center text-2xl iconoir-" + escape(e[0], true)}"></i>
+      return `<a class="${"transition-all duration-200 pointer-events-auto opacity-100 hover:opacity-75"}"${add_attribute("href", e[1], 0)}>${validate_component(Icon, "Icon").$$render($$result, { textClass: "text-2xl", name: e[0] }, {}, {})}
             </a>`;
     }
   )}</div>

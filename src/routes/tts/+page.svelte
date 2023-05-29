@@ -56,12 +56,12 @@
 >
     <div class="flex sm:flex-col justify-between">
         <div>
-            <h3>Convert text to speech.</h3>
+            <t3>Convert text to speech.</t3>
             <div class="h-16"></div>
         </div>
         <div class="flex justify-between">
             <div class="flex flex-wrap items-start justify-start gap-1">
-                <p1 class="mr-4 h-12 flex_row_center">Voice</p1>
+                <t1 class="mr-4 h-12 flex_row_center">Voice</t1>
                 {#each Array(10) as _, i}
                     <button
                         on:click={() => voiceIndex = i}
@@ -126,6 +126,6 @@
 </main>
 <footer class="h-16 primary flex_row_center font-mono">
     <a href="/contact">
-        <p1>Contact</p1>
+        <t1>Contact</t1>
     </a>
 </footer>

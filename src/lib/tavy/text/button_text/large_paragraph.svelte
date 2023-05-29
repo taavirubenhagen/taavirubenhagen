@@ -2,4 +2,4 @@
     import '$style'
 </script>
 
-<p class="paragraph text-2xl md:text-2xl"><slot/></p>
+<t class="text-2xl md:text-2xl"><slot/></t>

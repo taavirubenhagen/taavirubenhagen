@@ -21,40 +21,8 @@
 
 /* TEXT-RELATED STYLES */
 
-p {
-    @apply selection:bg-onBackground selection:text-background font-body;
-}
-h {
-    @apply selection:bg-onBackground selection:text-background font-display;
-}
-/* TODO: R */
-.paragraph {
-    @apply font-display;
-}
-.headline {
-    @apply font-body;
-}
-
-h1 {
-  @apply headline text-7xl md:text-9xl font-bold;
-}
-h2 {
-  @apply headline text-5xl sm:text-6xl md:text-7xl font-bold tracking-wider;
-}
-h3 {
-  @apply headline text-4xl md:text-5xl font-bold tracking-widest;
-}
-s1 {
-  @apply headline opacity-50 text-lg tracking-wider;
-}
-s2 {
-  @apply headline;
-}
-p1 {
-  @apply paragraph;
-}
-p2 {
-  @apply paragraph;
+t {
+    @apply selection:bg-onBackground selection:text-background;
 }
 
 
@@ -72,16 +40,6 @@ p2 {
 }
 .primary::selection {
   @apply bg-onPrimary text-primary;
-}
-
-
-
-
-.base_cursor {
-  @apply rounded-full border-2 border-primary w-8 h-8 bg-opacity-50 bg-background p-4 duration-800;
-}
-.hover_cursor {
-  @apply w-16 h-16 bg-opacity-100;
 }
 
 

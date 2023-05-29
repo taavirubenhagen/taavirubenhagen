@@ -1,47 +1,68 @@
-import { c as create_ssr_component, e as escape, v as validate_component, f as each } from "../../../../chunks/index.js";
-import "ua-parser-js";
-/* empty css                         */import { T as Text_button } from "../../../../chunks/text_button.js";
+import { c as create_ssr_component, o as onMount, e as escape, v as validate_component, h as each } from "../../../../chunks/index2.js";
+import UAParser from "ua-parser-js";
+/* empty css                         */import { M as Main_headline } from "../../../../chunks/main_headline.js";
+import { I as Icon } from "../../../../chunks/icon.js";
+import { T as Text_button } from "../../../../chunks/text_button.js";
 const DeviceDetector = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { showInDevice = void 0 } = $$props;
   let { showInBrowser = void 0 } = $$props;
   let { showInOs = void 0 } = $$props;
+  let showSlot = false;
+  onMount(() => {
+    const uaParser = new UAParser();
+    let detectedBrowser = uaParser.getBrowser();
+    let detectedDevice = uaParser.getDevice();
+    let detectedOs = uaParser.getOS();
+    let show = true;
+    if (showInDevice && !equals(getDevice(detectedDevice), showInDevice)) {
+      show = false;
+    }
+    if (showInBrowser && !equals(formatter(detectedBrowser.name), showInBrowser)) {
+      show = false;
+    }
+    if (showInOs && !equals(formatter(detectedOs.name), showInOs)) {
+      show = false;
+    }
+    showSlot = show;
+  });
+  const getDevice = (device) => {
+    if (!device.type) {
+      return "desktop";
+    }
+    return formatter(device.type);
+  };
+  const formatter = (string) => string.toLowerCase().normalize("NFD").replace(/ /g, "").replace(/[^\w\s]/gi, "").replace(/[\u0300-\u036f]/g, "");
+  const equals = (value, option) => {
+    if (Array.isArray(option)) {
+      return option.some((item) => value === formatter(item));
+    }
+    return value === formatter(option);
+  };
   if ($$props.showInDevice === void 0 && $$bindings.showInDevice && showInDevice !== void 0)
     $$bindings.showInDevice(showInDevice);
   if ($$props.showInBrowser === void 0 && $$bindings.showInBrowser && showInBrowser !== void 0)
     $$bindings.showInBrowser(showInBrowser);
   if ($$props.showInOs === void 0 && $$bindings.showInOs && showInOs !== void 0)
     $$bindings.showInOs(showInOs);
-  return `${``}`;
+  return `${showSlot ? `${slots.default ? slots.default({}) : ``}` : ``}`;
 });
 const Medium_label = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<p class="${"paragraph text-xl md:text-2xl"}">${slots.default ? slots.default({}) : ``}</p>`;
+  return `<t class="${"text-xl md:text-2xl"}">${slots.default ? slots.default({}) : ``}</t>`;
 });
 const Large_subtitle = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<p class="${"headline text-2xl md:text-3xl text-neutral-500 font-bold tracking-widest"}">${slots.default ? slots.default({}) : ``}</p>`;
+  return `<t class="${"block text-2xl md:text-3xl text-neutral-500 font-bold tracking-widest"}">${slots.default ? slots.default({}) : ``}</t>`;
 });
 const Section_headline = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<h class="${"text-4xl md:text-6xl font-bold"}">${slots.default ? slots.default({}) : ``}</h>`;
-});
-const Main_headline = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<h class="${"text-6xl md:text-7xl font-bold tracking-wider"}">${slots.default ? slots.default({}) : ``}</h>`;
+  return `<t class="${"text-4xl md:text-6xl font-bold"}">${slots.default ? slots.default({}) : ``}</t>`;
 });
 const Large_paragraph = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<p class="${"paragraph text-2xl md:text-2xl"}">${slots.default ? slots.default({}) : ``}</p>`;
-});
-const Icon = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let { name } = $$props;
-  let { textClass = "" } = $$props;
-  if ($$props.name === void 0 && $$bindings.name && name !== void 0)
-    $$bindings.name(name);
-  if ($$props.textClass === void 0 && $$bindings.textClass && textClass !== void 0)
-    $$bindings.textClass(textClass);
-  return `<i class="${"relative " + escape(textClass, true) + " iconoir-" + escape(name, true)}"></i>`;
+  return `<t class="${"text-2xl md:text-2xl"}">${slots.default ? slots.default({}) : ``}</t>`;
 });
 const Inline_paragraph_button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { content = "" } = $$props;
   if ($$props.content === void 0 && $$bindings.content && content !== void 0)
     $$bindings.content(content);
-  return `<button class="${"transition-all duration-200 inline -mr-1 opacity-50 hover:opacity-75"}">${escape(content)}${validate_component(Icon, "Icon").$$render(
+  return `<button class="${"transition-all duration-200 inline -mr-1 opacity-50 hover:scale-[101%]"}">${escape(content)}${validate_component(Icon, "Icon").$$render(
     $$result,
     {
       name: "nav-arrow-down",
@@ -122,11 +143,12 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     }
   })}
             <div class="${"h-8"}"></div>
-            ${validate_component(Text_button, "TextButton").$$render($$result, { primary: true }, {}, {
+            <a href="${"/presenter/waitlist"}">
+                ${validate_component(Text_button, "TextButton").$$render($$result, { primary: true, buttonClass: "w-full" }, {}, {
     default: () => {
       return `Join waitlist`;
     }
-  })}
+  })}</a>
             </div>
         <div class="${"relative md:left-24 w-full md:w-1/2 md:h-screen px-4 py-8 md:py-32 flex"}">${each(
     [
@@ -207,14 +229,14 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   )}</div>
         </section>
     
-    <section class="${"w-screen h-1/2 md:h-screen background p-8 md:p-16 flex_col_center relative text-center"}"><h3>Contact me for any collaboration.</h3>
+    <section class="${"w-screen h-1/2 md:h-screen background p-8 md:p-16 flex_col_center relative text-center"}"><t3>Contact me for any collaboration.</t3>
         <div class="${"h-16"}"></div>
         <a href="${"mailto:taavi.ruebenhagen@gmail.com"}" class="${"flex_row_center"}">${validate_component(Text_button, "TextButton").$$render($$result, { primary: true }, {}, {
     default: () => {
       return `E-Mail me`;
     }
   })}</a></section>
-    <section class="${"w-screen h-screen background flex_col_center"}"><h class="${"mt-8 text-9xl text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-red-700"}">lol xD.</h></section></main>`;
+    <section class="${"w-screen h-screen background flex_col_center"}"><t class="${"mt-8 text-9xl text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-red-700"}">lol xD.</t></section></main>`;
 });
 export {
   Page as default

@@ -40,6 +40,7 @@ Desktop: Tauri + Svelte + Tailwind
 ## Additional tools (use whenever possible)
 
 Styling: [Tailwind](https://tailwindcss.com)
+- Iconoir
 
 
 ## To try out:
