@@ -1,5 +1,4 @@
 <script lang="ts">
-  import * as scroller from 'svelte-scrollto'
 
   import '$style'
 

@@ -22,24 +22,33 @@
 /* TEXT-RELATED STYLES */
 
 t {
-    @apply selection:bg-onBackground selection:text-background;
+    @apply selection:primary break-words;
 }
 
+@layer utilities {
+    .text-outline {
+        /* TODO: Add cool selection effect */
+        @apply selection:primary;
+        -webkit-text-stroke: 1px #000;
+        -webkit-text-fill-color: transparent;
+    }
 
 
 
-.background {
-  @apply bg-background text-onBackground;
-}
-.background::selection {
-  @apply bg-onBackground text-background;
-}
 
-.primary {
-  @apply bg-primary text-onPrimary;
-}
-.primary::selection {
-  @apply bg-onPrimary text-primary;
+    .background {
+    @apply bg-background text-onBackground;
+    }
+    .background::selection {
+    @apply bg-onBackground text-background;
+    }
+
+    .primary {
+    @apply bg-primary text-onPrimary;
+    }
+    .primary::selection {
+    @apply bg-onPrimary text-primary;
+    }
 }
 
 

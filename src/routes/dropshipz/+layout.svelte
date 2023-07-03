@@ -4,13 +4,7 @@
     import * as easings from 'svelte/easing'
     import { page } from '$app/stores'
   
-    import DeviceDetector from 'svelte-device-detector'
-    import * as scroller from 'svelte-scrollto'
-    //import { Cursor, Interactive } from 'svelte-cursor'
-  
     import '$style'
-  
-    import Icon from '$src/lib/util/deprecated/icon.svelte'
   
     let menuData = ['Home', 'Work', 'Services', 'Contact']
     let isMenuOpen = false

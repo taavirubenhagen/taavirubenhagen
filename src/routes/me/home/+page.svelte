@@ -2,7 +2,6 @@
     import { onMount } from 'svelte';
 
     import DeviceDetector from 'svelte-device-detector';
-    import * as scroller from 'svelte-scrollto';
 
     import '$style';
 

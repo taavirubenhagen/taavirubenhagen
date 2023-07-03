@@ -1,5 +1,4 @@
 import { g as getContext, c as create_ssr_component, d as subscribe, e as escape, f as add_attribute } from "../../../chunks/index2.js";
-import "ua-parser-js";
 /* empty css                      */const getStores = () => {
   const stores = getContext("__svelte__");
   return {

@@ -21,24 +21,27 @@ export const nodes = [
 	() => import('./nodes/17'),
 	() => import('./nodes/18'),
 	() => import('./nodes/19'),
-	() => import('./nodes/20')
+	() => import('./nodes/20'),
+	() => import('./nodes/21'),
+	() => import('./nodes/22')
 ];
 
 export const server_loads = [];
 
 export const dictionary = {
-		"/": [~9],
-		"/contact": [10,[2]],
-		"/dropshipz": [~11,[3],[4]],
-		"/dropshipz/home": [12,[3],[4]],
-		"/dropshipz/shop": [13,[3],[4]],
-		"/me/blog": [14,[5,6]],
-		"/me/contact": [~15,[5]],
-		"/me/home": [16,[5,7]],
-		"/me/landing/social": [17,[5,8]],
-		"/presenter/waitlist": [18],
-		"/supabase-test": [19],
-		"/tts": [20]
+		"/": [~10],
+		"/contact": [11,[2]],
+		"/dropshipz": [~12,[3],[4]],
+		"/dropshipz/home": [13,[3],[4]],
+		"/dropshipz/shop": [14,[3],[4]],
+		"/me/blog": [15,[5,6]],
+		"/me/contact": [~16,[5]],
+		"/me/home": [17,[5,7]],
+		"/me/landing/social": [18,[5,8]],
+		"/portfolio/home": [19,[9]],
+		"/presenter/waitlist": [20],
+		"/supabase-test": [21],
+		"/tts": [22]
 	};
 
 export const hooks = {

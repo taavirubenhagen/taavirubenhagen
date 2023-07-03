@@ -4,10 +4,6 @@
     import * as easings from 'svelte/easing'
     import { page } from '$app/stores'
 
-    import DeviceDetector from 'svelte-device-detector'
-    import * as scroller from 'svelte-scrollto'
-    //import { Cursor, Interactive } from 'svelte-cursor'
-
     import '$style'
     import {
         PrimaryButtonLabel,
@@ -73,7 +69,7 @@
     </div>
     <div class="transition-all duration-400 fixed z-40 {scrollToTopButtonPositionClass} w-screen flex_row_center">
         <button
-            on:click={() => scroller.scrollTo({ y: 0 })}
+            on:click={() => {}}
             class="transition-all duration-200 hover:scale-[102%] shadow-md rounded-lg h-10 bg-background px-4"
         >
             <TertiaryButtonLabel>Back to top</TertiaryButtonLabel>
