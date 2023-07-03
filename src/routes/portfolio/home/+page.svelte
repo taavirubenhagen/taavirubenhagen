@@ -26,6 +26,15 @@
             </DeviceDetector>
         </div>
     </div>
+    <div class="min-h-screen p-16 flex flex-col justify-center items-center sm:items-start">
+        <div class="w-full flex flex-col items-center">
+            {#if true}
+                <H2>Sign up for my newsletter.</H2>
+            {:else}
+                <H2>Thank you.</H2>
+            {/if}
+        </div>
+    </div>
     <!-- TODO: Make it slide into view when scrolled like Cuberto -->
     <div class="w-full half_screen primary p-16 md:p-32 flex flex-col md:flex-row justify-between items-center">
         <div class="h-full flex flex-col justify-between break-words">

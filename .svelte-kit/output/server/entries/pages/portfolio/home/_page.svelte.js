@@ -3,6 +3,9 @@ import { D as DeviceDetector } from "../../../../chunks/DeviceDetector.js";
 /* empty css                         */const H1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<t class="text-8xl md:text-9xl font-bold">${slots.default ? slots.default({}) : ``}</t>`;
 });
+const H2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  return `<t class="text-6xl md:text-7xl font-bold">${slots.default ? slots.default({}) : ``}</t>`;
+});
 const O1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `${validate_component(H1, "H1").$$render($$result, {}, {}, {
     default: () => {
@@ -58,6 +61,11 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       })}`;
     }
   })}</div></div>
+    <div class="min-h-screen p-16 flex flex-col justify-center items-center sm:items-start"><div class="w-full flex flex-col items-center">${`${validate_component(H2, "H2").$$render($$result, {}, {}, {
+    default: () => {
+      return `Sign up for my newsletter.`;
+    }
+  })}`}</div></div>
     
     <div class="w-full half_screen primary p-16 md:p-32 flex flex-col md:flex-row justify-between items-center svelte-1yeb7de"><div class="h-full flex flex-col justify-between break-words">${validate_component(P1, "P1").$$render($$result, {}, {}, {
     default: () => {
