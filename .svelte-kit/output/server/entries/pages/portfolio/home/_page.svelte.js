@@ -59,7 +59,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     }
   })}</div></div>
     
-    <div class="w-full half_screen primary p-16 md:p-32 flex flex-col md:flex-row justify-between items-center svelte-1yeb7de"><div class="h-full flex flex-col justify-between">${validate_component(P1, "P1").$$render($$result, {}, {}, {
+    <div class="w-full half_screen primary p-16 md:p-32 flex flex-col md:flex-row justify-between items-center svelte-1yeb7de"><div class="h-full flex flex-col justify-between break-words">${validate_component(P1, "P1").$$render($$result, {}, {}, {
     default: () => {
       return `${validate_component(B, "B").$$render($$result, {}, {}, {
         default: () => {

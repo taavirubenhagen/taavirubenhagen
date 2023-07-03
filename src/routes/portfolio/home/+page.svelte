@@ -28,7 +28,7 @@
     </div>
     <!-- TODO: Make it slide into view when scrolled like Cuberto -->
     <div class="w-full half_screen primary p-16 md:p-32 flex flex-col md:flex-row justify-between items-center">
-        <div class="h-full flex flex-col justify-between">
+        <div class="h-full flex flex-col justify-between break-words">
             <P1><B>taavi.ruebenhagen@gmail.com</B></P1>
             <div class="text-neutral-500">
                 <div>Pothof 9d</div>
