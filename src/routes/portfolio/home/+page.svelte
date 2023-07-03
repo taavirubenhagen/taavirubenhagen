@@ -10,7 +10,6 @@
     } from '../lib';
 </script>
 
-<!--<svelte:window bind:innerHeight={} />-->
 
 <main>
     <div class="w-full min-h-screen p-16 flex flex-col justify-center items-center sm:items-start">
