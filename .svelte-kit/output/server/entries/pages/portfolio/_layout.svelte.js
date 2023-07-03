@@ -8,7 +8,8 @@ import { D as DeviceDetector } from "../../../chunks/DeviceDetector.js";
   return `
 
 
-<main class="font-sans"><div class="${"absolute z-50 w-1/2 h-[" + escape(scrollPercentage, true) + "%] primary"}"></div>
+<main class="font-sans">
+    <div class="group z-50 fixed w-full h-8"><div class="transition duration-200 h-0.5 group-hover:h-4 group-focus:h-4 primary" style="${"width: " + escape(scrollPercentage, true) + "%; transition-property: height;"}"></div></div>
     <div class="absolute z-45 w-full h-8 opacity-25 primary px-8 flex_row_center">${validate_component(DeviceDetector, "DeviceDetector").$$render($$result, { showInDevice: "mobile" }, {}, {
     default: () => {
       return `Best experienced on desktop.

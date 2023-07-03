@@ -3,8 +3,7 @@
 
     let innerHeight: number;
     let scrollY: number;
-    $: scrollPercentage = scrollY / innerHeight * 100
-
+    $: scrollPercentage = scrollY / innerHeight * 100;
     import "$style";
 </script>
 
@@ -14,7 +13,14 @@
 
 
 <main class="font-sans">
-    <div class="absolute z-50 w-1/2 h-[{scrollPercentage + 30}%] primary"></div>
+    <!-- TODO: Add standard scrollbar effects -->
+    <div class="group z-50 fixed w-full h-8">
+        <div
+            class="transition duration-200 h-0.5 group-hover:h-4 group-focus:h-4 primary"
+            style="width: {scrollPercentage}%; transition-property: height;"
+        >
+        </div>
+    </div>
     <div class="absolute z-45 w-full h-8 opacity-25 primary px-8 flex_row_center">
         <DeviceDetector showInDevice="mobile">
             Best experienced on desktop.

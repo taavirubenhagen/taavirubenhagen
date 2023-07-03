@@ -19,13 +19,7 @@ const P1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 const B = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<t class="underline underline-offset-8">${slots.default ? slots.default({}) : ``}</t>`;
 });
-const _page_svelte_svelte_type_style_lang = "";
-const css = {
-  code: ".half_screen.svelte-1yeb7de{height:50vh}",
-  map: null
-};
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  $$result.css.add(css);
   return `<main><div class="w-full min-h-screen p-16 flex flex-col justify-center items-center sm:items-start"><div class="flex flex-col items-start">${validate_component(O1, "O1").$$render($$result, {}, {}, {
     default: () => {
       return `Hi, I&#39;m`;
@@ -65,7 +59,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     }
   })}`}</div></div>
     
-    <div class="w-full half_screen primary p-16 md:p-32 flex flex-col md:flex-row justify-between items-center svelte-1yeb7de"><div class="h-full flex flex-col justify-between break-words">${validate_component(P1, "P1").$$render($$result, {}, {}, {
+    <div class="w-full md:h-[50vh] primary p-16 md:p-32 flex flex-col md:flex-row justify-between md:items-center"><div class="h-full flex flex-col md:justify-between break-all">${validate_component(P1, "P1").$$render($$result, {}, {}, {
     default: () => {
       return `${validate_component(B, "B").$$render($$result, {}, {}, {
         default: () => {
@@ -74,12 +68,11 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       })}`;
     }
   })}
-            <div class="text-neutral-500"><div>Pothof 9d</div>
+            <div class="pt-8 md:p-0 text-neutral-500"><div>Pothof 9d</div>
                 <div>38122 Braunschweig</div></div></div>
-        <div class="h-full flex flex-col justify-between items-end"><div>LinkedIn</div>
-            <div>Instagram</div>
-            <div>TikTok</div></div></div>
-</main>`;
+        <div class="h-full pt-16 md:p-0 flex flex-col justify-end md:justify-between md:items-end"><div class="h-8 md:h-auto">LinkedIn</div>
+            <div class="h-8 md:h-auto">Instagram</div>
+            <div class="h-8 md:h-auto">TikTok</div></div></div></main>`;
 });
 export {
   Page as default

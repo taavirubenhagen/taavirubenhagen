@@ -35,27 +35,18 @@
         </div>
     </div>
     <!-- TODO: Make it slide into view when scrolled like Cuberto -->
-    <div class="w-full half_screen primary p-16 md:p-32 flex flex-col md:flex-row justify-between items-center">
-        <div class="h-full flex flex-col justify-between break-words">
+    <div class="w-full md:h-[50vh] primary p-16 md:p-32 flex flex-col md:flex-row justify-between md:items-center">
+        <div class="h-full flex flex-col md:justify-between break-all">
             <P1><B>taavi.ruebenhagen@gmail.com</B></P1>
-            <div class="text-neutral-500">
+            <div class="pt-8 md:p-0 text-neutral-500">
                 <div>Pothof 9d</div>
                 <div>38122 Braunschweig</div>
             </div>
         </div>
-        <div class="h-full flex flex-col justify-between items-end">
-            <div>LinkedIn</div>
-            <div>Instagram</div>
-            <div>TikTok</div>
+        <div class="h-full pt-16 md:p-0 flex flex-col justify-end md:justify-between md:items-end">
+            <div class="h-8 md:h-auto">LinkedIn</div>
+            <div class="h-8 md:h-auto">Instagram</div>
+            <div class="h-8 md:h-auto">TikTok</div>
         </div>
     </div>
 </main>
-
-
-
-
-<style>
-    .half_screen {
-        height: 50vh;
-    }
-</style>
