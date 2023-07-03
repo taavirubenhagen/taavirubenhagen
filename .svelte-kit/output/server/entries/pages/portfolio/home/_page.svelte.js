@@ -1,4 +1,4 @@
-import { c as create_ssr_component, v as validate_component } from "../../../../chunks/index2.js";
+import { c as create_ssr_component, v as validate_component, e as escape } from "../../../../chunks/index2.js";
 import { D as DeviceDetector } from "../../../../chunks/DeviceDetector.js";
 /* empty css                         */const H1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<t class="text-8xl md:text-9xl font-bold">${slots.default ? slots.default({}) : ``}</t>`;
@@ -17,7 +17,10 @@ const P1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<t class="text-2xl md:text-3xl font-light">${slots.default ? slots.default({}) : ``}</t>`;
 });
 const B = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<t class="underline underline-offset-8">${slots.default ? slots.default({}) : ``}</t>`;
+  let { underline = true } = $$props;
+  if ($$props.underline === void 0 && $$bindings.underline && underline !== void 0)
+    $$bindings.underline(underline);
+  return `<t class="${"transition duration-400 " + escape(underline ? "underline underline-offset-8" : "", true) + " hover:text-neutral-400"}">${slots.default ? slots.default({}) : ``}</t>`;
 });
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<main><div class="w-full min-h-screen p-16 flex flex-col justify-center items-center sm:items-start"><div class="flex flex-col items-start">${validate_component(O1, "O1").$$render($$result, {}, {}, {

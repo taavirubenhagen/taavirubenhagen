@@ -21,16 +21,24 @@
 
 /* TEXT-RELATED STYLES */
 
-t {
-    @apply selection:primary;
+t::selection {
+    @apply bg-opacity-20 bg-primary text-outline;
 }
 
 @layer utilities {
     .text-outline {
         /* TODO: Add cool selection effect */
-        @apply selection:primary;
+        @apply backdrop-invert;
         -webkit-text-stroke: 1px #000;
         -webkit-text-fill-color: transparent;
+    }
+    .text-outline::selection {
+        @apply bg-opacity-20 bg-primary;
+        -webkit-text-stroke: 1px #000;
+        -webkit-text-fill-color: transparent;
+    }
+    .text-outline-on-primary {
+        @apply text-outline invert;
     }
 
 
