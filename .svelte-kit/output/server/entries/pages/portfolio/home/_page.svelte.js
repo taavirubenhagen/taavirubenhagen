@@ -1,7 +1,7 @@
 import { c as create_ssr_component, v as validate_component } from "../../../../chunks/index2.js";
 import { D as DeviceDetector } from "../../../../chunks/DeviceDetector.js";
 /* empty css                         */const H1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<t class="text-7xl sm:text-8xl md:text-9xl font-bold">${slots.default ? slots.default({}) : ``}</t>`;
+  return `<t class="text-8xl md:text-9xl font-bold">${slots.default ? slots.default({}) : ``}</t>`;
 });
 const O1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `${validate_component(H1, "H1").$$render($$result, {}, {}, {
@@ -11,7 +11,7 @@ const O1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   })}`;
 });
 const P1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<t class="text-3xl font-light">${slots.default ? slots.default({}) : ``}</t>`;
+  return `<t class="text-2xl md:text-3xl font-light">${slots.default ? slots.default({}) : ``}</t>`;
 });
 const B = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<t class="underline underline-offset-8">${slots.default ? slots.default({}) : ``}</t>`;
@@ -25,7 +25,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
   return `
 
-<main><div class="w-screen min-h-screen p-16 flex flex-col justify-center items-center sm:items-start"><div class="flex flex-col items-start">${validate_component(O1, "O1").$$render($$result, {}, {}, {
+<main><div class="w-full min-h-screen p-16 flex flex-col justify-center items-center sm:items-start"><div class="flex flex-col items-start">${validate_component(O1, "O1").$$render($$result, {}, {}, {
     default: () => {
       return `Hi, I&#39;m`;
     }
@@ -59,7 +59,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     }
   })}</div></div>
     
-    <div class="w-screen half_screen primary p-16 md:p-32 flex flex-col md:flex-row justify-between items-center svelte-1yeb7de"><div class="h-full flex flex-col justify-between">${validate_component(P1, "P1").$$render($$result, {}, {}, {
+    <div class="w-full half_screen primary p-16 md:p-32 flex flex-col md:flex-row justify-between items-center svelte-1yeb7de"><div class="h-full flex flex-col justify-between">${validate_component(P1, "P1").$$render($$result, {}, {}, {
     default: () => {
       return `${validate_component(B, "B").$$render($$result, {}, {}, {
         default: () => {
@@ -72,7 +72,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
                 <div>38122 Braunschweig</div></div></div>
         <div class="h-full flex flex-col justify-between items-end"><div>LinkedIn</div>
             <div>Instagram</div>
-            <div>YouTube</div></div></div>
+            <div>TikTok</div></div></div>
 </main>`;
 });
 export {

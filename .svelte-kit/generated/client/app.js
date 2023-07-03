@@ -16,32 +16,21 @@ export const nodes = [
 	() => import('./nodes/12'),
 	() => import('./nodes/13'),
 	() => import('./nodes/14'),
-	() => import('./nodes/15'),
-	() => import('./nodes/16'),
-	() => import('./nodes/17'),
-	() => import('./nodes/18'),
-	() => import('./nodes/19'),
-	() => import('./nodes/20'),
-	() => import('./nodes/21'),
-	() => import('./nodes/22')
+	() => import('./nodes/15')
 ];
 
 export const server_loads = [];
 
 export const dictionary = {
-		"/": [~10],
-		"/contact": [11,[2]],
-		"/dropshipz": [~12,[3],[4]],
-		"/dropshipz/home": [13,[3],[4]],
-		"/dropshipz/shop": [14,[3],[4]],
-		"/me/blog": [15,[5,6]],
-		"/me/contact": [~16,[5]],
-		"/me/home": [17,[5,7]],
-		"/me/landing/social": [18,[5,8]],
-		"/portfolio/home": [19,[9]],
-		"/presenter/waitlist": [20],
-		"/supabase-test": [21],
-		"/tts": [22]
+		"/": [~7],
+		"/me/blog": [8,[2,3]],
+		"/me/contact": [~9,[2]],
+		"/me/home": [10,[2,4]],
+		"/me/landing/social": [11,[2,5]],
+		"/portfolio/home": [12,[6]],
+		"/presenter/waitlist": [13],
+		"/supabase-test": [14],
+		"/tts": [15]
 	};
 
 export const hooks = {

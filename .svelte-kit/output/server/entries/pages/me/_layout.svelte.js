@@ -1,4 +1,4 @@
-import { c as create_ssr_component, h as each, e as escape, v as validate_component, f as add_attribute } from "../../../chunks/index2.js";
+import { c as create_ssr_component, d as each, e as escape, v as validate_component, f as add_attribute } from "../../../chunks/index2.js";
 /* empty css                      */import { I as Icon } from "../../../chunks/icon.js";
 const Tertiary_button_label = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<t class="text-lg md:text-lg font-bold">${slots.default ? slots.default({}) : ``}</t>`;

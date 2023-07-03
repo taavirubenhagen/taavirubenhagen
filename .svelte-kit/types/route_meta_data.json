@@ -2,12 +2,6 @@
 	"/": [
 		"src/routes/+page.server.ts"
 	],
-	"/contact": [],
-	"/dropshipz": [
-		"src/routes/dropshipz/+page.server.ts"
-	],
-	"/dropshipz/home": [],
-	"/dropshipz/shop": [],
 	"/me": [],
 	"/me/blog": [],
 	"/me/contact": [

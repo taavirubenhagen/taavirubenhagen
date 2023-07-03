@@ -12,13 +12,6 @@ function run_all(fns) {
 function safe_not_equal(a, b) {
   return a != a ? b == b : a !== b || (a && typeof a === "object" || typeof a === "function");
 }
-function subscribe(store, ...callbacks) {
-  if (store == null) {
-    return noop;
-  }
-  const unsub = store.subscribe(...callbacks);
-  return unsub.unsubscribe ? () => unsub.unsubscribe() : unsub;
-}
 let current_component;
 function set_current_component(component) {
   current_component = component;
@@ -37,9 +30,6 @@ function afterUpdate(fn) {
 function setContext(key, context) {
   get_current_component().$$.context.set(key, context);
   return context;
-}
-function getContext(key) {
-  return get_current_component().$$.context.get(key);
 }
 const ATTR_REGEX = /[&"]/g;
 const CONTENT_REGEX = /[&<]/g;
@@ -120,11 +110,9 @@ export {
   setContext as a,
   afterUpdate as b,
   create_ssr_component as c,
-  subscribe as d,
+  each as d,
   escape as e,
   add_attribute as f,
-  getContext as g,
-  each as h,
   missing_component as m,
   noop as n,
   onMount as o,
