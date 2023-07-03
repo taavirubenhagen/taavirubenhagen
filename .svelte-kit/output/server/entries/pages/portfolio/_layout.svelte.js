@@ -1,6 +1,11 @@
 import { c as create_ssr_component, e as escape, v as validate_component } from "../../../chunks/index2.js";
 import { D as DeviceDetector } from "../../../chunks/DeviceDetector.js";
-/* empty css                      */const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+/* empty css                      */import { P as P1 } from "../../../chunks/P1.js";
+import { B } from "../../../chunks/B.js";
+const P3 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  return `<t class="">${slots.default ? slots.default({}) : ``}</t>`;
+});
+const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let scrollPercentage;
   let innerHeight;
   let scrollY;
@@ -22,7 +27,46 @@ import { D as DeviceDetector } from "../../../chunks/DeviceDetector.js";
         `;
     }
   })}</div>
-    ${slots.default ? slots.default({}) : ``}</main>`;
+    ${slots.default ? slots.default({}) : ``}
+    
+    <div class="w-full md:h-[50vh] primary p-16 md:p-32 flex flex-col md:flex-row justify-between md:items-center"><div class="h-full flex flex-col md:justify-between break-all">${validate_component(P1, "P1").$$render($$result, {}, {}, {
+    default: () => {
+      return `${validate_component(B, "B").$$render($$result, { onPrimary: true }, {}, {
+        default: () => {
+          return `taavi.ruebenhagen@gmail.com`;
+        }
+      })}`;
+    }
+  })}
+            <div class="pt-8 md:p-0 text-neutral-500"><div>Pothof 9d</div>
+                <div>38122 Braunschweig</div></div></div>
+        <div class="h-full pt-16 md:p-0 flex flex-col justify-end md:justify-between md:items-end"><div class="h-8 md:h-auto">${validate_component(P3, "P3").$$render($$result, {}, {}, {
+    default: () => {
+      return `${validate_component(B, "B").$$render($$result, { onPrimary: true, simple: true }, {}, {
+        default: () => {
+          return `LinkedIn`;
+        }
+      })}`;
+    }
+  })}</div>
+            <div class="h-8 md:h-auto">${validate_component(P3, "P3").$$render($$result, {}, {}, {
+    default: () => {
+      return `${validate_component(B, "B").$$render($$result, { onPrimary: true, simple: true }, {}, {
+        default: () => {
+          return `Instagram`;
+        }
+      })}`;
+    }
+  })}</div>
+            <div class="h-8 md:h-auto">${validate_component(P3, "P3").$$render($$result, {}, {}, {
+    default: () => {
+      return `${validate_component(B, "B").$$render($$result, { onPrimary: true, simple: true }, {}, {
+        default: () => {
+          return `TikTok`;
+        }
+      })}`;
+    }
+  })}</div></div></div></main>`;
 });
 export {
   Layout as default

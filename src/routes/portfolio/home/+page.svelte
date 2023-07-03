@@ -1,11 +1,11 @@
 <script lang="ts">
     import DeviceDetector from "svelte-device-detector";
-
     import "$style";
     import {
+        Icon,
         H1, H2,
         O1,
-        P1,
+        P1, P3,
         B,
     } from '../lib';
 </script>
@@ -26,27 +26,11 @@
         </div>
     </div>
     <div class="min-h-screen p-16 flex flex-col justify-center items-center sm:items-start">
-        <div class="w-full flex flex-col items-center">
-            {#if true}
-                <H2>Sign up for my newsletter.</H2>
-            {:else}
-                <H2>Thank you.</H2>
-            {/if}
-        </div>
-    </div>
-    <!-- TODO: Make it slide into view when scrolled like Cuberto -->
-    <div class="w-full md:h-[50vh] primary p-16 md:p-32 flex flex-col md:flex-row justify-between md:items-center">
-        <div class="h-full flex flex-col md:justify-between break-all">
-            <P1><B>taavi.ruebenhagen@gmail.com</B></P1>
-            <div class="pt-8 md:p-0 text-neutral-500">
-                <div>Pothof 9d</div>
-                <div>38122 Braunschweig</div>
-            </div>
-        </div>
-        <div class="h-full pt-16 md:p-0 flex flex-col justify-end md:justify-between md:items-end">
-            <div class="h-8 md:h-auto">LinkedIn</div>
-            <div class="h-8 md:h-auto">Instagram</div>
-            <div class="h-8 md:h-auto">TikTok</div>
+        <div class="w-full h-[75vh] flex flex-col justify-evenly items-center">
+            
+            <a href="/portfolio/newsletter">
+                <H2><B>Sign up for my newsletter</B></H2>
+            </a>
         </div>
     </div>
 </main>
