@@ -3,13 +3,13 @@ import { D as DeviceDetector } from "../../../chunks/DeviceDetector.js";
 /* empty css                      */import { P as P1 } from "../../../chunks/P1.js";
 import { B } from "../../../chunks/B.js";
 const P3 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<t class="">${slots.default ? slots.default({}) : ``}</t>`;
+  return `<t class="selection:text-outline-on-primary">${slots.default ? slots.default({}) : ``}</t>`;
 });
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let scrollPercentage;
-  let innerHeight;
+  let windowHeight;
   let scrollY;
-  scrollPercentage = scrollY / innerHeight * 100;
+  scrollPercentage = scrollY / windowHeight * 100;
   return `
 
 
@@ -29,7 +29,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   })}</div>
     ${slots.default ? slots.default({}) : ``}
     
-    <div class="w-full md:h-[50vh] primary p-16 md:p-32 flex flex-col md:flex-row justify-between md:items-center"><div class="h-full flex flex-col md:justify-between break-all">${validate_component(P1, "P1").$$render($$result, {}, {}, {
+    <div class="w-full h-[50vh] primary p-16 md:p-32 flex flex-col md:flex-row justify-between md:items-center"><div class="h-full flex flex-col md:justify-between break-all">${validate_component(P1, "P1").$$render($$result, {}, {}, {
     default: () => {
       return `${validate_component(B, "B").$$render($$result, { onPrimary: true }, {}, {
         default: () => {

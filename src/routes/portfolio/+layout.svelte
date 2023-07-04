@@ -7,14 +7,13 @@
         B,
     } from './lib';
 
-    let innerHeight: number;
+    let windowHeight: number;
     let scrollY: number;
-    $: scrollPercentage = scrollY / innerHeight * 100;
+    $: scrollPercentage = scrollY / windowHeight * 100;
 </script>
 
 
-
-<svelte:window bind:innerHeight={innerHeight} bind:scrollY={scrollY} />
+<svelte:window bind:innerHeight={windowHeight} bind:scrollY={scrollY} />
 
 
 <main class="font-sans">
@@ -36,7 +35,7 @@
     </div>
     <slot></slot>
     <!-- TODO: Make it slide into view when scrolled like Cuberto -->
-    <div class="w-full md:h-[50vh] primary p-16 md:p-32 flex flex-col md:flex-row justify-between md:items-center">
+    <div class="w-full h-[50vh] primary p-16 md:p-32 flex flex-col md:flex-row justify-between md:items-center">
         <div class="h-full flex flex-col md:justify-between break-all">
             <P1><B onPrimary>taavi.ruebenhagen@gmail.com</B></P1>
             <div class="pt-8 md:p-0 text-neutral-500">

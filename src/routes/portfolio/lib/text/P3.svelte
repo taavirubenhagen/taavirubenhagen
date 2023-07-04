@@ -2,4 +2,4 @@
     import '$style'
 </script>
 
-<t class=""><slot/></t>
+<t class="selection:text-outline-on-primary"><slot/></t>

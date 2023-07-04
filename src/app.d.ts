@@ -3,9 +3,9 @@ import { Database } from './DatabaseDefinitions'
 
 declare global {
     namespace App {
-    interface Locals {
-        supabase: SupabaseClient<Database>
-            getSession(): Promise<Session | null>
+        interface Locals {
+            supabase: SupabaseClient<Database>
+                getSession(): Promise<Session | null>
         }
         interface PageData {
             session: Session | null
@@ -13,12 +13,4 @@ declare global {
         // interface Error {}
         // interface Platform {}
     }
-
-
-
-
-    module "svelte-device-detector"
-    module "svelte-scrollto"
-
-    module "$src/routes/local_menu_button.svelte"
 }
