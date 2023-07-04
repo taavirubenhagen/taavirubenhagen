@@ -33,7 +33,7 @@
 </script>
 
 
-<svelte:window bind:innerWidth={windowHeight} bind:outerHeight={windowHeight} />
+<svelte:window bind:innerWidth={windowWidth} bind:outerHeight={windowHeight} />
 
 
 <main>
