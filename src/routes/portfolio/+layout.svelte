@@ -35,7 +35,7 @@
     </div>
     <slot></slot>
     <!-- TODO: Make it slide into view when scrolled like Cuberto -->
-    <div class="w-full h-[50vh] primary p-16 md:p-32 flex flex-col md:flex-row justify-between md:items-center">
+    <div class="w-full h-[65vh] sm:h-[50vh] primary p-16 lg:p-32 flex flex-col lg:flex-row justify-between lg:items-center">
         <div class="h-full flex flex-col md:justify-between break-all">
             <!-- TODO: Add feedback page -->
             <a href="mailto:taavi.ruebenhagen@gmail.com"><P1><B onPrimary>taavi.ruebenhagen@gmail.com</B></P1></a>

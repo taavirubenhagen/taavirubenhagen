@@ -12,19 +12,21 @@
 
     let windowWidth: number;
     let windowHeight: number;
+    let scrollY: number;
+
+    $: typedMessageSectionOffset = windowHeight;
+    $: phoneMockupSectionOffset = windowHeight + scrollTypingSpeed * windowHeight - windowHeight;
 
     const letterBasedTyping = true;
-    const visibleMessage = "I'm a self-~taught 18-|year-old~UI/UX|Designer,~Developer|and Entre*preneur.";
-    $: typedMessageSectionOffset = windowHeight;
+    const visibleMessage = "I'm a self-*taught 18-|year-old~UI/UX|Designer,~Developer|and Entre*preneur.";
     const scrollTypingSpeed = 8;
     let scrollTypingProgress = 0;
 
-    globalScrollY.subscribe((scrollY: number) => {
-        /*let words: any[] = [];
-        visibleMessage.split(" ").forEach(e => words.push(e.split("|")))
-        console.log(words.flat());*/
+    globalScrollY.subscribe((value: number) => {
+        scrollY = value;
+        console.log(90 * ( ( scrollY - phoneMockupSectionOffset ) / windowHeight ) - 10);
         let tempScrollTypingProgress = Math.floor(
-            visibleMessage.length * ( scrollY - typedMessageSectionOffset ) / ( windowHeight * ( scrollTypingSpeed * 0.6 ) )
+            visibleMessage.length * ( value - typedMessageSectionOffset ) / ( windowHeight * ( scrollTypingSpeed * 0.6 ) )
         );
         if (["|", " ", "-"].includes(visibleMessage[tempScrollTypingProgress]) || letterBasedTyping) {
             scrollTypingProgress = tempScrollTypingProgress;
@@ -37,17 +39,16 @@
 
 
 <main>
-    <div class="w-full min-h-screen sm:p-16 flex flex-col justify-center items-center sm:items-start">
+    <div class="w-full min-h-screen sm:p-16 flex flex-col justify-center items-center lg:items-start">
         <div class="flex flex-col items-start">
             <O1>Hi, I'm</O1>
-            <DeviceDetector showInDevice="mobile">
+            {#if windowWidth < 1024}
                 <H1>Taavi </H1>
                 <H1>Rüben-</H1>
                 <H1>hagen.</H1>
-            </DeviceDetector>
-            <DeviceDetector showInDevice="desktop">
+            {:else}
                 <H1>Taavi Rübenhagen.</H1>
-            </DeviceDetector>
+            {/if}
         </div>
     </div>
     <div class="bg-gradient-to-b from-background to-primary" style="padding-top: 50vh; min-height: {100 * scrollTypingSpeed}vh;">
@@ -68,18 +69,26 @@
             })()}</O2>
         </div>
     </div>
-    <div class="min-h-screen primary p-16 flex flex-col justify-center items-center sm:items-start">
-        <div class="w-full h-[75vh] flex flex-col justify-evenly items-center">
-            <a href="/portfolio/newsletter">
-                <H2><B onPrimary>Sign up for my newsletter</B></H2>
-            </a>
+    <div class="relative bg-gradient-to-b from-primary via-primary to-teal-900" style="min-height: 500vh;">
+        <div class="sticky top-[15vh] h-[screen] flex_col_center text-onPrimary">
+            <div class="transition duration-800 absolute">
+                <div class="rounded-2xl border border-onPrimary w-[35vh] h-[70vh] flex_col_center text-onPrimary">
+                    [Image]
+                </div>
+            </div>
+            <div
+                class="relative scale-75"
+                style="left: {10 + ( windowWidth > 768 ? 5 : 2) * ( ( scrollY - phoneMockupSectionOffset ) / windowHeight )}vh;"
+            >
+                <div class="rounded-2xl border border-onPrimary w-[35vh] h-[70vh] flex_col_center">
+                    [Image]
+                </div>
+            </div>
         </div>
     </div>
-    <div class="min-h-screen p-16 flex flex-col justify-center items-center sm:items-start">
-        <div class="w-full h-[75vh] flex flex-col justify-evenly items-center">
-            <a href="/portfolio/newsletter">
-                <H2><B>Sign up for my newsletter</B></H2>
-            </a>
-        </div>
+    <div class="h-screen p-16 flex flex_col_center items-start sm:items-center">
+        <a href="/portfolio/newsletter">
+            <H2><B>Sign up for my newsletter</B></H2>
+        </a>
     </div>
 </main>

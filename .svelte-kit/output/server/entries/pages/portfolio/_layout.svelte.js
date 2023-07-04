@@ -29,7 +29,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   })}</div>
     ${slots.default ? slots.default({}) : ``}
     
-    <div class="w-full h-[50vh] primary p-16 md:p-32 flex flex-col md:flex-row justify-between md:items-center"><div class="h-full flex flex-col md:justify-between break-all">
+    <div class="w-full h-[65vh] sm:h-[50vh] primary p-16 lg:p-32 flex flex-col lg:flex-row justify-between lg:items-center"><div class="h-full flex flex-col md:justify-between break-all">
             <a href="mailto:taavi.ruebenhagen@gmail.com">${validate_component(P1, "P1").$$render($$result, {}, {}, {
     default: () => {
       return `${validate_component(B, "B").$$render($$result, { onPrimary: true }, {}, {
