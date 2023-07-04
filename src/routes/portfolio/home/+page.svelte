@@ -14,7 +14,7 @@
     let windowHeight: number;
 
     const letterBasedTyping = true;
-    const visibleMessage = "I'm a self-~taught 18-|year-old~UI/UX|Designer,~Developer|and Entre'preneur.";
+    const visibleMessage = "I'm a self-~taught 18-|year-old~UI/UX|Designer,~Developer|and Entre*preneur.";
     $: typedMessageSectionOffset = windowHeight;
     const scrollTypingSpeed = 8;
     let scrollTypingProgress = 0;
@@ -55,16 +55,16 @@
             <H2>{@html (() => {
                 let m = visibleMessage.substring(0, scrollTypingProgress).replaceAll(" ", "&nbsp;").replaceAll("|", "<br/>");
                 if (windowWidth > 768) {
-                    return m;
+                    return m.replaceAll("~", " ").replaceAll("*", "");
                 }
-                return m.replaceAll("~", "<br/>").replaceAll("'", "<br/>");
+                return m.replaceAll("~", "<br/>").replaceAll("*", "<br/>");
             })()}</H2>
             <O2>{@html (() => {
                 let m = visibleMessage.substring(scrollTypingProgress).replaceAll(" ", "&nbsp;").replaceAll("|", "<br/>");
                 if (windowWidth > 768) {
-                    return m;
+                    return m.replaceAll("~", " ").replaceAll("*", "");
                 }
-                return m.replaceAll("~", "<br/>").replaceAll("'", "<br/>");
+                return m.replaceAll("~", "<br/>").replaceAll("*", "<br/>");
             })()}</O2>
         </div>
     </div>

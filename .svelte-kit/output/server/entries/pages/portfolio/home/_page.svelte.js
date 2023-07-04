@@ -22,7 +22,7 @@ const O2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   })}`;
 });
 const letterBasedTyping = true;
-const visibleMessage = "I'm a self-~taught 18-|year-old~UI/UX|Designer,~Developer|and Entre'preneur.";
+const visibleMessage = "I'm a self-~taught 18-|year-old~UI/UX|Designer,~Developer|and Entre*preneur.";
 const scrollTypingSpeed = 8;
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let typedMessageSectionOffset;
@@ -75,7 +75,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     default: () => {
       return `<!-- HTML_TAG_START -->${(() => {
         let m = visibleMessage.substring(0, scrollTypingProgress).replaceAll(" ", "&nbsp;").replaceAll("|", "<br/>");
-        return m.replaceAll("~", "<br/>").replaceAll("'", "<br/>");
+        return m.replaceAll("~", "<br/>").replaceAll("*", "<br/>");
       })()}<!-- HTML_TAG_END -->`;
     }
   })}
@@ -83,7 +83,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     default: () => {
       return `<!-- HTML_TAG_START -->${(() => {
         let m = visibleMessage.substring(scrollTypingProgress).replaceAll(" ", "&nbsp;").replaceAll("|", "<br/>");
-        return m.replaceAll("~", "<br/>").replaceAll("'", "<br/>");
+        return m.replaceAll("~", "<br/>").replaceAll("*", "<br/>");
       })()}<!-- HTML_TAG_END -->`;
     }
   })}</div></div>
