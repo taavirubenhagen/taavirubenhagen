@@ -10,6 +10,7 @@
         B,
     } from '../lib';
 
+    let windowWidth: number;
     let windowHeight: number;
 
     const letterBasedTyping = true;
@@ -32,7 +33,7 @@
 </script>
 
 
-<svelte:window bind:outerHeight={windowHeight} />
+<svelte:window bind:innerWidth={windowHeight} bind:outerHeight={windowHeight} />
 
 
 <main>
@@ -53,14 +54,14 @@
         <div class="-translate-y-1/2 sticky top-1/2 pointer-events-none sm:p-16 text-center text-white">
             <H2>{@html (() => {
                 let m = visibleMessage.substring(0, scrollTypingProgress).replaceAll(" ", "&nbsp;").replaceAll("|", "<br/>");
-                if (window.innerWidth > 768) {
+                if (windowWidth > 768) {
                     return m;
                 }
                 return m.replaceAll("~", "<br/>").replaceAll("'", "<br/>");
             })()}</H2>
             <O2>{@html (() => {
                 let m = visibleMessage.substring(scrollTypingProgress).replaceAll(" ", "&nbsp;").replaceAll("|", "<br/>");
-                if (window.innerWidth > 768) {
+                if (windowWidth > 768) {
                     return m;
                 }
                 return m.replaceAll("~", "<br/>").replaceAll("'", "<br/>");

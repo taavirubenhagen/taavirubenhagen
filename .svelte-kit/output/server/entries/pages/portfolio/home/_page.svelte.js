@@ -75,9 +75,6 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     default: () => {
       return `<!-- HTML_TAG_START -->${(() => {
         let m = visibleMessage.substring(0, scrollTypingProgress).replaceAll(" ", "&nbsp;").replaceAll("|", "<br/>");
-        if (window.innerWidth > 768) {
-          return m;
-        }
         return m.replaceAll("~", "<br/>").replaceAll("'", "<br/>");
       })()}<!-- HTML_TAG_END -->`;
     }
@@ -86,9 +83,6 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     default: () => {
       return `<!-- HTML_TAG_START -->${(() => {
         let m = visibleMessage.substring(scrollTypingProgress).replaceAll(" ", "&nbsp;").replaceAll("|", "<br/>");
-        if (window.innerWidth > 768) {
-          return m;
-        }
         return m.replaceAll("~", "<br/>").replaceAll("'", "<br/>");
       })()}<!-- HTML_TAG_END -->`;
     }
