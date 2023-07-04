@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { globalScrollY } from "../state";
     import DeviceDetector from "svelte-device-detector";
     import "$style";
     import {
@@ -11,18 +12,27 @@
 
     let windowHeight: number;
 
-    const typedMessage = "I'm a self-taught 17-y/o UI/UX-Designer, Developer and Entrepreneur.";
-    const scrollTypingSpeed = 5
-    let scrollTypingProgress = 0
+    const letterBasedTyping = true;
+    const visibleMessage = "I'm a self-taught 18-|year-old UI/UX|Designer, Developer|and Entrepreneur.";
+    $: typedMessageSectionOffset = windowHeight;
+    const scrollTypingSpeed = 8;
+    let scrollTypingProgress = 0;
 
-    function typeOnScroll(event: any) {
-        console.log(event.target.scrollTop, windowHeight * scrollTypingSpeed - 1);
-        scrollTypingProgress++;
-    }
+    globalScrollY.subscribe((scrollY: number) => {
+        /*let words: any[] = [];
+        visibleMessage.split(" ").forEach(e => words.push(e.split("|")))
+        console.log(words.flat());*/
+        let tempScrollTypingProgress = Math.floor(
+            visibleMessage.length * ( scrollY - typedMessageSectionOffset ) / ( windowHeight * ( scrollTypingSpeed * 0.6 ) )
+        );
+        if (["|", " ", "-"].includes(visibleMessage[tempScrollTypingProgress]) || letterBasedTyping) {
+            scrollTypingProgress = tempScrollTypingProgress;
+        }
+    });
 </script>
 
 
-<svelte:window bind:innerHeight={windowHeight} />
+<svelte:window bind:outerHeight={windowHeight} />
 
 
 <main>
@@ -39,13 +49,14 @@
             </DeviceDetector>
         </div>
     </div>
-    <div
-        on:scroll={typeOnScroll}
-        class="relative w-full h-screen overflow-y-scroll sm:p-16 flex_col_center"
-    >
-        <div class="h-[{100 * scrollTypingSpeed}vh]"></div>
-        <div class="relative z-30">
-            <O2>{typedMessage.substring(0, scrollTypingProgress)}</O2>
+    <div style="padding-top: 50vh; min-height: {100 * scrollTypingSpeed}vh;">
+        <div class="-translate-y-1/2 sticky top-1/2 pointer-events-none sm:p-16 text-center">
+            <H2>{@html (() => {
+                return visibleMessage.substring(0, scrollTypingProgress).replaceAll(" ", "&nbsp;").replaceAll("|", "<br/>");
+            })()}</H2>
+            <O2>{@html (() => {
+                return visibleMessage.substring(scrollTypingProgress).replaceAll(" ", "&nbsp;").replaceAll("|", "<br/>");
+            })()}</O2>
         </div>
     </div>
     <div class="min-h-screen p-16 flex flex-col justify-center items-center sm:items-start">

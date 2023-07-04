@@ -1,4 +1,4 @@
-import { c as create_ssr_component, o as onMount } from "./index2.js";
+import { c as create_ssr_component, o as onMount } from "./index3.js";
 import UAParser from "ua-parser-js";
 const DeviceDetector = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { showInDevice = void 0 } = $$props;

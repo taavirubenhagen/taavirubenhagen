@@ -1,7 +1,7 @@
 <script lang="ts">
     import DeviceDetector from "svelte-device-detector";
-
     import "$style";
+    import { globalScrollY } from "./state";
     import {
         P1, P3,
         B,
@@ -16,7 +16,7 @@
 <svelte:window bind:innerHeight={windowHeight} bind:scrollY={scrollY} />
 
 
-<main class="font-sans">
+<main on:scroll={(event) => globalScrollY.set(event?.currentTarget?.scrollTop)} class="font-sans h-screen overflow-y-scroll">
     <!-- TODO: Add standard scrollbar effects -->
     <div class="group z-50 fixed w-full h-8">
         <div
@@ -37,7 +37,7 @@
     <!-- TODO: Make it slide into view when scrolled like Cuberto -->
     <div class="w-full h-[50vh] primary p-16 md:p-32 flex flex-col md:flex-row justify-between md:items-center">
         <div class="h-full flex flex-col md:justify-between break-all">
-            <P1><B onPrimary>taavi.ruebenhagen@gmail.com</B></P1>
+            <button><P1><B onPrimary>taavi.ruebenhagen@gmail.com</B></P1></button>
             <div class="pt-8 md:p-0 text-neutral-500">
                 <div>Pothof 9d</div>
                 <div>38122 Braunschweig</div>

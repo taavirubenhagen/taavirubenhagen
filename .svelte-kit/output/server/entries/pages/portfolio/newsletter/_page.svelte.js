@@ -1,4 +1,4 @@
-import { c as create_ssr_component, e as escape, o as onMount, v as validate_component } from "../../../../chunks/index2.js";
+import { c as create_ssr_component, e as escape, o as onMount, v as validate_component } from "../../../../chunks/index3.js";
 import { P as PUBLIC_SUPABASE_URL, a as PUBLIC_SUPABASE_ANON_KEY } from "../../../../chunks/public.js";
 import "ua-parser-js";
 import { createClient } from "@supabase/supabase-js";

@@ -1,7 +1,9 @@
-import { c as create_ssr_component, v as validate_component, e as escape } from "../../../../chunks/index2.js";
+import { c as create_ssr_component, v as validate_component, e as escape } from "../../../../chunks/index3.js";
+import { w as writable } from "../../../../chunks/index2.js";
 import { D as DeviceDetector } from "../../../../chunks/DeviceDetector.js";
 /* empty css                         */import { H as H2 } from "../../../../chunks/H2.js";
 import { B } from "../../../../chunks/B.js";
+const globalScrollY = writable(0);
 const H1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<t class="text-8xl md:text-9xl font-bold">${slots.default ? slots.default({}) : ``}</t>`;
 });
@@ -19,10 +21,20 @@ const O2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     }
   })}`;
 });
-const typedMessage = "I'm a self-taught 17-y/o UI/UX-Designer, Developer and Entrepreneur.";
-const scrollTypingSpeed = 5;
+const letterBasedTyping = true;
+const visibleMessage = "I'm a self-taught 18-|year-old UI/UX|Designer, Developer|and Entrepreneur.";
+const scrollTypingSpeed = 8;
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let typedMessageSectionOffset;
+  let windowHeight;
   let scrollTypingProgress = 0;
+  globalScrollY.subscribe((scrollY) => {
+    let tempScrollTypingProgress = Math.floor(visibleMessage.length * (scrollY - typedMessageSectionOffset) / (windowHeight * (scrollTypingSpeed * 0.6)));
+    if (["|", " ", "-"].includes(visibleMessage[tempScrollTypingProgress]) || letterBasedTyping) {
+      scrollTypingProgress = tempScrollTypingProgress;
+    }
+  });
+  typedMessageSectionOffset = windowHeight;
   return `
 
 
@@ -59,10 +71,18 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       })}`;
     }
   })}</div></div>
-    <div class="relative w-full h-screen overflow-y-scroll sm:p-16 flex_col_center"><div class="${"h-[" + escape(100 * scrollTypingSpeed, true) + "vh]"}"></div>
-        <div class="relative z-30">${validate_component(O2, "O2").$$render($$result, {}, {}, {
+    <div style="${"padding-top: 50vh; min-height: " + escape(100 * scrollTypingSpeed, true) + "vh;"}"><div class="-translate-y-1/2 sticky top-1/2 pointer-events-none sm:p-16 text-center">${validate_component(H2, "H2").$$render($$result, {}, {}, {
     default: () => {
-      return `${escape(typedMessage.substring(0, scrollTypingProgress))}`;
+      return `<!-- HTML_TAG_START -->${(() => {
+        return visibleMessage.substring(0, scrollTypingProgress).replaceAll(" ", "&nbsp;").replaceAll("|", "<br/>");
+      })()}<!-- HTML_TAG_END -->`;
+    }
+  })}
+            ${validate_component(O2, "O2").$$render($$result, {}, {}, {
+    default: () => {
+      return `<!-- HTML_TAG_START -->${(() => {
+        return visibleMessage.substring(scrollTypingProgress).replaceAll(" ", "&nbsp;").replaceAll("|", "<br/>");
+      })()}<!-- HTML_TAG_END -->`;
     }
   })}</div></div>
     <div class="min-h-screen p-16 flex flex-col justify-center items-center sm:items-start"><div class="w-full h-[75vh] flex flex-col justify-evenly items-center"><a href="/portfolio/newsletter">${validate_component(H2, "H2").$$render($$result, {}, {}, {

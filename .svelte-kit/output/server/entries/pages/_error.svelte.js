@@ -1,4 +1,4 @@
-import { c as create_ssr_component } from "../../chunks/index2.js";
+import { c as create_ssr_component } from "../../chunks/index3.js";
 /* empty css                   */const Error = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<main><div><t3>Sorry, we can&#39;t find the page you are looking for.</t3>
     <div class="h-8"></div>

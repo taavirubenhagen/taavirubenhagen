@@ -1,4 +1,4 @@
-import { c as create_ssr_component, o as onMount, v as validate_component } from "../../../../chunks/index2.js";
+import { c as create_ssr_component, o as onMount, v as validate_component } from "../../../../chunks/index3.js";
 import { createClient } from "@supabase/supabase-js";
 import { P as PUBLIC_SUPABASE_URL, a as PUBLIC_SUPABASE_ANON_KEY } from "../../../../chunks/public.js";
 /* empty css                         */import { M as Main_headline } from "../../../../chunks/main_headline.js";
