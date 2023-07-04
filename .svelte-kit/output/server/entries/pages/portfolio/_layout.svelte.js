@@ -29,7 +29,8 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   })}</div>
     ${slots.default ? slots.default({}) : ``}
     
-    <div class="w-full h-[50vh] primary p-16 md:p-32 flex flex-col md:flex-row justify-between md:items-center"><div class="h-full flex flex-col md:justify-between break-all">${validate_component(P1, "P1").$$render($$result, {}, {}, {
+    <div class="w-full h-[50vh] primary p-16 md:p-32 flex flex-col md:flex-row justify-between md:items-center"><div class="h-full flex flex-col md:justify-between break-all">
+            <a href="mailto:taavi.ruebenhagen@gmail.com">${validate_component(P1, "P1").$$render($$result, {}, {}, {
     default: () => {
       return `${validate_component(B, "B").$$render($$result, { onPrimary: true }, {}, {
         default: () => {
@@ -37,7 +38,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         }
       })}`;
     }
-  })}
+  })}</a>
             <div class="pt-8 md:p-0 text-neutral-500"><div>Pothof 9d</div>
                 <div>38122 Braunschweig</div></div></div>
         <div class="h-full pt-16 md:p-0 flex flex-col justify-end md:justify-between md:items-end"><div class="h-8 md:h-auto">${validate_component(P3, "P3").$$render($$result, {}, {}, {

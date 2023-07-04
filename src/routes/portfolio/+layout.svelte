@@ -37,7 +37,8 @@
     <!-- TODO: Make it slide into view when scrolled like Cuberto -->
     <div class="w-full h-[50vh] primary p-16 md:p-32 flex flex-col md:flex-row justify-between md:items-center">
         <div class="h-full flex flex-col md:justify-between break-all">
-            <button><P1><B onPrimary>taavi.ruebenhagen@gmail.com</B></P1></button>
+            <!-- TODO: Add feedback page -->
+            <a href="mailto:taavi.ruebenhagen@gmail.com"><P1><B onPrimary>taavi.ruebenhagen@gmail.com</B></P1></a>
             <div class="pt-8 md:p-0 text-neutral-500">
                 <div>Pothof 9d</div>
                 <div>38122 Braunschweig</div>

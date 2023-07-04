@@ -13,7 +13,7 @@
     let windowHeight: number;
 
     const letterBasedTyping = true;
-    const visibleMessage = "I'm a self-taught 18-|year-old UI/UX|Designer, Developer|and Entrepreneur.";
+    const visibleMessage = "I'm a self-~taught 18-|year-old~UI/UX|Designer,~Developer|and Entre'preneur.";
     $: typedMessageSectionOffset = windowHeight;
     const scrollTypingSpeed = 8;
     let scrollTypingProgress = 0;
@@ -49,14 +49,29 @@
             </DeviceDetector>
         </div>
     </div>
-    <div style="padding-top: 50vh; min-height: {100 * scrollTypingSpeed}vh;">
-        <div class="-translate-y-1/2 sticky top-1/2 pointer-events-none sm:p-16 text-center">
+    <div class="bg-gradient-to-b from-background to-primary" style="padding-top: 50vh; min-height: {100 * scrollTypingSpeed}vh;">
+        <div class="-translate-y-1/2 sticky top-1/2 pointer-events-none sm:p-16 text-center text-white">
             <H2>{@html (() => {
-                return visibleMessage.substring(0, scrollTypingProgress).replaceAll(" ", "&nbsp;").replaceAll("|", "<br/>");
+                let m = visibleMessage.substring(0, scrollTypingProgress).replaceAll(" ", "&nbsp;").replaceAll("|", "<br/>");
+                if (window.innerWidth > 768) {
+                    return m;
+                }
+                return m.replaceAll("~", "<br/>").replaceAll("'", "<br/>");
             })()}</H2>
             <O2>{@html (() => {
-                return visibleMessage.substring(scrollTypingProgress).replaceAll(" ", "&nbsp;").replaceAll("|", "<br/>");
+                let m = visibleMessage.substring(scrollTypingProgress).replaceAll(" ", "&nbsp;").replaceAll("|", "<br/>");
+                if (window.innerWidth > 768) {
+                    return m;
+                }
+                return m.replaceAll("~", "<br/>").replaceAll("'", "<br/>");
             })()}</O2>
+        </div>
+    </div>
+    <div class="min-h-screen primary p-16 flex flex-col justify-center items-center sm:items-start">
+        <div class="w-full h-[75vh] flex flex-col justify-evenly items-center">
+            <a href="/portfolio/newsletter">
+                <H2><B onPrimary>Sign up for my newsletter</B></H2>
+            </a>
         </div>
     </div>
     <div class="min-h-screen p-16 flex flex-col justify-center items-center sm:items-start">

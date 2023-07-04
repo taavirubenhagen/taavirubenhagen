@@ -22,7 +22,7 @@ const O2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   })}`;
 });
 const letterBasedTyping = true;
-const visibleMessage = "I'm a self-taught 18-|year-old UI/UX|Designer, Developer|and Entrepreneur.";
+const visibleMessage = "I'm a self-~taught 18-|year-old~UI/UX|Designer,~Developer|and Entre'preneur.";
 const scrollTypingSpeed = 8;
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let typedMessageSectionOffset;
@@ -71,20 +71,37 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       })}`;
     }
   })}</div></div>
-    <div style="${"padding-top: 50vh; min-height: " + escape(100 * scrollTypingSpeed, true) + "vh;"}"><div class="-translate-y-1/2 sticky top-1/2 pointer-events-none sm:p-16 text-center">${validate_component(H2, "H2").$$render($$result, {}, {}, {
+    <div class="bg-gradient-to-b from-background to-primary" style="${"padding-top: 50vh; min-height: " + escape(100 * scrollTypingSpeed, true) + "vh;"}"><div class="-translate-y-1/2 sticky top-1/2 pointer-events-none sm:p-16 text-center text-white">${validate_component(H2, "H2").$$render($$result, {}, {}, {
     default: () => {
       return `<!-- HTML_TAG_START -->${(() => {
-        return visibleMessage.substring(0, scrollTypingProgress).replaceAll(" ", "&nbsp;").replaceAll("|", "<br/>");
+        let m = visibleMessage.substring(0, scrollTypingProgress).replaceAll(" ", "&nbsp;").replaceAll("|", "<br/>");
+        if (window.innerWidth > 768) {
+          return m;
+        }
+        return m.replaceAll("~", "<br/>").replaceAll("'", "<br/>");
       })()}<!-- HTML_TAG_END -->`;
     }
   })}
             ${validate_component(O2, "O2").$$render($$result, {}, {}, {
     default: () => {
       return `<!-- HTML_TAG_START -->${(() => {
-        return visibleMessage.substring(scrollTypingProgress).replaceAll(" ", "&nbsp;").replaceAll("|", "<br/>");
+        let m = visibleMessage.substring(scrollTypingProgress).replaceAll(" ", "&nbsp;").replaceAll("|", "<br/>");
+        if (window.innerWidth > 768) {
+          return m;
+        }
+        return m.replaceAll("~", "<br/>").replaceAll("'", "<br/>");
       })()}<!-- HTML_TAG_END -->`;
     }
   })}</div></div>
+    <div class="min-h-screen primary p-16 flex flex-col justify-center items-center sm:items-start"><div class="w-full h-[75vh] flex flex-col justify-evenly items-center"><a href="/portfolio/newsletter">${validate_component(H2, "H2").$$render($$result, {}, {}, {
+    default: () => {
+      return `${validate_component(B, "B").$$render($$result, { onPrimary: true }, {}, {
+        default: () => {
+          return `Sign up for my newsletter`;
+        }
+      })}`;
+    }
+  })}</a></div></div>
     <div class="min-h-screen p-16 flex flex-col justify-center items-center sm:items-start"><div class="w-full h-[75vh] flex flex-col justify-evenly items-center"><a href="/portfolio/newsletter">${validate_component(H2, "H2").$$render($$result, {}, {}, {
     default: () => {
       return `${validate_component(B, "B").$$render($$result, {}, {}, {
