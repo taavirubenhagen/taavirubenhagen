@@ -16,7 +16,7 @@
 <svelte:window bind:innerHeight={windowHeight} bind:scrollY={scrollY} />
 
 
-<main on:scroll={(event) => globalScrollY.set(event?.currentTarget?.scrollTop)} class="font-sans h-screen overflow-y-scroll">
+<main on:scroll={(event) => globalScrollY.set(event?.currentTarget?.scrollTop)} class="font-sans h-screen overflow-x-hidden overflow-y-scroll">
     <!-- TODO: Add standard scrollbar effects -->
     <div class="group z-50 fixed w-full h-8">
         <div

@@ -24,22 +24,31 @@ const O2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 const letterBasedTyping = true;
 const visibleMessage = "I'm a self-*taught 18-|year-old~UI/UX|Designer,~Developer|and Entre*preneur.";
 const scrollTypingSpeed = 8;
+function calcScrollProgress(offset, sectionHeight, y) {
+  console.log((y - offset) / sectionHeight);
+  return (y - offset) / sectionHeight;
+}
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let typedMessageSectionOffset;
+  let scrollTypingSectionHeight;
   let phoneMockupSectionOffset;
+  let phoneMockupSectionHeight;
+  let phoneMockupScrollProgress;
   let windowHeight;
   let scrollY;
   let scrollTypingProgress = 0;
   globalScrollY.subscribe((value) => {
     scrollY = value;
-    console.log(90 * ((scrollY - phoneMockupSectionOffset) / windowHeight) - 10);
     let tempScrollTypingProgress = Math.floor(visibleMessage.length * (value - typedMessageSectionOffset) / (windowHeight * (scrollTypingSpeed * 0.6)));
     if (["|", " ", "-"].includes(visibleMessage[tempScrollTypingProgress]) || letterBasedTyping) {
       scrollTypingProgress = tempScrollTypingProgress;
     }
   });
   typedMessageSectionOffset = windowHeight;
-  phoneMockupSectionOffset = windowHeight + scrollTypingSpeed * windowHeight - windowHeight;
+  scrollTypingSectionHeight = scrollTypingSpeed * windowHeight;
+  phoneMockupSectionOffset = windowHeight + scrollTypingSectionHeight - windowHeight;
+  phoneMockupSectionHeight = 8 * windowHeight;
+  phoneMockupScrollProgress = calcScrollProgress(phoneMockupSectionOffset, phoneMockupSectionHeight, scrollY);
   return `
 
 
@@ -69,10 +78,9 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       })()}<!-- HTML_TAG_END -->`;
     }
   })}</div></div>
-    <div class="relative bg-gradient-to-b from-primary via-primary to-teal-900" style="min-height: 500vh;"><div class="sticky top-[15vh] h-[screen] flex_col_center text-onPrimary"><div class="transition duration-800 absolute"><div class="rounded-2xl border border-onPrimary w-[35vh] h-[70vh] flex_col_center text-onPrimary">[Image]
-                </div></div>
-            <div class="relative scale-75" style="${"left: " + escape(10 + 2 * ((scrollY - phoneMockupSectionOffset) / windowHeight), true) + "vh;"}"><div class="rounded-2xl border border-onPrimary w-[35vh] h-[70vh] flex_col_center">[Image]
-                </div></div></div></div>
+    <div class="relative -p-[150vh] bg-gradient-to-b primary" style="${"min-height: " + escape(phoneMockupSectionHeight, true) + "px;"}"><div class="sticky top-[25vh] h-[100vh] pb-[50vh] flex_col_center text-onPrimary"><img src="/mockups/presenter_notes_mockup.png" alt="" class="absolute rotate-90 h-[90vh]">
+            <img src="/mockups/presenter_notes_mockup.png" alt="" class="relative -z-10 top-[45vh] h-[90vh]" style="${"right: " + escape(3 + 2 * phoneMockupScrollProgress, true) + "vw; transform: scale(" + escape(85 + 15 * phoneMockupScrollProgress, true) + "%) rotate(90deg);"}">
+            <img src="/mockups/presenter_notes_mockup.png" alt="" class="relative -z-10 bottom-[45vh] h-[90vh]" style="${"left: " + escape(3 + 2 * phoneMockupScrollProgress, true) + "vw; transform: scale(" + escape(85 + 15 * phoneMockupScrollProgress, true) + "%) rotate(90deg);"}"></div></div>
     <div class="h-screen p-16 flex flex_col_center items-start sm:items-center"><a href="/portfolio/newsletter">${validate_component(H2, "H2").$$render($$result, {}, {}, {
     default: () => {
       return `${validate_component(B, "B").$$render($$result, {}, {}, {

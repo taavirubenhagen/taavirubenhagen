@@ -14,17 +14,24 @@
     let windowHeight: number;
     let scrollY: number;
 
-    $: typedMessageSectionOffset = windowHeight;
-    $: phoneMockupSectionOffset = windowHeight + scrollTypingSpeed * windowHeight - windowHeight;
+    function calcScrollProgress(offset: number, sectionHeight: number, y: number): number {
+        console.log(( y - offset ) / sectionHeight);
+        return ( y - offset ) / sectionHeight;
+    }
 
+    $: typedMessageSectionOffset = windowHeight;
+    $: scrollTypingSectionHeight = scrollTypingSpeed * windowHeight;
     const letterBasedTyping = true;
     const visibleMessage = "I'm a self-*taught 18-|year-old~UI/UX|Designer,~Developer|and Entre*preneur.";
     const scrollTypingSpeed = 8;
     let scrollTypingProgress = 0;
 
+    $: phoneMockupSectionOffset = windowHeight + scrollTypingSectionHeight - windowHeight;
+    $: phoneMockupSectionHeight = 8 * windowHeight;
+    $: phoneMockupScrollProgress = calcScrollProgress(phoneMockupSectionOffset, phoneMockupSectionHeight, scrollY);
+
     globalScrollY.subscribe((value: number) => {
         scrollY = value;
-        console.log(90 * ( ( scrollY - phoneMockupSectionOffset ) / windowHeight ) - 10);
         let tempScrollTypingProgress = Math.floor(
             visibleMessage.length * ( value - typedMessageSectionOffset ) / ( windowHeight * ( scrollTypingSpeed * 0.6 ) )
         );
@@ -69,21 +76,26 @@
             })()}</O2>
         </div>
     </div>
-    <div class="relative bg-gradient-to-b from-primary via-primary to-teal-900" style="min-height: 500vh;">
-        <div class="sticky top-[15vh] h-[screen] flex_col_center text-onPrimary">
-            <div class="transition duration-800 absolute">
-                <div class="rounded-2xl border border-onPrimary w-[35vh] h-[70vh] flex_col_center text-onPrimary">
-                    [Image]
-                </div>
-            </div>
-            <div
-                class="relative scale-75"
-                style="left: {10 + ( windowWidth > 768 ? 5 : 2) * ( ( scrollY - phoneMockupSectionOffset ) / windowHeight )}vh;"
-            >
-                <div class="rounded-2xl border border-onPrimary w-[35vh] h-[70vh] flex_col_center">
-                    [Image]
-                </div>
-            </div>
+    <div
+        class="relative -p-[150vh] bg-gradient-to-b primary"
+        style="min-height: {phoneMockupSectionHeight}px;"
+    >
+        <div class="sticky top-[25vh] h-[100vh] pb-[50vh] flex_col_center text-onPrimary">
+            <img src="/mockups/presenter_notes_mockup.png" alt="" class="absolute rotate-90 h-[90vh]"/>
+            <img
+                src="/mockups/presenter_notes_mockup.png" alt=""
+                class="relative -z-10 top-[45vh] h-[90vh]"
+                style=
+                    "right: {3 + ( windowWidth > 768 ? 30 : 2) * phoneMockupScrollProgress}vw;
+                    transform: scale({85 + 15 * phoneMockupScrollProgress}%) rotate(90deg);"
+            />
+            <img
+                src="/mockups/presenter_notes_mockup.png" alt=""
+                class="relative -z-10 bottom-[45vh] h-[90vh]"
+                style=
+                    "left: {3 + ( windowWidth > 768 ? 30 : 2) * phoneMockupScrollProgress}vw;
+                    transform: scale({85 + 15 * phoneMockupScrollProgress}%) rotate(90deg);"
+            />
         </div>
     </div>
     <div class="h-screen p-16 flex flex_col_center items-start sm:items-center">

@@ -13,7 +13,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `
 
 
-<main class="font-sans h-screen overflow-y-scroll">
+<main class="font-sans h-screen overflow-x-hidden overflow-y-scroll">
     <div class="group z-50 fixed w-full h-8"><div class="transition duration-200 h-0.5 group-hover:h-4 group-focus:h-4 primary" style="${"width: " + escape(scrollPercentage, true) + "%; transition-property: height;"}"></div></div>
     <div class="absolute z-45 w-full h-8 opacity-25 primary px-8 flex_row_center">${validate_component(DeviceDetector, "DeviceDetector").$$render($$result, { showInDevice: "mobile" }, {}, {
     default: () => {
