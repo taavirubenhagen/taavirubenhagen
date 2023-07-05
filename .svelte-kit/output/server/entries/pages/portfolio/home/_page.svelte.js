@@ -61,7 +61,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return `Taavi R\xFCbenhagen.`;
     }
   })}`}</div></div>
-    <div class="bg-gradient-to-b from-background to-primary" style="${"padding-top: 50vh; min-height: " + escape(100 * scrollTypingSpeed, true) + "vh;"}"><div class="-translate-y-1/2 sticky top-1/2 pointer-events-none sm:p-16 text-center text-white">${validate_component(H2, "H2").$$render($$result, {}, {}, {
+    <div class="bg-gradient-to-b from-background to-primary" style="${"padding-top: 50vh; height: " + escape(100 * scrollTypingSpeed, true) + "vh;"}"><div class="-translate-y-1/2 sticky top-1/2 pointer-events-none sm:p-16 text-center text-white">${validate_component(H2, "H2").$$render($$result, {}, {}, {
     default: () => {
       return `<!-- HTML_TAG_START -->${(() => {
         let m = visibleMessage.substring(0, scrollTypingProgress).replaceAll(" ", "&nbsp;").replaceAll("|", "<br/>");

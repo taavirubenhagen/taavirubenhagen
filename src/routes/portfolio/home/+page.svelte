@@ -33,7 +33,7 @@
     globalScrollY.subscribe((value: number) => {
         scrollY = value;
         let tempScrollTypingProgress = Math.floor(
-            visibleMessage.length * ( value - typedMessageSectionOffset ) / ( windowHeight * ( scrollTypingSpeed *  + ( windowWidth > 768 ? 0.6 : 0.2 ) ) )
+            visibleMessage.length * ( value - typedMessageSectionOffset ) / ( windowHeight * ( scrollTypingSpeed *  + ( windowWidth > 768 ? 0.35 : 0.2 ) ) )
         );
         if (["|", " ", "-"].includes(visibleMessage[tempScrollTypingProgress]) || letterBasedTyping) {
             scrollTypingProgress = tempScrollTypingProgress;
@@ -58,7 +58,7 @@
             {/if}
         </div>
     </div>
-    <div class="bg-gradient-to-b from-background via-primary to-primary" style="padding-top: 50vh; min-height: {100 * scrollTypingSpeed}vh;">
+    <div class="bg-gradient-to-b from-background to-primary" style="padding-top: 50vh; height: {100 * scrollTypingSpeed}vh;">
         <div class="-translate-y-1/2 sticky top-1/2 pointer-events-none sm:p-16 text-center text-white">
             <H2>{@html (() => {
                 let m = visibleMessage.substring(0, scrollTypingProgress).replaceAll(" ", "&nbsp;").replaceAll("|", "<br/>");

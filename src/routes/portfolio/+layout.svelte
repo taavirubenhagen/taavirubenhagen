@@ -10,22 +10,37 @@
     let windowHeight: number;
     let scrollY: number;
     $: scrollPercentage = scrollY / windowHeight * 100;
+    let cursor: HTMLElement;
 </script>
 
 
 <svelte:window bind:innerHeight={windowHeight} bind:scrollY={scrollY} />
 
 
-<main on:scroll={(event) => globalScrollY.set(event?.currentTarget?.scrollTop)} class="font-sans h-screen overflow-x-hidden overflow-y-scroll">
+<main
+    on:mousemove={(event) => {
+        cursor.style.left = event.clientX + 'px';
+        cursor.style.top = event.clientY + 'px';
+    }}
+    on:scroll={(event) => globalScrollY.set(event?.currentTarget?.scrollTop)}
+    class="font-sans h-screen overflow-x-hidden overflow-y-scroll cursor-none"
+>
     <!-- TODO: Add standard scrollbar effects -->
-    <div class="group z-50 fixed w-full h-8">
+    <DeviceDetector showInDevice="desktop">
+        <div
+            bind:this={cursor}
+            class="fixed z-50 pointer-events-none backdrop-invert rounded-full w-4 h-4"
+            style="box-shadow: 0 0 32px white, 0 0 32px white, 0 0 32px white, 0 0 32px white;"
+        ></div>
+    </DeviceDetector>
+    <div class="group z-45 fixed w-full h-8">
         <div
             class="transition duration-200 h-0.5 group-hover:h-4 group-focus:h-4 primary"
             style="width: {scrollPercentage}%; transition-property: height;"
         >
         </div>
     </div>
-    <div class="absolute z-45 w-full h-8 opacity-25 primary px-8 flex_row_center">
+    <div class="absolute z-40 w-full h-8 opacity-25 primary px-8 flex_row_center">
         <DeviceDetector showInDevice="mobile">
             Best experienced on desktop.
         </DeviceDetector>
@@ -51,3 +66,10 @@
         </div>
     </div>
 </main>
+
+
+<style>
+    .custom-cursor {
+        box-shadow: 10px 10px 10px black;
+    }
+</style>

@@ -1,4 +1,4 @@
-import { c as create_ssr_component, e as escape, v as validate_component } from "../../../chunks/index3.js";
+import { c as create_ssr_component, v as validate_component, f as add_attribute, e as escape } from "../../../chunks/index3.js";
 import { D as DeviceDetector } from "../../../chunks/DeviceDetector.js";
 /* empty css                      */import { P as P1 } from "../../../chunks/P1.js";
 import { B } from "../../../chunks/B.js";
@@ -9,13 +9,19 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let scrollPercentage;
   let windowHeight;
   let scrollY;
+  let cursor;
   scrollPercentage = scrollY / windowHeight * 100;
   return `
 
 
-<main class="font-sans h-screen overflow-x-hidden overflow-y-scroll">
-    <div class="group z-50 fixed w-full h-8"><div class="transition duration-200 h-0.5 group-hover:h-4 group-focus:h-4 primary" style="${"width: " + escape(scrollPercentage, true) + "%; transition-property: height;"}"></div></div>
-    <div class="absolute z-45 w-full h-8 opacity-25 primary px-8 flex_row_center">${validate_component(DeviceDetector, "DeviceDetector").$$render($$result, { showInDevice: "mobile" }, {}, {
+<main class="font-sans h-screen overflow-x-hidden overflow-y-scroll cursor-none">
+    ${validate_component(DeviceDetector, "DeviceDetector").$$render($$result, { showInDevice: "desktop" }, {}, {
+    default: () => {
+      return `<div class="fixed z-50 pointer-events-none backdrop-invert rounded-full w-4 h-4" style="box-shadow: 0 0 32px white, 0 0 32px white, 0 0 32px white, 0 0 32px white;"${add_attribute("this", cursor, 0)}></div>`;
+    }
+  })}
+    <div class="group z-45 fixed w-full h-8"><div class="transition duration-200 h-0.5 group-hover:h-4 group-focus:h-4 primary" style="${"width: " + escape(scrollPercentage, true) + "%; transition-property: height;"}"></div></div>
+    <div class="absolute z-40 w-full h-8 opacity-25 primary px-8 flex_row_center">${validate_component(DeviceDetector, "DeviceDetector").$$render($$result, { showInDevice: "mobile" }, {}, {
     default: () => {
       return `Best experienced on desktop.
         `;
@@ -67,7 +73,8 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         }
       })}`;
     }
-  })}</div></div></div></main>`;
+  })}</div></div></div>
+</main>`;
 });
 export {
   Layout as default
