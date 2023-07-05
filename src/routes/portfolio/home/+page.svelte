@@ -77,10 +77,10 @@
         </div>
     </div>
     <div
-        class="relative -p-[150vh] bg-gradient-to-b primary"
+        class="relative pb-[100vh] bg-gradient-to-b primary"
         style="min-height: {phoneMockupSectionHeight}px;"
     >
-        <div class="sticky top-[25vh] h-[100vh] pb-[50vh] flex_col_center text-onPrimary">
+        <div class="sticky top-[25vh] h-[50vh] flex_col_center text-onPrimary">
             <img src="/mockups/presenter_notes_mockup.png" alt="" class="absolute rotate-90 h-[90vh]"/>
             <img
                 src="/mockups/presenter_notes_mockup.png" alt=""
