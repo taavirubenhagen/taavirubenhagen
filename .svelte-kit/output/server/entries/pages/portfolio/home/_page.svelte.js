@@ -1,4 +1,4 @@
-import { c as create_ssr_component, v as validate_component, e as escape } from "../../../../chunks/index3.js";
+import { c as create_ssr_component, v as validate_component, e as escape, f as add_attribute } from "../../../../chunks/index3.js";
 import { w as writable } from "../../../../chunks/index2.js";
 import "ua-parser-js";
 /* empty css                         */import { H as H2 } from "../../../../chunks/H2.js";
@@ -33,13 +33,12 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let scrollTypingSectionHeight;
   let phoneMockupSectionOffset;
   let phoneMockupSectionHeight;
-  let phoneMockupScrollProgress;
   let windowHeight;
   let scrollY;
   let scrollTypingProgress = 0;
   globalScrollY.subscribe((value) => {
     scrollY = value;
-    let tempScrollTypingProgress = Math.floor(visibleMessage.length * (value - typedMessageSectionOffset) / (windowHeight * (scrollTypingSpeed * 0.6)));
+    let tempScrollTypingProgress = Math.floor(visibleMessage.length * (value - typedMessageSectionOffset) / (windowHeight * (scrollTypingSpeed * 0.2)));
     if (["|", " ", "-"].includes(visibleMessage[tempScrollTypingProgress]) || letterBasedTyping) {
       scrollTypingProgress = tempScrollTypingProgress;
     }
@@ -48,7 +47,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   scrollTypingSectionHeight = scrollTypingSpeed * windowHeight;
   phoneMockupSectionOffset = windowHeight + scrollTypingSectionHeight - windowHeight;
   phoneMockupSectionHeight = 8 * windowHeight;
-  phoneMockupScrollProgress = calcScrollProgress(phoneMockupSectionOffset, phoneMockupSectionHeight, scrollY);
+  calcScrollProgress(phoneMockupSectionOffset, phoneMockupSectionHeight, scrollY);
   return `
 
 
@@ -78,9 +77,25 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       })()}<!-- HTML_TAG_END -->`;
     }
   })}</div></div>
-    <div class="relative pb-[100vh] bg-gradient-to-b primary" style="${"min-height: " + escape(phoneMockupSectionHeight, true) + "px;"}"><div class="sticky top-[25vh] h-[50vh] flex_col_center text-onPrimary"><img src="/mockups/presenter_notes_mockup.png" alt="" class="absolute rotate-90 h-[90vh]">
-            <img src="/mockups/presenter_notes_mockup.png" alt="" class="relative -z-10 top-[45vh] h-[90vh]" style="${"right: " + escape(3 + 2 * phoneMockupScrollProgress, true) + "vw; transform: scale(" + escape(85 + 15 * phoneMockupScrollProgress, true) + "%) rotate(90deg);"}">
-            <img src="/mockups/presenter_notes_mockup.png" alt="" class="relative -z-10 bottom-[45vh] h-[90vh]" style="${"left: " + escape(3 + 2 * phoneMockupScrollProgress, true) + "vw; transform: scale(" + escape(85 + 15 * phoneMockupScrollProgress, true) + "%) rotate(90deg);"}"></div></div>
+    <div class="relative pb-[100vh] primary" style="${"height: " + escape(phoneMockupSectionHeight, true) + "px;"}"><div class="sticky top-[25vh] h-[50vh] flex_col_center text-onPrimary"${add_attribute(
+    "style",
+    "",
+    0
+  )}><img src="/mockups/presenter_notes_mockup.png" alt="" class="static md:absolute rotate-90 h-[90vh]">
+            <img src="/mockups/presenter_notes_mockup.png" alt="" class="static md:relative -z-10 top-[45vh] h-[90vh]" style="${"right: " + escape(
+    0,
+    true
+  ) + "vw; transform: scale(" + escape(
+    100,
+    true
+  ) + "%) rotate(90deg);"}">
+            <img src="/mockups/presenter_notes_mockup.png" alt="" class="static md:relative -z-10 bottom-[45vh] h-[90vh]" style="${"left: " + escape(
+    0,
+    true
+  ) + "vw; transform: scale(" + escape(
+    100,
+    true
+  ) + "%) rotate(90deg);"}"></div></div>
     <div class="h-screen p-16 flex flex_col_center items-start sm:items-center"><a href="/portfolio/newsletter">${validate_component(H2, "H2").$$render($$result, {}, {}, {
     default: () => {
       return `${validate_component(B, "B").$$render($$result, {}, {}, {

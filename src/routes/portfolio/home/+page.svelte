@@ -33,7 +33,7 @@
     globalScrollY.subscribe((value: number) => {
         scrollY = value;
         let tempScrollTypingProgress = Math.floor(
-            visibleMessage.length * ( value - typedMessageSectionOffset ) / ( windowHeight * ( scrollTypingSpeed * 0.6 ) )
+            visibleMessage.length * ( value - typedMessageSectionOffset ) / ( windowHeight * ( scrollTypingSpeed *  + ( windowWidth > 768 ? 0.6 : 0.2 ) ) )
         );
         if (["|", " ", "-"].includes(visibleMessage[tempScrollTypingProgress]) || letterBasedTyping) {
             scrollTypingProgress = tempScrollTypingProgress;
@@ -58,7 +58,7 @@
             {/if}
         </div>
     </div>
-    <div class="bg-gradient-to-b from-background to-primary" style="padding-top: 50vh; min-height: {100 * scrollTypingSpeed}vh;">
+    <div class="bg-gradient-to-b from-background via-primary to-primary" style="padding-top: 50vh; min-height: {100 * scrollTypingSpeed}vh;">
         <div class="-translate-y-1/2 sticky top-1/2 pointer-events-none sm:p-16 text-center text-white">
             <H2>{@html (() => {
                 let m = visibleMessage.substring(0, scrollTypingProgress).replaceAll(" ", "&nbsp;").replaceAll("|", "<br/>");
@@ -77,24 +77,27 @@
         </div>
     </div>
     <div
-        class="relative pb-[100vh] bg-gradient-to-b primary"
-        style="min-height: {phoneMockupSectionHeight}px;"
+        class="relative pb-[100vh] primary"
+        style="height: {windowWidth < 768 ? 0 : phoneMockupSectionHeight}px;"
     >
-        <div class="sticky top-[25vh] h-[50vh] flex_col_center text-onPrimary">
-            <img src="/mockups/presenter_notes_mockup.png" alt="" class="absolute rotate-90 h-[90vh]"/>
+        <div
+            class="sticky top-[25vh] h-[50vh] flex_col_center text-onPrimary"
+            style={windowWidth < 768 ? "transform: translateY(-" + ( 3 * 90 + 50 ) + "vh);" : ""}
+        >
+            <img src="/mockups/presenter_notes_mockup.png" alt="" class="static md:absolute rotate-90 h-[90vh]"/>
             <img
                 src="/mockups/presenter_notes_mockup.png" alt=""
-                class="relative -z-10 top-[45vh] h-[90vh]"
+                class="static md:relative -z-10 top-[45vh] h-[90vh]"
                 style=
-                    "right: {3 + ( windowWidth > 768 ? 30 : 2) * phoneMockupScrollProgress}vw;
-                    transform: scale({85 + 15 * phoneMockupScrollProgress}%) rotate(90deg);"
+                    "right: {windowWidth > 768 ? 3 + 30 * phoneMockupScrollProgress : 0}vw;
+                    transform: scale({windowWidth > 768 ? 85 + 15 * phoneMockupScrollProgress : 100}%) rotate(90deg);"
             />
             <img
                 src="/mockups/presenter_notes_mockup.png" alt=""
-                class="relative -z-10 bottom-[45vh] h-[90vh]"
+                class="static md:relative -z-10 bottom-[45vh] h-[90vh]"
                 style=
-                    "left: {3 + ( windowWidth > 768 ? 30 : 2) * phoneMockupScrollProgress}vw;
-                    transform: scale({85 + 15 * phoneMockupScrollProgress}%) rotate(90deg);"
+                    "left: {windowWidth > 768 ? 3 + 30 * phoneMockupScrollProgress : 0}vw;
+                    transform: scale({windowWidth > 768 ? 85 + 15 * phoneMockupScrollProgress : 100}%) rotate(90deg);"
             />
         </div>
     </div>
