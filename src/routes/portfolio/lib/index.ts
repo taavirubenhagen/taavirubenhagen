@@ -6,6 +6,7 @@ import O2 from "./text/O2.svelte";
 import P1 from "./text/P1.svelte";
 import P3 from "./text/P3.svelte";
 import B from "./text/B.svelte";
+import Button from "./components/Button.svelte";
 
 export {
     Icon,
@@ -13,4 +14,5 @@ export {
     O1, O2,
     P1, P3,
     B,
+    Button,
 };

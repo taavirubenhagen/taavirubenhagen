@@ -1,9 +1,8 @@
 import { c as create_ssr_component, v as validate_component, e as escape, f as add_attribute } from "../../../../chunks/index3.js";
-import { w as writable } from "../../../../chunks/index2.js";
+import { g as globalScrollY, B as Button } from "../../../../chunks/Button.js";
 import "ua-parser-js";
 /* empty css                         */import { H as H2 } from "../../../../chunks/H2.js";
 import { B } from "../../../../chunks/B.js";
-const globalScrollY = writable(0);
 const H1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<t class="text-8xl md:text-9xl font-bold">${slots.default ? slots.default({}) : ``}</t>`;
 });
@@ -24,34 +23,44 @@ const O2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 const letterBasedTyping = true;
 const visibleMessage = "I'm a self-*taught 18-|year-old~UI/UX|Designer,~Developer|and Entre*preneur.";
 const scrollTypingSpeed = 8;
-function calcScrollProgress(offset, sectionHeight, y) {
-  console.log((y - offset) / sectionHeight);
-  return (y - offset) / sectionHeight;
-}
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let typedMessageSectionOffset;
-  let scrollTypingSectionHeight;
-  let phoneMockupSectionOffset;
   let phoneMockupSectionHeight;
   let windowHeight;
-  let scrollY;
   let scrollTypingProgress = 0;
   globalScrollY.subscribe((value) => {
-    scrollY = value;
     let tempScrollTypingProgress = Math.floor(visibleMessage.length * (value - typedMessageSectionOffset) / (windowHeight * (scrollTypingSpeed * 0.2)));
     if (["|", " ", "-"].includes(visibleMessage[tempScrollTypingProgress]) || letterBasedTyping) {
       scrollTypingProgress = tempScrollTypingProgress;
     }
   });
   typedMessageSectionOffset = windowHeight;
-  scrollTypingSectionHeight = scrollTypingSpeed * windowHeight;
-  phoneMockupSectionOffset = windowHeight + scrollTypingSectionHeight - windowHeight;
   phoneMockupSectionHeight = 8 * windowHeight;
-  calcScrollProgress(phoneMockupSectionOffset, phoneMockupSectionHeight, scrollY);
   return `
 
 
-<main><div class="w-full min-h-screen sm:p-16 flex flex-col justify-center items-center lg:items-start"><div class="flex flex-col items-start">${validate_component(O1, "O1").$$render($$result, {}, {}, {
+<main><div class="h-screen p-16 flex flex_col_center items-start sm:items-center"><a href="/portfolio/newsletter">${validate_component(Button, "Button").$$render(
+    $$result,
+    {
+      onClick: () => {
+      }
+    },
+    {},
+    {
+      default: () => {
+        return `${validate_component(H2, "H2").$$render($$result, {}, {}, {
+          default: () => {
+            return `${validate_component(B, "B").$$render($$result, {}, {}, {
+              default: () => {
+                return `Sign up for my newsletter`;
+              }
+            })}`;
+          }
+        })}`;
+      }
+    }
+  )}</a></div>
+    <div class="w-full min-h-screen sm:p-16 flex flex-col justify-center items-center lg:items-start"><div class="flex flex-col items-start">${validate_component(O1, "O1").$$render($$result, {}, {}, {
     default: () => {
       return `Hi, I&#39;m`;
     }
@@ -95,16 +104,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   ) + "vw; transform: scale(" + escape(
     100,
     true
-  ) + "%) rotate(90deg);"}"></div></div>
-    <div class="h-screen p-16 flex flex_col_center items-start sm:items-center"><a href="/portfolio/newsletter">${validate_component(H2, "H2").$$render($$result, {}, {}, {
-    default: () => {
-      return `${validate_component(B, "B").$$render($$result, {}, {}, {
-        default: () => {
-          return `Sign up for my newsletter`;
-        }
-      })}`;
-    }
-  })}</a></div></main>`;
+  ) + "%) rotate(90deg);"}"></div></div></main>`;
 });
 export {
   Page as default

@@ -8,6 +8,7 @@
         O1, O2,
         P1, P3,
         B,
+        Button,
     } from '../lib';
 
     let windowWidth: number;
@@ -15,7 +16,6 @@
     let scrollY: number;
 
     function calcScrollProgress(offset: number, sectionHeight: number, y: number): number {
-        console.log(( y - offset ) / sectionHeight);
         return ( y - offset ) / sectionHeight;
     }
 
@@ -33,7 +33,7 @@
     globalScrollY.subscribe((value: number) => {
         scrollY = value;
         let tempScrollTypingProgress = Math.floor(
-            visibleMessage.length * ( value - typedMessageSectionOffset ) / ( windowHeight * ( scrollTypingSpeed *  + ( windowWidth > 768 ? 0.35 : 0.2 ) ) )
+            visibleMessage.length * ( value - typedMessageSectionOffset ) / ( windowHeight * ( scrollTypingSpeed *  + ( windowWidth > 768 ? 0.7 : 0.2 ) ) )
         );
         if (["|", " ", "-"].includes(visibleMessage[tempScrollTypingProgress]) || letterBasedTyping) {
             scrollTypingProgress = tempScrollTypingProgress;
@@ -103,7 +103,7 @@
     </div>
     <div class="h-screen p-16 flex flex_col_center items-start sm:items-center">
         <a href="/portfolio/newsletter">
-            <H2><B>Sign up for my newsletter</B></H2>
+            <Button onClick={() => {}}><H2><B>Sign up for my newsletter</B></H2></Button>
         </a>
     </div>
 </main>
