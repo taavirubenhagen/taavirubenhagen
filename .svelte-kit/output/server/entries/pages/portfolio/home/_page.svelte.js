@@ -39,28 +39,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `
 
 
-<main><div class="h-screen p-16 flex flex_col_center items-start sm:items-center"><a href="/portfolio/newsletter">${validate_component(Button, "Button").$$render(
-    $$result,
-    {
-      onClick: () => {
-      }
-    },
-    {},
-    {
-      default: () => {
-        return `${validate_component(H2, "H2").$$render($$result, {}, {}, {
-          default: () => {
-            return `${validate_component(B, "B").$$render($$result, {}, {}, {
-              default: () => {
-                return `Sign up for my newsletter`;
-              }
-            })}`;
-          }
-        })}`;
-      }
-    }
-  )}</a></div>
-    <div class="w-full min-h-screen sm:p-16 flex flex-col justify-center items-center lg:items-start"><div class="flex flex-col items-start">${validate_component(O1, "O1").$$render($$result, {}, {}, {
+<main><div class="w-full min-h-screen sm:p-16 flex flex-col justify-center items-center lg:items-start"><div class="flex flex-col items-start">${validate_component(O1, "O1").$$render($$result, {}, {}, {
     default: () => {
       return `Hi, I&#39;m`;
     }
@@ -104,7 +83,28 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   ) + "vw; transform: scale(" + escape(
     100,
     true
-  ) + "%) rotate(90deg);"}"></div></div></main>`;
+  ) + "%) rotate(90deg);"}"></div></div>
+    <div class="h-screen p-16 flex flex_col_center items-start sm:items-center"><a href="/portfolio/newsletter">${validate_component(Button, "Button").$$render(
+    $$result,
+    {
+      onClick: () => {
+      }
+    },
+    {},
+    {
+      default: () => {
+        return `${validate_component(H2, "H2").$$render($$result, {}, {}, {
+          default: () => {
+            return `${validate_component(B, "B").$$render($$result, {}, {}, {
+              default: () => {
+                return `Sign up for my newsletter`;
+              }
+            })}`;
+          }
+        })}`;
+      }
+    }
+  )}</a></div></main>`;
 });
 export {
   Page as default
