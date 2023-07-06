@@ -40,7 +40,7 @@ declare module '$env/static/private' {
 	export const COMPUTERNAME: string;
 	export const ComSpec: string;
 	export const DriverData: string;
-	export const EFC_8940: string;
+	export const EFC_28788: string;
 	export const FILE_PWD: string;
 	export const FPS_BROWSER_APP_PROFILE_STRING: string;
 	export const FPS_BROWSER_USER_PROFILE_STRING: string;
@@ -93,6 +93,7 @@ declare module '$env/static/private' {
 	export const windir: string;
 	export const _MSYS2_BASH: string;
 	export const _MSYS2_PREFIX: string;
+	export const __COMPAT_LAYER: string;
 }
 
 /**
@@ -137,7 +138,7 @@ declare module '$env/dynamic/private' {
 		COMPUTERNAME: string;
 		ComSpec: string;
 		DriverData: string;
-		EFC_8940: string;
+		EFC_28788: string;
 		FILE_PWD: string;
 		FPS_BROWSER_APP_PROFILE_STRING: string;
 		FPS_BROWSER_USER_PROFILE_STRING: string;
@@ -190,6 +191,7 @@ declare module '$env/dynamic/private' {
 		windir: string;
 		_MSYS2_BASH: string;
 		_MSYS2_PREFIX: string;
+		__COMPAT_LAYER: string;
 		[key: `PUBLIC_${string}`]: undefined;
 		[key: string]: string | undefined;
 	}
