@@ -2,6 +2,9 @@
 	"/": [
 		"src/routes/+page.server.ts"
 	],
+	"/fenni": [],
+	"/fenni/home": [],
+	"/fenni/large": [],
 	"/me": [],
 	"/me/blog": [],
 	"/me/contact": [

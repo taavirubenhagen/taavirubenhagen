@@ -1,4 +1,4 @@
-import { c as create_ssr_component, v as validate_component, e as escape, f as add_attribute } from "../../../chunks/index3.js";
+import { c as create_ssr_component, v as validate_component, e as escape, d as add_attribute } from "../../../chunks/index3.js";
 import { D as DeviceDetector } from "../../../chunks/DeviceDetector.js";
 /* empty css                      */import { c as cursorButtonHover, B as Button } from "../../../chunks/Button.js";
 import { P as P1 } from "../../../chunks/P1.js";
