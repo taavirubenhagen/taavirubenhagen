@@ -25,7 +25,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return `<div class="${escape(
         localCursorButtonHover ? "w-8 h-8 opacity-25" : "w-4 h-4 opacity-100",
         true
-      ) + " duration-400 fixed z-50 -translate-x-1/2 -translate-y-1/2 pointer-events-none backdrop-invert rounded-full"}" style="${"transition-property: transform, opacity, width, height; " + escape(
+      ) + " duration-300 fixed z-50 -translate-x-1/2 -translate-y-1/2 pointer-events-none backdrop-invert rounded-full"}" style="${"transition-property: transform, opacity, width, height; " + escape(
         localCursorButtonHover ? "transition-timing-function: cubic-bezier(.2, 0, .1, .9);" : "transition-timing-function: cubic-bezier(.5, 0, .5, 1);",
         true
       ) + " box-shadow: 0 0 32px white, 0 0 32px white, 0 0 32px white, 0 0 32px white;"}"${add_attribute("this", cursor, 0)}></div>`;
