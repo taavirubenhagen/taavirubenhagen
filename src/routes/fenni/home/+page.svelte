@@ -37,7 +37,7 @@
                 style="transform: scale({(() => {
                     let x = scrollY / windowHeight / ( windowWidth > windowHeight ? 2 : 1 );
                     let limit = ( windowWidth > windowHeight ? 1 : 1.25 );
-                    return x > limit ? limit : x;
+                    return x ** 2 > limit ? limit : x ** 2;
                 })()});"
             />
         </div>

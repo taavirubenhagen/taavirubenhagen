@@ -18,7 +18,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     (() => {
       let x = scrollY / windowHeight / 1;
       let limit = 1.25;
-      return x > limit ? limit : x;
+      return x ** 2 > limit ? limit : x ** 2;
     })(),
     true
   ) + ");"}"></div>
