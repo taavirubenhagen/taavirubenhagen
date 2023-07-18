@@ -14,7 +14,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `
 
 
-<main class="text-center"><section class="relative h-screen"><div class="fixed opacity-75 brightness-75 contrast-200 w-full h-screen flex_col_center justify-start"><img alt="" src="/centered_explosion.png" class="w-full min-w-screen" style="${"transform: scale(" + escape(
+<main class="bg-gradient-to-br from-yellow-50 via-yellow-700 to-yellow-900 text-center"><section class="relative h-screen"><div class="fixed opacity-75 brightness-75 contrast-200 w-full h-screen flex_col_center justify-start"><img alt="" src="/centered_explosion.png" class="w-full min-w-screen" style="${"transform: scale(" + escape(
     (() => {
       let x = scrollY / windowHeight / 1;
       let limit = 1.25;

@@ -47,11 +47,11 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {},
     {
       default: () => {
-        return `<div class="relative z-20 my-8 pointer-events-auto rounded-full bg-opacity-100 bg-yellow-600 h-12 px-4 flex_row_center text-white">${validate_component(P3, "P3").$$render($$result, {}, {}, {
+        return `<a href="/fenni/projects/offenes-kunstprojekt" class="relative z-20 my-8 pointer-events-auto rounded-full bg-opacity-100 bg-yellow-600 h-12 px-4 flex_row_center text-white">${validate_component(P3, "P3").$$render($$result, {}, {}, {
           default: () => {
             return `Mach es selbst`;
           }
-        })}</div>`;
+        })}</a>`;
       }
     }
   )}

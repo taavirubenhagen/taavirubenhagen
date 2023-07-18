@@ -1,1 +1,1 @@
-export { default as component } from "../../../../src/routes/me/blog/+page.svelte";
+export { default as component } from "../../../../src/routes/fenni/projects/offenes-kunstprojekt/+page.svelte";

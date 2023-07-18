@@ -27,7 +27,7 @@
 <svelte:window bind:innerWidth={windowWidth} bind:outerHeight={windowHeight} bind:scrollY={scrollY} />
 
 
-<main class="text-center">
+<main class="bg-gradient-to-br from-yellow-50 via-yellow-700 to-yellow-900 text-center">
     <section class="relative h-screen">
         <div class="fixed opacity-75 brightness-75 contrast-200 w-full h-screen flex_col_center justify-start">
             <img

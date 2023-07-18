@@ -12,11 +12,14 @@
         Button,
     } from './lib';
 
+
     let windowHeight: number;
     let scrollY: number;
     $: scrollPercentage = scrollY / windowHeight * 100;
     let cursor: HTMLElement;
     let localCursorButtonHover: boolean;
+
+    $: pageDependentHeaderClass = $page.route.id?.includes("/fenni/projects/") ? "absolute text-black" : "fixed text-white";
 
 
     cursorButtonHover.subscribe((value: boolean) => {
@@ -46,7 +49,7 @@
 
 
 <main
-    class="relative overflow-x-hidden bg-gradient-to-br from-yellow-50 via-yellow-700 to-yellow-900 font-sans text-white cursor-none"
+    class="relative overflow-x-hidden font-sans text-white cursor-none"
 >
     <!-- TODO: Add standard scrollbar effects -->
     <DeviceDetector showInDevice="desktop">
@@ -67,14 +70,17 @@
     </div>
     <div
         class=
-            "transition duration-200 fixed z-30 top-0 pointer-events-none
+            "transition duration-200
+            {pageDependentHeaderClass} z-30 top-0 pointer-events-none
             w-full h-screen p-16
             flex justify-between items-start font-handwriting"
     >
         <Button onClick={() => {}}>
             <!-- TODO: Choose font -->
             <a href="/fenni/home" class="pointer-events-auto mt-1 flex_row_center gap-8 font-logo" style="font-family: 'Yellowtail';">
-                <div class="rounded-full w-8 h-8 bg-yellow-600"></div>
+                <div class="rounded-full w-8 h-8">
+                    <img src="/centered_explosion.png" alt="Portrait von mir" class="object-cover">
+                </div>
                 <P1>FENNI</P1>
             </a>
         </Button>
@@ -91,7 +97,7 @@
                         class=
                             "transition rounded-full h-10
                             px-6 flex_row_center"
-                            style={$page.route.id == e[1] ? "filter: drop-shadow(0px 0px 4px rgb(250 204 21));" : ""}
+                            style={$page.route.id?.includes(e[1]) ? "filter: drop-shadow(0px 0px 4px rgb(250 204 21));" : ""}
                     >
                         <P3>{e[0]}</P3>
                     </a>
@@ -101,26 +107,19 @@
     </div>
     <slot/>
     <!-- TODO: Make it slide into view when scrolled like Cuberto -->
-    <section class="relative z-20 w-full h-screen p-16 lg:p-32 lg:pb-16">
-        <!--<div class="pt-16 md:p-0 flex_row_center gap-16 text-4xl">
+    <!--<section class="relative z-20 w-full h-screen p-16 lg:p-32 lg:pb-16">
+        <!-<div class="pt-16 md:p-0 flex_row_center gap-16 text-4xl">
             {#each ["mail", "instagram", "youtube"] as platform}
                 <Button onClick={() => {animateScroll.scrollToTop()}}><Icon name={platform}></Icon></Button>
             {/each}
-        </div>-->
+        </div>->
         <div class="w-full h-screen pt-16 flex_col_center text-center text-5xl">
-            <!--<div class="text-neutral-500">Fenja Rübenhagen<br/>Pothof 9d<br/>38122 Braunschweig</div>-->
+            <!-<div class="text-neutral-500">Fenja Rübenhagen<br/>Pothof 9d<br/>38122 Braunschweig</div>->
             Website designed von
             <div class="h-6"></div>
             <a href="/" class="font-bold"><Button onClick={() => {}}>
                 <B>Taavi Rübenhagen</B>
             </Button></a>
         </div>
-    </section>
+    </section>-->
 </main>
-
-
-<style>
-    .custom-cursor {
-        box-shadow: 10px 10px 10px black;
-    }
-</style>

@@ -56,9 +56,15 @@
                 <O2>Offenes Kunstprojekt</O2>
             </div>
             <Button onClick={() => {}}>
-                <div class="relative z-20 my-8 pointer-events-auto rounded-full bg-opacity-100 bg-yellow-600 h-12 px-4 flex_row_center text-white">
+                <a
+                    href="/fenni/projects/offenes-kunstprojekt"
+                    class=
+                        "relative z-20 my-8 pointer-events-auto
+                        rounded-full bg-opacity-100 bg-yellow-600 h-12 px-4
+                        flex_row_center text-white"
+                >
                     <P3>Mach es selbst</P3>
-                </div>
+                </a>
             </Button>
             <div class="flex gap-4">
                 <div class="rounded-full w-8 h-1 backdrop-invert"></div>

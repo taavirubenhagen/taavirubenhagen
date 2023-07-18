@@ -20,7 +20,8 @@ export const nodes = [
 	() => import('./nodes/16'),
 	() => import('./nodes/17'),
 	() => import('./nodes/18'),
-	() => import('./nodes/19')
+	() => import('./nodes/19'),
+	() => import('./nodes/20')
 ];
 
 export const server_loads = [];
@@ -29,15 +30,16 @@ export const dictionary = {
 		"/": [~8],
 		"/fenni/home": [9,[2]],
 		"/fenni/projects": [10,[2]],
-		"/me/blog": [11,[3,4]],
-		"/me/contact": [~12,[3]],
-		"/me/home": [13,[3,5]],
-		"/me/landing/social": [14,[3,6]],
-		"/portfolio/home": [15,[7]],
-		"/portfolio/newsletter": [16,[7]],
-		"/presenter/waitlist": [17],
-		"/supabase-test": [18],
-		"/tts": [19]
+		"/fenni/projects/offenes-kunstprojekt": [11,[2]],
+		"/me/blog": [12,[3,4]],
+		"/me/contact": [~13,[3]],
+		"/me/home": [14,[3,5]],
+		"/me/landing/social": [15,[3,6]],
+		"/portfolio/home": [16,[7]],
+		"/portfolio/newsletter": [17,[7]],
+		"/presenter/waitlist": [18],
+		"/supabase-test": [19],
+		"/tts": [20]
 	};
 
 export const hooks = {
