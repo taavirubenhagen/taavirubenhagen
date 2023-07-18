@@ -1,4 +1,4 @@
-import { c as create_ssr_component, v as validate_component, f as add_attribute, e as escape } from "../../../../chunks/index3.js";
+import { c as create_ssr_component, v as validate_component, f as add_attribute, h as each, e as escape } from "../../../../chunks/index3.js";
 import { g as globalScrollY } from "../../../../chunks/state.js";
 import "ua-parser-js";
 /* empty css                         */import { H as H2, P as P3 } from "../../../../chunks/P3.js";
@@ -11,6 +11,14 @@ const O2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   })}`;
 });
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  const projectNames = [
+    "Offenes Kunstprojekt",
+    "Ein Bild, das ...",
+    "Kurzfilme",
+    "AdLeF",
+    "Musikalische Werke",
+    "Schauspielkarriere"
+  ];
   const imageUrls = [
     "https://www.blitzrechner.de/wp-content/uploads/2015/05/kunstwerke-preise.jpg",
     "https://www.sueddeutsche.de/image/sz.1.5914567/1200x675?v=1686329819",
@@ -33,10 +41,12 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 
 <main><div class="fixed pointer-events-none w-full h-screen text-onPrimary"><img${add_attribute("src", imageUrls[Math.floor(timerSeconds / 10) % imageUrls.length], 0)} alt="" class="absolute z-0 min-w-full min-h-screen object-cover">
         <div class="absolute z-5 w-full h-screen"><div class="w-full h-full opacity-50 bg-gradient-to-b from-transparent to-black"></div></div>
-        <div class="absolute z-15 w-full h-screen p-16 flex flex-col justify-end items-start"><div class="invert">${validate_component(O2, "O2").$$render($$result, {}, {}, {
-    default: () => {
-      return `Offenes Kunstprojekt`;
-    }
+        <div class="absolute z-15 w-full h-screen p-8 md:p-16 flex flex-col justify-end items-start"><div class="invert flex flex-wrap">${each(projectNames[Math.floor(timerSeconds / 10) % projectNames.length].split(""), (letter) => {
+    return `${validate_component(O2, "O2").$$render($$result, {}, {}, {
+      default: () => {
+        return `${escape(letter)}`;
+      }
+    })}`;
   })}</div>
             ${validate_component(Button, "Button").$$render(
     $$result,

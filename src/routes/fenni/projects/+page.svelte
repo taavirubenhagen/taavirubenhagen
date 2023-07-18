@@ -14,6 +14,14 @@
     let windowHeight: number;
     let scrollY: number;
 
+    const projectNames = [
+        "Offenes Kunstprojekt",
+        "Ein Bild, das ...",
+        "Kurzfilme",
+        "AdLeF",
+        "Musikalische Werke",
+        "Schauspielkarriere",
+    ];
     const imageUrls = [
         "https://www.blitzrechner.de/wp-content/uploads/2015/05/kunstwerke-preise.jpg",
         "https://www.sueddeutsche.de/image/sz.1.5914567/1200x675?v=1686329819",
@@ -51,9 +59,11 @@
         <div class="absolute z-5 w-full h-screen">
             <div class="w-full h-full opacity-50 bg-gradient-to-b from-transparent to-black"></div>
         </div>
-        <div class="absolute z-15 w-full h-screen p-16 flex flex-col justify-end items-start">
-            <div class="invert">
-                <O2>Offenes Kunstprojekt</O2>
+        <div class="absolute z-15 w-full h-screen p-8 md:p-16 flex flex-col justify-end items-start">
+            <div class="invert flex flex-wrap">
+                {#each projectNames[Math.floor(timerSeconds / 10) % projectNames.length].split("") as letter}
+                    <O2>{letter}</O2>
+                {/each}
             </div>
             <Button onClick={() => {}}>
                 <a

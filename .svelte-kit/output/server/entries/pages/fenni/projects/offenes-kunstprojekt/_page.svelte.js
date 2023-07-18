@@ -1,4 +1,4 @@
-import { c as create_ssr_component, h as each, v as validate_component, e as escape, f as add_attribute } from "../../../../../chunks/index3.js";
+import { c as create_ssr_component, h as each, v as validate_component, f as add_attribute, e as escape } from "../../../../../chunks/index3.js";
 import "ua-parser-js";
 /* empty css                            */const H1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<t class="text-8xl md:text-9xl">${slots.default ? slots.default({}) : ``}</t>`;
@@ -20,14 +20,16 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 
 
 <img src="/centered_explosion.png" alt="Color Explosion" class="fixed -z-5 opacity-0 w-full">
-<main class="relative z-0 w-full bg-gradient-to-br from-transparent to-transparent"><div class="pt-44 flex_col_center"><div class="flex gap-4">${each(imageUrls, (url, i) => {
+<main class="relative z-0 w-full bg-gradient-to-br from-transparent to-transparent"><div class="mt-44 flex_col_center"><div class="flex gap-4">${each(imageUrls, (url, i) => {
     return `<div class="w-64 h-64"><img${add_attribute("src", url, 0)} alt="${"Image " + escape(i, true)}" class="object-cover rounded-lg h-full">
                 </div>`;
   })}</div></div>
-    <div class="p-16 pt-32 text-black font-logo">${validate_component(H1, "H1").$$render($$result, {}, {}, {
-    default: () => {
-      return `${escape(postTitle)}`;
-    }
+    <div class="w-full p-16 pt-32 flex flex-wrap text-black font-logo">${each(postTitle.split(""), (letter) => {
+    return `${validate_component(H1, "H1").$$render($$result, {}, {}, {
+      default: () => {
+        return `${escape(letter)}`;
+      }
+    })}`;
   })}</div>
     <div class="p-16 text-black">${validate_component(P2, "P2").$$render($$result, {}, {}, {
     default: () => {

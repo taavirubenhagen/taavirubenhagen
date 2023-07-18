@@ -29,7 +29,7 @@
 
 <img src="/centered_explosion.png" alt="Color Explosion" class="fixed -z-5 opacity-0 w-full">
 <main class="relative z-0 w-full bg-gradient-to-br from-transparent to-transparent">
-    <div class="pt-44 flex_col_center">
+    <div class="mt-44 flex_col_center">
         <div class="flex gap-4">
             {#each imageUrls as url, i}
                 <div class="w-64 h-64">
@@ -38,8 +38,10 @@
             {/each}
         </div>
     </div>
-    <div class="p-16 pt-32 text-black font-logo">
-        <H1>{postTitle}</H1>
+    <div class="w-full p-16 pt-32 flex flex-wrap text-black font-logo">
+        {#each postTitle.split("") as letter}
+            <H1>{letter}</H1>
+        {/each}
     </div>
     <div class="p-16 text-black">
         <P2>
