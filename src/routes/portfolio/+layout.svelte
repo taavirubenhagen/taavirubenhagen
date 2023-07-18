@@ -77,10 +77,3 @@
         </div>
     </div>
 </main>
-
-
-<style>
-    .custom-cursor {
-        box-shadow: 10px 10px 10px black;
-    }
-</style>

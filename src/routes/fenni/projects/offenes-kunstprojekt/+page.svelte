@@ -38,7 +38,7 @@
             {/each}
         </div>
     </div>
-    <div class="w-full p-8 md:p-16 pt-16 md:pt-32 md:pb-16 flex flex-wrap text-black font-logo">
+    <div class="w-full p-8 md:p-16 pt-32 md:pb-16 flex flex-wrap text-black font-logo">
         {#each postTitle.split("") as letter}
             <H1>{letter}</H1>
         {/each}

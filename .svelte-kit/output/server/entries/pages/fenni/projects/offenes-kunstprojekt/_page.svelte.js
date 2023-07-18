@@ -24,7 +24,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     return `<div class="w-64 h-64"><img${add_attribute("src", url, 0)} alt="${"Image " + escape(i, true)}" class="object-cover rounded-lg h-full">
                 </div>`;
   })}</div></div>
-    <div class="w-full p-8 md:p-16 pt-16 md:pt-32 md:pb-16 flex flex-wrap text-black font-logo">${each(postTitle.split(""), (letter) => {
+    <div class="w-full p-8 md:p-16 pt-32 md:pb-16 flex flex-wrap text-black font-logo">${each(postTitle.split(""), (letter) => {
     return `${validate_component(H1, "H1").$$render($$result, {}, {}, {
       default: () => {
         return `${escape(letter)}`;

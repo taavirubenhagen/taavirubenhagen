@@ -96,8 +96,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         }
       })}`;
     }
-  })}</div></div></div>
-</main>`;
+  })}</div></div></div></main>`;
 });
 export {
   Layout as default

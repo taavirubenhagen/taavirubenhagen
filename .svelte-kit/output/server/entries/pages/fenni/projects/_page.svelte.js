@@ -39,9 +39,9 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `
 
 
-<main><div class="fixed pointer-events-none w-full h-screen text-onPrimary"><img${add_attribute("src", imageUrls[Math.floor(timerSeconds / 10) % imageUrls.length], 0)} alt="" class="absolute z-0 min-w-full min-h-screen object-cover">
-        <div class="absolute z-5 w-full h-screen"><div class="w-full h-full opacity-50 bg-gradient-to-b from-transparent to-black"></div></div>
-        <div class="absolute z-15 w-full h-screen p-8 md:p-16 flex flex-col justify-end items-start"><div class="invert flex flex-wrap">${each(projectNames[Math.floor(timerSeconds / 10) % projectNames.length].split(""), (letter) => {
+<main><div class="fixed pointer-events-none w-full h-full text-onPrimary"><img${add_attribute("src", imageUrls[Math.floor(timerSeconds / 10) % imageUrls.length], 0)} alt="" class="absolute z-0 min-w-full min-h-full object-cover">
+        <div class="absolute z-5 w-full h-full"><div class="w-full h-full opacity-50 bg-gradient-to-b from-transparent to-black"></div></div>
+        <div class="absolute z-15 w-full h-full p-8 md:p-16 flex flex-col justify-end items-start"><div class="invert flex flex-wrap">${each(projectNames[Math.floor(timerSeconds / 10) % projectNames.length].split(""), (letter) => {
     return `${validate_component(O2, "O2").$$render($$result, {}, {}, {
       default: () => {
         return `${escape(letter)}`;
@@ -69,7 +69,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
                 <div class="rounded-full w-8 h-1 backdrop-invert"></div>
                 <div class="opacity-25 rounded-full w-8 h-1 backdrop-invert"></div>
                 <div class="opacity-25 rounded-full w-8 h-1 backdrop-invert"></div></div></div></div>
-    <div class="w-full" style="${"height: " + escape(imageUrls.length * 100, true) + "vh;"}"></div></main>`;
+    <div class="w-full" style="${"height: " + escape(imageUrls.length * 100, true) + "%;"}"></div></main>`;
 });
 export {
   Page as default
