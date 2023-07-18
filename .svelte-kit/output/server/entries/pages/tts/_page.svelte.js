@@ -1,4 +1,4 @@
-import { c as create_ssr_component, o as onMount, f as each, d as add_attribute, v as validate_component, e as escape } from "../../../chunks/index3.js";
+import { c as create_ssr_component, o as onMount, i as each, h as add_attribute, v as validate_component, e as escape } from "../../../chunks/index3.js";
 /* empty css                      */import { T as Text_button } from "../../../chunks/text_button.js";
 const tts = "";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -27,7 +27,6 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     navigator.mediaDevices.getUserMedia({ audio: true }).then((stream) => {
       recorder = new MediaRecorder(stream, { mimeType: "audio/webm" });
       recorder.ondataavailable = (e) => {
-        console.log("Data available:", e.data);
         recorderResult = URL.createObjectURL(e.data);
       };
     }).catch((err) => console.error(`Error setting up the media recorder: ${err}`));

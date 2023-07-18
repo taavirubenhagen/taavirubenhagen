@@ -1,6 +1,6 @@
-import { c as create_ssr_component, v as validate_component, e as escape, d as add_attribute } from "../../../chunks/index3.js";
+import { c as create_ssr_component, v as validate_component, e as escape, h as add_attribute } from "../../../chunks/index3.js";
 import { D as DeviceDetector } from "../../../chunks/DeviceDetector.js";
-/* empty css                      */import { c as cursorButtonHover, B as Button } from "../../../chunks/Button.js";
+/* empty css                      */import { c as cursorButtonHover, B as Button } from "../../../chunks/Button2.js";
 import { P as P1 } from "../../../chunks/P1.js";
 import { B } from "../../../chunks/B.js";
 const P3 = create_ssr_component(($$result, $$props, $$bindings, slots) => {

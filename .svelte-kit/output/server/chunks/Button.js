@@ -1,7 +1,7 @@
-import { w as writable } from "./index2.js";
 import { c as create_ssr_component } from "./index3.js";
-/* empty css        */const globalScrollY = writable(0);
-const cursorButtonHover = writable(false);
+/* empty css        */const P3 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  return `<t class="selection:text-outline-on-primary">${slots.default ? slots.default({}) : ``}</t>`;
+});
 const Button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { onClick } = $$props;
   if ($$props.onClick === void 0 && $$bindings.onClick && onClick !== void 0)
@@ -10,6 +10,5 @@ const Button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 });
 export {
   Button as B,
-  cursorButtonHover as c,
-  globalScrollY as g
+  P3 as P
 };

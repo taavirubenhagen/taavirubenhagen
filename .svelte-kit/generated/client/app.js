@@ -28,7 +28,7 @@ export const server_loads = [];
 export const dictionary = {
 		"/": [~8],
 		"/fenni/home": [9,[2]],
-		"/fenni/large": [10,[2]],
+		"/fenni/projects": [10,[2]],
 		"/me/blog": [11,[3,4]],
 		"/me/contact": [~12,[3]],
 		"/me/home": [13,[3,5]],

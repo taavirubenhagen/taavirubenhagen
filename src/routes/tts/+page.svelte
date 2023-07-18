@@ -35,7 +35,6 @@
         .then((stream) => {
             recorder = new MediaRecorder(stream, {mimeType: 'audio/webm'})
             recorder.ondataavailable = (e) => {
-                console.log("Data available:", e.data)
                 recorderResult = URL.createObjectURL(e.data)
             };
         })

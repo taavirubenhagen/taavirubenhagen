@@ -2,7 +2,7 @@ import { c as create_ssr_component, e as escape, o as onMount, v as validate_com
 import { P as PUBLIC_SUPABASE_URL, a as PUBLIC_SUPABASE_ANON_KEY } from "../../../../chunks/public.js";
 import "ua-parser-js";
 import { createClient } from "@supabase/supabase-js";
-/* empty css                         */import { H as H2 } from "../../../../chunks/H2.js";
+/* empty css                         */import { H as H2 } from "../../../../chunks/H22.js";
 import { P as P1 } from "../../../../chunks/P1.js";
 import { B } from "../../../../chunks/B.js";
 const Icon = create_ssr_component(($$result, $$props, $$bindings, slots) => {

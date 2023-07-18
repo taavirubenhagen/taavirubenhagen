@@ -24,9 +24,9 @@ module.exports = {
     plugins: [],
     theme: {
         fontFamily: {
-            body: ['Caveat', 'Arial'],
+            body: ['Lexend'],
             display: ['Caveat', 'Arial'],
-            sans: ['Lexend', 'Arial'],
+            sans: ['Lexend'],
             mono: ['IBM Plex Mono', 'Consolas'],
         },
         transitionTimingFunction: {
@@ -48,7 +48,7 @@ module.exports = {
                 center_row: "flex flex-row justify-center items-center",
             },
             fontFamily: {
-              logo: ['Caveat'],
+              logo: ['Permanent Marker'],
               rounded: ['Quicksand'],
               slab: ['Aleo'],           // TODO: F
               handwriting: ['Caveat'],

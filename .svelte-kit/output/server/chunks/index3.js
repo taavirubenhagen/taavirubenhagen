@@ -12,6 +12,40 @@ function run_all(fns) {
 function safe_not_equal(a, b) {
   return a != a ? b == b : a !== b || (a && typeof a === "object" || typeof a === "function");
 }
+function subscribe(store, ...callbacks) {
+  if (store == null) {
+    return noop;
+  }
+  const unsub = store.subscribe(...callbacks);
+  return unsub.unsubscribe ? () => unsub.unsubscribe() : unsub;
+}
+const is_client = typeof window !== "undefined";
+let now = is_client ? () => window.performance.now() : () => Date.now();
+let raf = is_client ? (cb) => requestAnimationFrame(cb) : noop;
+const tasks = /* @__PURE__ */ new Set();
+function run_tasks(now2) {
+  tasks.forEach((task) => {
+    if (!task.c(now2)) {
+      tasks.delete(task);
+      task.f();
+    }
+  });
+  if (tasks.size !== 0)
+    raf(run_tasks);
+}
+function loop(callback) {
+  let task;
+  if (tasks.size === 0)
+    raf(run_tasks);
+  return {
+    promise: new Promise((fulfill) => {
+      tasks.add(task = { c: callback, f: fulfill });
+    }),
+    abort() {
+      tasks.delete(task);
+    }
+  };
+}
 let current_component;
 function set_current_component(component) {
   current_component = component;
@@ -30,6 +64,9 @@ function afterUpdate(fn) {
 function setContext(key, context) {
   get_current_component().$$.context.set(key, context);
   return context;
+}
+function getContext(key) {
+  return get_current_component().$$.context.get(key);
 }
 const ATTR_REGEX = /[&"]/g;
 const CONTENT_REGEX = /[&<]/g;
@@ -110,9 +147,13 @@ export {
   afterUpdate as a,
   safe_not_equal as b,
   create_ssr_component as c,
-  add_attribute as d,
+  now as d,
   escape as e,
-  each as f,
+  subscribe as f,
+  getContext as g,
+  add_attribute as h,
+  each as i,
+  loop as l,
   missing_component as m,
   noop as n,
   onMount as o,
