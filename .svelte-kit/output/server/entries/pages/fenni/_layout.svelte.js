@@ -1,8 +1,8 @@
-import { g as getContext, c as create_ssr_component, d as subscribe, v as validate_component, e as escape, f as add_attribute, h as each } from "../../../chunks/index3.js";
+import { g as getContext, c as create_ssr_component, e as escape, d as subscribe, v as validate_component, f as add_attribute, h as each } from "../../../chunks/index3.js";
 import { D as DeviceDetector } from "../../../chunks/DeviceDetector.js";
 /* empty css                      */import { c as cursorButtonHover } from "../../../chunks/state.js";
 import { P as P1 } from "../../../chunks/P1.js";
-import { B as Button, P as P3 } from "../../../chunks/Button.js";
+import { B as Button } from "../../../chunks/Button.js";
 const getStores = () => {
   const stores = getContext("__svelte__");
   return {
@@ -21,6 +21,15 @@ const page = {
     return store.subscribe(fn);
   }
 };
+const Icon = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let { name } = $$props;
+  let { textClass = "" } = $$props;
+  if ($$props.name === void 0 && $$bindings.name && name !== void 0)
+    $$bindings.name(name);
+  if ($$props.textClass === void 0 && $$bindings.textClass && textClass !== void 0)
+    $$bindings.textClass(textClass);
+  return `<i class="${"relative top-0.5 " + escape(textClass, true) + " iconoir-" + escape(name, true)}"></i>`;
+});
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let scrollPercentage;
   let pageDependentHeaderClass;
@@ -52,7 +61,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     }
   })}
     <div class="group z-45 fixed w-full h-8"><div class="transition duration-200 h-0.5 group-hover:h-4 group-focus:h-4 primary" style="${"width: " + escape(scrollPercentage, true) + "%; transition-property: height;"}"></div></div>
-    <div class="${"transition duration-200 " + escape(pageDependentHeaderClass, true) + " z-30 top-0 pointer-events-none w-full h-screen p-16 flex justify-between items-start font-handwriting"}">${validate_component(Button, "Button").$$render(
+    <div class="${"transition duration-200 " + escape(pageDependentHeaderClass, true) + " z-30 top-0 pointer-events-none w-full h-screen p-8 md:p-16 flex justify-between items-start font-handwriting"}">${validate_component(Button, "Button").$$render(
     $$result,
     {
       onClick: () => {
@@ -71,12 +80,12 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       }
     }
   )}
-        <div class="group pointer-events-auto rounded-full flex justify-end items-start gap-8">
+        <div class="group pointer-events-auto rounded-full flex justify-end items-start gap-8 md:gap-16">
             ${each(
     [
-      ["Home", "/fenni/home"],
-      ["Projekte", "/fenni/projects"],
-      ["\xDCber mich", "/fenni/about"]
+      ["Home", "home", "/fenni/home"],
+      ["Projekte", "director-chair", "/fenni/projects"],
+      ["\xDCber mich", "info-empty", "/fenni/about"]
     ],
     (e) => {
       return `${validate_component(Button, "Button").$$render(
@@ -88,15 +97,19 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         {},
         {
           default: () => {
-            return `<a${add_attribute("href", e[1], 0)} class="transition rounded-full h-10 px-6 flex_row_center"${add_attribute(
+            return `<a${add_attribute("href", e[1], 0)} class="transition rounded-full h-10 flex_row_center"${add_attribute(
               "style",
-              $page.route.id?.includes(e[1]) ? "filter: drop-shadow(0px 0px 4px rgb(250 204 21));" : "",
+              $page.route.id?.includes(e[2]) ? "filter: drop-shadow(0px 0px 4px rgb(250 204 21));" : "",
               0
-            )}>${validate_component(P3, "P3").$$render($$result, {}, {}, {
-              default: () => {
-                return `${escape(e[0])}`;
-              }
-            })}</a>
+            )}>${`${validate_component(Icon, "Icon").$$render(
+              $$result,
+              {
+                name: e[1],
+                textClass: "text-xl font-bold"
+              },
+              {},
+              {}
+            )}`}</a>
                 `;
           }
         }

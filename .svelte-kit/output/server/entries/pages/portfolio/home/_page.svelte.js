@@ -1,7 +1,7 @@
 import { c as create_ssr_component, v as validate_component, e as escape, f as add_attribute } from "../../../../chunks/index3.js";
 import { g as globalScrollY, B as Button } from "../../../../chunks/Button2.js";
 import "ua-parser-js";
-/* empty css                         */import { H as H2 } from "../../../../chunks/H22.js";
+/* empty css                         */import { H as H2 } from "../../../../chunks/H2.js";
 import { B } from "../../../../chunks/B.js";
 const H1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<t class="text-8xl md:text-9xl font-bold">${slots.default ? slots.default({}) : ``}</t>`;

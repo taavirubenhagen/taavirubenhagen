@@ -1,8 +1,8 @@
 import { c as create_ssr_component, e as escape, f as add_attribute, v as validate_component } from "../../../../chunks/index3.js";
 import "ua-parser-js";
-/* empty css                         */import { H as H2 } from "../../../../chunks/H2.js";
+/* empty css                         */import { H as H2, P as P3 } from "../../../../chunks/P3.js";
 import { P as P1 } from "../../../../chunks/P1.js";
-import { B as Button, P as P3 } from "../../../../chunks/Button.js";
+import { B as Button } from "../../../../chunks/Button.js";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let windowHeight;
   let scrollY;
@@ -31,7 +31,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     })(),
     true
   ) + ";"}"></div>
-        <div class="absolute z-15 w-full h-screen p-16 flex_col_center"><div class="mt-4 mb-4 font-logo">${validate_component(H2, "H2").$$render($$result, {}, {}, {
+        <div class="absolute z-15 w-full h-screen overflow-hidden p-16 flex_col_center"><div class="mt-4 mb-4 font-logo">${validate_component(H2, "H2").$$render($$result, {}, {}, {
     default: () => {
       return `Hi, ich bin FENNI.`;
     }
@@ -59,7 +59,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     <section class="h-screen"></section>
     <section class="h-screen"></section>
     <section class="h-screen"></section>
-    <section class="relative z-30 w-full h-screen flex_col_center"><div class="w-1/2">${validate_component(P1, "P1").$$render($$result, {}, {}, {
+    <section class="relative z-30 w-full h-screen flex_col_center"><div class="w-full p-8 md:w-1/2 md:p-0">${validate_component(P1, "P1").$$render($$result, {}, {}, {
     default: () => {
       return `Ich bin eine freie K\xFCnstlerin aus Braunschweig und mache Kunst aller Art:
                 B\xFCcher schreiben, Musik aufnehmen, Leute vollabern etc.<br><br>

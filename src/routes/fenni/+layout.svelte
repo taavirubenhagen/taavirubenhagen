@@ -13,6 +13,7 @@
     } from './lib';
 
 
+    let windowWidth: number;
     let windowHeight: number;
     let scrollY: number;
     $: scrollPercentage = scrollY / windowHeight * 100;
@@ -29,6 +30,7 @@
 
 
 <svelte:window
+    bind:innerWidth={windowWidth}
     bind:innerHeight={windowHeight}
     bind:scrollY={scrollY} 
     on:mousemove={(event) => {
@@ -72,7 +74,7 @@
         class=
             "transition duration-200
             {pageDependentHeaderClass} z-30 top-0 pointer-events-none
-            w-full h-screen p-16
+            w-full h-screen p-8 md:p-16
             flex justify-between items-start font-handwriting"
     >
         <Button onClick={() => {}}>
@@ -84,22 +86,24 @@
                 <P1>FENNI</P1>
             </a>
         </Button>
-        <div class="group pointer-events-auto rounded-full flex justify-end items-start gap-8">
+        <div class="group pointer-events-auto rounded-full flex justify-end items-start gap-8 md:gap-16">
             <!-- TODO: Replace with icons? -->
             {#each [
-                ["Home", "/fenni/home"],
-                ["Projekte", "/fenni/projects"],
-                ["Über mich", "/fenni/about"],
+                ["Home", "home", "/fenni/home"],
+                ["Projekte", "director-chair", "/fenni/projects"],
+                ["Über mich", "info-empty", "/fenni/about"],
             ] as e}
                 <Button onClick={() => {}}>
                     <a
                         href={e[1]}
-                        class=
-                            "transition rounded-full h-10
-                            px-6 flex_row_center"
-                            style={$page.route.id?.includes(e[1]) ? "filter: drop-shadow(0px 0px 4px rgb(250 204 21));" : ""}
+                        class="transition rounded-full h-10 flex_row_center"
+                        style={$page.route.id?.includes(e[2]) ? "filter: drop-shadow(0px 0px 4px rgb(250 204 21));" : ""}
                     >
-                        <P3>{e[0]}</P3>
+                        {#if windowWidth > 768}
+                            <P3>{e[0]}</P3>
+                        {:else}
+                            <Icon name={e[1]} textClass="text-xl font-bold"/>
+                        {/if}
                     </a>
                 </Button>
             {/each}

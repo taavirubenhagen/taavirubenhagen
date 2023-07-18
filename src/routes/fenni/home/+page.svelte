@@ -54,7 +54,7 @@
                 })()};"
             />
         </div>
-        <div class="absolute z-15 w-full h-screen p-16 flex_col_center">
+        <div class="absolute z-15 w-full h-screen overflow-hidden p-16 flex_col_center">
             <div class="mt-4 mb-4 font-logo">
                 <H2>Hi, ich bin FENNI.</H2>
             </div>
@@ -87,7 +87,7 @@
     <section class="h-screen"></section>
     <section class="h-screen"></section>
     <section class="relative z-30 w-full h-screen flex_col_center">
-        <div class="w-1/2">
+        <div class="w-full p-8 md:w-1/2 md:p-0">
             <P1>
                 Ich bin eine freie Künstlerin aus Braunschweig und mache Kunst aller Art:
                 Bücher schreiben, Musik aufnehmen, Leute vollabern etc.<br/><br/>

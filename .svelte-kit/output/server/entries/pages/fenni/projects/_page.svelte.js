@@ -1,8 +1,8 @@
 import { c as create_ssr_component, v as validate_component, f as add_attribute, e as escape } from "../../../../chunks/index3.js";
 import { g as globalScrollY } from "../../../../chunks/state.js";
 import "ua-parser-js";
-/* empty css                         */import { H as H2 } from "../../../../chunks/H2.js";
-import { B as Button, P as P3 } from "../../../../chunks/Button.js";
+/* empty css                         */import { H as H2, P as P3 } from "../../../../chunks/P3.js";
+import { B as Button } from "../../../../chunks/Button.js";
 const O2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `${validate_component(H2, "H2").$$render($$result, {}, {}, {
     default: () => {
