@@ -27,15 +27,15 @@
 <svelte:window bind:innerWidth={windowWidth} bind:outerHeight={windowHeight} bind:scrollY={scrollY} />
 
 
-<main>
+<main class="text-center">
     <section class="relative h-screen">
-        <div class="fixed brightness-75 contrast-200 w-full h-screen flex_col_center md:justify-start">
+        <div class="fixed opacity-75 brightness-75 contrast-200 w-full h-screen flex_col_center justify-start">
             <img
                 alt=""
                 src="/centered_explosion.png"
-                class="opacity-75 w-full min-w-screen"
+                class="w-full min-w-screen"
                 style="transform: scale({(() => {
-                    let x = scrollY / windowHeight / 2;
+                    let x = scrollY / windowHeight / ( windowWidth > windowHeight ? 2 : 1 );
                     let limit = ( windowWidth > windowHeight ? 1 : 1.25 );
                     return x > limit ? limit : x;
                 })()});"
@@ -46,21 +46,57 @@
                 alt="Portrait von mir"
                 src="/colorful_woman.png"
                 class={windowWidth > windowHeight ? "h-full" : "w-full"}
+                style="opacity: {(() => {
+                    let limit = 2;
+                    let x = scrollY / windowHeight;
+                    let y = limit * 2 - scrollY / windowHeight;
+                    return x < limit ? limit : ( y < 0 ? 0 : y );
+                })()};"
             />
         </div>
         <div class="absolute z-15 w-full h-screen p-16 flex_col_center">
-            <div class="mt-4 mb-4 invert text-center font-logo">
+            <div class="mt-4 mb-4 font-logo">
                 <H2>Hi, ich bin FENNI.</H2>
             </div>
             <Button onClick={() => {}}>
-                <a href="/fenni/projects" class="relative z-20 my-8 rounded-full bg-opacity-100 bg-yellow-600 h-12 px-4 flex_row_center">
-                    <P3><div class="text-white">Sag Hallo</div></P3>
+                <!--
+                    Shadow color is yellow-500
+                    yellow-200: rgb(254 240 138)
+                    yellow-300: rgb(253 224 71)
+                    yellow-400: rgb(250 204 21)
+                    yellow-500: rgb(234 179 8)
+                    yellow-600: rgb(202 138 4)
+                -->
+                <a
+                    href="/fenni/projects"
+                    class=
+                        "relative z-20
+                        my-8 rounded-full
+                        h-12 bg-yellow-600 px-6
+                        flex_row_center text-white"
+                    style="filter: drop-shadow(0px 0px 0px rgb(250 204 21));"
+                >
+                    <P3>Sieh Projekte</P3>
                 </a>
             </Button>
         </div>
     </section>
     <section class="h-screen"></section>
     <section class="h-screen"></section>
+    <section class="h-screen"></section>
+    <section class="h-screen"></section>
+    <section class="h-screen"></section>
+    <section class="relative z-30 w-full h-screen flex_col_center">
+        <div class="w-1/2">
+            <P1>
+                Ich bin eine freie Künstlerin aus Braunschweig und mache Kunst aller Art:
+                Bücher schreiben, Musik aufnehmen, Leute vollabern etc.<br/><br/>
+                Auf der "Projekte"-Seite kannst du gerne meine bisherigen Erfolge bewundern.<br/><br/>
+                Bei Interesse an Zusammenarbeit oder um einfach mal Hallo zu sagen, schreib mich gerne an;
+                die Kontaktdaten findest du unten.
+            </P1>
+        </div>
+    </section>
     <section class="h-screen"></section>
 </main>
 

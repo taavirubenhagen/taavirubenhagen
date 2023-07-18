@@ -1,11 +1,10 @@
 <script lang="ts">
-    import { onMount } from "svelte";
     import { page } from "$app/stores";
     import DeviceDetector from "svelte-device-detector";
     import { animateScroll } from 'svelte-scrollto-element';
 
     import "$style";
-    import { globalScrollY, cursorButtonHover, contrastingTextColorWhite } from "./state";
+    import { cursorButtonHover } from "./state";
     import {
         P1, P3,
         B,
@@ -16,30 +15,12 @@
     let windowHeight: number;
     let scrollY: number;
     $: scrollPercentage = scrollY / windowHeight * 100;
-    let currentlyAnimatingScroll = false;
     let cursor: HTMLElement;
     let localCursorButtonHover: boolean;
-    let contrastingTextColorClass: string;
 
 
-    globalScrollY.subscribe((value: number) => {
-        contrastingTextColorWhite.set(value >= 0 || $page.route.id != "/fenni/home");
-    });
     cursorButtonHover.subscribe((value: boolean) => {
         localCursorButtonHover = value;
-    });
-    contrastingTextColorWhite.subscribe((value: boolean) => {
-        contrastingTextColorClass = value ? "text-white" : "text-black";
-    });
-    
-    onMount(() => {
-        const unsubscribe = page.subscribe(($page) => {
-            if ($page) {
-                contrastingTextColorWhite.set($page.route.id != "/fenni/home");
-            }
-        });
-        contrastingTextColorWhite.set(true);
-        return unsubscribe;
     });
 </script>
 
@@ -65,7 +46,7 @@
 
 
 <main
-    class="relative bg-gradient-to-br from-yellow-50 via-yellow-700 to-yellow-900 font-sans overflow-x-hidden cursor-none"
+    class="relative overflow-x-hidden bg-gradient-to-br from-yellow-50 via-yellow-700 to-yellow-900 font-sans text-white cursor-none"
 >
     <!-- TODO: Add standard scrollbar effects -->
     <DeviceDetector showInDevice="desktop">
@@ -84,15 +65,21 @@
         >
         </div>
     </div>
-    <div class="transition duration-200 fixed z-30 top-0 pointer-events-none w-full h-screen p-16 flex justify-between items-start {contrastingTextColorClass} font-handwriting">
+    <div
+        class=
+            "transition duration-200 fixed z-30 top-0 pointer-events-none
+            w-full h-screen p-16
+            flex justify-between items-start font-handwriting"
+    >
         <Button onClick={() => {}}>
             <!-- TODO: Choose font -->
-            <a href="/fenni/home" class="pointer-events-auto flex_row_center gap-8 font-logo" style="font-family: 'Yellowtail';">
+            <a href="/fenni/home" class="pointer-events-auto mt-1 flex_row_center gap-8 font-logo" style="font-family: 'Yellowtail';">
                 <div class="rounded-full w-8 h-8 bg-yellow-600"></div>
                 <P1>FENNI</P1>
             </a>
         </Button>
-        <div class="group pointer-events-auto backdrop-blur-sm rounded-full bg-opacity-25 bg-white px-1 py-1 flex justify-end items-start gap-8">
+        <div class="group pointer-events-auto rounded-full flex justify-end items-start gap-8">
+            <!-- TODO: Replace with icons? -->
             {#each [
                 ["Home", "/fenni/home"],
                 ["Projekte", "/fenni/projects"],
@@ -102,13 +89,9 @@
                     <a
                         href={e[1]}
                         class=
-                            "transition rounded-full h-8
-                            {
-                                $page.route.id == e[1]
-                                    ? "text-white"
-                                    : "bg-opacity-0"
-                            }  hover:bg-opacity-50
-                            bg-yellow-600 px-4 flex_row_center"
+                            "transition rounded-full h-10
+                            px-6 flex_row_center"
+                            style={$page.route.id == e[1] ? "filter: drop-shadow(0px 0px 4px rgb(250 204 21));" : ""}
                     >
                         <P3>{e[0]}</P3>
                     </a>
@@ -118,18 +101,19 @@
     </div>
     <slot/>
     <!-- TODO: Make it slide into view when scrolled like Cuberto -->
-    <section class="w-full h-screen p-16 lg:p-32 lg:pb-16">
-        <div class="pt-16 md:p-0 flex_row_center gap-16 text-5xl">
+    <section class="relative z-20 w-full h-screen p-16 lg:p-32 lg:pb-16">
+        <!--<div class="pt-16 md:p-0 flex_row_center gap-16 text-4xl">
             {#each ["mail", "instagram", "youtube"] as platform}
                 <Button onClick={() => {animateScroll.scrollToTop()}}><Icon name={platform}></Icon></Button>
             {/each}
-        </div>
-        <div class="w-full pt-16 flex justify-between items-end">
-            <div class="text-neutral-500">Fenja Rübenhagen<br/>Pothof 9d<br/>38122 Braunschweig</div>
-            <div class="text-right text-lg">Website von<br/>
-                <a href="/fenni/projects" class="font-bold"><Button onClick={() => {}}>
-                    <B>Taavi Rübenhagen</B>
-                </Button></a></div>
+        </div>-->
+        <div class="w-full h-screen pt-16 flex_col_center text-center text-5xl">
+            <!--<div class="text-neutral-500">Fenja Rübenhagen<br/>Pothof 9d<br/>38122 Braunschweig</div>-->
+            Website designed von
+            <div class="h-6"></div>
+            <a href="/" class="font-bold"><Button onClick={() => {}}>
+                <B>Taavi Rübenhagen</B>
+            </Button></a>
         </div>
     </section>
 </main>

@@ -51,7 +51,7 @@ module.exports = {
               logo: ['Permanent Marker'],
               rounded: ['Quicksand'],
               slab: ['Aleo'],           // TODO: F
-              handwriting: ['Caveat'],
+              handwriting: ['Permanent Marker', 'Yellowtail', 'Caveat'],
             },
             transitionDelay: {
                 0: '0s',

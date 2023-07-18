@@ -1,6 +1,7 @@
-import { g as getContext, d as now, l as loop, n as noop, c as create_ssr_component, e as escape, f as subscribe, o as onMount, v as validate_component, h as add_attribute, i as each } from "../../../chunks/index3.js";
+import { g as getContext, c as create_ssr_component, e as escape, d as subscribe, v as validate_component, f as add_attribute, h as each } from "../../../chunks/index3.js";
 import { D as DeviceDetector } from "../../../chunks/DeviceDetector.js";
-/* empty css                      */import { g as globalScrollY, c as contrastingTextColorWhite, a as cursorButtonHover } from "../../../chunks/state.js";
+/* empty css                      */import { c as cursorButtonHover } from "../../../chunks/state.js";
+import { P as P1 } from "../../../chunks/P1.js";
 import { B as Button, P as P3 } from "../../../chunks/Button.js";
 const getStores = () => {
   const stores = getContext("__svelte__");
@@ -20,161 +21,6 @@ const page = {
     return store.subscribe(fn);
   }
 };
-function cubicInOut(t) {
-  return t < 0.5 ? 4 * t * t * t : 0.5 * Math.pow(2 * t - 2, 3) + 1;
-}
-const $ = (selector) => {
-  if (typeof selector === "string") {
-    return document.querySelector(selector);
-  }
-  return selector;
-};
-const extend = (...args) => Object.assign({}, ...args);
-const cumulativeOffset = (element) => {
-  let top = 0;
-  let left = 0;
-  do {
-    top += element.offsetTop || 0;
-    left += element.offsetLeft || 0;
-    element = element.offsetParent;
-  } while (element);
-  return {
-    top,
-    left
-  };
-};
-const directScroll = (element) => element && element !== document && element !== document.body;
-const scrollTop = (element, value) => {
-  const inSetter = value !== void 0;
-  if (directScroll(element)) {
-    return inSetter ? element.scrollTop = value : element.scrollTop;
-  }
-  return inSetter ? document.documentElement.scrollTop = document.body.scrollTop = value : window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-};
-const scrollLeft = (element, value) => {
-  const inSetter = value !== void 0;
-  if (directScroll(element)) {
-    return inSetter ? element.scrollLeft = value : element.scrollLeft;
-  }
-  return inSetter ? document.documentElement.scrollLeft = document.body.scrollLeft = value : window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0;
-};
-const defaultOptions = {
-  container: "body",
-  duration: 500,
-  delay: 0,
-  offset: 0,
-  easing: cubicInOut,
-  onStart: noop,
-  onDone: noop,
-  onAborting: noop,
-  scrollX: false,
-  scrollY: true
-};
-const scrollToInternal = (options) => {
-  const { duration, delay, easing, x = 0, y = 0, scrollX, scrollY, onStart, onDone, container, onAborting, element } = options;
-  let { offset } = options;
-  if (typeof offset === "function") {
-    offset = offset();
-  }
-  const cumulativeOffsetContainer = cumulativeOffset(container);
-  const cumulativeOffsetTarget = element ? cumulativeOffset(element) : { top: y, left: x };
-  const initialX = scrollLeft(container);
-  const initialY = scrollTop(container);
-  const targetX = cumulativeOffsetTarget.left - cumulativeOffsetContainer.left + offset;
-  const targetY = cumulativeOffsetTarget.top - cumulativeOffsetContainer.top + offset;
-  const diffX = targetX - initialX;
-  const diffY = targetY - initialY;
-  let scrolling = true;
-  let started = false;
-  const startTime = now() + delay;
-  const endTime = startTime + duration;
-  function scrollToTopLeft(element2, top, left) {
-    if (scrollX)
-      scrollLeft(element2, left);
-    if (scrollY)
-      scrollTop(element2, top);
-  }
-  function start(delayStart) {
-    if (!delayStart) {
-      started = true;
-      onStart(element, { x, y });
-    }
-  }
-  function tick(progress) {
-    scrollToTopLeft(container, initialY + diffY * progress, initialX + diffX * progress);
-  }
-  function stop() {
-    scrolling = false;
-  }
-  loop((now2) => {
-    if (!started && now2 >= startTime) {
-      start(false);
-    }
-    if (started && now2 >= endTime) {
-      tick(1);
-      stop();
-      onDone(element, { x, y });
-    }
-    if (!scrolling) {
-      onAborting(element, { x, y });
-      return false;
-    }
-    if (started) {
-      const p = now2 - startTime;
-      const t = 0 + 1 * easing(p / duration);
-      tick(t);
-    }
-    return true;
-  });
-  start(delay);
-  tick(0);
-  return stop;
-};
-const proceedOptions = (options) => {
-  const opts = extend({}, defaultOptions, options);
-  opts.container = $(opts.container);
-  opts.element = $(opts.element);
-  return opts;
-};
-const scrollContainerHeight = (containerElement) => {
-  if (containerElement && containerElement !== document && containerElement !== document.body) {
-    return containerElement.scrollHeight - containerElement.offsetHeight;
-  }
-  const { body } = document;
-  const html = document.documentElement;
-  return Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
-};
-const setGlobalOptions = (options) => {
-  extend(defaultOptions, options || {});
-};
-const scrollTo = (options) => scrollToInternal(proceedOptions(options));
-const scrollToBottom = (options) => {
-  options = proceedOptions(options);
-  return scrollToInternal(extend(options, {
-    element: null,
-    y: scrollContainerHeight(options.container)
-  }));
-};
-const scrollToTop = (options) => {
-  options = proceedOptions(options);
-  return scrollToInternal(extend(options, {
-    element: null,
-    y: 0
-  }));
-};
-const animateScroll = { scrollTo, scrollToTop, scrollToBottom, setGlobalOptions };
-const Icon = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let { name } = $$props;
-  let { textClass = "" } = $$props;
-  if ($$props.name === void 0 && $$bindings.name && name !== void 0)
-    $$bindings.name(name);
-  if ($$props.textClass === void 0 && $$bindings.textClass && textClass !== void 0)
-    $$bindings.textClass(textClass);
-  return `<i class="${"relative top-0.5 " + escape(textClass, true) + " iconoir-" + escape(name, true)}"></i>`;
-});
-const P1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<t class="text-2xl md:text-3xl selection:text-outline-on-primary font-light">${slots.default ? slots.default({}) : ``}</t>`;
-});
 const B = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { onPrimary = false } = $$props;
   let { simple = false } = $$props;
@@ -184,11 +30,6 @@ const B = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     $$bindings.simple(simple);
   return `<t class="${"transition duration-400 " + escape(simple ? "" : "underline underline-offset-8", true) + " " + escape(onPrimary ? "text-onPrimary" : "text-onBackground", true)}">${slots.default ? slots.default({}) : ``}</t>`;
 });
-const _layout_svelte_svelte_type_style_lang = "";
-const css = {
-  code: ".custom-cursor.svelte-1dog6l0{box-shadow:10px 10px 10px black}",
-  map: null
-};
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let scrollPercentage;
   let $page, $$unsubscribe_page;
@@ -197,32 +38,15 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let scrollY;
   let cursor;
   let localCursorButtonHover;
-  let contrastingTextColorClass;
-  globalScrollY.subscribe((value) => {
-    contrastingTextColorWhite.set(value >= 0 || $page.route.id != "/fenni/home");
-  });
   cursorButtonHover.subscribe((value) => {
     localCursorButtonHover = value;
   });
-  contrastingTextColorWhite.subscribe((value) => {
-    contrastingTextColorClass = value ? "text-white" : "text-black";
-  });
-  onMount(() => {
-    const unsubscribe = page.subscribe(($page2) => {
-      if ($page2) {
-        contrastingTextColorWhite.set($page2.route.id != "/fenni/home");
-      }
-    });
-    contrastingTextColorWhite.set(true);
-    return unsubscribe;
-  });
-  $$result.css.add(css);
   scrollPercentage = scrollY / windowHeight * 100;
   $$unsubscribe_page();
   return `
 
 
-<main class="relative bg-gradient-to-br from-yellow-50 via-yellow-700 to-yellow-900 font-sans overflow-x-hidden cursor-none">
+<main class="relative overflow-x-hidden bg-gradient-to-br from-yellow-50 via-yellow-700 to-yellow-900 font-sans text-white cursor-none">
     ${validate_component(DeviceDetector, "DeviceDetector").$$render($$result, { showInDevice: "desktop" }, {}, {
     default: () => {
       return `<div class="${escape(
@@ -235,7 +59,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     }
   })}
     <div class="group z-45 fixed w-full h-8"><div class="transition duration-200 h-0.5 group-hover:h-4 group-focus:h-4 primary" style="${"width: " + escape(scrollPercentage, true) + "%; transition-property: height;"}"></div></div>
-    <div class="${"transition duration-200 fixed z-30 top-0 pointer-events-none w-full h-screen p-16 flex justify-between items-start " + escape(contrastingTextColorClass, true) + " font-handwriting svelte-1dog6l0"}">${validate_component(Button, "Button").$$render(
+    <div class="transition duration-200 fixed z-30 top-0 pointer-events-none w-full h-screen p-16 flex justify-between items-start font-handwriting">${validate_component(Button, "Button").$$render(
     $$result,
     {
       onClick: () => {
@@ -245,7 +69,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {
       default: () => {
         return `
-            <a href="/fenni/home" class="pointer-events-auto flex_row_center gap-8 font-logo" style="font-family: 'Yellowtail';"><div class="rounded-full w-8 h-8 bg-yellow-600"></div>
+            <a href="/fenni/home" class="pointer-events-auto mt-1 flex_row_center gap-8 font-logo" style="font-family: 'Yellowtail';"><div class="rounded-full w-8 h-8 bg-yellow-600"></div>
                 ${validate_component(P1, "P1").$$render($$result, {}, {}, {
           default: () => {
             return `FENNI`;
@@ -254,7 +78,8 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       }
     }
   )}
-        <div class="group pointer-events-auto backdrop-blur-sm rounded-full bg-opacity-25 bg-white px-1 py-1 flex justify-end items-start gap-8">${each(
+        <div class="group pointer-events-auto rounded-full flex justify-end items-start gap-8">
+            ${each(
     [
       ["Home", "/fenni/home"],
       ["Projekte", "/fenni/projects"],
@@ -270,7 +95,11 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         {},
         {
           default: () => {
-            return `<a${add_attribute("href", e[1], 0)} class="${"transition rounded-full h-8 " + escape($page.route.id == e[1] ? "text-white" : "bg-opacity-0", true) + " hover:bg-opacity-50 bg-yellow-600 px-4 flex_row_center"}">${validate_component(P3, "P3").$$render($$result, {}, {}, {
+            return `<a${add_attribute("href", e[1], 0)} class="transition rounded-full h-10 px-6 flex_row_center"${add_attribute(
+              "style",
+              $page.route.id == e[1] ? "filter: drop-shadow(0px 0px 4px rgb(250 204 21));" : "",
+              0
+            )}>${validate_component(P3, "P3").$$render($$result, {}, {}, {
               default: () => {
                 return `${escape(e[0])}`;
               }
@@ -283,25 +112,11 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   )}</div></div>
     ${slots.default ? slots.default({}) : ``}
     
-    <section class="w-full h-screen p-16 lg:p-32 lg:pb-16"><div class="pt-16 md:p-0 flex_row_center gap-16 text-5xl">${each(["mail", "instagram", "youtube"], (platform) => {
-    return `${validate_component(Button, "Button").$$render(
-      $$result,
-      {
-        onClick: () => {
-          animateScroll.scrollToTop();
-        }
-      },
-      {},
-      {
-        default: () => {
-          return `${validate_component(Icon, "Icon").$$render($$result, { name: platform }, {}, {})}`;
-        }
-      }
-    )}`;
-  })}</div>
-        <div class="w-full pt-16 flex justify-between items-end"><div class="text-neutral-500">Fenja R\xFCbenhagen<br>Pothof 9d<br>38122 Braunschweig</div>
-            <div class="text-right text-lg">Website von<br>
-                <a href="/fenni/projects" class="font-bold">${validate_component(Button, "Button").$$render(
+    <section class="relative z-20 w-full h-screen p-16 lg:p-32 lg:pb-16">
+        <div class="w-full h-screen pt-16 flex_col_center text-center text-5xl">
+            Website designed von
+            <div class="h-6"></div>
+            <a href="/" class="font-bold">${validate_component(Button, "Button").$$render(
     $$result,
     {
       onClick: () => {
@@ -317,7 +132,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         })}`;
       }
     }
-  )}</a></div></div></section>
+  )}</a></div></section>
 </main>`;
 });
 export {

@@ -19,33 +19,6 @@ function subscribe(store, ...callbacks) {
   const unsub = store.subscribe(...callbacks);
   return unsub.unsubscribe ? () => unsub.unsubscribe() : unsub;
 }
-const is_client = typeof window !== "undefined";
-let now = is_client ? () => window.performance.now() : () => Date.now();
-let raf = is_client ? (cb) => requestAnimationFrame(cb) : noop;
-const tasks = /* @__PURE__ */ new Set();
-function run_tasks(now2) {
-  tasks.forEach((task) => {
-    if (!task.c(now2)) {
-      tasks.delete(task);
-      task.f();
-    }
-  });
-  if (tasks.size !== 0)
-    raf(run_tasks);
-}
-function loop(callback) {
-  let task;
-  if (tasks.size === 0)
-    raf(run_tasks);
-  return {
-    promise: new Promise((fulfill) => {
-      tasks.add(task = { c: callback, f: fulfill });
-    }),
-    abort() {
-      tasks.delete(task);
-    }
-  };
-}
 let current_component;
 function set_current_component(component) {
   current_component = component;
@@ -147,13 +120,11 @@ export {
   afterUpdate as a,
   safe_not_equal as b,
   create_ssr_component as c,
-  now as d,
+  subscribe as d,
   escape as e,
-  subscribe as f,
+  add_attribute as f,
   getContext as g,
-  add_attribute as h,
-  each as i,
-  loop as l,
+  each as h,
   missing_component as m,
   noop as n,
   onMount as o,
