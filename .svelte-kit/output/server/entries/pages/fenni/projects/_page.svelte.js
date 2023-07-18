@@ -31,7 +31,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `
 
 
-<main><div class="fixed pointer-events-none w-full h-screen text-onPrimary"><img${add_attribute("src", imageUrls[Math.floor(timerSeconds / 10) % imageUrls.length], 0)} alt="" class="absolute z-0 w-full h-screen">
+<main><div class="fixed pointer-events-none w-full h-screen text-onPrimary"><img${add_attribute("src", imageUrls[Math.floor(timerSeconds / 10) % imageUrls.length], 0)} alt="" class="absolute z-0 min-w-full min-h-screen object-cover">
         <div class="absolute z-5 w-full h-screen"><div class="w-full h-full opacity-50 bg-gradient-to-b from-transparent to-black"></div></div>
         <div class="absolute z-15 w-full h-screen p-16 flex flex-col justify-end items-start"><div class="invert">${validate_component(O2, "O2").$$render($$result, {}, {}, {
     default: () => {

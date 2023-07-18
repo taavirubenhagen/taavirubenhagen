@@ -97,7 +97,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         {},
         {
           default: () => {
-            return `<a${add_attribute("href", e[1], 0)} class="transition rounded-full h-10 flex_row_center"${add_attribute(
+            return `<a${add_attribute("href", e[2], 0)} class="transition rounded-full h-10 flex_row_center"${add_attribute(
               "style",
               $page.route.id?.includes(e[2]) ? "filter: drop-shadow(0px 0px 4px rgb(250 204 21));" : "",
               0

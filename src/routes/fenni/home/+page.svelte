@@ -47,7 +47,7 @@
                 src="/colorful_woman.png"
                 class={windowWidth > windowHeight ? "h-full" : "w-full"}
                 style="opacity: {(() => {
-                    let limit = 2;
+                    let limit = 1.25;
                     let x = scrollY / windowHeight;
                     let y = limit * 2 - scrollY / windowHeight;
                     return x < limit ? limit : ( y < 0 ? 0 : y );
@@ -83,9 +83,7 @@
     </section>
     <section class="h-screen"></section>
     <section class="h-screen"></section>
-    <section class="h-screen"></section>
-    <section class="h-screen"></section>
-    <section class="h-screen"></section>
+    <section class="h-[50vh]"></section>
     <section class="relative z-30 w-full h-screen flex_col_center">
         <div class="w-full p-8 md:w-1/2 md:p-0">
             <P1>
@@ -97,7 +95,6 @@
             </P1>
         </div>
     </section>
-    <section class="h-screen"></section>
 </main>
 
 

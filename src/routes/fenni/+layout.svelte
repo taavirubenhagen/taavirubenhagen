@@ -95,7 +95,7 @@
             ] as e}
                 <Button onClick={() => {}}>
                     <a
-                        href={e[1]}
+                        href={e[2]}
                         class="transition rounded-full h-10 flex_row_center"
                         style={$page.route.id?.includes(e[2]) ? "filter: drop-shadow(0px 0px 4px rgb(250 204 21));" : ""}
                     >

@@ -24,7 +24,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   ) + ");"}"></div>
         <div class="${"fixed brightness-75 w-full h-screen " + escape("px-8", true) + " flex_col_center"}" style="${"opacity: " + escape(1 - 0 * (scrollY / windowHeight), true) + ";"}"><img alt="Portrait von mir" src="/colorful_woman.png"${add_attribute("class", "w-full", 0)} style="${"opacity: " + escape(
     (() => {
-      let limit = 2;
+      let limit = 1.25;
       let x = scrollY / windowHeight;
       let y = limit * 2 - scrollY / windowHeight;
       return x < limit ? limit : y < 0 ? 0 : y;
@@ -56,9 +56,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   )}</div></section>
     <section class="h-screen"></section>
     <section class="h-screen"></section>
-    <section class="h-screen"></section>
-    <section class="h-screen"></section>
-    <section class="h-screen"></section>
+    <section class="h-[50vh]"></section>
     <section class="relative z-30 w-full h-screen flex_col_center"><div class="w-full p-8 md:w-1/2 md:p-0">${validate_component(P1, "P1").$$render($$result, {}, {}, {
     default: () => {
       return `Ich bin eine freie K\xFCnstlerin aus Braunschweig und mache Kunst aller Art:
@@ -68,8 +66,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
                 die Kontaktdaten findest du unten.
             `;
     }
-  })}</div></section>
-    <section class="h-screen"></section></main>
+  })}</div></section></main>
 
 
 `;

@@ -46,7 +46,7 @@
         <img
             src={imageUrls[Math.floor(timerSeconds / 10) % imageUrls.length]}
             alt=""
-            class="absolute z-0 w-full h-screen"
+            class="absolute z-0 min-w-full min-h-screen object-cover"
         />
         <div class="absolute z-5 w-full h-screen">
             <div class="w-full h-full opacity-50 bg-gradient-to-b from-transparent to-black"></div>
