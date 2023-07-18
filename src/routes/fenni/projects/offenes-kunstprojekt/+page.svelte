@@ -38,12 +38,12 @@
             {/each}
         </div>
     </div>
-    <div class="w-full p-16 pt-32 flex flex-wrap text-black font-logo">
+    <div class="w-full p-8 md:p-16 pt-16 md:pt-32 md:pb-16 flex flex-wrap text-black font-logo">
         {#each postTitle.split("") as letter}
             <H1>{letter}</H1>
         {/each}
     </div>
-    <div class="p-16 text-black">
+    <div class="p-8 md:p-16 text-black">
         <P2>
             Bei meinem offenen Kunstprojekt habe ich den Park mit Sachen vollgestellt und Leute in Kontakt mit ihrer künstlerischen Seite gebracht.
             <br/><br/>
