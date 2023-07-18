@@ -24,7 +24,7 @@
 </script>
 
 
-<svelte:window bind:innerWidth={windowWidth} bind:outerHeight={windowHeight} />
+<svelte:window bind:innerWidth={windowWidth} bind:innerHeight={windowHeight} />
 
 
 <img src="/centered_explosion.png" alt="Color Explosion" class="fixed -z-5 opacity-0 w-full">

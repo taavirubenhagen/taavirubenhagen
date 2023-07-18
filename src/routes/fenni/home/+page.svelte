@@ -24,7 +24,7 @@
 </script>
 
 
-<svelte:window bind:innerWidth={windowWidth} bind:outerHeight={windowHeight} bind:scrollY={scrollY} />
+<svelte:window bind:innerWidth={windowWidth} bind:innerHeight={windowHeight} bind:scrollY={scrollY} />
 
 
 <main class="bg-gradient-to-br from-yellow-50 via-yellow-700 to-yellow-900 text-center">
