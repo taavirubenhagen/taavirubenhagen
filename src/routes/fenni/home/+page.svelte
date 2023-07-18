@@ -27,32 +27,42 @@
 <svelte:window bind:innerWidth={windowWidth} bind:outerHeight={windowHeight} bind:scrollY={scrollY} />
 
 
-<section class="relative h-screen">
-    <div class="fixed brightness-75 contrast-200 w-full h-screen">
-        <img
-            alt=""
-            src="/color_explosion.png"
-            class="w-full"
-        />
-    </div>
-    <div class="fixed brightness-75 w-full h-screen flex_col_center" style="opacity: {1 - 0 * ( scrollY / windowHeight )};">
-        <img
-            alt="Portrait von mir"
-            src="/colorful_woman.png"
-            class="h-full"
-        />
-    </div>
-    <div class="absolute z-15 w-full h-screen p-16 flex_col_center">
-        <div class="mt-4 mb-4 invert font-logo">
-            <H2>Hi, ich bin FENNI.</H2>
+<main>
+    <section class="relative h-screen">
+        <div class="fixed brightness-75 contrast-200 w-full h-screen flex_col_center md:justify-start">
+            <img
+                alt=""
+                src="/centered_explosion.png"
+                class="opacity-75 w-full min-w-screen"
+                style="transform: scale({(() => {
+                    let x = scrollY / windowHeight / 2;
+                    let limit = ( windowWidth > windowHeight ? 1 : 1.25 );
+                    return x > limit ? limit : x;
+                })()});"
+            />
         </div>
-        <Button onClick={() => {}}>
-            <a href="/fenni/projects" class="relative z-20 my-8 rounded-full bg-opacity-100 bg-yellow-600 h-12 px-4 flex_row_center">
-                <P3><div class="text-white">Sag Hallo</div></P3>
-            </a>
-        </Button>
-    </div>
-</section>
+        <div class="fixed brightness-75 w-full h-screen {windowWidth > windowHeight ? "" : "px-8"} flex_col_center" style="opacity: {1 - 0 * ( scrollY / windowHeight )};">
+            <img
+                alt="Portrait von mir"
+                src="/colorful_woman.png"
+                class={windowWidth > windowHeight ? "h-full" : "w-full"}
+            />
+        </div>
+        <div class="absolute z-15 w-full h-screen p-16 flex_col_center">
+            <div class="mt-4 mb-4 invert text-center font-logo">
+                <H2>Hi, ich bin FENNI.</H2>
+            </div>
+            <Button onClick={() => {}}>
+                <a href="/fenni/projects" class="relative z-20 my-8 rounded-full bg-opacity-100 bg-yellow-600 h-12 px-4 flex_row_center">
+                    <P3><div class="text-white">Sag Hallo</div></P3>
+                </a>
+            </Button>
+        </div>
+    </section>
+    <section class="h-screen"></section>
+    <section class="h-screen"></section>
+    <section class="h-screen"></section>
+</main>
 
 
 <!--<main>
