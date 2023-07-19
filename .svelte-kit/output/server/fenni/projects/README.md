@@ -2,7 +2,7 @@
 
 1. Erstelle einen neuen Ordner hier. Gib dem Projekt einen Namen und verändere ihn auf folgende Weise: "Offenes Kunstprojekt" -> "offenes-kunstprojekt". Das wird von nun an der ```name``` des Projekts sein.
 
-2. Erstelle eine Datei ```data.json``` in diesem Ordner. Ihr Inhalt sollte so aussehen:
+2. Erstelle eine Datei ```name-des-projektes/data.json``` in diesem Ordner. Ihr Inhalt sollte so aussehen:
 
 {
     "name": "name-des-projektes",
@@ -12,4 +12,4 @@
     "texts": ["blog.md"]
 }
 
-3. Schreibe den Inhalt des Posts in eine Datei namens ```blog.md``` in formatiere sie mit [Markdown](https://www.markdownguide.org/cheat-sheet/).
+3. Schreibe den Inhalt des Posts in eine Datei namens ```blog.md```, die du im neu entstandenen Ordner erstellen kannst, und formatiere sie mit [Markdown](https://www.markdownguide.org/cheat-sheet/).
