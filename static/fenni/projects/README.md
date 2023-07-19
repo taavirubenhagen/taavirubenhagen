@@ -1,4 +1,4 @@
-# Wie du einen Post für das Project "Name des Projektes" erstellst
+# Wie du einen Post für das Projekt "Name des Projektes" erstellst
 
 1. Erstelle eine Datei ```name-des-projektes/data.json``` in diesem Ordner. Ihr Inhalt sollte so aussehen:
 

@@ -334,11 +334,10 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $page, $$unsubscribe_page;
   $$unsubscribe_page = subscribe(page, (value) => $page = value);
   const projectPath = `https://raw.githubusercontent.com/taavirubenhagen/taavirubenhagen/main/static/fenni/projects/${$page.params.name}/`;
-  let postTitle = "";
   let blogMarkdown = "Inhalt wird geladen. Bitte gedulde dich einen Moment.";
   onMount(async () => {
     const projectData = JSON.parse(await (await fetch(projectPath + "data.json")).text());
-    postTitle = projectData["title"];
+    projectData["title"];
     projectData["onlineImageUrls"];
     blogMarkdown = await (await fetch(projectPath + "blog.md")).text();
     console.log(blogMarkdown);
@@ -348,11 +347,8 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 
 
 <img src="/fenni/images/centered_explosion.png" alt="Color Explosion" class="fixed -z-5 opacity-0 w-full">
-<main class="relative z-0 w-full bg-gradient-to-br from-transparent to-transparent"><div class="mt-44 flex_col_center"></div>
-    <div class="w-full p-8 md:p-16 pt-32 md:pb-16 flex flex-wrap text-black font-logo">${each(postTitle.split(""), (letter) => {
-    return `<h1>${escape(letter)}</h1>`;
-  })}</div>
-    <div class="p-8 md:px-16 text-black font-handwriting">${validate_component(SvelteMarkdown, "SvelteMarkdown").$$render($$result, { source: blogMarkdown }, {}, {})}</div></main>`;
+<main>
+    <div class="p-8 md:p-16 pt-28 md:pt-44 text-black font-handwriting">${validate_component(SvelteMarkdown, "SvelteMarkdown").$$render($$result, { source: blogMarkdown }, {}, {})}</div></main>`;
 });
 export {
   Page as default
