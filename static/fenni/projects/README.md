@@ -10,4 +10,6 @@
     "texts": ["blog.md"]
 }
 
-3. Schreibe den Inhalt des Posts in eine Datei namens ```blog.md```, die du im neu entstandenen Ordner erstellen kannst, und formatiere sie mit [Markdown](https://www.markdownguide.org/cheat-sheet/).
+2. Schreibe den Inhalt des Posts in eine Datei namens ```blog.md```, die du im neu entstandenen Ordner erstellen kannst, und formatiere sie mit [Markdown](https://www.markdownguide.org/cheat-sheet/).
+
+3. Füge Bilder mit obiger Anleitung und folgender URL hinzu: https://raw.githubusercontent.com/taavirubenhagen/taavirubenhagen/main/static/fenni/projects/```name-des-projektes```/```name-des-bildes.jpg``` (nicht getestet).
