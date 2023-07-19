@@ -5,7 +5,6 @@
     import "$style";
     import {
         Icon,
-        H1, H2,
         O2,
         P1, P3,
         B,
@@ -32,19 +31,19 @@
         <div class="fixed opacity-75 brightness-75 contrast-200 w-full h-screen flex_col_center justify-start">
             <img
                 alt=""
-                src="/centered_explosion.png"
+                src="/fenni/images/centered_explosion.png"
                 class="w-full min-w-screen"
                 style="transform: scale({(() => {
                     let x = scrollY / windowHeight / ( windowWidth > windowHeight ? 2 : 1 );
                     let limit = ( windowWidth > windowHeight ? 1 : 1.25 );
-                    return x ** 2 > limit ? limit : x ** 2;
+                    return x ** (1/1.5) > limit ? limit : x ** (1/1.5);
                 })()});"
             />
         </div>
         <div class="fixed brightness-75 w-full h-screen {windowWidth > windowHeight ? "" : "px-8"} flex_col_center" style="opacity: {1 - 0 * ( scrollY / windowHeight )};">
             <img
                 alt="Portrait von mir"
-                src="/colorful_woman.png"
+                src="/fenni/images/colorful_woman.png"
                 class={windowWidth > windowHeight ? "h-full" : "w-full"}
                 style="opacity: {(() => {
                     let limit = 1.25;
@@ -56,7 +55,7 @@
         </div>
         <div class="absolute z-15 w-full h-screen overflow-hidden p-16 flex_col_center">
             <div class="mt-4 mb-4 font-logo">
-                <H2>Hi, ich bin FENNI.</H2>
+                <h2>Hi, ich bin FENNI.</h2>
             </div>
             <Button onClick={() => {}}>
                 <!--
@@ -84,7 +83,7 @@
     <section class="h-screen"></section>
     <section class="h-screen"></section>
     <section class="h-[50vh]"></section>
-    <section class="relative z-30 w-full h-screen flex_col_center">
+    <section class="relative z-20 w-full h-screen flex_col_center">
         <div class="w-full p-8 md:w-1/2 md:p-0">
             <P1>
                 Ich bin eine freie Künstlerin aus Braunschweig und mache Kunst aller Art:
@@ -102,7 +101,7 @@
     <div class="relative w-full h-screen">
         <div class="absolute z-15 w-full h-screen p-16 flex_col_center">
             <div class="mt-4 mb-4 font-logo">
-                <H2>Hi, ich bin FENNI.</H2>
+                <h2>Hi, ich bin FENNI.</h2>
             </div>
             <Button onClick={() => {}}>
                 <a href="/fenni/projects" class="relative z-20 my-8 rounded-full bg-opacity-100 bg-yellow-600 h-12 px-4 flex_row_center">

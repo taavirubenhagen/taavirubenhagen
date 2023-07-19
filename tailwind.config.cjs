@@ -27,7 +27,7 @@ module.exports = {
             body: ['Lexend'],
             display: ['Caveat', 'Arial'],
             sans: ['Lexend'],
-            mono: ['IBM Plex Mono', 'Consolas'],
+            mono: ['Lexend', 'IBM Plex Mono', 'Consolas'],
         },
         transitionTimingFunction: {
           //DEFAULT: 'cubic-bezier(0.2, 0, 0.4, 1)',

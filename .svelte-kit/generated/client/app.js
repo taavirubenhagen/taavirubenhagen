@@ -30,7 +30,7 @@ export const dictionary = {
 		"/": [~8],
 		"/fenni/home": [9,[2]],
 		"/fenni/projects": [10,[2]],
-		"/fenni/projects/offenes-kunstprojekt": [11,[2]],
+		"/fenni/projects/[name]": [11,[2]],
 		"/me/blog": [12,[3,4]],
 		"/me/contact": [~13,[3]],
 		"/me/home": [14,[3,5]],

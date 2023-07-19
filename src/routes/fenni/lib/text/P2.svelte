@@ -2,4 +2,4 @@
     import '$style'
 </script>
 
-<t class="text-lg selection:text-outline-on-primary"><slot/></t>
+<t class="text-lg"><slot/></t>

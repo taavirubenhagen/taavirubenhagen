@@ -71,7 +71,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {
       default: () => {
         return `
-            <a href="/fenni/home" class="pointer-events-auto mt-1 flex_row_center gap-8 font-logo" style="font-family: 'Yellowtail';"><div class="rounded-full w-8 h-8"><img src="/centered_explosion.png" alt="Portrait von mir" class="object-cover"></div>
+            <a href="/fenni/home" class="pointer-events-auto mt-1 flex_row_center gap-8 font-logo" style="font-family: 'Yellowtail';"><div class="rounded-full w-8 h-8"><img src="/fenni/images/centered_explosion.png" alt="Portrait von mir" class="object-cover"></div>
                 ${validate_component(P1, "P1").$$render($$result, {}, {}, {
           default: () => {
             return `FENNI`;

@@ -9,8 +9,8 @@ type OutputDataShape<T> = MaybeWithVoid<Omit<App.PageData, RequiredKeys<T>> & Pa
 type EnsureDefined<T> = T extends null | undefined ? {} : T;
 type OptionalUnion<U extends Record<string, any>, A extends keyof U = U extends U ? keyof U : never> = U extends unknown ? { [P in Exclude<A, keyof U>]?: never } & U : never;
 export type Snapshot<T = any> = Kit.Snapshot<T>;
-type LayoutRouteId = RouteId | "/fenni/home" | "/fenni/projects" | "/fenni/projects/offenes-kunstprojekt"
-type LayoutParams = RouteParams & {  }
+type LayoutRouteId = RouteId | "/fenni/home" | "/fenni/projects" | "/fenni/projects/[name]"
+type LayoutParams = RouteParams & { name?: string }
 type LayoutParentData = EnsureDefined<import('../$types.js').LayoutData>;
 
 export type LayoutServerData = null;

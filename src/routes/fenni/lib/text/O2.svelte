@@ -1,6 +1,6 @@
 <script lang="ts">
     import '$style';
-    import H2 from './H2.svelte';
+    import h2 from './h2.svelte';
 </script>
 
-<H2><t class="text-outline font-normal"><slot/></t></H2>
+<h2><t class="text-outline font-normal"><slot/></t></h2>

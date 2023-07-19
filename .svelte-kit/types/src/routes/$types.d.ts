@@ -11,8 +11,8 @@ type OptionalUnion<U extends Record<string, any>, A extends keyof U = U extends 
 export type Snapshot<T = any> = Kit.Snapshot<T>;
 type PageServerParentData = EnsureDefined<LayoutServerData>;
 type PageParentData = EnsureDefined<LayoutData>;
-type LayoutRouteId = RouteId | "/" | "/fenni/home" | "/fenni/projects" | "/fenni/projects/offenes-kunstprojekt" | "/me/blog" | "/me/contact" | "/me/home" | "/me/landing/social" | "/portfolio/home" | "/portfolio/newsletter" | "/presenter/waitlist" | "/supabase-test" | "/tts" | null
-type LayoutParams = RouteParams & {  }
+type LayoutRouteId = RouteId | "/" | "/fenni/home" | "/fenni/projects" | "/fenni/projects/[name]" | "/me/blog" | "/me/contact" | "/me/home" | "/me/landing/social" | "/portfolio/home" | "/portfolio/newsletter" | "/presenter/waitlist" | "/supabase-test" | "/tts" | null
+type LayoutParams = RouteParams & { name?: string }
 type LayoutParentData = EnsureDefined<{}>;
 
 export type PageServerLoad<OutputData extends OutputDataShape<PageServerParentData> = OutputDataShape<PageServerParentData>> = Kit.ServerLoad<RouteParams, PageServerParentData, OutputData, RouteId>;

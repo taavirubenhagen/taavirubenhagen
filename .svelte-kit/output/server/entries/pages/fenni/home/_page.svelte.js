@@ -1,7 +1,7 @@
 import { c as create_ssr_component, e as escape, f as add_attribute, v as validate_component } from "../../../../chunks/index3.js";
 import "ua-parser-js";
-/* empty css                         */import { H as H2, P as P3 } from "../../../../chunks/P3.js";
-import { P as P1 } from "../../../../chunks/P1.js";
+/* empty css                         */import { P as P1 } from "../../../../chunks/P1.js";
+import { P as P3 } from "../../../../chunks/P3.js";
 import { B as Button } from "../../../../chunks/Button.js";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let windowHeight;
@@ -14,15 +14,15 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `
 
 
-<main class="bg-gradient-to-br from-yellow-50 via-yellow-700 to-yellow-900 text-center"><section class="relative h-screen"><div class="fixed opacity-75 brightness-75 contrast-200 w-full h-screen flex_col_center justify-start"><img alt="" src="/centered_explosion.png" class="w-full min-w-screen" style="${"transform: scale(" + escape(
+<main class="bg-gradient-to-br from-yellow-50 via-yellow-700 to-yellow-900 text-center"><section class="relative h-screen"><div class="fixed opacity-75 brightness-75 contrast-200 w-full h-screen flex_col_center justify-start"><img alt="" src="/fenni/images/centered_explosion.png" class="w-full min-w-screen" style="${"transform: scale(" + escape(
     (() => {
       let x = scrollY / windowHeight / 1;
       let limit = 1.25;
-      return x ** 2 > limit ? limit : x ** 2;
+      return x ** (1 / 1.5) > limit ? limit : x ** (1 / 1.5);
     })(),
     true
   ) + ");"}"></div>
-        <div class="${"fixed brightness-75 w-full h-screen " + escape("px-8", true) + " flex_col_center"}" style="${"opacity: " + escape(1 - 0 * (scrollY / windowHeight), true) + ";"}"><img alt="Portrait von mir" src="/colorful_woman.png"${add_attribute("class", "w-full", 0)} style="${"opacity: " + escape(
+        <div class="${"fixed brightness-75 w-full h-screen " + escape("px-8", true) + " flex_col_center"}" style="${"opacity: " + escape(1 - 0 * (scrollY / windowHeight), true) + ";"}"><img alt="Portrait von mir" src="/fenni/images/colorful_woman.png"${add_attribute("class", "w-full", 0)} style="${"opacity: " + escape(
     (() => {
       let limit = 1.25;
       let x = scrollY / windowHeight;
@@ -31,11 +31,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     })(),
     true
   ) + ";"}"></div>
-        <div class="absolute z-15 w-full h-screen overflow-hidden p-16 flex_col_center"><div class="mt-4 mb-4 font-logo">${validate_component(H2, "H2").$$render($$result, {}, {}, {
-    default: () => {
-      return `Hi, ich bin FENNI.`;
-    }
-  })}</div>
+        <div class="absolute z-15 w-full h-screen overflow-hidden p-16 flex_col_center"><div class="mt-4 mb-4 font-logo"><h2>Hi, ich bin FENNI.</h2></div>
             ${validate_component(Button, "Button").$$render(
     $$result,
     {
@@ -57,7 +53,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     <section class="h-screen"></section>
     <section class="h-screen"></section>
     <section class="h-[50vh]"></section>
-    <section class="relative z-30 w-full h-screen flex_col_center"><div class="w-full p-8 md:w-1/2 md:p-0">${validate_component(P1, "P1").$$render($$result, {}, {}, {
+    <section class="relative z-20 w-full h-screen flex_col_center"><div class="w-full p-8 md:w-1/2 md:p-0">${validate_component(P1, "P1").$$render($$result, {}, {}, {
     default: () => {
       return `Ich bin eine freie K\xFCnstlerin aus Braunschweig und mache Kunst aller Art:
                 B\xFCcher schreiben, Musik aufnehmen, Leute vollabern etc.<br><br>
