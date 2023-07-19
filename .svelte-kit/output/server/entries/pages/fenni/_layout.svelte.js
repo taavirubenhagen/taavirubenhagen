@@ -1,26 +1,9 @@
-import { g as getContext, c as create_ssr_component, e as escape, d as subscribe, v as validate_component, f as add_attribute, h as each } from "../../../chunks/index3.js";
+import { c as create_ssr_component, e as escape, d as subscribe, v as validate_component, f as add_attribute, g as each } from "../../../chunks/index3.js";
+import { p as page } from "../../../chunks/stores.js";
 import { D as DeviceDetector } from "../../../chunks/DeviceDetector.js";
 /* empty css                      */import { c as cursorButtonHover } from "../../../chunks/state.js";
 import { P as P1 } from "../../../chunks/P1.js";
 import { B as Button } from "../../../chunks/Button.js";
-const getStores = () => {
-  const stores = getContext("__svelte__");
-  return {
-    page: {
-      subscribe: stores.page.subscribe
-    },
-    navigating: {
-      subscribe: stores.navigating.subscribe
-    },
-    updated: stores.updated
-  };
-};
-const page = {
-  subscribe(fn) {
-    const store = getStores().page;
-    return store.subscribe(fn);
-  }
-};
 const Icon = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { name } = $$props;
   let { textClass = "" } = $$props;

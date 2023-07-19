@@ -1,4 +1,4 @@
-import { c as create_ssr_component, f as add_attribute, h as each, v as validate_component, e as escape } from "../../../../chunks/index3.js";
+import { c as create_ssr_component, f as add_attribute, g as each, v as validate_component, e as escape } from "../../../../chunks/index3.js";
 import { g as globalScrollY } from "../../../../chunks/state.js";
 import "ua-parser-js";
 /* empty css                         */import { P as P3 } from "../../../../chunks/P3.js";

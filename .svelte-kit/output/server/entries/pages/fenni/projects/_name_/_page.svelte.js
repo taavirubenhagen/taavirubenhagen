@@ -1,6 +1,7 @@
-import { o as onMount, c as create_ssr_component, i as compute_rest_props, h as each, v as validate_component, m as missing_component, e as escape, g as getContext, f as add_attribute, j as createEventDispatcher, s as setContext } from "../../../../../chunks/index3.js";
+import { o as onMount, c as create_ssr_component, i as compute_rest_props, g as each, v as validate_component, m as missing_component, e as escape, h as getContext, f as add_attribute, j as createEventDispatcher, s as setContext, d as subscribe } from "../../../../../chunks/index3.js";
 import "fs";
 import { Slugger, Lexer } from "marked";
+import { p as page } from "../../../../../chunks/stores.js";
 /* empty css                            */function supressWarnings() {
   const origWarn = console.warn;
   console.warn = (message) => {
@@ -330,25 +331,28 @@ const SvelteMarkdown = create_ssr_component(($$result, $$props, $$bindings, slot
   return `${validate_component(Parser, "Parser").$$render($$result, { tokens, renderers: combinedRenderers }, {}, {})}`;
 });
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let source;
+  let $page, $$unsubscribe_page;
+  $$unsubscribe_page = subscribe(page, (value) => $page = value);
+  const projectPath = `https://raw.githubusercontent.com/taavirubenhagen/taavirubenhagen/main/static/fenni/projects/${$page.params.name}/`;
+  let postTitle = "";
+  let blogMarkdown = "Inhalt wird geladen. Bitte gedulde dich einen Moment.";
   onMount(async () => {
-    console.log("Started");
-    const response = await fetch(`fenni/projects/offenes-kunstprojekt/blog.md`);
-    console.log(response);
-    source = await response.text();
+    const projectData = JSON.parse(await (await fetch(projectPath + "data.json")).text());
+    postTitle = projectData["title"];
+    projectData["onlineImageUrls"];
+    blogMarkdown = await (await fetch(projectPath + "blog.md")).text();
+    console.log(blogMarkdown);
   });
+  $$unsubscribe_page();
   return `
 
 
 <img src="/fenni/images/centered_explosion.png" alt="Color Explosion" class="fixed -z-5 opacity-0 w-full">
-<main class="relative z-0 w-full bg-gradient-to-br from-transparent to-transparent"><div class="mt-44 flex_col_center"><div class="flex gap-4">${each(["imageUrls"], (url, i) => {
-    return `<div class="w-64 h-64"><img${add_attribute("src", url, 0)} alt="${"Image " + escape(i, true)}" class="object-cover rounded-lg h-full">
-                </div>`;
-  })}</div></div>
-    <div class="w-full p-8 md:p-16 pt-32 md:pb-16 flex flex-wrap text-black font-logo">${each("postTitle".split(""), (letter) => {
+<main class="relative z-0 w-full bg-gradient-to-br from-transparent to-transparent"><div class="mt-44 flex_col_center"></div>
+    <div class="w-full p-8 md:p-16 pt-32 md:pb-16 flex flex-wrap text-black font-logo">${each(postTitle.split(""), (letter) => {
     return `<h1>${escape(letter)}</h1>`;
   })}</div>
-    <div class="p-8 md:px-16 text-black font-handwriting">${validate_component(SvelteMarkdown, "SvelteMarkdown").$$render($$result, { source }, {}, {})}</div></main>`;
+    <div class="p-8 md:px-16 text-black font-handwriting">${validate_component(SvelteMarkdown, "SvelteMarkdown").$$render($$result, { source: blogMarkdown }, {}, {})}</div></main>`;
 });
 export {
   Page as default
