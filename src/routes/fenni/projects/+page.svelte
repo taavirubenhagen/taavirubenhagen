@@ -1,6 +1,8 @@
 <script lang="ts">
     import { globalScrollY } from "../state";
     import DeviceDetector from "svelte-device-detector";
+    import { ScaleOut } from 'svelte-loading-spinners';
+
     import "$style";
     import {
         Icon,
@@ -13,6 +15,7 @@
     let windowHeight: number;
     let scrollY: number;
 
+    const apiUrl = "https://api.github.com/repos/taavirubenhagen/taavirubenhagen/contents/static/fenni/projects";
     const projectData = [
         ["Offenes Kunstprojekt", "https://www.blitzrechner.de/wp-content/uploads/2015/05/kunstwerke-preise.jpg"],
         ["Ein Bild, das keine Farbe hat", "https://www.sueddeutsche.de/image/sz.1.5914567/1200x675?v=1686329819"],
@@ -41,38 +44,54 @@
 
 
 <main>
-    <div class="fixed pointer-events-none w-full h-full text-onPrimary">
-        <img
-            src={projectData[timerIntervals % projectData.length][1]}
-            alt=""
-            class="absolute z-0 min-w-full min-h-full object-cover"
-        />
-        <div class="absolute z-5 w-full h-full">
-            <div class="w-full h-full opacity-50 bg-gradient-to-b from-transparent to-black"></div>
+    {#await (async () => {
+        let apiData;
+        try {
+            apiData: [] = await ( await fetch(apiUrl) ).json();
+            let projectNames = (apiData ?? [{type: "", name: ""}]).filter((item) => item.type === 'dir').map((item) => item.name)
+        } catch (e) {
+            return [e, e, e];
+        }
+        const projectData = [apiData]
+        return [projectData];
+    })()}
+        <div class="w-full h-screen flex_col_center">
+            <ScaleOut duration="800ms" unit="px" size="64" color="rgb(202 138 4)"/>
         </div>
-        <div class="absolute z-15 w-full h-full p-8 md:p-16 flex flex-col justify-end items-start">
-            <div class="flex flex-wrap">
-                {#each projectData[timerIntervals % projectData.length][0].split("") as letter}
-                    <h2>{letter}</h2>
-                {/each}
+    {:then projetData}
+        <div class="fixed w-full h-full text-onPrimary">
+            <img
+                src={projectData[timerIntervals % projectData.length][1]}
+                alt=""
+                class="absolute z-0 min-w-full min-h-full object-cover"
+            />
+            <div class="absolute z-5 w-full h-full">
+                <div class="w-full h-full opacity-50 bg-gradient-to-b from-transparent to-black"></div>
             </div>
-            <Button onClick={() => {}}>
-                <a
-                    href="/fenni/projects/offenes-kunstprojekt"
-                    class=
-                        "relative z-20 my-8 pointer-events-auto
-                        rounded-full bg-opacity-100 bg-yellow-600 h-12 px-4
-                        flex_row_center text-white"
-                >
-                    <P3>Mach es selbst</P3>
-                </a>
-            </Button>
-            <div class="flex gap-2">
-                {#each projectData as _, i}
-                    <div class="transition duration-[5s] rounded-full w-8 h-1 {timerIntervals >= i ? "bg-yellow-600" : "bg-white"}"></div>
-                {/each}
+            <div class="absolute z-15 w-full h-full p-8 md:p-16 flex flex-col justify-end items-start">
+                <div class="flex flex-wrap">
+                    {#each projectData[timerIntervals % projectData.length][0].split("") as letter}
+                        <h2 class="font-handwriting">{letter}</h2>
+                    {/each}
+                </div>
+                <Button onClick={() => {}}>
+                    <a
+                        href="/fenni/projects/offenes-kunstprojekt"
+                        class=
+                            "relative z-20 my-8
+                            rounded-full bg-opacity-100 bg-yellow-600 h-12 px-4
+                            flex_row_center text-white"
+                    >
+                        <P3>Mach es selbst</P3>
+                    </a>
+                </Button>
+                <div class="flex gap-2">
+                    {#each projectData as _, i}
+                        <div class="transition duration-[5s] ease-linear rounded-full w-8 h-1 {timerIntervals >= i ? "bg-yellow-600" : "bg-white"}"></div>
+                    {/each}
+                </div>
             </div>
         </div>
-    </div>
-    <div class="w-full" style="height: {projectData.length * 100}%;"></div>
+        <div class="w-full" style="height: {projectData.length * 100}%;"></div>
+    {/await}
 </main>

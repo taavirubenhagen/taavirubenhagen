@@ -14,4 +14,4 @@
 
 3. Füge Bilder mit obiger Anleitung und folgender URL hinzu: https://raw.githubusercontent.com/taavirubenhagen/taavirubenhagen/main/static/fenni/projects/name-des-projektes/name-des-bildes.jpg (nicht getestet).
 
-Achte darauf, das Bild davor ebenfalls in den Ordner hochzuladen und die letzten beiden Teile der URL entsprechend anzupassen.
+Achte darauf, Bilder davor ebenfalls in den Ordner hochzuladen und die letzten beiden Teile der URL entsprechend anzupassen.

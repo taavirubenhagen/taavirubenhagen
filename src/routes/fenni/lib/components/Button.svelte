@@ -10,7 +10,6 @@
     on:mouseenter={() => cursorButtonHover.set(true)}
     on:mouseleave={() => cursorButtonHover.set(false)}
     on:click={onClick}
-    class=""
 >
     <slot/>
 </button>

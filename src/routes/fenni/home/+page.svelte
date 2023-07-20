@@ -58,14 +58,7 @@
                 <h2>Hi, ich bin FENNI.</h2>
             </div>
             <Button onClick={() => {}}>
-                <!--
-                    Shadow color is yellow-500
-                    yellow-200: rgb(254 240 138)
-                    yellow-300: rgb(253 224 71)
-                    yellow-400: rgb(250 204 21)
-                    yellow-500: rgb(234 179 8)
-                    yellow-600: rgb(202 138 4)
-                -->
+                <!--Shadow color is yellow-500-->
                 <a
                     href="/fenni/projects"
                     class=

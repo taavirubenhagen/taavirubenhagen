@@ -1,7 +1,7 @@
-import { o as onMount, c as create_ssr_component, i as compute_rest_props, g as each, v as validate_component, m as missing_component, e as escape, h as getContext, f as add_attribute, j as createEventDispatcher, s as setContext, d as subscribe } from "../../../../../chunks/index3.js";
-import "fs";
-import { Slugger, Lexer } from "marked";
+import { o as onMount, c as create_ssr_component, j as compute_rest_props, g as each, v as validate_component, m as missing_component, e as escape, h as getContext, f as add_attribute, k as createEventDispatcher, s as setContext, d as subscribe, i as is_promise, n as noop } from "../../../../../chunks/index3.js";
 import { p as page } from "../../../../../chunks/stores.js";
+import { Slugger, Lexer } from "marked";
+import { S as ScaleOut } from "../../../../../chunks/ArrowUp.svelte_svelte_type_style_lang.js";
 /* empty css                            */function supressWarnings() {
   const origWarn = console.warn;
   console.warn = (message) => {
@@ -334,21 +334,51 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $page, $$unsubscribe_page;
   $$unsubscribe_page = subscribe(page, (value) => $page = value);
   const projectPath = `https://raw.githubusercontent.com/taavirubenhagen/taavirubenhagen/main/static/fenni/projects/${$page.params.name}/`;
-  let blogMarkdown = "Inhalt wird geladen. Bitte gedulde dich einen Moment.";
-  onMount(async () => {
-    const projectData = JSON.parse(await (await fetch(projectPath + "data.json")).text());
-    projectData["title"];
-    projectData["onlineImageUrls"];
-    blogMarkdown = await (await fetch(projectPath + "blog.md")).text();
-    console.log(blogMarkdown);
-  });
   $$unsubscribe_page();
   return `
 
 
 <img src="/fenni/images/centered_explosion.png" alt="Color Explosion" class="fixed -z-5 opacity-0 w-full">
 <main>
-    <div class="p-8 md:p-16 pt-28 md:pt-44 text-black font-handwriting">${validate_component(SvelteMarkdown, "SvelteMarkdown").$$render($$result, { source: blogMarkdown }, {}, {})}</div></main>`;
+    ${function(__value) {
+    if (is_promise(__value)) {
+      __value.then(null, noop);
+      return `
+        <div class="w-full h-screen flex_col_center">${validate_component(ScaleOut, "ScaleOut").$$render(
+        $$result,
+        {
+          duration: "800ms",
+          unit: "px",
+          size: "64",
+          color: "rgb(202 138 4)"
+        },
+        {},
+        {}
+      )}</div>
+    `;
+    }
+    return function(projectData) {
+      return `
+        <div class="relative z-20 selection:bg-opacity-20 selection:bg-yellow-600 p-8 md:p-16 pt-28 md:pt-44 text-black font-handwriting">${validate_component(SvelteMarkdown, "SvelteMarkdown").$$render($$result, { source: projectData[2] }, {}, {})}</div>
+    `;
+    }(__value);
+  }((async () => {
+    let projectData;
+    try {
+      projectData = JSON.parse(await (await fetch(projectPath + "data.json")).text());
+    } catch (e) {
+      return [e, e, e];
+    }
+    const postTitle = projectData["title"];
+    const imageUrls = projectData["onlineImageUrls"];
+    let blogMarkdown;
+    try {
+      blogMarkdown = await (await fetch(projectPath + "blog.md")).text();
+    } catch (e) {
+      return [e, e, e];
+    }
+    return [postTitle, imageUrls, blogMarkdown];
+  })())}</main>`;
 });
 export {
   Page as default

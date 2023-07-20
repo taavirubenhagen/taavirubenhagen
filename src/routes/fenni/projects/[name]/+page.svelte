@@ -1,8 +1,7 @@
 <script lang="ts">
-    import fs from 'fs';
-    import { onMount } from 'svelte';
-    import SvelteMarkdown from 'svelte-markdown';
     import { page } from "$app/stores";
+    import SvelteMarkdown from 'svelte-markdown';
+    import { ScaleOut } from 'svelte-loading-spinners';
 
     import "$style";
     import {
@@ -16,17 +15,6 @@
     let windowHeight: number;
     
     const projectPath = `https://raw.githubusercontent.com/taavirubenhagen/taavirubenhagen/main/static/fenni/projects/${$page.params.name}/`;
-    let postTitle = "";
-    let imageUrls: string[] = [];
-    let blogMarkdown = "Inhalt wird geladen. Bitte gedulde dich einen Moment.";
-
-    onMount(async () => {
-        const projectData = JSON.parse(await ( await fetch(projectPath + "data.json") ).text());
-        postTitle = projectData["title"];
-        imageUrls = projectData["onlineImageUrls"];
-        blogMarkdown = await ( await fetch(projectPath + "blog.md") ).text();
-        console.log(blogMarkdown);
-    });
 </script>
 
 
@@ -49,7 +37,29 @@
             <h1>{letter}</h1>
         {/each}
     </div>-->
-    <div class="p-8 md:p-16 pt-28 md:pt-44 text-black font-handwriting">
-        <SvelteMarkdown source={blogMarkdown}/>
-    </div>
+    {#await (async () => {
+        let projectData;
+        try {
+            projectData = JSON.parse(await ( await fetch(projectPath + "data.json") ).text());
+        } catch (e) {
+            return [e, e, e];
+        }
+        const postTitle = projectData["title"];
+        const imageUrls = projectData["onlineImageUrls"];
+        let blogMarkdown;
+        try {
+            blogMarkdown = await ( await fetch(projectPath + "blog.md") ).text();
+        } catch (e) {
+            return [e, e, e];
+        }
+        return [postTitle, imageUrls, blogMarkdown];
+    })()}
+        <div class="w-full h-screen flex_col_center">
+            <ScaleOut duration="800ms" unit="px" size="64" color="rgb(202 138 4)"/>
+        </div>
+    {:then projectData}
+        <div class="relative z-20 selection:bg-opacity-20 selection:bg-yellow-600 p-8 md:p-16 pt-28 md:pt-44 text-black font-handwriting">
+            <SvelteMarkdown source={projectData[2]}/>
+        </div>
+    {/await}
 </main>

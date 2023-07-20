@@ -1,5 +1,8 @@
 function noop() {
 }
+function is_promise(value) {
+  return !!value && (typeof value === "object" || typeof value === "function") && typeof value.then === "function";
+}
 function run(fn) {
   return fn();
 }
@@ -152,8 +155,9 @@ export {
   add_attribute as f,
   each as g,
   getContext as h,
-  compute_rest_props as i,
-  createEventDispatcher as j,
+  is_promise as i,
+  compute_rest_props as j,
+  createEventDispatcher as k,
   missing_component as m,
   noop as n,
   onMount as o,
