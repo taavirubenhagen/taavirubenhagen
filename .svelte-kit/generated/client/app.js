@@ -17,31 +17,22 @@ export const nodes = [
 	() => import('./nodes/13'),
 	() => import('./nodes/14'),
 	() => import('./nodes/15'),
-	() => import('./nodes/16'),
-	() => import('./nodes/17'),
-	() => import('./nodes/18'),
-	() => import('./nodes/19'),
-	() => import('./nodes/20'),
-	() => import('./nodes/21')
+	() => import('./nodes/16')
 ];
 
 export const server_loads = [];
 
 export const dictionary = {
-		"/": [~8],
-		"/fenni/home": [9,[2]],
-		"/fenni/projects": [10,[2]],
-		"/fenni/projects/[name]": [11,[2]],
-		"/me/blog": [12,[3,4]],
-		"/me/contact": [~13,[3]],
-		"/me/home": [14,[3,5]],
-		"/me/landing/social": [15,[3,6]],
-		"/portfolio/home": [16,[7]],
-		"/portfolio/newsletter": [17,[7]],
-		"/presenter/download/windows": [18],
-		"/presenter/waitlist": [19],
-		"/supabase-test": [20],
-		"/tts": [21]
+		"/": [~7],
+		"/me/blog": [8,[2,3]],
+		"/me/contact": [~9,[2]],
+		"/me/home": [10,[2,4]],
+		"/me/landing/social": [11,[2,5]],
+		"/portfolio/home": [12,[6]],
+		"/portfolio/newsletter": [13,[6]],
+		"/presenter/download/windows": [14],
+		"/presenter/waitlist": [15],
+		"/tts": [16]
 	};
 
 export const hooks = {

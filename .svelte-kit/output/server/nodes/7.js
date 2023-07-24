@@ -1,7 +1,9 @@
-
+import * as server from '../entries/pages/_page.server.ts.js';
 
 export const index = 7;
-export const component = async () => (await import('../entries/pages/portfolio/_layout.svelte.js')).default;
-export const imports = ["_app/immutable/nodes/7.b970363c.js","_app/immutable/chunks/index.a67d2f2b.js","_app/immutable/chunks/DeviceDetector.ba389e14.js","_app/immutable/chunks/ua-parser.44220aa4.js","_app/immutable/chunks/_commonjsHelpers.725317a4.js","_app/immutable/chunks/Button.d0f72ffa.js","_app/immutable/chunks/index.89a34901.js","_app/immutable/chunks/P1.0e4710bd.js","_app/immutable/chunks/B.9c2fb4a0.js"];
-export const stylesheets = ["_app/immutable/assets/global.bfe041ad.css"];
+export const component = async () => (await import('../entries/pages/_page.svelte.js')).default;
+export { server };
+export const server_id = "src/routes/+page.server.ts";
+export const imports = ["_app/immutable/nodes/7.35e71272.js","_app/immutable/chunks/index.8c3b8597.js"];
+export const stylesheets = ["_app/immutable/assets/global.f6e8543f.css"];
 export const fonts = [];

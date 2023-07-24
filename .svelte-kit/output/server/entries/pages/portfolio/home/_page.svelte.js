@@ -1,5 +1,5 @@
 import { c as create_ssr_component, v as validate_component, e as escape, f as add_attribute } from "../../../../chunks/index3.js";
-import { g as globalScrollY, B as Button } from "../../../../chunks/Button2.js";
+import { g as globalScrollY, B as Button } from "../../../../chunks/Button.js";
 import "ua-parser-js";
 /* empty css                         */import { H as H2 } from "../../../../chunks/H2.js";
 import { B } from "../../../../chunks/B.js";

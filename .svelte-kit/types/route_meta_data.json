@@ -2,10 +2,6 @@
 	"/": [
 		"src/routes/+page.server.ts"
 	],
-	"/fenni": [],
-	"/fenni/home": [],
-	"/fenni/projects": [],
-	"/fenni/projects/[name]": [],
 	"/me": [],
 	"/me/blog": [],
 	"/me/contact": [
@@ -18,6 +14,5 @@
 	"/portfolio/newsletter": [],
 	"/presenter/download/windows": [],
 	"/presenter/waitlist": [],
-	"/supabase-test": [],
 	"/tts": []
 }
