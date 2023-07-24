@@ -3,9 +3,9 @@ param ($path, [boolean]$downloadscoop=$False)
 
 
 
-$dir = "C://Users/User/..CODE"
-$md = "$dir/_lib/md"
-$sc = "$dir/_lib/sc"
+$dir = "C://Users/User/CODE"
+$md = "C://Users/User/CODE/taavirubenhagen/EXTERNAL/scripts/md"
+$sc = "C://Users/User/CODE/taavirubenhagen/EXTERNAL/scripts/sc"
 
 $path = "$dir/$path"
 $src = "$path/src"
@@ -80,23 +80,15 @@ module.exports = {
 
 
 
-& $sc $src/app.d.ts '// See https://kit.svelte.dev/docs/types#app
-// for information about these interfaces
-// and what to do when importing types
-declare namespace App {
-	// interface Locals {}
-	// interface PageData {}
-	// interface Error {}
-	// interface Platform {}
-}
-
-
-
-
-declare module "svelte-scrollto"
-
-declare module "svelte-material-icons/Close.svelte"
-declare module "svelte-material-icons/DotsHorizontal.svelte"'
+#& $sc $src/app.d.ts '// See https://kit.svelte.dev/docs/types#app
+#// for information about these interfaces
+#// and what to do when importing types
+#declare namespace App {
+#	// interface Locals {}
+#	// interface PageData {}
+#	// interface Error {}
+#	// interface Platform {}
+#}'
 
 
 
@@ -112,8 +104,8 @@ declare module "svelte-material-icons/DotsHorizontal.svelte"'
 
 		<link rel="preconnect" href="https://fonts.googleapis.com"/>
 		<link rel="preconnect" href="https://fonts.gstatic.com"/>
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Rubik&family=Flow+Circular&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Montserrat&family=IBM+Plex+Mono&display=swap" rel="stylesheet"/>
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+		<link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css">
 
 		<script>
 			import "./global.postcss"

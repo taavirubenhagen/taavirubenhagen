@@ -172,7 +172,7 @@ const options = {
   root: Root,
   service_worker: false,
   templates: {
-    app: ({ head, body, assets: assets2, nonce, env }) => '\r\n<!DOCTYPE html>\r\n<html lang="en">\r\n	<head>\r\n		<meta charset="utf-8" />\r\n		<!--<link rel="icon" href="' + assets2 + '/logo_icon.svg" />-->\r\n		<title>Taavi R\xFCbenhagen.</title>\r\n		<meta name="viewport" content="width=device-width" />\r\n		<meta name="theme-color" content="#000">\r\n\r\n		<link rel="preconnect" href="https://fonts.googleapis.com"/>\r\n		<link rel="preconnect" href="https://fonts.gstatic.com"/>\r\n		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dongle&family=Aleo&family=Yellowtail&family=Caveat&family=Permanent+Marker&family=IBM+Plex+Mono&family=Lexend&display=swap"/>\r\n		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>\r\n        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css">\r\n\r\n		<script>\r\n			import "./global.postcss";\r\n		<\/script>\r\n		\r\n		' + head + "\r\n	</head>\r\n	<body>\r\n		<div>" + body + "</div>\r\n	</body>\r\n</html>\r\n",
+    app: ({ head, body, assets: assets2, nonce, env }) => '\r\n<!DOCTYPE html>\r\n<html lang="en">\r\n	<head>\r\n		<meta charset="utf-8" />\r\n		<!--<link rel="icon" href="' + assets2 + '/logo_icon.svg" />-->\r\n		<title>Taavi R\xFCbenhagen.</title>\r\n		<meta name="viewport" content="width=device-width" />\r\n		<meta name="theme-color" content="#000">\r\n\r\n		<link rel="preconnect" href="https://fonts.googleapis.com"/>\r\n		<link rel="preconnect" href="https://fonts.gstatic.com"/>\r\n		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dongle&family=Aleo&family=Yellowtail&family=Caveat&family=Permanent+Marker&family=IBM+Plex+Mono&family=Lexend&display=swap"/>\r\n		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css">\r\n\r\n		<script>\r\n			import "./global.postcss";\r\n		<\/script>\r\n		\r\n		' + head + "\r\n	</head>\r\n	<body>\r\n		<div>" + body + "</div>\r\n	</body>\r\n</html>\r\n",
     error: ({ status, message }) => '<!DOCTYPE html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<title>' + message + `</title>
 
 		<style>
@@ -233,7 +233,7 @@ const options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "1g1dmwn"
+  version_hash: "1r3j1dj"
 };
 function get_hooks() {
   return {};

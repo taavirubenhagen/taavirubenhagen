@@ -21,7 +21,8 @@ export const nodes = [
 	() => import('./nodes/17'),
 	() => import('./nodes/18'),
 	() => import('./nodes/19'),
-	() => import('./nodes/20')
+	() => import('./nodes/20'),
+	() => import('./nodes/21')
 ];
 
 export const server_loads = [];
@@ -37,9 +38,10 @@ export const dictionary = {
 		"/me/landing/social": [15,[3,6]],
 		"/portfolio/home": [16,[7]],
 		"/portfolio/newsletter": [17,[7]],
-		"/presenter/waitlist": [18],
-		"/supabase-test": [19],
-		"/tts": [20]
+		"/presenter/download/windows": [18],
+		"/presenter/waitlist": [19],
+		"/supabase-test": [20],
+		"/tts": [21]
 	};
 
 export const hooks = {
