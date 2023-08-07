@@ -30,7 +30,11 @@
         {/each}
     </div>
     <div>
-        <Button onClick={() => {}}><B><P3>Video tutorial <Icon name="open-new-window"/></P3></B></Button>
+        <a href="https://www.youtube.com/watch?v=cctYDdnPzTU">
+            <Button onClick={() => {}}>
+                <B><P3>Video tutorial <Icon name="open-new-window"/></P3></B>
+            </Button>
+        </a>
         <div class="h-4"></div>
         <Button onClick={() => helpModalIndex = 1}><B><P3>Why are there 3 different download buttons?</P3></B></Button>
         <div class="h-4"></div>
@@ -46,8 +50,7 @@
                 In some cases, XD Presenter produces false-positive warnings.<br/><br/>
                 <B><a href="TODO: /contact">Contact me</a></B> if you want to make sure that I take full responsibility for the app's security.<br/><br/>
                 I don't exactly know the reason for the antivirus warning,
-                but it's either that the app uses the PC's hardware on a low level (it simulates arrow key presses to control the presentation) or,
-                more likely, that I did not buy an expensive security certificate to let the app be checked independently.
+                but it's probanly that I did not buy an expensive security certificate to let the app be checked independently.
                 This would be just a proof and changes nothing about the actual security though.
             </P3>
         {/if}

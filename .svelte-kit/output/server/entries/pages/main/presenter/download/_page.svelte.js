@@ -90,7 +90,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       }
     )}`;
   })}</div>
-    <div>${validate_component(Button, "Button").$$render(
+    <div><a href="https://www.youtube.com/watch?v=cctYDdnPzTU">${validate_component(Button, "Button").$$render(
     $$result,
     {
       onClick: () => {
@@ -110,7 +110,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         })}`;
       }
     }
-  )}
+  )}</a>
         <div class="h-4"></div>
         ${validate_component(Button, "Button").$$render($$result, { onClick: () => helpModalIndex = 1 }, {}, {
     default: () => {
@@ -161,8 +161,7 @@ ${validate_component(Modal, "Modal").$$render(
               }
             })} if you want to make sure that I take full responsibility for the app&#39;s security.<br><br>
                 I don&#39;t exactly know the reason for the antivirus warning,
-                but it&#39;s either that the app uses the PC&#39;s hardware on a low level (it simulates arrow key presses to control the presentation) or,
-                more likely, that I did not buy an expensive security certificate to let the app be checked independently.
+                but it&#39;s probanly that I did not buy an expensive security certificate to let the app be checked independently.
                 This would be just a proof and changes nothing about the actual security though.
             `;
           }
