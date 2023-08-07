@@ -27,6 +27,7 @@
  */
 declare module '$env/static/private' {
 	export const ALLUSERSPROFILE: string;
+	export const ANDROID_HOME: string;
 	export const APPDATA: string;
 	export const CABAL_DIR: string;
 	export const ChocolateyInstall: string;
@@ -40,13 +41,14 @@ declare module '$env/static/private' {
 	export const COMPUTERNAME: string;
 	export const ComSpec: string;
 	export const DriverData: string;
-	export const EFC_8024: string;
+	export const EFC_9528: string;
 	export const FILE_PWD: string;
 	export const GHCUP_INSTALL_BASE_PREFIX: string;
 	export const GIT_ASKPASS: string;
 	export const GOPATH: string;
 	export const HOMEDRIVE: string;
 	export const HOMEPATH: string;
+	export const JAVA_HOME: string;
 	export const KEY_PATH: string;
 	export const LANG: string;
 	export const LAST_EXIT_CODE: string;
@@ -124,6 +126,7 @@ declare module '$env/static/public' {
 declare module '$env/dynamic/private' {
 	export const env: {
 		ALLUSERSPROFILE: string;
+		ANDROID_HOME: string;
 		APPDATA: string;
 		CABAL_DIR: string;
 		ChocolateyInstall: string;
@@ -137,13 +140,14 @@ declare module '$env/dynamic/private' {
 		COMPUTERNAME: string;
 		ComSpec: string;
 		DriverData: string;
-		EFC_8024: string;
+		EFC_9528: string;
 		FILE_PWD: string;
 		GHCUP_INSTALL_BASE_PREFIX: string;
 		GIT_ASKPASS: string;
 		GOPATH: string;
 		HOMEDRIVE: string;
 		HOMEPATH: string;
+		JAVA_HOME: string;
 		KEY_PATH: string;
 		LANG: string;
 		LAST_EXIT_CODE: string;

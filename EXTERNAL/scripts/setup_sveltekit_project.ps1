@@ -191,10 +191,10 @@ module.exports = {
   }
 
 
-  .flex_col_center {
+  .center_col {
     @apply flex flex-col justify-center items-center;
   }
-  .flex_row_center {
+  .center_row {
     @apply flex flex-row justify-center items-center;
   }
 

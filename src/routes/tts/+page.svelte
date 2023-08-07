@@ -60,7 +60,7 @@
         </div>
         <div class="flex justify-between">
             <div class="flex flex-wrap items-start justify-start gap-1">
-                <t1 class="mr-4 h-12 flex_row_center">Voice</t1>
+                <t1 class="mr-4 h-12 center_row">Voice</t1>
                 {#each Array(10) as _, i}
                     <button
                         on:click={() => voiceIndex = i}
@@ -114,7 +114,7 @@
                     <a
                         download="Recorded Audio"
                         href={recorderResult}
-                        class="transition-all ml-8 hover:invert rounded-full border-2 border-primary w-14 h-14 background flex_row_center"
+                        class="transition-all ml-8 hover:invert rounded-full border-2 border-primary w-14 h-14 background center_row"
                     >
                         ✓
                     </a>
@@ -123,7 +123,7 @@
         </div>
     </div>
 </main>
-<footer class="h-16 primary flex_row_center font-mono">
+<footer class="h-16 primary center_row font-mono">
     <a href="/contact">
         <t1>Contact</t1>
     </a>

@@ -1,4 +1,4 @@
-import { c as create_ssr_component, e as escape, v as validate_component, d as each } from "../../../../chunks/index3.js";
+import { c as create_ssr_component, e as escape, v as validate_component, f as each } from "../../../../chunks/index3.js";
 import { D as DeviceDetector } from "../../../../chunks/DeviceDetector.js";
 /* empty css                         */import { M as Main_headline } from "../../../../chunks/main_headline.js";
 import { I as Icon } from "../../../../chunks/icon.js";
@@ -63,7 +63,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `
 
 <main><section class="relative w-screen h-screen">
-        <div class="w-screen h-screen p-4 md:p-16 flex_col_center text-center">${validate_component(Main_headline, "MainHeadline").$$render($$result, {}, {}, {
+        <div class="w-screen h-screen p-4 md:p-16 center_col text-center">${validate_component(Main_headline, "MainHeadline").$$render($$result, {}, {}, {
     default: () => {
       return `Hi, I&#39;m Taavi<br>R\xFCbenhagen.`;
     }
@@ -114,7 +114,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       "md:right-64 md:hover:scale-[100.5%]"
     ],
     (e, i) => {
-      return `${`<div class="${escape(e, true) + " transition-all duration-400 relative md:grayscale md:hover:grayscale-0 rounded-3xl border border-onBackground w-full md:w-auto md:h-full aspect-[17/32] bg-background flex_col_center"}">${validate_component(Medium_label, "MediumLabel").$$render($$result, {}, {}, {
+      return `${`<div class="${escape(e, true) + " transition-all duration-400 relative md:grayscale md:hover:grayscale-0 rounded-3xl border border-onBackground w-full md:w-auto md:h-full aspect-[17/32] bg-background center_col"}">${validate_component(Medium_label, "MediumLabel").$$render($$result, {}, {}, {
         default: () => {
           return `[Image]`;
         }
@@ -164,7 +164,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return `<div class="${"relative " + escape(i === 0 ? "rounded-tl-md" : "", true) + " " + escape(i === 4 ? "rounded-tr-md" : "", true) + " " + escape(i === 15 ? "rounded-bl-md" : "", true) + " " + escape(i === 19 ? "rounded-br-md" : "", true) + " border border-onBackground min-w-32 h-16 " + escape(
         (i + 1) % 5 === 0 ? "primary" : i % 5 === 0 || i < 5 ? "bg-primary bg-opacity-5" : "background",
         true
-      ) + " flex_row_center truncate"}">${validate_component(Medium_label, "MediumLabel").$$render($$result, {}, {}, {
+      ) + " center_row truncate"}">${validate_component(Medium_label, "MediumLabel").$$render($$result, {}, {}, {
         default: () => {
           return `${validate_component(DeviceDetector, "DeviceDetector").$$render($$result, { showInDevice: "desktop" }, {}, {
             default: () => {
@@ -186,14 +186,14 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   )}</div>
         </section>
     
-    <section class="w-screen h-1/2 md:h-screen background p-8 md:p-16 flex_col_center relative text-center"><t3>Contact me for any collaboration.</t3>
+    <section class="w-screen h-1/2 md:h-screen background p-8 md:p-16 center_col relative text-center"><t3>Contact me for any collaboration.</t3>
         <div class="h-16"></div>
-        <a href="mailto:taavi.ruebenhagen@gmail.com" class="flex_row_center">${validate_component(Text_button, "TextButton").$$render($$result, { primary: true }, {}, {
+        <a href="mailto:taavi.ruebenhagen@gmail.com" class="center_row">${validate_component(Text_button, "TextButton").$$render($$result, { primary: true }, {}, {
     default: () => {
       return `E-Mail me`;
     }
   })}</a></section>
-    <section class="w-screen h-screen background flex_col_center"><t class="mt-8 text-9xl text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-red-700">lol xD.</t></section></main>`;
+    <section class="w-screen h-screen background center_col"><t class="mt-8 text-9xl text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-red-700">lol xD.</t></section></main>`;
 });
 export {
   Page as default

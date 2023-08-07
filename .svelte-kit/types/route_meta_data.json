@@ -2,6 +2,14 @@
 	"/": [
 		"src/routes/+page.server.ts"
 	],
+	"/main": [],
+	"/main/contact": [],
+	"/main/home": [],
+	"/main/newsletter": [],
+	"/main/presenter/download": [],
+	"/main/presenter/privacy-policy": [],
+	"/main/presenter/waitlist": [],
+	"/main/privacy-policy": [],
 	"/me": [],
 	"/me/blog": [],
 	"/me/contact": [
@@ -9,10 +17,5 @@
 	],
 	"/me/home": [],
 	"/me/landing/social": [],
-	"/portfolio": [],
-	"/portfolio/home": [],
-	"/portfolio/newsletter": [],
-	"/presenter/download/windows": [],
-	"/presenter/waitlist": [],
 	"/tts": []
 }

@@ -1,4 +1,4 @@
-import { c as create_ssr_component, o as onMount, d as each, f as add_attribute, v as validate_component, e as escape } from "../../../chunks/index3.js";
+import { c as create_ssr_component, o as onMount, f as each, d as add_attribute, v as validate_component, e as escape } from "../../../chunks/index3.js";
 /* empty css                      */import { T as Text_button } from "../../../chunks/text_button.js";
 const tts = "";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -38,7 +38,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 
 <main class="h-screen p-16 flex flex-col justify-between font-mono"><div class="flex sm:flex-col justify-between"><div><t3>Convert text to speech.</t3>
             <div class="h-16"></div></div>
-        <div class="flex justify-between"><div class="flex flex-wrap items-start justify-start gap-1"><t1 class="mr-4 h-12 flex_row_center">Voice</t1>
+        <div class="flex justify-between"><div class="flex flex-wrap items-start justify-start gap-1"><t1 class="mr-4 h-12 center_row">Voice</t1>
                 ${each(Array(10), (_, i) => {
     return `<button class="${"transition-all rounded-lg border hover:border-2 border-primary w-12 h-12 " + escape(voiceIndex == i ? "primary" : "", true)}">${escape(i + 1)}
                     </button>`;
@@ -72,9 +72,9 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       }
     }
   )}
-            ${recorderResult ? `<button><a download="Recorded Audio"${add_attribute("href", recorderResult, 0)} class="transition-all ml-8 hover:invert rounded-full border-2 border-primary w-14 h-14 background flex_row_center">\u2713
+            ${recorderResult ? `<button><a download="Recorded Audio"${add_attribute("href", recorderResult, 0)} class="transition-all ml-8 hover:invert rounded-full border-2 border-primary w-14 h-14 background center_row">\u2713
                     </a></button>` : ``}</div></div></main>
-<footer class="h-16 primary flex_row_center font-mono"><a href="/contact"><t1>Contact</t1></a></footer>`;
+<footer class="h-16 primary center_row font-mono"><a href="/contact"><t1>Contact</t1></a></footer>`;
 });
 export {
   Page as default

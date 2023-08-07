@@ -25,6 +25,12 @@
 			"$tavy/*": [
 				"../src/lib/tavy/*"
 			],
+			"$lib": [
+				"../src/lib"
+			],
+			"$lib/*": [
+				"../src/lib/*"
+			],
 			"$style": [
 				"../src/global.postcss"
 			],
@@ -36,12 +42,6 @@
 			],
 			"$buttons/*": [
 				"../src/lib/util/buttons/*"
-			],
-			"$lib": [
-				"../src/lib"
-			],
-			"$lib/*": [
-				"../src/lib/*"
 			]
 		},
 		"rootDirs": [

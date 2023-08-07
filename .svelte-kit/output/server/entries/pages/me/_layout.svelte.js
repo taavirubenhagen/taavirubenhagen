@@ -1,4 +1,4 @@
-import { c as create_ssr_component, d as each, e as escape, v as validate_component, f as add_attribute } from "../../../chunks/index3.js";
+import { c as create_ssr_component, f as each, e as escape, v as validate_component, d as add_attribute } from "../../../chunks/index3.js";
 /* empty css                      */import { I as Icon } from "../../../chunks/icon.js";
 const Tertiary_button_label = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<t class="text-lg md:text-lg font-bold">${slots.default ? slots.default({}) : ``}</t>`;
@@ -41,7 +41,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
             </a>`;
     }
   )}</div>
-    <div class="${"transition-all duration-400 fixed z-40 " + escape(scrollToTopButtonPositionClass, true) + " w-screen flex_row_center"}"><button class="transition-all duration-200 hover:scale-[102%] shadow-md rounded-lg h-10 bg-background px-4">${validate_component(Tertiary_button_label, "TertiaryButtonLabel").$$render($$result, {}, {}, {
+    <div class="${"transition-all duration-400 fixed z-40 " + escape(scrollToTopButtonPositionClass, true) + " w-screen center_row"}"><button class="transition-all duration-200 hover:scale-[102%] shadow-md rounded-lg h-10 bg-background px-4">${validate_component(Tertiary_button_label, "TertiaryButtonLabel").$$render($$result, {}, {}, {
     default: () => {
       return `Back to top`;
     }

@@ -45,7 +45,7 @@
 
 
 <main class="max-w-screen min-h-screen background">
-    <!--<div class="fixed z-50 w-screen h-8 flex_row_center">
+    <!--<div class="fixed z-50 w-screen h-8 center_row">
         <SecondaryButtonLabel>
             <div class="transition-all duration-400 text-xl font-display">
                 Still under development
@@ -67,7 +67,7 @@
             </a>
         {/each}
     </div>
-    <div class="transition-all duration-400 fixed z-40 {scrollToTopButtonPositionClass} w-screen flex_row_center">
+    <div class="transition-all duration-400 fixed z-40 {scrollToTopButtonPositionClass} w-screen center_row">
         <button
             on:click={() => {}}
             class="transition-all duration-200 hover:scale-[102%] shadow-md rounded-lg h-10 bg-background px-4"
@@ -110,7 +110,7 @@
       fixed z-40 right-6 bottom-8
       invert hover:invert shadow-xl rounded-full {isMenuOpen ? "" : "w-16 h-16"}
       bg-onPrimary
-      flex_row_center
+      center_row
       duration-800"
     style={
       isMenuOpen
@@ -121,7 +121,7 @@
     <canvas bind:this={menuButtonCanvas} width={32} height={32}/>
   </button>
   {#if isMenuOpen}
-    <div class="fixed z-50 pointer-events-none w-screen h-screen flex_col_center">
+    <div class="fixed z-50 pointer-events-none w-screen h-screen center_col">
         {#each menuData as data, i}
           <button on:click={() => isMenuOpen = false}>
             <a href="/me/{data.toLowerCase()}">

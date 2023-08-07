@@ -29,11 +29,6 @@ module.exports = {
             sans: ['Lexend'],
             mono: ['Lexend', 'IBM Plex Mono', 'Consolas'],
         },
-        transitionTimingFunction: {
-          //DEFAULT: 'cubic-bezier(0.2, 0, 0.4, 1)',
-          DEFAULT: 'cubic-bezier(.4, 0, .2, 1)',
-          default_tailwind: 'cubic-bezier(0.4, 0, 0.2, 1)',
-        },
         extend: {
             colors: {
                 background: "#FFF",

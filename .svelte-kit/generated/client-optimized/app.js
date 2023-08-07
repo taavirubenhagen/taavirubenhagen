@@ -17,22 +17,28 @@ export const nodes = [
 	() => import('./nodes/13'),
 	() => import('./nodes/14'),
 	() => import('./nodes/15'),
-	() => import('./nodes/16')
+	() => import('./nodes/16'),
+	() => import('./nodes/17'),
+	() => import('./nodes/18'),
+	() => import('./nodes/19')
 ];
 
 export const server_loads = [];
 
 export const dictionary = {
 		"/": [~7],
-		"/me/blog": [8,[2,3]],
-		"/me/contact": [~9,[2]],
-		"/me/home": [10,[2,4]],
-		"/me/landing/social": [11,[2,5]],
-		"/portfolio/home": [12,[6]],
-		"/portfolio/newsletter": [13,[6]],
-		"/presenter/download/windows": [14],
-		"/presenter/waitlist": [15],
-		"/tts": [16]
+		"/main/contact": [8,[2]],
+		"/main/home": [9,[2]],
+		"/main/newsletter": [10,[2]],
+		"/main/presenter/download": [11,[2]],
+		"/main/presenter/privacy-policy": [12,[2]],
+		"/main/presenter/waitlist": [13,[2]],
+		"/main/privacy-policy": [14,[2]],
+		"/me/blog": [15,[3,4]],
+		"/me/contact": [~16,[3]],
+		"/me/home": [17,[3,5]],
+		"/me/landing/social": [18,[3,6]],
+		"/tts": [19]
 	};
 
 export const hooks = {

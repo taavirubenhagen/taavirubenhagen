@@ -4,10 +4,10 @@ import { redirect } from '@sveltejs/kit'
 /** @param {Parameters<import('./$types').LayoutServerLoad>[0]} event */
 export function load({ request }) {
     if (request.url.search("(\....\/|7.\/)$") !== -1) {
-        throw redirect(307, '/portfolio/home');
-        return;
+        throw redirect(307, '/main/home');
     }
     if (request.url.search("(\/presenter\/download\/.+)$") !== -1) {
-        throw redirect(307, '/presenter/download/windows');
+        throw redirect(307, 'main/presenter/download');
     }
+    throw redirect(307, '/main/home');
 }
