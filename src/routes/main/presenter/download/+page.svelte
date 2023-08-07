@@ -30,7 +30,7 @@
         {/each}
     </div>
     <div>
-        <a href="https://www.youtube.com/watch?v=cctYDdnPzTU">
+        <a target="_blank" href="https://www.youtube.com/watch?v=cctYDdnPzTU">
             <Button onClick={() => {}}>
                 <B><P3>Video tutorial <Icon name="open-new-window"/></P3></B>
             </Button>
@@ -50,7 +50,7 @@
                 In some cases, XD Presenter produces false-positive warnings.<br/><br/>
                 <B><a href="TODO: /contact">Contact me</a></B> if you want to make sure that I take full responsibility for the app's security.<br/><br/>
                 I don't exactly know the reason for the antivirus warning,
-                but it's probanly that I did not buy an expensive security certificate to let the app be checked independently.
+                but it's probably that I did not buy an expensive security certificate to let the app be checked independently.
                 This would be just a proof and changes nothing about the actual security though.
             </P3>
         {/if}

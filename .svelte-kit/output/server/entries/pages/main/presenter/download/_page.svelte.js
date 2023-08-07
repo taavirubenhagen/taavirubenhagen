@@ -90,7 +90,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       }
     )}`;
   })}</div>
-    <div><a href="https://www.youtube.com/watch?v=cctYDdnPzTU">${validate_component(Button, "Button").$$render(
+    <div><a target="_blank" href="https://www.youtube.com/watch?v=cctYDdnPzTU">${validate_component(Button, "Button").$$render(
     $$result,
     {
       onClick: () => {
@@ -161,7 +161,7 @@ ${validate_component(Modal, "Modal").$$render(
               }
             })} if you want to make sure that I take full responsibility for the app&#39;s security.<br><br>
                 I don&#39;t exactly know the reason for the antivirus warning,
-                but it&#39;s probanly that I did not buy an expensive security certificate to let the app be checked independently.
+                but it&#39;s probably that I did not buy an expensive security certificate to let the app be checked independently.
                 This would be just a proof and changes nothing about the actual security though.
             `;
           }
