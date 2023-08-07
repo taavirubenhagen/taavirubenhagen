@@ -43,8 +43,12 @@
             <P3>If you don't know what the symbols on the buttons mean, just click the "Download for Windows" button and you should be OK.</P3>
         {:else}
             <P3>
-                Your antivirus software might produce false-positive warnings when downloading the app.<br/><br/>
-                <B><a href="TODO: /contact">Contact me</a></B> if you want to make sure that I take full responsibility for the app's security.<br/>
+                In some cases, XD Presenter produces false-positive warnings.<br/><br/>
+                <B><a href="TODO: /contact">Contact me</a></B> if you want to make sure that I take full responsibility for the app's security.<br/><br/>
+                I don't exactly know the reason for the antivirus warning,
+                but it's either that the app uses the PC's hardware on a low level (it simulates arrow key presses to control the presentation) or,
+                more likely, that I did not buy an expensive security certificate to let the app be checked independently.
+                This would be just a proof and changes nothing about the actual security though.
             </P3>
         {/if}
     </div>

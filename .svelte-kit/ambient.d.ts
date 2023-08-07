@@ -41,8 +41,10 @@ declare module '$env/static/private' {
 	export const COMPUTERNAME: string;
 	export const ComSpec: string;
 	export const DriverData: string;
-	export const EFC_9528: string;
+	export const EFC_7984: string;
 	export const FILE_PWD: string;
+	export const FPS_BROWSER_APP_PROFILE_STRING: string;
+	export const FPS_BROWSER_USER_PROFILE_STRING: string;
 	export const GHCUP_INSTALL_BASE_PREFIX: string;
 	export const GIT_ASKPASS: string;
 	export const GOPATH: string;
@@ -140,8 +142,10 @@ declare module '$env/dynamic/private' {
 		COMPUTERNAME: string;
 		ComSpec: string;
 		DriverData: string;
-		EFC_9528: string;
+		EFC_7984: string;
 		FILE_PWD: string;
+		FPS_BROWSER_APP_PROFILE_STRING: string;
+		FPS_BROWSER_USER_PROFILE_STRING: string;
 		GHCUP_INSTALL_BASE_PREFIX: string;
 		GIT_ASKPASS: string;
 		GOPATH: string;
