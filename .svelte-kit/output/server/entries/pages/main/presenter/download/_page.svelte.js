@@ -1,4 +1,4 @@
-import { c as create_ssr_component, e as escape, v as validate_component, f as each } from "../../../../../chunks/index3.js";
+import { c as create_ssr_component, e as escape, v as validate_component } from "../../../../../chunks/index3.js";
 import { I as Icon } from "../../../../../chunks/Icon2.js";
 /* empty css                            */import { H as H2 } from "../../../../../chunks/H2.js";
 import { P as P3 } from "../../../../../chunks/P3.js";
@@ -29,8 +29,7 @@ const Modal = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 });
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let helpModalIndex = 0;
-  return `<main class="relative max-w-screen min-h-screen p-8 flex flex-col justify-center items-start gap-16 text-left">
-    ${validate_component(H2, "H2").$$render($$result, {}, {}, {
+  return `<main class="relative max-w-screen min-h-screen p-8 flex flex-col justify-center items-start gap-16 text-left">${validate_component(H2, "H2").$$render($$result, {}, {}, {
     default: () => {
       return `XD Presenter for PC`;
     }
@@ -62,34 +61,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       }
     }
   )}
-        ${each(["apple-mac", "linux"], (iconData) => {
-    return `${validate_component(Button, "Button").$$render(
-      $$result,
-      {
-        onClick: () => {
-        }
-      },
-      {},
-      {
-        default: () => {
-          return `${validate_component(P2, "P2").$$render($$result, {}, {}, {
-            default: () => {
-              return `<div class="${"transition duration-100 hover:invert rounded-full border border-black w-20 h-20 bg-white px-8 " + escape(iconData == "linux" ? "pb-2" : "pb-1", true) + " center_row"}">${validate_component(Icon, "Icon").$$render(
-                $$result,
-                {
-                  name: iconData,
-                  textClass: "text-4xl md:text-5xl"
-                },
-                {},
-                {}
-              )}</div>
-            `;
-            }
-          })}`;
-        }
-      }
-    )}`;
-  })}</div>
+        </div>
     <div><a target="_blank" href="https://www.youtube.com/watch?v=cctYDdnPzTU">${validate_component(Button, "Button").$$render(
     $$result,
     {
@@ -118,7 +90,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         default: () => {
           return `${validate_component(P3, "P3").$$render($$result, {}, {}, {
             default: () => {
-              return `Why are there 3 different download buttons?`;
+              return `Will there be a MacOS version?`;
             }
           })}`;
         }
@@ -150,9 +122,14 @@ ${validate_component(Modal, "Modal").$$render(
       default: () => {
         return `<div class="text-left">${helpModalIndex == 1 ? `${validate_component(P3, "P3").$$render($$result, {}, {}, {
           default: () => {
-            return `If you don&#39;t know what the symbols on the buttons mean, just click the &quot;Download for Windows&quot; button and you should be OK.`;
+            return `A MacOS version is planned, yet it is really hard to build because I don&#39;t have a Mac myself. If you want to help to make it happen, ${validate_component(B, "B").$$render($$result, {}, {}, {
+              default: () => {
+                return `<a href="TODO: /contact">contact me</a>`;
+              }
+            })}.`;
           }
-        })}` : `${validate_component(P3, "P3").$$render($$result, {}, {}, {
+        })}
+            ` : `${validate_component(P3, "P3").$$render($$result, {}, {}, {
           default: () => {
             return `In some cases, XD Presenter produces false-positive warnings.<br><br>
                 ${validate_component(B, "B").$$render($$result, {}, {}, {
