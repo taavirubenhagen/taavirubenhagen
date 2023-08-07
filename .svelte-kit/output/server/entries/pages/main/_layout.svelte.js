@@ -91,7 +91,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     default: () => {
       return `${validate_component(B, "B").$$render($$result, { onPrimary: true, simple: true }, {}, {
         default: () => {
-          return `Privacy Policy (XD Presenter)`;
+          return `Privacy Policy (Presentation Master 2)`;
         }
       })}`;
     }

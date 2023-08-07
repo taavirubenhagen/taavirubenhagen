@@ -1,1 +1,1 @@
-declare module "svelte-device-detector"
+declare module "svelte-device-detector";

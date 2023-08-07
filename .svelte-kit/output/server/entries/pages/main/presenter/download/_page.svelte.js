@@ -29,12 +29,13 @@ const Modal = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 });
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let helpModalIndex = 0;
-  return `<main class="relative max-w-screen min-h-screen p-8 flex flex-col justify-center items-start gap-16 text-left">${validate_component(H2, "H2").$$render($$result, {}, {}, {
+  return `<main class="relative max-w-screen min-h-screen p-8 flex flex-col justify-center items-start gap-16 text-left">
+        ${validate_component(H2, "H2").$$render($$result, {}, {}, {
     default: () => {
-      return `XD Presenter for PC`;
+      return `Presentation Master 2 for PC`;
     }
   })}
-    <div class="md:w-full flex flex-col md:flex-row md:justify-start items-start gap-8">${validate_component(Button, "Button").$$render(
+        <div class="md:w-full flex flex-col md:flex-row md:justify-start items-start gap-8">${validate_component(Button, "Button").$$render(
     $$result,
     {
       onClick: () => {
@@ -45,7 +46,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       default: () => {
         return `${validate_component(P2, "P2").$$render($$result, {}, {}, {
           default: () => {
-            return `<a download href="/presenter/xd_presenter.msi" class="transition duration-200 hover:scale-[101%] rounded-full h-20 bg-black px-8 flex items-center gap-4 text-white">${validate_component(Icon, "Icon").$$render(
+            return `<a download href="/presenter/Presentation Master 2.msi" class="transition duration-200 hover:scale-[101%] rounded-full h-20 bg-black px-8 flex items-center gap-4 text-white">${validate_component(Icon, "Icon").$$render(
               $$result,
               {
                 name: "download",
@@ -54,15 +55,15 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
               {},
               {}
             )}
-                Download for Windows
-            </a>`;
+                    Download for Windows
+                </a>`;
           }
         })}`;
       }
     }
   )}
-        </div>
-    <div><a target="_blank" href="https://www.youtube.com/watch?v=cctYDdnPzTU">${validate_component(Button, "Button").$$render(
+            </div>
+        <div><a target="_blank" href="https://www.youtube.com/watch?v=cctYDdnPzTU">${validate_component(Button, "Button").$$render(
     $$result,
     {
       onClick: () => {
@@ -83,8 +84,8 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       }
     }
   )}</a>
-        <div class="h-4"></div>
-        ${validate_component(Button, "Button").$$render($$result, { onClick: () => helpModalIndex = 1 }, {}, {
+            <div class="h-4"></div>
+            ${validate_component(Button, "Button").$$render($$result, { onClick: () => helpModalIndex = 1 }, {}, {
     default: () => {
       return `${validate_component(B, "B").$$render($$result, {}, {}, {
         default: () => {
@@ -97,8 +98,8 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       })}`;
     }
   })}
-        <div class="h-4"></div>
-        ${validate_component(Button, "Button").$$render($$result, { onClick: () => helpModalIndex = 2 }, {}, {
+            <div class="h-4"></div>
+            ${validate_component(Button, "Button").$$render($$result, { onClick: () => helpModalIndex = 2 }, {}, {
     default: () => {
       return `${validate_component(B, "B").$$render($$result, {}, {}, {
         default: () => {
@@ -110,7 +111,8 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         }
       })}`;
     }
-  })}</div></main>
+  })}</div>
+    </main>
 ${validate_component(Modal, "Modal").$$render(
     $$result,
     {
@@ -120,18 +122,18 @@ ${validate_component(Modal, "Modal").$$render(
     {},
     {
       default: () => {
-        return `<div class="text-left">${helpModalIndex == 1 ? `${validate_component(P3, "P3").$$render($$result, {}, {}, {
+        return `<div class="relative z-50 text-left">${helpModalIndex == 1 ? `${validate_component(P3, "P3").$$render($$result, {}, {}, {
           default: () => {
             return `A MacOS version is planned, yet it is really hard to build because I don&#39;t have a Mac myself. If you want to help to make it happen, ${validate_component(B, "B").$$render($$result, {}, {}, {
               default: () => {
-                return `<a href="TODO: /contact">contact me</a>`;
+                return `<a href="/main/contact">contact me</a>`;
               }
             })}.`;
           }
         })}
             ` : `${validate_component(P3, "P3").$$render($$result, {}, {}, {
           default: () => {
-            return `In some cases, XD Presenter produces false-positive warnings.<br><br>
+            return `In some cases, Presentation Master 2 produces false-positive warnings.<br><br>
                 ${validate_component(B, "B").$$render($$result, {}, {}, {
               default: () => {
                 return `<a href="TODO: /contact">Contact me</a>`;

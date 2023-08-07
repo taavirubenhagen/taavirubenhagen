@@ -5,7 +5,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<main class="max-w-screen min-h-screen p-8 pt-16">
     ${validate_component(H2, "H2").$$render($$result, {}, {}, {
     default: () => {
-      return `XD Presenter (mobile app and desktop app) - Privacy Policy`;
+      return `Presentation Master 2 (mobile app and desktop app) - Privacy Policy`;
     }
   })}<br>
     <br>
@@ -16,7 +16,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     The terms \u201Cwe\u201D, \u201Cus\u201D and \u201Cour\u201D refer to Ren\xE9 R\xFCbenhagen and everyone managing or developing the apps.<br>
     <br>
     
-    Terms like \u201Cthe apps\u201D or \u201Cboth apps\u201D refer to the mobile app XD Presenter, published in the Google Play Store and Apple App Store, and the desktop app downloadable under taavirubenhagen.netlify.app/main/presenter/download.<br>
+    Terms like \u201Cthe apps\u201D or \u201Cboth apps\u201D refer to the mobile app Presentation Master 2, published in the Google Play Store and Apple App Store, and the desktop app downloadable under taavirubenhagen.netlify.app/main/presenter/download.<br>
     <br>
     <br>
     <br>

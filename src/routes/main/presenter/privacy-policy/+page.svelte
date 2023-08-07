@@ -8,7 +8,7 @@
 
 <main class="max-w-screen min-h-screen p-8 pt-16">
     <!--TODO: 18-->
-    <H2>XD Presenter (mobile app and desktop app) - Privacy Policy</H2><br/>
+    <H2>Presentation Master 2 (mobile app and desktop app) - Privacy Policy</H2><br/>
     <br/>
     <br/>
     <br/>
@@ -17,7 +17,7 @@
     The terms “we”, “us” and “our” refer to René Rübenhagen and everyone managing or developing the apps.<br/>
     <br/>
     <!--TODO: Check link regularly, 18-->
-    Terms like “the apps” or “both apps” refer to the mobile app XD Presenter, published in the Google Play Store and Apple App Store, and the desktop app downloadable under taavirubenhagen.netlify.app/main/presenter/download.<br/>
+    Terms like “the apps” or “both apps” refer to the mobile app Presentation Master 2, published in the Google Play Store and Apple App Store, and the desktop app downloadable under taavirubenhagen.netlify.app/main/presenter/download.<br/>
     <br/>
     <br/>
     <br/>

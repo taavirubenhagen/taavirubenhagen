@@ -73,7 +73,7 @@
         <div class="h-full pt-16 md:p-0 flex flex-col justify-end md:justify-between md:items-end">
             <a href="/main/contact" class="h-8 md:h-auto"><P3><B onPrimary simple>Contact</B></P3></a>
             <a href="/main/privacy-policy" class="h-8 md:h-auto"><P3><B onPrimary simple>Privacy Policy (Website)</B></P3></a>
-            <a href="/main/presenter/privacy-policy" class="h-8 md:h-auto"><P3><B onPrimary simple>Privacy Policy (XD Presenter)</B></P3></a>
+            <a href="/main/presenter/privacy-policy" class="h-8 md:h-auto"><P3><B onPrimary simple>Privacy Policy (Presentation Master 2)</B></P3></a>
         </div>
     </div>
 </main>
