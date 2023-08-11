@@ -9,6 +9,7 @@ import P3 from "./text/P3.svelte";
 import B from "./text/B.svelte";
 import Button from "./components/Button.svelte";
 import Modal from "./components/Modal.svelte";
+import ScrollReactiveElement from "./components/ScrollReactiveElement.svelte";
 
 export {
     Icon,
@@ -18,4 +19,5 @@ export {
     B,
     Button,
     Modal,
+    ScrollReactiveElement,
 };

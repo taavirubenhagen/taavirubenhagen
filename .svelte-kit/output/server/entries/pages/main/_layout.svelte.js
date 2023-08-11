@@ -1,24 +1,46 @@
-import { c as create_ssr_component, v as validate_component, e as escape, d as add_attribute } from "../../../chunks/index3.js";
+import { g as getContext, c as create_ssr_component, d as subscribe, v as validate_component, e as escape, f as add_attribute } from "../../../chunks/index3.js";
 import { D as DeviceDetector } from "../../../chunks/DeviceDetector.js";
 /* empty css                      */import { c as cursorButtonHover } from "../../../chunks/state.js";
 import { P as P1 } from "../../../chunks/P1.js";
-import { P as P3 } from "../../../chunks/P3.js";
+import { B as Button, P as P3 } from "../../../chunks/Button.js";
 import { B } from "../../../chunks/B.js";
-import { B as Button } from "../../../chunks/Button.js";
+const getStores = () => {
+  const stores = getContext("__svelte__");
+  return {
+    page: {
+      subscribe: stores.page.subscribe
+    },
+    navigating: {
+      subscribe: stores.navigating.subscribe
+    },
+    updated: stores.updated
+  };
+};
+const page = {
+  subscribe(fn) {
+    const store = getStores().page;
+    return store.subscribe(fn);
+  }
+};
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let scrollPercentage;
+  let showFooter;
+  let $page, $$unsubscribe_page;
+  $$unsubscribe_page = subscribe(page, (value) => $page = value);
   let windowHeight;
-  let scrollY;
+  let scrollY = 0;
   let cursor;
   let localCursorButtonHover;
   cursorButtonHover.subscribe((value) => {
     localCursorButtonHover = value;
   });
   scrollPercentage = scrollY / windowHeight * 100;
+  showFooter = $page.route.id?.includes("home-dev") ? false : true;
+  $$unsubscribe_page();
   return `
 
 
-<main class="h-screen overflow-x-hidden overflow-y-scroll cursor-none">
+<main class="h-screen overflow-x-hidden cursor-none">
     ${validate_component(DeviceDetector, "DeviceDetector").$$render($$result, { showInDevice: "desktop" }, {}, {
     default: () => {
       return `<div class="${escape(
@@ -30,6 +52,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       ) + " box-shadow: 0 0 32px white, 0 0 32px white, 0 0 32px white, 0 0 32px white;"}"${add_attribute("this", cursor, 0)}></div>`;
     }
   })}
+    
     <div class="group z-40 fixed w-full h-8"><div class="transition duration-200 h-0.5 group-hover:h-4 group-focus:h-4 primary" style="${"width: " + escape(scrollPercentage, true) + "%; transition-property: height;"}"></div></div>
     <div class="absolute z-35 w-full h-8 opacity-25 primary px-8 center_row">${validate_component(DeviceDetector, "DeviceDetector").$$render($$result, { showInDevice: "mobile" }, {}, {
     default: () => {
@@ -45,8 +68,8 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   })}</div>
     ${slots.default ? slots.default({}) : ``}
     
-    <div class="w-full h-[65vh] sm:h-[50vh] primary p-16 lg:p-32 flex flex-col lg:flex-row justify-between lg:items-center"><div class="h-full flex flex-col md:justify-between break-all">
-            <a href="mailto:taavi.ruebenhagen@gmail.com">${validate_component(Button, "Button").$$render(
+    ${showFooter ? `<div class="w-full h-[65vh] sm:h-[50vh] primary p-16 lg:p-32 flex flex-col lg:flex-row justify-between lg:items-center"><div class="h-full flex flex-col md:justify-between break-all">
+                <a href="mailto:taavi.ruebenhagen@gmail.com">${validate_component(Button, "Button").$$render(
     $$result,
     {
       onClick: () => {
@@ -67,9 +90,9 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       }
     }
   )}</a>
-            <div class="pt-8 md:p-0 text-neutral-500"><div>Pothof 9d</div>
-                <div>38122 Braunschweig</div></div></div>
-        <div class="h-full pt-16 md:p-0 flex flex-col justify-end md:justify-between md:items-end"><a href="/main/contact" class="h-8 md:h-auto">${validate_component(P3, "P3").$$render($$result, {}, {}, {
+                <div class="pt-8 md:p-0 text-neutral-500"><div>Pothof 9d</div>
+                    <div>38122 Braunschweig</div></div></div>
+            <div class="h-full pt-16 md:p-0 flex flex-col justify-end md:justify-between md:items-end"><a href="/main/contact" class="h-8 md:h-auto">${validate_component(P3, "P3").$$render($$result, {}, {}, {
     default: () => {
       return `${validate_component(B, "B").$$render($$result, { onPrimary: true, simple: true }, {}, {
         default: () => {
@@ -78,7 +101,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       })}`;
     }
   })}</a>
-            <a href="/main/privacy-policy" class="h-8 md:h-auto">${validate_component(P3, "P3").$$render($$result, {}, {}, {
+                <a href="/main/privacy-policy" class="h-8 md:h-auto">${validate_component(P3, "P3").$$render($$result, {}, {}, {
     default: () => {
       return `${validate_component(B, "B").$$render($$result, { onPrimary: true, simple: true }, {}, {
         default: () => {
@@ -87,7 +110,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       })}`;
     }
   })}</a>
-            <a href="/main/presenter/privacy-policy" class="h-8 md:h-auto">${validate_component(P3, "P3").$$render($$result, {}, {}, {
+                <a href="/main/presenter/privacy-policy" class="h-8 md:h-auto">${validate_component(P3, "P3").$$render($$result, {}, {}, {
     default: () => {
       return `${validate_component(B, "B").$$render($$result, { onPrimary: true, simple: true }, {}, {
         default: () => {
@@ -95,7 +118,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         }
       })}`;
     }
-  })}</a></div></div></main>`;
+  })}</a></div></div>` : ``}</main>`;
 });
 export {
   Layout as default

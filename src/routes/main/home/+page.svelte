@@ -101,9 +101,4 @@
             />
         </div>
     </div>
-    <div class="h-screen p-16 flex center_col items-start sm:items-center">
-        <a href="/portfolio/newsletter">
-            <Button onClick={() => {}}><H2><B>Sign up for my newsletter</B></H2></Button>
-        </a>
-    </div>
 </main>

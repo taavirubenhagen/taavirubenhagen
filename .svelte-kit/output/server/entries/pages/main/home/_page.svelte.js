@@ -1,19 +1,8 @@
-import { c as create_ssr_component, v as validate_component, e as escape, d as add_attribute } from "../../../../chunks/index3.js";
+import { c as create_ssr_component, v as validate_component, e as escape, f as add_attribute } from "../../../../chunks/index3.js";
 import { g as globalScrollY } from "../../../../chunks/state.js";
 import "ua-parser-js";
-/* empty css                         */import { H as H2 } from "../../../../chunks/H2.js";
-import { B } from "../../../../chunks/B.js";
-import { B as Button } from "../../../../chunks/Button.js";
-const H1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<t class="text-8xl md:text-9xl font-bold">${slots.default ? slots.default({}) : ``}</t>`;
-});
-const O1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(H1, "H1").$$render($$result, {}, {}, {
-    default: () => {
-      return `<t class="text-outline font-normal">${slots.default ? slots.default({}) : ``}</t>`;
-    }
-  })}`;
-});
+/* empty css                         */import { O as O1, H as H1 } from "../../../../chunks/O1.js";
+import { H as H2 } from "../../../../chunks/H2.js";
 const O2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `${validate_component(H2, "H2").$$render($$result, {}, {}, {
     default: () => {
@@ -84,28 +73,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   ) + "vw; transform: scale(" + escape(
     100,
     true
-  ) + "%) rotate(90deg);"}"></div></div>
-    <div class="h-screen p-16 flex center_col items-start sm:items-center"><a href="/portfolio/newsletter">${validate_component(Button, "Button").$$render(
-    $$result,
-    {
-      onClick: () => {
-      }
-    },
-    {},
-    {
-      default: () => {
-        return `${validate_component(H2, "H2").$$render($$result, {}, {}, {
-          default: () => {
-            return `${validate_component(B, "B").$$render($$result, {}, {}, {
-              default: () => {
-                return `Sign up for my newsletter`;
-              }
-            })}`;
-          }
-        })}`;
-      }
-    }
-  )}</a></div></main>`;
+  ) + "%) rotate(90deg);"}"></div></div></main>`;
 });
 export {
   Page as default

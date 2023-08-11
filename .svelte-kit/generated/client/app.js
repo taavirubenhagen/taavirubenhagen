@@ -20,7 +20,8 @@ export const nodes = [
 	() => import('./nodes/16'),
 	() => import('./nodes/17'),
 	() => import('./nodes/18'),
-	() => import('./nodes/19')
+	() => import('./nodes/19'),
+	() => import('./nodes/20')
 ];
 
 export const server_loads = [];
@@ -28,17 +29,18 @@ export const server_loads = [];
 export const dictionary = {
 		"/": [~7],
 		"/main/contact": [8,[2]],
+		"/main/home-dev": [10,[2]],
 		"/main/home": [9,[2]],
-		"/main/newsletter": [10,[2]],
-		"/main/presenter/download": [11,[2]],
-		"/main/presenter/privacy-policy": [12,[2]],
-		"/main/presenter/waitlist": [13,[2]],
-		"/main/privacy-policy": [14,[2]],
-		"/me/blog": [15,[3,4]],
-		"/me/contact": [~16,[3]],
-		"/me/home": [17,[3,5]],
-		"/me/landing/social": [18,[3,6]],
-		"/tts": [19]
+		"/main/newsletter": [11,[2]],
+		"/main/presenter/download": [12,[2]],
+		"/main/presenter/privacy-policy": [13,[2]],
+		"/main/presenter/waitlist": [14,[2]],
+		"/main/privacy-policy": [15,[2]],
+		"/me/blog": [16,[3,4]],
+		"/me/contact": [~17,[3]],
+		"/me/home": [18,[3,5]],
+		"/me/landing/social": [19,[3,6]],
+		"/tts": [20]
 	};
 
 export const hooks = {

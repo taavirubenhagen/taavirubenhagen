@@ -1,9 +1,8 @@
 import { c as create_ssr_component, e as escape, v as validate_component } from "../../../../../chunks/index3.js";
 import { I as Icon } from "../../../../../chunks/Icon2.js";
 /* empty css                            */import { H as H2 } from "../../../../../chunks/H2.js";
-import { P as P3 } from "../../../../../chunks/P3.js";
+import { B as Button, P as P3 } from "../../../../../chunks/Button.js";
 import { B } from "../../../../../chunks/B.js";
-import { B as Button } from "../../../../../chunks/Button.js";
 const P2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<t class="text-xl md:text-2xl selection:primary">${slots.default ? slots.default({}) : ``}</t>`;
 });
@@ -19,8 +18,8 @@ const Modal = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 
 
 
-<div class="${"transition duration-100 " + escape(open ? "" : "opacity-0 pointer-events-none", true)}"><div class="fixed z-45 left-0 top-0 w-full h-full bg-opacity-50 bg-black center_col"><button class="fixed w-full h-full"></button>
-        <div class="rounded-2xl w-1/2 p-8 bg-background center_col">${slots.default ? slots.default({}) : ``}
+<div class="${"transition duration-100 " + escape(open ? "" : "opacity-0 pointer-events-none", true)}"><div class="fixed z-35 left-0 top-0 w-full h-full bg-opacity-50 bg-black center_col"><button class="fixed w-full h-full"></button>
+        <div class="relative z-40 my-64 rounded-2xl w-1/2 p-8 bg-background center_col">${slots.default ? slots.default({}) : ``}
             ${validate_component(Button, "Button").$$render($$result, { onClick: onDismissed }, {}, {
     default: () => {
       return `<div class="mt-8 h-8">${validate_component(Icon, "Icon").$$render($$result, { name: "cancel", textClass: "text-2xl" }, {}, {})}</div>`;
