@@ -34,6 +34,7 @@ declare module '$env/static/private' {
 	export const ChocolateyLastPathUpdate: string;
 	export const ChocolateyToolsLocation: string;
 	export const CHROME_CRASHPAD_PIPE_NAME: string;
+	export const CMD_DURATION_MS: string;
 	export const COLORTERM: string;
 	export const CommonProgramFiles: string;
 	export const CommonProgramW6432: string;
@@ -93,7 +94,6 @@ declare module '$env/static/private' {
 	export const VSCODE_GIT_ASKPASS_MAIN: string;
 	export const VSCODE_GIT_ASKPASS_NODE: string;
 	export const VSCODE_GIT_IPC_HANDLE: string;
-	export const VSCODE_INJECTION: string;
 	export const windir: string;
 	export const _MSYS2_BASH: string;
 	export const _MSYS2_PREFIX: string;
@@ -135,6 +135,7 @@ declare module '$env/dynamic/private' {
 		ChocolateyLastPathUpdate: string;
 		ChocolateyToolsLocation: string;
 		CHROME_CRASHPAD_PIPE_NAME: string;
+		CMD_DURATION_MS: string;
 		COLORTERM: string;
 		CommonProgramFiles: string;
 		CommonProgramW6432: string;
@@ -194,7 +195,6 @@ declare module '$env/dynamic/private' {
 		VSCODE_GIT_ASKPASS_MAIN: string;
 		VSCODE_GIT_ASKPASS_NODE: string;
 		VSCODE_GIT_IPC_HANDLE: string;
-		VSCODE_INJECTION: string;
 		windir: string;
 		_MSYS2_BASH: string;
 		_MSYS2_PREFIX: string;
