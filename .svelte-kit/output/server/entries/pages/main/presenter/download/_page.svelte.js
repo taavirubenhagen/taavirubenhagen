@@ -32,12 +32,12 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         These certificates are basically just an identity proof though and change nothing about the actual security of the program.
         If you are concerned about getting malware, just keep in mind that my contact info is public
         and I could therefore be made fully responsible if I tried to hack you, so that would be very stupid of me.<br><br>
-        3. <p3 class="font-bold">Refer to the <a target="_blank" href="https://youtu.be/zjYiOR03C8M">${validate_component(B, "B").$$render($$result, {}, {}, {
+        3. Refer to the <p3 class="font-bold"><a target="_blank" href="https://youtu.be/zjYiOR03C8M">${validate_component(B, "B").$$render($$result, {}, {}, {
     default: () => {
       return `video tutorial`;
     }
-  })} ${validate_component(Icon, "Icon").$$render($$result, { name: "open-new-window" }, {}, {})}</a> if you don&#39;t know how to dismiss the warning.
-        If prompted, allow &quot;Communication in private networks&quot;.</p3> This is necessary since the communication between the devices uses WiFi.<br><br>
+  })} ${validate_component(Icon, "Icon").$$render($$result, { name: "open-new-window" }, {}, {})}</a></p3> if you don&#39;t know how to dismiss the warning.
+        <p3 class="font-bold">If prompted, allow &quot;Communication in private networks&quot;.</p3> This is necessary since the communication between the devices uses WiFi.<br><br>
         5. When you want to present, open this app as well as your PowerPoint presentation and use the mobile app to connect and control the presentation.<br><br>
         6. If you have any questions or concerns, feel free to contact me at tavyai.apps@gmail.com.<br><br></p3></main>`;
 });
