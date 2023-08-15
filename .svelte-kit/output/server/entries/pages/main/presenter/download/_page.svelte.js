@@ -4,13 +4,13 @@ import { I as Icon } from "../../../../../chunks/Icon2.js";
 import { B } from "../../../../../chunks/B.js";
 import { B as Button } from "../../../../../chunks/Button.js";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<main class="relative min-h-screen p-16 pt-24 text-left">${validate_component(H2, "H2").$$render($$result, {}, {}, {
+  return `<main class="relative min-h-screen pointer-events-auto p-16 pt-24 text-left">${validate_component(H2, "H2").$$render($$result, {}, {}, {
     default: () => {
       return `Presentation Master 2 for PC`;
     }
   })}
     <div class="h-16"></div>
-    <p3>1. Click the here to start the installation (The MacOS version is coming soon):
+    <p3>1. Click the here to download the file, then open it to start the installation (A MacOS version is coming soon):
         <br><br>
         ${validate_component(Button, "Button").$$render(
     $$result,
@@ -38,8 +38,8 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     }
   })} ${validate_component(Icon, "Icon").$$render($$result, { name: "open-new-window" }, {}, {})}</a></p3> if you don&#39;t know how to dismiss the warning.
         <p3 class="font-bold">If prompted, allow &quot;Communication in private networks&quot;.</p3> This is necessary since the communication between the devices uses WiFi.<br><br>
-        5. When you want to present, open this app as well as your PowerPoint presentation and use the mobile app to connect and control the presentation.<br><br>
-        6. If you have any questions or concerns, feel free to contact me at tavyai.apps@gmail.com.<br><br></p3></main>`;
+        4. When you want to present, open this app as well as your PowerPoint presentation and use the mobile app to connect and control the presentation.<br><br>
+        5. If you have any questions or concerns, feel free to contact me at tavyai.apps@gmail.com.<br><br></p3></main>`;
 });
 export {
   Page as default
