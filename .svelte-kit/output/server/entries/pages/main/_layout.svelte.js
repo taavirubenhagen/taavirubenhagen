@@ -2,8 +2,9 @@ import { g as getContext, c as create_ssr_component, d as subscribe, v as valida
 import { D as DeviceDetector } from "../../../chunks/DeviceDetector.js";
 /* empty css                      */import { c as cursorButtonHover } from "../../../chunks/state.js";
 import { P as P1 } from "../../../chunks/P1.js";
-import { B as Button, P as P3 } from "../../../chunks/Button.js";
+import { P as P3 } from "../../../chunks/P3.js";
 import { B } from "../../../chunks/B.js";
+import { B as Button } from "../../../chunks/Button.js";
 const getStores = () => {
   const stores = getContext("__svelte__");
   return {

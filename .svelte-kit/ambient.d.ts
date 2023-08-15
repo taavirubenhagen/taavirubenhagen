@@ -43,8 +43,6 @@ declare module '$env/static/private' {
 	export const DriverData: string;
 	export const EFC_10104: string;
 	export const FILE_PWD: string;
-	export const FPS_BROWSER_APP_PROFILE_STRING: string;
-	export const FPS_BROWSER_USER_PROFILE_STRING: string;
 	export const GHCUP_INSTALL_BASE_PREFIX: string;
 	export const GIT_ASKPASS: string;
 	export const GOPATH: string;
@@ -144,8 +142,6 @@ declare module '$env/dynamic/private' {
 		DriverData: string;
 		EFC_10104: string;
 		FILE_PWD: string;
-		FPS_BROWSER_APP_PROFILE_STRING: string;
-		FPS_BROWSER_USER_PROFILE_STRING: string;
 		GHCUP_INSTALL_BASE_PREFIX: string;
 		GIT_ASKPASS: string;
 		GOPATH: string;
