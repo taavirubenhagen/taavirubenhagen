@@ -1,6 +1,5 @@
 <script lang="ts">
     import { fade, blur } from 'svelte/transition';
-    import DeviceDetector from "svelte-device-detector";
 
     import { globalScrollY } from "../state";
     import "$style";
@@ -77,7 +76,7 @@
         </div>
     </ScrollReactiveElement>
     <ScrollReactiveElement condition={scrollData.scrollTypingElementVisible} wrapperClass="center_col text-center">
-        <div class="sm:p-16 text-center" transition:blur={{ amount: 8 }}>
+        <div class="sm:p-16" transition:blur={{ amount: 8 }}>
             <h2 class="inline">
                 {@html (() => {
                     let m = visibleMessage.substring(0, scrollData.scrollTypingProgress).replaceAll(" ", "&nbsp;").replaceAll("|", "<br/>");
@@ -93,31 +92,26 @@
                 }
                 return m.replaceAll("~", "<br/>").replaceAll("*", "<br/>");
             })()}</h2>
-            <!--<h2 class="inline">
-                {@html (() => {
-                    let parts = [""];
-                    parts = [];
-                    for (let i = 0; i <= visibleMessageChunks.length; i++) {
-                        parts.push(visibleMessageChunks[i]);
-                        if (parts.join(" ").length > scrollData.scrollTypingProgress) {
-                            return parts.join(" ");
-                        }
-                    }
-                    return visibleMessageChunks.join(" ");
-                })()}
-            </h2><h2 class="inline opacity-10">
-                {@html (() => {
-                    let parts = [];
-                    for (let i = visibleMessageChunks.length - 1; i >= 0; i--) {
-                        parts.push(visibleMessageChunks[i]);
-                        if (parts.join(" ").length > visibleMessageChunks.length - scrollData.scrollTypingProgress) {
-                            return parts.reverse().join(" ");
-                        }
-                        return visibleMessageChunks.join(" ");
-                    }
-                })()}
-            </h2>-->
         </div>
+    </ScrollReactiveElement>
+    <ScrollReactiveElement condition={scrollData.scrollTypingElementVisible}>
+        <p2
+            class="
+                w-full h-full flex flex-col md:flex-row justify-evenly items-center gap-16 md:gap-0 text-center"
+            transition:blur={{ amount: 8 }}
+        >
+            {#each [
+                ["buymeacoffee.svg", "Buy me a coffee"],
+                "speech",
+                "arrow-separate",
+            ] as e, i}
+                <div class="border border-primary w-2/3 sm:1/2 md:w-1/4 p-8 lg:p-16">
+                    <img src="{e[0]}" alt={e[1]}>
+                    <div class="h-16"></div>
+                    <B>{"/main/home/" + e[1]}</B>
+                </div>
+            {/each}
+        </p2>
     </ScrollReactiveElement>
         <!--<div
             class="relative pb-[100vh] primary"

@@ -1,23 +1,67 @@
 {
 	"/": [
-		"src/routes/+page.server.ts"
+		"src/routes/+layout.server.ts",
+		"src/routes/+layout.server.ts"
 	],
-	"/main": [],
-	"/main/contact": [],
-	"/main/home-dev": [],
-	"/main/home": [],
-	"/main/newsletter": [],
-	"/main/presenter/download-legacy": [],
-	"/main/presenter/download": [],
-	"/main/presenter/privacy-policy": [],
-	"/main/presenter/waitlist": [],
-	"/main/privacy-policy": [],
-	"/me": [],
-	"/me/blog": [],
+	"/home": [
+		"src/routes/home/+layout.server.ts",
+		"src/routes/+layout.server.ts",
+		"src/routes/home/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/main": [
+		"src/routes/+layout.server.ts"
+	],
+	"/main/contact": [
+		"src/routes/+layout.server.ts"
+	],
+	"/main/home-dev": [
+		"src/routes/+layout.server.ts"
+	],
+	"/main/home": [
+		"src/routes/+layout.server.ts"
+	],
+	"/main/newsletter": [
+		"src/routes/+layout.server.ts"
+	],
+	"/main/presenter/download-legacy": [
+		"src/routes/+layout.server.ts"
+	],
+	"/main/presenter/download": [
+		"src/routes/+layout.server.ts"
+	],
+	"/main/presenter/privacy-policy": [
+		"src/routes/+layout.server.ts"
+	],
+	"/main/presenter/support-url": [
+		"src/routes/+layout.server.ts"
+	],
+	"/main/presenter/waitlist": [
+		"src/routes/+layout.server.ts"
+	],
+	"/main/privacy-policy": [
+		"src/routes/+layout.server.ts"
+	],
+	"/me": [
+		"src/routes/+layout.server.ts"
+	],
+	"/me/blog": [
+		"src/routes/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
 	"/me/contact": [
-		"src/routes/me/contact/+page.server.ts"
+		"src/routes/me/contact/+page.server.ts",
+		"src/routes/+layout.server.ts"
 	],
-	"/me/home": [],
-	"/me/landing/social": [],
-	"/tts": []
+	"/me/home": [
+		"src/routes/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/me/landing/social": [
+		"src/routes/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/tts": [
+		"src/routes/+layout.server.ts"
+	]
 }

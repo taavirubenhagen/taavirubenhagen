@@ -1,7 +1,7 @@
-import { c as create_ssr_component, e as escape, v as validate_component } from "../../../../chunks/index3.js";
-import "ua-parser-js";
+import { c as create_ssr_component, e as escape, v as validate_component, h as each, f as add_attribute } from "../../../../chunks/index3.js";
 import { g as globalScrollY } from "../../../../chunks/state.js";
 /* empty css                         */import { O as O1, H as H1 } from "../../../../chunks/O1.js";
+import { B } from "../../../../chunks/B.js";
 const ScrollReactiveElement = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { condition = true } = $$props;
   let { wrapperClass = "" } = $$props;
@@ -64,15 +64,35 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {},
     {
       default: () => {
-        return `<div class="sm:p-16 text-center"><h2 class="inline"><!-- HTML_TAG_START -->${(() => {
+        return `<div class="sm:p-16"><h2 class="inline"><!-- HTML_TAG_START -->${(() => {
           let m = visibleMessage.substring(0, scrollData.scrollTypingProgress).replaceAll(" ", "&nbsp;").replaceAll("|", "<br/>");
           return m.replaceAll("~", "<br/>").replaceAll("*", "<br/>");
         })()}<!-- HTML_TAG_END -->
             </h2><h2 class="inline opacity-10"><!-- HTML_TAG_START -->${(() => {
           let m = visibleMessage.substring(scrollData.scrollTypingProgress).replaceAll(" ", "&nbsp;").replaceAll("|", "<br/>");
           return m.replaceAll("~", "<br/>").replaceAll("*", "<br/>");
-        })()}<!-- HTML_TAG_END --></h2>
-            </div>`;
+        })()}<!-- HTML_TAG_END --></h2></div>`;
+      }
+    }
+  )}
+    ${validate_component(ScrollReactiveElement, "ScrollReactiveElement").$$render(
+    $$result,
+    {
+      condition: scrollData.scrollTypingElementVisible
+    },
+    {},
+    {
+      default: () => {
+        return `<p2 class="w-full h-full flex flex-col md:flex-row justify-evenly items-center gap-16 md:gap-0 text-center">${each([["buymeacoffee.svg", "Buy me a coffee"], "speech", "arrow-separate"], (e, i) => {
+          return `<div class="border border-primary w-2/3 sm:1/2 md:w-1/4 p-8 lg:p-16"><img${add_attribute("src", e[0], 0)}${add_attribute("alt", e[1], 0)}>
+                    <div class="h-16"></div>
+                    ${validate_component(B, "B").$$render($$result, {}, {}, {
+            default: () => {
+              return `${escape("/main/home/" + e[1])}`;
+            }
+          })}
+                </div>`;
+        })}</p2>`;
       }
     }
   )}

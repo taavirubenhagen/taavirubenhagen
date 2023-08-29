@@ -10,7 +10,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     }
   })}
     <div class="h-16"></div>
-    <p3>1. Click the here to download the file, then open it to start the installation (A MacOS version is coming soon):
+    <p3>1. Click the button to download the file, then open it to start the installation (A MacOS version is coming soon):
         <br><br>
         ${validate_component(Button, "Button").$$render(
     $$result,

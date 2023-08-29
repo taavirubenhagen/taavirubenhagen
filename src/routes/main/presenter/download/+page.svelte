@@ -9,7 +9,7 @@
     <H2>Presentation Master 2 for PC</H2>
     <div class="h-16"></div>
     <p3>
-        1. Click the here to download the file, then open it to start the installation (A MacOS version is coming soon):
+        1. Click the button to download the file, then open it to start the installation (A MacOS version is coming soon):
         <br/><br/>
         <Button onClick={() => {}}>
             <a download href="/presenter/Presentation Master 2.msi" class="transition duration-200 hover:scale-[101%] rounded-full h-16 bg-black px-8 flex items-center gap-4 text-white">
