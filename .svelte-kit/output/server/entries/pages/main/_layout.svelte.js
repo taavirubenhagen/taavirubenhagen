@@ -1,28 +1,11 @@
-import { g as getContext, c as create_ssr_component, d as subscribe, v as validate_component, e as escape, f as add_attribute } from "../../../chunks/index3.js";
+import { c as create_ssr_component, d as subscribe, v as validate_component, e as escape, f as add_attribute } from "../../../chunks/index3.js";
 import { D as DeviceDetector } from "../../../chunks/DeviceDetector.js";
+import { p as page } from "../../../chunks/stores.js";
 /* empty css                      */import { c as cursorButtonHover } from "../../../chunks/state.js";
 import { P as P1 } from "../../../chunks/P1.js";
 import { P as P3 } from "../../../chunks/P3.js";
 import { B } from "../../../chunks/B.js";
 import { B as Button } from "../../../chunks/Button.js";
-const getStores = () => {
-  const stores = getContext("__svelte__");
-  return {
-    page: {
-      subscribe: stores.page.subscribe
-    },
-    navigating: {
-      subscribe: stores.navigating.subscribe
-    },
-    updated: stores.updated
-  };
-};
-const page = {
-  subscribe(fn) {
-    const store = getStores().page;
-    return store.subscribe(fn);
-  }
-};
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let scrollPercentage;
   let showFooter;
@@ -50,7 +33,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       ) + " duration-300 fixed z-50 -translate-x-1/2 -translate-y-1/2 pointer-events-none backdrop-invert rounded-full"}" style="${"transition-property: transform, opacity, width, height; " + escape(
         localCursorButtonHover ? "transition-timing-function: cubic-bezier(.2, 0, .1, .9);" : "transition-timing-function: cubic-bezier(.5, 0, .5, 1);",
         true
-      ) + " box-shadow: 0 0 32px white, 0 0 32px white, 0 0 32px white, 0 0 32px white;"}"${add_attribute("this", cursor, 0)}></div>`;
+      ) + " bo-shadow: 0 0 32px white, 0 0 32px white, 0 0 32px white, 0 0 32px white;"}"${add_attribute("this", cursor, 0)}></div>`;
     }
   })}
     

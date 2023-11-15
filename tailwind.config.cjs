@@ -27,7 +27,7 @@ module.exports = {
             body: ['Lexend'],
             display: ['Caveat', 'Arial'],
             sans: ['Lexend'],
-            mono: ['Lexend', 'IBM Plex Mono', 'Consolas'],
+            mono: ['IBM Plex Mono', 'Consolas'],
         },
         extend: {
             colors: {

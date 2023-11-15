@@ -5,6 +5,6 @@
 
 
 
-<main class="relative w-full min-h-screen bg-background text-onBackground font-body">
+<main class="relative w-full min-h-screen bg-background text-onBackground selection:primary font-body">
   <slot></slot>
 </main>

@@ -1,8 +1,8 @@
 <script lang="ts">
     import DeviceDetector from "svelte-device-detector";
-    import { page } from '$app/stores'
+    import { page } from '$app/stores';
     import "$style";
-    import { globalScrollY, cursorButtonHover } from "./state";
+    import { globalScrollY, cursorButtonHover } from "$state";
     import {
         P1, P3,
         B,
@@ -48,7 +48,7 @@
             style=
                 "transition-property: transform, opacity, width, height;
                 {localCursorButtonHover ? "transition-timing-function: cubic-bezier(.2, 0, .1, .9);" : "transition-timing-function: cubic-bezier(.5, 0, .5, 1);"}
-                box-shadow: 0 0 32px white, 0 0 32px white, 0 0 32px white, 0 0 32px white;"
+                bo-shadow: 0 0 32px white, 0 0 32px white, 0 0 32px white, 0 0 32px white;"
         ></div>
     </DeviceDetector>
     <!--TODO: Adapt to different page lengths-->

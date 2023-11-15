@@ -17,7 +17,7 @@ const config = {
 			$tavy: path.resolve("./src/lib/tavy/"),
 			$lib: path.resolve("./src/main/lib"),
 			$style: path.resolve("./src/global.postcss"),
-			$store: path.resolve("./src/stores.ts"),
+			$state: path.resolve("./src/state.ts"),
 
 			$buttons: path.resolve("./src/lib/util/buttons"),
 		}

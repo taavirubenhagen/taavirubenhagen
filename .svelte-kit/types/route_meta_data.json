@@ -42,6 +42,9 @@
 	"/main/privacy-policy": [
 		"src/routes/+layout.server.ts"
 	],
+	"/main/projects": [
+		"src/routes/+layout.server.ts"
+	],
 	"/me": [
 		"src/routes/+layout.server.ts"
 	],
@@ -59,6 +62,19 @@
 	],
 	"/me/landing/social": [
 		"src/routes/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/personal": [
+		"src/routes/+layout.server.ts"
+	],
+	"/personal/home": [
+		"src/routes/+layout.server.ts"
+	],
+	"/terminal": [
+		"src/routes/terminal/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/terminal/[route]": [
 		"src/routes/+layout.server.ts"
 	],
 	"/tts": [

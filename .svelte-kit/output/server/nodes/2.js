@@ -4,6 +4,6 @@ export const index = 2;
 export const component = async () => (await import('../entries/fallbacks/layout.svelte.js')).default;
 export { server };
 export const server_id = "src/routes/home/+layout.server.ts";
-export const imports = ["_app/immutable/nodes/2.a5bca085.js","_app/immutable/chunks/index.3a8a4865.js"];
+export const imports = ["_app/immutable/nodes/2.cfa6e148.js","_app/immutable/chunks/index.b4d8f349.js"];
 export const stylesheets = [];
 export const fonts = [];

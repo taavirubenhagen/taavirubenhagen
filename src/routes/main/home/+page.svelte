@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { globalScrollY } from "../state";
+    import { globalScrollY } from "$state";
     import DeviceDetector from "svelte-device-detector";
     import "$style";
     import {

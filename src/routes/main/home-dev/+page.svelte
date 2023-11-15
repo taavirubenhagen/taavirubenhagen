@@ -1,7 +1,7 @@
 <script lang="ts">
     import { fade, blur } from 'svelte/transition';
 
-    import { globalScrollY } from "../state";
+    import { globalScrollY } from "$state";
     import "$style";
     import {
         Icon,

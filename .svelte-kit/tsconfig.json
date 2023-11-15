@@ -34,8 +34,8 @@
 			"$style": [
 				"../src/global.postcss"
 			],
-			"$store": [
-				"../src/stores.ts"
+			"$state": [
+				"../src/state.ts"
 			],
 			"$buttons": [
 				"../src/lib/util/buttons"
