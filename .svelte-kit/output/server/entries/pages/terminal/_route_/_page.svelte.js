@@ -47,10 +47,7 @@ ${each(routes, (r) => {
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $page, $$unsubscribe_page;
   $$unsubscribe_page = subscribe(page, (value) => $page = value);
-  let cursor;
-  let localCursorButtonHover;
   cursorButtonHover.subscribe((value) => {
-    localCursorButtonHover = value;
   });
   let keyInput;
   let route = "home";
@@ -85,14 +82,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 <main class="overflow-hidden cursor-none">
     ${validate_component(DeviceDetector, "DeviceDetector").$$render($$result, { showInDevice: "desktop" }, {}, {
     default: () => {
-      return `<input type="text" autofocus class="absolute -z-40"${add_attribute("this", keyInput, 0)}>
-        <div class="${escape(
-        localCursorButtonHover ? "w-8 h-8 opacity-25" : "w-4 h-4 opacity-100",
-        true
-      ) + " duration-300 fixed z-50 -translate-x-1/2 -translate-y-1/2 pointer-events-none backdrop-invert rounded-full"}" style="${"transition-property: transform, opacity, width, height; " + escape(
-        localCursorButtonHover ? "transition-timing-function: cubic-bezier(.2, 0, .1, .9);" : "transition-timing-function: cubic-bezier(.5, 0, .5, 1);",
-        true
-      )}"${add_attribute("this", cursor, 0)}></div>`;
+      return `<input type="text" autofocus class="absolute -z-40"${add_attribute("this", keyInput, 0)}>`;
     }
   })}
     <div class="h-screen p-4 bg-black selection:bg-neutral-300 text-base text-white selection:text-black font-mono"><div class="text-neutral-500 font-bold">${validate_component(Button, "Button").$$render($$result, { onClick: () => route = "home" }, {}, {

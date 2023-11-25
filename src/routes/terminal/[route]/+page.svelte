@@ -7,7 +7,6 @@
     import Menu from "./Menu.svelte";
 
     let windowHeight: number;
-    let cursor: HTMLElement;
     let localCursorButtonHover: boolean;
     cursorButtonHover.subscribe((value: boolean) => {
         localCursorButtonHover = value;
@@ -59,10 +58,6 @@
 
 
 <main
-    on:mousemove={(event) => {
-        cursor.style.left = event.clientX + 'px';
-        cursor.style.top = event.clientY + 'px';
-    }}
     on:click={(_) => keyInput.focus()}
     on:keypress|preventDefault={onKeyPressed}
     class="overflow-hidden cursor-none"
@@ -70,17 +65,6 @@
     <!-- svelte-ignore a11y-autofocus -->
     <DeviceDetector showInDevice="desktop">
         <input bind:this={keyInput} type='text' autofocus class='absolute -z-40'/>
-        <div
-            bind:this={cursor}
-            class="{localCursorButtonHover ? "w-8 h-8 opacity-25" : "w-4 h-4 opacity-100"} duration-300 fixed z-50 -translate-x-1/2 -translate-y-1/2 pointer-events-none backdrop-invert rounded-full"
-            style=
-                "transition-property: transform, opacity, width, height;
-                {
-                    localCursorButtonHover
-                    ? "transition-timing-function: cubic-bezier(.2, 0, .1, .9);"
-                    : "transition-timing-function: cubic-bezier(.5, 0, .5, 1);"
-                }"
-        ></div>
     </DeviceDetector>
     <div class='h-screen p-4 bg-black selection:bg-neutral-300 text-base text-white selection:text-black font-mono'>
         <div class='text-neutral-500 font-bold'>

@@ -26,7 +26,7 @@ import { c as cursorButtonHover } from "../../chunks/state.js";
       ) + " duration-300 fixed z-50 -translate-x-1/2 -translate-y-1/2 pointer-events-none backdrop-invert rounded-full"}" style="${"transition-property: transform, opacity, width, height; " + escape(
         localCursorButtonHover ? "transition-timing-function: cubic-bezier(.2, 0, .1, .9);" : "transition-timing-function: cubic-bezier(.5, 0, .5, 1);",
         true
-      ) + " bo-shadow: 0 0 32px white, 0 0 32px white, 0 0 32px white, 0 0 32px white;"}"${add_attribute("this", cursor, 0)}></div>`;
+      )}"${add_attribute("this", cursor, 0)}></div>`;
     }
   })}
     ${slots.default ? slots.default({}) : ``}</main>`;
