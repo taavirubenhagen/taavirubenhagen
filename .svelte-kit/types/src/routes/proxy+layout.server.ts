@@ -3,8 +3,8 @@ import { redirect } from '@sveltejs/kit';
  
 /** @param {Parameters<import('./$types').LayoutServerLoad>[0]} event */
 export function load({ request }) {
-    if (request.url.split('\/').length === 4 && request.url.split('\/')[-1] === '') {
-        throw redirect(307, '/home');
+    if (request.url.split('\/').length === 4) {
+        throw redirect(307, '/terminal');
     }
     if (request.url.search("(\/presenter\/download\/.+)$") !== -1) {
         throw redirect(307, 'main/presenter/download');
