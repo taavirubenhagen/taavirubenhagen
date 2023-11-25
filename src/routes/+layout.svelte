@@ -3,6 +3,7 @@
     import { page } from "$app/stores";
     import { cursorButtonHover, globalScrollY } from "$state";
     import "$style";
+    import { LegalFooter } from "$tavy/industrial";
 
 
     let windowHeight: number;
@@ -52,4 +53,5 @@
         ></div>
     </DeviceDetector>
     <slot/>
+    <LegalFooter contactLink='/main/contact' ppLink='/main/privacy-policy'/>
 </main>

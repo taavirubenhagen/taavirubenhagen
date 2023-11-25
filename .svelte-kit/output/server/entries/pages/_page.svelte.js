@@ -1,5 +1,5 @@
 import { c as create_ssr_component, v as validate_component } from "../../chunks/index3.js";
-/* empty css                   */import { B as Button } from "../../chunks/Button3.js";
+/* empty css                   */import { B as Button } from "../../chunks/Button.js";
 import { B as ButtonSeperator } from "../../chunks/ButtonSeperator.js";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<main class="min-h-screen p-8 center_col"><div class="flex flex-col justify-center items-stretch">${validate_component(Button, "Button").$$render(

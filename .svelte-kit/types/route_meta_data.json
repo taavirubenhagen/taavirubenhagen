@@ -6,9 +6,6 @@
 	"/home": [
 		"src/routes/+layout.server.ts"
 	],
-	"/main": [
-		"src/routes/+layout.server.ts"
-	],
 	"/main/contact": [
 		"src/routes/+layout.server.ts"
 	],

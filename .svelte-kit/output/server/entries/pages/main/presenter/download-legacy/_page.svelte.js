@@ -1,11 +1,13 @@
 import { c as create_ssr_component, e as escape, v as validate_component } from "../../../../../chunks/index3.js";
 import { I as Icon } from "../../../../../chunks/Icon.js";
 /* empty css                            */import { H as H2 } from "../../../../../chunks/H2.js";
-import { P as P3 } from "../../../../../chunks/P3.js";
 import { B } from "../../../../../chunks/B.js";
-import { B as Button } from "../../../../../chunks/Button.js";
+import { B as Button } from "../../../../../chunks/Button4.js";
 const P2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<t class="text-xl md:text-2xl selection:primary">${slots.default ? slots.default({}) : ``}</t>`;
+});
+const P3 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  return `<t class="selection:primary">${slots.default ? slots.default({}) : ``}</t>`;
 });
 const Modal = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { open } = $$props;
