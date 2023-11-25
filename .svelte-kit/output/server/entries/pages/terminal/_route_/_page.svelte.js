@@ -2,7 +2,7 @@ import { c as create_ssr_component, h as each, v as validate_component, e as esc
 import { D as DeviceDetector } from "../../../../chunks/DeviceDetector.js";
 import { p as page } from "../../../../chunks/stores.js";
 import { c as cursorButtonHover } from "../../../../chunks/state.js";
-/* empty css                         */import { B as Button } from "../../../../chunks/Button3.js";
+/* empty css                         */import { B as Button } from "../../../../chunks/Button4.js";
 function viewedRoute(r) {
   return r[0].toUpperCase() + r.slice(1);
 }

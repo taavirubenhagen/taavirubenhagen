@@ -1,7 +1,6 @@
 import { c as create_ssr_component, v as validate_component, e as escape } from "../../../chunks/index3.js";
 /* empty css                      */import { S as SmallParagraph } from "../../../chunks/SmallParagraph.js";
-import { M as MediumParagraph } from "../../../chunks/MediumParagraph.js";
-import { B as Button } from "../../../chunks/Button4.js";
+import { M as MediumParagraph, B as Button } from "../../../chunks/Button3.js";
 import { B as ButtonSeperator } from "../../../chunks/ButtonSeperator.js";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let windowHeight;

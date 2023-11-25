@@ -49,7 +49,6 @@
 		"src/routes/+layout.server.ts"
 	],
 	"/products": [
-		"src/routes/+layout.server.ts",
 		"src/routes/+layout.server.ts"
 	],
 	"/terminal": [
