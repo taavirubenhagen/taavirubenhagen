@@ -16,7 +16,6 @@
 
     let windowHeight: number;
     let scrollY = 0;
-    $: scrollPercentage = scrollY / windowHeight * 100;
     let cursor: HTMLElement;
     let localCursorButtonHover: boolean;
 
@@ -43,7 +42,7 @@
         scrollY = event?.currentTarget?.scrollTop;
         globalScrollY.set(event?.currentTarget?.scrollTop);
     }}
-    class="h-full overflow-x-hidden cursor-none"
+    class="overflow-x-hidden cursor-none"
 >
     <!-- TODO: Add standard scrollbar effects -->
     <DeviceDetector showInDevice="desktop">
@@ -59,7 +58,7 @@
     <slot></slot>
     <!-- TODO: Make it slide into view when scrolled like Cuberto -->
     {#if showFooter}
-        <div class="w-full h-[65vh] sm:h-[50vh] primary p-16 lg:p-32 flex flex-col lg:flex-row justify-between lg:items-center text-left">
+        <div class="w-full h-[65vh] sm:h-[50vh] primary p-16 lg:p-32 flex flex-col lg:flex-row justify-between lg:items-center">
             <div class="h-full flex flex-col md:justify-between break-all">
                 <!-- TODO: Add feedback page -->
                 <a href="mailto:taavi.ruebenhagen@gmail.com"><Button onClick={() => {}}>

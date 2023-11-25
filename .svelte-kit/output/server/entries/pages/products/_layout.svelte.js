@@ -42,7 +42,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `
 
 
-<main class="h-screen overflow-x-hidden cursor-none">
+<main class="overflow-x-hidden cursor-none">
     ${validate_component(DeviceDetector, "DeviceDetector").$$render($$result, { showInDevice: "desktop" }, {}, {
     default: () => {
       return `<div class="${escape(

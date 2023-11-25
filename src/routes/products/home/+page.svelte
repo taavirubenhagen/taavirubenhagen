@@ -14,11 +14,11 @@
 </script>
 
 
-<svelte:window bind:innerWidth={windowWidth} bind:innerHeight={windowHeight} />
+<svelte:window bind:innerHeight={windowHeight} />
 
 
 <MediumParagraph>
-    <main class="relative center_col">
+    <main class="relative center_col" style='height: {windowHeight};'>
         <div class='flex flex-col justify-center items-stretch'>
             <Button openInNew onClick={() => window.location.href = "/products/home"}>
                 Here Will The

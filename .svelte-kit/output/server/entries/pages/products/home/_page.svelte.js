@@ -31,12 +31,13 @@ const Button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   })}`;
 });
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let windowHeight;
   return `
 
 
 ${validate_component(MediumParagraph, "MediumParagraph").$$render($$result, {}, {}, {
     default: () => {
-      return `<main class="relative center_col"><div class="flex flex-col justify-center items-stretch">${validate_component(Button, "Button").$$render(
+      return `<main class="relative center_col" style="${"height: " + escape(windowHeight, true) + ";"}"><div class="flex flex-col justify-center items-stretch">${validate_component(Button, "Button").$$render(
         $$result,
         {
           openInNew: true,
