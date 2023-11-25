@@ -18,7 +18,7 @@
 
 
 <MediumParagraph>
-    <main class="relative h-screen center_col">
+    <main class="relative center_col" style='height: {windowHeight}px;'>
         <div class='flex flex-col justify-center items-stretch'>
             <Button openInNew onClick={() => window.location.href = "/products/home"}>
                 Here Will The

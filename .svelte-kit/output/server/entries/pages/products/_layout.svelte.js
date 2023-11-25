@@ -76,7 +76,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   )}</a>
                 <div class="pt-8 md:p-0 text-neutral-500">Pothof 9d<br>
                     38122 Braunschweig, Germany<br></div></div>
-            <div class="h-full pt-16 md:p-0 flex flex-col justify-end md:justify-between md:items-end">${validate_component(RawButton, "RawButton").$$render(
+            <div class="h-full pt-16 md:p-0 flex flex-col justify-end md:justify-between md:items-end text-left md:text-right">${validate_component(RawButton, "RawButton").$$render(
     $$result,
     {
       onClick: () => window.location.href = "/main/contact"

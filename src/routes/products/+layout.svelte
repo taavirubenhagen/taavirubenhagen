@@ -69,7 +69,7 @@
                     38122 Braunschweig, Germany<br/>
                 </div>
             </div>
-            <div class="h-full pt-16 md:p-0 flex flex-col justify-end md:justify-between md:items-end">
+            <div class="h-full pt-16 md:p-0 flex flex-col justify-end md:justify-between md:items-end text-left md:text-right">
                 <RawButton onClick={() => window.location.href = '/main/contact'}>
                     <MediumParagraph>Contact</MediumParagraph>
                 </RawButton>
