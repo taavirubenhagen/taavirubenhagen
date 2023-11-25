@@ -1,23 +1,9 @@
 import { c as create_ssr_component, v as validate_component } from "../../chunks/index3.js";
 /* empty css                   */import { B as Button } from "../../chunks/Button4.js";
-const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<main class="h-screen p-8 center_col"><div class="flex flex-col justify-center items-stretch">${validate_component(Button, "Button").$$render(
+const ButtonSeperator = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  return `<div class="opacity-0 pointer-events-none">${validate_component(Button, "Button").$$render(
     $$result,
     {
-      openInNew: true,
-      onClick: () => window.location.href = "/terminal"
-    },
-    {},
-    {
-      default: () => {
-        return `Terminal Website`;
-      }
-    }
-  )}
-        ${validate_component(Button, "Button").$$render(
-    $$result,
-    {
-      borderClass: "pointer-events-none invert border-t-0 border-white text-background",
       onClick: () => {
       }
     },
@@ -27,12 +13,55 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         return `_`;
       }
     }
+  )}</div>`;
+});
+const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  return `<main class="min-h-screen p-8 center_col"><div class="flex flex-col justify-center items-stretch">${validate_component(Button, "Button").$$render(
+    $$result,
+    {
+      openInNew: true,
+      onClick: () => window.location.href = "/terminal"
+    },
+    {},
+    {
+      default: () => {
+        return `Text-Based Website`;
+      }
+    }
   )}
         ${validate_component(Button, "Button").$$render(
     $$result,
     {
       openInNew: true,
       borderClass: "border-t-0",
+      onClick: () => alert("Coming soon!")
+    },
+    {},
+    {
+      default: () => {
+        return `Projects`;
+      }
+    }
+  )}
+        ${validate_component(Button, "Button").$$render(
+    $$result,
+    {
+      openInNew: true,
+      borderClass: "border-t-0",
+      onClick: () => window.location.href = "/products"
+    },
+    {},
+    {
+      default: () => {
+        return `Affiliate Shop`;
+      }
+    }
+  )}
+        ${validate_component(ButtonSeperator, "ButtonSeperator").$$render($$result, {}, {}, {})}
+        ${validate_component(Button, "Button").$$render(
+    $$result,
+    {
+      openInNew: true,
       onClick: () => window.location.href = "https://play.google.com/store/apps/details?id=tavy.presenter.presentation_master_2"
     },
     {},
@@ -72,25 +101,11 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       }
     }
   )}
-        ${validate_component(Button, "Button").$$render(
-    $$result,
-    {
-      borderClass: "pointer-events-none invert border-t-0 border-white text-background",
-      onClick: () => {
-      }
-    },
-    {},
-    {
-      default: () => {
-        return `_`;
-      }
-    }
-  )}
+        ${validate_component(ButtonSeperator, "ButtonSeperator").$$render($$result, {}, {}, {})}
         ${validate_component(Button, "Button").$$render(
     $$result,
     {
       openInNew: true,
-      borderClass: "border-t-0",
       onClick: () => window.location.href = "https://www.instagram.com/taavirubenhagen/"
     },
     {},

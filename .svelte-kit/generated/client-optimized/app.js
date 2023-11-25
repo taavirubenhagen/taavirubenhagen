@@ -23,38 +23,30 @@ export const nodes = [
 	() => import('./nodes/19'),
 	() => import('./nodes/20'),
 	() => import('./nodes/21'),
-	() => import('./nodes/22'),
-	() => import('./nodes/23'),
-	() => import('./nodes/24'),
-	() => import('./nodes/25'),
-	() => import('./nodes/26'),
-	() => import('./nodes/27')
+	() => import('./nodes/22')
 ];
 
 export const server_loads = [0];
 
 export const dictionary = {
-		"/": [7],
-		"/home": [8],
-		"/main/contact": [9,[2]],
-		"/main/home-dev": [11,[2]],
-		"/main/home": [10,[2]],
-		"/main/newsletter": [12,[2]],
-		"/main/presenter/download-legacy": [14,[2]],
-		"/main/presenter/download": [13,[2]],
-		"/main/presenter/privacy-policy": [15,[2]],
-		"/main/presenter/support-url": [16,[2]],
-		"/main/presenter/waitlist": [17,[2]],
-		"/main/privacy-policy": [18,[2]],
-		"/main/projects": [19,[2]],
-		"/me/blog": [20,[3,4]],
-		"/me/contact": [~21,[3]],
-		"/me/home": [22,[3]],
-		"/personal/home": [23,[5]],
-		"/products": [24,[6]],
-		"/terminal": [~25],
-		"/terminal/[route]": [26],
-		"/tts": [27]
+		"/": [5],
+		"/home": [6],
+		"/main/contact": [7,[2]],
+		"/main/home-dev": [9,[2]],
+		"/main/home": [8,[2]],
+		"/main/newsletter": [10,[2]],
+		"/main/presenter/download-legacy": [12,[2]],
+		"/main/presenter/download": [11,[2]],
+		"/main/presenter/privacy-policy": [13,[2]],
+		"/main/presenter/support-url": [14,[2]],
+		"/main/presenter/waitlist": [15,[2]],
+		"/main/privacy-policy": [16,[2]],
+		"/main/projects": [17,[2]],
+		"/personal/home": [18,[3]],
+		"/products": [19,[4]],
+		"/terminal": [~20],
+		"/terminal/[route]": [21],
+		"/tts": [22]
 	};
 
 export const hooks = {

@@ -42,20 +42,6 @@
 	"/main/projects": [
 		"src/routes/+layout.server.ts"
 	],
-	"/me": [
-		"src/routes/+layout.server.ts"
-	],
-	"/me/blog": [
-		"src/routes/+layout.server.ts",
-		"src/routes/+layout.server.ts"
-	],
-	"/me/contact": [
-		"src/routes/me/contact/+page.server.ts",
-		"src/routes/+layout.server.ts"
-	],
-	"/me/home": [
-		"src/routes/+layout.server.ts"
-	],
 	"/personal": [
 		"src/routes/+layout.server.ts"
 	],

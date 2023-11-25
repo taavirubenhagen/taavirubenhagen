@@ -7,7 +7,6 @@ const colors = require("tailwindcss/colors")
 
 
 const production = !process.env.ROLLUP_WATCH;
-let bright = false
 
 
 

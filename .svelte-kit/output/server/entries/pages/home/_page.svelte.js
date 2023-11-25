@@ -1,9 +1,40 @@
-import { c as create_ssr_component, v as validate_component, h as each, e as escape } from "../../../chunks/index3.js";
+import { c as create_ssr_component, v as validate_component, e as escape, h as each } from "../../../chunks/index3.js";
 import { D as DeviceDetector } from "../../../chunks/DeviceDetector.js";
 /* empty css                      */import { M as MediumParagraph } from "../../../chunks/MediumParagraph.js";
-import { L as LargeSubtitle, M as MediumSubtitle, a as MediumHeading, I as InlineParagraphButton, S as SmallHeading } from "../../../chunks/InlineParagraphButton.js";
 import { L as LargeHeading } from "../../../chunks/LargeHeading.js";
-import { B as Button } from "../../../chunks/Button4.js";
+import { I as Icon } from "../../../chunks/RawButton.js";
+import { B as Button } from "../../../chunks/Button3.js";
+import { B as Button$1 } from "../../../chunks/Button4.js";
+const MediumSubtitle = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  return `<t class="block text-2xl md:text-3xl text-neutral-500 font-bold tracking-widest">${slots.default ? slots.default({}) : ``}</t>`;
+});
+const LargeSubtitle = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  return `<t class="block text-2xl md:text-3xl text-neutral-500 font-bold tracking-widest">${slots.default ? slots.default({}) : ``}</t>`;
+});
+const SmallHeading = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  return `<t class="text-3xl md:text-5xl font-bold">${slots.default ? slots.default({}) : ``}</t>`;
+});
+const MediumHeading = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  return `<t class="text-4xl md:text-6xl font-bold">${slots.default ? slots.default({}) : ``}</t>`;
+});
+const InlineParagraphButton = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let { content = "" } = $$props;
+  if ($$props.content === void 0 && $$bindings.content && content !== void 0)
+    $$bindings.content(content);
+  return `${validate_component(Button, "Button").$$render($$result, { onClick: () => console.log("TODO") }, {}, {
+    default: () => {
+      return `${escape(content)}${validate_component(Icon, "Icon").$$render(
+        $$result,
+        {
+          name: "nav-arrow-down",
+          textClass: "relative left-1 top-1"
+        },
+        {},
+        {}
+      )}`;
+    }
+  })}`;
+});
 function genTableIcon(name, isOnPrimary = false) {
   const startString = '<i class="relative top-1 text-2xl ';
   switch (name) {
@@ -75,7 +106,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     }
   })}
             <div class="h-8"></div>
-            ${validate_component(Button, "Button").$$render(
+            ${validate_component(Button$1, "Button").$$render(
     $$result,
     {
       openInNew: true,
@@ -89,7 +120,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       }
     }
   )}
-            ${validate_component(Button, "Button").$$render(
+            ${validate_component(Button$1, "Button").$$render(
     $$result,
     {
       openInNew: true,
@@ -187,7 +218,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     }
   })}
         <div class="h-16"></div>
-        ${validate_component(Button, "Button").$$render(
+        ${validate_component(Button$1, "Button").$$render(
     $$result,
     {
       onClick: () => window.location.href = "mailto:taavi.ruebenhagen@gmail.com"

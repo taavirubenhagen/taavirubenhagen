@@ -1,7 +1,7 @@
 
 
 export const index = 12;
-export const component = async () => (await import('../entries/pages/main/newsletter/_page.svelte.js')).default;
-export const imports = ["_app/immutable/nodes/12.7f1c701a.js","_app/immutable/chunks/index.d7191f4d.js","_app/immutable/chunks/index.7265af3d.js","_app/immutable/chunks/_commonjsHelpers.725317a4.js","_app/immutable/chunks/preload-helper.41c905a7.js","_app/immutable/chunks/ua-parser.44220aa4.js","_app/immutable/chunks/Icon.91c02ae7.js","_app/immutable/chunks/H2.bdb00c29.js","_app/immutable/chunks/P1.cee0221f.js","_app/immutable/chunks/B.4dfdd7cb.js"];
-export const stylesheets = ["_app/immutable/assets/global.df9f4d03.css"];
+export const component = async () => (await import('../entries/pages/main/presenter/download-legacy/_page.svelte.js')).default;
+export const imports = ["_app/immutable/nodes/12.722ac37f.js","_app/immutable/chunks/index.e6c62ba9.js","_app/immutable/chunks/Icon.4d8626ec.js","_app/immutable/chunks/H2.cf202520.js","_app/immutable/chunks/P3.417f16aa.js","_app/immutable/chunks/B.3d09dcaf.js","_app/immutable/chunks/Button.96fe284d.js","_app/immutable/chunks/state.a52b6b88.js","_app/immutable/chunks/index.13562b6e.js"];
+export const stylesheets = ["_app/immutable/assets/global.fc7e8383.css"];
 export const fonts = [];

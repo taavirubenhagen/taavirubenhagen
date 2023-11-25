@@ -1,6 +1,5 @@
 <script lang="ts">
     import '$style';
-
     import {
         MediumParagraph,
         Icon,
@@ -18,7 +17,7 @@
 <RawButton onClick={onClick}>
     <div class="{inverted ? 'invert' : ''} border-2 {borderClass} border-onBackground">
         <MediumParagraph>
-            <div class="transition duration-200 hover:invert bg-background px-4 py-2 flex {openInNew ? 'justify-between' : 'justify-center'} items-center gap-2">
+            <div class="transition duration-200 ease-in hover:invert bg-background px-4 py-2 flex {openInNew ? 'justify-between' : 'justify-center'} items-center gap-2">
                 <slot/>
                 {#if openInNew}
                     <Icon name="open-new-window" textClass="relative"/>
