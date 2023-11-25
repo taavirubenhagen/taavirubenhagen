@@ -78,7 +78,7 @@
                 </Button></a>
                 <div class="pt-8 md:p-0 text-neutral-500">
                     <div>Pothof 9d</div>
-                    <div>38122 Braunschweig</div>
+                    <div>38122 Braunschweig, Germany</div>
                 </div>
             </div>
             <div class="h-full pt-16 md:p-0 flex flex-col justify-end md:justify-between md:items-end">

@@ -1,7 +1,0 @@
-import{S as C,i as q,s as H,e as s,q as K,r as k,l as i,a as l,b as L,v as S,w,m,d as v,f as A,g as y,y as E,n as r,t as I,k as M,B as N}from"../chunks/index.22bfdd9c.js";/* empty css                       */import{H as P}from"../chunks/H2.b37effb9.js";function j(p){let e;return{c(){e=i("Contact")},l(a){e=m(a,"Contact")},m(a,o){y(a,e,o)},d(a){a&&v(e)}}}function z(p){let e,a,o,u,b,f,h,_,$,g,d,R,B,c;return a=new P({props:{$$slots:{default:[j]},$$scope:{ctx:p}}}),{c(){e=s("main"),K(a.$$.fragment),o=s("br"),u=k(),b=s("br"),f=k(),h=s("br"),_=i(`\r
-    René Rübenhagen`),$=s("br"),g=i(`\r
-    Kastanienallee 22, 23562 Lübeck`),d=s("br"),R=i(`\r
-    taavi.ruebenhagen@gmail.com`),B=s("br"),this.h()},l(n){e=l(n,"MAIN",{class:!0});var t=L(e);S(a.$$.fragment,t),o=l(t,"BR",{}),u=w(t),b=l(t,"BR",{}),f=w(t),h=l(t,"BR",{}),_=m(t,`\r
-    René Rübenhagen`),$=l(t,"BR",{}),g=m(t,`\r
-    Kastanienallee 22, 23562 Lübeck`),d=l(t,"BR",{}),R=m(t,`\r
-    taavi.ruebenhagen@gmail.com`),B=l(t,"BR",{}),t.forEach(v),this.h()},h(){A(e,"class","w-screen min-h-screen p-8 pt-16")},m(n,t){y(n,e,t),E(a,e,null),r(e,o),r(e,u),r(e,b),r(e,f),r(e,h),r(e,_),r(e,$),r(e,g),r(e,d),r(e,R),r(e,B),c=!0},p(n,[t]){const x={};t&1&&(x.$$scope={dirty:t,ctx:n}),a.$set(x)},i(n){c||(I(a.$$.fragment,n),c=!0)},o(n){M(a.$$.fragment,n),c=!1},d(n){n&&v(e),N(a)}}}class J extends C{constructor(e){super(),q(this,e,null,z,H,{})}}export{J as component};

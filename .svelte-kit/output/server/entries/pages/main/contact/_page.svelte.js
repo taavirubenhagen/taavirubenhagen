@@ -9,8 +9,8 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   })}<br>
     <br>
     <br>
-    Ren\xE9 R\xFCbenhagen<br>
-    Kastanienallee 22, 23562 L\xFCbeck<br>
+    Taavi R\xFCbenhagen<br>
+    Pothof 9d, 38122 Braunschweig, Germany<br>
     taavi.ruebenhagen@gmail.com<br></main>`;
 });
 export {

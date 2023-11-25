@@ -32,7 +32,6 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let showFooter;
   let $page, $$unsubscribe_page;
   $$unsubscribe_page = subscribe(page, (value) => $page = value);
-  let windowHeight;
   let cursor;
   let localCursorButtonHover;
   cursorButtonHover.subscribe((value) => {
@@ -43,7 +42,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `
 
 
-<main class="overflow-x-hidden cursor-none" style="${"height: " + escape(windowHeight, true) + ";"}">
+<main class="overflow-x-hidden cursor-none">
     ${validate_component(DeviceDetector, "DeviceDetector").$$render($$result, { showInDevice: "desktop" }, {}, {
     default: () => {
       return `<div class="${escape(
@@ -76,8 +75,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     }
   )}</a>
                 <div class="pt-8 md:p-0 text-neutral-500">Pothof 9d<br>
-                    38122 Braunschweig<br>
-                    Germany<br></div></div>
+                    38122 Braunschweig, Germany<br></div></div>
             <div class="h-full pt-16 md:p-0 flex flex-col justify-end md:justify-between md:items-end">${validate_component(RawButton, "RawButton").$$render(
     $$result,
     {

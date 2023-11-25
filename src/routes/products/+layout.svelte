@@ -43,7 +43,6 @@
         globalScrollY.set(event?.currentTarget?.scrollTop);
     }}
     class="overflow-x-hidden cursor-none"
-    style='height: {windowHeight};'
 >
     <!-- TODO: Add standard scrollbar effects -->
     <DeviceDetector showInDevice="desktop">
@@ -67,8 +66,7 @@
                 </Button></a>
                 <div class="pt-8 md:p-0 text-neutral-500">
                     Pothof 9d<br/>
-                    38122 Braunschweig<br/>
-                    Germany<br/>
+                    38122 Braunschweig, Germany<br/>
                 </div>
             </div>
             <div class="h-full pt-16 md:p-0 flex flex-col justify-end md:justify-between md:items-end">

@@ -11,7 +11,7 @@
     <H2>Contact</H2><br/>
     <br/>
     <br/>
-    René Rübenhagen<br/>
-    Kastanienallee 22, 23562 Lübeck<br/>
+    Taavi Rübenhagen<br/>
+    Pothof 9d, 38122 Braunschweig, Germany<br/>
     taavi.ruebenhagen@gmail.com<br/>
 </main>

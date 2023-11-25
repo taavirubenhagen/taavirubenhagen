@@ -75,7 +75,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     }
   )}</a>
                 <div class="pt-8 md:p-0 text-neutral-500"><div>Pothof 9d</div>
-                    <div>38122 Braunschweig</div></div></div>
+                    <div>38122 Braunschweig, Germany</div></div></div>
             <div class="h-full pt-16 md:p-0 flex flex-col justify-end md:justify-between md:items-end"><a href="/main/contact" class="h-8 md:h-auto">${validate_component(P3, "P3").$$render($$result, {}, {}, {
     default: () => {
       return `${validate_component(B, "B").$$render($$result, { onPrimary: true, simple: true }, {}, {
