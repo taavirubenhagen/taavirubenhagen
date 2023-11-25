@@ -30,7 +30,7 @@
                 Links Be
             </Button>
         </div>
-        <div class='absolute bottom-8 px-32 text-center'>
+        <div class='absolute bottom-8 px-8 text-center'>
             <SmallParagraph>
                 As an Amazon Associate I [will] earn from qualifying purchases.
             </SmallParagraph>

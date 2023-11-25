@@ -1,7 +1,7 @@
 import { c as create_ssr_component, v as validate_component } from "../../chunks/index3.js";
 /* empty css                   */import { B as Button } from "../../chunks/Button4.js";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<main class="h-screen center_col"><div class="flex flex-col justify-center items-stretch">${validate_component(Button, "Button").$$render(
+  return `<main class="h-screen p-8 center_col"><div class="flex flex-col justify-center items-stretch">${validate_component(Button, "Button").$$render(
     $$result,
     {
       openInNew: true,
@@ -38,7 +38,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {},
     {
       default: () => {
-        return `Presentation Master 2 - Android
+        return `Presenter (Android)
         `;
       }
     }
@@ -53,7 +53,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {},
     {
       default: () => {
-        return `Presentation Master 2 - iOS`;
+        return `Presenter (iOS)`;
       }
     }
   )}
@@ -67,7 +67,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {},
     {
       default: () => {
-        return `HvF-Homepage - The Presentation Master
+        return `Presenter - Info
         `;
       }
     }
@@ -96,7 +96,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {},
     {
       default: () => {
-        return `Instagram: @taavirubenhagen
+        return `@taavirubenhagen
         `;
       }
     }

@@ -54,7 +54,7 @@ ${validate_component(MediumParagraph, "MediumParagraph").$$render($$result, {}, 
           }
         }
       )}</div>
-        <div class="absolute bottom-8 px-32 text-center">${validate_component(SmallParagraph, "SmallParagraph").$$render($$result, {}, {}, {
+        <div class="absolute bottom-8 px-8 text-center">${validate_component(SmallParagraph, "SmallParagraph").$$render($$result, {}, {}, {
         default: () => {
           return `As an Amazon Associate I [will] earn from qualifying purchases.
             `;
