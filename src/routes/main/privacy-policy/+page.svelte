@@ -19,7 +19,7 @@
     <br/>
     If you have any questions about this privacy policy, the data we hold on you, or you would like to exercise one of your data protection rights, please do not hesitate to contact us.<br/>
     <br/>
-    Email us at: tavyai.apps@gmail.com.<br/>
+    Email us at: taavi.ruebenhagen@gmail.com.<br/>
     <br/>
     <br/>
 </main>

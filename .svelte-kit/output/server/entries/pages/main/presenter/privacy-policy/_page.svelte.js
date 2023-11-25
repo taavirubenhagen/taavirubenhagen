@@ -81,7 +81,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     <br>
     The right to data portability - You have the right to transfer the data that the apps have collected to another organization, or directly to you, under certain conditions.<br>
     <br>
-    If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us at our email: tavyai.apps@gmail.com .<br>
+    If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us at our email: taavi.ruebenhagen@gmail.com .<br>
     <br>
     <br>
     <br>
@@ -116,7 +116,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     <br>
     If you have any questions about this privacy policy, the data we hold on you, or you would like to exercise one of your data protection rights, please do not hesitate to contact us.<br>
     <br>
-    Email us at: tavyai.apps@gmail.com.<br>
+    Email us at: taavi.ruebenhagen@gmail.com.<br>
     <br>
     <br>
     <br>

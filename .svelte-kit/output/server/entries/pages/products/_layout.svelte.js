@@ -29,18 +29,14 @@ const Button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   })}`;
 });
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let scrollPercentage;
   let showFooter;
   let $page, $$unsubscribe_page;
   $$unsubscribe_page = subscribe(page, (value) => $page = value);
-  let windowHeight;
-  let scrollY = 0;
   let cursor;
   let localCursorButtonHover;
   cursorButtonHover.subscribe((value) => {
     localCursorButtonHover = value;
   });
-  scrollPercentage = scrollY / windowHeight * 100;
   showFooter = $page.route.id?.includes("home-dev") ? false : true;
   $$unsubscribe_page();
   return `
@@ -58,23 +54,9 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       ) + " bo-shadow: 0 0 32px white, 0 0 32px white, 0 0 32px white, 0 0 32px white;"}"${add_attribute("this", cursor, 0)}></div>`;
     }
   })}
-    
-    <div class="group z-40 fixed w-full h-8"><div class="transition duration-200 h-0.5 group-hover:h-4 group-focus:h-4 primary" style="${"width: " + escape(scrollPercentage, true) + "%; transition-property: height;"}"></div></div>
-    <div class="absolute z-35 w-full h-8 opacity-0 primary px-8 center_row">${validate_component(DeviceDetector, "DeviceDetector").$$render($$result, { showInDevice: "mobile" }, {}, {
-    default: () => {
-      return `Best experienced on desktop.
-        `;
-    }
-  })}
-        ${validate_component(DeviceDetector, "DeviceDetector").$$render($$result, { showInDevice: "desktop" }, {}, {
-    default: () => {
-      return `Still under development.
-        `;
-    }
-  })}</div>
     ${slots.default ? slots.default({}) : ``}
     
-    ${showFooter ? `<div class="w-full h-[65vh] sm:h-[50vh] primary p-16 lg:p-32 flex flex-col lg:flex-row justify-between lg:items-center"><div class="h-full flex flex-col md:justify-between break-all">
+    ${showFooter ? `<div class="w-full h-[65vh] sm:h-[50vh] primary p-16 lg:p-32 flex flex-col lg:flex-row justify-between lg:items-center text-left"><div class="h-full flex flex-col md:justify-between break-all">
                 <a href="mailto:taavi.ruebenhagen@gmail.com">${validate_component(Button, "Button").$$render(
     $$result,
     {
@@ -95,16 +77,38 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
                 <div class="pt-8 md:p-0 text-neutral-500">Pothof 9d<br>
                     38122 Braunschweig<br>
                     Germany<br></div></div>
-            <div class="h-full pt-16 md:p-0 flex flex-col justify-end md:justify-between md:items-end"><a href="/main/contact" class="h-8 md:h-auto">${validate_component(MediumParagraph, "MediumParagraph").$$render($$result, {}, {}, {
-    default: () => {
-      return `Contact`;
+            <div class="h-full pt-16 md:p-0 flex flex-col justify-end md:justify-between md:items-end">${validate_component(RawButton, "RawButton").$$render(
+    $$result,
+    {
+      onClick: () => window.location.href = "/main/contact"
+    },
+    {},
+    {
+      default: () => {
+        return `${validate_component(MediumParagraph, "MediumParagraph").$$render($$result, {}, {}, {
+          default: () => {
+            return `Contact`;
+          }
+        })}`;
+      }
     }
-  })}</a>
-                <a href="/main/privacy-policy" class="h-8 md:h-auto">${validate_component(MediumParagraph, "MediumParagraph").$$render($$result, {}, {}, {
-    default: () => {
-      return `Privacy Policy`;
+  )}
+                ${validate_component(RawButton, "RawButton").$$render(
+    $$result,
+    {
+      onClick: () => window.location.href = "/main/privacy-policy"
+    },
+    {},
+    {
+      default: () => {
+        return `${validate_component(MediumParagraph, "MediumParagraph").$$render($$result, {}, {}, {
+          default: () => {
+            return `Privacy Policy`;
+          }
+        })}`;
+      }
     }
-  })}</a></div></div>` : ``}</main>`;
+  )}</div></div>` : ``}</main>`;
 });
 export {
   Layout as default

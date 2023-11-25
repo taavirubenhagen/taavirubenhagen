@@ -45,7 +45,7 @@ ${validate_component(MediumParagraph, "MediumParagraph").$$render($$result, {}, 
         {},
         {
           default: () => {
-            return `Stone Key Holder
+            return `Here Will The
             `;
           }
         }
@@ -60,7 +60,7 @@ ${validate_component(MediumParagraph, "MediumParagraph").$$render($$result, {}, 
         {},
         {
           default: () => {
-            return `Inkless Printer
+            return `Amazon Affiliate
             `;
           }
         }
@@ -75,29 +75,14 @@ ${validate_component(MediumParagraph, "MediumParagraph").$$render($$result, {}, 
         {},
         {
           default: () => {
-            return `Bottle Holder
-            `;
-          }
-        }
-      )}
-            ${validate_component(Button, "Button").$$render(
-        $$result,
-        {
-          openInNew: true,
-          onClick: () => window.location.href = "/products/home",
-          borderClass: "border-t-0"
-        },
-        {},
-        {
-          default: () => {
-            return `Humping Dog Charger
+            return `Links Be
             `;
           }
         }
       )}</div>
-        <div class="absolute bottom-8">${validate_component(SmallParagraph, "SmallParagraph").$$render($$result, {}, {}, {
+        <div class="absolute bottom-8 px-32 text-center">${validate_component(SmallParagraph, "SmallParagraph").$$render($$result, {}, {}, {
         default: () => {
-          return `As an Amazon Associate I earn from qualifying purchases.
+          return `As an Amazon Associate I [will] earn from qualifying purchases.
             `;
         }
       })}</div></main>`;

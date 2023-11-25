@@ -13,5 +13,5 @@
     <br/>
     René Rübenhagen<br/>
     Kastanienallee 22, 23562 Lübeck<br/>
-    tavyai.apps@gmail.com<br/>
+    taavi.ruebenhagen@gmail.com<br/>
 </main>

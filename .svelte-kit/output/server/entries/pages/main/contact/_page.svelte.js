@@ -11,7 +11,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     <br>
     Ren\xE9 R\xFCbenhagen<br>
     Kastanienallee 22, 23562 L\xFCbeck<br>
-    tavyai.apps@gmail.com<br></main>`;
+    taavi.ruebenhagen@gmail.com<br></main>`;
 });
 export {
   Page as default
