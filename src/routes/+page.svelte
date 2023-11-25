@@ -30,5 +30,7 @@
         <Button openInNew onClick={() => window.location.href = 'https://www.instagram.com/taavirubenhagen/'}>
             @taavirubenhagen
         </Button>
+        <ButtonSeperator/>
+        <Button openInNew onClick={() => window.location.href = '/contact'}>Contact</Button>
     </div>
 </main>
