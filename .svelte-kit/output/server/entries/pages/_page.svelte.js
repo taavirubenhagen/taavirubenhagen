@@ -1,25 +1,11 @@
 import { c as create_ssr_component, v as validate_component } from "../../chunks/index3.js";
 /* empty css                   */import { B as Button } from "../../chunks/Button4.js";
-const ButtonSeperator = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<div class="opacity-0 pointer-events-none">${validate_component(Button, "Button").$$render(
-    $$result,
-    {
-      onClick: () => {
-      }
-    },
-    {},
-    {
-      default: () => {
-        return `_`;
-      }
-    }
-  )}</div>`;
-});
+import { B as ButtonSeperator } from "../../chunks/ButtonSeperator.js";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<main class="min-h-screen p-8 center_col"><div class="flex flex-col justify-center items-stretch">${validate_component(Button, "Button").$$render(
     $$result,
     {
-      openInNew: true,
+      next: true,
       onClick: () => window.location.href = "/terminal"
     },
     {},
@@ -32,7 +18,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         ${validate_component(Button, "Button").$$render(
     $$result,
     {
-      openInNew: true,
+      next: true,
       borderClass: "border-t-0",
       onClick: () => alert("Coming soon!")
     },
@@ -46,7 +32,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         ${validate_component(Button, "Button").$$render(
     $$result,
     {
-      openInNew: true,
+      next: true,
       borderClass: "border-t-0",
       onClick: () => window.location.href = "/products"
     },
@@ -113,6 +99,34 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       default: () => {
         return `@taavirubenhagen
         `;
+      }
+    }
+  )}
+        ${validate_component(Button, "Button").$$render(
+    $$result,
+    {
+      next: true,
+      borderClass: "border-t-0",
+      onClick: () => window.location.href = "/main/contact"
+    },
+    {},
+    {
+      default: () => {
+        return `Contact`;
+      }
+    }
+  )}
+        ${validate_component(ButtonSeperator, "ButtonSeperator").$$render($$result, {}, {}, {})}
+        ${validate_component(Button, "Button").$$render(
+    $$result,
+    {
+      next: true,
+      onClick: () => window.location.href = "/main/privacy-policy"
+    },
+    {},
+    {
+      default: () => {
+        return `Privacy Policy`;
       }
     }
   )}</div></main>`;

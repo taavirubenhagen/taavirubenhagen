@@ -15,9 +15,9 @@
 
 <main class='min-h-screen p-8 center_col'>
     <div class='flex flex-col justify-center items-stretch'>
-        <Button openInNew onClick={() => window.location.href = '/terminal'}>Text-Based Website</Button>
-        <Button openInNew borderClass='border-t-0' onClick={() => alert('Coming soon!')}>Projects</Button>
-        <Button openInNew borderClass='border-t-0' onClick={() => window.location.href = '/products'}>Affiliate Shop</Button>
+        <Button next onClick={() => window.location.href = '/terminal'}>Text-Based Website</Button>
+        <Button next borderClass='border-t-0' onClick={() => alert('Coming soon!')}>Projects</Button>
+        <Button next borderClass='border-t-0' onClick={() => window.location.href = '/products'}>Affiliate Shop</Button>
         <ButtonSeperator/>
         <Button openInNew onClick={() => window.location.href = 'https://play.google.com/store/apps/details?id=tavy.presenter.presentation_master_2'}>
             Presenter (Android)
@@ -30,7 +30,8 @@
         <Button openInNew onClick={() => window.location.href = 'https://www.instagram.com/taavirubenhagen/'}>
             @taavirubenhagen
         </Button>
+        <Button next borderClass='border-t-0' onClick={() => window.location.href = '/main/contact'}>Contact</Button>
         <ButtonSeperator/>
-        <Button openInNew onClick={() => window.location.href = '/contact'}>Contact</Button>
+        <Button next onClick={() => window.location.href = '/main/privacy-policy'}>Privacy Policy</Button>
     </div>
 </main>

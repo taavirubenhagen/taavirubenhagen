@@ -1,12 +1,10 @@
 <script lang="ts">
-    import DeviceDetector from "svelte-device-detector";
     import "$style";
     import {
-        SmallParagraph,
-        MediumParagraph,
+        SmallParagraph, MediumParagraph,
     } from '$tavy';
     import {
-        Button,
+        Button, ButtonSeperator,
     } from '$tavy/industrial/';
 
     let windowWidth: number;
@@ -29,6 +27,9 @@
             <Button openInNew onClick={() => window.location.href = "/products/home"} borderClass='border-t-0'>
                 Links Be
             </Button>
+            <ButtonSeperator/>
+            <Button onClick={() => window.location.href = '/main/privacy-policy'}>Privacy Policy</Button>
+            <Button borderClass='border-t-0' onClick={() => window.location.href = '/main/contact'}>Contact</Button>
         </div>
         <div class='absolute bottom-8 px-8 text-center'>
             <SmallParagraph>
