@@ -26,7 +26,7 @@ const LegalFooter = create_ssr_component(($$result, $$props, $$bindings, slots) 
     ${validate_component(Button, "Button").$$render(
     $$result,
     {
-      borderClass: "border-l-0",
+      borderClass: "border-l-0 border-b-0",
       onClick: () => window.location.href = ppLink
     },
     {},

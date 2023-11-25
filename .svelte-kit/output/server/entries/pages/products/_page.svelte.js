@@ -1,7 +1,6 @@
 import { c as create_ssr_component, v as validate_component, e as escape } from "../../../chunks/index3.js";
 /* empty css                      */import { S as SmallParagraph } from "../../../chunks/SmallParagraph.js";
 import { M as MediumParagraph, B as Button } from "../../../chunks/Button.js";
-import { B as ButtonSeperator } from "../../../chunks/ButtonSeperator.js";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let windowHeight;
   return `
@@ -50,32 +49,6 @@ ${validate_component(MediumParagraph, "MediumParagraph").$$render($$result, {}, 
           default: () => {
             return `Links Be
             `;
-          }
-        }
-      )}
-            ${validate_component(ButtonSeperator, "ButtonSeperator").$$render($$result, {}, {}, {})}
-            ${validate_component(Button, "Button").$$render(
-        $$result,
-        {
-          onClick: () => window.location.href = "/main/privacy-policy"
-        },
-        {},
-        {
-          default: () => {
-            return `Privacy Policy`;
-          }
-        }
-      )}
-            ${validate_component(Button, "Button").$$render(
-        $$result,
-        {
-          borderClass: "border-t-0",
-          onClick: () => window.location.href = "/main/contact"
-        },
-        {},
-        {
-          default: () => {
-            return `Contact`;
           }
         }
       )}</div>
