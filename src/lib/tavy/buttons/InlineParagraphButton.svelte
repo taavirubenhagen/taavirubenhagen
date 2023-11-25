@@ -7,5 +7,5 @@
 </script>
 
 <RawButton onClick={() => console.log('TODO')}>
-    {content}<Icon name="nav-arrow-down" textClass="relative left-1 top-2"/>
+    {content}<Icon name="nav-arrow-down" textClass="ml-1"/>
 </RawButton>

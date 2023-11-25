@@ -56,28 +56,6 @@
 
 <main>
     <section class="relative w-screen h-screen">
-        <div class="absolute top-16 w-screen px-8 flex justify-between">
-            <MediumParagraph>
-                <div class="transition-all duration-400 flex">
-                    <div
-                        class=
-                            "transition-all duration-400
-                            pointer-events-none
-                            rounded-lg shadow-none hover:shadow focus-within:shadow
-                            w-32 focus-within:w-full px-4 py-2
-                            flex items-center text-neutral-500"
-                    >
-                        <Icon name="search" textClass="pointer-events-auto text-2xl"/>
-                        <input
-                            type="text"
-                            size=8
-                            placeholder="Search"
-                            class="pointer-events-auto outline-none bg-transparent pl-2 text-onBackground placeholder:text-neutral-500"
-                        />
-                    </div>
-                </div>
-            </MediumParagraph>
-        </div>
         <div class="w-screen h-screen p-4 md:p-16 center_col text-center">
             <LargeHeading>Hi, I'm Taavi<br />Rübenhagen.</LargeHeading>
             <div class="h-8"/>
@@ -214,8 +192,5 @@
         <a href="mailto:taavi.ruebenhagen@gmail.com" class="center_row">
             <TextButton primary>E-Mail me</TextButton>
         </a>
-    </section>
-    <section class="w-screen h-screen background center_col">
-        <t class="mt-8 text-9xl text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-red-700">lol xD.</t>
     </section>
 </main>
