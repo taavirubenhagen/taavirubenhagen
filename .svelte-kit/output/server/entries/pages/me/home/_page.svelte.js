@@ -1,38 +1,9 @@
-import { c as create_ssr_component, v as validate_component, e as escape, h as each } from "../../../../chunks/index3.js";
+import { c as create_ssr_component, v as validate_component, h as each, e as escape } from "../../../../chunks/index3.js";
 import { D as DeviceDetector } from "../../../../chunks/DeviceDetector.js";
-/* empty css                         */import { R as RawButton, I as Icon, M as MediumParagraph } from "../../../../chunks/RawButton.js";
+/* empty css                         */import { M as MediumParagraph } from "../../../../chunks/RawButton.js";
+import { L as LargeSubtitle, M as MediumSubtitle, a as MediumHeading, I as InlineParagraphButton, S as SmallHeading } from "../../../../chunks/InlineParagraphButton.js";
 import { L as LargeHeading } from "../../../../chunks/LargeHeading.js";
 import { T as Text_button } from "../../../../chunks/text_button.js";
-const MediumSubtitle = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<t class="block text-2xl md:text-3xl text-neutral-500 font-bold tracking-widest">${slots.default ? slots.default({}) : ``}</t>`;
-});
-const LargeSubtitle = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<t class="block text-2xl md:text-3xl text-neutral-500 font-bold tracking-widest">${slots.default ? slots.default({}) : ``}</t>`;
-});
-const SmallHeading = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<t class="text-3xl md:text-4xl font-bold">${slots.default ? slots.default({}) : ``}</t>`;
-});
-const MediumHeading = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<t class="text-4xl md:text-6xl font-bold">${slots.default ? slots.default({}) : ``}</t>`;
-});
-const InlineParagraphButton = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let { content = "" } = $$props;
-  if ($$props.content === void 0 && $$bindings.content && content !== void 0)
-    $$bindings.content(content);
-  return `${validate_component(RawButton, "RawButton").$$render($$result, { onClick: () => console.log("TODO") }, {}, {
-    default: () => {
-      return `${escape(content)}${validate_component(Icon, "Icon").$$render(
-        $$result,
-        {
-          name: "nav-arrow-down",
-          textClass: "relative left-1 top-2"
-        },
-        {},
-        {}
-      )}`;
-    }
-  })}`;
-});
 function genTableIcon(name, isOnPrimary = false) {
   const startString = '<i class="relative top-1 text-2xl ';
   switch (name) {
@@ -104,13 +75,20 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     }
   })}
             <div class="h-8"></div>
-            <a href="/presenter/waitlist">
-                ${validate_component(Text_button, "TextButton").$$render($$result, { primary: true, buttonClass: "w-full" }, {}, {
-    default: () => {
-      return `Join waitlist`;
+            ${validate_component(Text_button, "TextButton").$$render(
+    $$result,
+    {
+      primary: true,
+      onClicked: () => alert("Coming soon!"),
+      buttonClass: "w-full"
+    },
+    {},
+    {
+      default: () => {
+        return `Download`;
+      }
     }
-  })}</a>
-            </div>
+  )}</div>
         <div class="relative md:left-24 w-full md:w-1/2 md:h-screen px-4 py-8 md:py-32 flex">${each(
     [
       "md:right-0 md:hover:scale-[100.5%]",
@@ -187,8 +165,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       })}
                 </div>`;
     }
-  )}</div>
-        </section>
+  )}</div></section>
     
     <section class="w-screen h-1/2 md:h-screen background p-8 md:p-16 center_col relative text-center">${validate_component(SmallHeading, "SmallHeading").$$render($$result, {}, {}, {
     default: () => {
@@ -200,8 +177,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     default: () => {
       return `E-Mail me`;
     }
-  })}</a></section>
-    <section class="w-screen h-screen background center_col"><t class="mt-8 text-9xl text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-red-700">lol xD.</t></section></main>`;
+  })}</a></section></main>`;
 });
 export {
   Page as default

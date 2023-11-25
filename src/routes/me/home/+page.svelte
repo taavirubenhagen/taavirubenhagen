@@ -87,19 +87,7 @@
                 , and lets you focus entirely on your presentation.
             </MediumParagraph>
             <div class="h-8"/>
-            <a href="/presenter/waitlist">
-                <!--TODO: Add open-in-new icon-->
-                <TextButton primary buttonClass="w-full">Join waitlist</TextButton>
-            </a>
-            <!--<div class="flex text-[32px]">
-                <div class="transition-all duration-200 opacity-100 hover:opacity-60 rounded-full border-2 border-onBackground w-12 h-12 center_row">
-                    <i class="iconoir-download"></i>
-                </div>
-                <div class="w-4"/>
-                <div class="transition-all duration-200 opacity-100 hover:opacity-60 rounded-full border-2 border-onBackground w-12 h-12 center_row">
-                    <i class="iconoir-download"></i>
-                </div>
-            </div>-->
+            <TextButton primary onClicked={() => alert('Coming soon!')} buttonClass="w-full">Download</TextButton>
         </div>
         <div class="relative md:left-24 w-full md:w-1/2 md:h-screen px-4 py-8 md:py-32 flex">
             {#each ["md:right-0 md:hover:scale-[100.5%]", "md:right-32 md:z-20 md:scale-110 md:hover:scale-[110.5%]", "md:right-64 md:hover:scale-[100.5%]"] as e, i}
@@ -155,15 +143,6 @@
                 </div>
             {/each}
         </div>
-        <!--<div class="flex text-[32px]">
-            <div class="transition-all duration-200 opacity-100 hover:opacity-60 rounded-full border-2 border-onBackground w-12 h-12 center_row">
-                <i class="iconoir-download"></i>
-            </div>
-            <div class="w-4"/>
-            <div class="transition-all duration-200 opacity-100 hover:opacity-60 rounded-full border-2 border-onBackground w-12 h-12 center_row">
-                <i class="iconoir-download"></i>
-            </div>
-        </div>-->
     </section>
     <!--<section class="w-screen h-screen p-8 md:p-16 center_col relative text-center">
         <!-.-<t3>Every aspect of any app on any platform.</t3>

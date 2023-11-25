@@ -1,32 +1,11 @@
-import { c as create_ssr_component, v as validate_component, d as subscribe, e as escape, f as add_attribute } from "../../../chunks/index3.js";
+import { c as create_ssr_component, d as subscribe, v as validate_component, e as escape, f as add_attribute } from "../../../chunks/index3.js";
 import { D as DeviceDetector } from "../../../chunks/DeviceDetector.js";
 import { p as page } from "../../../chunks/stores.js";
 /* empty css                      */import { c as cursorButtonHover } from "../../../chunks/state.js";
-import { R as RawButton, I as Icon, M as MediumParagraph } from "../../../chunks/RawButton.js";
+import { R as RawButton, M as MediumParagraph } from "../../../chunks/RawButton.js";
+import { B as Button } from "../../../chunks/Button3.js";
 const Large_paragraph = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<t class="text-2xl md:text-2xl">${slots.default ? slots.default({}) : ``}</t>`;
-});
-const Button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let { openInNew = false } = $$props;
-  let { onClick } = $$props;
-  if ($$props.openInNew === void 0 && $$bindings.openInNew && openInNew !== void 0)
-    $$bindings.openInNew(openInNew);
-  if ($$props.onClick === void 0 && $$bindings.onClick && onClick !== void 0)
-    $$bindings.onClick(onClick);
-  return `${validate_component(RawButton, "RawButton").$$render($$result, { onClick }, {}, {
-    default: () => {
-      return `<t class="underline underline-offset-8">${slots.default ? slots.default({}) : ``}
-        ${openInNew ? `${validate_component(Icon, "Icon").$$render(
-        $$result,
-        {
-          name: "open-new-window",
-          textClass: "relative top-2"
-        },
-        {},
-        {}
-      )}` : ``}</t>`;
-    }
-  })}`;
 });
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let showFooter;

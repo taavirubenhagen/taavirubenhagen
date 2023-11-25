@@ -1,11 +1,11 @@
 <script lang="ts">
     import "$style";
-
-    import { Icon, RawButton } from "$tavy";
+    import { Icon } from "$tavy";
+    import { Button } from "$tavy/minimal";
 
     export let content = "";
 </script>
 
-<RawButton onClick={() => console.log('TODO')}>
-    {content}<Icon name="nav-arrow-down" textClass="ml-1"/>
-</RawButton>
+<Button onClick={() => console.log('TODO')}>
+    {content}<Icon name="nav-arrow-down" textClass='relative left-1 top-1'/>
+</Button>

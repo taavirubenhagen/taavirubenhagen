@@ -36,7 +36,8 @@ export const nodes = [
 export const server_loads = [0];
 
 export const dictionary = {
-		"/": [9],
+		"/": [8],
+		"/home": [9],
 		"/main/contact": [10,[2]],
 		"/main/home-dev": [12,[2]],
 		"/main/home": [11,[2]],
@@ -50,10 +51,10 @@ export const dictionary = {
 		"/main/projects": [20,[2]],
 		"/me/blog": [21,[3,4]],
 		"/me/contact": [~22,[3]],
-		"/me/home": [23,[3,5]],
-		"/me/landing/social": [24,[3,6]],
-		"/personal/home": [25,[7]],
-		"/products": [26,[8]],
+		"/me/home": [23,[3]],
+		"/me/landing/social": [24,[3,5]],
+		"/personal/home": [25,[6]],
+		"/products": [26,[7]],
 		"/terminal": [~27],
 		"/terminal/[route]": [28],
 		"/tts": [29]

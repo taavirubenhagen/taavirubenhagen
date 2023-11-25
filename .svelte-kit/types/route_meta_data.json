@@ -3,6 +3,9 @@
 		"src/routes/+layout.server.ts",
 		"src/routes/+layout.server.ts"
 	],
+	"/home": [
+		"src/routes/+layout.server.ts"
+	],
 	"/main": [
 		"src/routes/+layout.server.ts"
 	],
@@ -51,7 +54,6 @@
 		"src/routes/+layout.server.ts"
 	],
 	"/me/home": [
-		"src/routes/+layout.server.ts",
 		"src/routes/+layout.server.ts"
 	],
 	"/me/landing/social": [

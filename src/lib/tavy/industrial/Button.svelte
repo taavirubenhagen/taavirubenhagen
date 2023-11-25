@@ -1,7 +1,11 @@
 <script lang="ts">
     import '$style';
 
-    import { Icon, RawButton } from '$tavy';
+    import {
+        MediumParagraph,
+        Icon,
+        RawButton,
+    } from '$tavy';
 
     export let inverted = false;
     /// Set the border width to 1 on a side you want to merge with another button
@@ -13,11 +17,13 @@
 
 <RawButton onClick={onClick}>
     <div class="{inverted ? 'invert' : ''} border-2 {borderClass} border-onBackground">
-        <div class="transition duration-200 hover:invert bg-background px-4 py-2 flex {openInNew ? 'justify-between' : 'justify-center'} items-center gap-2">
-            <slot/>
-            {#if openInNew}
-                <Icon name="open-new-window" textClass="relative"/>
-            {/if}
-        </div>
+        <MediumParagraph>
+            <div class="transition duration-200 hover:invert bg-background px-4 py-2 flex {openInNew ? 'justify-between' : 'justify-center'} items-center gap-2">
+                <slot/>
+                {#if openInNew}
+                    <Icon name="open-new-window" textClass="relative"/>
+                {/if}
+            </div>
+        </MediumParagraph>
     </div>
 </RawButton>

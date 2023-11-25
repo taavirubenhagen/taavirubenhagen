@@ -22,18 +22,14 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 
 
 
-<main class="max-w-screen min-h-screen background">
-    <div class="${"transition-all duration-400 fixed z-40 " + escape(scrollToTopButtonPositionClass, true) + " w-screen center_row"}"><button class="transition-all duration-200 hover:scale-[102%] shadow-md rounded-lg h-10 bg-background px-4">${validate_component(SmallParagraph, "SmallParagraph").$$render($$result, {}, {}, {
+<main class="max-w-screen min-h-screen background"><div class="${"transition-all duration-400 fixed z-40 " + escape(scrollToTopButtonPositionClass, true) + " w-screen center_row"}"><button class="transition-all duration-200 hover:scale-[102%] shadow-md rounded-lg h-10 bg-background px-4">${validate_component(SmallParagraph, "SmallParagraph").$$render($$result, {}, {}, {
     default: () => {
       return `Back to top`;
     }
   })}</button></div>
     ${slots.default ? slots.default({}) : `
         <s1>This page is still under development.</s1>
-    `}
-  
-  
-  </main>`;
+    `}</main>`;
 });
 export {
   Layout as default
