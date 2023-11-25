@@ -1,7 +1,7 @@
 import { c as create_ssr_component, o as onMount, v as validate_component } from "../../../../../chunks/index3.js";
 import { createClient } from "@supabase/supabase-js";
 import { P as PUBLIC_SUPABASE_URL, a as PUBLIC_SUPABASE_ANON_KEY } from "../../../../../chunks/public.js";
-/* empty css                            */import { M as Main_headline } from "../../../../../chunks/main_headline.js";
+/* empty css                            */import { L as LargeHeading } from "../../../../../chunks/LargeHeading.js";
 import { T as Text_button } from "../../../../../chunks/text_button.js";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let supabase;
@@ -21,7 +21,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     supabase = createClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY);
     signInOrUp();
   });
-  return `<main class="max-w-screen min-h-screen p-8 flex flex-col justify-center items-start md:items-center font-sans">${validate_component(Main_headline, "MainHeadline").$$render($$result, {}, {}, {
+  return `<main class="max-w-screen min-h-screen p-8 flex flex-col justify-center items-start md:items-center font-sans">${validate_component(LargeHeading, "LargeHeading").$$render($$result, {}, {}, {
     default: () => {
       return `Join Waitlist`;
     }

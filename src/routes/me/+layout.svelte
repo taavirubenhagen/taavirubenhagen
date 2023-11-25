@@ -6,12 +6,8 @@
 
     import '$style'
     import {
-        PrimaryButtonLabel,
-        SecondaryButtonLabel,
-        TertiaryButtonLabel,
+        SmallParagraph,
     } from '$tavy';
-    import TextButton from '$src/lib/util/buttons/text_button.svelte';
-  import Icon from '$src/lib/tavy/icons/icon.svelte';
 
 
     let windowHeight: number;
@@ -46,33 +42,18 @@
 
 <main class="max-w-screen min-h-screen background">
     <!--<div class="fixed z-50 w-screen h-8 center_row">
-        <SecondaryButtonLabel>
+        <SmallParagraph>
             <div class="transition-all duration-400 text-xl font-display">
                 Still under development
             </div>
-        </SecondaryButtonLabel>
+        </SmallParagraph>
     </div>-->
-    <div class="fixed top-0 z-30 pointer-events-none shadow bg-secondary w-screen h-16 md:px-[25%] pt-2 flex justify-around items-center">
-        {#each [
-            ["home", "/me/home"],
-            ["chat-bubble-empty", "/contact"],
-            ["arrow-separate", "/presenter"],
-            ["voice", "/tts"],
-            ["color-filter", "/design"],
-            ["github", "/me/home"],
-            ["instagram", "/me/home"],
-        ] as e}
-            <a class="transition-all duration-200 pointer-events-auto opacity-100 hover:opacity-75" href={e[1]}>
-                <Icon textClass="text-2xl" name={e[0]}/>
-            </a>
-        {/each}
-    </div>
     <div class="transition-all duration-400 fixed z-40 {scrollToTopButtonPositionClass} w-screen center_row">
         <button
             on:click={() => {}}
             class="transition-all duration-200 hover:scale-[102%] shadow-md rounded-lg h-10 bg-background px-4"
         >
-            <TertiaryButtonLabel>Back to top</TertiaryButtonLabel>
+            <SmallParagraph>Back to top</SmallParagraph>
         </button>
     </div>
     <slot>

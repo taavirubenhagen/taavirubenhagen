@@ -2,7 +2,7 @@ import { c as create_ssr_component, o as onMount, e as escape, v as validate_com
 import { P as PUBLIC_SUPABASE_URL, a as PUBLIC_SUPABASE_ANON_KEY } from "../../../../chunks/public.js";
 import "ua-parser-js";
 import { createClient } from "@supabase/supabase-js";
-/* empty css                         */import { I as Icon } from "../../../../chunks/Icon2.js";
+/* empty css                         */import { I as Icon } from "../../../../chunks/Icon.js";
 import { H as H2 } from "../../../../chunks/H2.js";
 import { P as P1 } from "../../../../chunks/P1.js";
 import { B } from "../../../../chunks/B.js";

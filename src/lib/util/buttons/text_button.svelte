@@ -1,12 +1,12 @@
 <script lang="ts">
-    import "$style"
-    import SecondaryButtonLabel from "$src/lib/tavy/text/button_text/secondary_button_label.svelte"
+    import "$style";
+    import { SmallParagraph } from "$tavy";
 
-    export let buttonClass: string = ""
-    export let onPrimary = false
-    export let primary = false
-    export let large = false
-    export let onClicked = () => {}
+    export let buttonClass: string = "";
+    export let onPrimary = false;
+    export let primary = false;
+    export let large = false;
+    export let onClicked = () => {};
 </script>
 
 
@@ -33,5 +33,5 @@
         }
         { large ? "px-16" : "px-8"}"
     >
-    <SecondaryButtonLabel><slot/></SecondaryButtonLabel>
+    <SmallParagraph><slot/></SmallParagraph>
 </button>

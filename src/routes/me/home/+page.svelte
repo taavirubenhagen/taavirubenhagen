@@ -1,19 +1,12 @@
 <script lang="ts">
-    import { onMount } from 'svelte';
-
     import DeviceDetector from 'svelte-device-detector';
 
     import '$style';
 
     import {
-        PrimaryButtonLabel, SecondaryButtonLabel, TertiaryButtonLabel,
-        SmallLabel,
-        MediumLabel,
-        SectionHeadline,
-        MainHeadline,
-        LargeSubtitle,
-        LargeParagraph,
-
+        MediumParagraph,
+        MediumSubtitle, LargeSubtitle,
+        SmallHeading, MediumHeading, LargeHeading,
         Icon,
         InlineParagraphButton,
     } from '$tavy';
@@ -26,7 +19,7 @@
         const startString = '<i class="relative top-1 text-2xl ';
         switch (name) {
             case "none":
-                return startString + 'text-red-600 iconoir-cancel"></i>';
+                return startString + 'text-red-600 iconoir-xmark"></i>';
             case "paid":
                 return startString + 'text-red-600 iconoir-apple-mac"></i>';
             case "free":
@@ -57,16 +50,14 @@
     function genTableIconArray(name: string): string[] {
         return new Array(10).fill(genTableIcon(name));
     }
-
-    //onMount(() => scroller.scrollTo({y: 2 * windowHeight}));
 </script>
 
 <svelte:window bind:innerHeight={windowHeight} />
 
 <main>
     <section class="relative w-screen h-screen">
-        <!--<div class="absolute top-16 w-screen px-8 flex justify-between">
-            <SmallLabel>
+        <div class="absolute top-16 w-screen px-8 flex justify-between">
+            <MediumParagraph>
                 <div class="transition-all duration-400 flex">
                     <div
                         class=
@@ -85,10 +76,10 @@
                         />
                     </div>
                 </div>
-            </SmallLabel>
-        </div>-->
+            </MediumParagraph>
+        </div>
         <div class="w-screen h-screen p-4 md:p-16 center_col text-center">
-            <MainHeadline>Hi, I'm Taavi<br />Rübenhagen.</MainHeadline>
+            <LargeHeading>Hi, I'm Taavi<br />Rübenhagen.</LargeHeading>
             <div class="h-8"/>
             <LargeSubtitle>
                 I'm a self-taught UI/UX Designer
@@ -100,22 +91,23 @@
     <section class="w-screen min-h-screen flex flex-col-reverse md:flex-row md:items-center">
         <div class="w-full md:w-1/2 min-h-screen md:min-h-0 p-8 md:p-16 flex flex-col text-justify md:text-left">
             <div class="text-left">
-                <LargeSubtitle>My largest project: </LargeSubtitle>
-                <MainHeadline
+                <MediumSubtitle>My largest project: </MediumSubtitle>
+                <div class="h-8"></div>
+                <MediumHeading
                     on:mouseenter={() => currentlyHoveredElementName = "presenter_headline"}
                     on:mouseleave={() => currentlyHoveredElementName = ""}
                 >
-                    A better presenter
-                </MainHeadline>
+                    Presentation Master 2
+                </MediumHeading>
             </div>
             <div class="h-8"/>
-            <LargeParagraph>
+            <MediumParagraph>
                 What if you had all your presentation tools combined - remote control, note cards, timer and more?
                 And what if it came for free, on a device you carry around everyday? Well, you don't have to imagine - just try it.
                 A Better Presenter fixes the issues of it's predecessor,
                 <InlineParagraphButton content="The Presentation Master"></InlineParagraphButton>
                 , and lets you focus entirely on your presentation.
-            </LargeParagraph>
+            </MediumParagraph>
             <div class="h-8"/>
             <a href="/presenter/waitlist">
                 <!--TODO: Add open-in-new icon-->
@@ -135,7 +127,7 @@
             {#each ["md:right-0 md:hover:scale-[100.5%]", "md:right-32 md:z-20 md:scale-110 md:hover:scale-[110.5%]", "md:right-64 md:hover:scale-[100.5%]"] as e, i}
                 {#if true}
                     <div class="{e} transition-all duration-400 relative md:grayscale md:hover:grayscale-0 rounded-3xl border border-onBackground w-full md:w-auto md:h-full aspect-[17/32] bg-background center_col">
-                        <MediumLabel>[Image]</MediumLabel>
+                        <MediumParagraph>[Image]</MediumParagraph>
                     </div>
                     {#if i > 0}
                         <div class="w-8"></div>
@@ -147,17 +139,17 @@
         </div>
     </section>
     <section class="w-screen min-h-screen p-8 md:p-16 flex flex-col text-justify md:text-left">
-        <SectionHeadline>
-            A Better Presenter vs physical presenter vs note cards vs timer
-        </SectionHeadline>
+        <MediumHeading>
+            Presentation Master 2 vs physical presenter vs note cards vs timer
+        </MediumHeading>
         <div class="h-12 md:h-16"/>
-        <MediumLabel>
+        <MediumParagraph>
             <div class="w-full flex flex-col">
                 <div class="h-8 flex items-center">{@html genTableIcon("none")}<div class="inline w-2"></div>Not included</div>
                 <div class="h-8 flex items-center">{@html genTableIcon("paid")}<div class="inline w-2.5"></div>Included, but not free</div>
                 <div class="h-8 flex items-center">{@html genTableIcon("free")}<div class="inline w-2"></div>Free & Ready to use</div>
             </div>
-        </MediumLabel>
+        </MediumParagraph>
         <div class="h-8"/>
         <div class="rounded-lg border border-onBackground grid grid-cols-5 grid-rows-4">
             {#each [
@@ -174,14 +166,14 @@
                         {( i + 1 ) % 5 === 0 ? "primary" : ( i % 5 === 0 || i < 5 ? "bg-primary bg-opacity-5" : "background" )}
                         center_row truncate"
                     >
-                    <MediumLabel>
+                    <MediumParagraph>
                         <DeviceDetector showInDevice="desktop">
                             {@html e[0]}
                         </DeviceDetector>
                         <DeviceDetector showInDevice="mobile">
                             {@html e[1]}
                         </DeviceDetector>
-                    </MediumLabel>
+                    </MediumParagraph>
                 </div>
             {/each}
         </div>
@@ -209,7 +201,7 @@
             </a>
         {/each}
         </div>--.>
-        <MainHeadline>Full Stack. Always.</MainHeadline>
+        <LargeHeading>Full Stack. Always.</LargeHeading>
         <div class="h-8"/>
         <LargeSubtitle>
             I design, develop and distribute my work. If I don't find a tool, I make one.
@@ -217,7 +209,7 @@
         <div class="h-4"/>
     </section>-->
     <section class="w-screen h-1/2 md:h-screen background p-8 md:p-16 center_col relative text-center">
-        <t3>Contact me for any collaboration.</t3>
+        <SmallHeading>Contact me for any collaboration.</SmallHeading>
         <div class="h-16" />
         <a href="mailto:taavi.ruebenhagen@gmail.com" class="center_row">
             <TextButton primary>E-Mail me</TextButton>

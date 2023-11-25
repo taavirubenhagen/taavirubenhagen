@@ -1,1 +1,1 @@
-export { default as component } from "../../../../src/routes/personal/presenter/waitlist/+page.svelte";
+export { default as component } from "../../../../src/routes/tts/+page.svelte";

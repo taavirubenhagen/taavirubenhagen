@@ -1,28 +1,27 @@
-import PrimaryButtonLabel from '$tavy/text/button_text/primary_button_label.svelte';
-import SecondaryButtonLabel from '$tavy/text/button_text/secondary_button_label.svelte';
-import TertiaryButtonLabel from '$tavy/text/button_text/tertiary_button_label.svelte';
-import SmallLabel from '$src/lib/tavy/text/button_text/small_label.svelte';
-import MediumLabel from '$src/lib/tavy/text/button_text/medium_label.svelte';
-import LargeSubtitle from '$tavy/text/button_text/large_subtitle.svelte';
-import SectionHeadline from '$tavy/text/headlines/section_headline.svelte';
-import MainHeadline from '$tavy/text/headlines/main_headline.svelte';
-import LargeParagraph from '$tavy/text/button_text/large_paragraph.svelte';
+import SmallParagraph from '$tavy/text/paragraphs/SmallParagraph.svelte';
+import MediumParagraph from '$tavy/text/paragraphs/MediumParagraph.svelte';
+import LargeParagraph from '$tavy/text/paragraphs/large_paragraph.svelte';
+
+//import SmallSubtitle from '$tavy/text/subtitles/SmallSubtitle.svelte';
+import MediumSubtitle from '$tavy/text/subtitles/MediumSubtitle.svelte';
+import LargeSubtitle from '$tavy/text/subtitles/LargeSubtitle.svelte';
+
+import SmallHeading from '$tavy/text/headings/SmallHeading.svelte';
+import MediumHeading from '$tavy/text/headings/MediumHeading.svelte';
+import LargeHeading from '$tavy/text/headings/LargeHeading.svelte';
 
 import Icon from '$tavy/icons/icon.svelte';
 
-import InlineParagraphButton from '$tavy/miscellaneous/inline_paragraph_button.svelte';
-import Dropdown from '$tavy/dropdown.svelte';
+import RawButton from '$tavy/buttons/RawButton.svelte';
+import InlineParagraphButton from '$tavy/buttons/InlineParagraphButton.svelte';
+
+
+
 
 export {
-    PrimaryButtonLabel, SecondaryButtonLabel, TertiaryButtonLabel,
-    SmallLabel,
-    MediumLabel,
-    SectionHeadline,
-    MainHeadline,
-    LargeSubtitle,
-    LargeParagraph,
-    
+    SmallParagraph, MediumParagraph, LargeParagraph,
+    /*SmallSubtitle, */MediumSubtitle, LargeSubtitle,
+    SmallHeading, MediumHeading, LargeHeading,
     Icon,
-    InlineParagraphButton,
-    Dropdown,
+    RawButton, InlineParagraphButton,
 };

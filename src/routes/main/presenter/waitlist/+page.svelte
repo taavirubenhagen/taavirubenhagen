@@ -6,7 +6,7 @@
     import { PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY } from '$env/static/public';
     import '$style'
     import {
-        MainHeadline,
+        LargeHeading,
     } from '$tavy';
     import TextButton from '$src/lib/util/buttons/text_button.svelte';
 
@@ -38,7 +38,7 @@
 
 
 <main class="max-w-screen min-h-screen p-8 flex flex-col justify-center items-start md:items-center font-sans">
-    <MainHeadline>Join Waitlist</MainHeadline>
+    <LargeHeading>Join Waitlist</LargeHeading>
     <div class="h-16"></div>
     <input
         type="text" placeholder="Enter E-Mail"

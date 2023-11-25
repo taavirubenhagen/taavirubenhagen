@@ -1,7 +1,5 @@
 import { c as create_ssr_component, e as escape, v as validate_component } from "./index3.js";
-/* empty css        */const Secondary_button_label = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<t class="text-xl md:text-xl">${slots.default ? slots.default({}) : ``}</t>`;
-});
+/* empty css        */import { S as SmallParagraph } from "./SmallParagraph.js";
 const Text_button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { buttonClass = "" } = $$props;
   let { onPrimary = false } = $$props;
@@ -25,7 +23,7 @@ const Text_button = create_ssr_component(($$result, $$props, $$bindings, slots) 
   ) + " " + escape(large ? "h-16" : "h-12", true) + " " + escape(
     primary ? onPrimary ? "bg-onPrimary text-onBackground" : "bg-primary text-onPrimary" : onPrimary ? "text-onPrimary" : "text-onBackground",
     true
-  ) + " " + escape(large ? "px-16" : "px-8", true)}">${validate_component(Secondary_button_label, "SecondaryButtonLabel").$$render($$result, {}, {}, {
+  ) + " " + escape(large ? "px-16" : "px-8", true)}">${validate_component(SmallParagraph, "SmallParagraph").$$render($$result, {}, {}, {
     default: () => {
       return `${slots.default ? slots.default({}) : ``}`;
     }
