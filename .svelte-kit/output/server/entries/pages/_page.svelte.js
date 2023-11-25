@@ -17,7 +17,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         ${validate_component(Button, "Button").$$render(
     $$result,
     {
-      borderClass: "pointer-events-none invert border-t-0 border-background text-background",
+      borderClass: "pointer-events-none invert border-t-0 border-white text-background",
       onClick: () => {
       }
     },
@@ -75,7 +75,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         ${validate_component(Button, "Button").$$render(
     $$result,
     {
-      borderClass: "pointer-events-none invert border-t-0 border-background text-background",
+      borderClass: "pointer-events-none invert border-t-0 border-white text-background",
       onClick: () => {
       }
     },
