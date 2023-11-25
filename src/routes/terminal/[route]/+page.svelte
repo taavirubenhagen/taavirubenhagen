@@ -67,8 +67,9 @@
     on:keypress|preventDefault={onKeyPressed}
     class="overflow-hidden cursor-none"
 >
-    <input bind:this={keyInput} type='text' autofocus class='absolute -z-40'/>
+    <!-- svelte-ignore a11y-autofocus -->
     <DeviceDetector showInDevice="desktop">
+        <input bind:this={keyInput} type='text' autofocus class='absolute -z-40'/>
         <div
             bind:this={cursor}
             class="{localCursorButtonHover ? "w-8 h-8 opacity-25" : "w-4 h-4 opacity-100"} duration-300 fixed z-50 -translate-x-1/2 -translate-y-1/2 pointer-events-none backdrop-invert rounded-full"

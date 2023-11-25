@@ -82,10 +82,11 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `
 
 
-<main class="overflow-hidden cursor-none"><input type="text" autofocus class="absolute -z-40"${add_attribute("this", keyInput, 0)}>
+<main class="overflow-hidden cursor-none">
     ${validate_component(DeviceDetector, "DeviceDetector").$$render($$result, { showInDevice: "desktop" }, {}, {
     default: () => {
-      return `<div class="${escape(
+      return `<input type="text" autofocus class="absolute -z-40"${add_attribute("this", keyInput, 0)}>
+        <div class="${escape(
         localCursorButtonHover ? "w-8 h-8 opacity-25" : "w-4 h-4 opacity-100",
         true
       ) + " duration-300 fixed z-50 -translate-x-1/2 -translate-y-1/2 pointer-events-none backdrop-invert rounded-full"}" style="${"transition-property: transform, opacity, width, height; " + escape(
