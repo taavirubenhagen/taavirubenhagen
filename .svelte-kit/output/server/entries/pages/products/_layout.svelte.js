@@ -32,6 +32,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let showFooter;
   let $page, $$unsubscribe_page;
   $$unsubscribe_page = subscribe(page, (value) => $page = value);
+  let windowHeight;
   let cursor;
   let localCursorButtonHover;
   cursorButtonHover.subscribe((value) => {
@@ -42,7 +43,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `
 
 
-<main class="overflow-x-hidden cursor-none">
+<main class="overflow-x-hidden cursor-none" style="${"height: " + escape(windowHeight, true) + ";"}">
     ${validate_component(DeviceDetector, "DeviceDetector").$$render($$result, { showInDevice: "desktop" }, {}, {
     default: () => {
       return `<div class="${escape(
@@ -56,8 +57,8 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   })}
     ${slots.default ? slots.default({}) : ``}
     
-    ${showFooter ? `<div class="w-full h-[65vh] sm:h-[50vh] primary p-16 lg:p-32 flex flex-col lg:flex-row justify-between lg:items-center text-left"><div class="h-full flex flex-col md:justify-between break-all">
-                <a href="mailto:taavi.ruebenhagen@gmail.com">${validate_component(Button, "Button").$$render(
+    ${showFooter ? `<div class="w-full h-[65vh] sm:h-[50vh] primary p-16 lg:p-32 flex flex-col lg:flex-row justify-between lg:items-center"><div class="h-full flex flex-col md:justify-between break-all">
+                <a href="mailto:taavi.ruebenhagen@gmail.com" class="text-left">${validate_component(Button, "Button").$$render(
     $$result,
     {
       onClick: () => {

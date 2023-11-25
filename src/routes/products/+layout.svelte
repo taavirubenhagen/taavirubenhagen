@@ -43,6 +43,7 @@
         globalScrollY.set(event?.currentTarget?.scrollTop);
     }}
     class="overflow-x-hidden cursor-none"
+    style='height: {windowHeight};'
 >
     <!-- TODO: Add standard scrollbar effects -->
     <DeviceDetector showInDevice="desktop">
@@ -61,7 +62,7 @@
         <div class="w-full h-[65vh] sm:h-[50vh] primary p-16 lg:p-32 flex flex-col lg:flex-row justify-between lg:items-center">
             <div class="h-full flex flex-col md:justify-between break-all">
                 <!-- TODO: Add feedback page -->
-                <a href="mailto:taavi.ruebenhagen@gmail.com"><Button onClick={() => {}}>
+                <a href="mailto:taavi.ruebenhagen@gmail.com" class='text-left'><Button onClick={() => {}}>
                     <LargeParagraph>taavi.ruebenhagen@gmail.com</LargeParagraph>
                 </Button></a>
                 <div class="pt-8 md:p-0 text-neutral-500">
