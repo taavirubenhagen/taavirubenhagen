@@ -1,7 +1,7 @@
-import { c as create_ssr_component, v as validate_component, e as escape } from "../../../../chunks/index3.js";
+import { c as create_ssr_component, v as validate_component, e as escape } from "../../../chunks/index3.js";
 import "ua-parser-js";
-/* empty css                         */import { S as SmallParagraph } from "../../../../chunks/SmallParagraph.js";
-import { R as RawButton, I as Icon, M as MediumParagraph } from "../../../../chunks/RawButton.js";
+/* empty css                      */import { S as SmallParagraph } from "../../../chunks/SmallParagraph.js";
+import { R as RawButton, I as Icon, M as MediumParagraph } from "../../../chunks/RawButton.js";
 const Button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { inverted = false } = $$props;
   let { borderClass = "" } = $$props;

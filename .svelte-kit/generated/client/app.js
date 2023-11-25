@@ -53,7 +53,7 @@ export const dictionary = {
 		"/me/home": [23,[3,5]],
 		"/me/landing/social": [24,[3,6]],
 		"/personal/home": [25,[7]],
-		"/products/home": [26,[8]],
+		"/products": [26,[8]],
 		"/terminal": [~27],
 		"/terminal/[route]": [28],
 		"/tts": [29]
