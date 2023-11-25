@@ -1,6 +1,6 @@
 import { c as create_ssr_component, v as validate_component, h as each, e as escape } from "../../../chunks/index3.js";
 import { D as DeviceDetector } from "../../../chunks/DeviceDetector.js";
-/* empty css                      */import { M as MediumParagraph } from "../../../chunks/RawButton.js";
+/* empty css                      */import { M as MediumParagraph } from "../../../chunks/MediumParagraph.js";
 import { L as LargeSubtitle, M as MediumSubtitle, a as MediumHeading, I as InlineParagraphButton, S as SmallHeading } from "../../../chunks/InlineParagraphButton.js";
 import { L as LargeHeading } from "../../../chunks/LargeHeading.js";
 import { B as Button } from "../../../chunks/Button4.js";

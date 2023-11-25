@@ -1,6 +1,6 @@
 <script lang="ts">
     import "$style";
-    import Button from '../Button.svelte';
+    import { Button } from '$tavy/minimal';
 
 
     export let routes: string[][];

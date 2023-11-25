@@ -2,12 +2,7 @@ import { c as create_ssr_component, h as each, v as validate_component, e as esc
 import { D as DeviceDetector } from "../../../../chunks/DeviceDetector.js";
 import { p as page } from "../../../../chunks/stores.js";
 import { c as cursorButtonHover } from "../../../../chunks/state.js";
-/* empty css                         */const Button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let { onClick } = $$props;
-  if ($$props.onClick === void 0 && $$bindings.onClick && onClick !== void 0)
-    $$bindings.onClick(onClick);
-  return `<button class="underline underline-offset-4">${slots.default ? slots.default({}) : ``}</button>`;
-});
+/* empty css                         */import { B as Button } from "../../../../chunks/Button3.js";
 function viewedRoute(r) {
   return r[0].toUpperCase() + r.slice(1);
 }

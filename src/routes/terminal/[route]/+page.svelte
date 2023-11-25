@@ -3,7 +3,7 @@
     import { page } from '$app/stores';
     import { cursorButtonHover } from "$state";
     import "$style";
-    import Button from '../Button.svelte';
+    import { Button } from '$tavy/minimal';
     import Menu from "./Menu.svelte";
 
     let windowHeight: number;

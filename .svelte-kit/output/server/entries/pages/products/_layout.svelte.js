@@ -2,7 +2,8 @@ import { c as create_ssr_component, d as subscribe, v as validate_component, e a
 import { D as DeviceDetector } from "../../../chunks/DeviceDetector.js";
 import { p as page } from "../../../chunks/stores.js";
 /* empty css                      */import { c as cursorButtonHover } from "../../../chunks/state.js";
-import { R as RawButton, M as MediumParagraph } from "../../../chunks/RawButton.js";
+import { M as MediumParagraph } from "../../../chunks/MediumParagraph.js";
+import { R as RawButton } from "../../../chunks/RawButton.js";
 import { B as Button } from "../../../chunks/Button3.js";
 const Large_paragraph = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<t class="text-2xl md:text-2xl">${slots.default ? slots.default({}) : ``}</t>`;
