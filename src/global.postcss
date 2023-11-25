@@ -12,12 +12,14 @@
         text-onBackground font-rounded;
 }
 ::-webkit-scrollbar {
-    /*@apply w-1 bg-background;*/
-    @apply hidden;
+    @apply w-1 bg-background;
+}
+::-webkit-scrollbar-thumb {
+    @apply w-1 bg-primary;
 }
 
 main {
-    @apply h-screen;
+    @apply min-h-full;
 }
 
 /* TEXT-RELATED STYLES */
