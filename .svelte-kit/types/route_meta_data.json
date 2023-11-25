@@ -56,10 +56,6 @@
 	"/me/home": [
 		"src/routes/+layout.server.ts"
 	],
-	"/me/landing/social": [
-		"src/routes/+layout.server.ts",
-		"src/routes/+layout.server.ts"
-	],
 	"/personal": [
 		"src/routes/+layout.server.ts"
 	],

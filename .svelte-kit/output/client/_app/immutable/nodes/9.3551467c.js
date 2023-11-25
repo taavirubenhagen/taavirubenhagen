@@ -1,0 +1,7 @@
+import{S as P,i as A,s as G,e as s,b as H,d as x,A as i,f as o,g as S,h as T,j as y,B as m,k as v,l as j,m as C,n as k,o as r,t as q,v as E,w as I}from"../chunks/index.d7191f4d.js";/* empty css                       */import{H as M}from"../chunks/H2.bbd2d5b6.js";function N(h){let t;return{c(){t=i("Contact")},l(a){t=m(a,"Contact")},m(a,l){C(a,t,l)},d(a){a&&v(t)}}}function z(h){let t,a,l,p,u,f,_,b,g,$,d,B,R,c;return a=new M({props:{$$slots:{default:[N]},$$scope:{ctx:h}}}),{c(){t=s("main"),H(a.$$.fragment),l=s("br"),p=x(),u=s("br"),f=x(),_=s("br"),b=i(`\r
+    Taavi Rübenhagen`),g=s("br"),$=i(`\r
+    Pothof 9d, 38122 Braunschweig, Germany`),d=s("br"),B=i(`\r
+    taavi.ruebenhagen@gmail.com`),R=s("br"),this.h()},l(n){t=o(n,"MAIN",{class:!0});var e=S(t);T(a.$$.fragment,e),l=o(e,"BR",{}),p=y(e),u=o(e,"BR",{}),f=y(e),_=o(e,"BR",{}),b=m(e,`\r
+    Taavi Rübenhagen`),g=o(e,"BR",{}),$=m(e,`\r
+    Pothof 9d, 38122 Braunschweig, Germany`),d=o(e,"BR",{}),B=m(e,`\r
+    taavi.ruebenhagen@gmail.com`),R=o(e,"BR",{}),e.forEach(v),this.h()},h(){j(t,"class","w-screen min-h-screen p-8 pt-16")},m(n,e){C(n,t,e),k(a,t,null),r(t,l),r(t,p),r(t,u),r(t,f),r(t,_),r(t,b),r(t,g),r(t,$),r(t,d),r(t,B),r(t,R),c=!0},p(n,[e]){const w={};e&1&&(w.$$scope={dirty:e,ctx:n}),a.$set(w)},i(n){c||(q(a.$$.fragment,n),c=!0)},o(n){E(a.$$.fragment,n),c=!1},d(n){n&&v(t),I(a)}}}class K extends P{constructor(t){super(),A(this,t,null,z,G,{})}}export{K as component};

@@ -1,8 +1,7 @@
 import { r as redirect } from "../../chunks/index.js";
 function load({ request }) {
-  if (request.url.split("/").length === 4 && request.url.split("/").pop() === "") {
-    throw redirect(307, "/terminal");
-  }
+  if (request.url.split("/").length === 4 && request.url.split("/").pop() === "")
+    ;
   if (request.url.search("(/presenter/download/.+)$") !== -1) {
     throw redirect(307, "main/presenter/download");
   }

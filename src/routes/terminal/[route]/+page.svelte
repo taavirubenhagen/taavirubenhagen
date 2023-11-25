@@ -33,6 +33,9 @@
     const validRoutes = [...homeRoutes, ...projectRoutes];
 
     function routeChangingFunction(newRouteData: string[]) {
+        if (newRouteData[2] !== 'route') {
+            window.location.href = newRouteData[2];
+        }
         route = newRouteData[0];
     }
 
@@ -46,7 +49,10 @@
             route = 'home';
         }
         for (let i = 0; i < validRoutes.length; i++) {
-            if (e.key == validRoutes[i][1] && ( validRoutes[i][2] !== 'route') === e.shiftKey) {
+            if (e.key == validRoutes[i][1]) {
+                if (validRoutes[i][2] !== 'route') {
+                    window.location.href = validRoutes[i][2];
+                }
                 route = validRoutes[i][0];
             }
         }
@@ -84,7 +90,7 @@
                 projects
             </Button>
             [P] include multiple Android and iOS apps and websites.
-            I'm also freelancing and currently starting an affiliate marketing business.
+            I'm also reselling apps and currently starting an affiliate marketing business.
         {:else if route === 'contact'}
             <br/><br/>
             Imprint:
@@ -97,12 +103,10 @@
             <Menu routes={homeRoutes} routeChangingFunction={routeChangingFunction}/>
         {:else if route === 'projects'}
             <br/>
-            {#each projectRoutes as r}
-                <Menu routes={projectRoutes} routeChangingFunction={routeChangingFunction}/>
-            {/each}
+            <Menu routes={projectRoutes} routeChangingFunction={routeChangingFunction}/>
         {:else}
             <br/><br/>
-            404: Page not found
+            The page was either not found or you will be automatically redirected soon.
             <br/>
             <Button onClick={() => route = 'home'}>
                 Return home

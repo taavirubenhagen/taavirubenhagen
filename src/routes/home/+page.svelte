@@ -7,7 +7,6 @@
         MediumParagraph,
         MediumSubtitle, LargeSubtitle,
         SmallHeading, MediumHeading, LargeHeading,
-        Icon,
         InlineParagraphButton,
     } from '$tavy';
     import { Button } from '$tavy/industrial';
@@ -87,7 +86,10 @@
                 , and lets you focus entirely on your presentation.
             </MediumParagraph>
             <div class="h-8"/>
-            <Button onClick={() => alert('Coming soon!')}>Download</Button>
+            <Button openInNew onClick={() => window.location.href='https://play.google.com/store/apps/details?id=tavy.presenter.presentation_master_2'}>
+                Android
+            </Button>
+            <Button openInNew borderClass='border-t-0' onClick={() => alert('Coming soon!')}>iOS</Button>
         </div>
         <div class="relative md:left-24 w-full md:w-1/2 md:h-screen px-4 py-8 md:py-32 flex">
             {#each ["md:right-0 md:hover:scale-[100.5%]", "md:right-32 md:z-20 md:scale-110 md:hover:scale-[110.5%]", "md:right-64 md:hover:scale-[100.5%]"] as e, i}

@@ -16,17 +16,8 @@
 <br/>
 {#each routes as r}
     <br/>
-    {#if r[2] === 'route'}
-        <Button onClick={() => routeChangingFunction(r)}>
-            {viewedRoute(r[0])}
-        </Button>
-        [{r[1].toUpperCase()}]
-    {:else}
-        <Button onClick={() => {}}>
-            <a href={r[2]} target='blank'>
-                {viewedRoute(r[0])}
-            </a>
-        </Button>
-        [Shift+{r[1].toUpperCase()}]
-    {/if}
+    <Button onClick={() => routeChangingFunction(r)}>
+        {viewedRoute(r[0])}
+    </Button>
+    [{r[1].toUpperCase()}]
 {/each}

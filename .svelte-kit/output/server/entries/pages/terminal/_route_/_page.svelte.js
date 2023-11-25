@@ -1,4 +1,4 @@
-import { c as create_ssr_component, h as each, v as validate_component, e as escape, f as add_attribute, d as subscribe } from "../../../../chunks/index3.js";
+import { c as create_ssr_component, h as each, v as validate_component, e as escape, d as subscribe, f as add_attribute } from "../../../../chunks/index3.js";
 import { D as DeviceDetector } from "../../../../chunks/DeviceDetector.js";
 import { p as page } from "../../../../chunks/stores.js";
 import { c as cursorButtonHover } from "../../../../chunks/state.js";
@@ -16,27 +16,13 @@ const Menu = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<br>
 ${each(routes, (r) => {
     return `<br>
-    ${r[2] === "route" ? `${validate_component(Button, "Button").$$render($$result, { onClick: () => routeChangingFunction(r) }, {}, {
+    ${validate_component(Button, "Button").$$render($$result, { onClick: () => routeChangingFunction(r) }, {}, {
       default: () => {
         return `${escape(viewedRoute(r[0]))}
-        `;
+    `;
       }
     })}
-        [${escape(r[1].toUpperCase())}]` : `${validate_component(Button, "Button").$$render(
-      $$result,
-      {
-        onClick: () => {
-        }
-      },
-      {},
-      {
-        default: () => {
-          return `<a${add_attribute("href", r[2], 0)} target="blank">${escape(viewedRoute(r[0]))}</a>
-        `;
-        }
-      }
-    )}
-        [Shift+${escape(r[1].toUpperCase())}]`}`;
+    [${escape(r[1].toUpperCase())}]`;
   })}`;
 });
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -65,6 +51,9 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   ];
   const validRoutes = [...homeRoutes, ...projectRoutes];
   function routeChangingFunction(newRouteData) {
+    if (newRouteData[2] !== "route") {
+      window.location.href = newRouteData[2];
+    }
     route = newRouteData[0];
   }
   if (validRoutes.map((e) => e[0]).includes($page.params.route)) {
@@ -100,7 +89,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     }
   })}
             [P] include multiple Android and iOS apps and websites.
-            I&#39;m also freelancing and currently starting an affiliate marketing business.` : `${route === "contact" ? `<br><br>
+            I&#39;m also reselling apps and currently starting an affiliate marketing business.` : `${route === "contact" ? `<br><br>
             Imprint:
             <br><br>
             Taavi R\xFCbenhagen
@@ -123,18 +112,16 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {},
     {}
   )}` : `${route === "projects" ? `<br>
-            ${each(projectRoutes, (r) => {
-    return `${validate_component(Menu, "Menu").$$render(
-      $$result,
-      {
-        routes: projectRoutes,
-        routeChangingFunction
-      },
-      {},
-      {}
-    )}`;
-  })}` : `<br><br>
-            404: Page not found
+            ${validate_component(Menu, "Menu").$$render(
+    $$result,
+    {
+      routes: projectRoutes,
+      routeChangingFunction
+    },
+    {},
+    {}
+  )}` : `<br><br>
+            The page was either not found or you will be automatically redirected soon.
             <br>
             ${validate_component(Button, "Button").$$render($$result, { onClick: () => route = "home" }, {}, {
     default: () => {

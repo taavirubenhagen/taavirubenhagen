@@ -75,11 +75,34 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     }
   })}
             <div class="h-8"></div>
-            ${validate_component(Button, "Button").$$render($$result, { onClick: () => alert("Coming soon!") }, {}, {
-    default: () => {
-      return `Download`;
+            ${validate_component(Button, "Button").$$render(
+    $$result,
+    {
+      openInNew: true,
+      onClick: () => window.location.href = "https://play.google.com/store/apps/details?id=tavy.presenter.presentation_master_2"
+    },
+    {},
+    {
+      default: () => {
+        return `Android
+            `;
+      }
     }
-  })}</div>
+  )}
+            ${validate_component(Button, "Button").$$render(
+    $$result,
+    {
+      openInNew: true,
+      borderClass: "border-t-0",
+      onClick: () => alert("Coming soon!")
+    },
+    {},
+    {
+      default: () => {
+        return `iOS`;
+      }
+    }
+  )}</div>
         <div class="relative md:left-24 w-full md:w-1/2 md:h-screen px-4 py-8 md:py-32 flex">${each(
     [
       "md:right-0 md:hover:scale-[100.5%]",
