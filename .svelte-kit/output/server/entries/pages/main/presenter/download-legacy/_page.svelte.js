@@ -2,7 +2,7 @@ import { c as create_ssr_component, e as escape, v as validate_component } from 
 import { I as Icon } from "../../../../../chunks/Icon.js";
 /* empty css                            */import { H as H2 } from "../../../../../chunks/H2.js";
 import { B } from "../../../../../chunks/B.js";
-import { B as Button } from "../../../../../chunks/Button4.js";
+import { B as Button } from "../../../../../chunks/Button3.js";
 const P2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<t class="text-xl md:text-2xl selection:primary">${slots.default ? slots.default({}) : ``}</t>`;
 });
@@ -128,7 +128,7 @@ ${validate_component(Modal, "Modal").$$render(
           default: () => {
             return `A MacOS version is planned, yet it is really hard to build because I don&#39;t have a Mac myself. If you want to help to make it happen, ${validate_component(B, "B").$$render($$result, {}, {}, {
               default: () => {
-                return `<a href="/main/contact">contact me</a>`;
+                return `<a href="/legal/contact">contact me</a>`;
               }
             })}.`;
           }
@@ -138,7 +138,7 @@ ${validate_component(Modal, "Modal").$$render(
             return `In some cases, Presentation Master 2 produces false-positive warnings.<br><br>
                 ${validate_component(B, "B").$$render($$result, {}, {}, {
               default: () => {
-                return `<a href="TODO: /contact">Contact me</a>`;
+                return `<a href="TODO: /legal/contact">Contact me</a>`;
               }
             })} if you want to make sure that I take full responsibility for the app&#39;s security.<br><br>
                 I don&#39;t exactly know the reason for the antivirus warning,

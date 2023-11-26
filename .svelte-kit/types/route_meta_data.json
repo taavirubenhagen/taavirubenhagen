@@ -6,7 +6,10 @@
 	"/home": [
 		"src/routes/+layout.server.ts"
 	],
-	"/main/contact": [
+	"/legal/contact": [
+		"src/routes/+layout.server.ts"
+	],
+	"/legal/privacy-policy": [
 		"src/routes/+layout.server.ts"
 	],
 	"/main/home-dev": [
@@ -33,19 +36,13 @@
 	"/main/presenter/waitlist": [
 		"src/routes/+layout.server.ts"
 	],
-	"/main/privacy-policy": [
-		"src/routes/+layout.server.ts"
-	],
 	"/main/projects": [
 		"src/routes/+layout.server.ts"
 	],
-	"/personal": [
-		"src/routes/+layout.server.ts"
-	],
-	"/personal/home": [
-		"src/routes/+layout.server.ts"
-	],
 	"/products": [
+		"src/routes/+layout.server.ts"
+	],
+	"/projects": [
 		"src/routes/+layout.server.ts"
 	],
 	"/terminal": [

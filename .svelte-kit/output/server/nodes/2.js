@@ -1,7 +1,7 @@
 
 
 export const index = 2;
-export const component = async () => (await import('../entries/pages/personal/_layout.svelte.js')).default;
-export const imports = ["_app/immutable/nodes/2.bcc8ae12.js","_app/immutable/chunks/index.60da098c.js","_app/immutable/chunks/DeviceDetector.28898701.js","_app/immutable/chunks/ua-parser.44220aa4.js","_app/immutable/chunks/_commonjsHelpers.725317a4.js","_app/immutable/chunks/stores.3e85e903.js","_app/immutable/chunks/singletons.ddc437f9.js","_app/immutable/chunks/index.e0b8dcd8.js","_app/immutable/chunks/Button.b57b1656.js","_app/immutable/chunks/state.9ffbbb15.js"];
-export const stylesheets = ["_app/immutable/assets/global.a3987477.css"];
+export const component = async () => (await import('../entries/pages/_page.svelte.js')).default;
+export const imports = ["_app/immutable/nodes/2.144e574c.js","_app/immutable/chunks/index.f3cbe732.js","_app/immutable/chunks/Section.5746552e.js","_app/immutable/chunks/Button.de1f53c7.js","_app/immutable/chunks/RawButton.66fc95c5.js","_app/immutable/chunks/state.bc6b7810.js","_app/immutable/chunks/index.eef167b7.js","_app/immutable/chunks/ButtonSeperator.3e796d0a.js"];
+export const stylesheets = ["_app/immutable/assets/global.9bb300c6.css"];
 export const fonts = [];

@@ -3,7 +3,7 @@ import { D as DeviceDetector } from "../../../chunks/DeviceDetector.js";
 /* empty css                      */import { M as MediumParagraph, B as Button$1 } from "../../../chunks/Button.js";
 import { L as LargeHeading } from "../../../chunks/LargeHeading.js";
 import { I as Icon } from "../../../chunks/RawButton.js";
-import { B as Button } from "../../../chunks/Button3.js";
+import { B as Button } from "../../../chunks/Button2.js";
 const MediumSubtitle = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<t class="block text-2xl md:text-3xl text-neutral-500 font-bold tracking-widest">${slots.default ? slots.default({}) : ``}</t>`;
 });

@@ -10,10 +10,12 @@ import SmallHeading from '$tavy/text/headings/SmallHeading.svelte';
 import MediumHeading from '$tavy/text/headings/MediumHeading.svelte';
 import LargeHeading from '$tavy/text/headings/LargeHeading.svelte';
 
-import Icon from '$tavy/icons/icon.svelte';
+import Icon from '$src/lib/tavy/general/icons/icon.svelte';
 
-import RawButton from '$tavy/buttons/RawButton.svelte';
-import InlineParagraphButton from '$tavy/buttons/InlineParagraphButton.svelte';
+import RawButton from '$src/lib/tavy/general/buttons/RawButton.svelte';
+import InlineParagraphButton from '$src/lib/tavy/general/buttons/InlineParagraphButton.svelte';
+
+import Section from '$src/lib/tavy/general/templates/Section.svelte';
 
 
 
@@ -24,4 +26,5 @@ export {
     SmallHeading, MediumHeading, LargeHeading,
     Icon,
     RawButton, InlineParagraphButton,
+    Section,
 };

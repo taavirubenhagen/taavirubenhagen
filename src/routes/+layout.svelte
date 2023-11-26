@@ -53,5 +53,5 @@
         ></div>
     </DeviceDetector>
     <slot/>
-    <LegalFooter contactLink='/main/contact' ppLink='/main/privacy-policy'/>
+    <LegalFooter contactLink='/legal/contact' ppLink='/legal/privacy-policy'/>
 </main>

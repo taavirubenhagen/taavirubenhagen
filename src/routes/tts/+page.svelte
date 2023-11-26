@@ -124,7 +124,7 @@
     </div>
 </main>
 <footer class="h-16 primary center_row font-mono">
-    <a href="/contact">
+    <a href="/legal/contact">
         <t1>Contact</t1>
     </a>
 </footer>

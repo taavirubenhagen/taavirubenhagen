@@ -68,8 +68,8 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     ${validate_component(LegalFooter, "LegalFooter").$$render(
     $$result,
     {
-      contactLink: "/main/contact",
-      ppLink: "/main/privacy-policy"
+      contactLink: "/legal/contact",
+      ppLink: "/legal/privacy-policy"
     },
     {},
     {}

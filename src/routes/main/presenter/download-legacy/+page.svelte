@@ -49,12 +49,12 @@
 <Modal open={helpModalIndex != 0} onDismissed={() => helpModalIndex = 0}>
     <div class="relative z-50 text-left">
         {#if helpModalIndex == 1}
-            <P3>A MacOS version is planned, yet it is really hard to build because I don't have a Mac myself. If you want to help to make it happen, <B><a href="/main/contact">contact me</a></B>.</P3>
+            <P3>A MacOS version is planned, yet it is really hard to build because I don't have a Mac myself. If you want to help to make it happen, <B><a href="/legal/contact">contact me</a></B>.</P3>
             <!--<P3>If you don't know what the symbols on the buttons mean, just click the "Download for Windows" button and you should be OK.</P3>-->
         {:else}
             <P3>
                 In some cases, Presentation Master 2 produces false-positive warnings.<br/><br/>
-                <B><a href="TODO: /contact">Contact me</a></B> if you want to make sure that I take full responsibility for the app's security.<br/><br/>
+                <B><a href="TODO: /legal/contact">Contact me</a></B> if you want to make sure that I take full responsibility for the app's security.<br/><br/>
                 I don't exactly know the reason for the antivirus warning,
                 but it's probably that I did not buy an expensive security certificate to let the app be checked independently.
                 This would be just a proof and changes nothing about the actual security though.

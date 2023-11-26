@@ -17,7 +17,7 @@ ${validate_component(MediumParagraph, "MediumParagraph").$$render($$result, {}, 
         {},
         {
           default: () => {
-            return `Here Will The
+            return `The Affiliate
             `;
           }
         }
@@ -32,7 +32,7 @@ ${validate_component(MediumParagraph, "MediumParagraph").$$render($$result, {}, 
         {},
         {
           default: () => {
-            return `Amazon Affiliate
+            return `Links Will
             `;
           }
         }
@@ -47,17 +47,12 @@ ${validate_component(MediumParagraph, "MediumParagraph").$$render($$result, {}, 
         {},
         {
           default: () => {
-            return `Links Be
+            return `Be Put Here
             `;
           }
         }
       )}</div>
-        <div class="absolute bottom-8 px-8 text-center">${validate_component(SmallParagraph, "SmallParagraph").$$render($$result, {}, {}, {
-        default: () => {
-          return `As an Amazon Associate I [will] earn from qualifying purchases.
-            `;
-        }
-      })}</div></main>`;
+        <div class="absolute bottom-8 px-8 text-center">${validate_component(SmallParagraph, "SmallParagraph").$$render($$result, {}, {}, {})}</div></main>`;
     }
   })}`;
 });

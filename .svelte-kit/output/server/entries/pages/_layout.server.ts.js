@@ -8,8 +8,6 @@ function load({ request }) {
   if (request.url.search("(/home.+)$") !== -1 && request.url.search("(/main.+)$") === -1) {
     request.url.split("/home")[1];
   }
-  if (request.url.search("(..../|7./)$") !== -1)
-    ;
 }
 export {
   load

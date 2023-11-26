@@ -12,7 +12,4 @@ export function load({ request }) {
         const subroute = request.url.split("/home")[1];
         //throw redirect(307, '/main/home' + ( subroute ?? "" ));
     };
-    if (request.url.search("(\....\/|7.\/)$") !== -1) {
-        //throw redirect(307, '/personal/home');
-    }
 }

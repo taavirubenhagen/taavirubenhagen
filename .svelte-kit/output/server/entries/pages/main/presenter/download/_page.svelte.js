@@ -2,7 +2,7 @@ import { c as create_ssr_component, v as validate_component } from "../../../../
 import { I as Icon } from "../../../../../chunks/Icon.js";
 /* empty css                            */import { H as H2 } from "../../../../../chunks/H2.js";
 import { B } from "../../../../../chunks/B.js";
-import { B as Button } from "../../../../../chunks/Button4.js";
+import { B as Button } from "../../../../../chunks/Button3.js";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<main class="relative min-h-screen pointer-events-auto p-16 pt-24 text-left">${validate_component(H2, "H2").$$render($$result, {}, {}, {
     default: () => {

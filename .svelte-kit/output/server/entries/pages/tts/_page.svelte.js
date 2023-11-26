@@ -74,7 +74,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   )}
             ${recorderResult ? `<button><a download="Recorded Audio"${add_attribute("href", recorderResult, 0)} class="transition-all ml-8 hover:invert rounded-full border-2 border-primary w-14 h-14 background center_row">\u2713
                     </a></button>` : ``}</div></div></main>
-<footer class="h-16 primary center_row font-mono"><a href="/contact"><t1>Contact</t1></a></footer>`;
+<footer class="h-16 primary center_row font-mono"><a href="/legal/contact"><t1>Contact</t1></a></footer>`;
 });
 export {
   Page as default

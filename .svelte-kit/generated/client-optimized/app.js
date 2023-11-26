@@ -20,16 +20,16 @@ export const nodes = [
 	() => import('./nodes/16'),
 	() => import('./nodes/17'),
 	() => import('./nodes/18'),
-	() => import('./nodes/19'),
-	() => import('./nodes/20')
+	() => import('./nodes/19')
 ];
 
 export const server_loads = [0];
 
 export const dictionary = {
-		"/": [3],
-		"/home": [4],
-		"/main/contact": [5],
+		"/": [2],
+		"/home": [3],
+		"/legal/contact": [4],
+		"/legal/privacy-policy": [5],
 		"/main/home-dev": [7],
 		"/main/home": [6],
 		"/main/newsletter": [8],
@@ -38,13 +38,12 @@ export const dictionary = {
 		"/main/presenter/privacy-policy": [11],
 		"/main/presenter/support-url": [12],
 		"/main/presenter/waitlist": [13],
-		"/main/privacy-policy": [14],
-		"/main/projects": [15],
-		"/personal/home": [16,[2]],
-		"/products": [17],
-		"/terminal": [~18],
-		"/terminal/[route]": [19],
-		"/tts": [20]
+		"/main/projects": [14],
+		"/products": [15],
+		"/projects": [16],
+		"/terminal": [~17],
+		"/terminal/[route]": [18],
+		"/tts": [19]
 	};
 
 export const hooks = {
