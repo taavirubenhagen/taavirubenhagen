@@ -78,21 +78,6 @@ ${validate_component(Section, "Section").$$render($$result, { className: "p-8 ce
           }
         }
       )}
-        ${validate_component(Button, "Button").$$render(
-        $$result,
-        {
-          openInNew: true,
-          borderClass: "border-t-0",
-          onClick: () => window.location.href = "https://www.hvf-bs.net/faecher/mint/projekte?tx_hvfprofiles_hvfprojects%5Baction%5D=show&tx_hvfprofiles_hvfprojects%5Bcontroller%5D=Project&tx_hvfprofiles_hvfprojects%5Bproject%5D=159&cHash=88f6c8e382a4a210695c814ebf51cb2d"
-        },
-        {},
-        {
-          default: () => {
-            return `Presenter - Info
-        `;
-          }
-        }
-      )}
         ${validate_component(ButtonSeperator, "ButtonSeperator").$$render($$result, {}, {}, {})}
         ${validate_component(Button, "Button").$$render(
         $$result,
