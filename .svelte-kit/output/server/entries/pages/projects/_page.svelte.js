@@ -10,6 +10,48 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     $$result,
     {
       openInNew: true,
+      onClick: () => window.location.href = "https://fenni.me"
+    },
+    {},
+    {
+      default: () => {
+        return `FENNIs Website`;
+      }
+    }
+  )}
+        ${validate_component(Button, "Button").$$render(
+    $$result,
+    {
+      next: true,
+      borderClass: "border-t-0",
+      onClick: () => window.location.href = "/"
+    },
+    {},
+    {
+      default: () => {
+        return `Personal Website`;
+      }
+    }
+  )}
+        ${validate_component(Button, "Button").$$render(
+    $$result,
+    {
+      next: true,
+      borderClass: "border-t-0",
+      onClick: () => window.location.href = "/products"
+    },
+    {},
+    {
+      default: () => {
+        return `Product Shop`;
+      }
+    }
+  )}
+        ${validate_component(ButtonSeperator, "ButtonSeperator").$$render($$result, {}, {}, {})}
+        ${validate_component(Button, "Button").$$render(
+    $$result,
+    {
+      openInNew: true,
       onClick: () => window.location.href = "https://play.google.com/store/apps/details?id=tavy.presenter.presentation_master_2"
     },
     {},
@@ -46,48 +88,6 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       default: () => {
         return `Presenter - Info
         `;
-      }
-    }
-  )}
-        ${validate_component(ButtonSeperator, "ButtonSeperator").$$render($$result, {}, {}, {})}
-        ${validate_component(Button, "Button").$$render(
-    $$result,
-    {
-      openInNew: true,
-      onClick: () => window.location.href = "https://fenni.me"
-    },
-    {},
-    {
-      default: () => {
-        return `FENNIs Website`;
-      }
-    }
-  )}
-        ${validate_component(Button, "Button").$$render(
-    $$result,
-    {
-      next: true,
-      borderClass: "border-t-0",
-      onClick: () => window.location.href = "/"
-    },
-    {},
-    {
-      default: () => {
-        return `Personal Website`;
-      }
-    }
-  )}
-        ${validate_component(Button, "Button").$$render(
-    $$result,
-    {
-      next: true,
-      borderClass: "border-t-0",
-      onClick: () => window.location.href = "/products"
-    },
-    {},
-    {
-      default: () => {
-        return `Product Shop`;
       }
     }
   )}</div></main>`;
