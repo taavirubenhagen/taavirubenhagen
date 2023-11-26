@@ -2,6 +2,6 @@
 
 export const index = 2;
 export const component = async () => (await import('../entries/pages/_page.svelte.js')).default;
-export const imports = ["_app/immutable/nodes/2.1e390098.js","_app/immutable/chunks/index.f3cbe732.js","_app/immutable/chunks/Section.5746552e.js","_app/immutable/chunks/Button.de1f53c7.js","_app/immutable/chunks/RawButton.66fc95c5.js","_app/immutable/chunks/state.bc6b7810.js","_app/immutable/chunks/index.eef167b7.js","_app/immutable/chunks/ButtonSeperator.3e796d0a.js"];
-export const stylesheets = ["_app/immutable/assets/global.9bb300c6.css"];
+export const imports = ["_app/immutable/nodes/2.ef27ca28.js","_app/immutable/chunks/index.ca0f68f9.js","_app/immutable/chunks/Section.c179b575.js","_app/immutable/chunks/Button.775b4aa8.js","_app/immutable/chunks/RawButton.a6c2b3bc.js","_app/immutable/chunks/state.6a1a2822.js","_app/immutable/chunks/index.7be6ef96.js","_app/immutable/chunks/ButtonSeperator.19a6eb20.js"];
+export const stylesheets = ["_app/immutable/assets/global.fb7b4b88.css"];
 export const fonts = [];

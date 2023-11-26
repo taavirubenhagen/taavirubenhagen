@@ -1,17 +1,11 @@
 [context.production.environment]
     NETLIFY_EXPERIMENTAL_BUILD_RUST_SOURCE = "true"
 
-    PUBLIC_SUPABASE_URL="https://hybxwgqlxahajvwfvylu.supabase.co"
-    PUBLIC_SUPABASE_ANON_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh5Ynh3Z3FseGFoYWp2d2Z2eWx1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODUzMDExMzQsImV4cCI6MjAwMDg3NzEzNH0.UxBPdhdglEbZMS83en8Zhcd-lp6dY1xDK1GG6_jdVp0"
-
 
 
 
 [context.dev.environment]
     NETLIFY_EXPERIMENTAL_BUILD_RUST_SOURCE = "true"
-    
-    PUBLIC_SUPABASE_URL="https://hybxwgqlxahajvwfvylu.supabase.co"
-    PUBLIC_SUPABASE_ANON_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh5Ynh3Z3FseGFoYWp2d2Z2eWx1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODUzMDExMzQsImV4cCI6MjAwMDg3NzEzNH0.UxBPdhdglEbZMS83en8Zhcd-lp6dY1xDK1GG6_jdVp0"
 
 
 

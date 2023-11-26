@@ -34,8 +34,10 @@ module.exports = {
                 onBackground: "#000",
                 primary: "#000",
                 onPrimary: "#FFF",
-                secondary: colors.neutral["100"],
+                secondary: colors.neutral["500"],
                 onSecondary: "#000",
+                error: colors.red['500'],
+                onError: "#FFF",
             },
             flex: {
                 center_col: "flex flex-col justify-center items-center",

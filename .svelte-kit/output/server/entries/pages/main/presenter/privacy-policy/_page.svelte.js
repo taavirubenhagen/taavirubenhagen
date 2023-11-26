@@ -1,6 +1,8 @@
 import { c as create_ssr_component, v as validate_component } from "../../../../../chunks/index3.js";
 /* empty css                            */import { H as H2 } from "../../../../../chunks/H2.js";
-import { P as P1 } from "../../../../../chunks/P1.js";
+const P1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  return `<t class="text-2xl md:text-3xl selection:primary">${slots.default ? slots.default({}) : ``}</t>`;
+});
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<main class="max-w-screen min-h-screen p-8 pt-16">
     ${validate_component(H2, "H2").$$render($$result, {}, {}, {

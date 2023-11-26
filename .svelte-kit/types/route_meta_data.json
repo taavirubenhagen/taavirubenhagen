@@ -3,6 +3,21 @@
 		"src/routes/+layout.server.ts",
 		"src/routes/+layout.server.ts"
 	],
+	"/admin": [
+		"src/routes/admin/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/admin/access": [
+		"src/routes/admin/access/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/admin/access/[password]": [
+		"src/routes/admin/access/[password]/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/admin/login/[state]": [
+		"src/routes/+layout.server.ts"
+	],
 	"/home": [
 		"src/routes/+layout.server.ts"
 	],

@@ -1,8 +1,7 @@
-import * as server from '../entries/pages/terminal/_page.server.ts.js';
+
 
 export const index = 17;
-export { server };
-export const server_id = "src/routes/terminal/+page.server.ts";
-export const imports = [];
+export const component = async () => (await import('../entries/pages/main/presenter/waitlist/_page.svelte.js')).default;
+export const imports = ["_app/immutable/nodes/17.856cfe3c.js","_app/immutable/chunks/index.ca0f68f9.js"];
 export const stylesheets = [];
 export const fonts = [];

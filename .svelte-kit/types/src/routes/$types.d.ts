@@ -10,8 +10,8 @@ type EnsureDefined<T> = T extends null | undefined ? {} : T;
 type OptionalUnion<U extends Record<string, any>, A extends keyof U = U extends U ? keyof U : never> = U extends unknown ? { [P in Exclude<A, keyof U>]?: never } & U : never;
 export type Snapshot<T = any> = Kit.Snapshot<T>;
 type PageParentData = EnsureDefined<LayoutData>;
-type LayoutRouteId = RouteId | "/" | "/home" | "/legal/contact" | "/legal/privacy-policy" | "/main/home" | "/main/home-dev" | "/main/newsletter" | "/main/presenter/download" | "/main/presenter/download-legacy" | "/main/presenter/privacy-policy" | "/main/presenter/support-url" | "/main/presenter/waitlist" | "/main/projects" | "/products" | "/projects" | "/terminal" | "/terminal/[route]" | "/tts" | null
-type LayoutParams = RouteParams & { route?: string }
+type LayoutRouteId = RouteId | "/" | "/admin" | "/admin/access" | "/admin/access/[password]" | "/admin/login/[state]" | "/home" | "/legal/contact" | "/legal/privacy-policy" | "/main/home" | "/main/home-dev" | "/main/newsletter" | "/main/presenter/download" | "/main/presenter/download-legacy" | "/main/presenter/privacy-policy" | "/main/presenter/support-url" | "/main/presenter/waitlist" | "/main/projects" | "/products" | "/projects" | "/terminal" | "/terminal/[route]" | "/tts" | null
+type LayoutParams = RouteParams & { password?: string,state?: string,route?: string }
 type LayoutServerParentData = EnsureDefined<{}>;
 type LayoutParentData = EnsureDefined<{}>;
 

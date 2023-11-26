@@ -1,6 +1,6 @@
-<script lang="ts">
+<!--<script lang="ts">
     import { onMount } from 'svelte';
-    import { PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY } from '$env/static/public';
+    import { VITE_PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY } from '$env/static/public';
     import DeviceDetector from "svelte-device-detector";
 
     import { createClient, type AuthResponse, type Session, type User, SupabaseClient } from '@supabase/supabase-js';
@@ -32,7 +32,7 @@
         }
     }
     onMount(() => {
-        supabase = createClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY);
+        supabase = createClient(VITE_PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY);
         signInOrUp();
     });
 </script>
@@ -52,7 +52,7 @@
                         type="text" placeholder="What is your E-Mail address?"
                         class="outline-none w-full pr-2"
                     />
-                    <!--TODO: Add user to db in auth as well as in the custom table, and show success message if successful-->
+                    <!-TODO: Add user to db in auth as well as in the custom table, and show success message if successful->
                     <button
                         on:click={() => signInOrUp()}
                         class=
@@ -72,4 +72,4 @@
             {/if}
         </div>
     </div>
-</main>
+</main>-->

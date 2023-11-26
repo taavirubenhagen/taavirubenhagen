@@ -3,10 +3,7 @@ import { c as create_ssr_component, v as validate_component } from "../../chunks
 import { B as Button } from "../../chunks/Button.js";
 import { B as ButtonSeperator } from "../../chunks/ButtonSeperator.js";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `
-
-
-${validate_component(Section, "Section").$$render($$result, { className: "p-8 center_col" }, {}, {
+  return `${validate_component(Section, "Section").$$render($$result, { className: "p-8 center_col" }, {}, {
     default: () => {
       return `<div class="flex flex-col justify-center items-stretch">${validate_component(Button, "Button").$$render(
         $$result,
@@ -90,6 +87,20 @@ ${validate_component(Section, "Section").$$render($$result, { className: "p-8 ce
           default: () => {
             return `@taavirubenhagen
         `;
+          }
+        }
+      )}
+        ${validate_component(ButtonSeperator, "ButtonSeperator").$$render($$result, {}, {}, {})}
+        ${validate_component(Button, "Button").$$render(
+        $$result,
+        {
+          next: true,
+          onClick: () => window.location.href = "/admin"
+        },
+        {},
+        {
+          default: () => {
+            return `Admin`;
           }
         }
       )}</div>`;

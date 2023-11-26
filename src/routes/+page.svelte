@@ -2,12 +2,7 @@
     import '$style';
     import { Section } from "$tavy";
     import { Button, ButtonSeperator } from '$tavy/industrial';
-
-    let windowHeight: number;
 </script>
-
-
-<svelte:window bind:innerHeight={windowHeight} />
 
 
 <Section className='p-8 center_col'>
@@ -24,5 +19,7 @@
         <Button openInNew onClick={() => window.location.href = 'https://www.instagram.com/taavirubenhagen/'}>
             @taavirubenhagen
         </Button>
+        <ButtonSeperator/>
+        <Button next onClick={() => window.location.href = '/admin'}>Admin</Button>
     </div>
 </Section>

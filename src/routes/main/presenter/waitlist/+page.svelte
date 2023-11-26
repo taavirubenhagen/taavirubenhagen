@@ -1,9 +1,9 @@
-<script lang="ts">
+<!--<script lang="ts">
     import { onMount } from 'svelte';
 
     import { createClient, type AuthResponse, type Session, type User, SupabaseClient } from '@supabase/supabase-js';
 
-    import { PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY } from '$env/static/public';
+    import { VITE_PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY } from '$env/static/public';
     import '$style'
     import {
         LargeHeading,
@@ -29,7 +29,7 @@
         }
     }
     onMount(() => {
-        supabase = createClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY);
+        supabase = createClient(VITE_PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY);
         signInOrUp();
     });
 </script>
@@ -45,7 +45,7 @@
         class="outline-none rounded-full border-2 border-primary w-full md:w-1/2 h-16 text-center text-xl"
     />
     <div class="h-16"></div>
-    <!--TODO: Add user to db in auth as well as in the custom table, and show success message if successful-->
+    <!-TODO: Add user to db in auth as well as in the custom table, and show success message if successful->
     <TextButton large primary>Sign up</TextButton>
-    <!--{d?.user?.email}-->
-</main>
+    <!-{d?.user?.email}->
+</main>-->
