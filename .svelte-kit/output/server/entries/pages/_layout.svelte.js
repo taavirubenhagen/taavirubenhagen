@@ -47,7 +47,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 
 
 
-<main class="relative w-full min-h-full cursor-none bg-background text-onBackground selection:primary font-body">
+<main class="relative w-full min-h-full font-body">
     ${validate_component(DeviceDetector, "DeviceDetector").$$render($$result, { showInDevice: "desktop" }, {}, {
     default: () => {
       return `<div class="${escape(

@@ -7,7 +7,7 @@
 
 
 <Section className='p-8 pt-24 center_col'>
-    {#if !withoutRouteIndicator}
+    {#if !withoutRouteIndicator && false}
         <RouteIndicator/>
     {/if}
     <div class='flex flex-col justify-center items-stretch'>

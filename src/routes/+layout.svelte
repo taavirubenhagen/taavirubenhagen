@@ -31,7 +31,7 @@
         scrollY = event?.currentTarget?.scrollTop;
         globalScrollY.set(event?.currentTarget?.scrollTop);
     }}
-    class="relative w-full min-h-full cursor-none bg-background text-onBackground selection:primary font-body"
+    class="relative w-full min-h-full font-body"
 >
     <!-- TODO: Add standard scrollbar effects -->
     <DeviceDetector showInDevice="desktop">

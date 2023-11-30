@@ -9,7 +9,7 @@
     @apply
         m-0 max-w-full md:max-w-none overflow-x-hidden p-0
         bg-background
-        text-onBackground font-rounded;
+        text-onBackground selection:primary font-rounded;
 }
 ::-webkit-scrollbar {
     @apply w-1 bg-background;
@@ -20,10 +20,6 @@
 
 * {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-main {
-    @apply min-h-full;
 }
 
 button {

@@ -33,7 +33,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     $$bindings.withoutRouteIndicator(withoutRouteIndicator);
   return `${validate_component(Section, "Section").$$render($$result, { className: "p-8 pt-24 center_col" }, {}, {
     default: () => {
-      return `${!withoutRouteIndicator ? `${validate_component(RouteIndicator, "RouteIndicator").$$render($$result, {}, {}, {})}` : ``}
+      return `${!withoutRouteIndicator && false ? `${validate_component(RouteIndicator, "RouteIndicator").$$render($$result, {}, {}, {})}` : ``}
     <div class="flex flex-col justify-center items-stretch">${slots.default ? slots.default({}) : ``}</div>`;
     }
   })}`;
