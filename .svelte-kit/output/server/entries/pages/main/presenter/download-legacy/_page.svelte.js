@@ -1,5 +1,5 @@
 import { c as create_ssr_component, e as escape, v as validate_component } from "../../../../../chunks/index3.js";
-import { I as Icon } from "../../../../../chunks/Icon.js";
+import { I as Icon } from "../../../../../chunks/Icon2.js";
 /* empty css                            */import { H as H2 } from "../../../../../chunks/H2.js";
 import { B } from "../../../../../chunks/B.js";
 import { B as Button } from "../../../../../chunks/Button3.js";

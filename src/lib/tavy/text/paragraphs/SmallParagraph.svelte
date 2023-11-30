@@ -2,4 +2,4 @@
     import '$style'
 </script>
 
-<t class="text-lg md:text-lg"><slot/></t>
+<t class="text-md"><slot/></t>

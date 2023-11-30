@@ -1,12 +1,12 @@
 <script lang="ts">
     import '$style';
-    import { Section } from "$tavy";
+    import { Page, SmallHeading } from "$tavy";
     import { Button, ButtonSeperator } from '$tavy/industrial';
 </script>
 
 
-<Section className='p-8 center_col'>
+<Page>
     <div class='flex flex-col justify-center items-stretch'>
-        Login Successful
+        <SmallHeading>Login Successful</SmallHeading>
     </div>
-</Section>
+</Page>

@@ -1,11 +1,11 @@
 import { c as create_ssr_component, v as validate_component } from "../../chunks/index3.js";
-/* empty css                   */import { S as Section } from "../../chunks/Section.js";
-import { B as Button } from "../../chunks/Button.js";
+/* empty css                   */import { B as Button } from "../../chunks/Button.js";
 import { B as ButtonSeperator } from "../../chunks/ButtonSeperator.js";
-const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(Section, "Section").$$render($$result, { className: "p-8 center_col" }, {}, {
+import { P as Page } from "../../chunks/TertiaryButton.js";
+const Page_1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  return `${validate_component(Page, "Page").$$render($$result, {}, {}, {
     default: () => {
-      return `<div class="flex flex-col justify-center items-stretch">${validate_component(Button, "Button").$$render(
+      return `${validate_component(Button, "Button").$$render(
         $$result,
         {
           next: true,
@@ -18,7 +18,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
           }
         }
       )}
-        ${validate_component(Button, "Button").$$render(
+    ${validate_component(Button, "Button").$$render(
         $$result,
         {
           next: true,
@@ -32,7 +32,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
           }
         }
       )}
-        ${validate_component(Button, "Button").$$render(
+    ${validate_component(Button, "Button").$$render(
         $$result,
         {
           next: true,
@@ -46,8 +46,8 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
           }
         }
       )}
-        ${validate_component(ButtonSeperator, "ButtonSeperator").$$render($$result, {}, {}, {})}
-        ${validate_component(Button, "Button").$$render(
+    ${validate_component(ButtonSeperator, "ButtonSeperator").$$render($$result, {}, {}, {})}
+    ${validate_component(Button, "Button").$$render(
         $$result,
         {
           openInNew: true,
@@ -57,11 +57,11 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         {
           default: () => {
             return `Presenter (Android)
-        `;
+    `;
           }
         }
       )}
-        ${validate_component(Button, "Button").$$render(
+    ${validate_component(Button, "Button").$$render(
         $$result,
         {
           openInNew: true,
@@ -75,8 +75,8 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
           }
         }
       )}
-        ${validate_component(ButtonSeperator, "ButtonSeperator").$$render($$result, {}, {}, {})}
-        ${validate_component(Button, "Button").$$render(
+    ${validate_component(ButtonSeperator, "ButtonSeperator").$$render($$result, {}, {}, {})}
+    ${validate_component(Button, "Button").$$render(
         $$result,
         {
           openInNew: true,
@@ -86,12 +86,12 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         {
           default: () => {
             return `@taavirubenhagen
-        `;
+    `;
           }
         }
       )}
-        ${validate_component(ButtonSeperator, "ButtonSeperator").$$render($$result, {}, {}, {})}
-        ${validate_component(Button, "Button").$$render(
+    ${validate_component(ButtonSeperator, "ButtonSeperator").$$render($$result, {}, {}, {})}
+    ${validate_component(Button, "Button").$$render(
         $$result,
         {
           next: true,
@@ -103,10 +103,10 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
             return `Admin`;
           }
         }
-      )}</div>`;
+      )}`;
     }
   })}`;
 });
 export {
-  Page as default
+  Page_1 as default
 };

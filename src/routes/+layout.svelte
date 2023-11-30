@@ -11,11 +11,6 @@
     let cursor: HTMLElement;
     let localCursorButtonHover: boolean;
 
-    $: showFooter =
-        $page.route.id?.includes("home-dev")
-        ? false
-        : true;
-
     cursorButtonHover.subscribe((value: boolean) => {
         localCursorButtonHover = value;
     });

@@ -1,6 +1,5 @@
-import { c as create_ssr_component, v as validate_component, d as subscribe, e as escape, f as add_attribute } from "../../chunks/index3.js";
+import { c as create_ssr_component, v as validate_component, e as escape, d as add_attribute } from "../../chunks/index3.js";
 import { D as DeviceDetector } from "../../chunks/DeviceDetector.js";
-import { p as page } from "../../chunks/stores.js";
 import { c as cursorButtonHover } from "../../chunks/state.js";
 /* empty css                   */import { B as Button } from "../../chunks/Button.js";
 const LegalFooter = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -38,15 +37,11 @@ const LegalFooter = create_ssr_component(($$result, $$props, $$bindings, slots) 
   )}</div>`;
 });
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let $page, $$unsubscribe_page;
-  $$unsubscribe_page = subscribe(page, (value) => $page = value);
   let cursor;
   let localCursorButtonHover;
   cursorButtonHover.subscribe((value) => {
     localCursorButtonHover = value;
   });
-  $page.route.id?.includes("home-dev") ? false : true;
-  $$unsubscribe_page();
   return `
 
 

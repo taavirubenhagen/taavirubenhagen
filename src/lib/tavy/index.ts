@@ -15,7 +15,9 @@ import Icon from '$src/lib/tavy/general/icons/icon.svelte';
 import RawButton from '$src/lib/tavy/general/buttons/RawButton.svelte';
 import InlineParagraphButton from '$src/lib/tavy/general/buttons/InlineParagraphButton.svelte';
 
+import RouteIndicator from '$src/lib/tavy/general/templates/RouteIndicator.svelte';
 import Section from '$src/lib/tavy/general/templates/Section.svelte';
+import Page from '$src/lib/tavy/general/templates/Page.svelte';
 
 
 
@@ -26,5 +28,5 @@ export {
     SmallHeading, MediumHeading, LargeHeading,
     Icon,
     RawButton, InlineParagraphButton,
-    Section,
+    RouteIndicator, Section, Page,
 };

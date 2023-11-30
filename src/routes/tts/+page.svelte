@@ -1,11 +1,11 @@
-<script lang="ts">
+<!--<script lang="ts">
     import { onMount } from "svelte"
     import { fly } from "svelte/transition"
 
     import "$style"
     import "./tts.postcss"
   
-    import TextButton from "$buttons/text_button.svelte"
+    import TextButton from "$src/lib/tavy/general/templates/Page.svelte"
 
     let voiceIndex = 3
     let speedInUI = 100
@@ -127,4 +127,4 @@
     <a href="/legal/contact">
         <t1>Contact</t1>
     </a>
-</footer>
+</footer>-->

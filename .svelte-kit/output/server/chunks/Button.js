@@ -1,5 +1,6 @@
 import { c as create_ssr_component, v as validate_component, e as escape } from "./index3.js";
-/* empty css        */import { R as RawButton, I as Icon } from "./RawButton.js";
+/* empty css        */import { I as Icon } from "./icon.js";
+import { R as RawButton } from "./RawButton.js";
 const MediumParagraph = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<t class="text-xl">${slots.default ? slots.default({}) : ``}</t>`;
 });
