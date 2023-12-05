@@ -38,6 +38,6 @@
     {:else}
         <!-- TODO: Add standard scrollbar effects -->
         <slot/>
-        <LegalFooter contactLink='/legal/contact' ppLink='/legal/privacy-policy'/>
     {/if}
-</m
+    <LegalFooter contactLink='/legal/contact' ppLink='/legal/privacy-policy'/>
+</main>

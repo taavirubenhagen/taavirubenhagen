@@ -66,7 +66,8 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 
 
 
-<main class="relative cursor-none">${navigating ? `${validate_component(Page, "Page").$$render($$result, {}, {}, {
+<main class="relative cursor-none">${validate_component(Cursor, "Cursor").$$render($$result, { bindThis: cursor }, {}, {})}
+    ${navigating ? `${validate_component(Page, "Page").$$render($$result, {}, {}, {
     default: () => {
       return `${validate_component(LargeHeading, "LargeHeading").$$render($$result, {}, {}, {
         default: () => {
@@ -76,9 +77,8 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       })}`;
     }
   })}` : `
-        ${validate_component(Cursor, "Cursor").$$render($$result, { bindThis: cursor }, {}, {})}
-        ${slots.default ? slots.default({}) : ``}
-        ${validate_component(LegalFooter, "LegalFooter").$$render(
+        ${slots.default ? slots.default({}) : ``}`}
+    ${validate_component(LegalFooter, "LegalFooter").$$render(
     $$result,
     {
       contactLink: "/legal/contact",
@@ -86,7 +86,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     },
     {},
     {}
-  )}`}</main>`;
+  )}</main>`;
 });
 export {
   Layout as default
