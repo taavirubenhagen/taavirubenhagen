@@ -1,9 +1,10 @@
-import { c as create_ssr_component, v as validate_component, e as escape, f as each } from "../../../../chunks/index3.js";
-import { B as Button, D as DeviceDetector } from "../../../../chunks/DeviceDetector.js";
+import { c as create_ssr_component, v as validate_component, e as escape, h as each } from "../../../../chunks/index3.js";
+import { D as DeviceDetector } from "../../../../chunks/DeviceDetector.js";
 /* empty css                         */import { M as MediumParagraph, B as Button$1 } from "../../../../chunks/Button.js";
 import { S as SmallHeading } from "../../../../chunks/SmallHeading.js";
 import { L as LargeHeading } from "../../../../chunks/LargeHeading.js";
-import { I as Icon } from "../../../../chunks/icon.js";
+import { I as Icon } from "../../../../chunks/RawButton.js";
+import { B as Button } from "../../../../chunks/Button2.js";
 const MediumSubtitle = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<t class="block text-2xl md:text-3xl text-neutral-500 font-bold tracking-widest">${slots.default ? slots.default({}) : ``}</t>`;
 });

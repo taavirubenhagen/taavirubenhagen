@@ -15,7 +15,7 @@
 <svelte:window bind:innerHeight={windowHeight} />
 
 
-<Page withoutRouteIndicator>
+<Page>
     <Button openInNew onClick={() => window.location.href = "https://amzn.eu/d/gZVxnZl"}>
         Stone Key Hider
     </Button>

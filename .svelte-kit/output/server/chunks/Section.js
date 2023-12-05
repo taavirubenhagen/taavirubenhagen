@@ -1,4 +1,4 @@
-import { c as create_ssr_component, g as add_attribute, e as escape } from "./index3.js";
+import { c as create_ssr_component, d as add_attribute, e as escape } from "./index3.js";
 /* empty css        */const Section = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { className } = $$props;
   let windowHeight;

@@ -1,4 +1,4 @@
-import { h as getContext } from "./index3.js";
+import { g as getContext } from "./index3.js";
 const getStores = () => {
   const stores = getContext("__svelte__");
   return {
@@ -17,6 +17,13 @@ const page = {
     return store.subscribe(fn);
   }
 };
+const navigating = {
+  subscribe(fn) {
+    const store = getStores().navigating;
+    return store.subscribe(fn);
+  }
+};
 export {
+  navigating as n,
   page as p
 };

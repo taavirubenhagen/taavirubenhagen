@@ -15,6 +15,6 @@
 <svelte:window bind:innerHeight={windowHeight} />
 
 
-<Page withoutRouteIndicator>
+<Page>
     No product yet
 </Page>

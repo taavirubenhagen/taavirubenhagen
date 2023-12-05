@@ -2,7 +2,7 @@ import { c as create_ssr_component, v as validate_component } from "../../chunks
 /* empty css                   */import { L as LargeHeading } from "../../chunks/LargeHeading.js";
 import { P as Page } from "../../chunks/Page.js";
 const Error = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(Page, "Page").$$render($$result, { withoutRouteIndicator: true }, {}, {
+  return `${validate_component(Page, "Page").$$render($$result, {}, {}, {
     default: () => {
       return `${validate_component(LargeHeading, "LargeHeading").$$render($$result, {}, {}, {
         default: () => {

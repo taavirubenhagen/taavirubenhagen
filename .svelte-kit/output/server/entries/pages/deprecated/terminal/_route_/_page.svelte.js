@@ -1,8 +1,9 @@
-import { c as create_ssr_component, f as each, v as validate_component, e as escape, d as subscribe, g as add_attribute } from "../../../../../chunks/index3.js";
-import { B as Button, D as DeviceDetector } from "../../../../../chunks/DeviceDetector.js";
+import { c as create_ssr_component, h as each, v as validate_component, e as escape, f as subscribe, d as add_attribute } from "../../../../../chunks/index3.js";
+import { D as DeviceDetector } from "../../../../../chunks/DeviceDetector.js";
 import { p as page } from "../../../../../chunks/stores.js";
 import { b as buttonHover } from "../../../../../chunks/state.js";
-/* empty css                            */function viewedRoute(r) {
+/* empty css                            */import { B as Button } from "../../../../../chunks/Button2.js";
+function viewedRoute(r) {
   return r[0].toUpperCase() + r.slice(1);
 }
 const Menu = create_ssr_component(($$result, $$props, $$bindings, slots) => {

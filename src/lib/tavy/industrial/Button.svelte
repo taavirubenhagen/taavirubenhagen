@@ -9,6 +9,7 @@
     export let inverted = false;
     export let openInNew = false;
     export let next = false;
+    export let download = false;
     export let uniformPadding = false;
     /// Set the border width to 1 on a side you want to merge with another button
     export let borderClass = '';
@@ -25,6 +26,8 @@
                     <Icon name="open-new-window"/>
                 {:else if next}
                     <Icon name="arrow-right"/>
+                {:else if download}
+                    <Icon name="download"/>
                 {/if}
             </div>
         </MediumParagraph>

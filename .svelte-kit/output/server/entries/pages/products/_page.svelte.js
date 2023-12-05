@@ -1,12 +1,11 @@
 import { c as create_ssr_component, v as validate_component } from "../../../chunks/index3.js";
-/* empty css                      */import { S as SmallParagraph } from "../../../chunks/InlineButton.js";
+/* empty css                      */import { P as Page, S as SmallParagraph } from "../../../chunks/Page.js";
 import { B as Button } from "../../../chunks/Button.js";
-import { P as Page } from "../../../chunks/Page.js";
 const Page_1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `
 
 
-${validate_component(Page, "Page").$$render($$result, { withoutRouteIndicator: true }, {}, {
+${validate_component(Page, "Page").$$render($$result, {}, {}, {
     default: () => {
       return `${validate_component(Button, "Button").$$render(
         $$result,

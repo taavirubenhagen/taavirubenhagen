@@ -6,6 +6,6 @@
 
 
 
-<Page withoutRouteIndicator>
+<Page>
     <LargeHeading>Sorry, page not found 😞</LargeHeading>
 </Page>

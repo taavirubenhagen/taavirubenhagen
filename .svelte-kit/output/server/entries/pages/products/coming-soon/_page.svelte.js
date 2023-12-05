@@ -4,7 +4,7 @@ const Page_1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `
 
 
-${validate_component(Page, "Page").$$render($$result, { withoutRouteIndicator: true }, {}, {
+${validate_component(Page, "Page").$$render($$result, {}, {}, {
     default: () => {
       return `No product yet
 `;
