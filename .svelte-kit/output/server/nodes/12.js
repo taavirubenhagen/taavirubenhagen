@@ -1,7 +1,8 @@
-
+import * as server from '../entries/pages/deprecated/terminal/_page.server.ts.js';
 
 export const index = 12;
-export const component = async () => (await import('../entries/pages/main/newsletter/_page.svelte.js')).default;
-export const imports = ["_app/immutable/nodes/12.1e3833fa.js","_app/immutable/chunks/index.6efdc3e5.js"];
+export { server };
+export const server_id = "src/routes/deprecated/terminal/+page.server.ts";
+export const imports = [];
 export const stylesheets = [];
 export const fonts = [];

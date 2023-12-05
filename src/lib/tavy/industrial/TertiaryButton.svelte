@@ -1,19 +1,15 @@
 <script lang="ts">
     import '$style';
-    import {
-        SmallParagraph,
-        RawButton,
-    } from '$tavy';
+    import { SmallParagraph } from '$tavy';
+    import { InlineButton } from '$tavy/industrial';
 
     export let inverted = false;
     export let onClick: any;
 </script>
 
 
-<RawButton onClick={onClick}>
-    <div class="{inverted ? 'invert' : ''} underline underline-offset-4 capitalize">
-        <SmallParagraph>
-            <slot/>
-        </SmallParagraph>
-    </div>
-</RawButton>
+<InlineButton inverted={inverted} onClick={onClick}>
+    <SmallParagraph>
+        <slot/>
+    </SmallParagraph>
+</InlineButton>

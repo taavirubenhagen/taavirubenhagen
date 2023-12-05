@@ -1,73 +1,32 @@
 {
-	"/": [
-		"src/routes/+layout.server.ts",
-		"src/routes/+layout.server.ts"
-	],
+	"/": [],
 	"/admin": [
-		"src/routes/admin/+page.server.ts",
-		"src/routes/+layout.server.ts"
+		"src/routes/admin/+page.server.ts"
 	],
 	"/admin/access": [
-		"src/routes/admin/access/+page.server.ts",
-		"src/routes/+layout.server.ts"
+		"src/routes/admin/access/+page.server.ts"
 	],
 	"/admin/access/[password]": [
-		"src/routes/admin/access/[password]/+page.server.ts",
-		"src/routes/+layout.server.ts"
+		"src/routes/admin/access/[password]/+page.server.ts"
 	],
-	"/admin/login/[state]": [
-		"src/routes/+layout.server.ts"
+	"/admin/login/[state]": [],
+	"/deprecated/home": [],
+	"/deprecated/main/home-dev": [],
+	"/deprecated/main/home": [],
+	"/deprecated/main/newsletter": [],
+	"/deprecated/main/projects": [],
+	"/deprecated/terminal": [
+		"src/routes/deprecated/terminal/+page.server.ts"
 	],
-	"/home": [
-		"src/routes/+layout.server.ts"
-	],
-	"/legal/contact": [
-		"src/routes/+layout.server.ts"
-	],
-	"/legal/privacy-policy": [
-		"src/routes/+layout.server.ts"
-	],
-	"/main/home-dev": [
-		"src/routes/+layout.server.ts"
-	],
-	"/main/home": [
-		"src/routes/+layout.server.ts"
-	],
-	"/main/newsletter": [
-		"src/routes/+layout.server.ts"
-	],
-	"/main/presenter/download-legacy": [
-		"src/routes/+layout.server.ts"
-	],
-	"/main/presenter/download": [
-		"src/routes/+layout.server.ts"
-	],
-	"/main/presenter/privacy-policy": [
-		"src/routes/+layout.server.ts"
-	],
-	"/main/presenter/support-url": [
-		"src/routes/+layout.server.ts"
-	],
-	"/main/presenter/waitlist": [
-		"src/routes/+layout.server.ts"
-	],
-	"/main/projects": [
-		"src/routes/+layout.server.ts"
-	],
-	"/products": [
-		"src/routes/+layout.server.ts"
-	],
-	"/projects": [
-		"src/routes/+layout.server.ts"
-	],
-	"/terminal": [
-		"src/routes/terminal/+page.server.ts",
-		"src/routes/+layout.server.ts"
-	],
-	"/terminal/[route]": [
-		"src/routes/+layout.server.ts"
-	],
-	"/tts": [
-		"src/routes/+layout.server.ts"
-	]
+	"/deprecated/terminal/[route]": [],
+	"/deprecated/tts": [],
+	"/legal/contact": [],
+	"/legal/privacy-policy": [],
+	"/presenter/download": [],
+	"/presenter/privacy-policy": [],
+	"/presenter/support-url": [],
+	"/presenter/waitlist": [],
+	"/products": [],
+	"/products/coming-soon": [],
+	"/projects": []
 }

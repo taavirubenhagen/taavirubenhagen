@@ -16,17 +16,15 @@
 
 
 <Page withoutRouteIndicator>
-    <div class='flex flex-col justify-center items-stretch'>
-        <Button openInNew onClick={() => window.location.href = "/products/home"}>
-            The Affiliate
-        </Button>
-        <Button openInNew onClick={() => window.location.href = "/products/home"} borderClass='border-t-0'>
-            Links Will
-        </Button>
-        <Button openInNew onClick={() => window.location.href = "/products/home"} borderClass='border-t-0'>
-            Be Put Here
-        </Button>
-    </div>
+    <Button openInNew onClick={() => window.location.href = "https://amzn.eu/d/gZVxnZl"}>
+        Stone Key Hider
+    </Button>
+    <Button openInNew onClick={() => window.location.href = "/products/coming-soon"} borderClass='border-t-0'>
+        ...
+    </Button>
+    <Button openInNew onClick={() => window.location.href = "/products/coming-soon"} borderClass='border-t-0'>
+        ...
+    </Button>
     <div class='absolute bottom-8 px-8 text-center'>
         <SmallParagraph>
             <!--As an Amazon Associate I [will] earn from qualifying purchases.-->

@@ -1,7 +1,7 @@
 import { c as create_ssr_component, v as validate_component } from "../../chunks/index3.js";
 /* empty css                   */import { B as Button } from "../../chunks/Button.js";
 import { B as ButtonSeperator } from "../../chunks/ButtonSeperator.js";
-import { P as Page } from "../../chunks/TertiaryButton.js";
+import { P as Page } from "../../chunks/Page.js";
 const Page_1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `${validate_component(Page, "Page").$$render($$result, {}, {}, {
     default: () => {
@@ -80,12 +80,27 @@ const Page_1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         $$result,
         {
           openInNew: true,
-          onClick: () => window.location.href = "https://www.instagram.com/taavirubenhagen/"
+          onClick: () => window.location.href = "https://www.instagram.com/taavirubenhagen"
         },
         {},
         {
           default: () => {
             return `@taavirubenhagen
+    `;
+          }
+        }
+      )}
+    ${validate_component(Button, "Button").$$render(
+        $$result,
+        {
+          openInNew: true,
+          borderClass: "border-t-0",
+          onClick: () => window.location.href = "https://www.buymeacoffee.com/taavirubenhagen"
+        },
+        {},
+        {
+          default: () => {
+            return `Buy Me a Coffee
     `;
           }
         }

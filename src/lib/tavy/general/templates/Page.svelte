@@ -6,7 +6,7 @@
 </script>
 
 
-<Section className='p-8 pt-24 center_col'>
+<Section className='p-8 { withoutRouteIndicator ? '' : 'pt-24' } center_col'>
     {#if !withoutRouteIndicator && false}
         <RouteIndicator/>
     {/if}

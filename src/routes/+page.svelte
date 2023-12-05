@@ -15,8 +15,11 @@
     </Button>
     <Button openInNew borderClass='border-t-0' onClick={() => alert('Coming soon!')}>Presenter (iOS)</Button>
     <ButtonSeperator/>
-    <Button openInNew onClick={() => window.location.href = 'https://www.instagram.com/taavirubenhagen/'}>
+    <Button openInNew onClick={() => window.location.href = 'https://www.instagram.com/taavirubenhagen'}>
         @taavirubenhagen
+    </Button>
+    <Button openInNew borderClass='border-t-0' onClick={() => window.location.href = 'https://www.buymeacoffee.com/taavirubenhagen'}>
+        Buy Me a Coffee
     </Button>
     <ButtonSeperator/>
     <Button next onClick={() => window.location.href = '/admin'}>Admin</Button>

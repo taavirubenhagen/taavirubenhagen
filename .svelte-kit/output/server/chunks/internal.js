@@ -1,4 +1,4 @@
-import { c as create_ssr_component, s as setContext, a as afterUpdate, o as onMount, v as validate_component, m as missing_component, e as escape } from "./index3.js";
+import { c as create_ssr_component, s as setContext, a as afterUpdate, o as onMount, v as validate_component, m as missing_component, t as tick, e as escape } from "./index3.js";
 let base = "";
 let assets = base;
 const initial = { base, assets };
@@ -36,7 +36,9 @@ const Root = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     const unsubscribe = stores.page.subscribe(() => {
       if (mounted) {
         navigated = true;
-        title = document.title || "untitled page";
+        tick().then(() => {
+          title = document.title || "untitled page";
+        });
       }
     });
     mounted = true;
@@ -113,13 +115,14 @@ const options = {
   track_server_fetches: false,
   embedded: false,
   env_public_prefix: "PUBLIC_",
+  env_private_prefix: "",
   hooks: null,
   preload_strategy: "modulepreload",
   root: Root,
   service_worker: false,
   templates: {
-    app: ({ head, body, assets: assets2, nonce, env }) => '\r\n<!DOCTYPE html>\r\n<html lang="en">\r\n	<head>\r\n		<meta charset="utf-8" />\r\n		<link rel="icon" href="' + assets2 + '/logos/logo_favicon_light.svg" />\r\n		<title>Taavi R\xFCbenhagen</title>\r\n		<meta name="viewport" content="width=device-width" />\r\n		<meta name="theme-color" content="#000">\r\n\r\n		<link rel="preconnect" href="https://fonts.googleapis.com"/>\r\n		<link rel="preconnect" href="https://fonts.gstatic.com"/>\r\n		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dongle&family=Young+Serif&family=Yellowtail&family=Caveat&family=Permanent+Marker&family=IBM+Plex+Mono&family=Lexend&display=swap"/>\r\n		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css">\r\n\r\n		<script>\r\n			import "./global.postcss";\r\n		<\/script>\r\n		\r\n		' + head + "\r\n	</head>\r\n	<body>\r\n		<div>" + body + "</div>\r\n	</body>\r\n</html>\r\n",
-    error: ({ status, message }) => '<!DOCTYPE html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<title>' + message + `</title>
+    app: ({ head, body, assets: assets2, nonce, env }) => '<!DOCTYPE html>\r\n<html lang="en">\r\n	<head>\r\n		<meta charset="utf-8" />\r\n		<!--<link rel="icon" href="' + assets2 + '/logos/logo_favicon_light.svg" />-->\r\n		<title>Taavi R\xFCbenhagen</title>\r\n		<meta name="viewport" content="width=device-width" />\r\n		<meta name="theme-color" content="#000">\r\n\r\n		<link rel="preconnect" href="https://fonts.googleapis.com"/>\r\n		<link rel="preconnect" href="https://fonts.gstatic.com"/>\r\n		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dongle&family=Young+Serif&family=Yellowtail&family=Caveat&family=Permanent+Marker&family=IBM+Plex+Mono&family=Lexend&display=swap"/>\r\n		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css">\r\n		\r\n		' + head + "\r\n	</head>\r\n    <script><\/script>\r\n	<body>\r\n		<div>" + body + "</div>\r\n	</body>\r\n</html>\r\n",
+    error: ({ status, message }) => '<!doctype html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<title>' + message + `</title>
 
 		<style>
 			body {
@@ -128,12 +131,23 @@ const options = {
 				--divider: #ccc;
 				background: var(--bg);
 				color: var(--fg);
-				font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-					Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+				font-family:
+					system-ui,
+					-apple-system,
+					BlinkMacSystemFont,
+					'Segoe UI',
+					Roboto,
+					Oxygen,
+					Ubuntu,
+					Cantarell,
+					'Open Sans',
+					'Helvetica Neue',
+					sans-serif;
 				display: flex;
 				align-items: center;
 				justify-content: center;
 				height: 100vh;
+				margin: 0;
 			}
 
 			.error {
@@ -179,7 +193,7 @@ const options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "20azj"
+  version_hash: "e87pma"
 };
 function get_hooks() {
   return {};
@@ -187,12 +201,12 @@ function get_hooks() {
 export {
   assets as a,
   base as b,
-  set_assets as c,
-  set_building as d,
-  set_private_env as e,
+  set_public_env as c,
+  set_assets as d,
+  set_building as e,
   get_hooks as g,
   options as o,
   public_env as p,
   reset as r,
-  set_public_env as s
+  set_private_env as s
 };

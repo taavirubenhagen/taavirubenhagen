@@ -13,13 +13,10 @@ const production = !process.env.ROLLUP_WATCH;
 
 module.exports = {
     mode: 'jit',
-    content: ["./src/**/*.{html,js,svelte,ts}"],
-    purge: {
-        content: [
-            "./src/**/*.svelte",
-        ],
-        enabled: production,
-    },
+    content: [
+        //"./src/*.{html,svelte,postcss}",
+        "./src/**",
+    ],
     plugins: [],
     theme: {
         fontFamily: {

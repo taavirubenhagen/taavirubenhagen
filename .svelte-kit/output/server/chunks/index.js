@@ -35,7 +35,7 @@ function redirect(status, location) {
   if (isNaN(status) || status < 300 || status > 308) {
     throw new Error("Invalid status code");
   }
-  return new Redirect(status, location);
+  return new Redirect(status, location.toString());
 }
 function json(data, init) {
   const body = JSON.stringify(data);
@@ -55,7 +55,12 @@ const encoder = new TextEncoder();
 function text(body, init) {
   const headers = new Headers(init?.headers);
   if (!headers.has("content-length")) {
-    headers.set("content-length", encoder.encode(body).byteLength.toString());
+    const encoded = encoder.encode(body);
+    headers.set("content-length", encoded.byteLength.toString());
+    return new Response(encoded, {
+      ...init,
+      headers
+    });
   }
   return new Response(body, {
     ...init,

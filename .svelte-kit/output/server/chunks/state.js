@@ -1,7 +1,7 @@
 import { w as writable } from "./index2.js";
 const globalScrollY = writable(0);
-const cursorButtonHover = writable(false);
+const buttonHover = writable(false);
 export {
-  cursorButtonHover as c,
+  buttonHover as b,
   globalScrollY as g
 };

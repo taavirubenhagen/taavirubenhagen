@@ -27,7 +27,7 @@ export const nodes = [
 	() => import('./nodes/23')
 ];
 
-export const server_loads = [0];
+export const server_loads = [];
 
 export const dictionary = {
 		"/": [2],
@@ -35,23 +35,23 @@ export const dictionary = {
 		"/admin/access": [~4],
 		"/admin/access/[password]": [~5],
 		"/admin/login/[state]": [6],
-		"/home": [7],
-		"/legal/contact": [8],
-		"/legal/privacy-policy": [9],
-		"/main/home-dev": [11],
-		"/main/home": [10],
-		"/main/newsletter": [12],
-		"/main/presenter/download-legacy": [14],
-		"/main/presenter/download": [13],
-		"/main/presenter/privacy-policy": [15],
-		"/main/presenter/support-url": [16],
-		"/main/presenter/waitlist": [17],
-		"/main/projects": [18],
-		"/products": [19],
-		"/projects": [20],
-		"/terminal": [~21],
-		"/terminal/[route]": [22],
-		"/tts": [23]
+		"/deprecated/home": [7],
+		"/deprecated/main/home-dev": [9],
+		"/deprecated/main/home": [8],
+		"/deprecated/main/newsletter": [10],
+		"/deprecated/main/projects": [11],
+		"/deprecated/terminal": [~12],
+		"/deprecated/terminal/[route]": [13],
+		"/deprecated/tts": [14],
+		"/legal/contact": [15],
+		"/legal/privacy-policy": [16],
+		"/presenter/download": [17],
+		"/presenter/privacy-policy": [18],
+		"/presenter/support-url": [19],
+		"/presenter/waitlist": [20],
+		"/products": [21],
+		"/products/coming-soon": [22],
+		"/projects": [23]
 	};
 
 export const hooks = {

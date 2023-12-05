@@ -1,8 +1,8 @@
-import { c as create_ssr_component, e as escape, d as add_attribute, v as validate_component, f as subscribe } from "../../../../../chunks/index3.js";
+import { c as create_ssr_component, e as escape, g as add_attribute, v as validate_component, d as subscribe } from "../../../../../chunks/index3.js";
 import { p as page } from "../../../../../chunks/stores.js";
 /* empty css                            */import { I as Icon } from "../../../../../chunks/icon.js";
 import { B as Button } from "../../../../../chunks/Button.js";
-import { P as Page } from "../../../../../chunks/TertiaryButton.js";
+import { P as Page } from "../../../../../chunks/Page.js";
 const TextField = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { inverted = false } = $$props;
   let { autofocus = false } = $$props;
