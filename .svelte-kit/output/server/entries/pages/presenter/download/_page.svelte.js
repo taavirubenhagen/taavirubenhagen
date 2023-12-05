@@ -32,9 +32,10 @@ const Page_1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
           )}</a>
             <br><br>
             <br><br>
-            2. You might get antivirus warnings since I don&#39;t have the money to buy expensive security certificates for the app.
-            If you are concerned about getting malware, just keep in mind that my contact info is public and shared with the app stores
-            and I could therefore be made fully responsible if I tried to hack you.<br><br>
+            2. You might get antivirus warnings since I don&#39;t have the money to buy expensive security certificates
+            (which are just a proof of security and don&#39;t improve it).
+            If you are concerned about getting malware, just keep in mind that my contact info is public
+            and I could therefore be made fully responsible for any security risks.<br><br>
             3. Refer to the <span class="font-bold">${validate_component(InlineButton, "InlineButton").$$render(
             $$result,
             {
@@ -49,7 +50,7 @@ const Page_1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
             }
           )}</span> if you don&#39;t know how to dismiss the warning.
             <span class="font-bold">If prompted, allow &quot;Communication in private networks&quot;.</span> This is necessary since the communication between the devices uses WiFi.<br><br>
-            4. Whenever you want to present, open this app as well as your PowerPoint presentation and use the mobile app to connect and control the presentation.<br><br>
+            4. Whenever you want to present, open this app as well as your PowerPoint presentation, then use the mobile app to connect the devices and control the presentation.<br><br>
             5. If you have any questions or concerns, feel free to contact me at taavi.ruebenhagen@gmail.com.<br><br>`;
         }
       })}</div>`;

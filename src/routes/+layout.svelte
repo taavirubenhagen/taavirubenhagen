@@ -28,6 +28,7 @@
     }}
     class='relative cursor-none'
 >
+    <Cursor bindThis={cursor}/>
     {#if navigating}
         <Page>
             <LargeHeading>
@@ -36,8 +37,7 @@
         </Page>
     {:else}
         <!-- TODO: Add standard scrollbar effects -->
-        <Cursor bindThis={cursor}/>
         <slot/>
         <LegalFooter contactLink='/legal/contact' ppLink='/legal/privacy-policy'/>
     {/if}
-</main>
+</m
