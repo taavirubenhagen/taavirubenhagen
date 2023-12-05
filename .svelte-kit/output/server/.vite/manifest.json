@@ -44,13 +44,7 @@
     "src": "src/routes/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index3.js",
-      "_Button.js",
-      "_ButtonSeperator.js",
-      "_Page.js"
-    ],
-    "css": [
-      "_app/immutable/assets/global.4c1353ff.css"
+      "_index3.js"
     ]
   },
   "src/routes/admin/+page.server.ts": {
@@ -299,8 +293,7 @@
     "isEntry": true,
     "imports": [
       "_index3.js",
-      "_Button.js",
-      "_ButtonSeperator.js"
+      "_Button.js"
     ],
     "css": [
       "_app/immutable/assets/global.4c1353ff.css"
@@ -394,16 +387,6 @@
     "file": "chunks/RawButton.js",
     "imports": [
       "_index3.js"
-    ],
-    "css": [
-      "_app/immutable/assets/global.4c1353ff.css"
-    ]
-  },
-  "_ButtonSeperator.js": {
-    "file": "chunks/ButtonSeperator.js",
-    "imports": [
-      "_index3.js",
-      "_Button.js"
     ],
     "css": [
       "_app/immutable/assets/global.4c1353ff.css"

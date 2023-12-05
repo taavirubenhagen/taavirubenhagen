@@ -3,6 +3,6 @@
 export const index = 18;
 let component_cache;
 export const component = async () => component_cache ??= (await import('../entries/pages/presenter/privacy-policy/_page.svelte.js')).default;
-export const imports = ["_app/immutable/nodes/18.d5adad8e.js","_app/immutable/chunks/index.1392673c.js","_app/immutable/chunks/SmallHeading.a0e3fb22.js","_app/immutable/chunks/LargeHeading.9f5fec2d.js","_app/immutable/chunks/paths.4aba8c66.js","_app/immutable/chunks/Page.70238cf1.js","_app/immutable/chunks/stores.aa955273.js","_app/immutable/chunks/singletons.fcd27c85.js","_app/immutable/chunks/index.5385f864.js","_app/immutable/chunks/RawButton.a70034b9.js","_app/immutable/chunks/state.f5cc2a9e.js","_app/immutable/chunks/Section.7461f5b2.js"];
+export const imports = ["_app/immutable/nodes/18.98235c2c.js","_app/immutable/chunks/index.35b8ce9f.js","_app/immutable/chunks/SmallHeading.2480ce94.js","_app/immutable/chunks/LargeHeading.f6bbb567.js","_app/immutable/chunks/paths.31700428.js","_app/immutable/chunks/Page.a73748d8.js","_app/immutable/chunks/stores.7aae8a81.js","_app/immutable/chunks/singletons.f0827759.js","_app/immutable/chunks/index.b94acf3e.js","_app/immutable/chunks/RawButton.8f3732a0.js","_app/immutable/chunks/state.dba43285.js","_app/immutable/chunks/Section.b31ef7ba.js"];
 export const stylesheets = ["_app/immutable/assets/global.90099ecd.css"];
 export const fonts = [];

@@ -1,4 +1,4 @@
-<script lang="ts">
+<!--<script lang="ts">
     import '$style';
     import { Page } from "$tavy";
     import { Button, ButtonSeperator } from '$tavy/industrial';
@@ -23,4 +23,4 @@
     </Button>
     <ButtonSeperator/>
     <Button next onClick={() => window.location.href = '/admin'}>Admin</Button>
-</Page>
+</Page>-->
