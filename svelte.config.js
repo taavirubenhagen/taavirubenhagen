@@ -13,13 +13,9 @@ const config = {
 		alias: {
 			$src: path.resolve('./src'),
 			$static: path.resolve('./static/'),
-			$util: path.resolve("./src/lib/util/"),
 			$tavy: path.resolve("./src/lib/tavy/"),
-			$lib: path.resolve("./src/main/lib"),
 			$style: path.resolve("./src/global.postcss"),
 			$state: path.resolve("./src/state.ts"),
-
-			$buttons: path.resolve("./src/lib/util/buttons"),
 		}
 	}
 };

@@ -13,23 +13,11 @@
 			"$static/*": [
 				"../static/*"
 			],
-			"$util": [
-				"../src/lib/util"
-			],
-			"$util/*": [
-				"../src/lib/util/*"
-			],
 			"$tavy": [
 				"../src/lib/tavy"
 			],
 			"$tavy/*": [
 				"../src/lib/tavy/*"
-			],
-			"$lib": [
-				"../src/lib"
-			],
-			"$lib/*": [
-				"../src/lib/*"
 			],
 			"$style": [
 				"../src/global.postcss"
@@ -37,11 +25,11 @@
 			"$state": [
 				"../src/state.ts"
 			],
-			"$buttons": [
-				"../src/lib/util/buttons"
+			"$lib": [
+				"../src/lib"
 			],
-			"$buttons/*": [
-				"../src/lib/util/buttons/*"
+			"$lib/*": [
+				"../src/lib/*"
 			]
 		},
 		"rootDirs": [
