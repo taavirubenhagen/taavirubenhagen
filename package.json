@@ -19,7 +19,7 @@
 		"autoprefixer": "^10.4.14",
 		"path": "^0.12.7",
 		"postcss": "^8.4.26",
-		"svelte": "^3.54.0",
+		"svelte": "^3.59.2",
 		"svelte-check": "^2.9.2",
 		"svelte-device-detector": "^0.2.2",
 		"svelte-scrollto-element": "^0.7.0",

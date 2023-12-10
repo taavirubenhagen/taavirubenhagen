@@ -1,8 +1,7 @@
 <script lang="ts">
-    import { navigating } from '$app/stores';
-    import { globalScrollY } from "$state";
+    //import { navigating } from '$app/stores';
+    import { cursorPosition, globalScrollY } from "$state";
     import "$style";
-    import { LargeHeading, Page } from '$tavy';
     import { Cursor } from '$tavy/identity';
     import { LegalFooter } from "$tavy/industrial";
 
@@ -18,26 +17,23 @@
 
 
 <main
-    on:mousemove={(event) => {
-        cursor.style.left = event.clientX + 'px';
-        cursor.style.top = event.clientY + 'px';
-    }}
+    on:mousemove={(event) => $cursorPosition = [event.clientX, event.clientY]}
     on:scroll={(event) => {
         scrollY = event?.currentTarget?.scrollTop;
         globalScrollY.set(event?.currentTarget?.scrollTop);
     }}
     class='relative cursor-none'
 >
-    <Cursor bindThis={cursor}/>
-    {#if navigating}
+    <Cursor/>
+    <!--{#if navigating}
         <Page>
             <LargeHeading>
                 Loading ↺
             </LargeHeading>
         </Page>
-    {:else}
+    {:else}-->
         <!-- TODO: Add standard scrollbar effects -->
         <slot/>
-    {/if}
+    <!--{/if}-->
     <LegalFooter contactLink='/legal/contact' ppLink='/legal/privacy-policy'/>
 </main>

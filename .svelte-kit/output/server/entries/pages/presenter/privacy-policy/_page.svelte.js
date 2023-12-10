@@ -1,7 +1,7 @@
 import { c as create_ssr_component, v as validate_component } from "../../../../chunks/index3.js";
 /* empty css                         */import { S as SmallHeading } from "../../../../chunks/SmallHeading.js";
 import { L as LargeHeading } from "../../../../chunks/LargeHeading.js";
-import { P as Page } from "../../../../chunks/Page.js";
+import { P as Page } from "../../../../chunks/InlineButton.js";
 const Page_1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `${validate_component(Page, "Page").$$render($$result, {}, {}, {
     default: () => {

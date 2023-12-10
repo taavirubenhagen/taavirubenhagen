@@ -15,15 +15,12 @@
     "isEntry": true,
     "imports": [
       "_index3.js",
-      "_stores.js",
-      "_LargeHeading.js",
-      "_Button.js",
-      "_Page.js",
+      "_state.js",
       "_DeviceDetector.js",
-      "_state.js"
+      "_Button.js"
     ],
     "css": [
-      "_app/immutable/assets/global.4c1353ff.css"
+      "_app/immutable/assets/global.9e92755e.css"
     ]
   },
   "src/routes/+error.svelte": {
@@ -33,10 +30,10 @@
     "imports": [
       "_index3.js",
       "_LargeHeading.js",
-      "_Page.js"
+      "_InlineButton.js"
     ],
     "css": [
-      "_app/immutable/assets/global.4c1353ff.css"
+      "_app/immutable/assets/global.9e92755e.css"
     ]
   },
   "src/routes/+page.svelte": {
@@ -44,7 +41,13 @@
     "src": "src/routes/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index3.js"
+      "_index3.js",
+      "_Button.js",
+      "_ButtonSeperator.js",
+      "_InlineButton.js"
+    ],
+    "css": [
+      "_app/immutable/assets/global.9e92755e.css"
     ]
   },
   "src/routes/admin/+page.server.ts": {
@@ -70,10 +73,10 @@
     "imports": [
       "_index3.js",
       "_SmallHeading.js",
-      "_Page.js"
+      "_InlineButton.js"
     ],
     "css": [
-      "_app/immutable/assets/global.4c1353ff.css"
+      "_app/immutable/assets/global.9e92755e.css"
     ]
   },
   "src/routes/admin/access/[password]/+page.server.ts": {
@@ -93,10 +96,10 @@
       "_stores.js",
       "_RawButton.js",
       "_Button.js",
-      "_Page.js"
+      "_InlineButton.js"
     ],
     "css": [
-      "_app/immutable/assets/global.4c1353ff.css"
+      "_app/immutable/assets/global.9e92755e.css"
     ]
   },
   "src/routes/deprecated/home/+page.svelte": {
@@ -113,7 +116,7 @@
       "_Button2.js"
     ],
     "css": [
-      "_app/immutable/assets/global.4c1353ff.css"
+      "_app/immutable/assets/global.9e92755e.css"
     ]
   },
   "src/routes/deprecated/main/home/+page.svelte": {
@@ -126,7 +129,7 @@
       "_O1.js"
     ],
     "css": [
-      "_app/immutable/assets/global.4c1353ff.css"
+      "_app/immutable/assets/global.9e92755e.css"
     ]
   },
   "src/routes/deprecated/main/home-dev/+page.svelte": {
@@ -139,7 +142,7 @@
       "_O1.js"
     ],
     "css": [
-      "_app/immutable/assets/global.4c1353ff.css"
+      "_app/immutable/assets/global.9e92755e.css"
     ]
   },
   "src/routes/deprecated/main/newsletter/+page.svelte": {
@@ -158,7 +161,7 @@
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/global.4c1353ff.css"
+      "_app/immutable/assets/global.9e92755e.css"
     ]
   },
   "src/routes/deprecated/terminal/+page.server.ts": {
@@ -181,7 +184,7 @@
       "_Button2.js"
     ],
     "css": [
-      "_app/immutable/assets/global.4c1353ff.css"
+      "_app/immutable/assets/global.9e92755e.css"
     ]
   },
   "src/routes/deprecated/tts/+page.svelte": {
@@ -202,7 +205,7 @@
       "_Section.js"
     ],
     "css": [
-      "_app/immutable/assets/global.4c1353ff.css"
+      "_app/immutable/assets/global.9e92755e.css"
     ]
   },
   "src/routes/legal/privacy-policy/+page.svelte": {
@@ -215,7 +218,7 @@
       "_Section.js"
     ],
     "css": [
-      "_app/immutable/assets/global.4c1353ff.css"
+      "_app/immutable/assets/global.9e92755e.css"
     ]
   },
   "src/routes/presenter/download/+page.svelte": {
@@ -224,12 +227,12 @@
     "isEntry": true,
     "imports": [
       "_index3.js",
-      "_Page.js",
+      "_InlineButton.js",
       "_LargeHeading.js",
       "_Button.js"
     ],
     "css": [
-      "_app/immutable/assets/global.4c1353ff.css"
+      "_app/immutable/assets/global.9e92755e.css"
     ]
   },
   "src/routes/presenter/privacy-policy/+page.svelte": {
@@ -240,10 +243,10 @@
       "_index3.js",
       "_SmallHeading.js",
       "_LargeHeading.js",
-      "_Page.js"
+      "_InlineButton.js"
     ],
     "css": [
-      "_app/immutable/assets/global.4c1353ff.css"
+      "_app/immutable/assets/global.9e92755e.css"
     ]
   },
   "src/routes/presenter/support-url/+page.svelte": {
@@ -268,11 +271,11 @@
     "isEntry": true,
     "imports": [
       "_index3.js",
-      "_Page.js",
+      "_InlineButton.js",
       "_Button.js"
     ],
     "css": [
-      "_app/immutable/assets/global.4c1353ff.css"
+      "_app/immutable/assets/global.9e92755e.css"
     ]
   },
   "src/routes/products/coming-soon/+page.svelte": {
@@ -281,10 +284,10 @@
     "isEntry": true,
     "imports": [
       "_index3.js",
-      "_Page.js"
+      "_InlineButton.js"
     ],
     "css": [
-      "_app/immutable/assets/global.4c1353ff.css"
+      "_app/immutable/assets/global.9e92755e.css"
     ]
   },
   "src/routes/projects/+page.svelte": {
@@ -293,10 +296,11 @@
     "isEntry": true,
     "imports": [
       "_index3.js",
-      "_Button.js"
+      "_Button.js",
+      "_ButtonSeperator.js"
     ],
     "css": [
-      "_app/immutable/assets/global.4c1353ff.css"
+      "_app/immutable/assets/global.9e92755e.css"
     ]
   },
   ".svelte-kit/generated/server/internal.js": {
@@ -325,31 +329,16 @@
   "_index3.js": {
     "file": "chunks/index3.js"
   },
-  "_stores.js": {
-    "file": "chunks/stores.js",
+  "_state.js": {
+    "file": "chunks/state.js",
     "imports": [
-      "_index3.js"
+      "_index2.js"
     ]
   },
-  "_LargeHeading.js": {
-    "file": "chunks/LargeHeading.js",
+  "_DeviceDetector.js": {
+    "file": "chunks/DeviceDetector.js",
     "imports": [
       "_index3.js"
-    ],
-    "css": [
-      "_app/immutable/assets/global.4c1353ff.css"
-    ]
-  },
-  "_Page.js": {
-    "file": "chunks/Page.js",
-    "imports": [
-      "_index3.js",
-      "_stores.js",
-      "_RawButton.js",
-      "_Section.js"
-    ],
-    "css": [
-      "_app/immutable/assets/global.4c1353ff.css"
     ]
   },
   "_Button.js": {
@@ -359,28 +348,7 @@
       "_RawButton.js"
     ],
     "css": [
-      "_app/immutable/assets/global.4c1353ff.css"
-    ]
-  },
-  "_Section.js": {
-    "file": "chunks/Section.js",
-    "imports": [
-      "_index3.js"
-    ],
-    "css": [
-      "_app/immutable/assets/global.4c1353ff.css"
-    ]
-  },
-  "_DeviceDetector.js": {
-    "file": "chunks/DeviceDetector.js",
-    "imports": [
-      "_index3.js"
-    ]
-  },
-  "_state.js": {
-    "file": "chunks/state.js",
-    "imports": [
-      "_index2.js"
+      "_app/immutable/assets/global.9e92755e.css"
     ]
   },
   "_RawButton.js": {
@@ -389,7 +357,53 @@
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/global.4c1353ff.css"
+      "_app/immutable/assets/global.9e92755e.css"
+    ]
+  },
+  "_LargeHeading.js": {
+    "file": "chunks/LargeHeading.js",
+    "imports": [
+      "_index3.js"
+    ],
+    "css": [
+      "_app/immutable/assets/global.9e92755e.css"
+    ]
+  },
+  "_InlineButton.js": {
+    "file": "chunks/InlineButton.js",
+    "imports": [
+      "_index3.js",
+      "_stores.js",
+      "_Section.js",
+      "_RawButton.js"
+    ],
+    "css": [
+      "_app/immutable/assets/global.9e92755e.css"
+    ]
+  },
+  "_Section.js": {
+    "file": "chunks/Section.js",
+    "imports": [
+      "_index3.js"
+    ],
+    "css": [
+      "_app/immutable/assets/global.9e92755e.css"
+    ]
+  },
+  "_stores.js": {
+    "file": "chunks/stores.js",
+    "imports": [
+      "_index3.js"
+    ]
+  },
+  "_ButtonSeperator.js": {
+    "file": "chunks/ButtonSeperator.js",
+    "imports": [
+      "_index3.js",
+      "_Button.js"
+    ],
+    "css": [
+      "_app/immutable/assets/global.9e92755e.css"
     ]
   },
   "_SmallHeading.js": {
@@ -398,7 +412,7 @@
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/global.4c1353ff.css"
+      "_app/immutable/assets/global.9e92755e.css"
     ]
   },
   "_Button2.js": {
@@ -408,7 +422,7 @@
       "_RawButton.js"
     ],
     "css": [
-      "_app/immutable/assets/global.4c1353ff.css"
+      "_app/immutable/assets/global.9e92755e.css"
     ]
   },
   "_O1.js": {
@@ -417,7 +431,7 @@
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/global.4c1353ff.css"
+      "_app/immutable/assets/global.9e92755e.css"
     ]
   }
 }

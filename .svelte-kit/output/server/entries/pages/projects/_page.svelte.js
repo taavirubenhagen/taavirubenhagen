@@ -1,20 +1,6 @@
 import { c as create_ssr_component, v as validate_component } from "../../../chunks/index3.js";
 /* empty css                      */import { B as Button } from "../../../chunks/Button.js";
-const ButtonSeperator = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<div class="opacity-0 pointer-events-none">${validate_component(Button, "Button").$$render(
-    $$result,
-    {
-      onClick: () => {
-      }
-    },
-    {},
-    {
-      default: () => {
-        return `_`;
-      }
-    }
-  )}</div>`;
-});
+import { B as ButtonSeperator } from "../../../chunks/ButtonSeperator.js";
 const Page_1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `
 

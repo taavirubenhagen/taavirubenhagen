@@ -1,10 +1,26 @@
-import { c as create_ssr_component, v as validate_component, e as escape, d as add_attribute } from "../../chunks/index3.js";
-import { n as navigating } from "../../chunks/stores.js";
-/* empty css                   */import { L as LargeHeading } from "../../chunks/LargeHeading.js";
+import { c as create_ssr_component, d as subscribe, v as validate_component, e as escape } from "../../chunks/index3.js";
+import { b as buttonHover, c as cursorPosition } from "../../chunks/state.js";
+/* empty css                   */import { D as DeviceDetector } from "../../chunks/DeviceDetector.js";
 import { B as Button } from "../../chunks/Button.js";
-import { P as Page } from "../../chunks/Page.js";
-import { D as DeviceDetector } from "../../chunks/DeviceDetector.js";
-import { b as buttonHover } from "../../chunks/state.js";
+const Cursor = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let $buttonHover, $$unsubscribe_buttonHover;
+  let $cursorPosition, $$unsubscribe_cursorPosition;
+  $$unsubscribe_buttonHover = subscribe(buttonHover, (value) => $buttonHover = value);
+  $$unsubscribe_cursorPosition = subscribe(cursorPosition, (value) => $cursorPosition = value);
+  $$unsubscribe_buttonHover();
+  $$unsubscribe_cursorPosition();
+  return `${validate_component(DeviceDetector, "DeviceDetector").$$render($$result, { showInDevice: "desktop" }, {}, {
+    default: () => {
+      return `<div class="${escape(
+        $buttonHover ? "w-8 h-8 opacity-25" : "w-4 h-4 opacity-100",
+        true
+      ) + " duration-300 fixed z-50 -translate-x-1/2 -translate-y-1/2 pointer-events-none backdrop-invert rounded-full"}" style="${"left: " + escape($cursorPosition[0], true) + "px; top: " + escape($cursorPosition[1], true) + "px; transition-property: transform, opacity, width, height; " + escape(
+        $buttonHover ? "transition-timing-function: cubic-bezier(.2, 0, .1, .9);" : "transition-timing-function: cubic-bezier(.5, 0, .5, 1);",
+        true
+      )}"></div>`;
+    }
+  })}`;
+});
 const LegalFooter = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { contactLink } = $$props;
   let { ppLink } = $$props;
@@ -39,45 +55,20 @@ const LegalFooter = create_ssr_component(($$result, $$props, $$bindings, slots) 
     }
   )}</div>`;
 });
-const Cursor = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let { bindThis } = $$props;
-  let localButtonHover;
-  buttonHover.subscribe((value) => {
-    localButtonHover = value;
-  });
-  if ($$props.bindThis === void 0 && $$bindings.bindThis && bindThis !== void 0)
-    $$bindings.bindThis(bindThis);
-  return `${validate_component(DeviceDetector, "DeviceDetector").$$render($$result, { showInDevice: "desktop" }, {}, {
-    default: () => {
-      return `<div class="${escape(
-        localButtonHover ? "w-8 h-8 opacity-25" : "w-4 h-4 opacity-100",
-        true
-      ) + " duration-300 fixed z-50 -translate-x-1/2 -translate-y-1/2 pointer-events-none backdrop-invert rounded-full"}" style="${"transition-property: transform, opacity, width, height; " + escape(
-        localButtonHover ? "transition-timing-function: cubic-bezier(.2, 0, .1, .9);" : "transition-timing-function: cubic-bezier(.5, 0, .5, 1);",
-        true
-      )}"${add_attribute("this", bindThis, 0)}></div>`;
-    }
-  })}`;
-});
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let cursor;
+  let $$unsubscribe_cursorPosition;
+  $$unsubscribe_cursorPosition = subscribe(cursorPosition, (value) => value);
+  $$unsubscribe_cursorPosition();
   return `
 
 
 
 
-<main class="relative cursor-none">${validate_component(Cursor, "Cursor").$$render($$result, { bindThis: cursor }, {}, {})}
-    ${navigating ? `${validate_component(Page, "Page").$$render($$result, {}, {}, {
-    default: () => {
-      return `${validate_component(LargeHeading, "LargeHeading").$$render($$result, {}, {}, {
-        default: () => {
-          return `Loading \u21BA
-            `;
-        }
-      })}`;
-    }
-  })}` : `
-        ${slots.default ? slots.default({}) : ``}`}
+<main class="relative cursor-none">${validate_component(Cursor, "Cursor").$$render($$result, {}, {}, {})}
+    
+        
+        ${slots.default ? slots.default({}) : ``}
+    
     ${validate_component(LegalFooter, "LegalFooter").$$render(
     $$result,
     {

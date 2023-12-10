@@ -12,12 +12,12 @@ import LargeHeading from '$src/lib/tavy/general/text/headings/LargeHeading.svelt
 
 import Icon from '$src/lib/tavy/general/icons/icon.svelte';
 
-import RawButton from '$src/lib/tavy/general/buttons/RawButton.svelte';
-import InlineParagraphButton from '$src/lib/tavy/general/buttons/InlineParagraphButton.svelte';
+import RawButton from '$tavy/general/buttons/RawButton.svelte';
+import InlineParagraphButton from '$tavy/general/buttons/InlineParagraphButton.svelte';
 
-import RouteIndicator from '$src/lib/tavy/general/templates/RouteIndicator.svelte';
-import Section from '$src/lib/tavy/general/templates/Section.svelte';
-import Page from '$src/lib/tavy/general/templates/Page.svelte';
+import RouteIndicator from '$tavy/general/templates/RouteIndicator.svelte';
+import Section from '$tavy/general/templates/Section.svelte';
+import Page from '$tavy/general/templates/Page.svelte';
 
 
 

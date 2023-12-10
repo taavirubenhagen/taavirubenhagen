@@ -1,4 +1,4 @@
-import { c as create_ssr_component, h as each, v as validate_component, e as escape } from "../../../../../chunks/index3.js";
+import { c as create_ssr_component, f as each, v as validate_component, e as escape } from "../../../../../chunks/index3.js";
 /* empty css                            */const Button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { onClick } = $$props;
   if ($$props.onClick === void 0 && $$bindings.onClick && onClick !== void 0)
