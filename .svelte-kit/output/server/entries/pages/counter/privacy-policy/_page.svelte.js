@@ -14,7 +14,9 @@ const Page_1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       })}
     This privacy policy will explain how the Android app Minimal Counter, which is published by Taavi R\xFCbenhagen.<br>
     <br>
-    The app may contain links to other apps or websites. This privacy policy applies only to the app mentioned above, so if you click on a link to another website or app, you should read their privacy policy.<br>
+    Minimal Counter does not collect, store or share any data with anyone.
+    <br>
+    Minimal Counter may contain links to other apps or websites. This privacy policy applies only to Minimal Counter, so if you click on a link to another website or app, you should read their privacy policy.<br>
     <br>
     I keep the privacy policy under regular review and places any updates on this web page. This privacy policy was last updated on 10 December 2023.<br>
     <br>
