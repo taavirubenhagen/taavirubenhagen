@@ -310,7 +310,8 @@
     "imports": [
       "_index3.js",
       "_Button.js",
-      "_ButtonSeperator.js"
+      "_ButtonSeperator.js",
+      "_InlineButton.js"
     ],
     "css": [
       "_app/immutable/assets/global.9e92755e.css"
