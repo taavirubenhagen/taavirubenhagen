@@ -108,7 +108,6 @@
     "isEntry": true,
     "imports": [
       "_index3.js",
-      "_SmallHeading.js",
       "_LargeHeading.js",
       "_InlineButton.js"
     ],

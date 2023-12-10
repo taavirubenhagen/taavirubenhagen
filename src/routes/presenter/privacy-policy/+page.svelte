@@ -8,10 +8,14 @@
 
 <Page>
     <!--TODO: 18-->
-    <LargeHeading>Presentation Master 2 (mobile app and desktop app) - Privacy Policy<br/></LargeHeading>
-    This privacy policy will explain how the Android app Presentation Master 2, which is published by René Rübenhagen, and the corresponding Windows app, use personal and other data collected from you when you use the app.<br/>
+    <LargeHeading>
+        Presentation Master 2 (mobile app and desktop app) - Privacy Policy
+        <br/>
+        <br/>
+    </LargeHeading>
+    This privacy policy will explain how the Android app Presentation Master 2, which is published by Taavi Rübenhagen, and the corresponding Windows app, use personal and other data collected from you when you use the app.<br/>
     <br/>
-    The terms “we”, “us” and “our” refer to René Rübenhagen and everyone managing or developing the apps.<br/>
+    The terms “we”, “us” and “our” refer to Taavi Rübenhagen and everyone managing or developing the apps.<br/>
     <br/>
     <!--TODO: Check link regularly, 18-->
     Terms like “the apps” or “both apps” refer to the mobile app Presentation Master 2, published in the Google Play Store and Apple App Store, and the desktop app downloadable under taavirubenhagen.netlify.app/main/presenter/download.<br/>
@@ -77,7 +81,7 @@
     <br/>
     <SmallHeading>Changes to our privacy policy</SmallHeading><br/>
     <br/>
-    We keeps the privacy policy under regular review and places any updates on this web page. This privacy policy was last updated on 7 August 2023.<br/>
+    We keep the privacy policy under regular review and places any updates on this web page. This privacy policy was last updated on 10 December 2023.<br/>
     <br/>
     <br/>
     <br/>

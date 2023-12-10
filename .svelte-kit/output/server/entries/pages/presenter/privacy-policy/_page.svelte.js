@@ -8,12 +8,14 @@ const Page_1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return `
     ${validate_component(LargeHeading, "LargeHeading").$$render($$result, {}, {}, {
         default: () => {
-          return `Presentation Master 2 (mobile app and desktop app) - Privacy Policy<br>`;
+          return `Presentation Master 2 (mobile app and desktop app) - Privacy Policy
+        <br>
+        <br>`;
         }
       })}
-    This privacy policy will explain how the Android app Presentation Master 2, which is published by Ren\xE9 R\xFCbenhagen, and the corresponding Windows app, use personal and other data collected from you when you use the app.<br>
+    This privacy policy will explain how the Android app Presentation Master 2, which is published by Taavi R\xFCbenhagen, and the corresponding Windows app, use personal and other data collected from you when you use the app.<br>
     <br>
-    The terms \u201Cwe\u201D, \u201Cus\u201D and \u201Cour\u201D refer to Ren\xE9 R\xFCbenhagen and everyone managing or developing the apps.<br>
+    The terms \u201Cwe\u201D, \u201Cus\u201D and \u201Cour\u201D refer to Taavi R\xFCbenhagen and everyone managing or developing the apps.<br>
     <br>
     
     Terms like \u201Cthe apps\u201D or \u201Cboth apps\u201D refer to the mobile app Presentation Master 2, published in the Google Play Store and Apple App Store, and the desktop app downloadable under taavirubenhagen.netlify.app/main/presenter/download.<br>
@@ -103,7 +105,7 @@ const Page_1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         }
       })}<br>
     <br>
-    We keeps the privacy policy under regular review and places any updates on this web page. This privacy policy was last updated on 7 August 2023.<br>
+    We keep the privacy policy under regular review and places any updates on this web page. This privacy policy was last updated on 10 December 2023.<br>
     <br>
     <br>
     <br>
