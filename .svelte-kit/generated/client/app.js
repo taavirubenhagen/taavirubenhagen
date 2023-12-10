@@ -24,7 +24,8 @@ export const nodes = [
 	() => import('./nodes/20'),
 	() => import('./nodes/21'),
 	() => import('./nodes/22'),
-	() => import('./nodes/23')
+	() => import('./nodes/23'),
+	() => import('./nodes/24')
 ];
 
 export const server_loads = [];
@@ -35,23 +36,24 @@ export const dictionary = {
 		"/admin/access": [~4],
 		"/admin/access/[password]": [~5],
 		"/admin/login/[state]": [6],
-		"/deprecated/home": [7],
-		"/deprecated/main/home-dev": [9],
-		"/deprecated/main/home": [8],
-		"/deprecated/main/newsletter": [10],
-		"/deprecated/main/projects": [11],
-		"/deprecated/terminal": [~12],
-		"/deprecated/terminal/[route]": [13],
-		"/deprecated/tts": [14],
-		"/legal/contact": [15],
-		"/legal/privacy-policy": [16],
-		"/presenter/download": [17],
-		"/presenter/privacy-policy": [18],
-		"/presenter/support-url": [19],
-		"/presenter/waitlist": [20],
-		"/products": [21],
-		"/products/coming-soon": [22],
-		"/projects": [23]
+		"/counter/privacy-policy": [7],
+		"/deprecated/home": [8],
+		"/deprecated/main/home-dev": [10],
+		"/deprecated/main/home": [9],
+		"/deprecated/main/newsletter": [11],
+		"/deprecated/main/projects": [12],
+		"/deprecated/terminal": [~13],
+		"/deprecated/terminal/[route]": [14],
+		"/deprecated/tts": [15],
+		"/legal/contact": [16],
+		"/legal/privacy-policy": [17],
+		"/presenter/download": [18],
+		"/presenter/privacy-policy": [19],
+		"/presenter/support-url": [20],
+		"/presenter/waitlist": [21],
+		"/products": [22],
+		"/products/coming-soon": [23],
+		"/projects": [24]
 	};
 
 export const hooks = {

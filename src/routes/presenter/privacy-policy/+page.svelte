@@ -9,7 +9,7 @@
 <Page>
     <!--TODO: 18-->
     <LargeHeading>Presentation Master 2 (mobile app and desktop app) - Privacy Policy<br/></LargeHeading>
-    This privacy policy will explain how the Android app Presentation Master, which is published by René Rübenhagen, and the corresponding Windows app, use personal and other data collected from you when you use the app.<br/>
+    This privacy policy will explain how the Android app Presentation Master 2, which is published by René Rübenhagen, and the corresponding Windows app, use personal and other data collected from you when you use the app.<br/>
     <br/>
     The terms “we”, “us” and “our” refer to René Rübenhagen and everyone managing or developing the apps.<br/>
     <br/>

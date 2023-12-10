@@ -102,6 +102,20 @@
       "_app/immutable/assets/global.9e92755e.css"
     ]
   },
+  "src/routes/counter/privacy-policy/+page.svelte": {
+    "file": "entries/pages/counter/privacy-policy/_page.svelte.js",
+    "src": "src/routes/counter/privacy-policy/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index3.js",
+      "_SmallHeading.js",
+      "_LargeHeading.js",
+      "_InlineButton.js"
+    ],
+    "css": [
+      "_app/immutable/assets/global.9e92755e.css"
+    ]
+  },
   "src/routes/deprecated/home/+page.svelte": {
     "file": "entries/pages/deprecated/home/_page.svelte.js",
     "src": "src/routes/deprecated/home/+page.svelte",

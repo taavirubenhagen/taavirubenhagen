@@ -11,7 +11,7 @@ const Page_1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
           return `Presentation Master 2 (mobile app and desktop app) - Privacy Policy<br>`;
         }
       })}
-    This privacy policy will explain how the Android app Presentation Master, which is published by Ren\xE9 R\xFCbenhagen, and the corresponding Windows app, use personal and other data collected from you when you use the app.<br>
+    This privacy policy will explain how the Android app Presentation Master 2, which is published by Ren\xE9 R\xFCbenhagen, and the corresponding Windows app, use personal and other data collected from you when you use the app.<br>
     <br>
     The terms \u201Cwe\u201D, \u201Cus\u201D and \u201Cour\u201D refer to Ren\xE9 R\xFCbenhagen and everyone managing or developing the apps.<br>
     <br>

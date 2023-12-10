@@ -10,6 +10,7 @@
 		"src/routes/admin/access/[password]/+page.server.ts"
 	],
 	"/admin/login/[state]": [],
+	"/counter/privacy-policy": [],
 	"/deprecated/home": [],
 	"/deprecated/main/home-dev": [],
 	"/deprecated/main/home": [],
