@@ -20,7 +20,7 @@
       "_Button.js"
     ],
     "css": [
-      "_app/immutable/assets/global.9e92755e.css"
+      "_app/immutable/assets/global.9f6ceb54.css"
     ]
   },
   "src/routes/+error.svelte": {
@@ -33,7 +33,7 @@
       "_InlineButton.js"
     ],
     "css": [
-      "_app/immutable/assets/global.9e92755e.css"
+      "_app/immutable/assets/global.9f6ceb54.css"
     ]
   },
   "src/routes/+page.svelte": {
@@ -47,7 +47,7 @@
       "_InlineButton.js"
     ],
     "css": [
-      "_app/immutable/assets/global.9e92755e.css"
+      "_app/immutable/assets/global.9f6ceb54.css"
     ]
   },
   "src/routes/admin/+page.server.ts": {
@@ -76,7 +76,7 @@
       "_InlineButton.js"
     ],
     "css": [
-      "_app/immutable/assets/global.9e92755e.css"
+      "_app/immutable/assets/global.9f6ceb54.css"
     ]
   },
   "src/routes/admin/access/[password]/+page.server.ts": {
@@ -99,7 +99,7 @@
       "_InlineButton.js"
     ],
     "css": [
-      "_app/immutable/assets/global.9e92755e.css"
+      "_app/immutable/assets/global.9f6ceb54.css"
     ]
   },
   "src/routes/counter/privacy-policy/+page.svelte": {
@@ -112,7 +112,7 @@
       "_InlineButton.js"
     ],
     "css": [
-      "_app/immutable/assets/global.9e92755e.css"
+      "_app/immutable/assets/global.9f6ceb54.css"
     ]
   },
   "src/routes/deprecated/home/+page.svelte": {
@@ -129,7 +129,7 @@
       "_Button2.js"
     ],
     "css": [
-      "_app/immutable/assets/global.9e92755e.css"
+      "_app/immutable/assets/global.9f6ceb54.css"
     ]
   },
   "src/routes/deprecated/main/home/+page.svelte": {
@@ -142,7 +142,7 @@
       "_O1.js"
     ],
     "css": [
-      "_app/immutable/assets/global.9e92755e.css"
+      "_app/immutable/assets/global.9f6ceb54.css"
     ]
   },
   "src/routes/deprecated/main/home-dev/+page.svelte": {
@@ -155,7 +155,7 @@
       "_O1.js"
     ],
     "css": [
-      "_app/immutable/assets/global.9e92755e.css"
+      "_app/immutable/assets/global.9f6ceb54.css"
     ]
   },
   "src/routes/deprecated/main/newsletter/+page.svelte": {
@@ -174,7 +174,7 @@
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/global.9e92755e.css"
+      "_app/immutable/assets/global.9f6ceb54.css"
     ]
   },
   "src/routes/deprecated/terminal/+page.server.ts": {
@@ -197,7 +197,7 @@
       "_Button2.js"
     ],
     "css": [
-      "_app/immutable/assets/global.9e92755e.css"
+      "_app/immutable/assets/global.9f6ceb54.css"
     ]
   },
   "src/routes/deprecated/tts/+page.svelte": {
@@ -218,7 +218,7 @@
       "_Section.js"
     ],
     "css": [
-      "_app/immutable/assets/global.9e92755e.css"
+      "_app/immutable/assets/global.9f6ceb54.css"
     ]
   },
   "src/routes/legal/privacy-policy/+page.svelte": {
@@ -231,7 +231,7 @@
       "_Section.js"
     ],
     "css": [
-      "_app/immutable/assets/global.9e92755e.css"
+      "_app/immutable/assets/global.9f6ceb54.css"
     ]
   },
   "src/routes/presenter/download/+page.svelte": {
@@ -245,7 +245,7 @@
       "_Button.js"
     ],
     "css": [
-      "_app/immutable/assets/global.9e92755e.css"
+      "_app/immutable/assets/global.9f6ceb54.css"
     ]
   },
   "src/routes/presenter/privacy-policy/+page.svelte": {
@@ -259,7 +259,7 @@
       "_InlineButton.js"
     ],
     "css": [
-      "_app/immutable/assets/global.9e92755e.css"
+      "_app/immutable/assets/global.9f6ceb54.css"
     ]
   },
   "src/routes/presenter/support-url/+page.svelte": {
@@ -288,7 +288,7 @@
       "_Button.js"
     ],
     "css": [
-      "_app/immutable/assets/global.9e92755e.css"
+      "_app/immutable/assets/global.9f6ceb54.css"
     ]
   },
   "src/routes/products/coming-soon/+page.svelte": {
@@ -300,7 +300,7 @@
       "_InlineButton.js"
     ],
     "css": [
-      "_app/immutable/assets/global.9e92755e.css"
+      "_app/immutable/assets/global.9f6ceb54.css"
     ]
   },
   "src/routes/projects/+page.svelte": {
@@ -314,7 +314,7 @@
       "_InlineButton.js"
     ],
     "css": [
-      "_app/immutable/assets/global.9e92755e.css"
+      "_app/immutable/assets/global.9f6ceb54.css"
     ]
   },
   ".svelte-kit/generated/server/internal.js": {
@@ -362,7 +362,7 @@
       "_RawButton.js"
     ],
     "css": [
-      "_app/immutable/assets/global.9e92755e.css"
+      "_app/immutable/assets/global.9f6ceb54.css"
     ]
   },
   "_RawButton.js": {
@@ -371,7 +371,7 @@
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/global.9e92755e.css"
+      "_app/immutable/assets/global.9f6ceb54.css"
     ]
   },
   "_LargeHeading.js": {
@@ -380,7 +380,7 @@
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/global.9e92755e.css"
+      "_app/immutable/assets/global.9f6ceb54.css"
     ]
   },
   "_InlineButton.js": {
@@ -392,7 +392,7 @@
       "_RawButton.js"
     ],
     "css": [
-      "_app/immutable/assets/global.9e92755e.css"
+      "_app/immutable/assets/global.9f6ceb54.css"
     ]
   },
   "_Section.js": {
@@ -401,7 +401,7 @@
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/global.9e92755e.css"
+      "_app/immutable/assets/global.9f6ceb54.css"
     ]
   },
   "_stores.js": {
@@ -417,7 +417,7 @@
       "_Button.js"
     ],
     "css": [
-      "_app/immutable/assets/global.9e92755e.css"
+      "_app/immutable/assets/global.9f6ceb54.css"
     ]
   },
   "_SmallHeading.js": {
@@ -426,7 +426,7 @@
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/global.9e92755e.css"
+      "_app/immutable/assets/global.9f6ceb54.css"
     ]
   },
   "_Button2.js": {
@@ -436,7 +436,7 @@
       "_RawButton.js"
     ],
     "css": [
-      "_app/immutable/assets/global.9e92755e.css"
+      "_app/immutable/assets/global.9f6ceb54.css"
     ]
   },
   "_O1.js": {
@@ -445,7 +445,7 @@
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/global.9e92755e.css"
+      "_app/immutable/assets/global.9f6ceb54.css"
     ]
   }
 }
