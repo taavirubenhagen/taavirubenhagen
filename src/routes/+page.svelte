@@ -6,14 +6,9 @@
 
 
 <Page>
-    <Button next onClick={() => window.location.href = '/'}>Personal Website</Button>
-    <Button next borderClass='border-t-0' onClick={() => window.location.href = '/projects'}>Projects</Button>
-    <Button next borderClass='border-t-0' onClick={() => window.location.href = '/products'}>Product Shop</Button>
+    <Button next onClick={() => window.location.href = '/projects'}>Projects</Button>
     <ButtonSeperator/>
-    <Button openInNew onClick={() => window.location.href = 'https://play.google.com/store/apps/details?id=tavy.presenter.presentation_master_2'}>
-        Presenter (Android)
-    </Button>
-    <Button openInNew borderClass='border-t-0' onClick={() => alert('Coming soon!')}>Presenter (iOS)</Button>
+    <Button openInNew onClick={() => window.location.href = '/politics/jugendparlament'}>Vote for me</Button>
     <ButtonSeperator/>
     <Button openInNew onClick={() => window.location.href = 'https://www.instagram.com/taavirubenhagen'}>
         @taavirubenhagen

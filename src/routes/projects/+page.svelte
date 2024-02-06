@@ -1,7 +1,7 @@
 <script lang="ts">
     import '$style';
-    import { Page } from '$tavy';
-    import { Button, ButtonSeperator } from '$tavy/industrial';
+    import { Icon, Page } from '$tavy';
+    import { Button, NestedButton, ButtonSeperator } from '$tavy/industrial';
 
     let windowHeight: number;
 </script>
@@ -15,11 +15,23 @@
     <Button next borderClass='border-t-0' onClick={() => window.location.href = '/'}>Personal Website</Button>
     <Button next borderClass='border-t-0' onClick={() => window.location.href = '/products'}>Product Shop</Button>
     <ButtonSeperator/>
-    <Button openInNew onClick={() => window.location.href = 'https://play.google.com/store/apps/details?id=tavy.presenter.presentation_master_2'}>
-        Presenter (Android)
-    </Button>
-    <Button openInNew borderClass='border-t-0' onClick={() => alert('Coming soon!')}>Presenter (iOS)</Button>
-    <Button openInNew borderClass='border-t-0' onClick={() => window.location.href = 'https://www.hvf-bs.net/faecher/mint/projekte?tx_hvfprofiles_hvfprojects%5Baction%5D=show&tx_hvfprofiles_hvfprojects%5Bcontroller%5D=Project&tx_hvfprofiles_hvfprojects%5Bproject%5D=159&cHash=88f6c8e382a4a210695c814ebf51cb2d'}>
-        Presenter - Info
-    </Button>
+    <NestedButton title='Presenter' buttonCount={3}>
+        <Button onClick={() => window.location.href = 'https://play.google.com/store/apps/details?id=tavy.presenter.presentation_master_2'}>
+            <Icon name='open-new-window'/>
+        </Button>
+        <Button borderClass='border-l-0' onClick={() => alert('Coming soon!')}>
+            <Icon name='apple-mac'/>
+        </Button>
+        <Button borderClass='border-l-0' onClick={() => window.location.href = 'https://www.hvf-bs.net/faecher/mint/projekte?tx_hvfprofiles_hvfprojects%5Baction%5D=show&tx_hvfprofiles_hvfprojects%5Bcontroller%5D=Project&tx_hvfprofiles_hvfprojects%5Bproject%5D=159&cHash=88f6c8e382a4a210695c814ebf51cb2d'}>
+            <Icon name='info-circle'/>
+        </Button>
+    </NestedButton>
+    <NestedButton borderClass='border-t-0' title='Counter'>
+        <Button borderClass='border-t-0 w-full' onClick={() => alert('Coming soon!')}>
+            <Icon name='open-new-window'/>
+        </Button>
+        <Button borderClass='border-l-0 border-t-0 w-full' onClick={() => alert('Coming soon!')}>
+            <Icon name='apple-mac'/>
+        </Button>
+    </NestedButton>
 </Page>

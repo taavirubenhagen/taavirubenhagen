@@ -25,7 +25,9 @@ export const nodes = [
 	() => import('./nodes/21'),
 	() => import('./nodes/22'),
 	() => import('./nodes/23'),
-	() => import('./nodes/24')
+	() => import('./nodes/24'),
+	() => import('./nodes/25'),
+	() => import('./nodes/26')
 ];
 
 export const server_loads = [];
@@ -36,24 +38,26 @@ export const dictionary = {
 		"/admin/access": [~4],
 		"/admin/access/[password]": [~5],
 		"/admin/login/[state]": [6],
-		"/counter/privacy-policy": [7],
-		"/deprecated/home": [8],
-		"/deprecated/main/home-dev": [10],
-		"/deprecated/main/home": [9],
-		"/deprecated/main/newsletter": [11],
-		"/deprecated/main/projects": [12],
-		"/deprecated/terminal": [~13],
-		"/deprecated/terminal/[route]": [14],
-		"/deprecated/tts": [15],
-		"/legal/contact": [16],
-		"/legal/privacy-policy": [17],
-		"/presenter/download": [18],
-		"/presenter/privacy-policy": [19],
-		"/presenter/support-url": [20],
-		"/presenter/waitlist": [21],
-		"/products": [22],
-		"/products/coming-soon": [23],
-		"/projects": [24]
+		"/coming-soon": [7],
+		"/counter/privacy-policy": [8],
+		"/deprecated/home": [9],
+		"/deprecated/main/home-dev": [11],
+		"/deprecated/main/home": [10],
+		"/deprecated/main/newsletter": [12],
+		"/deprecated/main/projects": [13],
+		"/deprecated/terminal": [~14],
+		"/deprecated/terminal/[route]": [15],
+		"/deprecated/tts": [16],
+		"/legal/contact": [17],
+		"/legal/privacy-policy": [18],
+		"/politics/jugendparlament": [19],
+		"/presenter/download": [20],
+		"/presenter/privacy-policy": [21],
+		"/presenter/support-url": [22],
+		"/presenter/waitlist": [23],
+		"/products": [24],
+		"/products/coming-soon": [25],
+		"/projects": [26]
 	};
 
 export const hooks = {

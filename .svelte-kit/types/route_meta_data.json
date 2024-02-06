@@ -10,6 +10,7 @@
 		"src/routes/admin/access/[password]/+page.server.ts"
 	],
 	"/admin/login/[state]": [],
+	"/coming-soon": [],
 	"/counter/privacy-policy": [],
 	"/deprecated/home": [],
 	"/deprecated/main/home-dev": [],
@@ -23,6 +24,7 @@
 	"/deprecated/tts": [],
 	"/legal/contact": [],
 	"/legal/privacy-policy": [],
+	"/politics/jugendparlament": [],
 	"/presenter/download": [],
 	"/presenter/privacy-policy": [],
 	"/presenter/support-url": [],

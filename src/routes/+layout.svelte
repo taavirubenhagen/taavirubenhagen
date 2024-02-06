@@ -1,13 +1,13 @@
 <script lang="ts">
-    //import { navigating } from '$app/stores';
+    import { navigating } from '$app/stores';
     import { cursorPosition, globalScrollY } from "$state";
     import "$style";
+    import { Page, LargeHeading } from "$tavy";
     import { Cursor } from '$tavy/identity';
     import { LegalFooter } from "$tavy/industrial";
 
 
     let windowHeight: number;
-    let cursor: HTMLElement;
 </script>
 
 
@@ -25,15 +25,15 @@
     class='relative cursor-none'
 >
     <Cursor/>
-    <!--{#if navigating}
+    {#if $navigating}
         <Page>
             <LargeHeading>
                 Loading ↺
             </LargeHeading>
         </Page>
-    {:else}-->
+    {:else}
         <!-- TODO: Add standard scrollbar effects -->
         <slot/>
-    <!--{/if}-->
+    {/if}
     <LegalFooter contactLink='/legal/contact' ppLink='/legal/privacy-policy'/>
 </main>
