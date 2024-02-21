@@ -12,7 +12,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 ${validate_component(Section, "Section").$$render(
     $$result,
     {
-      className: "bg-black font-[Dongle] text-white"
+      className: "bg-black font-[Dongle] text-justify text-white"
     },
     {},
     {
