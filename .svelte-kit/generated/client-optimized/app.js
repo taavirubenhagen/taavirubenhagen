@@ -27,7 +27,9 @@ export const nodes = [
 	() => import('./nodes/23'),
 	() => import('./nodes/24'),
 	() => import('./nodes/25'),
-	() => import('./nodes/26')
+	() => import('./nodes/26'),
+	() => import('./nodes/27'),
+	() => import('./nodes/28')
 ];
 
 export const server_loads = [];
@@ -48,16 +50,18 @@ export const dictionary = {
 		"/deprecated/terminal": [~14],
 		"/deprecated/terminal/[route]": [15],
 		"/deprecated/tts": [16],
-		"/legal/contact": [17],
-		"/legal/privacy-policy": [18],
-		"/politics/jugendparlament": [19],
-		"/presenter/download": [20],
-		"/presenter/privacy-policy": [21],
-		"/presenter/support-url": [22],
-		"/presenter/waitlist": [23],
-		"/products": [24],
-		"/products/coming-soon": [25],
-		"/projects": [26]
+		"/drafts/hoffmanns-schuppen": [17],
+		"/legal/contact": [18],
+		"/legal/privacy-policy": [19],
+		"/politics/jugendparlament": [20],
+		"/politics/jugendparlament/sticker": [21],
+		"/presenter/download": [22],
+		"/presenter/privacy-policy": [23],
+		"/presenter/support-url": [24],
+		"/presenter/waitlist": [25],
+		"/products": [26],
+		"/products/coming-soon": [27],
+		"/projects": [28]
 	};
 
 export const hooks = {

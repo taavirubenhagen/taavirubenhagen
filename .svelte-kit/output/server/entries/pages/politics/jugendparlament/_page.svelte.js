@@ -15,7 +15,7 @@ ${validate_component(Section, "Section").$$render(
     {
       default: () => {
         return `<img src="/politics/jugendparlament/wahlplakat_hochformat.png" alt="Jung, dynamisch, zielstrebig. Dein Kandidat f\xFCr das Braunschweiger Jugendparlament." class="max-h-screen">
-     <div class="absolute bottom-20 flex justify-between text-5xl" style="${"width: " + escape(
+    <div class="absolute bottom-20 flex justify-between text-5xl" style="${"width: " + escape(
           windowWidth - 64,
           true
         ) + "px;"}">${each(

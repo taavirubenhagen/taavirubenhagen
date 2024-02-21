@@ -8,7 +8,7 @@
 <Page>
     <Button next onClick={() => window.location.href = '/projects'}>Projects</Button>
     <ButtonSeperator/>
-    <Button openInNew onClick={() => window.location.href = '/politics/jugendparlament'}>Vote for me</Button>
+    <Button next onClick={() => window.location.href = '/politics/jugendparlament'}>Vote for me</Button>
     <ButtonSeperator/>
     <Button openInNew onClick={() => window.location.href = 'https://www.instagram.com/taavirubenhagen'}>
         @taavirubenhagen

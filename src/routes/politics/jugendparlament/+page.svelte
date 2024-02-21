@@ -21,7 +21,7 @@
         alt="Jung, dynamisch, zielstrebig. Dein Kandidat für das Braunschweiger Jugendparlament."
         class='max-h-screen'
     >
-     <div
+    <div
         class='absolute bottom-20 flex justify-between text-5xl'
         style='width: {( windowWidth > windowHeight ? windowHeight / ( 16/9 ) : windowWidth ) - 64}px;'
     >
