@@ -318,6 +318,14 @@
       "_app/immutable/assets/global.44e4c33f.css"
     ]
   },
+  "src/routes/presenter/sticker/+page.svelte": {
+    "file": "entries/pages/presenter/sticker/_page.svelte.js",
+    "src": "src/routes/presenter/sticker/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index3.js"
+    ]
+  },
   "src/routes/presenter/support-url/+page.svelte": {
     "file": "entries/pages/presenter/support-url/_page.svelte.js",
     "src": "src/routes/presenter/support-url/+page.svelte",

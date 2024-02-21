@@ -1,0 +1,1 @@
+<meta http-equiv="Refresh" content="0; url='https://play.google.com/store/apps/details?id=tavy.presenter.presentation_master_2'" />
