@@ -16,7 +16,7 @@
 <svelte:window bind:innerWidth={windowWidth} bind:innerHeight={windowHeight} />
 
 
-<Section className='bg-black font-[Dongle] text-justify text-white'>
+<Section className='bg-black font-[Dongle] text-white'>
     <div class='p-8 md:p-16'>
         <LargeHeading>Weil wir Fortschritt brauchen.</LargeHeading>
         <div class='h-8'></div>
