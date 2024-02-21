@@ -1,6 +1,6 @@
 import SmallParagraph from '$src/lib/tavy/general/text/paragraphs/SmallParagraph.svelte';
 import MediumParagraph from '$src/lib/tavy/general/text/paragraphs/MediumParagraph.svelte';
-import LargeParagraph from '$src/lib/tavy/general/text/paragraphs/large_paragraph.svelte';
+import LargeParagraph from '$src/lib/tavy/general/text/paragraphs/LargeParagraph.svelte';
 
 //import SmallSubtitle from '$tavy/text/subtitles/SmallSubtitle.svelte';
 import MediumSubtitle from '$src/lib/tavy/general/text/subtitles/MediumSubtitle.svelte';

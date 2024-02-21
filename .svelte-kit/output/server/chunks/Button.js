@@ -32,7 +32,7 @@ const Button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     default: () => {
       return `<div class="${escape(inverted ? "invert" : "", true) + " border-2 " + escape(borderClass, true) + " border-onBackground"}">${validate_component(MediumParagraph, "MediumParagraph").$$render($$result, {}, {}, {
         default: () => {
-          return `<div class="${"transition duration-200 ease-in h-12 " + escape(uniformPadding ? "w-12" : "", true) + " hover:invert bg-background text-onBackground px-4 py-2 flex " + escape(
+          return `<div class="${"transition duration-200 ease-in h-12 " + escape(uniformPadding ? "w-12" : "", true) + " hover:invert bg-background text-onBackground px-4 flex " + escape(
             nested || openInNew || next ? "justify-between" : "justify-center",
             true
           ) + " items-center gap-2"}">${slots.default ? slots.default({}) : ``}

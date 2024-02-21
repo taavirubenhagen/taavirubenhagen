@@ -24,7 +24,7 @@
             <div
                 class="transition duration-200 ease-in
                     h-12 {uniformPadding ? 'w-12' : ''}
-                    hover:invert bg-background text-onBackground px-4 py-2
+                    hover:invert bg-background text-onBackground px-4
                     flex {nested || openInNew || next ? 'justify-between' : 'justify-center'} items-center gap-2"
             >
                 <slot/>
