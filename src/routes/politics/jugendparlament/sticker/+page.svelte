@@ -27,6 +27,7 @@
             die das Jugendparlament zu einer dauerhaften Senkung
             des durchschnittlichen Preisniveaus für Döner auf einen Wert von 3,50€ (±0,50€, inflationsbereinigt) befähigt
             und zum frühestmöglichen Zeitpunkt mit Wirkung für alle Braunschweiger Minderjährigen zu implementieren ist.
+            Deshalb - stimmt am 26.2. für Taavi Rübenhagen auf Listenplatz 96!
         </LargeParagraph>
         <div style='height: {4 + 3 + 3 + 3 + 4}rem;'></div>
     </div>

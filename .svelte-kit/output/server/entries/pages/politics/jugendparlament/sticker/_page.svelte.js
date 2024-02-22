@@ -31,6 +31,7 @@ ${validate_component(Section, "Section").$$render(
             die das Jugendparlament zu einer dauerhaften Senkung
             des durchschnittlichen Preisniveaus f\xFCr D\xF6ner auf einen Wert von 3,50\u20AC (\xB10,50\u20AC, inflationsbereinigt) bef\xE4higt
             und zum fr\xFChestm\xF6glichen Zeitpunkt mit Wirkung f\xFCr alle Braunschweiger Minderj\xE4hrigen zu implementieren ist.
+            Deshalb - stimmt am 26.2. f\xFCr Taavi R\xFCbenhagen auf Listenplatz 96!
         `;
           }
         })}
