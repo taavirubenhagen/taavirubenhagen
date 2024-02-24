@@ -25,7 +25,7 @@
                 class="transition duration-200 ease-in
                     h-12 {uniformPadding ? 'w-12' : ''}
                     hover:invert bg-background text-onBackground px-4
-                    flex {nested || openInNew || next ? 'justify-between' : 'justify-center'} items-center gap-2"
+                    flex {nested || openInNew || next || download ? 'justify-between' : 'justify-center'} items-center gap-2"
             >
                 <slot/>
                 {#if nested}

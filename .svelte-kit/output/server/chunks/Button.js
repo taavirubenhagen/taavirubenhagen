@@ -33,7 +33,7 @@ const Button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return `<div class="${escape(inverted ? "invert" : "", true) + " border-2 " + escape(borderClass, true) + " border-onBackground"}">${validate_component(MediumParagraph, "MediumParagraph").$$render($$result, {}, {}, {
         default: () => {
           return `<div class="${"transition duration-200 ease-in h-12 " + escape(uniformPadding ? "w-12" : "", true) + " hover:invert bg-background text-onBackground px-4 flex " + escape(
-            nested || openInNew || next ? "justify-between" : "justify-center",
+            nested || openInNew || next || download ? "justify-between" : "justify-center",
             true
           ) + " items-center gap-2"}">${slots.default ? slots.default({}) : ``}
                 ${nested ? `${validate_component(Icon, "Icon").$$render($$result, { name: "plus-circle" }, {}, {})}` : `${openInNew ? `${validate_component(Icon, "Icon").$$render($$result, { name: "open-new-window" }, {}, {})}` : `${next ? `${validate_component(Icon, "Icon").$$render($$result, { name: "arrow-right" }, {}, {})}` : `${download ? `${validate_component(Icon, "Icon").$$render($$result, { name: "download" }, {}, {})}` : ``}`}`}`}</div>`;

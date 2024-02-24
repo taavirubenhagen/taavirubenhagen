@@ -10,6 +10,12 @@
     <ButtonSeperator/>
     <Button next onClick={() => window.location.href = '/politics/jugendparlament'}>Vote for me</Button>
     <ButtonSeperator/>
+    <Button download onClick={() => {}}>
+        <a download href='/facharbeit/Facharbeit - Taavi Rübenhagen.pdf' class='w-full flex'>
+            Facharbeit
+        </a>
+    </Button>
+    <ButtonSeperator/>
     <Button openInNew onClick={() => window.location.href = 'https://www.instagram.com/taavirubenhagen'}>
         @taavirubenhagen
     </Button>
