@@ -27,7 +27,7 @@
         <div style='height: {4 + 3 + 3 + 3 + 4}rem;'></div>
     </div>
     <div class='fixed bottom-0 w-full bg-gradient-to-t from-black via-black to-transparent p-8 md:p-16 flex flex-col items-stretch gap-8'>
-        <Button inverted openInNew onClick={() => window.location.href = 'https://dialog.braunschweig.de/qp/l/jupawahl2024'}>
+        <Button inverted openInNew onClick={() => window.location.href = 'https://thezukunft.de/jugendparlament'}>
             <LargeParagraph>
                 Jetzt abstimmen
             </LargeParagraph>

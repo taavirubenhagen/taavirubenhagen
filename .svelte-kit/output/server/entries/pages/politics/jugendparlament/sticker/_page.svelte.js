@@ -30,7 +30,7 @@ ${validate_component(Section, "Section").$$render($$result, { className: "primar
         {
           inverted: true,
           openInNew: true,
-          onClick: () => window.location.href = "https://dialog.braunschweig.de/qp/l/jupawahl2024"
+          onClick: () => window.location.href = "https://thezukunft.de/jugendparlament"
         },
         {},
         {
