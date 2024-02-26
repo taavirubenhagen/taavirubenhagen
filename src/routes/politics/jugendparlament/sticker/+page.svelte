@@ -22,7 +22,7 @@
         <div class='h-8'></div>
         <LargeParagraph>
             Vom 26.2. - 8.3. ist in Braunschweig Jugendparlamentswahl.
-            Eine Stimme für mich ist eine Stimme für realen und anhaltenden politischen Einfluss der Braunschweiger Jugend.
+            Eine Stimme für mich (Listenplatz 69) ist eine Stimme für realen und anhaltenden politischen Einfluss der Braunschweiger Jugend.
         </LargeParagraph>
         <div style='height: {4 + 3 + 3 + 3 + 4}rem;'></div>
     </div>

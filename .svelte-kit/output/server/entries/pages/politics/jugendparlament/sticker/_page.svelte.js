@@ -20,7 +20,7 @@ ${validate_component(Section, "Section").$$render($$result, { className: "primar
         ${validate_component(LargeParagraph, "LargeParagraph").$$render($$result, {}, {}, {
         default: () => {
           return `Vom 26.2. - 8.3. ist in Braunschweig Jugendparlamentswahl.
-            Eine Stimme f\xFCr mich ist eine Stimme f\xFCr realen und anhaltenden politischen Einfluss der Braunschweiger Jugend.
+            Eine Stimme f\xFCr mich (Listenplatz 69) ist eine Stimme f\xFCr realen und anhaltenden politischen Einfluss der Braunschweiger Jugend.
         `;
         }
       })}
