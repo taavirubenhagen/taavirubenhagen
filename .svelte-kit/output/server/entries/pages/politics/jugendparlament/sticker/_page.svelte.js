@@ -21,11 +21,6 @@ ${validate_component(Section, "Section").$$render($$result, { className: "primar
         default: () => {
           return `Vom 26.2. - 8.3. ist in Braunschweig Jugendparlamentswahl.
             Eine Stimme f\xFCr mich ist eine Stimme f\xFCr realen und anhaltenden politischen Einfluss der Braunschweiger Jugend.
-            \xDCberdies inkludieren die Zielsetzungen meines Wahlprogramms die Konzeption von Legislatur,
-            die das Jugendparlament zu einer dauerhaften Senkung
-            des durchschnittlichen Preisniveaus f\xFCr D\xF6ner auf einen Wert von 3,50\u20AC (\xB10,50\u20AC, inflationsbereinigt) bef\xE4higt
-            und zum fr\xFChestm\xF6glichen Zeitpunkt mit Wirkung f\xFCr alle Braunschweiger Minderj\xE4hrigen zu implementieren ist.
-            Deshalb - stimmt am 26.2. f\xFCr Taavi R\xFCbenhagen auf Listenplatz 96!
         `;
         }
       })}
@@ -35,14 +30,14 @@ ${validate_component(Section, "Section").$$render($$result, { className: "primar
         {
           inverted: true,
           openInNew: true,
-          onClick: () => window.location.href = "https://thezukunft.de/jugendparlament"
+          onClick: () => window.location.href = "https://dialog.braunschweig.de/qp/l/jupawahl2024"
         },
         {},
         {
           default: () => {
             return `${validate_component(LargeParagraph, "LargeParagraph").$$render($$result, {}, {}, {
               default: () => {
-                return `Mehr Infos
+                return `Jetzt abstimmen
             `;
               }
             })}`;
