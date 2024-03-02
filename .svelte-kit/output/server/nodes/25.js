@@ -2,7 +2,7 @@
 
 export const index = 25;
 let component_cache;
-export const component = async () => component_cache ??= (await import('../entries/pages/presenter/support-url/_page.svelte.js')).default;
-export const imports = ["_app/immutable/nodes/25.21681428.js","_app/immutable/chunks/index.4ce69c25.js"];
-export const stylesheets = [];
+export const component = async () => component_cache ??= (await import('../entries/pages/politics/jugendparlament/sticker/_page.svelte.js')).default;
+export const imports = ["_app/immutable/nodes/25.39d254d4.js","_app/immutable/chunks/index.9e5a1b15.js","_app/immutable/chunks/LargeHeading.8dd8cc41.js","_app/immutable/chunks/paths.7780e19c.js","_app/immutable/chunks/Button.d2e2e1c1.js","_app/immutable/chunks/RawButton.9ca990fc.js","_app/immutable/chunks/state.c5884cbc.js","_app/immutable/chunks/index.95425f24.js","_app/immutable/chunks/Section.f22c2715.js"];
+export const stylesheets = ["_app/immutable/assets/global.159ef71b.css"];
 export const fonts = [];

@@ -2,7 +2,7 @@
 
 export const index = 20;
 let component_cache;
-export const component = async () => component_cache ??= (await import('../entries/pages/politics/jugendparlament/_page.svelte.js')).default;
-export const imports = ["_app/immutable/nodes/20.b22c38ca.js","_app/immutable/chunks/index.4ce69c25.js","_app/immutable/chunks/RawButton.76fb7ddc.js","_app/immutable/chunks/state.6b87bbcc.js","_app/immutable/chunks/index.fb74aaef.js","_app/immutable/chunks/paths.3b442bde.js","_app/immutable/chunks/Section.8889d846.js"];
-export const stylesheets = ["_app/immutable/assets/global.f7e9ce18.css"];
+export const component = async () => component_cache ??= (await import('../entries/pages/drafts/hoffmanns-schuppen copy 2/_page.svelte.js')).default;
+export const imports = ["_app/immutable/nodes/20.c95b1cf9.js","_app/immutable/chunks/index.9e5a1b15.js","_app/immutable/chunks/MediumHeading.755d7c61.js","_app/immutable/chunks/paths.7780e19c.js","_app/immutable/chunks/Section.f22c2715.js","_app/immutable/chunks/Button.6dcdc3ed.js","_app/immutable/chunks/SmallParagraph.7aec6b39.js","_app/immutable/chunks/RawButton.9ca990fc.js","_app/immutable/chunks/state.c5884cbc.js","_app/immutable/chunks/index.95425f24.js"];
+export const stylesheets = ["_app/immutable/assets/global.159ef71b.css"];
 export const fonts = [];

@@ -6,6 +6,7 @@
         RawButton,
     } from '$tavy';
 
+    export let secondary = false;
     export let openInNew = false;
     export let next = false;
     export let onClick: any;
@@ -13,7 +14,11 @@
 
 
 <RawButton onClick={onClick}>
-    <div class='rounded-lg h-12 px-4 bg-red-700 center_row text-white'>
+    <div class=
+        'rounded-lg h-12 px-4
+        {secondary ? 'bg-green-300 text-black' : 'bg-green-900 text-white'}
+        center_row font-body'
+    >
         <SmallParagraph>
             <slot/>
             {#if openInNew}

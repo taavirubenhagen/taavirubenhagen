@@ -2,6 +2,7 @@ import { c as create_ssr_component, v as validate_component, e as escape, f as e
 import { D as DeviceDetector } from "../../../../chunks/DeviceDetector.js";
 /* empty css                         */import { M as MediumParagraph, B as Button$1 } from "../../../../chunks/Button.js";
 import { S as SmallHeading } from "../../../../chunks/SmallHeading.js";
+import { M as MediumHeading } from "../../../../chunks/MediumHeading.js";
 import { L as LargeHeading } from "../../../../chunks/LargeHeading.js";
 import { I as Icon } from "../../../../chunks/RawButton.js";
 import { B as Button } from "../../../../chunks/Button2.js";
@@ -10,9 +11,6 @@ const MediumSubtitle = create_ssr_component(($$result, $$props, $$bindings, slot
 });
 const LargeSubtitle = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<t class="block text-2xl md:text-3xl text-neutral-500 font-bold tracking-widest">${slots.default ? slots.default({}) : ``}</t>`;
-});
-const MediumHeading = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<t class="text-4xl md:text-6xl font-bold">${slots.default ? slots.default({}) : ``}</t>`;
 });
 const InlineParagraphButton = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { content = "" } = $$props;

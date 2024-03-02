@@ -1,10 +1,8 @@
 import { c as create_ssr_component, v as validate_component, e as escape, d as subscribe, f as each } from "./index3.js";
 /* empty css        */import { p as page } from "./stores.js";
+import { S as SmallParagraph } from "./SmallParagraph.js";
 import { R as RawButton, I as Icon } from "./RawButton.js";
 import { S as Section } from "./Section.js";
-const SmallParagraph = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<t class="text-md">${slots.default ? slots.default({}) : ``}</t>`;
-});
 const TertiaryButton = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { openInNew = false } = $$props;
   let { inverted = false } = $$props;
@@ -84,6 +82,5 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 });
 export {
   InlineButton as I,
-  Page as P,
-  SmallParagraph as S
+  Page as P
 };

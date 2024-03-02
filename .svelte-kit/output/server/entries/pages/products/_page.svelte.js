@@ -1,6 +1,7 @@
 import { c as create_ssr_component, v as validate_component } from "../../../chunks/index3.js";
-/* empty css                      */import { P as Page, S as SmallParagraph } from "../../../chunks/Page.js";
+/* empty css                      */import { S as SmallParagraph } from "../../../chunks/SmallParagraph.js";
 import { B as Button } from "../../../chunks/Button.js";
+import { P as Page } from "../../../chunks/Page.js";
 const Page_1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `
 
