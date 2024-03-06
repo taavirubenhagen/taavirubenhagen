@@ -61,7 +61,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<div style="font-family: &quot;Roboto Serif&quot;">${validate_component(Section, "Section").$$render($$result, { className: "bg-green-900 text-white" }, {}, {
     default: () => {
       return `<div class="relative"><img src="/drafts/hoffmanns-schuppen/investing.jpg" alt="" class="w-full h-screen object-cover brightness-75">
-            <div class="absolute bottom-0">${validate_component(TextSection, "TextSection").$$render(
+            <div class="absolute bottom-8">${validate_component(TextSection, "TextSection").$$render(
         $$result,
         {
           headerMessage: "Investiere direkter als je zuvor ...",

@@ -31,7 +31,8 @@
             </SmallParagraph>
         </div>
         <div class='mb-8 w-full flex flex-col gap-4'>
-            <Button secondary download onClick={() => {}}>
+            <!--TODO: PNG -> PDF-->
+            <Button secondary download onClick={() => window.location.href = '/drafts/hoffmanns-schuppen/Aktie.png'}>
                 Beispielaktie
             </Button>
             <Button next onClick={() => {}}>

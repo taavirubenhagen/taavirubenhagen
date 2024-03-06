@@ -31,13 +31,13 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
             `;
           }
         })}</div>
-        <div class="mb-8 w-full flex flex-col gap-4">${validate_component(Button, "Button").$$render(
+        <div class="mb-8 w-full flex flex-col gap-4">
+            ${validate_component(Button, "Button").$$render(
           $$result,
           {
             secondary: true,
             download: true,
-            onClick: () => {
-            }
+            onClick: () => window.location.href = "/drafts/hoffmanns-schuppen/Aktie.png"
           },
           {},
           {
