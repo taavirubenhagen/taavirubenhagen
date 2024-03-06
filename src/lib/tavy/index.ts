@@ -1,16 +1,16 @@
-import SmallParagraph from '$src/lib/tavy/general/text/paragraphs/SmallParagraph.svelte';
-import MediumParagraph from '$src/lib/tavy/general/text/paragraphs/MediumParagraph.svelte';
-import LargeParagraph from '$src/lib/tavy/general/text/paragraphs/LargeParagraph.svelte';
+import SmallParagraph from '$tavy/general/text/paragraphs/SmallParagraph.svelte';
+import MediumParagraph from '$tavy/general/text/paragraphs/MediumParagraph.svelte';
+import LargeParagraph from '$tavy/general/text/paragraphs/LargeParagraph.svelte';
 
 //import SmallSubtitle from '$tavy/text/subtitles/SmallSubtitle.svelte';
-import MediumSubtitle from '$src/lib/tavy/general/text/subtitles/MediumSubtitle.svelte';
-import LargeSubtitle from '$src/lib/tavy/general/text/subtitles/LargeSubtitle.svelte';
+import MediumSubtitle from '$tavy/general/text/subtitles/MediumSubtitle.svelte';
+import LargeSubtitle from '$tavy/general/text/subtitles/LargeSubtitle.svelte';
 
-import SmallHeading from '$src/lib/tavy/general/text/headings/SmallHeading.svelte';
-import MediumHeading from '$src/lib/tavy/general/text/headings/MediumHeading.svelte';
-import LargeHeading from '$src/lib/tavy/general/text/headings/LargeHeading.svelte';
+import SmallHeading from '$tavy/general/text/headings/SmallHeading.svelte';
+import MediumHeading from '$tavy/general/text/headings/MediumHeading.svelte';
+import LargeHeading from '$tavy/general/text/headings/LargeHeading.svelte';
 
-import Icon from '$src/lib/tavy/general/icons/icon.svelte';
+import Icon from '$tavy/general/icons/icon.svelte';
 
 import RawButton from '$tavy/general/buttons/RawButton.svelte';
 import InlineParagraphButton from '$tavy/general/buttons/InlineParagraphButton.svelte';

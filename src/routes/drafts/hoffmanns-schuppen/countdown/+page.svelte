@@ -4,7 +4,7 @@
         LargeHeading, MediumHeading,
         Section,
     } from "$tavy";
-    import { Button } from '$tavy/playful';
+    import { Button } from '$tavy/hoffmanns';
   import { onMount } from 'svelte';
 
     let now, end;

@@ -59,6 +59,20 @@ ${validate_component(Page, "Page").$$render($$result, {}, {}, {
         $$result,
         {
           openInNew: true,
+          onClick: () => window.location.href = "/drafts/hoffmanns-schuppen"
+        },
+        {},
+        {
+          default: () => {
+            return `Hoffmann&#39;s Schuppen`;
+          }
+        }
+      )}
+    ${validate_component(Button, "Button").$$render(
+        $$result,
+        {
+          openInNew: true,
+          borderClass: "border-t-0",
           onClick: () => window.location.href = "https://fenni.me"
         },
         {},

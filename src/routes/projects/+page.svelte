@@ -11,8 +11,8 @@
 
 
 <Page>
-    <Button openInNew onClick={() => window.location.href = 'https://fenni.me'}>FENNIs Website</Button>
-    <Button openInNew onClick={() => window.location.href = 'https://fenni.me'}>FENNIs Website</Button>
+    <Button openInNew onClick={() => window.location.href = '/drafts/hoffmanns-schuppen'}>Hoffmann's Schuppen</Button>
+    <Button openInNew borderClass='border-t-0' onClick={() => window.location.href = 'https://fenni.me'}>FENNIs Website</Button>
     <Button next borderClass='border-t-0' onClick={() => window.location.href = '/'}>Personal Website</Button>
     <Button next borderClass='border-t-0' onClick={() => window.location.href = '/products'}>Product Shop</Button>
     <ButtonSeperator/>

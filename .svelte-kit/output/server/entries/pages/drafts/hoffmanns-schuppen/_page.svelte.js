@@ -16,8 +16,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
                 <div class="flex gap-4">${validate_component(Button, "Button").$$render(
         $$result,
         {
-          onClick: () => {
-          }
+          onClick: () => window.location.href = "/drafts/hoffmanns-schuppen/produkte"
         },
         {},
         {
@@ -31,8 +30,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         $$result,
         {
           secondary: true,
-          onClick: () => {
-          }
+          onClick: () => window.location.href = "/drafts/hoffmanns-schuppen/mach-mit"
         },
         {},
         {

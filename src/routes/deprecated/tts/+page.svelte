@@ -5,7 +5,7 @@
     import "$style"
     import "./tts.postcss"
   
-    import TextButton from "$src/lib/tavy/general/templates/Page.svelte"
+    import TextButton from "$tavy/general/templates/Page.svelte"
 
     let voiceIndex = 3
     let speedInUI = 100

@@ -1,4 +1,4 @@
-import Cursor from '$src/lib/tavy/identity/Cursor.svelte';
+import Cursor from '$tavy/identity/Cursor.svelte';
 
 
 

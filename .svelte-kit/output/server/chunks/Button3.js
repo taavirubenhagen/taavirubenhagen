@@ -5,6 +5,7 @@ const Button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { secondary = false } = $$props;
   let { openInNew = false } = $$props;
   let { next = false } = $$props;
+  let { download = false } = $$props;
   let { onClick } = $$props;
   if ($$props.secondary === void 0 && $$bindings.secondary && secondary !== void 0)
     $$bindings.secondary(secondary);
@@ -12,6 +13,8 @@ const Button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     $$bindings.openInNew(openInNew);
   if ($$props.next === void 0 && $$bindings.next && next !== void 0)
     $$bindings.next(next);
+  if ($$props.download === void 0 && $$bindings.download && download !== void 0)
+    $$bindings.download(download);
   if ($$props.onClick === void 0 && $$bindings.onClick && onClick !== void 0)
     $$bindings.onClick(onClick);
   return `${validate_component(RawButton, "RawButton").$$render($$result, { onClick }, {}, {
@@ -22,7 +25,7 @@ const Button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       ) + " center_row font-body"}">${validate_component(SmallParagraph, "SmallParagraph").$$render($$result, {}, {}, {
         default: () => {
           return `${slots.default ? slots.default({}) : ``}
-            ${openInNew ? `${validate_component(Icon, "Icon").$$render($$result, { name: "open-new-window" }, {}, {})}` : `${next ? `${validate_component(Icon, "Icon").$$render($$result, { name: "arrow-right" }, {}, {})}` : ``}`}`;
+            <div class="inline relative top-0.5">${openInNew ? `${validate_component(Icon, "Icon").$$render($$result, { name: "open-new-window" }, {}, {})}` : `${next ? `${validate_component(Icon, "Icon").$$render($$result, { name: "arrow-right" }, {}, {})}` : `${download ? `${validate_component(Icon, "Icon").$$render($$result, { name: "download" }, {}, {})}` : ``}`}`}</div>`;
         }
       })}</div>`;
     }

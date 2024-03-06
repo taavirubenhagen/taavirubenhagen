@@ -11,7 +11,6 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		alias: {
-			$src: path.resolve('./src'),
 			$static: path.resolve('./static/'),
 			$tavy: path.resolve("./src/lib/tavy/"),
 			$style: path.resolve("./src/global.postcss"),
