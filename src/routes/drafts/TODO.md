@@ -16,24 +16,24 @@
 
 ### Color scheme
 
-*background*: white
-*primary*: black
-*accent*: [ strong color ]
+- *background*: white
+- *primary*: black
+- *accent*: [ strong color ]
 
 **(That's it)**
 
 ## Include:
 
-### Socials:
+### Socials
 
 - Instagram
 - GitHub
 - YouTube?
 - E-Mail
 
-### Projects:
+### Projects
 
-#### Websites:
+#### Websites
 
 - *rubenhagen.com*
 - *hoffmanns-schuppen.com*
@@ -41,13 +41,19 @@
 
 Use <iframe> for every website project
 
-#### Apps:
+#### Apps
 
 - Presenter
 - Counter
 - Outfyx (with CTA)
 
-#### Other:
+#### Political activities
+
+- JuPa
+- Volt
+- Hoffmann's Schuppen/SR
+
+#### Other
 
 ##### Tavy Design System
 
@@ -55,7 +61,7 @@ Use <iframe> for every website project
 - Tavy Industrial (with components)
 - Tavy Icons
 
-##### Graphic Design:
+##### Graphic Design
 
 - Presentation Master 2 marketing campaign
 - Hoffmann's Schuppen marketing campaign
