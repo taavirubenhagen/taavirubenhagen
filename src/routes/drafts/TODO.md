@@ -84,11 +84,12 @@ Use <iframe> for every website project
     - design
         - graphic
             - hoffmanns
+                - -> /portfolio/politics/hoffmanns
             - jupa
             - presenter
         - ui
             - -> /tavy
-    - politics
+    - politics [ (mention Volt) ]
         - hoffmanns
         - jupa
     - websites
@@ -98,4 +99,4 @@ Use <iframe> for every website project
 
 - Actuality problems, especially with images
 - Accessibility and conflicts with other *rubenhagen.com* subsites
-    - Where does *https://rubenhagen.com* lead/redirect?
+    - Where does *https://rubenhagen.com* lead/redirec
