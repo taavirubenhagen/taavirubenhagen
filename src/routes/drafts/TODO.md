@@ -11,6 +11,8 @@
 
 ## "Designer, developer, (artist), (activist) and entrepreneur"
 
+- Make every phrase a link to respective section (ref. "***Include***")
+
 ## Design
 
 - Use *tavy/industrial* as base
