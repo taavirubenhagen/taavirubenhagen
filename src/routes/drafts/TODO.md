@@ -75,7 +75,21 @@ Use <iframe> for every website project
 
 ## URL structure:
 
-- 
+- about
+- home
+- portfolio
+    - apps
+        - presenter
+    - dropshipping
+    - design
+        - graphic
+            - hoffmanns
+            - jupa
+            - presenter
+        - tavy
+            -> /tavy
+    - websites
+- tavy
 
 ## Possible issues:
 
