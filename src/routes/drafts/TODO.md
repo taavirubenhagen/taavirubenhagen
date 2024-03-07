@@ -1,6 +1,6 @@
 # General
 
-- Remove *subtitles* folder and unnecessary *paragraphs* in *tavy/general*
+- Remove *subtitles* folder and unnecessary *paragraph* components in *tavy/general*
 
 # *hoffmanns-schuppen*
 
@@ -8,6 +8,8 @@
 - Fix mobile screen height issues (*fenni.me* as inspo)
 
 # *website*
+
+## "Designer, developer, (artist), (activist) and entrepreneur"
 
 ## Design
 
@@ -47,13 +49,7 @@ Use <iframe> for every website project
 - Counter
 - Outfyx (with CTA)
 
-#### Political activities
-
-- JuPa
-- Volt
-- Hoffmann's Schuppen/SR
-
-#### Other
+#### Design
 
 ##### Tavy Design System
 
@@ -66,3 +62,11 @@ Use <iframe> for every website project
 - Presentation Master 2 marketing campaign
 - Hoffmann's Schuppen marketing campaign
 - JuPa marketing campaign (sticker + election posters)
+
+#### Dropshipping Business
+
+#### Political activities
+
+- JuPa
+- Volt
+- Hoffmann's Schuppen/SR
