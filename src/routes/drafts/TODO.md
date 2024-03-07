@@ -81,17 +81,13 @@ Use <iframe> for every website project
     - apps
         - outfyx [ (with CTA) ]
         - presenter
-            - -> /portfolio/design/graphic/presenter
     - dropshipping
     - design
         - graphic
             - hoffmanns
-                - -> /portfolio/politics/hoffmanns
             - jupa
-                - -> /portfolio/politics/jupa
             - presenter
-                - -> /portfolio/apps/presenter
-        - ui [ (mention presenter design system) ]
+        - ui [ (mention presenter design system, Tavy Icons) ]
             - -> /tavy
     - politics [ (mention Volt) ]
         - hoffmanns

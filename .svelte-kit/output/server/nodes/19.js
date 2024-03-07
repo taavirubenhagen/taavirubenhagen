@@ -3,6 +3,6 @@
 export const index = 19;
 let component_cache;
 export const component = async () => component_cache ??= (await import('../entries/pages/drafts/hoffmanns-schuppen/investor-relations/_page.svelte.js')).default;
-export const imports = ["_app/immutable/nodes/19.ebd2ed30.js","_app/immutable/chunks/index.1f336de1.js","_app/immutable/chunks/SmallParagraph.6009eb10.js","_app/immutable/chunks/MediumHeading.1b2d6ffc.js","_app/immutable/chunks/paths.e7f20a3a.js","_app/immutable/chunks/Section.62b88ac5.js","_app/immutable/chunks/Button.329359d4.js","_app/immutable/chunks/RawButton.293de0f1.js","_app/immutable/chunks/state.2a2fd8b4.js","_app/immutable/chunks/index.703c138a.js"];
+export const imports = ["_app/immutable/nodes/19.c14d99eb.js","_app/immutable/chunks/index.1f336de1.js","_app/immutable/chunks/SmallParagraph.6009eb10.js","_app/immutable/chunks/MediumHeading.1b2d6ffc.js","_app/immutable/chunks/paths.2793088c.js","_app/immutable/chunks/Section.62b88ac5.js","_app/immutable/chunks/Button.26712f5a.js","_app/immutable/chunks/RawButton.293de0f1.js","_app/immutable/chunks/state.2a2fd8b4.js","_app/immutable/chunks/index.703c138a.js"];
 export const stylesheets = ["_app/immutable/assets/global.c0e8d9fc.css"];
 export const fonts = [];
