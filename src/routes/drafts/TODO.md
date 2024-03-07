@@ -11,7 +11,7 @@
 
 ## "Designer, developer, (artist), (activist) and entrepreneur"
 
-- Make every phrase a link to respective section (ref. "***Include***")
+- Make every phrase a link to respective section (ref. "**Include:**")
 
 ## Design
 
@@ -72,3 +72,13 @@ Use <iframe> for every website project
 - JuPa
 - Volt
 - Hoffmann's Schuppen/SR
+
+## URL structure:
+
+- 
+
+## Possible issues:
+
+- Actuality problems, especially with images
+- Accessibility and conflicts with other *rubenhagen.com* subsites
+    - Where does *https://rubenhagen.com* lead/redirect?
