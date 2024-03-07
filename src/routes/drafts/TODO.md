@@ -31,3 +31,32 @@
 - YouTube?
 - E-Mail
 
+### Projects:
+
+#### Websites:
+
+- *rubenhagen.com*
+- *hoffmanns-schuppen.com*
+- *fenni.me*
+
+Use <iframe> for every website project
+
+#### Apps:
+
+- Presenter
+- Counter
+- Outfyx (with CTA)
+
+#### Other:
+
+##### Tavy Design System
+
+- Key wisdom
+- Tavy Industrial (with components)
+- Tavy Icons
+
+##### Graphic Design:
+
+- Presentation Master 2 marketing campaign
+- Hoffmann's Schuppen marketing campaign
+- JuPa marketing campaign (sticker + election posters)
