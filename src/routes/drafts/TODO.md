@@ -79,24 +79,35 @@ Use <iframe> for every website project
 - home
 - portfolio
     - apps
+        - outfyx [ (with CTA) ]
         - presenter
+            - -> /portfolio/design/graphic/presenter
     - dropshipping
     - design
         - graphic
             - hoffmanns
                 - -> /portfolio/politics/hoffmanns
             - jupa
+                - -> /portfolio/politics/jupa
             - presenter
-        - ui
+                - -> /portfolio/apps/presenter
+        - ui [ (mention presenter design system) ]
             - -> /tavy
     - politics [ (mention Volt) ]
         - hoffmanns
         - jupa
     - websites
+        - fenni
+        - hoffmanns
+        - personal
 - tavy
+    - icons
+    - industrial
+        - components
+    - wisdom
 
 ## Possible issues:
 
 - Actuality problems, especially with images
 - Accessibility and conflicts with other *rubenhagen.com* subsites
-    - Where does *https://rubenhagen.com* lead/redirec
+    - Where does *https://rubenhagen.com* lead/redirect?
