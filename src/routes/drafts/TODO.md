@@ -86,8 +86,11 @@ Use <iframe> for every website project
             - hoffmanns
             - jupa
             - presenter
-        - tavy
-            -> /tavy
+        - ui
+            - -> /tavy
+    - politics
+        - hoffmanns
+        - jupa
     - websites
 - tavy
 
