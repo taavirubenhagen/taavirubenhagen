@@ -3,6 +3,6 @@
 export const index = 18;
 let component_cache;
 export const component = async () => component_cache ??= (await import('../entries/pages/drafts/hoffmanns-schuppen/countdown/_page.svelte.js')).default;
-export const imports = ["_app/immutable/nodes/18.7999db65.js","_app/immutable/chunks/index.38f42238.js","_app/immutable/chunks/LargeHeading.686f01d7.js","_app/immutable/chunks/paths.5e899fc7.js","_app/immutable/chunks/Section.b6305638.js"];
-export const stylesheets = ["_app/immutable/assets/global.82877781.css"];
+export const imports = ["_app/immutable/nodes/18.659437dc.js","_app/immutable/chunks/index.1f336de1.js","_app/immutable/chunks/LargeHeading.95efa0f0.js","_app/immutable/chunks/paths.e16d90b4.js","_app/immutable/chunks/Section.62b88ac5.js"];
+export const stylesheets = ["_app/immutable/assets/global.c0e8d9fc.css"];
 export const fonts = [];

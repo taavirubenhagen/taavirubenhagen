@@ -34,10 +34,7 @@ export const nodes = [
 	() => import('./nodes/30'),
 	() => import('./nodes/31'),
 	() => import('./nodes/32'),
-	() => import('./nodes/33'),
-	() => import('./nodes/34'),
-	() => import('./nodes/35'),
-	() => import('./nodes/36')
+	() => import('./nodes/33')
 ];
 
 export const server_loads = [];
@@ -58,26 +55,23 @@ export const dictionary = {
 		"/deprecated/terminal": [~14],
 		"/deprecated/terminal/[route]": [15],
 		"/deprecated/tts": [16],
-		"/drafts/hoffmanns-schuppen copy 2": [23],
-		"/drafts/hoffmanns-schuppen copy 3": [24],
-		"/drafts/hoffmanns-schuppen copy": [22],
 		"/drafts/hoffmanns-schuppen": [17],
 		"/drafts/hoffmanns-schuppen/countdown": [18],
 		"/drafts/hoffmanns-schuppen/investor-relations": [19],
 		"/drafts/hoffmanns-schuppen/mach-mit": [20],
 		"/drafts/hoffmanns-schuppen/produkte": [21],
-		"/legal/contact": [25],
-		"/legal/privacy-policy": [26],
-		"/politics/jugendparlament": [27],
-		"/politics/jugendparlament/sticker": [28],
-		"/presenter/download": [29],
-		"/presenter/privacy-policy": [30],
-		"/presenter/sticker": [31],
-		"/presenter/support-url": [32],
-		"/presenter/waitlist": [33],
-		"/products": [34],
-		"/products/coming-soon": [35],
-		"/projects": [36]
+		"/legal/contact": [22],
+		"/legal/privacy-policy": [23],
+		"/politics/jugendparlament": [24],
+		"/politics/jugendparlament/sticker": [25],
+		"/presenter/download": [26],
+		"/presenter/privacy-policy": [27],
+		"/presenter/sticker": [28],
+		"/presenter/support-url": [29],
+		"/presenter/waitlist": [30],
+		"/products": [31],
+		"/products/coming-soon": [32],
+		"/projects": [33]
 	};
 
 export const hooks = {

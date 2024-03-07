@@ -12,13 +12,15 @@
 </script>
 
 
-<div style='font-family: "Roboto Serif"'>
+<div style='font-family: "Roboto Slab"'>
     <Section className='bg-green-100 p-8 flex flex-col justify-between'>
         <div>
-            <MediumHeading>
-                Direkte Beteiligung war noch nie so einfach.
-                <br/><br/>
-            </MediumHeading>
+            <div style='font-family: "Roboto Serif"'>
+                <MediumHeading>
+                    Direkte Beteiligung war noch nie so einfach.
+                    <br/><br/>
+                </MediumHeading>
+            </div>
             <SmallParagraph>
                 Unsere Aktien beteiligen dich direkt am Erfolg von Hoffmann's Schuppen.
                 Für 5€ erhälst du eine Aktie, die dir Anspruch auf einen Anteil des Firmenkapitals gibt.

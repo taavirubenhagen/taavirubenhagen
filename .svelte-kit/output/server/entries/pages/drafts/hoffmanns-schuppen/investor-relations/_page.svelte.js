@@ -4,7 +4,7 @@ import { M as MediumHeading } from "../../../../../chunks/MediumHeading.js";
 import { S as Section } from "../../../../../chunks/Section.js";
 import { B as Button } from "../../../../../chunks/Button3.js";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<div style="font-family: &quot;Roboto Serif&quot;">${validate_component(Section, "Section").$$render(
+  return `<div style="font-family: &quot;Roboto Slab&quot;">${validate_component(Section, "Section").$$render(
     $$result,
     {
       className: "bg-green-100 p-8 flex flex-col justify-between"
@@ -12,12 +12,12 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {},
     {
       default: () => {
-        return `<div>${validate_component(MediumHeading, "MediumHeading").$$render($$result, {}, {}, {
+        return `<div><div style="font-family: &quot;Roboto Serif&quot;">${validate_component(MediumHeading, "MediumHeading").$$render($$result, {}, {}, {
           default: () => {
             return `Direkte Beteiligung war noch nie so einfach.
-                <br><br>`;
+                    <br><br>`;
           }
-        })}
+        })}</div>
             ${validate_component(SmallParagraph, "SmallParagraph").$$render($$result, {}, {}, {
           default: () => {
             return `Unsere Aktien beteiligen dich direkt am Erfolg von Hoffmann&#39;s Schuppen.

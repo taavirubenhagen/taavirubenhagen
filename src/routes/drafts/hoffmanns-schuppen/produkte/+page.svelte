@@ -9,36 +9,25 @@
 
 
 <div style='font-family: "Roboto Serif"'>
-    <Section className='bg-green-900 text-white'>
-        <div class='relative'>
-            <img
-                src="/drafts/hoffmanns-schuppen/local_business.jpg" alt=""
-                class="w-full h-screen object-cover brightness-75"
-            >
-            <div class=
-                'absolute left-8 bottom-16 md:bottom-0
-                md:h-full flex flex-col justify-center gap-8'
-            >
-                <MediumHeading>
-                    Nachhaltig, nützlich, nahbar.<br/>
-                    Willkommen bei Hoffmann's Schuppen.
-                </MediumHeading>
-                <div class='flex gap-4'>
-                    <Button onClick={() => window.location.href = '/drafts/hoffmanns-schuppen/produkte'}>
-                        Produkte entdecken
-                    </Button>
-                    <Button secondary onClick={() => window.location.href = '/drafts/hoffmanns-schuppen/mach-mit'}>
-                        Mach mit
-                    </Button>
-                </div>
-            </div>
+    <Section className='bg-green-950 text-white'>
+        <div class='p-16 pb-12 text-center'>
+            <MediumHeading>
+                Unser faires Produktsortiment
+            </MediumHeading>
         </div>
-        {#if false}
-            <div class='grid grid-cols-2 gap-8'>
-                {#each [0, 0, 0, 0] as _}
-                    <div class='rounded-2xl w-full h-64 bg-green-200'></div>
-                {/each}
-            </div>
-        {/if}
+        <div class='flex flex-col gap-8'>
+            {#each [
+                'g-s-dunkel_ls',
+                'g-s-dunkel_ls',
+                'g-s-dunkel_ls',
+                'g-s-dunkel_ls',
+            ] as title}
+                <img
+                    src="/drafts/hoffmanns-schuppen/ads/{title}.png"
+                    alt="Die Gute Schokolade (Zartbitter)"
+                    class='w-full'
+                >
+            {/each}
+        </div>
     </Section>
 </div>
