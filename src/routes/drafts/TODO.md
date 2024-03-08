@@ -76,6 +76,7 @@ Use <iframe> for every website project
 ## URL structure:
 
 - about
+- coming-soon
 - home
 - portfolio
     - apps

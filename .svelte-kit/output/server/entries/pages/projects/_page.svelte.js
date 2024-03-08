@@ -82,31 +82,17 @@ ${validate_component(Page, "Page").$$render($$result, {}, {}, {
           }
         }
       )}
+    ${validate_component(ButtonSeperator, "ButtonSeperator").$$render($$result, {}, {}, {})}
     ${validate_component(Button, "Button").$$render(
         $$result,
         {
           next: true,
-          borderClass: "border-t-0",
-          onClick: () => window.location.href = "/"
+          onClick: () => window.location.href = "/drafts/website"
         },
         {},
         {
           default: () => {
             return `Personal Website`;
-          }
-        }
-      )}
-    ${validate_component(Button, "Button").$$render(
-        $$result,
-        {
-          next: true,
-          borderClass: "border-t-0",
-          onClick: () => window.location.href = "/products"
-        },
-        {},
-        {
-          default: () => {
-            return `Product Shop`;
           }
         }
       )}
