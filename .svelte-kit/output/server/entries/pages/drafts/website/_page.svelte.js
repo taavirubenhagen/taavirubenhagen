@@ -40,7 +40,15 @@ ${validate_component(RawButton, "RawButton").$$render(
             return `${escape(title)}`;
           }
         })}</div>`}`}
-        <div class="${"absolute bottom-4 w-full center_row " + escape(src === "" ? "" : "text-white", true)}">${validate_component(Icon, "Icon").$$render(
+        ${target !== "" ? `<div class="${"absolute bottom-4 w-full center_row " + escape(src === "" ? "" : "text-white", true)}">${target[0] === "/" ? `${validate_component(Icon, "Icon").$$render(
+          $$result,
+          {
+            name: "arrow-right",
+            textClass: "scale-150"
+          },
+          {},
+          {}
+        )}` : `${validate_component(Icon, "Icon").$$render(
           $$result,
           {
             name: "open-new-window",
@@ -48,7 +56,7 @@ ${validate_component(RawButton, "RawButton").$$render(
           },
           {},
           {}
-        )}</div>
+        )}`}</div>` : ``}
         </div>`;
       }
     }
@@ -164,14 +172,30 @@ ${validate_component(Section_1, "Section").$$render($$result, { className: "p-8 
             {},
             {}
           )}
-        ${validate_component(ShowcaseCarouselItem, "ShowcaseCarouselItem").$$render($$result, { src: "", title: "Hoffmann's Schuppen" }, {}, {})}
-        ${validate_component(ShowcaseCarouselItem, "ShowcaseCarouselItem").$$render($$result, { src: "", title: "JuPa Campaign" }, {}, {})}`;
+        ${validate_component(ShowcaseCarouselItem, "ShowcaseCarouselItem").$$render($$result, { title: "Hoffmann's Schuppen" }, {}, {})}
+        ${validate_component(ShowcaseCarouselItem, "ShowcaseCarouselItem").$$render($$result, { title: "JuPa Campaign" }, {}, {})}`;
         }
       })}
     ${validate_component(ShowcaseCarousel, "ShowcaseCarousel").$$render($$result, { title: "design system" }, {}, {
         default: () => {
-          return `${validate_component(ShowcaseCarouselItem, "ShowcaseCarouselItem").$$render($$result, { src: "", title: "Tavy Design System" }, {}, {})}
-        ${validate_component(ShowcaseCarouselItem, "ShowcaseCarouselItem").$$render($$result, { src: "", title: "Tavy Icons" }, {}, {})}
+          return `${validate_component(ShowcaseCarouselItem, "ShowcaseCarouselItem").$$render(
+            $$result,
+            {
+              target: "/drafts/website/tavy",
+              title: "Tavy Design System"
+            },
+            {},
+            {}
+          )}
+        ${validate_component(ShowcaseCarouselItem, "ShowcaseCarouselItem").$$render(
+            $$result,
+            {
+              target: "/drafts/website/tavy/icons",
+              title: "Tavy Icons"
+            },
+            {},
+            {}
+          )}
         ${validate_component(ShowcaseCarouselItem, "ShowcaseCarouselItem").$$render($$result, { src: "", title: "PM2 Design System" }, {}, {})}`;
         }
       })}

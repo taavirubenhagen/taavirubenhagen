@@ -30,7 +30,7 @@ const InlineButton = create_ssr_component(($$result, $$props, $$bindings, slots)
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $page, $$unsubscribe_page;
   $$unsubscribe_page = subscribe(page, (value) => $page = value);
-  let scrollDependentClass = "";
+  let scrollDependentClass = "translate-y-0";
   let menuExpanded = false;
   const routes = $page.url.href.split("/").slice(3);
   globalScrollY.subscribe((value) => scrollDependentClass = value === 0 && routes.length === 2 && routes[0] === "drafts" && routes[1] === "website" ? "-translate-y-16" : "translate-y-0");

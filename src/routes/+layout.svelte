@@ -10,7 +10,10 @@
     let windowHeight: number;
 
     const routes = $page.url.href.split('/').slice(3);
-    const legalFooterVisible = false;
+    const legalFooterVisible = !(
+        routes.includes('hoffmanns-schuppen') ||
+        routes.includes('website')
+    );
 </script>
 
 
