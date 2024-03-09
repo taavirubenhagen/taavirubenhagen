@@ -43,24 +43,24 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$unsubscribe_page = subscribe(page, (value) => $page = value);
   const onPasswordSubmitted = (input) => {
     console.log(input);
-    window.location.href = "/admin/access/" + input;
+    window.location.href = "/drafts/hoffmanns-schuppen/admin/access/" + input;
   };
   $$unsubscribe_page();
   return `<div style="font-family: &quot;Roboto Slab&quot;;">${validate_component(Section, "Section").$$render($$result, { className: "center_col" }, {}, {
     default: () => {
-      return `${$page.url.href.split("/").pop() == "failed" ? `<div class="h-8 flex items-start text-error">Login failed.
-            </div>` : ``}
+      return `${$page.url.href.split("/").pop() == "failed" ? `<div class="h-12"></div>` : ``}
         ${validate_component(TextField, "TextField").$$render(
         $$result,
         {
           autofocus: true,
           onSubmit: onPasswordSubmitted,
-          placeholder: "Password"
+          placeholder: "Passwort"
         },
         {},
         {}
       )}
-        ${$page.url.href.split("/").pop() == "failed" ? `<div class="h-8"></div>` : ``}`;
+        ${$page.url.href.split("/").pop() == "failed" ? `<div class="mt-4 h-8 flex items-start text-error">Login fehlgeschlagen.
+            </div>` : ``}`;
     }
   })}</div>`;
 });

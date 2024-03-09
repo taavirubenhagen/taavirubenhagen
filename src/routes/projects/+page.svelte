@@ -13,7 +13,7 @@
 <Page>
     <Button openInNew onClick={() => window.location.href = '/drafts/hoffmanns-schuppen'}>Hoffmann's Schuppen</Button>
     <Button openInNew borderClass='border-t-0' onClick={() => window.location.href = 'https://fenni.me'}>FENNIs Website</Button>
-    <Button next borderClass='border-t-0' onClick={() => window.location.href = '/drafts/website'}>Personal Website</Button>
+    <Button next borderClass='border-t-0' onClick={() => window.location.href = '/drafts/website'}>Website (Unfinished)</Button>
     <ButtonSeperator/>
     <NestedButton title='Presenter' buttonCount={3}>
         <Button onClick={() => window.location.href = 'https://play.google.com/store/apps/details?id=tavy.presenter.presentation_master_2'}>

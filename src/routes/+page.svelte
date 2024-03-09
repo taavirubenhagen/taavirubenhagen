@@ -6,7 +6,12 @@
 
 
 <Page>
-    <Button next onClick={() => window.location.href = '/projects'}>Projects</Button>
+    <Button next onClick={() => window.location.href = '/drafts/website'}>
+        Website (Unfinished)
+    </Button>
+    <Button next borderClass='border-t-0' onClick={() => window.location.href = '/projects'}>
+        Projects
+    </Button>
     <ButtonSeperator/>
     <Button openInNew onClick={() => window.location.href = 'https://www.instagram.com/taavirubenhagen'}>
         @taavirubenhagen
