@@ -53,8 +53,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {},
     {
       default: () => {
-        return `
-    ${validate_component(Button, "Button").$$render(
+        return `${validate_component(Button, "Button").$$render(
           $$result,
           {
             onClick: () => {
@@ -77,6 +76,20 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
           {
             default: () => {
               return `dm me
+    `;
+            }
+          }
+        )}
+    
+    ${validate_component(Button, "Button").$$render(
+          $$result,
+          {
+            onClick: () => window.location.href = "/drafts/website/legal/imprint"
+          },
+          {},
+          {
+            default: () => {
+              return `imprint
     `;
             }
           }

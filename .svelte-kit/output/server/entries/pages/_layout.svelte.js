@@ -1,5 +1,5 @@
 import { c as create_ssr_component, v as validate_component, d as subscribe, e as escape } from "../../chunks/index3.js";
-import { n as navigating } from "../../chunks/stores.js";
+import { p as page, n as navigating } from "../../chunks/stores.js";
 import { b as buttonHover, c as cursorPosition } from "../../chunks/state.js";
 /* empty css                   */import { L as LargeHeading } from "../../chunks/LargeHeading.js";
 import { B as Button } from "../../chunks/Button.js";
@@ -59,10 +59,15 @@ const Cursor = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   })}`;
 });
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let $page, $$unsubscribe_page;
   let $$unsubscribe_cursorPosition;
   let $navigating, $$unsubscribe_navigating;
+  $$unsubscribe_page = subscribe(page, (value) => $page = value);
   $$unsubscribe_cursorPosition = subscribe(cursorPosition, (value) => value);
   $$unsubscribe_navigating = subscribe(navigating, (value) => $navigating = value);
+  const routes = $page.url.href.split("/").slice(3);
+  const legalFooterVisible = !routes.includes("hoffmanns-schuppen") && !routes.includes("website");
+  $$unsubscribe_page();
   $$unsubscribe_cursorPosition();
   $$unsubscribe_navigating();
   return `
@@ -82,7 +87,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     }
   })}` : `
         ${slots.default ? slots.default({}) : ``}`}
-    ${validate_component(LegalFooter, "LegalFooter").$$render(
+    ${legalFooterVisible ? `${validate_component(LegalFooter, "LegalFooter").$$render(
     $$result,
     {
       contactLink: "/legal/contact",
@@ -90,7 +95,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     },
     {},
     {}
-  )}</main>`;
+  )}` : ``}</main>`;
 });
 export {
   Layout as default

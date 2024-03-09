@@ -33,7 +33,6 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let scrollDependentClass = "";
   let menuExpanded = false;
   const routes = $page.url.href.split("/").slice(3);
-  console.log(routes);
   globalScrollY.subscribe((value) => scrollDependentClass = value === 0 && routes.length === 2 && routes[0] === "drafts" && routes[1] === "website" ? "-translate-y-16" : "translate-y-0");
   $$unsubscribe_page();
   return `

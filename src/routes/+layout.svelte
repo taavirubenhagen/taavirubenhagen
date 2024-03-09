@@ -10,9 +10,7 @@
     let windowHeight: number;
 
     const routes = $page.url.href.split('/').slice(3);
-    const legalFooterVisible =
-        !routes.includes('hoffmanns-schuppen') &&
-        !routes.includes('website');
+    const legalFooterVisible = false;
 </script>
 
 
@@ -40,7 +38,7 @@
         <!-- TODO: Add standard scrollbar effects -->
         <slot/>
     {/if}
-    {#if condition}
+    {#if legalFooterVisible}
         <LegalFooter contactLink='/legal/contact' ppLink='/legal/privacy-policy'/>
     {/if}
 </main>
