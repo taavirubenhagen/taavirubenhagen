@@ -1,9 +1,44 @@
-import { c as create_ssr_component, d as subscribe, v as validate_component, e as escape } from "../../chunks/index3.js";
+import { c as create_ssr_component, v as validate_component, d as subscribe, e as escape } from "../../chunks/index3.js";
 import { p as page, n as navigating } from "../../chunks/stores.js";
 import { b as buttonHover, c as cursorPosition } from "../../chunks/state.js";
 /* empty css                   */import { L as LargeHeading } from "../../chunks/LargeHeading.js";
+import { B as Button } from "../../chunks/Button.js";
 import { P as Page } from "../../chunks/Page.js";
 import { D as DeviceDetector } from "../../chunks/DeviceDetector.js";
+const LegalFooter = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let { contactLink } = $$props;
+  let { ppLink } = $$props;
+  if ($$props.contactLink === void 0 && $$bindings.contactLink && contactLink !== void 0)
+    $$bindings.contactLink(contactLink);
+  if ($$props.ppLink === void 0 && $$bindings.ppLink && ppLink !== void 0)
+    $$bindings.ppLink(ppLink);
+  return `<div class="w-full grid grid-cols-2">${validate_component(Button, "Button").$$render(
+    $$result,
+    {
+      borderClass: "border-l-0 border-b-0",
+      onClick: () => window.location.href = contactLink
+    },
+    {},
+    {
+      default: () => {
+        return `Contact`;
+      }
+    }
+  )}
+    ${validate_component(Button, "Button").$$render(
+    $$result,
+    {
+      borderClass: "border-l-0 border-b-0",
+      onClick: () => window.location.href = ppLink
+    },
+    {},
+    {
+      default: () => {
+        return `Privacy Policy`;
+      }
+    }
+  )}</div>`;
+});
 const Cursor = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $buttonHover, $$unsubscribe_buttonHover;
   let $cursorPosition, $$unsubscribe_cursorPosition;
@@ -30,7 +65,8 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$unsubscribe_page = subscribe(page, (value) => $page = value);
   $$unsubscribe_cursorPosition = subscribe(cursorPosition, (value) => value);
   $$unsubscribe_navigating = subscribe(navigating, (value) => $navigating = value);
-  $page.url.href.split("/").slice(3);
+  const routes = $page.url.href.split("/").slice(3);
+  const legalFooterVisible = !(routes.includes("hoffmanns-schuppen") || routes.includes("website"));
   $$unsubscribe_page();
   $$unsubscribe_cursorPosition();
   $$unsubscribe_navigating();
@@ -51,7 +87,15 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     }
   })}` : `
         ${slots.default ? slots.default({}) : ``}`}
-    ${``}</main>`;
+    ${legalFooterVisible ? `${validate_component(LegalFooter, "LegalFooter").$$render(
+    $$result,
+    {
+      contactLink: "/legal/contact",
+      ppLink: "/legal/privacy-policy"
+    },
+    {},
+    {}
+  )}` : ``}</main>`;
 });
 export {
   Layout as default
