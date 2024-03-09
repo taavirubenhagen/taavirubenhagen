@@ -54,20 +54,21 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {
       default: () => {
         return `
-    <a href="https://mailto:taavi.ruebenhagen@gmail.com">${validate_component(Button, "Button").$$render(
+    ${validate_component(Button, "Button").$$render(
           $$result,
           {
+            borderClass: "center_row",
             onClick: () => {
             }
           },
           {},
           {
             default: () => {
-              return `e-mail me
-        `;
+              return `<a href="mailto:taavi.ruebenhagen@gmail.com">e-mail me
+        </a>`;
             }
           }
-        )}</a>
+        )}
     ${validate_component(Button, "Button").$$render(
           $$result,
           {

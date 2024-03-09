@@ -19,7 +19,7 @@
 
 <Section className='p-8 flex flex-col justify-center items-stretch gap-4'>
     <!--TODO: Fix-->
-    <Button borderClass='center_row' onClick={() => {}}>
+    <Button onClick={() => {}}>
         <a href='mailto:taavi.ruebenhagen@gmail.com' class='w-full'>
             e-mail me
         </a>
