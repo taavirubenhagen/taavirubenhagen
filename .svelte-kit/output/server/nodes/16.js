@@ -1,8 +1,8 @@
-import * as server from '../entries/pages/drafts/terminal/_page.server.ts.js';
+
 
 export const index = 16;
-export { server };
-export const server_id = "src/routes/drafts/terminal/+page.server.ts";
-export const imports = [];
-export const stylesheets = [];
+let component_cache;
+export const component = async () => component_cache ??= (await import('../entries/pages/drafts/hoffmanns-schuppen/home/_page.svelte.js')).default;
+export const imports = ["_app/immutable/nodes/16.3a5dd5bc.js","_app/immutable/chunks/index.f57fbee0.js","_app/immutable/chunks/MediumHeading.f4f8649f.js","_app/immutable/chunks/paths.c9d48398.js","_app/immutable/chunks/Section.47250a10.js","_app/immutable/chunks/Button.9c2ad2e2.js","_app/immutable/chunks/SmallParagraph.f730a046.js","_app/immutable/chunks/RawButton.70d03cf9.js","_app/immutable/chunks/index.a76aac04.js"];
+export const stylesheets = ["_app/immutable/assets/global.eed57195.css"];
 export const fonts = [];

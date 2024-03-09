@@ -1,8 +1,8 @@
 <script lang="ts">
     import { page } from '$app/stores';
     import '$style';
-    import { Page } from "$tavy";
-    import { TextField } from '$tavy/industrial';
+    import { Section } from "$tavy";
+    import { TextField } from '$tavy/hoffmanns';
 
     const onPasswordSubmitted = (input: string) => {
         console.log(input);
@@ -11,18 +11,20 @@
 </script>
 
 
-<Page>
-    {#if $page.url.href.split('/').pop() == 'failed'}
-        <div class="h-8 flex items-start text-error">
-            Login failed.
-        </div>
-    {/if}
-    <TextField
-        autofocus
-        onSubmit={onPasswordSubmitted}
-        placeholder='Password'
-    />
-    {#if $page.url.href.split('/').pop() == 'failed'}
-        <div class="h-8"></div>
-    {/if}
-</Page>
+<div style='font-family: "Roboto Slab";'>
+    <Section className='center_col'>
+        {#if $page.url.href.split('/').pop() == 'failed'}
+            <div class="h-8 flex items-start text-error">
+                Login failed.
+            </div>
+        {/if}
+        <TextField
+            autofocus
+            onSubmit={onPasswordSubmitted}
+            placeholder='Password'
+        />
+        {#if $page.url.href.split('/').pop() == 'failed'}
+            <div class="h-8"></div>
+        {/if}
+    </Section>
+</div>

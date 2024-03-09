@@ -2,7 +2,7 @@
 
 export const index = 19;
 let component_cache;
-export const component = async () => component_cache ??= (await import('../entries/pages/drafts/website/contact/_page.svelte.js')).default;
-export const imports = ["_app/immutable/nodes/19.32409752.js","_app/immutable/chunks/index.7b7993cb.js","_app/immutable/chunks/paths.fbc18c21.js","_app/immutable/chunks/SmallParagraph.a361a6a7.js","_app/immutable/chunks/RawButton.af5d6688.js","_app/immutable/chunks/index.228e60ed.js","_app/immutable/chunks/Section.943b2ccb.js","_app/immutable/chunks/Section.725124c0.js"];
-export const stylesheets = ["_app/immutable/assets/global.a693be3f.css"];
+export const component = async () => component_cache ??= (await import('../entries/pages/drafts/hoffmanns-schuppen/produkte/_page.svelte.js')).default;
+export const imports = ["_app/immutable/nodes/19.ab69f0c4.js","_app/immutable/chunks/index.f57fbee0.js","_app/immutable/chunks/MediumHeading.f4f8649f.js","_app/immutable/chunks/paths.c9d48398.js","_app/immutable/chunks/Section.47250a10.js"];
+export const stylesheets = ["_app/immutable/assets/global.eed57195.css"];
 export const fonts = [];

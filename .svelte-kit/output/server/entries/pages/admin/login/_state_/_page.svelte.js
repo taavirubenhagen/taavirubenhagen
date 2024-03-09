@@ -1,43 +1,7 @@
-import { c as create_ssr_component, v as validate_component, e as escape, h as add_attribute, d as subscribe } from "../../../../../chunks/index3.js";
+import { c as create_ssr_component, d as subscribe, v as validate_component } from "../../../../../chunks/index3.js";
 import { p as page } from "../../../../../chunks/stores.js";
-/* empty css                            */import { M as MediumParagraph, B as Button } from "../../../../../chunks/Button.js";
-import { I as Icon } from "../../../../../chunks/RawButton.js";
+/* empty css                            */import { T as TextField } from "../../../../../chunks/TextField.js";
 import { P as Page } from "../../../../../chunks/Page.js";
-const TextField = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let { inverted = false } = $$props;
-  let { autofocus = false } = $$props;
-  let { onSubmit } = $$props;
-  let { placeholder = "" } = $$props;
-  let input = "";
-  if ($$props.inverted === void 0 && $$bindings.inverted && inverted !== void 0)
-    $$bindings.inverted(inverted);
-  if ($$props.autofocus === void 0 && $$bindings.autofocus && autofocus !== void 0)
-    $$bindings.autofocus(autofocus);
-  if ($$props.onSubmit === void 0 && $$bindings.onSubmit && onSubmit !== void 0)
-    $$bindings.onSubmit(onSubmit);
-  if ($$props.placeholder === void 0 && $$bindings.placeholder && placeholder !== void 0)
-    $$bindings.placeholder(placeholder);
-  return `${validate_component(MediumParagraph, "MediumParagraph").$$render($$result, {}, {}, {
-    default: () => {
-      return `<div class="flex"><div class="${escape(inverted ? "invert" : "", true) + " border-2 border-primary"}">
-           
-           <input type="text" ${autofocus ? "autofocus" : ""} class="outline-none h-full px-1 text-xl"${add_attribute("placeholder", placeholder, 0)}${add_attribute("value", input, 0)}></div>
-       ${validate_component(Button, "Button").$$render(
-        $$result,
-        {
-          borderClass: "border-l-0",
-          onClick: () => onSubmit(input)
-        },
-        {},
-        {
-          default: () => {
-            return `${validate_component(Icon, "Icon").$$render($$result, { name: "arrow-right" }, {}, {})}`;
-          }
-        }
-      )}</div>`;
-    }
-  })}`;
-});
 const Page_1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $page, $$unsubscribe_page;
   $$unsubscribe_page = subscribe(page, (value) => $page = value);

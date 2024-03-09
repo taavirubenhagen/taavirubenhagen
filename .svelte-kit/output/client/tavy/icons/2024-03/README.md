@@ -21,6 +21,7 @@
 - last/left
 - next/right
 - open-in-new
+- lock
 
 - github
 

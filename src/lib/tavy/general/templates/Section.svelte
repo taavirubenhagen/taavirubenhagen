@@ -1,7 +1,7 @@
 <script lang="ts">
     import '$style';
 
-    export let className: string;
+    export let className = '';
 
     let windowWidth: number;
     let windowHeight: number;
