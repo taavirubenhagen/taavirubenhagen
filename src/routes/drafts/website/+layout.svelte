@@ -36,7 +36,7 @@
     >
         <div class='w-24'>
             <InlineButton invisible onClick={() => menuExpanded = !menuExpanded}>
-                menu
+                {menuExpanded ? 'close' : 'menu'}
             </InlineButton>
         </div>
         <img

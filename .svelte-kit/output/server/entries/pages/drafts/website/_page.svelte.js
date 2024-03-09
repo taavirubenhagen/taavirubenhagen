@@ -95,7 +95,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 ${validate_component(Section_1, "Section").$$render(
     $$result,
     {
-      className: "p-16 primary center_col gap-8 text-center"
+      className: "relative p-16 primary center_col gap-8 text-center"
     },
     {},
     {

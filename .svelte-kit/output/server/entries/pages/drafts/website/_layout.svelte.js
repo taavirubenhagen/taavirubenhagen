@@ -47,8 +47,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {},
     {
       default: () => {
-        return `menu
-            `;
+        return `${escape(menuExpanded ? "close" : "menu")}`;
       }
     }
   )}</div>
