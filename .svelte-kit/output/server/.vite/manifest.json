@@ -23,7 +23,7 @@
       "_DeviceDetector.js"
     ],
     "css": [
-      "_app/immutable/assets/global.8edf0455.css"
+      "_app/immutable/assets/global.9df9c983.css"
     ]
   },
   "src/routes/+error.svelte": {
@@ -36,7 +36,7 @@
       "_Page.js"
     ],
     "css": [
-      "_app/immutable/assets/global.8edf0455.css"
+      "_app/immutable/assets/global.9df9c983.css"
     ]
   },
   "src/routes/drafts/website/+layout.svelte": {
@@ -51,7 +51,7 @@
       "_SmallHeading.js"
     ],
     "css": [
-      "_app/immutable/assets/global.8edf0455.css"
+      "_app/immutable/assets/global.9df9c983.css"
     ]
   },
   "src/routes/+page.svelte": {
@@ -65,7 +65,7 @@
       "_Page.js"
     ],
     "css": [
-      "_app/immutable/assets/global.8edf0455.css"
+      "_app/immutable/assets/global.9df9c983.css"
     ]
   },
   "src/routes/admin/+page.server.ts": {
@@ -94,7 +94,7 @@
       "_Page.js"
     ],
     "css": [
-      "_app/immutable/assets/global.8edf0455.css"
+      "_app/immutable/assets/global.9df9c983.css"
     ]
   },
   "src/routes/admin/access/[password]/+page.server.ts": {
@@ -112,11 +112,13 @@
     "imports": [
       "_index3.js",
       "_stores.js",
-      "_TextField.js",
+      "_MediumParagraph.js",
+      "_RawButton.js",
+      "_Button.js",
       "_Page.js"
     ],
     "css": [
-      "_app/immutable/assets/global.8edf0455.css"
+      "_app/immutable/assets/global.9df9c983.css"
     ]
   },
   "src/routes/coming-soon/+page.svelte": {
@@ -129,7 +131,7 @@
       "_Page.js"
     ],
     "css": [
-      "_app/immutable/assets/global.8edf0455.css"
+      "_app/immutable/assets/global.9df9c983.css"
     ]
   },
   "src/routes/counter/privacy-policy/+page.svelte": {
@@ -142,7 +144,7 @@
       "_Page.js"
     ],
     "css": [
-      "_app/immutable/assets/global.8edf0455.css"
+      "_app/immutable/assets/global.9df9c983.css"
     ]
   },
   "src/routes/drafts/hoffmanns-schuppen/+page.svelte": {
@@ -179,7 +181,7 @@
       "_Page.js"
     ],
     "css": [
-      "_app/immutable/assets/global.8edf0455.css"
+      "_app/immutable/assets/global.9df9c983.css"
     ]
   },
   "src/routes/drafts/hoffmanns-schuppen/admin/access/[password]/+page.server.ts": {
@@ -197,11 +199,12 @@
     "imports": [
       "_index3.js",
       "_stores.js",
-      "_TextField.js",
-      "_Page.js"
+      "_Section.js",
+      "_MediumParagraph.js",
+      "_RawButton.js"
     ],
     "css": [
-      "_app/immutable/assets/global.8edf0455.css"
+      "_app/immutable/assets/global.9df9c983.css"
     ]
   },
   "src/routes/drafts/hoffmanns-schuppen/countdown/+page.svelte": {
@@ -215,7 +218,7 @@
       "_Section.js"
     ],
     "css": [
-      "_app/immutable/assets/global.8edf0455.css"
+      "_app/immutable/assets/global.9df9c983.css"
     ]
   },
   "src/routes/drafts/hoffmanns-schuppen/home/+page.svelte": {
@@ -229,7 +232,7 @@
       "_Button2.js"
     ],
     "css": [
-      "_app/immutable/assets/global.8edf0455.css"
+      "_app/immutable/assets/global.9df9c983.css"
     ]
   },
   "src/routes/drafts/hoffmanns-schuppen/investor-relations/+page.svelte": {
@@ -244,7 +247,7 @@
       "_Button2.js"
     ],
     "css": [
-      "_app/immutable/assets/global.8edf0455.css"
+      "_app/immutable/assets/global.9df9c983.css"
     ]
   },
   "src/routes/drafts/hoffmanns-schuppen/mach-mit/+page.svelte": {
@@ -259,7 +262,7 @@
       "_Button2.js"
     ],
     "css": [
-      "_app/immutable/assets/global.8edf0455.css"
+      "_app/immutable/assets/global.9df9c983.css"
     ]
   },
   "src/routes/drafts/hoffmanns-schuppen/produkte/+page.svelte": {
@@ -272,7 +275,7 @@
       "_Section.js"
     ],
     "css": [
-      "_app/immutable/assets/global.8edf0455.css"
+      "_app/immutable/assets/global.9df9c983.css"
     ]
   },
   "src/routes/drafts/terminal/+page.server.ts": {
@@ -295,7 +298,7 @@
       "_RawButton.js"
     ],
     "css": [
-      "_app/immutable/assets/global.8edf0455.css"
+      "_app/immutable/assets/global.9df9c983.css"
     ]
   },
   "src/routes/drafts/website/+page.svelte": {
@@ -309,7 +312,7 @@
       "_Section2.js"
     ],
     "css": [
-      "_app/immutable/assets/global.8edf0455.css"
+      "_app/immutable/assets/global.9df9c983.css"
     ]
   },
   "src/routes/drafts/website/contact/+page.svelte": {
@@ -323,7 +326,7 @@
       "_Section2.js"
     ],
     "css": [
-      "_app/immutable/assets/global.8edf0455.css"
+      "_app/immutable/assets/global.9df9c983.css"
     ]
   },
   "src/routes/hs/+page.svelte": {
@@ -344,7 +347,7 @@
       "_Section.js"
     ],
     "css": [
-      "_app/immutable/assets/global.8edf0455.css"
+      "_app/immutable/assets/global.9df9c983.css"
     ]
   },
   "src/routes/legal/privacy-policy/+page.svelte": {
@@ -357,7 +360,7 @@
       "_Section.js"
     ],
     "css": [
-      "_app/immutable/assets/global.8edf0455.css"
+      "_app/immutable/assets/global.9df9c983.css"
     ]
   },
   "src/routes/politics/jugendparlament/+page.svelte": {
@@ -370,7 +373,7 @@
       "_Section.js"
     ],
     "css": [
-      "_app/immutable/assets/global.8edf0455.css"
+      "_app/immutable/assets/global.9df9c983.css"
     ]
   },
   "src/routes/politics/jugendparlament/sticker/+page.svelte": {
@@ -384,7 +387,7 @@
       "_Section.js"
     ],
     "css": [
-      "_app/immutable/assets/global.8edf0455.css"
+      "_app/immutable/assets/global.9df9c983.css"
     ]
   },
   "src/routes/presenter/download/+page.svelte": {
@@ -399,7 +402,7 @@
       "_Page.js"
     ],
     "css": [
-      "_app/immutable/assets/global.8edf0455.css"
+      "_app/immutable/assets/global.9df9c983.css"
     ]
   },
   "src/routes/presenter/privacy-policy/+page.svelte": {
@@ -413,7 +416,7 @@
       "_Page.js"
     ],
     "css": [
-      "_app/immutable/assets/global.8edf0455.css"
+      "_app/immutable/assets/global.9df9c983.css"
     ]
   },
   "src/routes/presenter/sticker/+page.svelte": {
@@ -452,7 +455,7 @@
       "_Page.js"
     ],
     "css": [
-      "_app/immutable/assets/global.8edf0455.css"
+      "_app/immutable/assets/global.9df9c983.css"
     ]
   },
   "src/routes/shop/dropshipping/+page.svelte": {
@@ -466,7 +469,7 @@
       "_Page.js"
     ],
     "css": [
-      "_app/immutable/assets/global.8edf0455.css"
+      "_app/immutable/assets/global.9df9c983.css"
     ]
   },
   "src/routes/shop/dropshipping/coming-soon/+page.svelte": {
@@ -478,7 +481,7 @@
       "_Page.js"
     ],
     "css": [
-      "_app/immutable/assets/global.8edf0455.css"
+      "_app/immutable/assets/global.9df9c983.css"
     ]
   },
   ".svelte-kit/generated/server/internal.js": {
@@ -525,7 +528,7 @@
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/global.8edf0455.css"
+      "_app/immutable/assets/global.9df9c983.css"
     ]
   },
   "_Page.js": {
@@ -538,17 +541,18 @@
       "_Section.js"
     ],
     "css": [
-      "_app/immutable/assets/global.8edf0455.css"
+      "_app/immutable/assets/global.9df9c983.css"
     ]
   },
   "_Button.js": {
     "file": "chunks/Button.js",
     "imports": [
       "_index3.js",
+      "_MediumParagraph.js",
       "_RawButton.js"
     ],
     "css": [
-      "_app/immutable/assets/global.8edf0455.css"
+      "_app/immutable/assets/global.9df9c983.css"
     ]
   },
   "_Section.js": {
@@ -557,7 +561,7 @@
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/global.8edf0455.css"
+      "_app/immutable/assets/global.9df9c983.css"
     ]
   },
   "_DeviceDetector.js": {
@@ -566,13 +570,22 @@
       "_index3.js"
     ]
   },
+  "_MediumParagraph.js": {
+    "file": "chunks/MediumParagraph.js",
+    "imports": [
+      "_index3.js"
+    ],
+    "css": [
+      "_app/immutable/assets/global.9df9c983.css"
+    ]
+  },
   "_RawButton.js": {
     "file": "chunks/RawButton.js",
     "imports": [
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/global.8edf0455.css"
+      "_app/immutable/assets/global.9df9c983.css"
     ]
   },
   "_SmallParagraph.js": {
@@ -581,7 +594,7 @@
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/global.8edf0455.css"
+      "_app/immutable/assets/global.9df9c983.css"
     ]
   },
   "_SmallHeading.js": {
@@ -590,7 +603,7 @@
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/global.8edf0455.css"
+      "_app/immutable/assets/global.9df9c983.css"
     ]
   },
   "_ButtonSeperator.js": {
@@ -600,7 +613,7 @@
       "_Button.js"
     ],
     "css": [
-      "_app/immutable/assets/global.8edf0455.css"
+      "_app/immutable/assets/global.9df9c983.css"
     ]
   },
   "_SmallHeading2.js": {
@@ -609,18 +622,7 @@
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/global.8edf0455.css"
-    ]
-  },
-  "_TextField.js": {
-    "file": "chunks/TextField.js",
-    "imports": [
-      "_index3.js",
-      "_Button.js",
-      "_RawButton.js"
-    ],
-    "css": [
-      "_app/immutable/assets/global.8edf0455.css"
+      "_app/immutable/assets/global.9df9c983.css"
     ]
   },
   "_MediumHeading.js": {
@@ -629,7 +631,7 @@
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/global.8edf0455.css"
+      "_app/immutable/assets/global.9df9c983.css"
     ]
   },
   "_Button2.js": {
@@ -640,7 +642,7 @@
       "_RawButton.js"
     ],
     "css": [
-      "_app/immutable/assets/global.8edf0455.css"
+      "_app/immutable/assets/global.9df9c983.css"
     ]
   },
   "_Section2.js": {
@@ -650,7 +652,7 @@
       "_Section.js"
     ],
     "css": [
-      "_app/immutable/assets/global.8edf0455.css"
+      "_app/immutable/assets/global.9df9c983.css"
     ]
   }
 }

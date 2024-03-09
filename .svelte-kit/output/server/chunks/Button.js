@@ -1,8 +1,6 @@
 import { c as create_ssr_component, v as validate_component, e as escape } from "./index3.js";
-/* empty css        */import { R as RawButton, I as Icon } from "./RawButton.js";
-const MediumParagraph = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<t class="text-xl">${slots.default ? slots.default({}) : ``}</t>`;
-});
+/* empty css        */import { M as MediumParagraph } from "./MediumParagraph.js";
+import { R as RawButton, I as Icon } from "./RawButton.js";
 const Button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { inverted = false } = $$props;
   let { nested = false } = $$props;
@@ -46,6 +44,5 @@ const Button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   })}`;
 });
 export {
-  Button as B,
-  MediumParagraph as M
+  Button as B
 };
