@@ -9,12 +9,28 @@ const Page_1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         $$result,
         {
           next: true,
+          onClick: () => window.location.href = "/drafts/website"
+        },
+        {},
+        {
+          default: () => {
+            return `Website (Unfinished)
+    `;
+          }
+        }
+      )}
+    ${validate_component(Button, "Button").$$render(
+        $$result,
+        {
+          next: true,
+          borderClass: "border-t-0",
           onClick: () => window.location.href = "/projects"
         },
         {},
         {
           default: () => {
-            return `Projects`;
+            return `Projects
+    `;
           }
         }
       )}

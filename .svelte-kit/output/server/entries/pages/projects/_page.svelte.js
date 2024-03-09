@@ -92,7 +92,8 @@ ${validate_component(Page, "Page").$$render($$result, {}, {}, {
         {},
         {
           default: () => {
-            return `Personal Website`;
+            return `Personal Website
+    `;
           }
         }
       )}
