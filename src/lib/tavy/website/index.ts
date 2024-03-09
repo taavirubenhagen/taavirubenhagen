@@ -8,6 +8,7 @@ import MediumHeading from '$tavy/website/text/headings/MediumHeading.svelte';
 import LargeHeading from '$tavy/website/text/headings/LargeHeading.svelte';
 
 import InlineButton from '$tavy/website/buttons/InlineButton.svelte';
+import Button from '$tavy/website/buttons/Button.svelte';
 
 import ShowcaseCarouselItem from '$tavy/website/templates/sections/ShowcaseCarouselItem.svelte';
 import ShowcaseCarousel from '$tavy/website/templates/sections/ShowcaseCarousel.svelte';
@@ -20,7 +21,7 @@ import Section from '$tavy/website/templates/pages/Section.svelte';
 export {
     Paragraph, SmallParagraph, MediumParagraph, LargeParagraph,
     SmallHeading, MediumHeading, LargeHeading,
-    InlineButton,
+    InlineButton, Button,
     ShowcaseCarouselItem, ShowcaseCarousel,
     Section,
 };

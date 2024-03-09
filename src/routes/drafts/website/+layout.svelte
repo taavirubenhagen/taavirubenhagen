@@ -1,7 +1,10 @@
 <script lang="ts">
-    import { navigating } from '$app/stores';
+    import { page } from '$app/stores';
     import { globalScrollY } from "$state";
     import "$style";
+    import {
+        RawButton,
+    } from '$tavy';
     import {
         SmallHeading,
         InlineButton,
@@ -13,11 +16,15 @@
     let scrollDependentClass = '';
     let menuExpanded = false;
 
+    const routes = $page.url.href.split('/').slice(3);
+    console.log(routes);
+
     globalScrollY.subscribe(
-        (value) => {
-            console.log(value);
-            scrollDependentClass = value === 0 ? '-translate-y-16' : 'translate-y-0';
-        }
+        (value) => scrollDependentClass =
+            value === 0 &&
+            routes.length === 2 && routes[0] === 'drafts' && routes[1] === 'website'
+            ? '-translate-y-16'
+            : 'translate-y-0',
     );
 </script>
 
@@ -34,7 +41,7 @@
         bg-background border-b border-primary w-full h-16
         px-8 flex justify-between items-center'
     >
-        <div class='w-24'>
+        <div class='w-28'>
             <InlineButton invisible onClick={() => menuExpanded = !menuExpanded}>
                 {menuExpanded ? 'close' : 'menu'}
             </InlineButton>
@@ -44,7 +51,7 @@
             alt="Logo"
             class='h-[3.75rem]'
         >
-        <div class='w-24 flex justify-end'>
+        <div class='w-28 flex justify-end'>
             <InlineButton invisible onClick={() => window.location.href = 'https://buymeacoffee.com/taavirubenhagen'}>
                 support me
             </InlineButton>
@@ -53,18 +60,20 @@
     <div
         class=
         'transition duration-long fixed z-30 {menuExpanded ? '-translate-x-0' : '-translate-x-full'}
-        w-full h-full background p-8 pt-24 flex flex-col gap-1'
+        w-full h-full background p-8 pt-24 flex flex-col items-start gap-1'
     >
         {#each [
-            'home',
-            'services',
-            'shop',
-            'presenter',
-            'design',
-            'about',
-            'contact',
+            ['home', '/drafts/website'],
+            ['services', '/drafts/website'],
+            ['shop', '/drafts/website'],
+            ['presenter', '/drafts/website'],
+            ['design', '/drafts/website'],
+            ['about', '/drafts/website'],
+            ['contact', '/drafts/website/contact'],
         ] as e}
-            <SmallHeading>{e}</SmallHeading>
+            <RawButton onClick={() => window.location.href = e[1]}>
+                <SmallHeading>{e[0]}</SmallHeading>
+            </RawButton>
         {/each}
         <!--<div
             class="absolute bottom-8 flex justify-between"

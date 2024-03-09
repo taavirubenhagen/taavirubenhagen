@@ -24,6 +24,7 @@
 
 <svelte:window bind:innerWidth={windowWidth} bind:innerHeight={windowHeight}/>
 
+
 <Section className='relative p-16 pb-24 primary center_col gap-8 text-center'>
     <SmallHeading>
         Independent

@@ -45,7 +45,6 @@ declare module '$env/static/private' {
 	export const ComSpec: string;
 	export const DriverData: string;
 	export const EFC_10116: string;
-	export const FILE_PWD: string;
 	export const FPS_BROWSER_APP_PROFILE_STRING: string;
 	export const FPS_BROWSER_USER_PROFILE_STRING: string;
 	export const GHCUP_INSTALL_BASE_PREFIX: string;
@@ -59,10 +58,7 @@ declare module '$env/static/private' {
 	export const LAST_EXIT_CODE: string;
 	export const LOCALAPPDATA: string;
 	export const LOGONSERVER: string;
-	export const NODE_ENV: string;
 	export const NUMBER_OF_PROCESSORS: string;
-	export const NUSHELL_CURRENT_SHELL: string;
-	export const OLDPWD: string;
 	export const OneDrive: string;
 	export const ORIGINAL_XDG_CURRENT_DESKTOP: string;
 	export const OS: string;
@@ -149,7 +145,6 @@ declare module '$env/dynamic/private' {
 		ComSpec: string;
 		DriverData: string;
 		EFC_10116: string;
-		FILE_PWD: string;
 		FPS_BROWSER_APP_PROFILE_STRING: string;
 		FPS_BROWSER_USER_PROFILE_STRING: string;
 		GHCUP_INSTALL_BASE_PREFIX: string;
@@ -163,10 +158,7 @@ declare module '$env/dynamic/private' {
 		LAST_EXIT_CODE: string;
 		LOCALAPPDATA: string;
 		LOGONSERVER: string;
-		NODE_ENV: string;
 		NUMBER_OF_PROCESSORS: string;
-		NUSHELL_CURRENT_SHELL: string;
-		OLDPWD: string;
 		OneDrive: string;
 		ORIGINAL_XDG_CURRENT_DESKTOP: string;
 		OS: string;
