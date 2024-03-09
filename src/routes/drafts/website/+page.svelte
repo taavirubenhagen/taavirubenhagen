@@ -4,8 +4,8 @@
         Icon,
     } from "$tavy";
     import {
+        SmallParagraph,
         SmallHeading,
-        LargeHeading,
         ShowcaseCarouselItem,
         ShowcaseCarousel,
         Section,
@@ -56,6 +56,9 @@
             {/if}
         {/each}
     </SmallHeading>
+    <div class='absolute bottom-8'>
+        <SmallParagraph>Scroll.</SmallParagraph>
+    </div>
 </Section>
 <Section className='p-8 pt-16'>
     <ShowcaseCarousel title={'apps'}>

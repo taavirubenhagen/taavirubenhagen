@@ -165,7 +165,12 @@ ${validate_component(Section_1, "Section").$$render(
               )}`}`}`}`;
             })}`;
           }
-        })}`;
+        })}
+    <div class="absolute bottom-8">${validate_component(SmallParagraph, "SmallParagraph").$$render($$result, {}, {}, {
+          default: () => {
+            return `Scroll.`;
+          }
+        })}</div>`;
       }
     }
   )}

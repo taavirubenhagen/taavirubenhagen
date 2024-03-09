@@ -10,6 +10,7 @@
     let windowHeight: number;
 
     let scrollDependentClass = '';
+    let menuToggleClass = '';
 
     globalScrollY.subscribe(
         (value) => {
@@ -48,5 +49,6 @@
             </InlineButton>
         </div>
     </div>
+    <div class='w-full h-full background'></div>
     <slot/>
-</main>
+</ma
