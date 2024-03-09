@@ -17,8 +17,6 @@
     let menuExpanded = false;
 
     const routes = $page.url.href.split('/').slice(3);
-    console.log(routes);
-
     globalScrollY.subscribe(
         (value) => scrollDependentClass =
             value === 0 &&

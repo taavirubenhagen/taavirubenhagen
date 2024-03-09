@@ -82,7 +82,7 @@ ${validate_component(Section_1, "Section").$$render(
       default: () => {
         return `${validate_component(SmallHeading, "SmallHeading").$$render($$result, {}, {}, {
           default: () => {
-            return `Independent designer, developer, artist, activist entrepreneur.
+            return `Independent designer, developer, artist, activist and entrepreneur.
     `;
           }
         })}

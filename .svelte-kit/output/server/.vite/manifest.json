@@ -23,7 +23,7 @@
       "_DeviceDetector.js"
     ],
     "css": [
-      "_app/immutable/assets/global.79a41e17.css"
+      "_app/immutable/assets/global.7d609bcd.css"
     ]
   },
   "src/routes/+error.svelte": {
@@ -36,7 +36,7 @@
       "_Page.js"
     ],
     "css": [
-      "_app/immutable/assets/global.79a41e17.css"
+      "_app/immutable/assets/global.7d609bcd.css"
     ]
   },
   "src/routes/drafts/website/+layout.svelte": {
@@ -51,7 +51,7 @@
       "_SmallHeading.js"
     ],
     "css": [
-      "_app/immutable/assets/global.79a41e17.css"
+      "_app/immutable/assets/global.7d609bcd.css"
     ]
   },
   "src/routes/+page.svelte": {
@@ -65,7 +65,7 @@
       "_Page.js"
     ],
     "css": [
-      "_app/immutable/assets/global.79a41e17.css"
+      "_app/immutable/assets/global.7d609bcd.css"
     ]
   },
   "src/routes/admin/+page.server.ts": {
@@ -94,7 +94,7 @@
       "_Page.js"
     ],
     "css": [
-      "_app/immutable/assets/global.79a41e17.css"
+      "_app/immutable/assets/global.7d609bcd.css"
     ]
   },
   "src/routes/admin/access/[password]/+page.server.ts": {
@@ -117,7 +117,7 @@
       "_Page.js"
     ],
     "css": [
-      "_app/immutable/assets/global.79a41e17.css"
+      "_app/immutable/assets/global.7d609bcd.css"
     ]
   },
   "src/routes/coming-soon/+page.svelte": {
@@ -130,7 +130,7 @@
       "_Page.js"
     ],
     "css": [
-      "_app/immutable/assets/global.79a41e17.css"
+      "_app/immutable/assets/global.7d609bcd.css"
     ]
   },
   "src/routes/counter/privacy-policy/+page.svelte": {
@@ -143,7 +143,7 @@
       "_Page.js"
     ],
     "css": [
-      "_app/immutable/assets/global.79a41e17.css"
+      "_app/immutable/assets/global.7d609bcd.css"
     ]
   },
   "src/routes/drafts/hoffmanns-schuppen/+page.svelte": {
@@ -163,7 +163,7 @@
       "_Section.js"
     ],
     "css": [
-      "_app/immutable/assets/global.79a41e17.css"
+      "_app/immutable/assets/global.7d609bcd.css"
     ]
   },
   "src/routes/drafts/hoffmanns-schuppen/home/+page.svelte": {
@@ -177,7 +177,7 @@
       "_Button2.js"
     ],
     "css": [
-      "_app/immutable/assets/global.79a41e17.css"
+      "_app/immutable/assets/global.7d609bcd.css"
     ]
   },
   "src/routes/drafts/hoffmanns-schuppen/investor-relations/+page.svelte": {
@@ -192,7 +192,7 @@
       "_Button2.js"
     ],
     "css": [
-      "_app/immutable/assets/global.79a41e17.css"
+      "_app/immutable/assets/global.7d609bcd.css"
     ]
   },
   "src/routes/drafts/hoffmanns-schuppen/mach-mit/+page.svelte": {
@@ -207,7 +207,7 @@
       "_Button2.js"
     ],
     "css": [
-      "_app/immutable/assets/global.79a41e17.css"
+      "_app/immutable/assets/global.7d609bcd.css"
     ]
   },
   "src/routes/drafts/hoffmanns-schuppen/produkte/+page.svelte": {
@@ -220,7 +220,7 @@
       "_Section.js"
     ],
     "css": [
-      "_app/immutable/assets/global.79a41e17.css"
+      "_app/immutable/assets/global.7d609bcd.css"
     ]
   },
   "src/routes/drafts/terminal/+page.server.ts": {
@@ -243,7 +243,7 @@
       "_RawButton.js"
     ],
     "css": [
-      "_app/immutable/assets/global.79a41e17.css"
+      "_app/immutable/assets/global.7d609bcd.css"
     ]
   },
   "src/routes/drafts/website/+page.svelte": {
@@ -257,7 +257,7 @@
       "_Section2.js"
     ],
     "css": [
-      "_app/immutable/assets/global.79a41e17.css"
+      "_app/immutable/assets/global.7d609bcd.css"
     ]
   },
   "src/routes/drafts/website/contact/+page.svelte": {
@@ -271,7 +271,7 @@
       "_Section2.js"
     ],
     "css": [
-      "_app/immutable/assets/global.79a41e17.css"
+      "_app/immutable/assets/global.7d609bcd.css"
     ]
   },
   "src/routes/legal/contact/+page.svelte": {
@@ -284,7 +284,7 @@
       "_Section.js"
     ],
     "css": [
-      "_app/immutable/assets/global.79a41e17.css"
+      "_app/immutable/assets/global.7d609bcd.css"
     ]
   },
   "src/routes/legal/privacy-policy/+page.svelte": {
@@ -297,7 +297,7 @@
       "_Section.js"
     ],
     "css": [
-      "_app/immutable/assets/global.79a41e17.css"
+      "_app/immutable/assets/global.7d609bcd.css"
     ]
   },
   "src/routes/politics/jugendparlament/+page.svelte": {
@@ -310,7 +310,7 @@
       "_Section.js"
     ],
     "css": [
-      "_app/immutable/assets/global.79a41e17.css"
+      "_app/immutable/assets/global.7d609bcd.css"
     ]
   },
   "src/routes/politics/jugendparlament/sticker/+page.svelte": {
@@ -324,7 +324,7 @@
       "_Section.js"
     ],
     "css": [
-      "_app/immutable/assets/global.79a41e17.css"
+      "_app/immutable/assets/global.7d609bcd.css"
     ]
   },
   "src/routes/presenter/download/+page.svelte": {
@@ -339,7 +339,7 @@
       "_Page.js"
     ],
     "css": [
-      "_app/immutable/assets/global.79a41e17.css"
+      "_app/immutable/assets/global.7d609bcd.css"
     ]
   },
   "src/routes/presenter/privacy-policy/+page.svelte": {
@@ -353,7 +353,7 @@
       "_Page.js"
     ],
     "css": [
-      "_app/immutable/assets/global.79a41e17.css"
+      "_app/immutable/assets/global.7d609bcd.css"
     ]
   },
   "src/routes/presenter/sticker/+page.svelte": {
@@ -392,7 +392,7 @@
       "_Page.js"
     ],
     "css": [
-      "_app/immutable/assets/global.79a41e17.css"
+      "_app/immutable/assets/global.7d609bcd.css"
     ]
   },
   "src/routes/shop/dropshipping/+page.svelte": {
@@ -406,7 +406,7 @@
       "_Page.js"
     ],
     "css": [
-      "_app/immutable/assets/global.79a41e17.css"
+      "_app/immutable/assets/global.7d609bcd.css"
     ]
   },
   "src/routes/shop/dropshipping/coming-soon/+page.svelte": {
@@ -418,7 +418,7 @@
       "_Page.js"
     ],
     "css": [
-      "_app/immutable/assets/global.79a41e17.css"
+      "_app/immutable/assets/global.7d609bcd.css"
     ]
   },
   ".svelte-kit/generated/server/internal.js": {
@@ -465,7 +465,7 @@
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/global.79a41e17.css"
+      "_app/immutable/assets/global.7d609bcd.css"
     ]
   },
   "_Page.js": {
@@ -478,7 +478,7 @@
       "_Section.js"
     ],
     "css": [
-      "_app/immutable/assets/global.79a41e17.css"
+      "_app/immutable/assets/global.7d609bcd.css"
     ]
   },
   "_Button.js": {
@@ -488,7 +488,7 @@
       "_RawButton.js"
     ],
     "css": [
-      "_app/immutable/assets/global.79a41e17.css"
+      "_app/immutable/assets/global.7d609bcd.css"
     ]
   },
   "_Section.js": {
@@ -497,7 +497,7 @@
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/global.79a41e17.css"
+      "_app/immutable/assets/global.7d609bcd.css"
     ]
   },
   "_DeviceDetector.js": {
@@ -512,7 +512,7 @@
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/global.79a41e17.css"
+      "_app/immutable/assets/global.7d609bcd.css"
     ]
   },
   "_SmallParagraph.js": {
@@ -521,7 +521,7 @@
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/global.79a41e17.css"
+      "_app/immutable/assets/global.7d609bcd.css"
     ]
   },
   "_SmallHeading.js": {
@@ -530,7 +530,7 @@
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/global.79a41e17.css"
+      "_app/immutable/assets/global.7d609bcd.css"
     ]
   },
   "_ButtonSeperator.js": {
@@ -540,7 +540,7 @@
       "_Button.js"
     ],
     "css": [
-      "_app/immutable/assets/global.79a41e17.css"
+      "_app/immutable/assets/global.7d609bcd.css"
     ]
   },
   "_SmallHeading2.js": {
@@ -549,7 +549,7 @@
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/global.79a41e17.css"
+      "_app/immutable/assets/global.7d609bcd.css"
     ]
   },
   "_MediumHeading.js": {
@@ -558,7 +558,7 @@
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/global.79a41e17.css"
+      "_app/immutable/assets/global.7d609bcd.css"
     ]
   },
   "_Button2.js": {
@@ -569,7 +569,7 @@
       "_RawButton.js"
     ],
     "css": [
-      "_app/immutable/assets/global.79a41e17.css"
+      "_app/immutable/assets/global.7d609bcd.css"
     ]
   },
   "_Section2.js": {
@@ -579,7 +579,7 @@
       "_Section.js"
     ],
     "css": [
-      "_app/immutable/assets/global.79a41e17.css"
+      "_app/immutable/assets/global.7d609bcd.css"
     ]
   }
 }

@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { navigating } from '$app/stores';
+    import { page, navigating } from '$app/stores';
     import { cursorPosition, globalScrollY } from "$state";
     import "$style";
     import { Page, LargeHeading } from "$tavy";
@@ -8,6 +8,11 @@
 
 
     let windowHeight: number;
+
+    const routes = $page.url.href.split('/').slice(3);
+    const legalFooterVisible =
+        !routes.includes('hoffmanns-schuppen') &&
+        !routes.includes('website');
 </script>
 
 
@@ -35,5 +40,7 @@
         <!-- TODO: Add standard scrollbar effects -->
         <slot/>
     {/if}
-    <LegalFooter contactLink='/legal/contact' ppLink='/legal/privacy-policy'/>
+    {#if condition}
+        <LegalFooter contactLink='/legal/contact' ppLink='/legal/privacy-policy'/>
+    {/if}
 </main>

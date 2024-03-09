@@ -27,7 +27,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {
       default: () => {
         return `<div class="flex flex-col gap-2"><t class="text-5xl md:text-7xl font-bold tracking-wider">${escape(days)}:${escape(hours)}:${escape(minutes)}:${escape(seconds)}</t>
-            <div class="w-full grid grid-cols-4 text-sm text-white"><div class="center_row">Tage</div>
+            <div class="w-full grid grid-cols-4 text-xs text-white"><div class="center_row">Tage</div>
                 <div class="center_row">Stunden</div>
                 <div class="center_row">Minuten</div>
                 <div class="center_row">Sekunden</div></div></div>`;

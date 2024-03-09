@@ -18,7 +18,6 @@
 
 
 <Section className='p-8 flex flex-col justify-center items-stretch gap-4'>
-    <!--TODO: Fix-->
     <Button onClick={() => {}}>
         <a href='mailto:taavi.ruebenhagen@gmail.com' class='w-full'>
             e-mail me
@@ -26,5 +25,9 @@
     </Button>
     <Button onClick={() => window.location.href = 'https://instagram.com/taavirubenhagen'}>
         dm me
+    </Button>
+    <!--TODO-->
+    <Button onClick={() => window.location.href = '/drafts/website/legal/imprint'}>
+        imprint
     </Button>
 </Section>
