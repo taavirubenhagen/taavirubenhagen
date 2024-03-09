@@ -82,11 +82,11 @@ ${validate_component(Page, "Page").$$render($$result, {}, {}, {
           }
         }
       )}
-    ${validate_component(ButtonSeperator, "ButtonSeperator").$$render($$result, {}, {}, {})}
     ${validate_component(Button, "Button").$$render(
         $$result,
         {
           next: true,
+          borderClass: "border-t-0",
           onClick: () => window.location.href = "/drafts/website"
         },
         {},

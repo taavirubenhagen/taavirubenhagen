@@ -22,36 +22,6 @@ const Page_1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     ${validate_component(Button, "Button").$$render(
         $$result,
         {
-          next: true,
-          onClick: () => window.location.href = "/politics/jugendparlament"
-        },
-        {},
-        {
-          default: () => {
-            return `Vote for me`;
-          }
-        }
-      )}
-    ${validate_component(ButtonSeperator, "ButtonSeperator").$$render($$result, {}, {}, {})}
-    ${validate_component(Button, "Button").$$render(
-        $$result,
-        {
-          download: true,
-          onClick: () => {
-          }
-        },
-        {},
-        {
-          default: () => {
-            return `<a download href="/facharbeit/Facharbeit - Taavi R\xFCbenhagen.pdf" class="w-full flex">Facharbeit
-        </a>`;
-          }
-        }
-      )}
-    ${validate_component(ButtonSeperator, "ButtonSeperator").$$render($$result, {}, {}, {})}
-    ${validate_component(Button, "Button").$$render(
-        $$result,
-        {
           openInNew: true,
           onClick: () => window.location.href = "https://www.instagram.com/taavirubenhagen"
         },
