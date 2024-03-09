@@ -18,15 +18,15 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   }
   setInterval(updateCountdown, 1e3);
   onMount(updateCountdown);
-  return `<div style="font-family: &quot;Roboto Serif&quot;">${validate_component(Section, "Section").$$render(
+  return `<div style="font-family: &quot;Caveat Brush&quot;;">${validate_component(Section, "Section").$$render(
     $$result,
     {
-      className: "bg-green-900 center_col text-white"
+      className: "bg-green-950 center_col text-white"
     },
     {},
     {
       default: () => {
-        return `<div class="flex flex-col gap-2"><t class="text-5xl md:text-7xl font-bold tracking-wider">${escape(days)}:${escape(hours)}:${escape(minutes)}:${escape(seconds)}</t>
+        return `<div class="flex flex-col gap-2"><t class="text-6xl md:text-7xl font-bold tracking-wider">${escape(days)}:${escape(hours)}:${escape(minutes)}:${escape(seconds)}</t>
             <div class="w-full grid grid-cols-4 text-xs text-white"><div class="center_row">Tage</div>
                 <div class="center_row">Stunden</div>
                 <div class="center_row">Minuten</div>
