@@ -37,7 +37,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 
 
 
-<main class="lowercase"><div class="${"transition duration-medium fixed z-40 top-0 " + escape(scrollDependentClass, true) + " bg-background border-b border-primary w-full h-16 px-8 flex justify-between items-center"}"><div class="w-16">${validate_component(InlineButton, "InlineButton").$$render(
+<main class="lowercase"><div class="${"transition duration-medium fixed z-40 top-0 " + escape(scrollDependentClass, true) + " bg-background border-b border-primary w-full h-16 px-8 flex justify-between items-center"}"><div class="w-24">${validate_component(InlineButton, "InlineButton").$$render(
     $$result,
     {
       invisible: true,
@@ -53,7 +53,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     }
   )}</div>
         <img src="/images/logos/t-r_logo.svg" alt="Logo" class="h-[3.75rem]">
-        <div class="w-16 flex justify-end">${validate_component(InlineButton, "InlineButton").$$render(
+        <div class="w-24 flex justify-end">${validate_component(InlineButton, "InlineButton").$$render(
     $$result,
     {
       invisible: true,
@@ -63,7 +63,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {},
     {
       default: () => {
-        return `search
+        return `support me
             `;
       }
     }

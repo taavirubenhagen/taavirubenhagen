@@ -32,7 +32,7 @@
             bg-background border-b border-primary w-full h-16
             px-8 flex justify-between items-center"
     >
-        <div class='w-16'>
+        <div class='w-24'>
             <InlineButton invisible onClick={() => {}}>
                 menu
             </InlineButton>
@@ -42,9 +42,9 @@
             alt="Logo"
             class='h-[3.75rem]'
         >
-        <div class='w-16 flex justify-end'>
+        <div class='w-24 flex justify-end'>
             <InlineButton invisible onClick={() => {}}>
-                search
+                support me
             </InlineButton>
         </div>
     </div>

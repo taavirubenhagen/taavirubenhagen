@@ -104,4 +104,10 @@
         <ShowcaseCarouselItem src='' title='Affiliate Marketing'/>
         <ShowcaseCarouselItem src='' title='Content Creation'/>
     </ShowcaseCarousel>
+    <div class='rounded-2xl w-full h-16 primary flex justify-evenly items-center'>
+        {#each ['instagram', 'tiktok', 'youtube', 'github'] as e}
+            <Icon name={e} textClass='text-3xl'/>
+        {/each}
+    </div>
+    <div class='h-16'></div>
 </Section>

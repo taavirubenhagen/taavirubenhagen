@@ -1,6 +1,6 @@
 import { c as create_ssr_component, v as validate_component, h as add_attribute, e as escape, f as each } from "../../../../chunks/index3.js";
-/* empty css                         */import { I as InlineButton } from "../../../../chunks/InlineButton.js";
-import { R as RawButton, I as Icon } from "../../../../chunks/RawButton.js";
+/* empty css                         */import { R as RawButton, I as Icon } from "../../../../chunks/RawButton.js";
+import { I as InlineButton } from "../../../../chunks/InlineButton.js";
 import { S as SmallParagraph } from "../../../../chunks/SmallParagraph2.js";
 import { S as Section } from "../../../../chunks/Section.js";
 const SmallHeading = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -256,7 +256,11 @@ ${validate_component(Section_1, "Section").$$render($$result, { className: "p-8 
         ${validate_component(ShowcaseCarouselItem, "ShowcaseCarouselItem").$$render($$result, { src: "", title: "Affiliate Marketing" }, {}, {})}
         ${validate_component(ShowcaseCarouselItem, "ShowcaseCarouselItem").$$render($$result, { src: "", title: "Content Creation" }, {}, {})}`;
         }
-      })}`;
+      })}
+    <div class="rounded-2xl w-full h-16 primary flex justify-evenly items-center">${each(["instagram", "tiktok", "youtube", "github"], (e) => {
+        return `${validate_component(Icon, "Icon").$$render($$result, { name: e, textClass: "text-3xl" }, {}, {})}`;
+      })}</div>
+    <div class="h-16"></div>`;
     }
   })}`;
 });
