@@ -56,7 +56,7 @@
             {/if}
         {/each}
     </SmallHeading>
-    <div class='absolute bottom-8'>
+    <div class='absolute z-20 bottom-8'>
         <SmallParagraph>Scroll.</SmallParagraph>
     </div>
 </Section>
