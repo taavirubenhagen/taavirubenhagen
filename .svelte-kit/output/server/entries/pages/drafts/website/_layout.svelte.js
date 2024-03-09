@@ -57,8 +57,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     $$result,
     {
       invisible: true,
-      onClick: () => {
-      }
+      onClick: () => window.location.href = "https://buymeacoffee.com/taavirubenhagen"
     },
     {},
     {
@@ -68,13 +67,14 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       }
     }
   )}</div></div>
-    <div class="${"transition duration-long fixed z-30 " + escape(menuExpanded ? "-translate-x-0" : "-translate-x-full", true) + " w-full h-full background p-8 pt-24 flex flex-col gap-1"}">${each(["home", "websites", "graphic design", "design system", "support me"], (e) => {
+    <div class="${"transition duration-long fixed z-30 " + escape(menuExpanded ? "-translate-x-0" : "-translate-x-full", true) + " w-full h-full background p-8 pt-24 flex flex-col gap-1"}">${each(["home", "services", "shop", "presenter", "design", "about", "contact"], (e) => {
     return `${validate_component(SmallHeading, "SmallHeading").$$render($$result, {}, {}, {
       default: () => {
         return `${escape(e)}`;
       }
     })}`;
-  })}</div>
+  })}
+        </div>
     ${slots.default ? slots.default({}) : ``}</main>`;
 });
 export {

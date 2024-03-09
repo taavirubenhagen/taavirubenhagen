@@ -45,7 +45,7 @@
             class='h-[3.75rem]'
         >
         <div class='w-24 flex justify-end'>
-            <InlineButton invisible onClick={() => {}}>
+            <InlineButton invisible onClick={() => window.location.href = 'https://buymeacoffee.com/taavirubenhagen'}>
                 support me
             </InlineButton>
         </div>
@@ -57,13 +57,24 @@
     >
         {#each [
             'home',
+            'services',
+            'shop',
+            'presenter',
             'design',
-            'software',
-            'politiucs',
+            'about',
             'contact',
-            'support me',
         ] as e}
             <SmallHeading>{e}</SmallHeading>
         {/each}
+        <!--<div
+            class="absolute bottom-8 flex justify-between"
+            style='width: calc(100% - 4rem);'
+        >
+            <InlineButton onClick={() => {}}>Instagram</InlineButton>
+            <InlineButton onClick={() => {}}>TikTok</InlineButton>
+            <InlineButton onClick={() => {}}>YouTube</InlineButton>
+            <InlineButton onClick={() => {}}>GitHub</InlineButton>
+        </div>-->
     </div>
     <slot/>
+</main>
