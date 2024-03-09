@@ -6,6 +6,7 @@ const MediumParagraph = create_ssr_component(($$result, $$props, $$bindings, slo
 const Button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { inverted = false } = $$props;
   let { nested = false } = $$props;
+  let { emphasized = false } = $$props;
   let { openInNew = false } = $$props;
   let { next = false } = $$props;
   let { download = false } = $$props;
@@ -16,6 +17,8 @@ const Button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     $$bindings.inverted(inverted);
   if ($$props.nested === void 0 && $$bindings.nested && nested !== void 0)
     $$bindings.nested(nested);
+  if ($$props.emphasized === void 0 && $$bindings.emphasized && emphasized !== void 0)
+    $$bindings.emphasized(emphasized);
   if ($$props.openInNew === void 0 && $$bindings.openInNew && openInNew !== void 0)
     $$bindings.openInNew(openInNew);
   if ($$props.next === void 0 && $$bindings.next && next !== void 0)
@@ -30,9 +33,9 @@ const Button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     $$bindings.onClick(onClick);
   return `${validate_component(RawButton, "RawButton").$$render($$result, { onClick }, {}, {
     default: () => {
-      return `<div class="${escape(inverted ? "invert" : "", true) + " border-2 " + escape(borderClass, true) + " border-onBackground"}">${validate_component(MediumParagraph, "MediumParagraph").$$render($$result, {}, {}, {
+      return `<div class="${escape(inverted ? "invert" : "", true) + " border-2 " + escape(borderClass, true) + " border-primary"}">${validate_component(MediumParagraph, "MediumParagraph").$$render($$result, {}, {}, {
         default: () => {
-          return `<div class="${"transition duration-200 ease-in h-12 " + escape(uniformPadding ? "w-12" : "", true) + " hover:invert bg-background text-onBackground px-4 flex " + escape(
+          return `<div class="${"transition duration-short ease-in h-12 " + escape(uniformPadding ? "w-12" : "", true) + " " + escape(emphasized ? "[&:not(:hover)]:invert" : "hover:invert", true) + " background px-4 flex " + escape(
             nested || openInNew || next || download ? "justify-between" : "justify-center",
             true
           ) + " items-center gap-2"}">${slots.default ? slots.default({}) : ``}

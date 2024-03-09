@@ -70,7 +70,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 
 
 
-<main class="relative cursor-none">${validate_component(Cursor, "Cursor").$$render($$result, {}, {}, {})}
+<main class="relative h-screen overflow-x-hidden cursor-none">${validate_component(Cursor, "Cursor").$$render($$result, {}, {}, {})}
     ${$navigating ? `${validate_component(Page, "Page").$$render($$result, {}, {}, {
     default: () => {
       return `${validate_component(LargeHeading, "LargeHeading").$$render($$result, {}, {}, {

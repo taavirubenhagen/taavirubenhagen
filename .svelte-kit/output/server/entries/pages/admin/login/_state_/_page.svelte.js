@@ -19,7 +19,7 @@ const TextField = create_ssr_component(($$result, $$props, $$bindings, slots) =>
     $$bindings.placeholder(placeholder);
   return `${validate_component(MediumParagraph, "MediumParagraph").$$render($$result, {}, {}, {
     default: () => {
-      return `<div class="flex"><div class="${escape(inverted ? "invert" : "", true) + " border-2 border-onBackground"}">
+      return `<div class="flex"><div class="${escape(inverted ? "invert" : "", true) + " border-2 border-primary"}">
            
            <input type="text" ${autofocus ? "autofocus" : ""} class="outline-none h-full px-1 text-xl"${add_attribute("placeholder", placeholder, 0)}${add_attribute("value", input, 0)}></div>
        ${validate_component(Button, "Button").$$render(

@@ -22,7 +22,7 @@
         scrollY = event?.currentTarget?.scrollTop;
         globalScrollY.set(event?.currentTarget?.scrollTop);
     }}
-    class='relative cursor-none'
+    class='relative h-screen overflow-x-hidden cursor-none'
 >
     <Cursor/>
     {#if $navigating}

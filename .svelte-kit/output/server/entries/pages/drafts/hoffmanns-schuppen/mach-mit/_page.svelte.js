@@ -2,13 +2,13 @@ import { c as create_ssr_component, e as escape, v as validate_component } from 
 /* empty css                            */import { S as Section } from "../../../../../chunks/Section.js";
 import { S as SmallParagraph } from "../../../../../chunks/SmallParagraph.js";
 import { M as MediumHeading } from "../../../../../chunks/MediumHeading.js";
-import { B as Button } from "../../../../../chunks/Button3.js";
+import { B as Button } from "../../../../../chunks/Button2.js";
 const TextSection = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { className = "" } = $$props;
   let { headerMessage } = $$props;
   let { bodyMessage = "" } = $$props;
   let { primaryButtonTitle } = $$props;
-  let { onPrimaryClick = () => {
+  let { backgroundClick = () => {
   } } = $$props;
   let { secondaryButtonTitle } = $$props;
   let { onSecondaryClick = () => {
@@ -21,8 +21,8 @@ const TextSection = create_ssr_component(($$result, $$props, $$bindings, slots) 
     $$bindings.bodyMessage(bodyMessage);
   if ($$props.primaryButtonTitle === void 0 && $$bindings.primaryButtonTitle && primaryButtonTitle !== void 0)
     $$bindings.primaryButtonTitle(primaryButtonTitle);
-  if ($$props.onPrimaryClick === void 0 && $$bindings.onPrimaryClick && onPrimaryClick !== void 0)
-    $$bindings.onPrimaryClick(onPrimaryClick);
+  if ($$props.backgroundClick === void 0 && $$bindings.backgroundClick && backgroundClick !== void 0)
+    $$bindings.backgroundClick(backgroundClick);
   if ($$props.secondaryButtonTitle === void 0 && $$bindings.secondaryButtonTitle && secondaryButtonTitle !== void 0)
     $$bindings.secondaryButtonTitle(secondaryButtonTitle);
   if ($$props.onSecondaryClick === void 0 && $$bindings.onSecondaryClick && onSecondaryClick !== void 0)
@@ -38,7 +38,7 @@ const TextSection = create_ssr_component(($$result, $$props, $$bindings, slots) 
     }
   })}` : ``}
     <div></div>
-    <div class="flex gap-4">${validate_component(Button, "Button").$$render($$result, { onClick: onPrimaryClick }, {}, {
+    <div class="flex gap-4">${validate_component(Button, "Button").$$render($$result, { onClick: backgroundClick }, {}, {
     default: () => {
       return `${escape(primaryButtonTitle)}`;
     }
@@ -67,7 +67,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
           headerMessage: "Investiere direkter als je zuvor ...",
           bodyMessage: "\n                        Bei uns kannst du Aktien kaufen,\n                        die dich direkt am Erfolg von Hoffmann's Schuppen beteiligen.\n                        <br/>\n                        Au\xDFerdem freuen wir uns \xFCber jede*n, die*r bei Hoffmann's Schuppen mitarbeiten m\xF6chte.\n                        Egal ob Einkauf, Verkauf oder Marketing - dein Einsatz z\xE4hlt!",
           primaryButtonTitle: "Investiere jetzt",
-          onPrimaryClick: () => window.location.href = "/drafts/hoffmanns-schuppen/investor-relations",
+          backgroundClick: () => window.location.href = "/drafts/hoffmanns-schuppen/investor-relations",
           secondaryButtonTitle: "Oder bewirb dich",
           onSecondaryClick: () => window.location.href = "/drafts/hoffmanns-schuppen/mach-mit"
         },

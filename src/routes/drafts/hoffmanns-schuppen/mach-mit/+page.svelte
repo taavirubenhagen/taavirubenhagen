@@ -28,7 +28,7 @@
                         Außerdem freuen wir uns über jede*n, die*r bei Hoffmann's Schuppen mitarbeiten möchte.
                         Egal ob Einkauf, Verkauf oder Marketing - dein Einsatz zählt!"
                     primaryButtonTitle='Investiere jetzt'
-                    onPrimaryClick={() => window.location.href = '/drafts/hoffmanns-schuppen/investor-relations'}
+                    backgroundClick={() => window.location.href = '/drafts/hoffmanns-schuppen/investor-relations'}
                     secondaryButtonTitle='Oder bewirb dich'
                     onSecondaryClick={() => window.location.href = '/drafts/hoffmanns-schuppen/mach-mit'}
                 />

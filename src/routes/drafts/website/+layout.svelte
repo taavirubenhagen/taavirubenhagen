@@ -2,9 +2,9 @@
     import { navigating } from '$app/stores';
     import { globalScrollY } from "$state";
     import "$style";
-    import { Page, LargeHeading } from "$tavy";
-    import { Cursor } from '$tavy/identity';
-    import { LegalFooter } from "$tavy/industrial";
+    import {
+        InlineButton,
+    } from '$tavy/website';
 
 
     let windowHeight: number;
@@ -12,7 +12,10 @@
     let scrollDependentClass = '';
 
     globalScrollY.subscribe(
-        (value) => scrollDependentClass = value === 0 ? '' : 'bg-background',
+        (value) => {
+            console.log(value);
+            scrollDependentClass = value === 0 ? '-translate-y-16' : 'translate-y-0';
+        }
     );
 </script>
 
@@ -22,7 +25,28 @@
 
 
 
-<main>
-    <div class="fixed z-40 top-0 w-full h-16 {scrollDependentClass} border-b border-primary"></div>
+<main class='lowercase'>
+    <div
+        class="
+            transition duration-medium fixed z-40 top-0 {scrollDependentClass}
+            bg-background border-b border-primary w-full h-16
+            px-8 flex justify-between items-center"
+    >
+        <div class='w-16'>
+            <InlineButton invisible onClick={() => {}}>
+                menu
+            </InlineButton>
+        </div>
+        <img
+            src="/images/logos/t-r_logo.svg"
+            alt="Logo"
+            class='h-[3.75rem]'
+        >
+        <div class='w-16 flex justify-end'>
+            <InlineButton invisible onClick={() => {}}>
+                search
+            </InlineButton>
+        </div>
+    </div>
     <slot/>
 </main>

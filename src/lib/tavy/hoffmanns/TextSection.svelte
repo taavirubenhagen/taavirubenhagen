@@ -12,7 +12,7 @@
     export let headerMessage: string;
     export let bodyMessage = '';
     export let primaryButtonTitle: string;
-    export let onPrimaryClick = () => {};
+    export let backgroundClick = () => {};
     export let secondaryButtonTitle: string;
     export let onSecondaryClick = () => {};
 </script>
@@ -29,7 +29,7 @@
     {/if}
     <div></div>
     <div class='flex gap-4'>
-        <Button onClick={onPrimaryClick}>
+        <Button onClick={backgroundClick}>
             {primaryButtonTitle}
         </Button>
         <Button secondary onClick={onSecondaryClick}>

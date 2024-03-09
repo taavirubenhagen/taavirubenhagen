@@ -4,15 +4,16 @@
 
     export let openInNew = false;
     export let inverted = false;
+    //export let punctuationMark: string | null = null;
     export let onClick: any;
 </script>
 
 
 <RawButton onClick={onClick}>
-    <div class="{inverted ? 'invert' : ''} flex gap-2 underline underline-offset-4 capitalize">
+    <div class="inline gap-2 underline underline-offset-4">
         <slot/>
         {#if openInNew}
-            <Icon name="open-new-window"/>
+            <Icon inverted={inverted} name="open-new-window"/>
         {/if}
     </div>
 </RawButton>

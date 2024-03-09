@@ -2,7 +2,7 @@ import { c as create_ssr_component, v as validate_component } from "../../../../
 /* empty css                            */import { S as SmallParagraph } from "../../../../../chunks/SmallParagraph.js";
 import { M as MediumHeading } from "../../../../../chunks/MediumHeading.js";
 import { S as Section } from "../../../../../chunks/Section.js";
-import { B as Button } from "../../../../../chunks/Button3.js";
+import { B as Button } from "../../../../../chunks/Button2.js";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<div style="font-family: &quot;Roboto Slab&quot;">${validate_component(Section, "Section").$$render(
     $$result,

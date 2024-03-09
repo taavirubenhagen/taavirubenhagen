@@ -9,13 +9,13 @@
     @apply
         m-0 max-w-full md:max-w-none overflow-x-hidden p-0
         bg-background
-        text-onBackground selection:primary font-body;
+        text-primary selection:primary font-body;
 }
 ::-webkit-scrollbar {
-    @apply w-1 bg-background;
+    @apply w-0 h-0 background;
 }
 ::-webkit-scrollbar-thumb {
-    @apply w-1 bg-primary;
+    @apply w-0 h-0 primary;
 }
 
 * {
@@ -46,17 +46,17 @@ button {
 
 
     .background {
-    @apply bg-background text-onBackground;
+    @apply bg-background text-primary;
     }
     .background::selection {
-    @apply bg-onBackground text-background;
+    @apply bg-primary text-background;
     }
 
     .primary {
-    @apply bg-primary text-onPrimary;
+    @apply bg-primary text-background;
     }
     .primary::selection {
-    @apply bg-onPrimary text-primary;
+    @apply bg-background text-primary;
     }
 }
 

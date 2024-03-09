@@ -9,7 +9,7 @@
 </script>
 
 
-<div class="transition duration-100 {open ? "" : "opacity-0 pointer-events-none"}">
+<div class="transition duration-default {open ? "" : "opacity-0 pointer-events-none"}">
     <div class="fixed z-35 left-0 top-0 w-full h-full bg-opacity-50 bg-black center_col">
         <button class="fixed w-full h-full" on:click={onDismissed}></button>
         <div class="relative z-40 my-64 rounded-2xl w-1/2 p-8 bg-background center_col">

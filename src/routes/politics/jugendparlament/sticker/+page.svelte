@@ -16,6 +16,7 @@
 <svelte:window bind:innerWidth={windowWidth} bind:innerHeight={windowHeight} />
 
 
+<meta http-equiv="Refresh" content="0; url='https://play.google.com/store/apps/details?id=tavy.presenter.presentation_master_2'" />
 <Section className='primary font-[Dongle]'>
     <div class='p-8 md:p-16'>
         <LargeHeading>Weil wir Fortschritt brauchen.</LargeHeading>

@@ -8,6 +8,7 @@
 
     export let inverted = false;
     export let nested = false;
+    export let emphasized = false;
     export let openInNew = false;
     export let next = false;
     export let download = false;
@@ -19,12 +20,12 @@
 
 
 <RawButton onClick={onClick}>
-    <div class="{inverted ? 'invert' : ''} border-2 {borderClass} border-onBackground">
+    <div class="{inverted ? 'invert' : ''} border-2 {borderClass} border-primary">
         <MediumParagraph>
             <div
-                class="transition duration-200 ease-in
+                class="transition duration-short ease-in
                     h-12 {uniformPadding ? 'w-12' : ''}
-                    hover:invert bg-background text-onBackground px-4
+                    {emphasized ? '[&:not(:hover)]:invert' : 'hover:invert'} background px-4
                     flex {nested || openInNew || next || download ? 'justify-between' : 'justify-center'} items-center gap-2"
             >
                 <slot/>

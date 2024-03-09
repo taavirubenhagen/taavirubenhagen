@@ -9,6 +9,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `
 
 
+<meta http-equiv="Refresh" content="0; url='https://play.google.com/store/apps/details?id=tavy.presenter.presentation_master_2'">
 ${validate_component(Section, "Section").$$render($$result, { className: "primary font-[Dongle]" }, {}, {
     default: () => {
       return `<div class="p-8 md:p-16">${validate_component(LargeHeading, "LargeHeading").$$render($$result, {}, {}, {

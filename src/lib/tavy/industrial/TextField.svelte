@@ -14,7 +14,7 @@
 
 <MediumParagraph>
     <div class='flex'>
-       <div class="{inverted ? 'invert' : ''} border-2 border-onBackground">
+       <div class="{inverted ? 'invert' : ''} border-2 border-primary">
            <!--Text size should match MediumParagraph-->
            <!-- svelte-ignore a11y-autofocus -->
            <input
