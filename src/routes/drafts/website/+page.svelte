@@ -24,7 +24,7 @@
 
 <svelte:window bind:innerWidth={windowWidth} bind:innerHeight={windowHeight}/>
 
-<Section className='relative p-16 primary center_col gap-8 text-center'>
+<Section className='relative p-16 pb-24 primary center_col gap-8 text-center'>
     <SmallHeading>
         Independent
         {#each [
@@ -56,7 +56,7 @@
             {/if}
         {/each}
     </SmallHeading>
-    <div class='absolute z-20 bottom-8 primary'>
+    <div class='absolute bottom-8'>
         <SmallParagraph>Scroll.</SmallParagraph>
     </div>
 </Section>

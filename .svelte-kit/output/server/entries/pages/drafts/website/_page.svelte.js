@@ -95,7 +95,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 ${validate_component(Section_1, "Section").$$render(
     $$result,
     {
-      className: "relative p-16 primary center_col gap-8 text-center"
+      className: "relative p-16 pb-24 primary center_col gap-8 text-center"
     },
     {},
     {
@@ -163,7 +163,7 @@ ${validate_component(Section_1, "Section").$$render(
             })}`;
           }
         })}
-    <div class="absolute z-20 bottom-8 primary">${validate_component(SmallParagraph, "SmallParagraph").$$render($$result, {}, {}, {
+    <div class="absolute bottom-8">${validate_component(SmallParagraph, "SmallParagraph").$$render($$result, {}, {}, {
           default: () => {
             return `Scroll.`;
           }
