@@ -10,7 +10,7 @@ return {
 	assets: new Set(["blog/2023-05-19.md","blog/blog_data.json","drafts/hoffmanns-schuppen/ads/g-s-dunkel_ls.png","drafts/hoffmanns-schuppen/Aktie.png","drafts/hoffmanns-schuppen/investing.jpg","drafts/hoffmanns-schuppen/local_business.jpg","images/abstract.jpg","images/depri_portrait.jpg","images/depri_portrait_square.jpg","images/logos/t-r_logo.svg","images/mockups/presenter_notes_mockup.png","images/programming.jpg","presenter/Presentation Master 2.msi","tavy/icons/2024-03/README.md","tavy/icons/README.md"]),
 	mimeTypes: {".md":"text/markdown",".json":"application/json",".png":"image/png",".jpg":"image/jpeg",".svg":"image/svg+xml",".msi":"application/octet-stream"},
 	_: {
-		client: {"start":"_app/immutable/entry/start.0643ae7c.js","app":"_app/immutable/entry/app.0142726a.js","imports":["_app/immutable/entry/start.0643ae7c.js","_app/immutable/chunks/index.f795e419.js","_app/immutable/chunks/singletons.9a569b25.js","_app/immutable/chunks/index.c4183f15.js","_app/immutable/chunks/paths.7a7b7339.js","_app/immutable/entry/app.0142726a.js","_app/immutable/chunks/index.f795e419.js"],"stylesheets":[],"fonts":[]},
+		client: {"start":"_app/immutable/entry/start.5f8fe6d1.js","app":"_app/immutable/entry/app.321bafc3.js","imports":["_app/immutable/entry/start.5f8fe6d1.js","_app/immutable/chunks/index.f795e419.js","_app/immutable/chunks/singletons.3405f7b6.js","_app/immutable/chunks/index.c4183f15.js","_app/immutable/chunks/paths.330c9fa6.js","_app/immutable/entry/app.321bafc3.js","_app/immutable/chunks/index.f795e419.js"],"stylesheets":[],"fonts":[]},
 		nodes: [
 			__memo(() => import('./nodes/0.js')),
 			__memo(() => import('./nodes/1.js')),
