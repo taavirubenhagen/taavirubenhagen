@@ -3,6 +3,7 @@
     import { globalScrollY } from "$state";
     import "$style";
     import {
+        SmallHeading,
         InlineButton,
     } from '$tavy/website';
 
@@ -10,7 +11,7 @@
     let windowHeight: number;
 
     let scrollDependentClass = '';
-    let menuToggleClass = '';
+    let menuExpanded = false;
 
     globalScrollY.subscribe(
         (value) => {
@@ -28,13 +29,13 @@
 
 <main class='lowercase'>
     <div
-        class="
-            transition duration-medium fixed z-40 top-0 {scrollDependentClass}
-            bg-background border-b border-primary w-full h-16
-            px-8 flex justify-between items-center"
+        class=
+        'transition duration-medium fixed z-40 {scrollDependentClass}
+        bg-background border-b border-primary w-full h-16
+        px-8 flex justify-between items-center'
     >
         <div class='w-24'>
-            <InlineButton invisible onClick={() => {}}>
+            <InlineButton invisible onClick={() => menuExpanded = !menuExpanded}>
                 menu
             </InlineButton>
         </div>
@@ -49,6 +50,20 @@
             </InlineButton>
         </div>
     </div>
-    <div class='w-full h-full background'></div>
+    <div
+        class=
+        'transition duration-long fixed z-30 {menuExpanded ? '-translate-x-0' : '-translate-x-full'}
+        w-full h-full background p-8 pt-24 flex flex-col gap-1'
+    >
+        {#each [
+            'home',
+            'design',
+            'software',
+            'politiucs',
+            'contact',
+            'support me',
+        ] as e}
+            <SmallHeading>{e}</SmallHeading>
+        {/each}
+    </div>
     <slot/>
-</ma

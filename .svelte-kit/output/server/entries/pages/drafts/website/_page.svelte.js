@@ -1,11 +1,8 @@
 import { c as create_ssr_component, v as validate_component, h as add_attribute, e as escape, f as each } from "../../../../chunks/index3.js";
 /* empty css                         */import { R as RawButton, I as Icon } from "../../../../chunks/RawButton.js";
 import { I as InlineButton } from "../../../../chunks/InlineButton.js";
-import { S as SmallParagraph } from "../../../../chunks/SmallParagraph2.js";
+import { S as SmallParagraph, a as SmallHeading } from "../../../../chunks/SmallHeading.js";
 import { S as Section } from "../../../../chunks/Section.js";
-const SmallHeading = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<t class="text-3xl md:text-5xl font-bold">${slots.default ? slots.default({}) : ``}</t>`;
-});
 const ShowcaseCarouselItem = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { website = false } = $$props;
   let { title = "" } = $$props;

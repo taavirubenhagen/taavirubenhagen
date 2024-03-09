@@ -1,7 +1,7 @@
-import { c as create_ssr_component, v as validate_component, e as escape } from "../../../../chunks/index3.js";
+import { c as create_ssr_component, v as validate_component, e as escape, f as each } from "../../../../chunks/index3.js";
 import { g as globalScrollY } from "../../../../chunks/state.js";
-/* empty css                         */import { R as RawButton, I as Icon } from "../../../../chunks/RawButton.js";
-import { S as SmallParagraph } from "../../../../chunks/SmallParagraph2.js";
+/* empty css                         */import { S as SmallParagraph, a as SmallHeading } from "../../../../chunks/SmallHeading.js";
+import { R as RawButton, I as Icon } from "../../../../chunks/RawButton.js";
 const InlineButton = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { invisible = false } = $$props;
   let { inverted = false } = $$props;
@@ -28,6 +28,7 @@ const InlineButton = create_ssr_component(($$result, $$props, $$bindings, slots)
 });
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let scrollDependentClass = "";
+  let menuExpanded = false;
   globalScrollY.subscribe((value) => {
     console.log(value);
     scrollDependentClass = value === 0 ? "-translate-y-16" : "translate-y-0";
@@ -37,12 +38,11 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 
 
 
-<main class="lowercase"><div class="${"transition duration-medium fixed z-40 top-0 " + escape(scrollDependentClass, true) + " bg-background border-b border-primary w-full h-16 px-8 flex justify-between items-center"}"><div class="w-24">${validate_component(InlineButton, "InlineButton").$$render(
+<main class="lowercase"><div class="${"transition duration-medium fixed z-40 " + escape(scrollDependentClass, true) + " bg-background border-b border-primary w-full h-16 px-8 flex justify-between items-center"}"><div class="w-24">${validate_component(InlineButton, "InlineButton").$$render(
     $$result,
     {
       invisible: true,
-      onClick: () => {
-      }
+      onClick: () => menuExpanded = !menuExpanded
     },
     {},
     {
@@ -68,6 +68,13 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       }
     }
   )}</div></div>
+    <div class="${"transition duration-long fixed z-30 " + escape(menuExpanded ? "-translate-x-0" : "-translate-x-full", true) + " w-full h-full background p-8 pt-24 flex flex-col gap-1"}">${each(["home", "websites", "graphic design", "design system", "support me"], (e) => {
+    return `${validate_component(SmallHeading, "SmallHeading").$$render($$result, {}, {}, {
+      default: () => {
+        return `${escape(e)}`;
+      }
+    })}`;
+  })}</div>
     ${slots.default ? slots.default({}) : ``}</main>`;
 });
 export {

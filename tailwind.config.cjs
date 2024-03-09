@@ -49,15 +49,15 @@ module.exports = {
             },
             transitionDelay: {
                 0: '0s',
-                default: '100ms',
-                short: '200ms',
+                short: '100ms',
+                default: '200ms',
                 medium: '400ms',
                 long: '800ms',
                 1600: '1600ms',
                 3200: '3200ms',
             },
             transitionDuration: {
-                DEFAULT: '100ms',
+                DEFAULT: '200ms',
                 0: '0s',
                 100: '100ms',
                 200: '200ms',

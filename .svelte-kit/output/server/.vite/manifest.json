@@ -23,7 +23,7 @@
       "_DeviceDetector.js"
     ],
     "css": [
-      "_app/immutable/assets/global.01e7cfb9.css"
+      "_app/immutable/assets/global.e1f36f2d.css"
     ]
   },
   "src/routes/+error.svelte": {
@@ -36,7 +36,7 @@
       "_Page.js"
     ],
     "css": [
-      "_app/immutable/assets/global.01e7cfb9.css"
+      "_app/immutable/assets/global.e1f36f2d.css"
     ]
   },
   "src/routes/drafts/website/+layout.svelte": {
@@ -46,11 +46,11 @@
     "imports": [
       "_index3.js",
       "_state.js",
-      "_RawButton.js",
-      "_SmallParagraph2.js"
+      "_SmallHeading.js",
+      "_RawButton.js"
     ],
     "css": [
-      "_app/immutable/assets/global.01e7cfb9.css"
+      "_app/immutable/assets/global.e1f36f2d.css"
     ]
   },
   "src/routes/+page.svelte": {
@@ -64,7 +64,7 @@
       "_Page.js"
     ],
     "css": [
-      "_app/immutable/assets/global.01e7cfb9.css"
+      "_app/immutable/assets/global.e1f36f2d.css"
     ]
   },
   "src/routes/admin/+page.server.ts": {
@@ -89,11 +89,11 @@
     "isEntry": true,
     "imports": [
       "_index3.js",
-      "_SmallHeading.js",
+      "_SmallHeading2.js",
       "_Page.js"
     ],
     "css": [
-      "_app/immutable/assets/global.01e7cfb9.css"
+      "_app/immutable/assets/global.e1f36f2d.css"
     ]
   },
   "src/routes/admin/access/[password]/+page.server.ts": {
@@ -116,7 +116,7 @@
       "_Page.js"
     ],
     "css": [
-      "_app/immutable/assets/global.01e7cfb9.css"
+      "_app/immutable/assets/global.e1f36f2d.css"
     ]
   },
   "src/routes/coming-soon/+page.svelte": {
@@ -129,7 +129,7 @@
       "_Page.js"
     ],
     "css": [
-      "_app/immutable/assets/global.01e7cfb9.css"
+      "_app/immutable/assets/global.e1f36f2d.css"
     ]
   },
   "src/routes/counter/privacy-policy/+page.svelte": {
@@ -142,7 +142,7 @@
       "_Page.js"
     ],
     "css": [
-      "_app/immutable/assets/global.01e7cfb9.css"
+      "_app/immutable/assets/global.e1f36f2d.css"
     ]
   },
   "src/routes/drafts/hoffmanns-schuppen/+page.svelte": {
@@ -156,7 +156,7 @@
       "_Button2.js"
     ],
     "css": [
-      "_app/immutable/assets/global.01e7cfb9.css"
+      "_app/immutable/assets/global.e1f36f2d.css"
     ]
   },
   "src/routes/drafts/hoffmanns-schuppen/countdown/+page.svelte": {
@@ -169,7 +169,7 @@
       "_Section.js"
     ],
     "css": [
-      "_app/immutable/assets/global.01e7cfb9.css"
+      "_app/immutable/assets/global.e1f36f2d.css"
     ]
   },
   "src/routes/drafts/hoffmanns-schuppen/investor-relations/+page.svelte": {
@@ -184,7 +184,7 @@
       "_Button2.js"
     ],
     "css": [
-      "_app/immutable/assets/global.01e7cfb9.css"
+      "_app/immutable/assets/global.e1f36f2d.css"
     ]
   },
   "src/routes/drafts/hoffmanns-schuppen/mach-mit/+page.svelte": {
@@ -199,7 +199,7 @@
       "_Button2.js"
     ],
     "css": [
-      "_app/immutable/assets/global.01e7cfb9.css"
+      "_app/immutable/assets/global.e1f36f2d.css"
     ]
   },
   "src/routes/drafts/hoffmanns-schuppen/produkte/+page.svelte": {
@@ -212,7 +212,7 @@
       "_Section.js"
     ],
     "css": [
-      "_app/immutable/assets/global.01e7cfb9.css"
+      "_app/immutable/assets/global.e1f36f2d.css"
     ]
   },
   "src/routes/drafts/terminal/+page.server.ts": {
@@ -235,7 +235,7 @@
       "_RawButton.js"
     ],
     "css": [
-      "_app/immutable/assets/global.01e7cfb9.css"
+      "_app/immutable/assets/global.e1f36f2d.css"
     ]
   },
   "src/routes/drafts/website/+page.svelte": {
@@ -246,11 +246,11 @@
       "_index3.js",
       "_RawButton.js",
       "_InlineButton.js",
-      "_SmallParagraph2.js",
+      "_SmallHeading.js",
       "_Section.js"
     ],
     "css": [
-      "_app/immutable/assets/global.01e7cfb9.css"
+      "_app/immutable/assets/global.e1f36f2d.css"
     ]
   },
   "src/routes/legal/contact/+page.svelte": {
@@ -263,7 +263,7 @@
       "_Section.js"
     ],
     "css": [
-      "_app/immutable/assets/global.01e7cfb9.css"
+      "_app/immutable/assets/global.e1f36f2d.css"
     ]
   },
   "src/routes/legal/privacy-policy/+page.svelte": {
@@ -276,7 +276,7 @@
       "_Section.js"
     ],
     "css": [
-      "_app/immutable/assets/global.01e7cfb9.css"
+      "_app/immutable/assets/global.e1f36f2d.css"
     ]
   },
   "src/routes/politics/jugendparlament/+page.svelte": {
@@ -289,7 +289,7 @@
       "_Section.js"
     ],
     "css": [
-      "_app/immutable/assets/global.01e7cfb9.css"
+      "_app/immutable/assets/global.e1f36f2d.css"
     ]
   },
   "src/routes/politics/jugendparlament/sticker/+page.svelte": {
@@ -303,7 +303,7 @@
       "_Section.js"
     ],
     "css": [
-      "_app/immutable/assets/global.01e7cfb9.css"
+      "_app/immutable/assets/global.e1f36f2d.css"
     ]
   },
   "src/routes/presenter/download/+page.svelte": {
@@ -319,7 +319,7 @@
       "_Page.js"
     ],
     "css": [
-      "_app/immutable/assets/global.01e7cfb9.css"
+      "_app/immutable/assets/global.e1f36f2d.css"
     ]
   },
   "src/routes/presenter/privacy-policy/+page.svelte": {
@@ -328,12 +328,12 @@
     "isEntry": true,
     "imports": [
       "_index3.js",
-      "_SmallHeading.js",
+      "_SmallHeading2.js",
       "_LargeHeading.js",
       "_Page.js"
     ],
     "css": [
-      "_app/immutable/assets/global.01e7cfb9.css"
+      "_app/immutable/assets/global.e1f36f2d.css"
     ]
   },
   "src/routes/presenter/sticker/+page.svelte": {
@@ -371,7 +371,7 @@
       "_Page.js"
     ],
     "css": [
-      "_app/immutable/assets/global.01e7cfb9.css"
+      "_app/immutable/assets/global.e1f36f2d.css"
     ]
   },
   "src/routes/products/coming-soon/+page.svelte": {
@@ -383,7 +383,7 @@
       "_Page.js"
     ],
     "css": [
-      "_app/immutable/assets/global.01e7cfb9.css"
+      "_app/immutable/assets/global.e1f36f2d.css"
     ]
   },
   "src/routes/projects/+page.svelte": {
@@ -398,7 +398,7 @@
       "_Page.js"
     ],
     "css": [
-      "_app/immutable/assets/global.01e7cfb9.css"
+      "_app/immutable/assets/global.e1f36f2d.css"
     ]
   },
   ".svelte-kit/generated/server/internal.js": {
@@ -445,7 +445,7 @@
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/global.01e7cfb9.css"
+      "_app/immutable/assets/global.e1f36f2d.css"
     ]
   },
   "_Page.js": {
@@ -458,7 +458,7 @@
       "_Section.js"
     ],
     "css": [
-      "_app/immutable/assets/global.01e7cfb9.css"
+      "_app/immutable/assets/global.e1f36f2d.css"
     ]
   },
   "_Button.js": {
@@ -468,7 +468,7 @@
       "_RawButton.js"
     ],
     "css": [
-      "_app/immutable/assets/global.01e7cfb9.css"
+      "_app/immutable/assets/global.e1f36f2d.css"
     ]
   },
   "_Section.js": {
@@ -477,7 +477,7 @@
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/global.01e7cfb9.css"
+      "_app/immutable/assets/global.e1f36f2d.css"
     ]
   },
   "_DeviceDetector.js": {
@@ -492,7 +492,7 @@
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/global.01e7cfb9.css"
+      "_app/immutable/assets/global.e1f36f2d.css"
     ]
   },
   "_SmallParagraph.js": {
@@ -501,7 +501,7 @@
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/global.01e7cfb9.css"
+      "_app/immutable/assets/global.e1f36f2d.css"
     ]
   },
   "_InlineButton.js": {
@@ -511,16 +511,16 @@
       "_RawButton.js"
     ],
     "css": [
-      "_app/immutable/assets/global.01e7cfb9.css"
+      "_app/immutable/assets/global.e1f36f2d.css"
     ]
   },
-  "_SmallParagraph2.js": {
-    "file": "chunks/SmallParagraph2.js",
+  "_SmallHeading.js": {
+    "file": "chunks/SmallHeading.js",
     "imports": [
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/global.01e7cfb9.css"
+      "_app/immutable/assets/global.e1f36f2d.css"
     ]
   },
   "_ButtonSeperator.js": {
@@ -530,16 +530,16 @@
       "_Button.js"
     ],
     "css": [
-      "_app/immutable/assets/global.01e7cfb9.css"
+      "_app/immutable/assets/global.e1f36f2d.css"
     ]
   },
-  "_SmallHeading.js": {
-    "file": "chunks/SmallHeading.js",
+  "_SmallHeading2.js": {
+    "file": "chunks/SmallHeading2.js",
     "imports": [
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/global.01e7cfb9.css"
+      "_app/immutable/assets/global.e1f36f2d.css"
     ]
   },
   "_MediumHeading.js": {
@@ -548,7 +548,7 @@
       "_index3.js"
     ],
     "css": [
-      "_app/immutable/assets/global.01e7cfb9.css"
+      "_app/immutable/assets/global.e1f36f2d.css"
     ]
   },
   "_Button2.js": {
@@ -559,7 +559,7 @@
       "_RawButton.js"
     ],
     "css": [
-      "_app/immutable/assets/global.01e7cfb9.css"
+      "_app/immutable/assets/global.e1f36f2d.css"
     ]
   }
 }
