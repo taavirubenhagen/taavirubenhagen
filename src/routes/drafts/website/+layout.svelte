@@ -13,7 +13,7 @@
 
     let windowHeight: number;
 
-    let scrollDependentClass = '';
+    let scrollDependentClass = 'translate-y-0';
     let menuExpanded = false;
 
     const routes = $page.url.href.split('/').slice(3);

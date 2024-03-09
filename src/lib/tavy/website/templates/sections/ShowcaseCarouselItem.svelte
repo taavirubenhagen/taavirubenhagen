@@ -50,9 +50,15 @@
                 <SmallParagraph>{title}</SmallParagraph>
             </div>
         {/if}
-        <div class='absolute bottom-4 w-full center_row {src === '' ? '' : 'text-white'}'>
-            <Icon name='open-new-window' textClass='scale-150'/>
-        </div>
+        {#if target !== ''}
+            <div class='absolute bottom-4 w-full center_row {src === '' ? '' : 'text-white'}'>
+                {#if target[0] === '/'}
+                    <Icon name='arrow-right' textClass='scale-150'/>
+                {:else}
+                    <Icon name='open-new-window' textClass='scale-150'/>
+                {/if}
+            </div>
+        {/if}
         <!--<div class="h-2"></div>
         <SmallParagraph>{title}</SmallParagraph>-->
     </div>

@@ -88,12 +88,12 @@
             target='play.google.com/store/apps/details?id=tavy.presenter.presentation_master_2'
             title='Presentation Master 2'
         />
-        <ShowcaseCarouselItem src='' title={'Hoffmann\'s Schuppen'}/>
-        <ShowcaseCarouselItem src='' title='JuPa Campaign'/>
+        <ShowcaseCarouselItem title={'Hoffmann\'s Schuppen'}/>
+        <ShowcaseCarouselItem title='JuPa Campaign'/>
     </ShowcaseCarousel>
     <ShowcaseCarousel title={'design system'}>
-        <ShowcaseCarouselItem src='' title='Tavy Design System'/>
-        <ShowcaseCarouselItem src='' title='Tavy Icons'/>
+        <ShowcaseCarouselItem target='/drafts/website/tavy' title='Tavy Design System'/>
+        <ShowcaseCarouselItem target='/drafts/website/tavy/icons' title='Tavy Icons'/>
         <ShowcaseCarouselItem src='' title='PM2 Design System'/>
     </ShowcaseCarousel>
     <ShowcaseCarousel title={'other businesses'}>

@@ -273,6 +273,14 @@
       "_app/immutable/assets/global.7d609bcd.css"
     ]
   },
+  "src/routes/hs/+page.svelte": {
+    "file": "entries/pages/hs/_page.svelte.js",
+    "src": "src/routes/hs/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index3.js"
+    ]
+  },
   "src/routes/legal/contact/+page.svelte": {
     "file": "entries/pages/legal/contact/_page.svelte.js",
     "src": "src/routes/legal/contact/+page.svelte",
