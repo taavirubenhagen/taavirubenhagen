@@ -3,6 +3,6 @@
 export const index = 12;
 let component_cache;
 export const component = async () => component_cache ??= (await import('../entries/pages/drafts/hoffmanns-schuppen/home/_page.svelte.js')).default;
-export const imports = ["_app/immutable/nodes/12.7b8ff96c.js","_app/immutable/chunks/index.7b7993cb.js","_app/immutable/chunks/MediumHeading.6aef6461.js","_app/immutable/chunks/paths.255c40c8.js","_app/immutable/chunks/Section.c04fc9dd.js","_app/immutable/chunks/Button.911b4d1b.js","_app/immutable/chunks/SmallParagraph.ae1f4329.js","_app/immutable/chunks/RawButton.2786cb91.js","_app/immutable/chunks/index.228e60ed.js"];
+export const imports = ["_app/immutable/nodes/12.ba484fea.js","_app/immutable/chunks/index.78ed22c3.js","_app/immutable/chunks/MediumHeading.aea16bb8.js","_app/immutable/chunks/paths.36523c55.js","_app/immutable/chunks/Section.dc9f226b.js","_app/immutable/chunks/Button.c171547b.js","_app/immutable/chunks/SmallParagraph.5b251ad5.js","_app/immutable/chunks/RawButton.30ccdb18.js","_app/immutable/chunks/index.e0e5ec0c.js"];
 export const stylesheets = ["_app/immutable/assets/global.44f97d18.css"];
 export const fonts = [];
