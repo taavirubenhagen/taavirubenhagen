@@ -26,36 +26,29 @@
 
 
 <Section className='relative p-16 pb-24 primary center_col gap-8 text-center'>
-    <SmallHeading>
+    <!--<SmallHeading>
         Independent
-        {#each [
-            'designer',
-            'developer',
-            'artist',
-            'activist',
-            'entrepreneur',
-        ] as e}
-            {#if e === 'designer'}
-                <InlineButton onClick={() => {}}>
-                    {e},
-                </InlineButton>
-            {:else if e === 'activist'}
-                &nbsp;
-                <InlineButton onClick={() => {}}>
-                    {e}
-                </InlineButton>
-            {:else if e === 'entrepreneur'}
-                &nbsp;and
-                <InlineButton onClick={() => {}}>
-                    {e}.
-                </InlineButton>
-            {:else}
-                &nbsp;
-                <InlineButton onClick={() => {}}>
-                    {e},
-                </InlineButton>
-            {/if}
-        {/each}
+        <InlineButton invisible onClick={() => {}}>
+            designer,
+        </InlineButton>
+        &nbsp;
+        <InlineButton onClick={() => {}}>
+            developer ,
+        </InlineButton>
+        &nbsp;
+        <InlineButton onClick={() => {}}>
+            artist,
+        </InlineButton>
+        &nbsp;
+        <InlineButton onClick={() => {}}>
+            activist
+        </InlineButton>
+        &nbsp;and
+        <InlineButton onClick={() => {}}>
+            entrepreneur.
+        </InlineButton>
+    </SmallHeading>--><SmallHeading>
+        Independent designer, developer, artist, activist entrepreneur.
     </SmallHeading>
     <div class='absolute bottom-8'>
         <SmallParagraph>Scroll.</SmallParagraph>
