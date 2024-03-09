@@ -1,1 +1,1 @@
-export { default as component } from "../../../../src/routes/drafts/hoffmanns-schuppen/produkte/+page.svelte";
+export { default as component } from "../../../../src/routes/drafts/hoffmanns-schuppen/mach-mit/+page.svelte";

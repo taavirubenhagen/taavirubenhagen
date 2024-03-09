@@ -38,7 +38,7 @@
 <div style='font-family: "Roboto Serif"'>
     <Section className='bg-green-900 center_col text-white'>
         <div class='flex flex-col gap-2'>
-            <t class="text-7xl md:text-7xl font-bold tracking-wider">
+            <t class="text-6xl md:text-7xl font-bold tracking-wider">
                 {days}:{hours}:{minutes}:{seconds}
             </t>
             <div class='w-full grid grid-cols-4 text-white'>

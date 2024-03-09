@@ -1,8 +1,8 @@
-
+import * as server from '../entries/pages/drafts/terminal/_page.server.ts.js';
 
 export const index = 16;
-let component_cache;
-export const component = async () => component_cache ??= (await import('../entries/pages/drafts/terminal/_route_/_page.svelte.js')).default;
-export const imports = ["_app/immutable/nodes/16.41f182fc.js","_app/immutable/chunks/index.c47c8e85.js","_app/immutable/chunks/DeviceDetector.d42c2506.js","_app/immutable/chunks/stores.d9a943b2.js","_app/immutable/chunks/singletons.a9286bff.js","_app/immutable/chunks/index.0c55ded3.js","_app/immutable/chunks/paths.a4701768.js","_app/immutable/chunks/RawButton.a29778c1.js"];
-export const stylesheets = ["_app/immutable/assets/global.9938cb0d.css"];
+export { server };
+export const server_id = "src/routes/drafts/terminal/+page.server.ts";
+export const imports = [];
+export const stylesheets = [];
 export const fonts = [];

@@ -31,7 +31,8 @@ export const nodes = [
 	() => import('./nodes/27'),
 	() => import('./nodes/28'),
 	() => import('./nodes/29'),
-	() => import('./nodes/30')
+	() => import('./nodes/30'),
+	() => import('./nodes/31')
 ];
 
 export const server_loads = [];
@@ -46,25 +47,26 @@ export const dictionary = {
 		"/counter/privacy-policy": [9],
 		"/drafts/hoffmanns-schuppen": [10],
 		"/drafts/hoffmanns-schuppen/countdown": [11],
-		"/drafts/hoffmanns-schuppen/investor-relations": [12],
-		"/drafts/hoffmanns-schuppen/mach-mit": [13],
-		"/drafts/hoffmanns-schuppen/produkte": [14],
-		"/drafts/terminal": [~15],
-		"/drafts/terminal/[route]": [16],
-		"/drafts/website": [17,[2]],
-		"/drafts/website/contact": [18,[2]],
-		"/legal/contact": [19],
-		"/legal/privacy-policy": [20],
-		"/politics/jugendparlament": [21],
-		"/politics/jugendparlament/sticker": [22],
-		"/presenter/download": [23],
-		"/presenter/privacy-policy": [24],
-		"/presenter/sticker": [25],
-		"/presenter/support-url": [26],
-		"/presenter/waitlist": [27],
-		"/projects": [28],
-		"/shop/dropshipping": [29],
-		"/shop/dropshipping/coming-soon": [30]
+		"/drafts/hoffmanns-schuppen/home": [12],
+		"/drafts/hoffmanns-schuppen/investor-relations": [13],
+		"/drafts/hoffmanns-schuppen/mach-mit": [14],
+		"/drafts/hoffmanns-schuppen/produkte": [15],
+		"/drafts/terminal": [~16],
+		"/drafts/terminal/[route]": [17],
+		"/drafts/website": [18,[2]],
+		"/drafts/website/contact": [19,[2]],
+		"/legal/contact": [20],
+		"/legal/privacy-policy": [21],
+		"/politics/jugendparlament": [22],
+		"/politics/jugendparlament/sticker": [23],
+		"/presenter/download": [24],
+		"/presenter/privacy-policy": [25],
+		"/presenter/sticker": [26],
+		"/presenter/support-url": [27],
+		"/presenter/waitlist": [28],
+		"/projects": [29],
+		"/shop/dropshipping": [30],
+		"/shop/dropshipping/coming-soon": [31]
 	};
 
 export const hooks = {
