@@ -9,7 +9,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return result / 10 < 1 ? "0" + result.toString() : result;
     }
     now = new Date();
-    end = /* @__PURE__ */ new Date("04/01/2024 12:00 AM");
+    end = /* @__PURE__ */ new Date("04/15/2024 11:20 AM");
     distance = end.getTime() - now.getTime();
     days = calcTimeUnit(31556952e3, 864e5);
     hours = calcTimeUnit(864e5, 36e5);
