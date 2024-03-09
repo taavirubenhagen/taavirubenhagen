@@ -21,7 +21,7 @@
         }
 
         now = new Date();
-        end = new Date('04/01/2024 12:00 AM');
+        end = new Date('04/15/2024 11:20 AM');
         distance = end.getTime() - now.getTime();
         days = calcTimeUnit(31_556_952_000, 86_400_000);
         hours = calcTimeUnit(86_400_000, 3_600_000);

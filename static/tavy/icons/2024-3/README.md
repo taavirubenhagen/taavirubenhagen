@@ -10,18 +10,19 @@
 ## Categories
 
 - actions
-    - noun names
 - brands
-    - name names
 - communication
-    - verb names
 - media
-    - verb names
 - navigation
-    - verb names
 - social
-    - noun names
 
 ## TODO
 
+- last/left
+- next/right
 - open-in-new
+
+- github
+
+- copy
+- buymeacoffee
