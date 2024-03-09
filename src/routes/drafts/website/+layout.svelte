@@ -46,11 +46,13 @@
                 {menuExpanded ? 'close' : 'menu'}
             </InlineButton>
         </div>
-        <img
-            src="/images/logos/t-r_logo.svg"
-            alt="Logo"
-            class='h-[3.75rem]'
-        >
+        <RawButton onClick={() => window.location.href = '/drafts/website'}>
+            <img
+                src="/images/logos/t-r_logo.svg"
+                alt="Logo"
+                class='h-[3.75rem]'
+            >
+        </RawButton>
         <div class='w-28 flex justify-end'>
             <InlineButton invisible onClick={() => window.location.href = 'https://buymeacoffee.com/taavirubenhagen'}>
                 support me
@@ -65,7 +67,7 @@
         {#each [
             ['home', '/drafts/website'],
             ['services', '/drafts/website'],
-            ['shop', '/drafts/website'],
+            ['shop', '/shop/dropshipping'],
             ['presenter', '/drafts/website'],
             ['design', '/drafts/website'],
             ['about', '/drafts/website'],

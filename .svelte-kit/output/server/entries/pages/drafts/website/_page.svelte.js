@@ -2,7 +2,7 @@ import { c as create_ssr_component, v as validate_component, h as add_attribute,
 /* empty css                         */import { R as RawButton, I as Icon } from "../../../../chunks/RawButton.js";
 import { I as InlineButton } from "../../../../chunks/InlineButton.js";
 import { S as SmallParagraph, a as SmallHeading } from "../../../../chunks/SmallHeading.js";
-import { S as Section } from "../../../../chunks/Section.js";
+import { S as Section_1 } from "../../../../chunks/Section2.js";
 const ShowcaseCarouselItem = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { website = false } = $$props;
   let { title = "" } = $$props;
@@ -69,28 +69,9 @@ const ShowcaseCarousel = create_ssr_component(($$result, $$props, $$bindings, sl
 <div class="-mx-8 p-8 pt-4 overflow-x-scroll flex gap-8">${slots.default ? slots.default({}) : ``}</div>
 <div class="h-16"></div>`;
 });
-const Section_1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let { top = false } = $$props;
-  let { className = "" } = $$props;
-  if ($$props.top === void 0 && $$bindings.top && top !== void 0)
-    $$bindings.top(top);
-  if ($$props.className === void 0 && $$bindings.className && className !== void 0)
-    $$bindings.className(className);
-  return `${validate_component(Section, "Section").$$render(
-    $$result,
-    {
-      className: className + " " + (top ? "pt-16" : "")
-    },
-    {},
-    {
-      default: () => {
-        return `${slots.default ? slots.default({}) : ``}`;
-      }
-    }
-  )}`;
-});
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `
+
 
 ${validate_component(Section_1, "Section").$$render(
     $$result,

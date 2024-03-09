@@ -8,7 +8,7 @@
 <Page>
     <Button next onClick={() => window.location.href = '/'}>Personal Website</Button>
     <Button next borderClass='border-t-0' onClick={() => window.location.href = '/projects'}>Projects</Button>
-    <Button next borderClass='border-t-0' onClick={() => window.location.href = '/products'}>Product Shop</Button>
+    <Button next borderClass='border-t-0' onClick={() => window.location.href = '/shop/dropshipping'}>Product Shop</Button>
     <ButtonSeperator/>
     <Button openInNew onClick={() => window.location.href = 'https://play.google.com/store/apps/details?id=tavy.presenter.presentation_master_2'}>
         Presenter (Android)

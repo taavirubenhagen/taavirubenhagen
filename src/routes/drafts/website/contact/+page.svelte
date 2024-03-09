@@ -18,10 +18,11 @@
 
 
 <Section className='p-8 flex flex-col justify-center items-stretch gap-4'>
-    <Button onClick={() => window.location.href = 'https://mailto:taavi.ruebenhagen@gmail.com'}>
-        e-mail me
-    </Button>
+    <!--TODO: Fix-->
+    <a href=>
+        <Button onClick={() => window.location.href = 'https://mailto:taavi.ruebenhagen@gmail.com'}>
+            e-mail me
+        </Button>
+    </a>
     <Button onClick={() => window.location.href = 'https://instagram.com/taavirubenhagen'}>
-        dm me
-    </Button>
-</Section>
+   

@@ -30,7 +30,8 @@ export const nodes = [
 	() => import('./nodes/26'),
 	() => import('./nodes/27'),
 	() => import('./nodes/28'),
-	() => import('./nodes/29')
+	() => import('./nodes/29'),
+	() => import('./nodes/30')
 ];
 
 export const server_loads = [];
@@ -51,18 +52,19 @@ export const dictionary = {
 		"/drafts/terminal": [~15],
 		"/drafts/terminal/[route]": [16],
 		"/drafts/website": [17,[2]],
-		"/legal/contact": [18],
-		"/legal/privacy-policy": [19],
-		"/politics/jugendparlament": [20],
-		"/politics/jugendparlament/sticker": [21],
-		"/presenter/download": [22],
-		"/presenter/privacy-policy": [23],
-		"/presenter/sticker": [24],
-		"/presenter/support-url": [25],
-		"/presenter/waitlist": [26],
-		"/products": [27],
-		"/products/coming-soon": [28],
-		"/projects": [29]
+		"/drafts/website/contact": [18,[2]],
+		"/legal/contact": [19],
+		"/legal/privacy-policy": [20],
+		"/politics/jugendparlament": [21],
+		"/politics/jugendparlament/sticker": [22],
+		"/presenter/download": [23],
+		"/presenter/privacy-policy": [24],
+		"/presenter/sticker": [25],
+		"/presenter/support-url": [26],
+		"/presenter/waitlist": [27],
+		"/products": [28],
+		"/products/coming-soon": [29],
+		"/projects": [30]
 	};
 
 export const hooks = {
