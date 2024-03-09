@@ -48,7 +48,7 @@
             entrepreneur.
         </InlineButton>
     </SmallHeading>--><SmallHeading>
-        Independent designer, developer, artist, activist entrepreneur.
+        Independent designer, developer, artist, activist and entrepreneur.
     </SmallHeading>
     <div class='absolute bottom-8'>
         <SmallParagraph>Scroll.</SmallParagraph>

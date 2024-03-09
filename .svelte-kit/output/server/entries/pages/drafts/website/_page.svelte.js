@@ -1,6 +1,5 @@
 import { c as create_ssr_component, v as validate_component, h as add_attribute, e as escape, f as each } from "../../../../chunks/index3.js";
 /* empty css                         */import { R as RawButton, I as Icon } from "../../../../chunks/RawButton.js";
-import { I as InlineButton } from "../../../../chunks/InlineButton.js";
 import { S as SmallParagraph, a as SmallHeading } from "../../../../chunks/SmallHeading.js";
 import { S as Section_1 } from "../../../../chunks/Section2.js";
 const ShowcaseCarouselItem = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -83,65 +82,8 @@ ${validate_component(Section_1, "Section").$$render(
       default: () => {
         return `${validate_component(SmallHeading, "SmallHeading").$$render($$result, {}, {}, {
           default: () => {
-            return `Independent
-        ${each(["designer", "developer", "artist", "activist", "entrepreneur"], (e) => {
-              return `${e === "designer" ? `${validate_component(InlineButton, "InlineButton").$$render(
-                $$result,
-                {
-                  onClick: () => {
-                  }
-                },
-                {},
-                {
-                  default: () => {
-                    return `${escape(e)},
-                `;
-                  }
-                }
-              )}` : `${e === "activist" ? `\xA0
-                ${validate_component(InlineButton, "InlineButton").$$render(
-                $$result,
-                {
-                  onClick: () => {
-                  }
-                },
-                {},
-                {
-                  default: () => {
-                    return `${escape(e)}
-                `;
-                  }
-                }
-              )}` : `${e === "entrepreneur" ? `\xA0and
-                ${validate_component(InlineButton, "InlineButton").$$render(
-                $$result,
-                {
-                  onClick: () => {
-                  }
-                },
-                {},
-                {
-                  default: () => {
-                    return `${escape(e)}.
-                `;
-                  }
-                }
-              )}` : `\xA0
-                ${validate_component(InlineButton, "InlineButton").$$render(
-                $$result,
-                {
-                  onClick: () => {
-                  }
-                },
-                {},
-                {
-                  default: () => {
-                    return `${escape(e)},
-                `;
-                  }
-                }
-              )}`}`}`}`;
-            })}`;
+            return `Independent designer, developer, artist, activist entrepreneur.
+    `;
           }
         })}
     <div class="absolute bottom-8">${validate_component(SmallParagraph, "SmallParagraph").$$render($$result, {}, {}, {
