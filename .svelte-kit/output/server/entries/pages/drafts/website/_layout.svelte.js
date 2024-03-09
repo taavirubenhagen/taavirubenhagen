@@ -54,7 +54,18 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       }
     }
   )}</div>
-        <img src="/images/logos/t-r_logo.svg" alt="Logo" class="h-[3.75rem]">
+        ${validate_component(RawButton, "RawButton").$$render(
+    $$result,
+    {
+      onClick: () => window.location.href = "/drafts/website"
+    },
+    {},
+    {
+      default: () => {
+        return `<img src="/images/logos/t-r_logo.svg" alt="Logo" class="h-[3.75rem]">`;
+      }
+    }
+  )}
         <div class="w-28 flex justify-end">${validate_component(InlineButton, "InlineButton").$$render(
     $$result,
     {
@@ -73,7 +84,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     [
       ["home", "/drafts/website"],
       ["services", "/drafts/website"],
-      ["shop", "/drafts/website"],
+      ["shop", "/shop/dropshipping"],
       ["presenter", "/drafts/website"],
       ["design", "/drafts/website"],
       ["about", "/drafts/website"],

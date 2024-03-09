@@ -62,9 +62,9 @@ export const dictionary = {
 		"/presenter/sticker": [25],
 		"/presenter/support-url": [26],
 		"/presenter/waitlist": [27],
-		"/products": [28],
-		"/products/coming-soon": [29],
-		"/projects": [30]
+		"/projects": [28],
+		"/shop/dropshipping": [29],
+		"/shop/dropshipping/coming-soon": [30]
 	};
 
 export const hooks = {

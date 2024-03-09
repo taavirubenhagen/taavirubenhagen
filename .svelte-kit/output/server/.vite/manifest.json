@@ -375,9 +375,24 @@
       "_index3.js"
     ]
   },
-  "src/routes/products/+page.svelte": {
-    "file": "entries/pages/products/_page.svelte.js",
-    "src": "src/routes/products/+page.svelte",
+  "src/routes/projects/+page.svelte": {
+    "file": "entries/pages/projects/_page.svelte.js",
+    "src": "src/routes/projects/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index3.js",
+      "_RawButton.js",
+      "_Button.js",
+      "_ButtonSeperator.js",
+      "_Page.js"
+    ],
+    "css": [
+      "_app/immutable/assets/global.1a44131b.css"
+    ]
+  },
+  "src/routes/shop/dropshipping/+page.svelte": {
+    "file": "entries/pages/shop/dropshipping/_page.svelte.js",
+    "src": "src/routes/shop/dropshipping/+page.svelte",
     "isEntry": true,
     "imports": [
       "_index3.js",
@@ -389,27 +404,12 @@
       "_app/immutable/assets/global.1a44131b.css"
     ]
   },
-  "src/routes/products/coming-soon/+page.svelte": {
-    "file": "entries/pages/products/coming-soon/_page.svelte.js",
-    "src": "src/routes/products/coming-soon/+page.svelte",
+  "src/routes/shop/dropshipping/coming-soon/+page.svelte": {
+    "file": "entries/pages/shop/dropshipping/coming-soon/_page.svelte.js",
+    "src": "src/routes/shop/dropshipping/coming-soon/+page.svelte",
     "isEntry": true,
     "imports": [
       "_index3.js",
-      "_Page.js"
-    ],
-    "css": [
-      "_app/immutable/assets/global.1a44131b.css"
-    ]
-  },
-  "src/routes/projects/+page.svelte": {
-    "file": "entries/pages/projects/_page.svelte.js",
-    "src": "src/routes/projects/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index3.js",
-      "_RawButton.js",
-      "_Button.js",
-      "_ButtonSeperator.js",
       "_Page.js"
     ],
     "css": [

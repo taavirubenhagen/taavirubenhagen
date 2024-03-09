@@ -19,10 +19,12 @@
 
 <Section className='p-8 flex flex-col justify-center items-stretch gap-4'>
     <!--TODO: Fix-->
-    <a href=>
-        <Button onClick={() => window.location.href = 'https://mailto:taavi.ruebenhagen@gmail.com'}>
+    <Button borderClass='center_row' onClick={() => {}}>
+        <a href='mailto:taavi.ruebenhagen@gmail.com' class='w-full'>
             e-mail me
-        </Button>
-    </a>
+        </a>
+    </Button>
     <Button onClick={() => window.location.href = 'https://instagram.com/taavirubenhagen'}>
-   
+        dm me
+    </Button>
+</Section>
