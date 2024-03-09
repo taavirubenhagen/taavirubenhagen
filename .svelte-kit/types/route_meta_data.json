@@ -13,6 +13,16 @@
 	"/coming-soon": [],
 	"/counter/privacy-policy": [],
 	"/drafts/hoffmanns-schuppen": [],
+	"/drafts/hoffmanns-schuppen/admin": [
+		"src/routes/drafts/hoffmanns-schuppen/admin/+page.server.ts"
+	],
+	"/drafts/hoffmanns-schuppen/admin/access": [
+		"src/routes/drafts/hoffmanns-schuppen/admin/access/+page.server.ts"
+	],
+	"/drafts/hoffmanns-schuppen/admin/access/[password]": [
+		"src/routes/drafts/hoffmanns-schuppen/admin/access/[password]/+page.server.ts"
+	],
+	"/drafts/hoffmanns-schuppen/admin/login/[state]": [],
 	"/drafts/hoffmanns-schuppen/countdown": [],
 	"/drafts/hoffmanns-schuppen/home": [],
 	"/drafts/hoffmanns-schuppen/investor-relations": [],

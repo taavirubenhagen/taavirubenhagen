@@ -21,7 +21,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<div style="font-family: &quot;Caveat Brush&quot;;">${validate_component(Section, "Section").$$render(
     $$result,
     {
-      className: "bg-green-950 center_col text-white"
+      className: "bg-green-900 center_col text-white"
     },
     {},
     {

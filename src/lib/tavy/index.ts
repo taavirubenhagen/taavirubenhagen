@@ -9,7 +9,7 @@ import LargeHeading from '$tavy/general/text/headings/LargeHeading.svelte';
 import Icon from '$tavy/general/icons/icon.svelte';
 
 import RawButton from '$tavy/general/buttons/RawButton.svelte';
-import InlineParagraphButton from '$tavy/general/buttons/InlineParagraphButton.svelte';
+import InlineButton from '$tavy/general/buttons/InlineButton.svelte';
 
 import RouteIndicator from '$tavy/general/templates/RouteIndicator.svelte';
 import Section from '$tavy/general/templates/Section.svelte';
@@ -22,6 +22,6 @@ export {
     SmallParagraph, MediumParagraph, LargeParagraph,
     SmallHeading, MediumHeading, LargeHeading,
     Icon,
-    RawButton, InlineParagraphButton,
+    RawButton, InlineButton,
     RouteIndicator, Section, Page,
 };

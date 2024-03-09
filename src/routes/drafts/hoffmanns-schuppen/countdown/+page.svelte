@@ -2,6 +2,7 @@
     import '$style';
     import {
         LargeHeading, MediumHeading,
+        InlineButton,
         Section,
     } from "$tavy";
     import { onMount } from 'svelte';
@@ -46,6 +47,11 @@
                 <div class='center_row'>Minuten</div>
                 <div class='center_row'>Sekunden</div>
             </div>
+        </div>
+        <div class="absolute bottom-8 w-full center_row">
+            <InlineButton invisible onClick={() => window.location.href = '/drafts/hoffmanns-schuppen/admin'}>
+                Admin
+            </InlineButton>
         </div>
     </Section>
 </div>
