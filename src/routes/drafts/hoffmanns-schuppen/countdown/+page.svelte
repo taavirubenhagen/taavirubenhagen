@@ -35,7 +35,7 @@
 
 
 <div style='font-family: "Caveat Brush";'>
-    <Section className='bg-green-950 center_col text-white'>
+    <Section className='bg-green-900 center_col text-white'>
         <div class='flex flex-col gap-2'>
             <t class="text-6xl md:text-7xl font-bold tracking-wider">
                 {days}:{hours}:{minutes}:{seconds}
