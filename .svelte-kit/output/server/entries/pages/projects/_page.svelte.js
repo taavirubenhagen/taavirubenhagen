@@ -1,5 +1,6 @@
 import { c as create_ssr_component, v as validate_component, e as escape } from "../../../chunks/index3.js";
-/* empty css                      */import { I as Icon } from "../../../chunks/icon.js";
+import "../../../chunks/index4.js";
+import { I as Icon } from "../../../chunks/icon.js";
 import { S as Section } from "../../../chunks/Section.js";
 import "ua-parser-js";
 import { B as Button } from "../../../chunks/Button.js";

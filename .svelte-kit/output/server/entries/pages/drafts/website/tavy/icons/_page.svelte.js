@@ -1,23 +1,24 @@
 import { c as create_ssr_component, v as validate_component, i as is_promise, n as noop, h as each } from "../../../../../../chunks/index3.js";
-/* empty css                               */import { M as MediumHeading } from "../../../../../../chunks/MediumHeading.js";
+import { t as tavyVersion } from "../../../../../../chunks/index4.js";
+import { M as MediumHeading } from "../../../../../../chunks/MediumHeading.js";
 import { I as Icon } from "../../../../../../chunks/icon.js";
 import { B as Button } from "../../../../../../chunks/Button3.js";
 import { S as Section } from "../../../../../../chunks/Section.js";
 import "ua-parser-js";
-async function fetchIconNames() {
-  const remoteIconFolderURL = "https://api.github.com/repositories/581311131/contents/tavy/main/icons/2024-03";
-  const json = await (await fetch(remoteIconFolderURL)).json();
-  let names = [];
-  console.log(json[0].name);
-  for (let i = 0; i < json.length; i++) {
-    const parts = json[i].name.split(".");
-    if (parts[1] === "svg") {
-      names.push(parts[0]);
-    }
-  }
-  return names;
-}
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  async function fetchIconNames() {
+    const remoteIconFolderURL = `https://api.github.com/repositories/581311131/contents/src/tavy/main/icons/${tavyVersion}`;
+    const json = await (await fetch(remoteIconFolderURL)).json();
+    let names = [];
+    console.log(json[0].name);
+    for (let i = 0; i < json.length; i++) {
+      const parts = json[i].name.split(".");
+      if (parts[1] === "svg") {
+        names.push(parts[0]);
+      }
+    }
+    return names;
+  }
   return `${validate_component(Section, "Section").$$render($$result, { className: "p-8 pt-32" }, {}, {
     default: () => {
       return `<div class="flex justify-between items-center">${validate_component(MediumHeading, "MediumHeading").$$render($$result, {}, {}, {

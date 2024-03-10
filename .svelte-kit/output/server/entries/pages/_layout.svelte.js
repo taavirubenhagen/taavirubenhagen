@@ -1,7 +1,8 @@
 import { c as create_ssr_component, d as subscribe, v as validate_component, e as escape } from "../../chunks/index3.js";
 import { p as page, n as navigating } from "../../chunks/stores.js";
 import { b as buttonHover, c as cursorPosition } from "../../chunks/state.js";
-/* empty css                   */import { L as LargeHeading } from "../../chunks/LargeHeading.js";
+import "../../chunks/index4.js";
+import { L as LargeHeading } from "../../chunks/LargeHeading.js";
 import { S as Section } from "../../chunks/Section.js";
 import { D as DeviceDetector } from "../../chunks/DeviceDetector.js";
 import { B as Button } from "../../chunks/Button.js";

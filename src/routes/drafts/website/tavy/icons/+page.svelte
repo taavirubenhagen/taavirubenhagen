@@ -28,7 +28,7 @@
 <Section className='p-8 pt-32'>
     <div class='flex justify-between items-center'>
         <MediumHeading>tavy icons</MediumHeading>
-        <a download href='https://raw.githubusercontent.com/taavirubenhagen/taavirubenhagen/main/src/tavy/icons/2024-03/tavy-icons-2024-03.zip'>
+        <a download href='https://raw.githubusercontent.com/taavirubenhagen/taavirubenhagen/main/src/tavy/icons/{tavyVersion}/tavy-icons-{tavyVersion}.zip'>
             <Button onClick={() => {}}>
                 download
             </Button>

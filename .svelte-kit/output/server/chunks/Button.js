@@ -1,5 +1,6 @@
 import { c as create_ssr_component, v as validate_component, e as escape } from "./index3.js";
-/* empty css        */import { M as MediumParagraph } from "./MediumParagraph.js";
+import "./index4.js";
+import { M as MediumParagraph } from "./MediumParagraph.js";
 import { I as Icon } from "./icon.js";
 import { R as RawButton } from "./RawButton.js";
 import "ua-parser-js";

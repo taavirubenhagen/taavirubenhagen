@@ -1,5 +1,6 @@
 import { c as create_ssr_component, v as validate_component, f as add_attribute, e as escape, h as each } from "../../../../chunks/index3.js";
-/* empty css                         */import { S as SmallParagraph } from "../../../../chunks/SmallParagraph.js";
+import "../../../../chunks/index4.js";
+import { S as SmallParagraph } from "../../../../chunks/SmallParagraph.js";
 import { S as SmallHeading } from "../../../../chunks/SmallHeading.js";
 import { I as Icon } from "../../../../chunks/icon.js";
 import { R as RawButton } from "../../../../chunks/RawButton.js";

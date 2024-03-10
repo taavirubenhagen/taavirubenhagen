@@ -1,5 +1,6 @@
 import { c as create_ssr_component, v as validate_component, h as each, e as escape } from "../../../../../chunks/index3.js";
-/* empty css                            */import { M as MediumHeading } from "../../../../../chunks/MediumHeading.js";
+import "../../../../../chunks/index4.js";
+import { M as MediumHeading } from "../../../../../chunks/MediumHeading.js";
 import { S as Section } from "../../../../../chunks/Section.js";
 import "ua-parser-js";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {

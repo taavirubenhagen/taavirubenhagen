@@ -1,5 +1,6 @@
 import { c as create_ssr_component } from "./index3.js";
-/* empty css        */const RawButton = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+import "./index4.js";
+const RawButton = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { onClick } = $$props;
   if ($$props.onClick === void 0 && $$bindings.onClick && onClick !== void 0)
     $$bindings.onClick(onClick);

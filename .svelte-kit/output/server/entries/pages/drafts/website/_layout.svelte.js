@@ -1,7 +1,8 @@
 import { c as create_ssr_component, d as subscribe, e as escape, v as validate_component, h as each } from "../../../../chunks/index3.js";
 import { p as page } from "../../../../chunks/stores.js";
 import { g as globalScrollY } from "../../../../chunks/state.js";
-/* empty css                         */import { S as SmallHeading } from "../../../../chunks/SmallHeading.js";
+import "../../../../chunks/index4.js";
+import { S as SmallHeading } from "../../../../chunks/SmallHeading.js";
 import { R as RawButton } from "../../../../chunks/RawButton.js";
 import { I as InlineButton } from "../../../../chunks/InlineButton.js";
 import "ua-parser-js";

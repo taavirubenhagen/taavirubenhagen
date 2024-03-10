@@ -1,5 +1,6 @@
 import { c as create_ssr_component, f as add_attribute, v as validate_component } from "./index3.js";
-/* empty css        */import "ua-parser-js";
+import "./index4.js";
+import "ua-parser-js";
 const Paragraph = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { textClass = "" } = $$props;
   if ($$props.textClass === void 0 && $$bindings.textClass && textClass !== void 0)

@@ -1,5 +1,5 @@
 import { c as create_ssr_component, e as escape, f as add_attribute } from "./index3.js";
-const tavyVersion = "2024-03";
+import { t as tavyVersion } from "./index4.js";
 const Icon = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { name } = $$props;
   let { inverted = false } = $$props;
