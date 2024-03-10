@@ -28,7 +28,7 @@
     <div class='flex justify-between items-center'>
         <MediumHeading>tavy icons</MediumHeading>
         <a download href="/presenter/Presentation Master 2.msi">
-            <Button download onClick={() => {}}>
+            <Button onClick={() => {}}>
                 download
             </Button>
         </a>

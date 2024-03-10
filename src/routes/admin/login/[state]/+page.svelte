@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Section } from '$app/stores';
+    import { page } from '$app/stores';
     import '$style';
     import { Section } from "$tavy";
     import { TextField } from '$tavy/industrial';
