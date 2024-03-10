@@ -5,7 +5,7 @@ import { B as Button } from "../../../../../../chunks/Button3.js";
 import { S as Section } from "../../../../../../chunks/Section.js";
 import "ua-parser-js";
 async function fetchIconNames() {
-  const remoteIconFolderURL = "https://api.github.com/repositories/581311131/contents/src/lib/tavy/general/icons/2024-03";
+  const remoteIconFolderURL = "https://api.github.com/repositories/581311131/contents/tavy/main/icons/2024-03";
   const json = await (await fetch(remoteIconFolderURL)).json();
   let names = [];
   console.log(json[0].name);
@@ -25,7 +25,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
           return `tavy icons`;
         }
       })}
-        <a download href="https://raw.githubusercontent.com/taavirubenhagen/taavirubenhagen/main/static/tavy/icons/tavy-icons-2024-03.zip">${validate_component(Button, "Button").$$render(
+        <a download href="https://raw.githubusercontent.com/taavirubenhagen/taavirubenhagen/main/src/tavy/icons/tavy-icons-2024-03.zip">${validate_component(Button, "Button").$$render(
         $$result,
         {
           onClick: () => {

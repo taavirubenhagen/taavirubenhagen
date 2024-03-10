@@ -13,7 +13,7 @@ const Icon = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     $$bindings.size(size);
   if ($$props.textClass === void 0 && $$bindings.textClass && textClass !== void 0)
     $$bindings.textClass(textClass);
-  return `<img src="${"https://raw.githubusercontent.com/taavirubenhagen/taavirubenhagen/main/src/lib/tavy/general/icons/" + escape(tavyVersion, true) + "/" + escape(name, true) + ".svg"}"${add_attribute("alt", name, 0)}${add_attribute("class", inverted ? "invert" : "", 0)} style="${"height: " + escape(size / 16 * 1.25, true) + "rem;"}">`;
+  return `<img src="${"https://raw.githubusercontent.com/taavirubenhagen/taavirubenhagen/main/tavy/main/icons/" + escape(tavyVersion, true) + "/" + escape(name, true) + ".svg"}"${add_attribute("alt", name, 0)}${add_attribute("class", inverted ? "invert" : "", 0)} style="${"height: " + escape(size / 16 * 1.25, true) + "rem;"}">`;
 });
 export {
   Icon as I
