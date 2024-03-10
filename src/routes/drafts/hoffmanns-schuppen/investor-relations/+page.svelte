@@ -4,7 +4,7 @@
         LargeHeading, MediumHeading,
         Section,
     } from "$tavy";
-  import SmallParagraph from '$tavy/general/text/paragraphs/SmallParagraph.svelte';
+  import SmallParagraph from '$tavy/main/text/paragraphs/SmallParagraph.svelte';
     import {
         Button,
         TextSection,

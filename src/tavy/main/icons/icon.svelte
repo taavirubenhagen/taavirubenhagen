@@ -10,7 +10,7 @@
 
 
 <img
-    src='https://raw.githubusercontent.com/taavirubenhagen/taavirubenhagen/main/src/lib/tavy/general/icons/{tavyVersion}/{name}.svg'
+    src='https://raw.githubusercontent.com/taavirubenhagen/taavirubenhagen/main/tavy/main/icons/{tavyVersion}/{name}.svg'
     alt={name}
     class='{inverted ? 'invert' : ''}'
     style='height: {size / 16 * 1.25}rem;'

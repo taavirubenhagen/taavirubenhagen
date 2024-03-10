@@ -8,22 +8,16 @@
 				"../static/*"
 			],
 			"$tavy": [
-				"../src/lib/tavy"
+				"../src/tavy"
 			],
 			"$tavy/*": [
-				"../src/lib/tavy/*"
+				"../src/tavy/*"
 			],
 			"$style": [
 				"../src/global.postcss"
 			],
 			"$state": [
 				"../src/state.ts"
-			],
-			"$lib": [
-				"../src/lib"
-			],
-			"$lib/*": [
-				"../src/lib/*"
 			]
 		},
 		"rootDirs": [

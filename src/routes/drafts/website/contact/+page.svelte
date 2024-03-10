@@ -3,7 +3,7 @@
     import {
         Icon,
     } from "$tavy";
-  import SmallHeading from '$tavy/general/text/headings/SmallHeading.svelte';
+  import SmallHeading from '$tavy/main/text/headings/SmallHeading.svelte';
     import {
         Button,
         ShowcaseCarouselItem,

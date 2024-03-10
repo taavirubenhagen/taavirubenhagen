@@ -12,7 +12,7 @@ const config = {
 		adapter: adapter(),
 		alias: {
 			$static: path.resolve('./static/'),
-			$tavy: path.resolve("./src/lib/tavy/"),
+			$tavy: path.resolve("./src/tavy/"),
 			$style: path.resolve("./src/global.postcss"),
 			$state: path.resolve("./src/state.ts"),
 		}

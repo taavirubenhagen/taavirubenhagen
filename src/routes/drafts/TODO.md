@@ -1,6 +1,6 @@
 # General
 
-- Remove *subtitles* folder and unnecessary *paragraph* components in *tavy/general*
+- Remove *subtitles* folder and unnecessary *paragraph* components in *tavy/main*
 
 # *hoffmanns-schuppen*
 

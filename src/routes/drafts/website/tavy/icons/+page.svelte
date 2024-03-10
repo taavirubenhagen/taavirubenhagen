@@ -10,7 +10,7 @@
 
     
     async function fetchIconNames() {
-        const remoteIconFolderURL = 'https://api.github.com/repositories/581311131/contents/src/lib/tavy/general/icons/2024-03';
+        const remoteIconFolderURL = 'https://api.github.com/repositories/581311131/contents/tavy/main/icons/2024-03';
         const json = await ( await fetch(remoteIconFolderURL) ).json();
         let names = [];
         console.log(json[0].name);
@@ -27,7 +27,7 @@
 <Section className='p-8 pt-32'>
     <div class='flex justify-between items-center'>
         <MediumHeading>tavy icons</MediumHeading>
-        <a download href='https://raw.githubusercontent.com/taavirubenhagen/taavirubenhagen/main/static/tavy/icons/tavy-icons-2024-03.zip'>
+        <a download href='https://raw.githubusercontent.com/taavirubenhagen/taavirubenhagen/main/src/tavy/icons/tavy-icons-2024-03.zip'>
             <Button onClick={() => {}}>
                 download
             </Button>

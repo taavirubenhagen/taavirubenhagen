@@ -14,8 +14,8 @@ const production = !process.env.ROLLUP_WATCH;
 module.exports = {
     mode: 'jit',
     content: [
-        //"./src/*.{html,svelte,postcss}",
         "./src/**",
+        "./tavy/**",
     ],
     plugins: [],
     theme: {

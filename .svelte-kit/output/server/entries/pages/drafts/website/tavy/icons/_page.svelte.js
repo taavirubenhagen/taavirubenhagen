@@ -25,7 +25,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
           return `tavy icons`;
         }
       })}
-        <a download href="/presenter/Presentation Master 2.msi">${validate_component(Button, "Button").$$render(
+        <a download href="https://raw.githubusercontent.com/taavirubenhagen/taavirubenhagen/main/static/tavy/icons/tavy-icons-2024-03.zip">${validate_component(Button, "Button").$$render(
         $$result,
         {
           onClick: () => {
