@@ -2,7 +2,7 @@
     import '$style';
     import {
         SmallHeading,
-    } from '$tavy/website';
+    } from '$tavy';
 
     export let title: string;
 </script>

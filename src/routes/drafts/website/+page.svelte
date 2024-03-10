@@ -1,11 +1,11 @@
 <script lang="ts">
     import '$style';
     import {
+        SmallParagraph,
+        SmallHeading,
         Icon,
     } from "$tavy";
     import {
-        SmallParagraph,
-        SmallHeading,
         ShowcaseCarouselItem,
         ShowcaseCarousel,
         Section,
@@ -93,7 +93,7 @@
     </ShowcaseCarousel>
     <ShowcaseCarousel title={'design system'}>
         <ShowcaseCarouselItem target='/drafts/website/tavy' title='Tavy Design System'/>
-        <ShowcaseCarouselItem target='/drafts/website/tavy/icons' title='Tavy Icons'/>
+        <ShowcaseCarouselItem target='rubenhagen.com/drafts/website/tavy/icons' title='Tavy Icons'/>
         <ShowcaseCarouselItem src='' title='PM2 Design System'/>
     </ShowcaseCarousel>
     <ShowcaseCarousel title={'other businesses'}>
@@ -103,7 +103,7 @@
     </ShowcaseCarousel>
     <div class='rounded-2xl w-full h-16 primary flex justify-evenly items-center'>
         {#each ['instagram', 'tiktok', 'youtube', 'github'] as e}
-            <Icon name={e} textClass='text-3xl'/>
+            <Icon inverted name={e} size={28}/>
         {/each}
     </div>
     <div class='h-16'></div>

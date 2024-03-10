@@ -6,7 +6,7 @@
     } from '$tavy';
     import {
         SmallParagraph,
-    } from '$tavy/website';
+    } from '$tavy';
 
     export let website = false;
     export let title = '';
@@ -51,11 +51,11 @@
             </div>
         {/if}
         {#if target !== ''}
-            <div class='absolute bottom-4 w-full center_row {src === '' ? '' : 'text-white'}'>
+            <div class='absolute bottom-4 w-full center_row'>
                 {#if target[0] === '/'}
-                    <Icon name='arrow-right' textClass='scale-150'/>
+                    <Icon inverted={src !== ''} size={20} name='arrow-right'/>
                 {:else}
-                    <Icon name='open-new-window' textClass='scale-150'/>
+                    <Icon inverted={src !== ''} size={20} name='open-in-new'/>
                 {/if}
             </div>
         {/if}

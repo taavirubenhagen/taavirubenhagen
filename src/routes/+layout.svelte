@@ -3,7 +3,7 @@
     import { cursorPosition, globalScrollY } from "$state";
     import "$style";
     import { Page, LargeHeading } from "$tavy";
-    import { Cursor } from '$tavy/identity';
+    import { Cursor } from '$tavy';
     import { LegalFooter } from "$tavy/industrial";
 
 

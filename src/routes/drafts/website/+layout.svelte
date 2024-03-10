@@ -8,7 +8,7 @@
     import {
         SmallHeading,
         InlineButton,
-    } from '$tavy/website';
+    } from '$tavy';
 
 
     let windowHeight: number;
@@ -66,8 +66,6 @@
             ['home', '/drafts/website'],
             ['services', '/drafts/website'],
             ['shop', '/shop/dropshipping'],
-            ['presenter', '/drafts/website'],
-            ['design', '/drafts/website'],
             ['about', '/drafts/website'],
             ['contact', '/drafts/website/contact'],
         ] as e}

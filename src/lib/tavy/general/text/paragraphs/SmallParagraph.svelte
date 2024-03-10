@@ -1,5 +1,8 @@
 <script lang="ts">
-    import '$style'
+    import '$style';
+    import {
+        Paragraph,
+    } from '$tavy';
 </script>
 
-<t class="text-md"><slot/></t>
+<Paragraph><slot/></Paragraph>
