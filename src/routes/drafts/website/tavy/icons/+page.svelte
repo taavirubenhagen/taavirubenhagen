@@ -3,14 +3,15 @@
         MediumHeading,
         Icon,
         Button,
-    } from '$tavy';
-    import {
         Section,
     } from '$tavy';
+    import {
+        tavyVersion,
+    } from '$tavy/info';
 
     
     async function fetchIconNames() {
-        const remoteIconFolderURL = 'https://api.github.com/repositories/581311131/contents/tavy/main/icons/2024-03';
+        const remoteIconFolderURL = `https://api.github.com/repositories/581311131/contents/src/tavy/main/icons/${tavyVersion}`;
         const json = await ( await fetch(remoteIconFolderURL) ).json();
         let names = [];
         console.log(json[0].name);
