@@ -1,12 +1,12 @@
 <script lang="ts">
-    import { LargeHeading, SmallParagraph, Page } from "$tavy";
+    import { LargeHeading, SmallParagraph, Section } from "$tavy";
     import { Button, InlineButton } from "$tavy/industrial";
 </script>
 
 
 
 
-<Page>
+<Section>
     <div>
         <LargeHeading>Presentation Master 2 for PC</LargeHeading>
         <div class="h-16"></div>
@@ -30,4 +30,4 @@
             5. If you have any questions or concerns, feel free to contact me at taavi.ruebenhagen@gmail.com.<br/><br/>
         </SmallParagraph>
     </div>
-</Page>
+</Section>

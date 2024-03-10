@@ -1,7 +1,7 @@
 <script lang="ts">
-    import { page } from '$app/stores';
+    import { Section } from '$app/stores';
     import '$style';
-    import { Page } from "$tavy";
+    import { Section } from "$tavy";
     import { TextField } from '$tavy/industrial';
 
     const onPasswordSubmitted = (input: string) => {
@@ -11,7 +11,7 @@
 </script>
 
 
-<Page>
+<Section>
     {#if $page.url.href.split('/').pop() == 'failed'}
         <div class="h-8 flex items-start text-error">
             Login failed.
@@ -25,4 +25,4 @@
     {#if $page.url.href.split('/').pop() == 'failed'}
         <div class="h-8"></div>
     {/if}
-</Page>
+</Section>

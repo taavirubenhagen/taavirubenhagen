@@ -3,10 +3,8 @@
     import { globalScrollY } from "$state";
     import "$style";
     import {
-        RawButton,
-    } from '$tavy';
-    import {
         SmallHeading,
+        RawButton,
         InlineButton,
     } from '$tavy';
 

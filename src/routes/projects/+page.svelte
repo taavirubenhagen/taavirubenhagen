@@ -1,6 +1,6 @@
 <script lang="ts">
     import '$style';
-    import { Icon, Page } from '$tavy';
+    import { Icon, Section } from '$tavy';
     import { Button, NestedButton, ButtonSeperator } from '$tavy/industrial';
 
     let windowHeight: number;
@@ -10,7 +10,7 @@
 <svelte:window bind:innerHeight={windowHeight} />
 
 
-<Page>
+<Section>
     <Button openInNew onClick={() => window.location.href = '/drafts/hoffmanns-schuppen'}>Hoffmann's Schuppen</Button>
     <Button openInNew borderClass='border-t-0' onClick={() => window.location.href = 'https://fenni.me'}>FENNIs Website</Button>
     <Button next borderClass='border-t-0' onClick={() => window.location.href = '/drafts/website'}>
@@ -36,4 +36,4 @@
             <Icon name='apple-mac'/>
         </Button>
     </NestedButton>
-</Page>
+</Section>

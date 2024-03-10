@@ -1,12 +1,12 @@
 <script lang="ts">
     import "$style";
-    import { LargeHeading, SmallHeading, Page } from "$tavy";
+    import { LargeHeading, SmallHeading, Section } from "$tavy";
 </script>
 
 
 
 
-<Page>
+<Section>
     <!--TODO: 18-->
     <LargeHeading>
         Minimal Counter - Privacy Policy
@@ -26,4 +26,4 @@
     <br/>
     <br/>
     <br/>
-</Page>
+</Section>

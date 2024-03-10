@@ -1,11 +1,11 @@
 <script lang="ts">
     import '$style';
-    import { Page } from "$tavy";
+    import { Section } from "$tavy";
     import { Button, ButtonSeperator } from '$tavy/industrial';
 </script>
 
 
-<Page>
+<Section>
     <Button next onClick={() => window.location.href = '/drafts/website'}>
         Website (Unfinished)
     </Button>
@@ -21,4 +21,4 @@
     </Button>
     <ButtonSeperator/>
     <Button next onClick={() => window.location.href = '/admin'}>Admin</Button>
-</Page>
+</Section>

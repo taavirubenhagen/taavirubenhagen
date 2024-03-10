@@ -13,9 +13,9 @@ import RawButton from '$tavy/general/buttons/RawButton.svelte';
 import InlineButton from '$tavy/general/buttons/InlineButton.svelte';
 import Button from '$tavy/general/buttons/Button.svelte';
 
-import RouteIndicator from '$tavy/general/templates/RouteIndicator.svelte';
-import Section from '$tavy/general/templates/Section.svelte';
-import Page from '$tavy/general/templates/Page.svelte';
+import ShowcaseCarouselItem from '$tavy/general/templates/sections/ShowcaseCarouselItem.svelte';
+import ShowcaseCarousel from '$tavy/general/templates/sections/ShowcaseCarousel.svelte';
+import Section from '$tavy/general/templates/pages/Section.svelte';
 
 import Cursor from '$tavy/general/identity/Cursor.svelte';
 
@@ -27,6 +27,6 @@ export {
     SmallHeading, MediumHeading, LargeHeading,
     Icon,
     RawButton, InlineButton, Button,
-    RouteIndicator, Section, Page,
+    ShowcaseCarouselItem, ShowcaseCarousel, Section,
     Cursor,
 };

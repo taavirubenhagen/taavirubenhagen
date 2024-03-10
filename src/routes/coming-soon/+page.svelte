@@ -1,11 +1,11 @@
 <script lang="ts">
   import "$style";
-    import { LargeHeading, Page } from '$tavy';
+    import { LargeHeading, Section } from '$tavy';
 </script>
 
 
 
 
-<Page>
+<Section>
     <LargeHeading>Coming soon, stay tuned 👀</LargeHeading>
-</Page>
+</Section>

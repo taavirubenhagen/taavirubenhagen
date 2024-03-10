@@ -9,7 +9,7 @@
         ShowcaseCarouselItem,
         ShowcaseCarousel,
         Section,
-    } from "$tavy/website";
+    } from "$tavy";
 
 
     let windowWidth: number;

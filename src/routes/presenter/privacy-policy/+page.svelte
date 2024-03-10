@@ -1,13 +1,13 @@
 <script lang="ts">
     import "$style";
-    import { LargeHeading, SmallHeading, Page } from "$tavy";
+    import { LargeHeading, SmallHeading, Section } from "$tavy";
 </script>
 
 
 
 
 <div class='p-8 sm:p-0'>
-    <Page>
+    <Section>
         <!--TODO: 18-->
         <LargeHeading>
             Presentation Master 2 (mobile app and desktop app) - Privacy Policy
@@ -96,5 +96,5 @@
         <br/>
         <br/>
         <br/>
-    </Page>
+    </Section>
 </div>

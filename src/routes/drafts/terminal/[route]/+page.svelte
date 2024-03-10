@@ -1,6 +1,6 @@
 <script lang="ts">
     import DeviceDetector from "svelte-device-detector";
-    import { page } from '$app/stores';
+    import { Section } from '$app/stores';
     import { buttonHover } from "$state";
     import "$style";
     import { RawButton } from '$tavy';

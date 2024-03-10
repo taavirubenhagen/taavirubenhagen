@@ -2,7 +2,7 @@
     import { page, navigating } from '$app/stores';
     import { cursorPosition, globalScrollY } from "$state";
     import "$style";
-    import { Page, LargeHeading } from "$tavy";
+    import { Section, LargeHeading } from "$tavy";
     import { Cursor } from '$tavy';
     import { LegalFooter } from "$tavy/industrial";
 
@@ -32,11 +32,11 @@
 >
     <Cursor/>
     {#if $navigating}
-        <Page>
+        <Section>
             <LargeHeading>
                 Loading ↺
             </LargeHeading>
-        </Page>
+        </Section>
     {:else}
         <!-- TODO: Add standard scrollbar effects -->
         <slot/>

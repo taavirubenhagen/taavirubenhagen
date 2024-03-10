@@ -2,7 +2,7 @@
     import "$style";
     import {
         SmallParagraph,
-        Page,
+        Section,
     } from '$tavy';
     import {
         Button,
@@ -15,6 +15,6 @@
 <svelte:window bind:innerHeight={windowHeight} />
 
 
-<Page>
+<Section>
     No product yet
-</Page>
+</Section>

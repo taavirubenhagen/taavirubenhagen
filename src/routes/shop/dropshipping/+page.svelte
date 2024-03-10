@@ -2,7 +2,7 @@
     import "$style";
     import {
         SmallParagraph,
-        Page,
+        Section,
     } from '$tavy';
     import {
         Button,
@@ -15,7 +15,7 @@
 <svelte:window bind:innerHeight={windowHeight} />
 
 
-<Page>
+<Section>
     <Button openInNew onClick={() => window.location.href = "https://amzn.eu/d/gZVxnZl"}>
         Stone Key Hider
     </Button>
@@ -30,4 +30,4 @@
             <!--As an Amazon Associate I [will] earn from qualifying purchases.-->
         </SmallParagraph>
     </div>
-</Page>
+</Section>
