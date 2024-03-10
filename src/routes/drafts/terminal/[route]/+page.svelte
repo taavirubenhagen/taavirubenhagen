@@ -3,7 +3,7 @@
     import { page } from '$app/stores';
     import { buttonHover } from "$state";
     import "$style";
-    import { Button } from '$tavy/minimal';
+    import { RawButton } from '$tavy';
     import Menu from "./Menu.svelte";
 
     let windowHeight: number;
@@ -74,9 +74,9 @@
     </DeviceDetector>
     <div class='h-screen p-4 bg-black selection:bg-neutral-300 text-base text-white selection:text-black font-mono'>
         <div class='text-neutral-500 font-bold'>
-            <Button onClick={() => route = 'home'}>
+            <RawButton onClick={() => route = 'home'}>
                 Taavi Rübenhagen
-            </Button>
+            </RawButton>
             > {route[0].toUpperCase() + route.slice(1)}
         </div>
         <br/>
@@ -86,9 +86,9 @@
         {#if route === 'about'}
             <br/><br/>
             I'm an 18-year-old self-taught entrepreneur, frontend developer and UI/UX designer. My
-            <Button onClick={() => route = 'projects'}>
+            <RawButton onClick={() => route = 'projects'}>
                 projects
-            </Button>
+            </RawButton>
             [P] include multiple Android and iOS apps and websites.
             I'm also reselling apps and currently starting an affiliate marketing business.
         {:else if route === 'contact'}
@@ -108,9 +108,9 @@
             <br/><br/>
             The page was either not found or you will be automatically redirected soon.
             <br/>
-            <Button onClick={() => route = 'home'}>
+            <RawButton onClick={() => route = 'home'}>
                 Return home
-            </Button>
+            </RawButton>
             [X]
         {/if}
     </div>

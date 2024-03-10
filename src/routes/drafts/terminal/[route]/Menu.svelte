@@ -1,6 +1,6 @@
 <script lang="ts">
     import "$style";
-    import { Button } from '$tavy/minimal';
+    import { RawButton } from '$tavy';
 
 
     export let routes: string[][];
@@ -16,8 +16,8 @@
 <br/>
 {#each routes as r}
     <br/>
-    <Button onClick={() => routeChangingFunction(r)}>
+    <RawButton onClick={() => routeChangingFunction(r)}>
         {viewedRoute(r[0])}
-    </Button>
+    </RawButton>
     [{r[1].toUpperCase()}]
 {/each}
