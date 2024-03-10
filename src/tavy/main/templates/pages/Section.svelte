@@ -2,9 +2,14 @@
     import '$style';
 
     export let className = '';
+
+    let windowHeight: number;
 </script>
 
 
-<div class={className} style='min-height: 100%;'>
+<svelte:window bind:innerHeight={windowHeight}/>
+
+
+<div class={className} style='min-height: {windowHeight}px;'>
     <slot/>
 </div>

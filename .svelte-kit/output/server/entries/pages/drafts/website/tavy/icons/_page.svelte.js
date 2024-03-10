@@ -26,7 +26,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
           return `tavy icons`;
         }
       })}
-        <a download href="${"https://raw.githubusercontent.com/taavirubenhagen/taavirubenhagen/main/src/tavy/icons/" + escape(tavyVersion, true) + "/tavy-icons-" + escape(tavyVersion, true) + ".zip"}">${validate_component(Button, "Button").$$render(
+        <a download href="${"/tavy/icons/" + escape(tavyVersion, true) + "/tavy-icons-" + escape(tavyVersion, true) + ".svg"}">${validate_component(Button, "Button").$$render(
         $$result,
         {
           onClick: () => {
