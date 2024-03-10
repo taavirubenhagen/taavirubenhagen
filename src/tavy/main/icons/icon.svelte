@@ -9,7 +9,7 @@
     export let size = 16;
     export let textClass = ""   // TODO: R
 
-    const src = `./${tavyVersion}/${name}.svg`;
+    const src = `/tavy/icons/${tavyVersion}/svg/${name}.svg`;
     //`https://raw.githubusercontent.com/taavirubenhagen/taavirubenhagen/main/tavy/main/icons/${tavyVersion}/${name}.svg`;
 </script>
 
