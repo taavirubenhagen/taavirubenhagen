@@ -1,4 +1,4 @@
-import { c as create_ssr_component, v as validate_component, i as is_promise, n as noop, h as each } from "../../../../../../chunks/index3.js";
+import { c as create_ssr_component, v as validate_component, e as escape, i as is_promise, n as noop, h as each } from "../../../../../../chunks/index3.js";
 import { t as tavyVersion } from "../../../../../../chunks/index4.js";
 import { M as MediumHeading } from "../../../../../../chunks/MediumHeading.js";
 import { I as Icon } from "../../../../../../chunks/icon.js";
@@ -26,7 +26,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
           return `tavy icons`;
         }
       })}
-        <a download href="https://raw.githubusercontent.com/taavirubenhagen/taavirubenhagen/main/src/tavy/icons/2024-03/tavy-icons-2024-03.zip">${validate_component(Button, "Button").$$render(
+        <a download href="${"https://raw.githubusercontent.com/taavirubenhagen/taavirubenhagen/main/src/tavy/icons/" + escape(tavyVersion, true) + "/tavy-icons-" + escape(tavyVersion, true) + ".zip"}">${validate_component(Button, "Button").$$render(
         $$result,
         {
           onClick: () => {

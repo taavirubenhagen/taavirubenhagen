@@ -5,6 +5,6 @@
 </script>
 
 
-<div class={className} style='min-height: 100vh;'>
+<div class={className} style='min-height: 100%;'>
     <slot/>
 </div>
