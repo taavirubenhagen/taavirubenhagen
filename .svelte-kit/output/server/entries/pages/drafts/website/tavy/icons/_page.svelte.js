@@ -2,7 +2,7 @@ import { c as create_ssr_component, v as validate_component, e as escape, i as i
 import { t as tavyVersion } from "../../../../../../chunks/index4.js";
 import { M as MediumHeading } from "../../../../../../chunks/MediumHeading.js";
 import { I as Icon } from "../../../../../../chunks/icon.js";
-import { B as Button } from "../../../../../../chunks/Button3.js";
+import { B as Button } from "../../../../../../chunks/Button2.js";
 import { S as Section } from "../../../../../../chunks/Section.js";
 import "ua-parser-js";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -26,7 +26,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
           return `tavy icons`;
         }
       })}
-        <a download href="${"/tavy/icons/" + escape(tavyVersion, true) + "/tavy-icons-" + escape(tavyVersion, true) + ".svg"}">${validate_component(Button, "Button").$$render(
+        <a download href="${"/tavy/icons/" + escape(tavyVersion, true) + "/tavy-icons-" + escape(tavyVersion, true) + ".zip"}">${validate_component(Button, "Button").$$render(
         $$result,
         {
           onClick: () => {

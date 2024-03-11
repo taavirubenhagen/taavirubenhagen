@@ -34,7 +34,7 @@ const TextField = create_ssr_component(($$result, $$props, $$bindings, slots) =>
         {},
         {
           default: () => {
-            return `${validate_component(Icon, "Icon").$$render($$result, { name: "arrow-right" }, {}, {})}`;
+            return `${validate_component(Icon, "Icon").$$render($$result, { name: "arrow-forward" }, {}, {})}`;
           }
         }
       )}</div>`;

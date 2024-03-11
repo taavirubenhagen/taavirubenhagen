@@ -46,7 +46,8 @@
       "_index4.js",
       "_SmallHeading.js",
       "_RawButton.js",
-      "_InlineButton.js"
+      "_InlineButton.js",
+      "_Button2.js"
     ]
   },
   "src/routes/+page.svelte": {
@@ -209,7 +210,7 @@
       "_index4.js",
       "_MediumHeading.js",
       "_Section.js",
-      "_Button2.js"
+      "_Button3.js"
     ]
   },
   "src/routes/drafts/hoffmanns-schuppen/investor-relations/+page.svelte": {
@@ -222,7 +223,7 @@
       "_SmallParagraph.js",
       "_MediumHeading.js",
       "_Section.js",
-      "_Button2.js"
+      "_Button3.js"
     ]
   },
   "src/routes/drafts/hoffmanns-schuppen/mach-mit/+page.svelte": {
@@ -235,7 +236,7 @@
       "_Section.js",
       "_SmallParagraph.js",
       "_MediumHeading.js",
-      "_Button2.js"
+      "_Button3.js"
     ]
   },
   "src/routes/drafts/hoffmanns-schuppen/produkte/+page.svelte": {
@@ -290,7 +291,7 @@
     "imports": [
       "_index3.js",
       "_index4.js",
-      "_Button3.js",
+      "_Button2.js",
       "_Section.js"
     ]
   },
@@ -303,7 +304,7 @@
       "_index4.js",
       "_MediumHeading.js",
       "_icon.js",
-      "_Button3.js",
+      "_Button2.js",
       "_Section.js"
     ]
   },
@@ -488,7 +489,7 @@
   "_index4.js": {
     "file": "chunks/index4.js",
     "css": [
-      "_app/immutable/assets/index.2e2fd2ed.css"
+      "_app/immutable/assets/index.17b621cd.css"
     ]
   },
   "_LargeHeading.js": {
@@ -559,6 +560,16 @@
       "_RawButton.js"
     ]
   },
+  "_Button2.js": {
+    "file": "chunks/Button2.js",
+    "imports": [
+      "_index3.js",
+      "_index4.js",
+      "_SmallParagraph.js",
+      "_icon.js",
+      "_RawButton.js"
+    ]
+  },
   "_SmallParagraph.js": {
     "file": "chunks/SmallParagraph.js",
     "imports": [
@@ -579,16 +590,6 @@
     "imports": [
       "_index3.js",
       "_index4.js"
-    ]
-  },
-  "_Button2.js": {
-    "file": "chunks/Button2.js",
-    "imports": [
-      "_index3.js",
-      "_index4.js",
-      "_SmallParagraph.js",
-      "_icon.js",
-      "_RawButton.js"
     ]
   },
   "_Button3.js": {

@@ -1,4 +1,4 @@
-import { c as create_ssr_component, v as validate_component, f as add_attribute, e as escape, h as each } from "../../../../chunks/index3.js";
+import { c as create_ssr_component, v as validate_component, e as escape, f as add_attribute, h as each } from "../../../../chunks/index3.js";
 import "../../../../chunks/index4.js";
 import { S as SmallParagraph } from "../../../../chunks/SmallParagraph.js";
 import { S as SmallHeading } from "../../../../chunks/SmallHeading.js";
@@ -7,25 +7,29 @@ import { R as RawButton } from "../../../../chunks/RawButton.js";
 import "ua-parser-js";
 import { S as Section } from "../../../../chunks/Section.js";
 const ShowcaseCarouselItem = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let { website = false } = $$props;
+  let { external = false } = $$props;
   let { title = "" } = $$props;
-  let { src = "" } = $$props;
   let { target = "" } = $$props;
+  let { src = "" } = $$props;
   if (title === "") {
     title = "Showcase Item";
   }
   if (target === "") {
     target = src;
   }
+  if (target === "") {
+    external = false;
+  }
+  console.log(src);
   let windowHeight;
-  if ($$props.website === void 0 && $$bindings.website && website !== void 0)
-    $$bindings.website(website);
+  if ($$props.external === void 0 && $$bindings.external && external !== void 0)
+    $$bindings.external(external);
   if ($$props.title === void 0 && $$bindings.title && title !== void 0)
     $$bindings.title(title);
-  if ($$props.src === void 0 && $$bindings.src && src !== void 0)
-    $$bindings.src(src);
   if ($$props.target === void 0 && $$bindings.target && target !== void 0)
     $$bindings.target(target);
+  if ($$props.src === void 0 && $$bindings.src && src !== void 0)
+    $$bindings.src(src);
   return `
 
 
@@ -39,31 +43,21 @@ ${validate_component(RawButton, "RawButton").$$render(
     {},
     {
       default: () => {
-        return `<div class="relative shadow rounded-2xl h-32 aspect-video normal-case">${website ? `<iframe${add_attribute("title", title, 0)} src="${"https://" + escape(src, true)}" height="${escape(windowHeight, true) + "px"}"${add_attribute("frameborder", 0, 0)} class="origin-top-left absolute top-0 pointer-events-none rounded-full aspect-video brightness-75" style="${"transform: scale(" + escape(128 / windowHeight, true) + "); border-radius: " + escape(1 * windowHeight / 128, true) + "rem;"}"></iframe>` : `${src !== "" ? `<img${add_attribute("src", src, 0)}${add_attribute("alt", title, 0)}>` : `<div class="h-full p-4 center_col text-center">${validate_component(SmallParagraph, "SmallParagraph").$$render($$result, {}, {}, {
-          default: () => {
-            return `${escape(title)}`;
-          }
-        })}</div>`}`}
-        ${target !== "" ? `<div class="absolute bottom-4 w-full center_row">${target[0] === "/" ? `${validate_component(Icon, "Icon").$$render(
+        return `<div class="${"relative shadow rounded-2xl h-32 " + escape(external ? "" : "bg-black", true) + " aspect-video normal-case"}">${external ? `<iframe${add_attribute("title", title, 0)} src="${"https://" + escape(src, true)}" height="${escape(windowHeight, true) + "px"}"${add_attribute("frameborder", 0, 0)} class="origin-top-left absolute top-0 pointer-events-none rounded-full aspect-video brightness-75" style="${"transform: scale(" + escape(128 / windowHeight, true) + "); border-radius: " + escape(1 * windowHeight / 128, true) + "rem;"}"></iframe>` : `${src !== "" ? `<img${add_attribute("src", src, 0)}${add_attribute("alt", title, 0)}>` : ``}`}
+        <div class="${"absolute " + escape(external ? "bottom-4" : "top-0 h-full", true) + " w-full center_row text-white"}">${external ? `${validate_component(Icon, "Icon").$$render(
           $$result,
           {
-            inverted: src !== "",
-            size: 20,
-            name: "arrow-right"
-          },
-          {},
-          {}
-        )}` : `${validate_component(Icon, "Icon").$$render(
-          $$result,
-          {
-            inverted: src !== "",
+            inverted: true,
             size: 20,
             name: "open-in-new"
           },
           {},
           {}
-        )}`}</div>` : ``}
-        </div>`;
+        )}` : `${validate_component(SmallParagraph, "SmallParagraph").$$render($$result, {}, {}, {
+          default: () => {
+            return `${escape(title)}`;
+          }
+        })}`}</div></div>`;
       }
     }
   )}`;
@@ -137,7 +131,7 @@ ${validate_component(Section, "Section").$$render($$result, { className: "p-8 pt
           return `${validate_component(ShowcaseCarouselItem, "ShowcaseCarouselItem").$$render(
             $$result,
             {
-              website: true,
+              external: true,
               src: "rubenhagen.com/drafts/hoffmanns-schuppen",
               title: "hoffmanns-schuppen.com"
             },
@@ -147,7 +141,7 @@ ${validate_component(Section, "Section").$$render($$result, { className: "p-8 pt
         ${validate_component(ShowcaseCarouselItem, "ShowcaseCarouselItem").$$render(
             $$result,
             {
-              website: true,
+              external: true,
               src: "fenni.me",
               title: "fenni.me"
             },
@@ -157,7 +151,7 @@ ${validate_component(Section, "Section").$$render($$result, { className: "p-8 pt
         ${validate_component(ShowcaseCarouselItem, "ShowcaseCarouselItem").$$render(
             $$result,
             {
-              website: true,
+              external: true,
               src: "rubenhagen.com",
               title: "rubenhagen.com"
             },
@@ -186,7 +180,7 @@ ${validate_component(Section, "Section").$$render($$result, { className: "p-8 pt
           return `${validate_component(ShowcaseCarouselItem, "ShowcaseCarouselItem").$$render(
             $$result,
             {
-              target: "/drafts/website/tavy",
+              target: "rubenhagen.com/drafts/website/tavy",
               title: "Tavy Design System"
             },
             {},
@@ -201,17 +195,17 @@ ${validate_component(Section, "Section").$$render($$result, { className: "p-8 pt
             {},
             {}
           )}
-        ${validate_component(ShowcaseCarouselItem, "ShowcaseCarouselItem").$$render($$result, { src: "", title: "PM2 Design System" }, {}, {})}`;
+        ${validate_component(ShowcaseCarouselItem, "ShowcaseCarouselItem").$$render($$result, { title: "PM2 Design System" }, {}, {})}`;
         }
       })}
     ${validate_component(ShowcaseCarousel, "ShowcaseCarousel").$$render($$result, { title: "other businesses" }, {}, {
         default: () => {
-          return `${validate_component(ShowcaseCarouselItem, "ShowcaseCarouselItem").$$render($$result, { src: "", title: "Hoffmann's Schuppen" }, {}, {})}
-        ${validate_component(ShowcaseCarouselItem, "ShowcaseCarouselItem").$$render($$result, { src: "", title: "Affiliate Marketing" }, {}, {})}
-        ${validate_component(ShowcaseCarouselItem, "ShowcaseCarouselItem").$$render($$result, { src: "", title: "Content Creation" }, {}, {})}`;
+          return `${validate_component(ShowcaseCarouselItem, "ShowcaseCarouselItem").$$render($$result, { title: "Hoffmann's Schuppen" }, {}, {})}
+        ${validate_component(ShowcaseCarouselItem, "ShowcaseCarouselItem").$$render($$result, { title: "Affiliate Marketing" }, {}, {})}
+        ${validate_component(ShowcaseCarouselItem, "ShowcaseCarouselItem").$$render($$result, { title: "Content Creation" }, {}, {})}`;
         }
       })}
-    <div class="rounded-2xl w-full h-16 primary flex justify-evenly items-center">${each(["instagram", "tiktok", "youtube", "github"], (e) => {
+    <div class="rounded-2xl w-full h-16 primary flex justify-evenly items-center">${each(["instagram", "tiktok", "youtube", "not-found"], (e) => {
         return `${validate_component(Icon, "Icon").$$render($$result, { inverted: true, name: e, size: 28 }, {}, {})}`;
       })}</div>
     <div class="h-16"></div>`;

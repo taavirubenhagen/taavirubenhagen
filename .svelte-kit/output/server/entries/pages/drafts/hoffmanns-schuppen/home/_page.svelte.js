@@ -3,7 +3,7 @@ import "../../../../../chunks/index4.js";
 import { M as MediumHeading } from "../../../../../chunks/MediumHeading.js";
 import { S as Section } from "../../../../../chunks/Section.js";
 import "ua-parser-js";
-import { B as Button } from "../../../../../chunks/Button2.js";
+import { B as Button } from "../../../../../chunks/Button3.js";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<div style="font-family: &quot;Roboto Serif&quot;">${validate_component(Section, "Section").$$render($$result, { className: "bg-green-900 text-white" }, {}, {
     default: () => {

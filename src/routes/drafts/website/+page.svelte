@@ -4,17 +4,11 @@
         SmallParagraph,
         SmallHeading,
         Icon,
-    } from "$tavy";
-    import {
+        RawButton,
         ShowcaseCarouselItem,
         ShowcaseCarousel,
         Section,
     } from "$tavy";
-    import {
-        InlineButton,
-        TertiaryButton,
-        Button,
-    } from '$tavy/industrial';
 
 
     let windowWidth: number;
@@ -109,7 +103,10 @@
     </ShowcaseCarousel>
     <div class='rounded-2xl w-full h-16 primary flex justify-evenly items-center'>
         {#each ['instagram', 'tiktok', 'youtube', 'not-found'] as e}
-            <Icon inverted name={e} size={28}/>
+        <!--TODO: Make IconButton component-->
+            <RawButton onClick={() => alert('Coming soon!')}>
+                <Icon inverted name={e} size={28}/>
+            </RawButton>
         {/each}
     </div>
     <div class='h-16'></div>

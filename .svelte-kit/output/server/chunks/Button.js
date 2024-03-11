@@ -40,7 +40,7 @@ const Button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
             nested || openInNew || next || download ? "justify-between" : "justify-center",
             true
           ) + " items-center gap-2"}">${slots.default ? slots.default({}) : ``}
-                ${nested ? `${validate_component(Icon, "Icon").$$render($$result, { name: "plus-circle" }, {}, {})}` : `${openInNew ? `${validate_component(Icon, "Icon").$$render($$result, { name: "open-new-window" }, {}, {})}` : `${next ? `${validate_component(Icon, "Icon").$$render($$result, { name: "arrow-right" }, {}, {})}` : `${download ? `${validate_component(Icon, "Icon").$$render($$result, { name: "download" }, {}, {})}` : ``}`}`}`}</div>`;
+                ${nested ? `${validate_component(Icon, "Icon").$$render($$result, { name: "plus-circle" }, {}, {})}` : `${openInNew ? `${validate_component(Icon, "Icon").$$render($$result, { name: "open-in-new" }, {}, {})}` : `${next ? `${validate_component(Icon, "Icon").$$render($$result, { name: "arrow-forward" }, {}, {})}` : `${download ? `${validate_component(Icon, "Icon").$$render($$result, { name: "download" }, {}, {})}` : ``}`}`}`}</div>`;
         }
       })}</div>`;
     }

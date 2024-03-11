@@ -23,7 +23,7 @@ ${validate_component(Section, "Section").$$render(
           true
         ) + "px;"}">${each(
           [
-            ["open-new-window", "https://thezukunft.de/"],
+            ["open-in-new", "https://thezukunft.de/"],
             ["home", "/"],
             ["instagram", "https://www.instagram.com/taavirubenhagen"]
           ],

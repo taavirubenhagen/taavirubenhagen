@@ -8,6 +8,7 @@
         InlineButton,
         Button,
     } from '$tavy';
+  import SmallParagraph from '$tavy/main/text/paragraphs/SmallParagraph.svelte';
 
 
     let windowHeight: number;
@@ -66,7 +67,6 @@
             ['services', '/drafts/website'],
             ['shop', '/shop/dropshipping'],
             ['about', '/drafts/website'],
-            ['contact', '/drafts/website/contact'],
         ] as e}
             <RawButton onClick={() => window.location.href = e[1]}>
                 <SmallHeading>{e[0]}</SmallHeading>
@@ -74,18 +74,14 @@
         {/each}
     </div>
     <slot/>
-    <footer class='w-full invert p-8 background grid grid-cols-3 gap-4'>
-        <Button onClick={() => {}}>
-            <a href='mailto:taavi.ruebenhagen@gmail.com' class='w-full'>
-                e-mail me
-            </a>
+    <footer class='p-16 primary flex flex-col gap-16 normal-case'>
+        <Button inverted onClick={() => window.location.href = 'https://instagram.com/taavirubenhagen'}>
+            say hello
         </Button>
-        <Button onClick={() => window.location.href = 'https://instagram.com/taavirubenhagen'}>
-            dm me
-        </Button>
-        <!--TODO-->
-        <Button onClick={() => window.location.href = '/drafts/website/legal/imprint'}>
-            imprint
-        </Button>
+        <SmallParagraph>
+            Taavi Rübenhagen<br/>
+            Pothof 9d<br/>
+            38122 Braunschweig, Germany<br/>
+        </SmallParagraph>
     </footer>
 </main>

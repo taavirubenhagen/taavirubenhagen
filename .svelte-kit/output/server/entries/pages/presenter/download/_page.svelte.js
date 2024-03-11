@@ -20,7 +20,7 @@ const InlineButton = create_ssr_component(($$result, $$props, $$bindings, slots)
   return `${validate_component(RawButton, "RawButton").$$render($$result, { onClick }, {}, {
     default: () => {
       return `<div class="inline gap-2 underline underline-offset-4">${slots.default ? slots.default({}) : ``}
-        ${openInNew ? `${validate_component(Icon, "Icon").$$render($$result, { inverted, name: "open-new-window" }, {}, {})}` : ``}</div>`;
+        ${openInNew ? `${validate_component(Icon, "Icon").$$render($$result, { inverted, name: "open-in-new" }, {}, {})}` : ``}</div>`;
     }
   })}`;
 });

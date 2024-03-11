@@ -5,6 +5,7 @@ import "../../../../chunks/index4.js";
 import { S as SmallHeading } from "../../../../chunks/SmallHeading.js";
 import { R as RawButton } from "../../../../chunks/RawButton.js";
 import { I as InlineButton } from "../../../../chunks/InlineButton.js";
+import { B as Button } from "../../../../chunks/Button2.js";
 import "ua-parser-js";
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $page, $$unsubscribe_page;
@@ -85,9 +86,49 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         }
       )}`;
     }
+  )}</div>
+    ${slots.default ? slots.default({}) : ``}
+    <footer class="w-full invert p-8 background grid grid-cols-3 gap-4">${validate_component(Button, "Button").$$render(
+    $$result,
+    {
+      onClick: () => {
+      }
+    },
+    {},
+    {
+      default: () => {
+        return `<a href="mailto:taavi.ruebenhagen@gmail.com" class="w-full">e-mail me
+            </a>`;
+      }
+    }
   )}
-        </div>
-    ${slots.default ? slots.default({}) : ``}</main>`;
+        ${validate_component(Button, "Button").$$render(
+    $$result,
+    {
+      onClick: () => window.location.href = "https://instagram.com/taavirubenhagen"
+    },
+    {},
+    {
+      default: () => {
+        return `dm me
+        `;
+      }
+    }
+  )}
+        
+        ${validate_component(Button, "Button").$$render(
+    $$result,
+    {
+      onClick: () => window.location.href = "/drafts/website/legal/imprint"
+    },
+    {},
+    {
+      default: () => {
+        return `imprint
+        `;
+      }
+    }
+  )}</footer></main>`;
 });
 export {
   Layout as default

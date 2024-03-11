@@ -26,8 +26,8 @@
            />
        </div>
        <RawButton onClick={() => onSubmit(input)}>
-            <div class='rounded-r-lg bg-green-900 w-12 h-12 center_row'>
-                <Icon name="arrow-forward" textClass='text-white'/>
+            <div class='rounded-r-lg bg-green-900 w-12 h-12 pr-1 center_row'>
+                <Icon inverted name="arrow-forward"/>
             </div>
        </RawButton>
     </div>

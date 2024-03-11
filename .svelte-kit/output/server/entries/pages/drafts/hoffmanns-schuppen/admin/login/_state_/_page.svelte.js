@@ -30,7 +30,7 @@ const TextField = create_ssr_component(($$result, $$props, $$bindings, slots) =>
           return `<div class="rounded-r-lg bg-green-900 w-12 h-12 center_row">${validate_component(Icon, "Icon").$$render(
             $$result,
             {
-              name: "arrow-right",
+              name: "arrow-forward",
               textClass: "text-white"
             },
             {},
