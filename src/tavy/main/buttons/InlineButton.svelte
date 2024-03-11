@@ -16,7 +16,7 @@
             <slot/>
         </SmallParagraph>
         {#if openInNew}
-            <Icon inverted={inverted} name="open-new-window"/>
+            <Icon inverted={inverted} name="open-in-new"/>
         {/if}
     </div>
 </RawButton>

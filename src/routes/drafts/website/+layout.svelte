@@ -6,6 +6,7 @@
         SmallHeading,
         RawButton,
         InlineButton,
+        Button,
     } from '$tavy';
 
 
@@ -71,15 +72,20 @@
                 <SmallHeading>{e[0]}</SmallHeading>
             </RawButton>
         {/each}
-        <!--<div
-            class="absolute bottom-8 flex justify-between"
-            style='width: calc(100% - 4rem);'
-        >
-            <InlineButton onClick={() => {}}>Instagram</InlineButton>
-            <InlineButton onClick={() => {}}>TikTok</InlineButton>
-            <InlineButton onClick={() => {}}>YouTube</InlineButton>
-            <InlineButton onClick={() => {}}>GitHub</InlineButton>
-        </div>-->
     </div>
     <slot/>
+    <footer class='w-full invert p-8 background grid grid-cols-3 gap-4'>
+        <Button onClick={() => {}}>
+            <a href='mailto:taavi.ruebenhagen@gmail.com' class='w-full'>
+                e-mail me
+            </a>
+        </Button>
+        <Button onClick={() => window.location.href = 'https://instagram.com/taavirubenhagen'}>
+            dm me
+        </Button>
+        <!--TODO-->
+        <Button onClick={() => window.location.href = '/drafts/website/legal/imprint'}>
+            imprint
+        </Button>
+    </footer>
 </main>

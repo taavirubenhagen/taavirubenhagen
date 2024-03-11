@@ -33,9 +33,9 @@
                 {#if nested}
                     <Icon name="plus-circle"/>
                 {:else if openInNew}
-                    <Icon name="open-new-window"/>
+                    <Icon name="open-in-new"/>
                 {:else if next}
-                    <Icon name="arrow-right"/>
+                    <Icon name="arrow-forward"/>
                 {:else if download}
                     <Icon name="download"/>
                 {/if}

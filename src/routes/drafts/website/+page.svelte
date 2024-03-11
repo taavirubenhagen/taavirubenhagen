@@ -68,17 +68,17 @@
     </ShowcaseCarousel>
     <ShowcaseCarousel title={'websites'}>
         <ShowcaseCarouselItem
-            website
+            external
             src='rubenhagen.com/drafts/hoffmanns-schuppen'
             title='hoffmanns-schuppen.com'
         />
         <ShowcaseCarouselItem
-            website
+            external
             src='fenni.me'
             title='fenni.me'
         />
         <ShowcaseCarouselItem
-            website
+            external
             src='rubenhagen.com'
             title='rubenhagen.com'
         />
@@ -92,17 +92,23 @@
         <ShowcaseCarouselItem title='JuPa Campaign'/>
     </ShowcaseCarousel>
     <ShowcaseCarousel title={'design system'}>
-        <ShowcaseCarouselItem target='/drafts/website/tavy' title='Tavy Design System'/>
-        <ShowcaseCarouselItem target='rubenhagen.com/drafts/website/tavy/icons' title='Tavy Icons'/>
-        <ShowcaseCarouselItem src='' title='PM2 Design System'/>
+        <ShowcaseCarouselItem
+            target='rubenhagen.com/drafts/website/tavy'
+            title='Tavy Design System'
+        />
+        <ShowcaseCarouselItem
+            target='rubenhagen.com/drafts/website/tavy/icons'
+            title='Tavy Icons'
+        />
+        <ShowcaseCarouselItem title='PM2 Design System'/>
     </ShowcaseCarousel>
     <ShowcaseCarousel title={'other businesses'}>
-        <ShowcaseCarouselItem src='' title={'Hoffmann\'s Schuppen'}/>
-        <ShowcaseCarouselItem src='' title='Affiliate Marketing'/>
-        <ShowcaseCarouselItem src='' title='Content Creation'/>
+        <ShowcaseCarouselItem title={'Hoffmann\'s Schuppen'}/>
+        <ShowcaseCarouselItem title='Affiliate Marketing'/>
+        <ShowcaseCarouselItem title='Content Creation'/>
     </ShowcaseCarousel>
     <div class='rounded-2xl w-full h-16 primary flex justify-evenly items-center'>
-        {#each ['instagram', 'tiktok', 'youtube', 'github'] as e}
+        {#each ['instagram', 'tiktok', 'youtube', 'not-found'] as e}
             <Icon inverted name={e} size={28}/>
         {/each}
     </div>

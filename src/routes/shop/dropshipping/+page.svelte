@@ -15,7 +15,7 @@
 <svelte:window bind:innerHeight={windowHeight} />
 
 
-<Section>
+<Section className='p-8 flex flex-col justify-center items-stretch'>
     <Button openInNew onClick={() => window.location.href = "https://amzn.eu/d/gZVxnZl"}>
         Stone Key Hider
     </Button>

@@ -10,7 +10,7 @@
 <svelte:window bind:innerHeight={windowHeight} />
 
 
-<Section>
+<Section className='p-8 flex flex-col justify-center items-stretch'>
     <Button openInNew onClick={() => window.location.href = '/drafts/hoffmanns-schuppen'}>Hoffmann's Schuppen</Button>
     <Button openInNew borderClass='border-t-0' onClick={() => window.location.href = 'https://fenni.me'}>FENNIs Website</Button>
     <Button next borderClass='border-t-0' onClick={() => window.location.href = '/drafts/website'}>
@@ -19,7 +19,7 @@
     <ButtonSeperator/>
     <NestedButton title='Presenter' buttonCount={3}>
         <Button onClick={() => window.location.href = 'https://play.google.com/store/apps/details?id=tavy.presenter.presentation_master_2'}>
-            <Icon name='open-new-window'/>
+            <Icon name='open-in-new'/>
         </Button>
         <Button borderClass='border-l-0' onClick={() => alert('Coming soon!')}>
             <Icon name='apple-mac'/>
@@ -30,7 +30,7 @@
     </NestedButton>
     <NestedButton borderClass='border-t-0' title='Counter'>
         <Button borderClass='border-t-0 w-full' onClick={() => alert('Coming soon!')}>
-            <Icon name='open-new-window'/>
+            <Icon name='open-in-new'/>
         </Button>
         <Button borderClass='border-l-0 border-t-0 w-full' onClick={() => alert('Coming soon!')}>
             <Icon name='apple-mac'/>

@@ -13,7 +13,7 @@
     <div class="inline gap-2 underline underline-offset-4">
         <slot/>
         {#if openInNew}
-            <Icon inverted={inverted} name="open-new-window"/>
+            <Icon inverted={inverted} name="open-in-new"/>
         {/if}
     </div>
 </RawButton>

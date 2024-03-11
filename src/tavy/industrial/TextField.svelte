@@ -26,7 +26,7 @@
            />
        </div>
        <Button borderClass='border-l-0' onClick={() => onSubmit(input)}>
-           <Icon name="arrow-right"/>
+           <Icon name="arrow-forward"/>
        </Button>
     </div>
 </MediumParagraph>

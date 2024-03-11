@@ -26,7 +26,7 @@
         style='width: {( windowWidth > windowHeight ? windowHeight / ( 16/9 ) : windowWidth ) - 64}px;'
     >
         {#each [
-            ['open-new-window', 'https://thezukunft.de/'],
+            ['open-in-new', 'https://thezukunft.de/'],
             ['home', '/'],
             ['instagram', 'https://www.instagram.com/taavirubenhagen'],
         ] as data}

@@ -1,3 +1,6 @@
+<meta http-equiv="Refresh" content="0; url='/drafts/website"/>
+
+
 <script lang="ts">
     import '$style';
     import { Section } from "$tavy";
@@ -5,7 +8,7 @@
 </script>
 
 
-<Section>
+<Section className='p-8 flex flex-col justify-center items-stretch'>
     <Button next onClick={() => window.location.href = '/drafts/website'}>
         Website (Unfinished)
     </Button>

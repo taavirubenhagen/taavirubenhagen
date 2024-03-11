@@ -6,6 +6,6 @@
 
 
 
-<Section>
+<Section className='p-8 flex flex-col justify-center items-stretch'>
     <LargeHeading>Sorry, page not found 😞</LargeHeading>
 </Section>
