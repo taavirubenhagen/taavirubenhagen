@@ -206,7 +206,13 @@ ${validate_component(Section, "Section").$$render($$result, { className: "p-8 pt
         }
       })}
     <div class="rounded-2xl w-full h-16 primary flex justify-evenly items-center">${each(["instagram", "tiktok", "youtube", "not-found"], (e) => {
-        return `${validate_component(Icon, "Icon").$$render($$result, { inverted: true, name: e, size: 28 }, {}, {})}`;
+        return `
+            ${validate_component(RawButton, "RawButton").$$render($$result, { onClick: () => alert("Coming soon!") }, {}, {
+          default: () => {
+            return `${validate_component(Icon, "Icon").$$render($$result, { inverted: true, name: e, size: 28 }, {}, {})}
+            `;
+          }
+        })}`;
       })}</div>
     <div class="h-16"></div>`;
     }

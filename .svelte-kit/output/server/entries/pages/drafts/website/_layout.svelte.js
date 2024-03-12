@@ -2,6 +2,7 @@ import { c as create_ssr_component, d as subscribe, e as escape, v as validate_c
 import { p as page } from "../../../../chunks/stores.js";
 import { g as globalScrollY } from "../../../../chunks/state.js";
 import "../../../../chunks/index4.js";
+import { S as SmallParagraph } from "../../../../chunks/SmallParagraph.js";
 import { S as SmallHeading } from "../../../../chunks/SmallHeading.js";
 import { R as RawButton } from "../../../../chunks/RawButton.js";
 import { I as InlineButton } from "../../../../chunks/InlineButton.js";
@@ -64,8 +65,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       ["home", "/drafts/website"],
       ["services", "/drafts/website"],
       ["shop", "/shop/dropshipping"],
-      ["about", "/drafts/website"],
-      ["contact", "/drafts/website/contact"]
+      ["about", "/drafts/website"]
     ],
     (e) => {
       return `${validate_component(RawButton, "RawButton").$$render(
@@ -88,47 +88,27 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     }
   )}</div>
     ${slots.default ? slots.default({}) : ``}
-    <footer class="w-full invert p-8 background grid grid-cols-3 gap-4">${validate_component(Button, "Button").$$render(
+    <footer class="p-16 primary flex flex-col gap-16 normal-case">${validate_component(Button, "Button").$$render(
     $$result,
     {
-      onClick: () => {
-      }
-    },
-    {},
-    {
-      default: () => {
-        return `<a href="mailto:taavi.ruebenhagen@gmail.com" class="w-full">e-mail me
-            </a>`;
-      }
-    }
-  )}
-        ${validate_component(Button, "Button").$$render(
-    $$result,
-    {
+      inverted: true,
       onClick: () => window.location.href = "https://instagram.com/taavirubenhagen"
     },
     {},
     {
       default: () => {
-        return `dm me
+        return `say hello
         `;
       }
     }
   )}
-        
-        ${validate_component(Button, "Button").$$render(
-    $$result,
-    {
-      onClick: () => window.location.href = "/drafts/website/legal/imprint"
-    },
-    {},
-    {
-      default: () => {
-        return `imprint
-        `;
-      }
+        ${validate_component(SmallParagraph, "SmallParagraph").$$render($$result, {}, {}, {
+    default: () => {
+      return `Taavi R\xFCbenhagen<br>
+            Pothof 9d<br>
+            38122 Braunschweig, Germany<br>`;
     }
-  )}</footer></main>`;
+  })}</footer></main>`;
 });
 export {
   Layout as default

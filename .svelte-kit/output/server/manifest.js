@@ -10,7 +10,7 @@ return {
 	assets: new Set(["blog/2023-05-19.md","blog/blog_data.json","drafts/hoffmanns-schuppen/ads/g-s-dunkel_ls.png","drafts/hoffmanns-schuppen/Aktie.png","drafts/hoffmanns-schuppen/investing.jpg","drafts/hoffmanns-schuppen/local_business.jpg","images/abstract.jpg","images/depri_portrait.jpg","images/depri_portrait_square.jpg","images/logos/t-r_logo.svg","images/mockups/presenter_notes_mockup.png","images/programming.jpg","presenter/Presentation Master 2.msi","tavy/icons/2024-03/README.md","tavy/icons/2024-03/svg/add-circle.svg","tavy/icons/2024-03/svg/add-outline.svg","tavy/icons/2024-03/svg/add.svg","tavy/icons/2024-03/svg/back.svg","tavy/icons/2024-03/svg/check-outline.svg","tavy/icons/2024-03/svg/check.svg","tavy/icons/2024-03/svg/chevron-down.svg","tavy/icons/2024-03/svg/chevron-up.svg","tavy/icons/2024-03/svg/close-outline.svg","tavy/icons/2024-03/svg/close.svg","tavy/icons/2024-03/svg/forward.svg","tavy/icons/2024-03/svg/heart-filled.svg","tavy/icons/2024-03/svg/heart.svg","tavy/icons/2024-03/svg/home.svg","tavy/icons/2024-03/svg/info.svg","tavy/icons/2024-03/svg/instagram.svg","tavy/icons/2024-03/svg/lock-open.svg","tavy/icons/2024-03/svg/lock.svg","tavy/icons/2024-03/svg/menu.svg","tavy/icons/2024-03/svg/open-in-new.svg","tavy/icons/2024-03/svg/pause.svg","tavy/icons/2024-03/svg/person.svg","tavy/icons/2024-03/svg/play.svg","tavy/icons/2024-03/svg/search.svg","tavy/icons/2024-03/svg/settings.svg","tavy/icons/2024-03/svg/tiktok.svg","tavy/icons/2024-03/svg/trash.svg","tavy/icons/2024-03/svg/youtube.svg","tavy/icons/2024-03/tavy-icons-2024-03.zip","tavy/icons/2024-03-A/README.md","tavy/icons/2024-03-A/svg/add-circle.svg","tavy/icons/2024-03-A/svg/add-outline.svg","tavy/icons/2024-03-A/svg/add.svg","tavy/icons/2024-03-A/svg/arrow-back.svg","tavy/icons/2024-03-A/svg/arrow-forward.svg","tavy/icons/2024-03-A/svg/back.svg","tavy/icons/2024-03-A/svg/check-outline.svg","tavy/icons/2024-03-A/svg/check.svg","tavy/icons/2024-03-A/svg/chevron-down.svg","tavy/icons/2024-03-A/svg/chevron-up.svg","tavy/icons/2024-03-A/svg/close-outline.svg","tavy/icons/2024-03-A/svg/close.svg","tavy/icons/2024-03-A/svg/download.svg","tavy/icons/2024-03-A/svg/forward.svg","tavy/icons/2024-03-A/svg/heart-filled.svg","tavy/icons/2024-03-A/svg/heart.svg","tavy/icons/2024-03-A/svg/home.svg","tavy/icons/2024-03-A/svg/info.svg","tavy/icons/2024-03-A/svg/instagram.svg","tavy/icons/2024-03-A/svg/lock-open.svg","tavy/icons/2024-03-A/svg/lock.svg","tavy/icons/2024-03-A/svg/menu.svg","tavy/icons/2024-03-A/svg/not-found.svg","tavy/icons/2024-03-A/svg/open-in-new.svg","tavy/icons/2024-03-A/svg/pause.svg","tavy/icons/2024-03-A/svg/person.svg","tavy/icons/2024-03-A/svg/play.svg","tavy/icons/2024-03-A/svg/search.svg","tavy/icons/2024-03-A/svg/settings.svg","tavy/icons/2024-03-A/svg/tiktok.svg","tavy/icons/2024-03-A/svg/trash.svg","tavy/icons/2024-03-A/svg/youtube.svg","tavy/icons/2024-03-A/tavy-icons-2024-03-A.zip"]),
 	mimeTypes: {".md":"text/markdown",".json":"application/json",".png":"image/png",".jpg":"image/jpeg",".svg":"image/svg+xml",".msi":"application/octet-stream",".zip":"application/zip"},
 	_: {
-		client: {"start":"_app/immutable/entry/start.dde365c7.js","app":"_app/immutable/entry/app.386c6814.js","imports":["_app/immutable/entry/start.dde365c7.js","_app/immutable/chunks/index.84ea942b.js","_app/immutable/chunks/singletons.71869970.js","_app/immutable/chunks/index.39ab129f.js","_app/immutable/chunks/paths.b78de7e5.js","_app/immutable/entry/app.386c6814.js","_app/immutable/chunks/index.84ea942b.js"],"stylesheets":[],"fonts":[]},
+		client: {"start":"_app/immutable/entry/start.78b81883.js","app":"_app/immutable/entry/app.fcc09719.js","imports":["_app/immutable/entry/start.78b81883.js","_app/immutable/chunks/index.84ea942b.js","_app/immutable/chunks/singletons.a6ce8253.js","_app/immutable/chunks/index.39ab129f.js","_app/immutable/chunks/paths.b816f7e6.js","_app/immutable/entry/app.fcc09719.js","_app/immutable/chunks/index.84ea942b.js"],"stylesheets":[],"fonts":[]},
 		nodes: [
 			__memo(() => import('./nodes/0.js')),
 			__memo(() => import('./nodes/1.js')),
@@ -48,8 +48,7 @@ return {
 			__memo(() => import('./nodes/33.js')),
 			__memo(() => import('./nodes/34.js')),
 			__memo(() => import('./nodes/35.js')),
-			__memo(() => import('./nodes/36.js')),
-			__memo(() => import('./nodes/37.js'))
+			__memo(() => import('./nodes/36.js'))
 		],
 		routes: [
 			{
@@ -193,108 +192,101 @@ return {
 				endpoint: null
 			},
 			{
-				id: "/drafts/website/contact",
-				pattern: /^\/drafts\/website\/contact\/?$/,
-				params: [],
-				page: { layouts: [0,2,], errors: [1,,], leaf: 23 },
-				endpoint: null
-			},
-			{
 				id: "/drafts/website/tavy/icons",
 				pattern: /^\/drafts\/website\/tavy\/icons\/?$/,
 				params: [],
-				page: { layouts: [0,2,], errors: [1,,], leaf: 24 },
+				page: { layouts: [0,2,], errors: [1,,], leaf: 23 },
 				endpoint: null
 			},
 			{
 				id: "/hs",
 				pattern: /^\/hs\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 25 },
+				page: { layouts: [0,], errors: [1,], leaf: 24 },
 				endpoint: null
 			},
 			{
 				id: "/legal/contact",
 				pattern: /^\/legal\/contact\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 26 },
+				page: { layouts: [0,], errors: [1,], leaf: 25 },
 				endpoint: null
 			},
 			{
 				id: "/legal/privacy-policy",
 				pattern: /^\/legal\/privacy-policy\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 27 },
+				page: { layouts: [0,], errors: [1,], leaf: 26 },
 				endpoint: null
 			},
 			{
 				id: "/politics/jugendparlament",
 				pattern: /^\/politics\/jugendparlament\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 28 },
+				page: { layouts: [0,], errors: [1,], leaf: 27 },
 				endpoint: null
 			},
 			{
 				id: "/politics/jugendparlament/sticker",
 				pattern: /^\/politics\/jugendparlament\/sticker\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 29 },
+				page: { layouts: [0,], errors: [1,], leaf: 28 },
 				endpoint: null
 			},
 			{
 				id: "/presenter/download",
 				pattern: /^\/presenter\/download\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 30 },
+				page: { layouts: [0,], errors: [1,], leaf: 29 },
 				endpoint: null
 			},
 			{
 				id: "/presenter/privacy-policy",
 				pattern: /^\/presenter\/privacy-policy\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 31 },
+				page: { layouts: [0,], errors: [1,], leaf: 30 },
 				endpoint: null
 			},
 			{
 				id: "/presenter/sticker",
 				pattern: /^\/presenter\/sticker\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 32 },
+				page: { layouts: [0,], errors: [1,], leaf: 31 },
 				endpoint: null
 			},
 			{
 				id: "/presenter/support-url",
 				pattern: /^\/presenter\/support-url\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 33 },
+				page: { layouts: [0,], errors: [1,], leaf: 32 },
 				endpoint: null
 			},
 			{
 				id: "/presenter/waitlist",
 				pattern: /^\/presenter\/waitlist\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 34 },
+				page: { layouts: [0,], errors: [1,], leaf: 33 },
 				endpoint: null
 			},
 			{
 				id: "/projects",
 				pattern: /^\/projects\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 35 },
+				page: { layouts: [0,], errors: [1,], leaf: 34 },
 				endpoint: null
 			},
 			{
 				id: "/shop/dropshipping",
 				pattern: /^\/shop\/dropshipping\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 36 },
+				page: { layouts: [0,], errors: [1,], leaf: 35 },
 				endpoint: null
 			},
 			{
 				id: "/shop/dropshipping/coming-soon",
 				pattern: /^\/shop\/dropshipping\/coming-soon\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 37 },
+				page: { layouts: [0,], errors: [1,], leaf: 36 },
 				endpoint: null
 			}
 		],

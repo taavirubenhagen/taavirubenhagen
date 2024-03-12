@@ -11,10 +11,10 @@
 
     
     async function fetchIconNames() {
-        const remoteIconFolderURL = `https://api.github.com/repositories/581311131/contents/src/tavy/main/icons/${tavyVersion}`;
+        const remoteIconFolderURL = `https://api.github.com/repositories/581311131/contents/static/tavy/icons/${tavyVersion}/svg`;
         const json = await ( await fetch(remoteIconFolderURL) ).json();
         let names = [];
-        console.log(json[0].name);
+        console.log(json);
         for (let i = 0; i < json.length; i++) {
             const parts = json[i].name.split('\.');
             if (parts[1] === 'svg') {

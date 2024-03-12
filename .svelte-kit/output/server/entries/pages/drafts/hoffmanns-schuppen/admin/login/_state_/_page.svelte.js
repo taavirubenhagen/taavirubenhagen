@@ -27,15 +27,7 @@ const TextField = create_ssr_component(($$result, $$props, $$bindings, slots) =>
            <input type="text" ${autofocus ? "autofocus" : ""} class="rounded-l-lg outline-none h-full px-1 text-xl"${add_attribute("placeholder", placeholder, 0)}${add_attribute("value", input, 0)}></div>
        ${validate_component(RawButton, "RawButton").$$render($$result, { onClick: () => onSubmit(input) }, {}, {
         default: () => {
-          return `<div class="rounded-r-lg bg-green-900 w-12 h-12 center_row">${validate_component(Icon, "Icon").$$render(
-            $$result,
-            {
-              name: "arrow-forward",
-              textClass: "text-white"
-            },
-            {},
-            {}
-          )}</div>`;
+          return `<div class="rounded-r-lg bg-green-900 w-12 h-12 pr-1 center_row">${validate_component(Icon, "Icon").$$render($$result, { inverted: true, name: "arrow-forward" }, {}, {})}</div>`;
         }
       })}</div>`;
     }

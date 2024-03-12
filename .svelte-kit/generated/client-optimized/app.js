@@ -37,8 +37,7 @@ export const nodes = [
 	() => import('./nodes/33'),
 	() => import('./nodes/34'),
 	() => import('./nodes/35'),
-	() => import('./nodes/36'),
-	() => import('./nodes/37')
+	() => import('./nodes/36')
 ];
 
 export const server_loads = [];
@@ -64,21 +63,20 @@ export const dictionary = {
 		"/drafts/terminal": [~20],
 		"/drafts/terminal/[route]": [21],
 		"/drafts/website": [22,[2]],
-		"/drafts/website/contact": [23,[2]],
-		"/drafts/website/tavy/icons": [24,[2]],
-		"/hs": [25],
-		"/legal/contact": [26],
-		"/legal/privacy-policy": [27],
-		"/politics/jugendparlament": [28],
-		"/politics/jugendparlament/sticker": [29],
-		"/presenter/download": [30],
-		"/presenter/privacy-policy": [31],
-		"/presenter/sticker": [32],
-		"/presenter/support-url": [33],
-		"/presenter/waitlist": [34],
-		"/projects": [35],
-		"/shop/dropshipping": [36],
-		"/shop/dropshipping/coming-soon": [37]
+		"/drafts/website/tavy/icons": [23,[2]],
+		"/hs": [24],
+		"/legal/contact": [25],
+		"/legal/privacy-policy": [26],
+		"/politics/jugendparlament": [27],
+		"/politics/jugendparlament/sticker": [28],
+		"/presenter/download": [29],
+		"/presenter/privacy-policy": [30],
+		"/presenter/sticker": [31],
+		"/presenter/support-url": [32],
+		"/presenter/waitlist": [33],
+		"/projects": [34],
+		"/shop/dropshipping": [35],
+		"/shop/dropshipping/coming-soon": [36]
 	};
 
 export const hooks = {

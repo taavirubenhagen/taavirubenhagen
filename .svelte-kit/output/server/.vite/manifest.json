@@ -44,6 +44,7 @@
       "_stores.js",
       "_state.js",
       "_index4.js",
+      "_SmallParagraph.js",
       "_SmallHeading.js",
       "_RawButton.js",
       "_InlineButton.js",
@@ -284,17 +285,6 @@
       "_Section.js"
     ]
   },
-  "src/routes/drafts/website/contact/+page.svelte": {
-    "file": "entries/pages/drafts/website/contact/_page.svelte.js",
-    "src": "src/routes/drafts/website/contact/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index3.js",
-      "_index4.js",
-      "_Button2.js",
-      "_Section.js"
-    ]
-  },
   "src/routes/drafts/website/tavy/icons/+page.svelte": {
     "file": "entries/pages/drafts/website/tavy/icons/_page.svelte.js",
     "src": "src/routes/drafts/website/tavy/icons/+page.svelte",
@@ -489,7 +479,7 @@
   "_index4.js": {
     "file": "chunks/index4.js",
     "css": [
-      "_app/immutable/assets/index.17b621cd.css"
+      "_app/immutable/assets/index.a2f6a5a2.css"
     ]
   },
   "_LargeHeading.js": {
@@ -543,6 +533,13 @@
       "_index4.js"
     ]
   },
+  "_SmallParagraph.js": {
+    "file": "chunks/SmallParagraph.js",
+    "imports": [
+      "_index3.js",
+      "_index4.js"
+    ]
+  },
   "_SmallHeading.js": {
     "file": "chunks/SmallHeading.js",
     "imports": [
@@ -568,13 +565,6 @@
       "_SmallParagraph.js",
       "_icon.js",
       "_RawButton.js"
-    ]
-  },
-  "_SmallParagraph.js": {
-    "file": "chunks/SmallParagraph.js",
-    "imports": [
-      "_index3.js",
-      "_index4.js"
     ]
   },
   "_ButtonSeperator.js": {
